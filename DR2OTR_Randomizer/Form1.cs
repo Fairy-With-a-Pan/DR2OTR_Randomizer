@@ -3,9 +3,9 @@ using MaterialSkin.Controls;
 
 namespace DR2OTR_Randomizer;
 
-public partial class Form1 : MaterialForm
+public partial class F_ItemRandomiser : MaterialForm
 {
-    public Form1()
+    public F_ItemRandomiser()
     {
         InitializeComponent();
         var materialSkinManager = MaterialSkinManager.Instance;
@@ -32,5 +32,10 @@ public partial class Form1 : MaterialForm
     private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
     {
         
+    }
+
+    private void TV_ListOfItems_AfterSelect(object sender, TreeViewEventArgs e)
+    {
+
     }
 }
