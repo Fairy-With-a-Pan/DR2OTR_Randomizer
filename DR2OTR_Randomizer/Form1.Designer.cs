@@ -73,9 +73,12 @@
             this.clb_Special = new System.Windows.Forms.CheckedListBox();
             this.tp_Vehicles = new System.Windows.Forms.TabPage();
             this.clb_Vehicles = new System.Windows.Forms.CheckedListBox();
+            this.tp_Search = new System.Windows.Forms.TabPage();
+            this.clb_SearchResults = new System.Windows.Forms.CheckedListBox();
             this.pb_PHTest = new System.Windows.Forms.PictureBox();
             this.tc_TabWindows = new System.Windows.Forms.TabControl();
             this.tp_WItemRandom = new System.Windows.Forms.TabPage();
+            this.tb_ItemsSearch = new System.Windows.Forms.TextBox();
             this.tb_TestBox = new System.Windows.Forms.TextBox();
             this.b_Randomise = new System.Windows.Forms.Button();
             this.b_DeselectAll = new System.Windows.Forms.Button();
@@ -102,6 +105,7 @@
             this.tp_PushPlaced.SuspendLayout();
             this.tp_Special.SuspendLayout();
             this.tp_Vehicles.SuspendLayout();
+            this.tp_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
@@ -189,6 +193,7 @@
             this.tc_Items.Controls.Add(this.tp_PushPlaced);
             this.tc_Items.Controls.Add(this.tp_Special);
             this.tc_Items.Controls.Add(this.tp_Vehicles);
+            this.tc_Items.Controls.Add(this.tp_Search);
             this.tc_Items.Location = new System.Drawing.Point(6, 6);
             this.tc_Items.Name = "tc_Items";
             this.tc_Items.SelectedIndex = 0;
@@ -211,7 +216,6 @@
             this.clb_BasicCombo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clb_BasicCombo.FormattingEnabled = true;
             this.clb_BasicCombo.Items.AddRange(new object[] {
-            "\"AcousticGuitar\"",
             "\"AlienHead\"",
             "\"Amp\"",
             "\"BaseballBat\"",
@@ -597,7 +601,6 @@
             "\"AlienOutfitDispenser\"",
             "\"AlienSuit\"",
             "\"AlternateOutfit\"",
-            "\"AmericanShowmanHelmetDispenser\"",
             "\"AmericanShowmanHelmetDispenser\"",
             "\"AmericanShowmanOutfitDispenser\"",
             "\"ArmyJacketPantsDispenser\"",
@@ -1289,10 +1292,31 @@
             this.clb_Vehicles.Size = new System.Drawing.Size(325, 396);
             this.clb_Vehicles.TabIndex = 16;
             // 
+            // tp_Search
+            // 
+            this.tp_Search.Controls.Add(this.clb_SearchResults);
+            this.tp_Search.Location = new System.Drawing.Point(4, 24);
+            this.tp_Search.Name = "tp_Search";
+            this.tp_Search.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_Search.Size = new System.Drawing.Size(337, 402);
+            this.tp_Search.TabIndex = 18;
+            this.tp_Search.Text = "Search";
+            this.tp_Search.UseVisualStyleBackColor = true;
+            // 
+            // clb_SearchResults
+            // 
+            this.clb_SearchResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clb_SearchResults.FormattingEnabled = true;
+            this.clb_SearchResults.Location = new System.Drawing.Point(6, 6);
+            this.clb_SearchResults.Name = "clb_SearchResults";
+            this.clb_SearchResults.Size = new System.Drawing.Size(325, 396);
+            this.clb_SearchResults.Sorted = true;
+            this.clb_SearchResults.TabIndex = 17;
+            // 
             // pb_PHTest
             // 
             this.pb_PHTest.Image = global::DR2OTR_Randomizer.Properties.Resources.PH_TestImage;
-            this.pb_PHTest.Location = new System.Drawing.Point(353, 6);
+            this.pb_PHTest.Location = new System.Drawing.Point(353, 33);
             this.pb_PHTest.Name = "pb_PHTest";
             this.pb_PHTest.Size = new System.Drawing.Size(359, 124);
             this.pb_PHTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1311,6 +1335,7 @@
             // 
             // tp_WItemRandom
             // 
+            this.tp_WItemRandom.Controls.Add(this.tb_ItemsSearch);
             this.tp_WItemRandom.Controls.Add(this.tb_TestBox);
             this.tp_WItemRandom.Controls.Add(this.b_Randomise);
             this.tp_WItemRandom.Controls.Add(this.b_DeselectAll);
@@ -1325,11 +1350,21 @@
             this.tp_WItemRandom.Text = "Items Randomiser";
             this.tp_WItemRandom.UseVisualStyleBackColor = true;
             // 
+            // tb_ItemsSearch
+            // 
+            this.tb_ItemsSearch.Location = new System.Drawing.Point(353, 6);
+            this.tb_ItemsSearch.Name = "tb_ItemsSearch";
+            this.tb_ItemsSearch.Size = new System.Drawing.Size(359, 23);
+            this.tb_ItemsSearch.TabIndex = 27;
+            this.tb_ItemsSearch.Text = "Search Items";
+            this.tb_ItemsSearch.Click += new System.EventHandler(this.tb_ItemsSearch_Click);
+            this.tb_ItemsSearch.TextChanged += new System.EventHandler(this.tb_ItemsSearch_TextChanged);
+            // 
             // tb_TestBox
             // 
             this.tb_TestBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TestBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_TestBox.Location = new System.Drawing.Point(353, 136);
+            this.tb_TestBox.Location = new System.Drawing.Point(353, 163);
             this.tb_TestBox.Multiline = true;
             this.tb_TestBox.Name = "tb_TestBox";
             this.tb_TestBox.Size = new System.Drawing.Size(359, 50);
@@ -1418,6 +1453,7 @@
             this.tp_PushPlaced.ResumeLayout(false);
             this.tp_Special.ResumeLayout(false);
             this.tp_Vehicles.ResumeLayout(false);
+            this.tp_Search.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).EndInit();
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
@@ -1482,5 +1518,8 @@
         private Button b_Randomise;
         private TextBox tb_TestBox;
         private FolderBrowserDialog fbd_DataFileFolder;
+        private TextBox tb_ItemsSearch;
+        private TabPage tp_Search;
+        private CheckedListBox clb_SearchResults;
     }
 }

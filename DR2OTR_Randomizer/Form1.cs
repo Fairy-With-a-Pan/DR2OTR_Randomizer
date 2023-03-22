@@ -9,9 +9,11 @@ namespace DR2OTR_Randomizer;
 public partial class F_ItemRandomiser : Form
 {
     LevelsLines levelLines = new LevelsLines();
+    List <string> searchItems = new List <string> ();
     public F_ItemRandomiser()
     {
         InitializeComponent();
+        tc_Items.TabPages.Remove(tp_Search);
     }
     string[] files = 
     {
@@ -39,7 +41,7 @@ public partial class F_ItemRandomiser : Form
         "underground.txt",
         "yucatan_casino.txt"
     };
-
+    
     string path;
     private void Form1_Load(object sender, EventArgs e)
     {
@@ -154,5 +156,98 @@ public partial class F_ItemRandomiser : Form
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
+    }
+    private void tb_ItemsSearch_Click(object sender, EventArgs e)
+    {
+        if(tb_ItemsSearch.Text == "Search Items" && !tp_Search.Created)
+        {
+            tb_ItemsSearch.Text = "";
+            tc_Items.TabPages.Insert(0,tp_Search);
+            tc_Items.SelectTab(tp_Search);
+            AddAllItemsToList();
+            foreach (string item in searchItems)
+            {
+                clb_SearchResults.Items.Add(item);
+            }
+        }
+    }
+    private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
+    {
+        ////NOT WORKING NEED TO FIND A WAY TO STOP DUPLICATE ITEMS AND KEEP THE CHECKED ITEMS CHECKED
+
+
+        //List<string> _checkedItems = new List<string>();
+        //List<string> _uncheckedItems = new List<string>();
+        ////List<string> testing = new List<string>();
+        ////testing = searchItems;
+        //foreach (string item in searchItems)
+        //{
+        //    if(!item.Contains(tb_ItemsSearch.Text, StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        //if (clb_SearchResults.Items.Cast<string>().Contains(item)) { clb_SearchResults.Items.Remove(item); }
+        //        if (clb_SearchResults.CheckedItems.Contains(item))
+        //        {
+        //            _checkedItems.Add(item);
+        //        }  
+        //        if (!clb_SearchResults.CheckedItems.Contains(item))
+        //        {
+        //            _uncheckedItems.Add(item);
+        //        }
+        //        clb_SearchResults.Items.Remove(item);
+        //    }
+        //    if (item.Contains(tb_ItemsSearch.Text, StringComparison.OrdinalIgnoreCase))
+        //    {
+        //                        if (clb_SearchResults.CheckedItems.Contains(item))
+        //        {
+        //            _checkedItems.Add(item);
+        //        }  
+        //        if (!clb_SearchResults.CheckedItems.Contains(item))
+        //        {
+        //            _uncheckedItems.Add(item);
+        //        }
+        //        clb_SearchResults.Items.Remove(item);
+        //    }
+
+        //}
+        //List<string>checkedItems = _checkedItems.Distinct().ToList();
+        //List<string>uncheckedItems = _uncheckedItems.Distinct().ToList();
+        //_checkedItems.Clear();
+        //_uncheckedItems.Clear();
+        //Debug.WriteLine($"the number of checked items is : {checkedItems.Count}\n and {uncheckedItems.Count}");
+        //if (tb_ItemsSearch.Text == "retry")
+        //{
+        //    for(int i = 0; i < checkedItems.Count;i++)
+        //    {
+        //        clb_SearchResults.Items.Add(checkedItems[i]);
+        //    }
+        //    for(int i = 0; i < clb_SearchResults.Items.Count; i++) { clb_SearchResults.SetItemChecked(i, true); }
+        //    for(int i = 0; i < uncheckedItems.Count; i++)
+        //    {
+        //        clb_SearchResults.Items.Add(uncheckedItems[i]);
+        //    }
+        //    checkedItems.Clear();
+        //    uncheckedItems.Clear();
+        //    //for(int i =0; i < testing.Count;i++)
+        //    //{
+        //    //    clb_SearchResults.Items.Insert(0, testing[i]);
+        //    //}
+        //    ////testing.Clear();
+        //}
+        if (clb_SearchResults.Items.Count > 800)  { MessageBox.Show("ITEMS HAVE BEEN DUPLATED", "WARNING"); }
+    }
+    private void AddAllItemsToList()
+    {
+        foreach(TabPage page in tc_Items.TabPages)
+        {
+            if(page != tp_Search)
+            {
+                CheckedListBox box = page.Controls.OfType<CheckedListBox>().First();
+                
+                foreach(string item in box.Items)
+                {
+                    searchItems.Add(item);
+                }
+            }
+        }
     }
 }
