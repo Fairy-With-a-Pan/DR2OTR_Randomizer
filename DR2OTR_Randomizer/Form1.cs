@@ -1,7 +1,9 @@
 
 
 using DR2OTR_Randomizer.Resources;
+using System.Data;
 using System.Diagnostics;
+using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DR2OTR_Randomizer;
@@ -9,13 +11,33 @@ namespace DR2OTR_Randomizer;
 public partial class F_ItemRandomiser : Form
 {
     LevelsLines levelLines = new LevelsLines();
-    List <string> searchItems = new List <string> ();
+
     public F_ItemRandomiser()
     {
         InitializeComponent();
         tc_Items.TabPages.Remove(tp_Search);
+
+        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
+
+        //NEEDS TO SHIP WITH THE Allitems.txt
+        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
+        var dt = new DataTable();
+
+        dt.Columns.Add("Item", typeof(string));
+        dt.Columns.Add("Checked", typeof(bool));
+
+        foreach (var item in dataArray) dt.Rows.Add(item, false);
+
+        dt.AcceptChanges();
+
+        clb_SearchResults.DataSource = dt.DefaultView;
+        clb_SearchResults.DisplayMember = "Item";
+        clb_SearchResults.ValueMember = "Item";
+
+        clb_SearchResults.ItemCheck += lb_SearchResults_ItemChcek;
     }
-    string[] files = 
+
+    string[] files =
     {
         "americana_casino.txt",
         "arena_backstage.txt",
@@ -41,7 +63,7 @@ public partial class F_ItemRandomiser : Form
         "underground.txt",
         "yucatan_casino.txt"
     };
-    
+
     string path;
     private void Form1_Load(object sender, EventArgs e)
     {
@@ -65,7 +87,7 @@ public partial class F_ItemRandomiser : Form
 
     private void b_CheckAll_Click(object sender, EventArgs e)
     {
-        
+
         CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
         for (int i = 0; i < currentListBox.Items.Count; i++)
         {
@@ -73,7 +95,7 @@ public partial class F_ItemRandomiser : Form
         }
 
     }
-    
+
     private void tsm_open_Click(object sender, EventArgs e)
     {
         //gets the path of the datafile folder
@@ -83,7 +105,7 @@ public partial class F_ItemRandomiser : Form
 
     private void b_Randomise_Click(object sender, EventArgs e)
     {
-        
+
         bool vehiclesWarning = false;
 
         //make a list of type check list box to store the check boxes inside of the tab control
@@ -106,7 +128,7 @@ public partial class F_ItemRandomiser : Form
             {
                 //look though each of the checklistbox in the list adds all items that are checked
                 allItems.Add(itemName);
-                if(clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
+                if (clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
                 {
                     MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
                     vehiclesWarning = true;
@@ -114,7 +136,7 @@ public partial class F_ItemRandomiser : Form
             }
         }
         //Stop here if no items have been checked and added to the list
-        if(allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning");return; }
+        if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
 
 
         //gets the dictionary stored in the LevelLines class
@@ -123,10 +145,10 @@ public partial class F_ItemRandomiser : Form
         //goese though each of the levels in side of the dictionary
         foreach (var level in levels)
         {
-            foreach(string file in files)
+            foreach (string file in files)
             {
                 //checks to see that the selected path has all the requied files
-                if (!File.Exists($"{path}\\{level.Value}")  )
+                if (!File.Exists($"{path}\\{level.Value}"))
                 {
                     //returns if it cant find any
                     MessageBox.Show($"Could not find {level.Value} please check your datafile folder", "Warning");
@@ -152,102 +174,44 @@ public partial class F_ItemRandomiser : Form
         }
         MessageBox.Show("All levels successfully randomised with selected items", "Success");
     }
+    private void lb_SearchResults_ItemChcek(object sender, ItemCheckEventArgs e)
+    {
+        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
+        var dv = clb_SearchResults.DataSource as DataView;
+        var drv = dv[e.Index];
+        drv["Checked"] = e.NewValue == CheckState.Checked ? true : false;
+    }
+    private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
+    {
+        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
+        var dv = clb_SearchResults.DataSource as DataView;
 
+        var filter = tb_ItemsSearch.Text.Trim().Length > 0
+        ? $"Item LIKE '*{tb_ItemsSearch.Text}*'"
+        : null;
+
+        dv.RowFilter = filter;
+
+        for (var i = 0; i < clb_SearchResults.Items.Count; i++)
+        {
+            var drv = clb_SearchResults.Items[i] as DataRowView;
+            var chk = Convert.ToBoolean(drv["Checked"]);
+            clb_SearchResults.SetItemChecked(i, chk);
+        }
+
+    }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
     }
     private void tb_ItemsSearch_Click(object sender, EventArgs e)
     {
-        if(tb_ItemsSearch.Text == "Search Items" && !tp_Search.Created)
+        if (!tp_Search.Created)
         {
-            tb_ItemsSearch.Text = "";
-            tc_Items.TabPages.Insert(0,tp_Search);
+
+            tc_Items.TabPages.Insert(0, tp_Search);
             tc_Items.SelectTab(tp_Search);
-            AddAllItemsToList();
-            foreach (string item in searchItems)
-            {
-                clb_SearchResults.Items.Add(item);
-            }
-        }
-    }
-    private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
-    {
-        ////NOT WORKING NEED TO FIND A WAY TO STOP DUPLICATE ITEMS AND KEEP THE CHECKED ITEMS CHECKED
-
-
-        //List<string> _checkedItems = new List<string>();
-        //List<string> _uncheckedItems = new List<string>();
-        ////List<string> testing = new List<string>();
-        ////testing = searchItems;
-        //foreach (string item in searchItems)
-        //{
-        //    if(!item.Contains(tb_ItemsSearch.Text, StringComparison.OrdinalIgnoreCase))
-        //    {
-        //        //if (clb_SearchResults.Items.Cast<string>().Contains(item)) { clb_SearchResults.Items.Remove(item); }
-        //        if (clb_SearchResults.CheckedItems.Contains(item))
-        //        {
-        //            _checkedItems.Add(item);
-        //        }  
-        //        if (!clb_SearchResults.CheckedItems.Contains(item))
-        //        {
-        //            _uncheckedItems.Add(item);
-        //        }
-        //        clb_SearchResults.Items.Remove(item);
-        //    }
-        //    if (item.Contains(tb_ItemsSearch.Text, StringComparison.OrdinalIgnoreCase))
-        //    {
-        //                        if (clb_SearchResults.CheckedItems.Contains(item))
-        //        {
-        //            _checkedItems.Add(item);
-        //        }  
-        //        if (!clb_SearchResults.CheckedItems.Contains(item))
-        //        {
-        //            _uncheckedItems.Add(item);
-        //        }
-        //        clb_SearchResults.Items.Remove(item);
-        //    }
-
-        //}
-        //List<string>checkedItems = _checkedItems.Distinct().ToList();
-        //List<string>uncheckedItems = _uncheckedItems.Distinct().ToList();
-        //_checkedItems.Clear();
-        //_uncheckedItems.Clear();
-        //Debug.WriteLine($"the number of checked items is : {checkedItems.Count}\n and {uncheckedItems.Count}");
-        //if (tb_ItemsSearch.Text == "retry")
-        //{
-        //    for(int i = 0; i < checkedItems.Count;i++)
-        //    {
-        //        clb_SearchResults.Items.Add(checkedItems[i]);
-        //    }
-        //    for(int i = 0; i < clb_SearchResults.Items.Count; i++) { clb_SearchResults.SetItemChecked(i, true); }
-        //    for(int i = 0; i < uncheckedItems.Count; i++)
-        //    {
-        //        clb_SearchResults.Items.Add(uncheckedItems[i]);
-        //    }
-        //    checkedItems.Clear();
-        //    uncheckedItems.Clear();
-        //    //for(int i =0; i < testing.Count;i++)
-        //    //{
-        //    //    clb_SearchResults.Items.Insert(0, testing[i]);
-        //    //}
-        //    ////testing.Clear();
-        //}
-        if (clb_SearchResults.Items.Count > 800)  { MessageBox.Show("ITEMS HAVE BEEN DUPLATED", "WARNING"); }
-    }
-    private void AddAllItemsToList()
-    {
-        foreach(TabPage page in tc_Items.TabPages)
-        {
-            if(page != tp_Search)
-            {
-                CheckedListBox box = page.Controls.OfType<CheckedListBox>().First();
-                
-                foreach(string item in box.Items)
-                {
-                    searchItems.Add(item);
-                }
-            }
         }
     }
 }
+
