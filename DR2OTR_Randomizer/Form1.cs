@@ -15,26 +15,37 @@ public partial class F_ItemRandomiser : Form
     public F_ItemRandomiser()
     {
         InitializeComponent();
+        nud_1.Controls[0].Visible = false;
+        //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
 
-        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
-
-        //NEEDS TO SHIP WITH THE Allitems.txt
+        //NEEDS TO SHIP WITH THE "Allitems.txt"
+        //User will be able to add and remove items from the file
         var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
+        //Create a new data table to put inside the check list box
         var dt = new DataTable();
 
+        //adds the string for the item name coloum and theck check box to the data table
         dt.Columns.Add("Item", typeof(string));
         dt.Columns.Add("Checked", typeof(bool));
 
+        //goese though each of the item in the array for the allitems.txt and
+        //adds it to the datatable and defaults its check to false
         foreach (var item in dataArray) dt.Rows.Add(item, false);
 
+        //Commits the items added with the foreach loop
         dt.AcceptChanges();
 
+        //Adds the data from the data table to the check list box for filtering
         clb_SearchResults.DataSource = dt.DefaultView;
+        
+        //Gets the string name of the Item in the datatable columns and dislpays that name
+        //and sets the Value for each Item in the Check list box the same as the dispaly name
         clb_SearchResults.DisplayMember = "Item";
         clb_SearchResults.ValueMember = "Item";
-
-        clb_SearchResults.ItemCheck += lb_SearchResults_ItemChcek;
+        
+        //Binds the item beeing checked with the ItemCheck method below
+        clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
     }
 
     string[] files =
@@ -113,25 +124,37 @@ public partial class F_ItemRandomiser : Form
         //make a string list to store all the items in each of the check list boxes
         List<string> allItems = new List<string>();
         //go though each tab page in the tab control
-        foreach (TabPage items in tc_Items.TabPages)
+        foreach (TabPage tabPage in tc_Items.TabPages)
         {
-            if (items.Controls.OfType<CheckedListBox>() != null)
+            if (tabPage.Controls.OfType<CheckedListBox>() != null)
             {
                 //looks for a check list box inside of the tab page and then adds it to the check list box list
-                allCheckboxes.Add(items.Controls.OfType<CheckedListBox>().First());
+                allCheckboxes.Add(tabPage.Controls.OfType<CheckedListBox>().First());
             }
         }
         foreach (CheckedListBox item in allCheckboxes)
         {
-            //once it has checked all of the tab pages and added all the list check boxes to the list
-            foreach (string itemName in item.CheckedItems)
+            if (item.Name != "clb_SearchResults")
             {
-                //look though each of the checklistbox in the list adds all items that are checked
-                allItems.Add(itemName);
-                if (clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
+                //once it has checked all of the tab pages and added all the list check boxes to the list
+                foreach (string itemName in item.CheckedItems)
                 {
-                    MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
-                    vehiclesWarning = true;
+                    //look though each of the checklistbox in the list adds all items that are checked
+                    allItems.Add(itemName);
+                    if (clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
+                    {
+                        MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
+                        vehiclesWarning = true;
+                    }
+                }
+            }
+            if (item.Name == "clb_SearchResults")
+            {
+                foreach(DataRowView itemName in clb_SearchResults.CheckedItems)
+                {
+                    //Because im using a data table for the search clb i have to 
+                    //get the item name from the DataRow with the row name "Item"
+                    allItems.Add(itemName.Row["Item"].ToString());
                 }
             }
         }
@@ -174,26 +197,36 @@ public partial class F_ItemRandomiser : Form
         }
         MessageBox.Show("All levels successfully randomised with selected items", "Success");
     }
-    private void lb_SearchResults_ItemChcek(object sender, ItemCheckEventArgs e)
+    private void clb_SearchResults_ItemCheck(object sender, ItemCheckEventArgs e)
     {
-        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
+        //this method will be called each time an item is check
+
+        //sets as DataView so it can be filtered
         var dv = clb_SearchResults.DataSource as DataView;
+        //gets the item that was just check or unchecked location
         var drv = dv[e.Index];
+        //Gets its current checked state before being clicked then
+        //will set its new state after being checked/uncheck
         drv["Checked"] = e.NewValue == CheckState.Checked ? true : false;
     }
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
-        //**Doing this from here read it https://stackoverflow.com/questions/66080248/search-in-for-items-in-checkedlistbox-c-sharp
         var dv = clb_SearchResults.DataSource as DataView;
 
+        //Makes the filter using a check text box by getting the text in the check box
+        //then using the Like Wildcard by compareing the items
+        //in the Data Source to the text typed in to the text box
         var filter = tb_ItemsSearch.Text.Trim().Length > 0
         ? $"Item LIKE '*{tb_ItemsSearch.Text}*'"
         : null;
 
+        //applys the filter to the data source
         dv.RowFilter = filter;
-
         for (var i = 0; i < clb_SearchResults.Items.Count; i++)
         {
+            //gets theitems check state and restores it first it gets the item
+            //then it Converts the DataRow Called "Checked" to a bool while
+            //storeing its state and apllying it back
             var drv = clb_SearchResults.Items[i] as DataRowView;
             var chk = Convert.ToBoolean(drv["Checked"]);
             clb_SearchResults.SetItemChecked(i, chk);
@@ -206,9 +239,9 @@ public partial class F_ItemRandomiser : Form
     }
     private void tb_ItemsSearch_Click(object sender, EventArgs e)
     {
+        //displays the search tab if its not already displayed and selects it
         if (!tp_Search.Created)
         {
-
             tc_Items.TabPages.Insert(0, tp_Search);
             tc_Items.SelectTab(tp_Search);
         }

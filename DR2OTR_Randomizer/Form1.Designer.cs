@@ -86,6 +86,11 @@
             this.b_DeselectAll = new System.Windows.Forms.Button();
             this.b_CheckAll = new System.Windows.Forms.Button();
             this.tp_WitemsSetting = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nud_1 = new System.Windows.Forms.NumericUpDown();
+            this.cb_AirDensity = new System.Windows.Forms.CheckBox();
             this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
@@ -112,6 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
+            this.tp_WitemsSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2126,6 +2134,12 @@
             // 
             // tp_WitemsSetting
             // 
+            this.tp_WitemsSetting.AutoScroll = true;
+            this.tp_WitemsSetting.Controls.Add(this.textBox2);
+            this.tp_WitemsSetting.Controls.Add(this.numericUpDown2);
+            this.tp_WitemsSetting.Controls.Add(this.textBox1);
+            this.tp_WitemsSetting.Controls.Add(this.nud_1);
+            this.tp_WitemsSetting.Controls.Add(this.cb_AirDensity);
             this.tp_WitemsSetting.Location = new System.Drawing.Point(4, 24);
             this.tp_WitemsSetting.Name = "tp_WitemsSetting";
             this.tp_WitemsSetting.Padding = new System.Windows.Forms.Padding(3);
@@ -2133,6 +2147,60 @@
             this.tp_WitemsSetting.TabIndex = 1;
             this.tp_WitemsSetting.Text = "Items Settings";
             this.tp_WitemsSetting.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(336, 51);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(30, 16);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "Min:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.Location = new System.Drawing.Point(372, 52);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(76, 19);
+            this.numericUpDown2.TabIndex = 3;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(222, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(30, 16);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Min:";
+            // 
+            // nud_1
+            // 
+            this.nud_1.Location = new System.Drawing.Point(258, 52);
+            this.nud_1.Name = "nud_1";
+            this.nud_1.Size = new System.Drawing.Size(76, 23);
+            this.nud_1.TabIndex = 1;
+            this.nud_1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_AirDensity
+            // 
+            this.cb_AirDensity.AutoSize = true;
+            this.cb_AirDensity.Location = new System.Drawing.Point(50, 50);
+            this.cb_AirDensity.Name = "cb_AirDensity";
+            this.cb_AirDensity.Size = new System.Drawing.Size(83, 19);
+            this.cb_AirDensity.TabIndex = 0;
+            this.cb_AirDensity.Tag = "AirDensity";
+            this.cb_AirDensity.Text = "Air Density";
+            this.cb_AirDensity.UseVisualStyleBackColor = true;
             // 
             // fbd_DataFileFolder
             // 
@@ -2180,6 +2248,10 @@
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
+            this.tp_WitemsSetting.ResumeLayout(false);
+            this.tp_WitemsSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2244,5 +2316,10 @@
         private TabPage tp_Search;
         private BindingSource levelsLinesBindingSource;
         private CheckedListBox clb_SearchResults;
+        private CheckBox cb_AirDensity;
+        private TextBox textBox2;
+        private NumericUpDown numericUpDown2;
+        private TextBox textBox1;
+        private NumericUpDown nud_1;
     }
 }
