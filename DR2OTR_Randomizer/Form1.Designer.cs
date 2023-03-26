@@ -86,12 +86,25 @@
             this.b_DeselectAll = new System.Windows.Forms.Button();
             this.b_CheckAll = new System.Windows.Forms.Button();
             this.tp_WitemsSetting = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.nud_1 = new System.Windows.Forms.NumericUpDown();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tp_VehicleStats = new System.Windows.Forms.TabPage();
+            this.gb_AirDensity = new System.Windows.Forms.GroupBox();
+            this.l_AD_Set = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.l_AD_max = new System.Windows.Forms.Label();
+            this.nud_AD_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_AD_min = new System.Windows.Forms.Label();
+            this.nud_AD_Min = new System.Windows.Forms.NumericUpDown();
             this.cb_AirDensity = new System.Windows.Forms.CheckBox();
             this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.cb_MaxBreakTorq = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -118,8 +131,16 @@
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
             this.tp_WitemsSetting.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tp_VehicleStats.SuspendLayout();
+            this.gb_AirDensity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2135,11 +2156,7 @@
             // tp_WitemsSetting
             // 
             this.tp_WitemsSetting.AutoScroll = true;
-            this.tp_WitemsSetting.Controls.Add(this.textBox2);
-            this.tp_WitemsSetting.Controls.Add(this.numericUpDown2);
-            this.tp_WitemsSetting.Controls.Add(this.textBox1);
-            this.tp_WitemsSetting.Controls.Add(this.nud_1);
-            this.tp_WitemsSetting.Controls.Add(this.cb_AirDensity);
+            this.tp_WitemsSetting.Controls.Add(this.tabControl1);
             this.tp_WitemsSetting.Location = new System.Drawing.Point(4, 24);
             this.tp_WitemsSetting.Name = "tp_WitemsSetting";
             this.tp_WitemsSetting.Padding = new System.Windows.Forms.Padding(3);
@@ -2148,58 +2165,102 @@
             this.tp_WitemsSetting.Text = "Items Settings";
             this.tp_WitemsSetting.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tabControl1
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(336, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(30, 16);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Min:";
+            this.tabControl1.Controls.Add(this.tp_VehicleStats);
+            this.tabControl1.Location = new System.Drawing.Point(6, 51);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(706, 415);
+            this.tabControl1.TabIndex = 1;
             // 
-            // numericUpDown2
+            // tp_VehicleStats
             // 
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.Location = new System.Drawing.Point(372, 52);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(76, 19);
-            this.numericUpDown2.TabIndex = 3;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.tp_VehicleStats.Controls.Add(this.groupBox1);
+            this.tp_VehicleStats.Controls.Add(this.gb_AirDensity);
+            this.tp_VehicleStats.Location = new System.Drawing.Point(4, 24);
+            this.tp_VehicleStats.Name = "tp_VehicleStats";
+            this.tp_VehicleStats.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_VehicleStats.Size = new System.Drawing.Size(698, 387);
+            this.tp_VehicleStats.TabIndex = 0;
+            this.tp_VehicleStats.Text = "Vehicle Stats";
+            this.tp_VehicleStats.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // gb_AirDensity
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(222, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(30, 16);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Min:";
+            this.gb_AirDensity.Controls.Add(this.l_AD_Set);
+            this.gb_AirDensity.Controls.Add(this.numericUpDown3);
+            this.gb_AirDensity.Controls.Add(this.l_AD_max);
+            this.gb_AirDensity.Controls.Add(this.nud_AD_Max);
+            this.gb_AirDensity.Controls.Add(this.l_AD_min);
+            this.gb_AirDensity.Controls.Add(this.nud_AD_Min);
+            this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
+            this.gb_AirDensity.Location = new System.Drawing.Point(6, 6);
+            this.gb_AirDensity.Name = "gb_AirDensity";
+            this.gb_AirDensity.Size = new System.Drawing.Size(686, 60);
+            this.gb_AirDensity.TabIndex = 2;
+            this.gb_AirDensity.TabStop = false;
             // 
-            // nud_1
+            // l_AD_Set
             // 
-            this.nud_1.Location = new System.Drawing.Point(258, 52);
-            this.nud_1.Name = "nud_1";
-            this.nud_1.Size = new System.Drawing.Size(76, 23);
-            this.nud_1.TabIndex = 1;
-            this.nud_1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.l_AD_Set.AutoSize = true;
+            this.l_AD_Set.Location = new System.Drawing.Point(508, 13);
+            this.l_AD_Set.Name = "l_AD_Set";
+            this.l_AD_Set.Size = new System.Drawing.Size(26, 15);
+            this.l_AD_Set.TabIndex = 6;
+            this.l_AD_Set.Text = "Set:";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(508, 31);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(86, 23);
+            this.numericUpDown3.TabIndex = 5;
+            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_AD_max
+            // 
+            this.l_AD_max.AutoSize = true;
+            this.l_AD_max.Location = new System.Drawing.Point(416, 13);
+            this.l_AD_max.Name = "l_AD_max";
+            this.l_AD_max.Size = new System.Drawing.Size(65, 15);
+            this.l_AD_max.TabIndex = 4;
+            this.l_AD_max.Text = "Maximum:";
+            // 
+            // nud_AD_Max
+            // 
+            this.nud_AD_Max.Location = new System.Drawing.Point(416, 31);
+            this.nud_AD_Max.Name = "nud_AD_Max";
+            this.nud_AD_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_AD_Max.TabIndex = 3;
+            this.nud_AD_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_AD_min
+            // 
+            this.l_AD_min.AutoSize = true;
+            this.l_AD_min.Location = new System.Drawing.Point(324, 13);
+            this.l_AD_min.Name = "l_AD_min";
+            this.l_AD_min.Size = new System.Drawing.Size(63, 15);
+            this.l_AD_min.TabIndex = 2;
+            this.l_AD_min.Text = "Minimum:";
+            // 
+            // nud_AD_Min
+            // 
+            this.nud_AD_Min.Location = new System.Drawing.Point(324, 31);
+            this.nud_AD_Min.Name = "nud_AD_Min";
+            this.nud_AD_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_AD_Min.TabIndex = 1;
+            this.nud_AD_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cb_AirDensity
             // 
             this.cb_AirDensity.AutoSize = true;
-            this.cb_AirDensity.Location = new System.Drawing.Point(50, 50);
+            this.cb_AirDensity.Location = new System.Drawing.Point(6, 25);
             this.cb_AirDensity.Name = "cb_AirDensity";
-            this.cb_AirDensity.Size = new System.Drawing.Size(83, 19);
+            this.cb_AirDensity.Size = new System.Drawing.Size(126, 19);
             this.cb_AirDensity.TabIndex = 0;
             this.cb_AirDensity.Tag = "AirDensity";
-            this.cb_AirDensity.Text = "Air Density";
+            this.cb_AirDensity.Text = "Vehicle Air Density:";
             this.cb_AirDensity.UseVisualStyleBackColor = true;
             // 
             // fbd_DataFileFolder
@@ -2207,6 +2268,83 @@
             this.fbd_DataFileFolder.Description = "Select the upacked datafile folder";
             this.fbd_DataFileFolder.ShowNewFolderButton = false;
             this.fbd_DataFileFolder.UseDescriptionForTitle = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.numericUpDown4);
+            this.groupBox1.Controls.Add(this.cb_MaxBreakTorq);
+            this.groupBox1.Location = new System.Drawing.Point(6, 72);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(686, 60);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(508, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Set:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(508, 31);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(86, 23);
+            this.numericUpDown1.TabIndex = 5;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(416, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Maximum:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(416, 31);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(86, 23);
+            this.numericUpDown2.TabIndex = 3;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(324, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Minimum:";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(324, 31);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(86, 23);
+            this.numericUpDown4.TabIndex = 1;
+            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_MaxBreakTorq
+            // 
+            this.cb_MaxBreakTorq.AutoSize = true;
+            this.cb_MaxBreakTorq.Location = new System.Drawing.Point(6, 25);
+            this.cb_MaxBreakTorq.Name = "cb_MaxBreakTorq";
+            this.cb_MaxBreakTorq.Size = new System.Drawing.Size(137, 19);
+            this.cb_MaxBreakTorq.TabIndex = 0;
+            this.cb_MaxBreakTorq.Tag = "AirDensity";
+            this.cb_MaxBreakTorq.Text = "Max Breaking Torque";
+            this.cb_MaxBreakTorq.UseVisualStyleBackColor = true;
             // 
             // F_ItemRandomiser
             // 
@@ -2249,9 +2387,18 @@
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
             this.tp_WitemsSetting.ResumeLayout(false);
-            this.tp_WitemsSetting.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_AirDensity.ResumeLayout(false);
+            this.gb_AirDensity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2316,10 +2463,23 @@
         private TabPage tp_Search;
         private BindingSource levelsLinesBindingSource;
         private CheckedListBox clb_SearchResults;
+        private TabControl tabControl1;
+        private TabPage tp_VehicleStats;
+        private GroupBox gb_AirDensity;
+        private Label l_AD_Set;
+        private NumericUpDown numericUpDown3;
+        private Label l_AD_max;
+        private NumericUpDown nud_AD_Max;
+        private Label l_AD_min;
+        private NumericUpDown nud_AD_Min;
         private CheckBox cb_AirDensity;
-        private TextBox textBox2;
+        private GroupBox groupBox1;
+        private Label label1;
+        private NumericUpDown numericUpDown1;
+        private Label label2;
         private NumericUpDown numericUpDown2;
-        private TextBox textBox1;
-        private NumericUpDown nud_1;
+        private Label label3;
+        private NumericUpDown numericUpDown4;
+        private CheckBox cb_MaxBreakTorq;
     }
 }

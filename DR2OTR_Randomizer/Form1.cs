@@ -15,7 +15,6 @@ public partial class F_ItemRandomiser : Form
     public F_ItemRandomiser()
     {
         InitializeComponent();
-        nud_1.Controls[0].Visible = false;
         //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
 
@@ -245,6 +244,11 @@ public partial class F_ItemRandomiser : Form
             tc_Items.TabPages.Insert(0, tp_Search);
             tc_Items.SelectTab(tp_Search);
         }
+    }
+
+    private void gb_Vehicle_Enter(object sender, EventArgs e)
+    {
+
     }
 }
 
