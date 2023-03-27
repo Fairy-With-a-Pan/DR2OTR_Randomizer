@@ -2,6 +2,8 @@
 {
     partial class F_ItemRandomiser
     {
+        
+        
         /// <summary>
         ///  Required designer variable.
         /// </summary>
@@ -88,23 +90,50 @@
             this.tp_WitemsSetting = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_VehicleStats = new System.Windows.Forms.TabPage();
+            this.gb_V_EORPM = new System.Windows.Forms.GroupBox();
+            this.l_V_EORPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_EORPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_EORPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_EORPM_Min = new System.Windows.Forms.Label();
+            this.nud_V_EORPM_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_EORPM = new System.Windows.Forms.CheckBox();
+            this.gb_V_EMinRPM = new System.Windows.Forms.GroupBox();
+            this.l_V_EMinRPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_EMinRPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_EMinRPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_EMinRPM_min = new System.Windows.Forms.Label();
+            this.nud_V_EMinRPM_min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_EMinRPM = new System.Windows.Forms.CheckBox();
+            this.gb_V_EMT = new System.Windows.Forms.GroupBox();
+            this.l_V_EMT_Dec = new System.Windows.Forms.Label();
+            this.l_V_EMT_Max = new System.Windows.Forms.Label();
+            this.nud_V_EMT_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_EMT_Min = new System.Windows.Forms.Label();
+            this.nud_V_EMT_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_EMT = new System.Windows.Forms.CheckBox();
+            this.gb_V_EMaxRPM = new System.Windows.Forms.GroupBox();
+            this.l_V_EMaxRPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_EMaxRPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_EMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_EMaxRPM_Min = new System.Windows.Forms.Label();
+            this.nud_V_EMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_EMaxRPM = new System.Windows.Forms.CheckBox();
             this.gb_AirDensity = new System.Windows.Forms.GroupBox();
-            this.l_AD_Set = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.l_V_AD_Dec = new System.Windows.Forms.Label();
             this.l_AD_max = new System.Windows.Forms.Label();
             this.nud_AD_Max = new System.Windows.Forms.NumericUpDown();
             this.l_AD_min = new System.Windows.Forms.Label();
             this.nud_AD_Min = new System.Windows.Forms.NumericUpDown();
             this.cb_AirDensity = new System.Windows.Forms.CheckBox();
             this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.cb_MaxBreakTorq = new System.Windows.Forms.CheckBox();
+            this.tt_VehicleStats = new System.Windows.Forms.ToolTip(this.components);
+            this.gb_V_ETFMaxRPM = new System.Windows.Forms.GroupBox();
+            this.l_V_ETFMaxRPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_ETFMaxRPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_ETFMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_ETFMaxRPM_Min = new System.Windows.Forms.Label();
+            this.nud_V_ETFMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_ETFMaxRPM = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -133,14 +162,24 @@
             this.tp_WitemsSetting.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
+            this.gb_V_EORPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
+            this.gb_V_EMinRPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).BeginInit();
+            this.gb_V_EMT.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).BeginInit();
+            this.gb_V_EMaxRPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
             this.gb_AirDensity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.gb_V_ETFMaxRPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -593,6 +632,7 @@
             this.clb_Bugged.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clb_Bugged.FormattingEnabled = true;
             this.clb_Bugged.Items.AddRange(new object[] {
+            "\"HamsterBall_Blue_Gyroscope\"",
             "\"HangmanGun\"",
             "\"Intestine\"",
             "\"MascotMurderballLauncher\" ",
@@ -1304,6 +1344,11 @@
             "\"ChopperBikeSingle\"",
             "\"ClownCar\"",
             "\"GirlsBike\"",
+            "\"HamsterBall_Blue\"",
+            "\"HamsterBall_Green\"",
+            "\"HamsterBall_Red\"",
+            "\"HamsterBall_Yellow\"",
+            "\"HamsterBall_Yellow_Gyroscope\"",
             "\"Hummer\"",
             "\"IndustrialCart\"",
             "\"IndustrialClownCar\"",
@@ -2176,7 +2221,11 @@
             // 
             // tp_VehicleStats
             // 
-            this.tp_VehicleStats.Controls.Add(this.groupBox1);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_ETFMaxRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EORPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMinRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMT);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMaxRPM);
             this.tp_VehicleStats.Controls.Add(this.gb_AirDensity);
             this.tp_VehicleStats.Location = new System.Drawing.Point(4, 24);
             this.tp_VehicleStats.Name = "tp_VehicleStats";
@@ -2186,10 +2235,327 @@
             this.tp_VehicleStats.Text = "Vehicle Stats";
             this.tp_VehicleStats.UseVisualStyleBackColor = true;
             // 
+            // gb_V_EORPM
+            // 
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Dec);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
+            this.gb_V_EORPM.Location = new System.Drawing.Point(6, 267);
+            this.gb_V_EORPM.Name = "gb_V_EORPM";
+            this.gb_V_EORPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EORPM.TabIndex = 9;
+            this.gb_V_EORPM.TabStop = false;
+            this.gb_V_EORPM.Tag = "Engine_OptRPM";
+            // 
+            // l_V_EORPM_Dec
+            // 
+            this.l_V_EORPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_EORPM_Dec.Name = "l_V_EORPM_Dec";
+            this.l_V_EORPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_EORPM_Dec.TabIndex = 7;
+            this.l_V_EORPM_Dec.Text = "Give increased speed while keeping some control when set high.";
+            this.l_V_EORPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_EORPM_Max
+            // 
+            this.l_V_EORPM_Max.AutoSize = true;
+            this.l_V_EORPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_EORPM_Max.Name = "l_V_EORPM_Max";
+            this.l_V_EORPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_EORPM_Max.TabIndex = 4;
+            this.l_V_EORPM_Max.Text = "Maximum:";
+            // 
+            // nud_V_EORPM_Max
+            // 
+            this.nud_V_EORPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_EORPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EORPM_Max.Name = "nud_V_EORPM_Max";
+            this.nud_V_EORPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EORPM_Max.TabIndex = 3;
+            this.nud_V_EORPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_V_EORPM_Min
+            // 
+            this.l_V_EORPM_Min.AutoSize = true;
+            this.l_V_EORPM_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_EORPM_Min.Name = "l_V_EORPM_Min";
+            this.l_V_EORPM_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_EORPM_Min.TabIndex = 2;
+            this.l_V_EORPM_Min.Text = "Minimum:";
+            // 
+            // nud_V_EORPM_Min
+            // 
+            this.nud_V_EORPM_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_EORPM_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EORPM_Min.Name = "nud_V_EORPM_Min";
+            this.nud_V_EORPM_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EORPM_Min.TabIndex = 1;
+            this.nud_V_EORPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_V_EORPM
+            // 
+            this.cb_V_EORPM.AutoSize = true;
+            this.cb_V_EORPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_EORPM.Name = "cb_V_EORPM";
+            this.cb_V_EORPM.Size = new System.Drawing.Size(117, 19);
+            this.cb_V_EORPM.TabIndex = 0;
+            this.cb_V_EORPM.Text = "Vehicle Opt RPM:";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EORPM, "The average defualt is: 3473");
+            this.cb_V_EORPM.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_EMinRPM
+            // 
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Dec);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_min);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
+            this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
+            this.gb_V_EMinRPM.Location = new System.Drawing.Point(6, 135);
+            this.gb_V_EMinRPM.Name = "gb_V_EMinRPM";
+            this.gb_V_EMinRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMinRPM.TabIndex = 9;
+            this.gb_V_EMinRPM.TabStop = false;
+            this.gb_V_EMinRPM.Tag = "Engine_MinRPM";
+            // 
+            // l_V_EMinRPM_Dec
+            // 
+            this.l_V_EMinRPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_EMinRPM_Dec.Name = "l_V_EMinRPM_Dec";
+            this.l_V_EMinRPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_EMinRPM_Dec.TabIndex = 7;
+            this.l_V_EMinRPM_Dec.Text = "Gives a burst of speed when first acelerating. Setting higher can cause it to aut" +
+    "o acelerate.";
+            this.l_V_EMinRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_EMinRPM_Max
+            // 
+            this.l_V_EMinRPM_Max.AutoSize = true;
+            this.l_V_EMinRPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_EMinRPM_Max.Name = "l_V_EMinRPM_Max";
+            this.l_V_EMinRPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_EMinRPM_Max.TabIndex = 4;
+            this.l_V_EMinRPM_Max.Text = "Maximum:";
+            // 
+            // nud_V_EMinRPM_Max
+            // 
+            this.nud_V_EMinRPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_EMinRPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMinRPM_Max.Name = "nud_V_EMinRPM_Max";
+            this.nud_V_EMinRPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMinRPM_Max.TabIndex = 3;
+            this.nud_V_EMinRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_V_EMinRPM_min
+            // 
+            this.l_V_EMinRPM_min.AutoSize = true;
+            this.l_V_EMinRPM_min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_EMinRPM_min.Name = "l_V_EMinRPM_min";
+            this.l_V_EMinRPM_min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_EMinRPM_min.TabIndex = 2;
+            this.l_V_EMinRPM_min.Text = "Minimum:";
+            // 
+            // nud_V_EMinRPM_min
+            // 
+            this.nud_V_EMinRPM_min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_EMinRPM_min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMinRPM_min.Name = "nud_V_EMinRPM_min";
+            this.nud_V_EMinRPM_min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMinRPM_min.TabIndex = 1;
+            this.nud_V_EMinRPM_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_V_EMinRPM
+            // 
+            this.cb_V_EMinRPM.AutoSize = true;
+            this.cb_V_EMinRPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_EMinRPM.Name = "cb_V_EMinRPM";
+            this.cb_V_EMinRPM.Size = new System.Drawing.Size(115, 19);
+            this.cb_V_EMinRPM.TabIndex = 0;
+            this.cb_V_EMinRPM.Text = "Vehicle Min RPM";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMinRPM, "The average defualt is: 885");
+            this.cb_V_EMinRPM.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_EMT
+            // 
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Dec);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
+            this.gb_V_EMT.Location = new System.Drawing.Point(6, 201);
+            this.gb_V_EMT.Name = "gb_V_EMT";
+            this.gb_V_EMT.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMT.TabIndex = 8;
+            this.gb_V_EMT.TabStop = false;
+            this.gb_V_EMT.Tag = "Engine_MaxTorque";
+            // 
+            // l_V_EMT_Dec
+            // 
+            this.l_V_EMT_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_EMT_Dec.Name = "l_V_EMT_Dec";
+            this.l_V_EMT_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_EMT_Dec.TabIndex = 7;
+            this.l_V_EMT_Dec.Text = "Similar to max rpm but with a little less control and bit more kick.";
+            this.l_V_EMT_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_EMT_Max
+            // 
+            this.l_V_EMT_Max.AutoSize = true;
+            this.l_V_EMT_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_EMT_Max.Name = "l_V_EMT_Max";
+            this.l_V_EMT_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_EMT_Max.TabIndex = 4;
+            this.l_V_EMT_Max.Text = "Maximum:";
+            // 
+            // nud_V_EMT_Max
+            // 
+            this.nud_V_EMT_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_EMT_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMT_Max.Name = "nud_V_EMT_Max";
+            this.nud_V_EMT_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMT_Max.TabIndex = 3;
+            this.nud_V_EMT_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_V_EMT_Min
+            // 
+            this.l_V_EMT_Min.AutoSize = true;
+            this.l_V_EMT_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_EMT_Min.Name = "l_V_EMT_Min";
+            this.l_V_EMT_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_EMT_Min.TabIndex = 2;
+            this.l_V_EMT_Min.Text = "Minimum:";
+            // 
+            // nud_V_EMT_Min
+            // 
+            this.nud_V_EMT_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_EMT_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMT_Min.Name = "nud_V_EMT_Min";
+            this.nud_V_EMT_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMT_Min.TabIndex = 1;
+            this.nud_V_EMT_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_V_EMT
+            // 
+            this.cb_V_EMT.AutoSize = true;
+            this.cb_V_EMT.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_EMT.Name = "cb_V_EMT";
+            this.cb_V_EMT.Size = new System.Drawing.Size(131, 19);
+            this.cb_V_EMT.TabIndex = 0;
+            this.cb_V_EMT.Text = "Vehicle Max Torque:";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMT, "The average defualt is: 100");
+            this.cb_V_EMT.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_EMaxRPM
+            // 
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Dec);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
+            this.gb_V_EMaxRPM.Location = new System.Drawing.Point(6, 69);
+            this.gb_V_EMaxRPM.Name = "gb_V_EMaxRPM";
+            this.gb_V_EMaxRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMaxRPM.TabIndex = 3;
+            this.gb_V_EMaxRPM.TabStop = false;
+            this.gb_V_EMaxRPM.Tag = "Engine_MaxRPM";
+            // 
+            // l_V_EMaxRPM_Dec
+            // 
+            this.l_V_EMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_EMaxRPM_Dec.Name = "l_V_EMaxRPM_Dec";
+            this.l_V_EMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_EMaxRPM_Dec.TabIndex = 7;
+            this.l_V_EMaxRPM_Dec.Text = "One of the stats that controls the vehicles speed. May start to auto acelerate at" +
+    " higher values.";
+            this.l_V_EMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_EMaxRPM_Max
+            // 
+            this.l_V_EMaxRPM_Max.AutoSize = true;
+            this.l_V_EMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_EMaxRPM_Max.Name = "l_V_EMaxRPM_Max";
+            this.l_V_EMaxRPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_EMaxRPM_Max.TabIndex = 4;
+            this.l_V_EMaxRPM_Max.Text = "Maximum:";
+            // 
+            // nud_V_EMaxRPM_Max
+            // 
+            this.nud_V_EMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_EMaxRPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMaxRPM_Max.Name = "nud_V_EMaxRPM_Max";
+            this.nud_V_EMaxRPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMaxRPM_Max.TabIndex = 3;
+            this.nud_V_EMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // l_V_EMaxRPM_Min
+            // 
+            this.l_V_EMaxRPM_Min.AutoSize = true;
+            this.l_V_EMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_EMaxRPM_Min.Name = "l_V_EMaxRPM_Min";
+            this.l_V_EMaxRPM_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_EMaxRPM_Min.TabIndex = 2;
+            this.l_V_EMaxRPM_Min.Text = "Minimum:";
+            // 
+            // nud_V_EMaxRPM_Min
+            // 
+            this.nud_V_EMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_EMaxRPM_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_EMaxRPM_Min.Name = "nud_V_EMaxRPM_Min";
+            this.nud_V_EMaxRPM_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_EMaxRPM_Min.TabIndex = 1;
+            this.nud_V_EMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_V_EMaxRPM
+            // 
+            this.cb_V_EMaxRPM.AutoSize = true;
+            this.cb_V_EMaxRPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_EMaxRPM.Name = "cb_V_EMaxRPM";
+            this.cb_V_EMaxRPM.Size = new System.Drawing.Size(120, 19);
+            this.cb_V_EMaxRPM.TabIndex = 0;
+            this.cb_V_EMaxRPM.Text = "Vehicle Max RPM:";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMaxRPM, "The average defualt is: 3550");
+            this.cb_V_EMaxRPM.UseVisualStyleBackColor = true;
+            // 
             // gb_AirDensity
             // 
-            this.gb_AirDensity.Controls.Add(this.l_AD_Set);
-            this.gb_AirDensity.Controls.Add(this.numericUpDown3);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
             this.gb_AirDensity.Controls.Add(this.l_AD_max);
             this.gb_AirDensity.Controls.Add(this.nud_AD_Max);
             this.gb_AirDensity.Controls.Add(this.l_AD_min);
@@ -2200,28 +2566,22 @@
             this.gb_AirDensity.Size = new System.Drawing.Size(686, 60);
             this.gb_AirDensity.TabIndex = 2;
             this.gb_AirDensity.TabStop = false;
+            this.gb_AirDensity.Tag = "AirDensity";
             // 
-            // l_AD_Set
+            // l_V_AD_Dec
             // 
-            this.l_AD_Set.AutoSize = true;
-            this.l_AD_Set.Location = new System.Drawing.Point(508, 13);
-            this.l_AD_Set.Name = "l_AD_Set";
-            this.l_AD_Set.Size = new System.Drawing.Size(26, 15);
-            this.l_AD_Set.TabIndex = 6;
-            this.l_AD_Set.Text = "Set:";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(508, 31);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(86, 23);
-            this.numericUpDown3.TabIndex = 5;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.l_V_AD_Dec.Location = new System.Drawing.Point(138, 10);
+            this.l_V_AD_Dec.Name = "l_V_AD_Dec";
+            this.l_V_AD_Dec.Size = new System.Drawing.Size(231, 50);
+            this.l_V_AD_Dec.TabIndex = 7;
+            this.l_V_AD_Dec.Text = "Controls how much air resistance there is for the vehicle. The lower the less air" +
+    " resistance.";
+            this.l_V_AD_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // l_AD_max
             // 
             this.l_AD_max.AutoSize = true;
-            this.l_AD_max.Location = new System.Drawing.Point(416, 13);
+            this.l_AD_max.Location = new System.Drawing.Point(540, 13);
             this.l_AD_max.Name = "l_AD_max";
             this.l_AD_max.Size = new System.Drawing.Size(65, 15);
             this.l_AD_max.TabIndex = 4;
@@ -2229,7 +2589,12 @@
             // 
             // nud_AD_Max
             // 
-            this.nud_AD_Max.Location = new System.Drawing.Point(416, 31);
+            this.nud_AD_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_AD_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nud_AD_Max.Name = "nud_AD_Max";
             this.nud_AD_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_AD_Max.TabIndex = 3;
@@ -2238,7 +2603,7 @@
             // l_AD_min
             // 
             this.l_AD_min.AutoSize = true;
-            this.l_AD_min.Location = new System.Drawing.Point(324, 13);
+            this.l_AD_min.Location = new System.Drawing.Point(410, 13);
             this.l_AD_min.Name = "l_AD_min";
             this.l_AD_min.Size = new System.Drawing.Size(63, 15);
             this.l_AD_min.TabIndex = 2;
@@ -2246,7 +2611,12 @@
             // 
             // nud_AD_Min
             // 
-            this.nud_AD_Min.Location = new System.Drawing.Point(324, 31);
+            this.nud_AD_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_AD_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.nud_AD_Min.Name = "nud_AD_Min";
             this.nud_AD_Min.Size = new System.Drawing.Size(86, 23);
             this.nud_AD_Min.TabIndex = 1;
@@ -2259,8 +2629,8 @@
             this.cb_AirDensity.Name = "cb_AirDensity";
             this.cb_AirDensity.Size = new System.Drawing.Size(126, 19);
             this.cb_AirDensity.TabIndex = 0;
-            this.cb_AirDensity.Tag = "AirDensity";
             this.cb_AirDensity.Text = "Vehicle Air Density:";
+            this.tt_VehicleStats.SetToolTip(this.cb_AirDensity, "The average defualt is: 0.7");
             this.cb_AirDensity.UseVisualStyleBackColor = true;
             // 
             // fbd_DataFileFolder
@@ -2269,82 +2639,84 @@
             this.fbd_DataFileFolder.ShowNewFolderButton = false;
             this.fbd_DataFileFolder.UseDescriptionForTitle = true;
             // 
-            // groupBox1
+            // gb_V_ETFMaxRPM
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown4);
-            this.groupBox1.Controls.Add(this.cb_MaxBreakTorq);
-            this.groupBox1.Location = new System.Drawing.Point(6, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 60);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
+            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 330);
+            this.gb_V_ETFMaxRPM.Name = "gb_V_ETFMaxRPM";
+            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_ETFMaxRPM.TabIndex = 10;
+            this.gb_V_ETFMaxRPM.TabStop = false;
+            this.gb_V_ETFMaxRPM.Tag = "Engine_TorqueFactorAtMaxRPM";
             // 
-            // label1
+            // l_V_ETFMaxRPM_Dec
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(508, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Set:";
+            this.l_V_ETFMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_ETFMaxRPM_Dec.Name = "l_V_ETFMaxRPM_Dec";
+            this.l_V_ETFMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_ETFMaxRPM_Dec.TabIndex = 7;
+            this.l_V_ETFMaxRPM_Dec.Text = "Will greatly increase the vehicles speed the higher you set.";
+            this.l_V_ETFMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown1
+            // l_V_ETFMaxRPM_Max
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(508, 31);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(86, 23);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.l_V_ETFMaxRPM_Max.AutoSize = true;
+            this.l_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_ETFMaxRPM_Max.Name = "l_V_ETFMaxRPM_Max";
+            this.l_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_ETFMaxRPM_Max.TabIndex = 4;
+            this.l_V_ETFMaxRPM_Max.Text = "Maximum:";
             // 
-            // label2
+            // nud_V_ETFMaxRPM_Max
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(416, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Maximum:";
+            this.nud_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_ETFMaxRPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETFMaxRPM_Max.Name = "nud_V_ETFMaxRPM_Max";
+            this.nud_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETFMaxRPM_Max.TabIndex = 3;
+            this.nud_V_ETFMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown2
+            // l_V_ETFMaxRPM_Min
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(416, 31);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(86, 23);
-            this.numericUpDown2.TabIndex = 3;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.l_V_ETFMaxRPM_Min.AutoSize = true;
+            this.l_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_ETFMaxRPM_Min.Name = "l_V_ETFMaxRPM_Min";
+            this.l_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_ETFMaxRPM_Min.TabIndex = 2;
+            this.l_V_ETFMaxRPM_Min.Text = "Minimum:";
             // 
-            // label3
+            // nud_V_ETFMaxRPM_Min
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Minimum:";
+            this.nud_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_ETFMaxRPM_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETFMaxRPM_Min.Name = "nud_V_ETFMaxRPM_Min";
+            this.nud_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETFMaxRPM_Min.TabIndex = 1;
+            this.nud_V_ETFMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown4
+            // cb_V_ETFMaxRPM
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(324, 31);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(86, 23);
-            this.numericUpDown4.TabIndex = 1;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cb_MaxBreakTorq
-            // 
-            this.cb_MaxBreakTorq.AutoSize = true;
-            this.cb_MaxBreakTorq.Location = new System.Drawing.Point(6, 25);
-            this.cb_MaxBreakTorq.Name = "cb_MaxBreakTorq";
-            this.cb_MaxBreakTorq.Size = new System.Drawing.Size(137, 19);
-            this.cb_MaxBreakTorq.TabIndex = 0;
-            this.cb_MaxBreakTorq.Tag = "AirDensity";
-            this.cb_MaxBreakTorq.Text = "Max Breaking Torque";
-            this.cb_MaxBreakTorq.UseVisualStyleBackColor = true;
+            this.cb_V_ETFMaxRPM.AutoSize = true;
+            this.cb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_ETFMaxRPM.Name = "cb_V_ETFMaxRPM";
+            this.cb_V_ETFMaxRPM.Size = new System.Drawing.Size(142, 19);
+            this.cb_V_ETFMaxRPM.TabIndex = 0;
+            this.cb_V_ETFMaxRPM.Text = "Torque Factor At Max ";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
+            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = true;
             // 
             // F_ItemRandomiser
             // 
@@ -2389,16 +2761,30 @@
             this.tp_WitemsSetting.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_V_EORPM.ResumeLayout(false);
+            this.gb_V_EORPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).EndInit();
+            this.gb_V_EMinRPM.ResumeLayout(false);
+            this.gb_V_EMinRPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).EndInit();
+            this.gb_V_EMT.ResumeLayout(false);
+            this.gb_V_EMT.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).EndInit();
+            this.gb_V_EMaxRPM.ResumeLayout(false);
+            this.gb_V_EMaxRPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
             this.gb_AirDensity.ResumeLayout(false);
             this.gb_AirDensity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.gb_V_ETFMaxRPM.ResumeLayout(false);
+            this.gb_V_ETFMaxRPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2466,20 +2852,47 @@
         private TabControl tabControl1;
         private TabPage tp_VehicleStats;
         private GroupBox gb_AirDensity;
-        private Label l_AD_Set;
-        private NumericUpDown numericUpDown3;
         private Label l_AD_max;
         private NumericUpDown nud_AD_Max;
         private Label l_AD_min;
         private NumericUpDown nud_AD_Min;
         private CheckBox cb_AirDensity;
-        private GroupBox groupBox1;
-        private Label label1;
-        private NumericUpDown numericUpDown1;
-        private Label label2;
-        private NumericUpDown numericUpDown2;
-        private Label label3;
-        private NumericUpDown numericUpDown4;
-        private CheckBox cb_MaxBreakTorq;
+        private Label l_V_AD_Dec;
+        private ToolTip tt_VehicleStats;
+        private GroupBox gb_V_EMaxRPM;
+        private Label l_V_EMaxRPM_Dec;
+        private Label l_V_EMaxRPM_Max;
+        private NumericUpDown nud_V_EMaxRPM_Max;
+        private Label l_V_EMaxRPM_Min;
+        private NumericUpDown nud_V_EMaxRPM_Min;
+        private CheckBox cb_V_EMaxRPM;
+        private GroupBox gb_V_EMT;
+        private Label l_V_EMT_Dec;
+        private Label l_V_EMT_Max;
+        private NumericUpDown nud_V_EMT_Max;
+        private Label l_V_EMT_Min;
+        private NumericUpDown nud_V_EMT_Min;
+        private CheckBox cb_V_EMT;
+        private GroupBox gb_V_EMinRPM;
+        private Label l_V_EMinRPM_Dec;
+        private Label l_V_EMinRPM_Max;
+        private NumericUpDown nud_V_EMinRPM_Max;
+        private Label l_V_EMinRPM_min;
+        private NumericUpDown nud_V_EMinRPM_min;
+        private CheckBox cb_V_EMinRPM;
+        private GroupBox gb_V_EORPM;
+        private Label l_V_EORPM_Dec;
+        private Label l_V_EORPM_Max;
+        private NumericUpDown nud_V_EORPM_Max;
+        private Label l_V_EORPM_Min;
+        private NumericUpDown nud_V_EORPM_Min;
+        private CheckBox cb_V_EORPM;
+        private GroupBox gb_V_ETFMaxRPM;
+        private Label l_V_ETFMaxRPM_Dec;
+        private Label l_V_ETFMaxRPM_Max;
+        private NumericUpDown nud_V_ETFMaxRPM_Max;
+        private Label l_V_ETFMaxRPM_Min;
+        private NumericUpDown nud_V_ETFMaxRPM_Min;
+        private CheckBox cb_V_ETFMaxRPM;
     }
 }

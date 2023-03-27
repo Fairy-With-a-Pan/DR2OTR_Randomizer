@@ -1,6 +1,7 @@
 
 
 using DR2OTR_Randomizer.Resources;
+using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Xml;
@@ -15,12 +16,19 @@ public partial class F_ItemRandomiser : Form
     public F_ItemRandomiser()
     {
         InitializeComponent();
+        //use this to catch if the Allitems text file is missingq
+        if ($"{Application.StartupPath}\\Allitems.txt" == null)
+        {
+            MessageBox.Show
+            ("The \"Allitems.txt\" is missing please make sure it " +
+            "is in the same location as this programs exe "
+            , "WARNING");
+            Process.GetCurrentProcess().Kill();
+        }
+        
+        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
         //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
-
-        //NEEDS TO SHIP WITH THE "Allitems.txt"
-        //User will be able to add and remove items from the file
-        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
         //Create a new data table to put inside the check list box
         var dt = new DataTable();
 
@@ -28,10 +36,11 @@ public partial class F_ItemRandomiser : Form
         dt.Columns.Add("Item", typeof(string));
         dt.Columns.Add("Checked", typeof(bool));
 
+        //NEEDS TO SHIP WITH THE "Allitems.txt"
+        //User will be able to add and remove items from the file
         //goese though each of the item in the array for the allitems.txt and
         //adds it to the datatable and defaults its check to false
         foreach (var item in dataArray) dt.Rows.Add(item, false);
-
         //Commits the items added with the foreach loop
         dt.AcceptChanges();
 
@@ -246,7 +255,7 @@ public partial class F_ItemRandomiser : Form
         }
     }
 
-    private void gb_Vehicle_Enter(object sender, EventArgs e)
+    private void groupBox1_Enter(object sender, EventArgs e)
     {
 
     }
