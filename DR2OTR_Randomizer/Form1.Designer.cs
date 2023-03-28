@@ -87,9 +87,17 @@
             this.b_Randomise = new System.Windows.Forms.Button();
             this.b_DeselectAll = new System.Windows.Forms.Button();
             this.b_CheckAll = new System.Windows.Forms.Button();
-            this.tp_WitemsSetting = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tp_WitemsStats = new System.Windows.Forms.TabPage();
+            this.bt_ItenStatsSet = new System.Windows.Forms.Button();
+            this.tc_itemStats = new System.Windows.Forms.TabControl();
             this.tp_VehicleStats = new System.Windows.Forms.TabPage();
+            this.gb_V_ETFMaxRPM = new System.Windows.Forms.GroupBox();
+            this.l_V_ETFMaxRPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_ETFMaxRPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_ETFMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_ETFMaxRPM_Min = new System.Windows.Forms.Label();
+            this.nud_V_ETFMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_ETFMaxRPM = new System.Windows.Forms.CheckBox();
             this.gb_V_EORPM = new System.Windows.Forms.GroupBox();
             this.l_V_EORPM_Dec = new System.Windows.Forms.Label();
             this.l_V_EORPM_Max = new System.Windows.Forms.Label();
@@ -127,13 +135,6 @@
             this.cb_AirDensity = new System.Windows.Forms.CheckBox();
             this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.tt_VehicleStats = new System.Windows.Forms.ToolTip(this.components);
-            this.gb_V_ETFMaxRPM = new System.Windows.Forms.GroupBox();
-            this.l_V_ETFMaxRPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_ETFMaxRPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_ETFMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_ETFMaxRPM_Min = new System.Windows.Forms.Label();
-            this.nud_V_ETFMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_ETFMaxRPM = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -159,9 +160,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
-            this.tp_WitemsSetting.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tp_WitemsStats.SuspendLayout();
+            this.tc_itemStats.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
+            this.gb_V_ETFMaxRPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
             this.gb_V_EORPM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
@@ -177,9 +181,6 @@
             this.gb_AirDensity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
-            this.gb_V_ETFMaxRPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2122,7 +2123,7 @@
             // tc_TabWindows
             // 
             this.tc_TabWindows.Controls.Add(this.tp_WItemRandom);
-            this.tc_TabWindows.Controls.Add(this.tp_WitemsSetting);
+            this.tc_TabWindows.Controls.Add(this.tp_WitemsStats);
             this.tc_TabWindows.Location = new System.Drawing.Point(12, 31);
             this.tc_TabWindows.Name = "tc_TabWindows";
             this.tc_TabWindows.SelectedIndex = 0;
@@ -2198,26 +2199,37 @@
             this.b_CheckAll.UseVisualStyleBackColor = true;
             this.b_CheckAll.Click += new System.EventHandler(this.b_CheckAll_Click);
             // 
-            // tp_WitemsSetting
+            // tp_WitemsStats
             // 
-            this.tp_WitemsSetting.AutoScroll = true;
-            this.tp_WitemsSetting.Controls.Add(this.tabControl1);
-            this.tp_WitemsSetting.Location = new System.Drawing.Point(4, 24);
-            this.tp_WitemsSetting.Name = "tp_WitemsSetting";
-            this.tp_WitemsSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_WitemsSetting.Size = new System.Drawing.Size(718, 472);
-            this.tp_WitemsSetting.TabIndex = 1;
-            this.tp_WitemsSetting.Text = "Items Settings";
-            this.tp_WitemsSetting.UseVisualStyleBackColor = true;
+            this.tp_WitemsStats.AutoScroll = true;
+            this.tp_WitemsStats.Controls.Add(this.bt_ItenStatsSet);
+            this.tp_WitemsStats.Controls.Add(this.tc_itemStats);
+            this.tp_WitemsStats.Location = new System.Drawing.Point(4, 24);
+            this.tp_WitemsStats.Name = "tp_WitemsStats";
+            this.tp_WitemsStats.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_WitemsStats.Size = new System.Drawing.Size(718, 472);
+            this.tp_WitemsStats.TabIndex = 1;
+            this.tp_WitemsStats.Text = "Items Stats";
+            this.tp_WitemsStats.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // bt_ItenStatsSet
             // 
-            this.tabControl1.Controls.Add(this.tp_VehicleStats);
-            this.tabControl1.Location = new System.Drawing.Point(6, 51);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(706, 415);
-            this.tabControl1.TabIndex = 1;
+            this.bt_ItenStatsSet.Location = new System.Drawing.Point(10, 6);
+            this.bt_ItenStatsSet.Name = "bt_ItenStatsSet";
+            this.bt_ItenStatsSet.Size = new System.Drawing.Size(138, 41);
+            this.bt_ItenStatsSet.TabIndex = 2;
+            this.bt_ItenStatsSet.Text = "Randomize";
+            this.bt_ItenStatsSet.UseVisualStyleBackColor = true;
+            this.bt_ItenStatsSet.Click += new System.EventHandler(this.bt_ItenStatsSet_Click);
+            // 
+            // tc_itemStats
+            // 
+            this.tc_itemStats.Controls.Add(this.tp_VehicleStats);
+            this.tc_itemStats.Location = new System.Drawing.Point(6, 51);
+            this.tc_itemStats.Name = "tc_itemStats";
+            this.tc_itemStats.SelectedIndex = 0;
+            this.tc_itemStats.Size = new System.Drawing.Size(706, 415);
+            this.tc_itemStats.TabIndex = 1;
             // 
             // tp_VehicleStats
             // 
@@ -2234,6 +2246,95 @@
             this.tp_VehicleStats.TabIndex = 0;
             this.tp_VehicleStats.Text = "Vehicle Stats";
             this.tp_VehicleStats.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_ETFMaxRPM
+            // 
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
+            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 330);
+            this.gb_V_ETFMaxRPM.Name = "gb_V_ETFMaxRPM";
+            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_ETFMaxRPM.TabIndex = 10;
+            this.gb_V_ETFMaxRPM.TabStop = false;
+            this.gb_V_ETFMaxRPM.Tag = "Engine_TorqueFactorAtMaxRPM";
+            // 
+            // l_V_ETFMaxRPM_Dec
+            // 
+            this.l_V_ETFMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_ETFMaxRPM_Dec.Name = "l_V_ETFMaxRPM_Dec";
+            this.l_V_ETFMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_ETFMaxRPM_Dec.TabIndex = 7;
+            this.l_V_ETFMaxRPM_Dec.Text = "Will greatly increase the vehicles speed the higher you set.";
+            this.l_V_ETFMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_ETFMaxRPM_Max
+            // 
+            this.l_V_ETFMaxRPM_Max.AutoSize = true;
+            this.l_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_ETFMaxRPM_Max.Name = "l_V_ETFMaxRPM_Max";
+            this.l_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_ETFMaxRPM_Max.TabIndex = 4;
+            this.l_V_ETFMaxRPM_Max.Text = "Maximum:";
+            // 
+            // nud_V_ETFMaxRPM_Max
+            // 
+            this.nud_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_ETFMaxRPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETFMaxRPM_Max.Name = "nud_V_ETFMaxRPM_Max";
+            this.nud_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETFMaxRPM_Max.TabIndex = 3;
+            this.nud_V_ETFMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ETFMaxRPM_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_ETFMaxRPM_Min
+            // 
+            this.l_V_ETFMaxRPM_Min.AutoSize = true;
+            this.l_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_ETFMaxRPM_Min.Name = "l_V_ETFMaxRPM_Min";
+            this.l_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_ETFMaxRPM_Min.TabIndex = 2;
+            this.l_V_ETFMaxRPM_Min.Text = "Minimum:";
+            // 
+            // nud_V_ETFMaxRPM_Min
+            // 
+            this.nud_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_ETFMaxRPM_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETFMaxRPM_Min.Name = "nud_V_ETFMaxRPM_Min";
+            this.nud_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETFMaxRPM_Min.TabIndex = 1;
+            this.nud_V_ETFMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ETFMaxRPM_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_ETFMaxRPM
+            // 
+            this.cb_V_ETFMaxRPM.AutoSize = true;
+            this.cb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_ETFMaxRPM.Name = "cb_V_ETFMaxRPM";
+            this.cb_V_ETFMaxRPM.Size = new System.Drawing.Size(142, 19);
+            this.cb_V_ETFMaxRPM.TabIndex = 0;
+            this.cb_V_ETFMaxRPM.Text = "Torque Factor At Max ";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
+            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = true;
             // 
             // gb_V_EORPM
             // 
@@ -2280,6 +2381,11 @@
             this.nud_V_EORPM_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EORPM_Max.TabIndex = 3;
             this.nud_V_EORPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EORPM_Max.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             // 
             // l_V_EORPM_Min
             // 
@@ -2302,6 +2408,11 @@
             this.nud_V_EORPM_Min.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EORPM_Min.TabIndex = 1;
             this.nud_V_EORPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EORPM_Min.Value = new decimal(new int[] {
+            3473,
+            0,
+            0,
+            0});
             // 
             // cb_V_EORPM
             // 
@@ -2360,6 +2471,11 @@
             this.nud_V_EMinRPM_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMinRPM_Max.TabIndex = 3;
             this.nud_V_EMinRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMinRPM_Max.Value = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             // 
             // l_V_EMinRPM_min
             // 
@@ -2382,6 +2498,11 @@
             this.nud_V_EMinRPM_min.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMinRPM_min.TabIndex = 1;
             this.nud_V_EMinRPM_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMinRPM_min.Value = new decimal(new int[] {
+            885,
+            0,
+            0,
+            0});
             // 
             // cb_V_EMinRPM
             // 
@@ -2439,6 +2560,11 @@
             this.nud_V_EMT_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMT_Max.TabIndex = 3;
             this.nud_V_EMT_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMT_Max.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             // 
             // l_V_EMT_Min
             // 
@@ -2461,6 +2587,11 @@
             this.nud_V_EMT_Min.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMT_Min.TabIndex = 1;
             this.nud_V_EMT_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMT_Min.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // cb_V_EMT
             // 
@@ -2519,6 +2650,11 @@
             this.nud_V_EMaxRPM_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMaxRPM_Max.TabIndex = 3;
             this.nud_V_EMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMaxRPM_Max.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             // 
             // l_V_EMaxRPM_Min
             // 
@@ -2541,6 +2677,11 @@
             this.nud_V_EMaxRPM_Min.Size = new System.Drawing.Size(86, 23);
             this.nud_V_EMaxRPM_Min.TabIndex = 1;
             this.nud_V_EMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_EMaxRPM_Min.Value = new decimal(new int[] {
+            3550,
+            0,
+            0,
+            0});
             // 
             // cb_V_EMaxRPM
             // 
@@ -2599,6 +2740,11 @@
             this.nud_AD_Max.Size = new System.Drawing.Size(86, 23);
             this.nud_AD_Max.TabIndex = 3;
             this.nud_AD_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_AD_Max.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // l_AD_min
             // 
@@ -2638,85 +2784,6 @@
             this.fbd_DataFileFolder.Description = "Select the upacked datafile folder";
             this.fbd_DataFileFolder.ShowNewFolderButton = false;
             this.fbd_DataFileFolder.UseDescriptionForTitle = true;
-            // 
-            // gb_V_ETFMaxRPM
-            // 
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
-            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 330);
-            this.gb_V_ETFMaxRPM.Name = "gb_V_ETFMaxRPM";
-            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(686, 60);
-            this.gb_V_ETFMaxRPM.TabIndex = 10;
-            this.gb_V_ETFMaxRPM.TabStop = false;
-            this.gb_V_ETFMaxRPM.Tag = "Engine_TorqueFactorAtMaxRPM";
-            // 
-            // l_V_ETFMaxRPM_Dec
-            // 
-            this.l_V_ETFMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_ETFMaxRPM_Dec.Name = "l_V_ETFMaxRPM_Dec";
-            this.l_V_ETFMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_ETFMaxRPM_Dec.TabIndex = 7;
-            this.l_V_ETFMaxRPM_Dec.Text = "Will greatly increase the vehicles speed the higher you set.";
-            this.l_V_ETFMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_ETFMaxRPM_Max
-            // 
-            this.l_V_ETFMaxRPM_Max.AutoSize = true;
-            this.l_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_ETFMaxRPM_Max.Name = "l_V_ETFMaxRPM_Max";
-            this.l_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(65, 15);
-            this.l_V_ETFMaxRPM_Max.TabIndex = 4;
-            this.l_V_ETFMaxRPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_ETFMaxRPM_Max
-            // 
-            this.nud_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_ETFMaxRPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETFMaxRPM_Max.Name = "nud_V_ETFMaxRPM_Max";
-            this.nud_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(86, 23);
-            this.nud_V_ETFMaxRPM_Max.TabIndex = 3;
-            this.nud_V_ETFMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // l_V_ETFMaxRPM_Min
-            // 
-            this.l_V_ETFMaxRPM_Min.AutoSize = true;
-            this.l_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_ETFMaxRPM_Min.Name = "l_V_ETFMaxRPM_Min";
-            this.l_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(63, 15);
-            this.l_V_ETFMaxRPM_Min.TabIndex = 2;
-            this.l_V_ETFMaxRPM_Min.Text = "Minimum:";
-            // 
-            // nud_V_ETFMaxRPM_Min
-            // 
-            this.nud_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_ETFMaxRPM_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETFMaxRPM_Min.Name = "nud_V_ETFMaxRPM_Min";
-            this.nud_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(86, 23);
-            this.nud_V_ETFMaxRPM_Min.TabIndex = 1;
-            this.nud_V_ETFMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cb_V_ETFMaxRPM
-            // 
-            this.cb_V_ETFMaxRPM.AutoSize = true;
-            this.cb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_ETFMaxRPM.Name = "cb_V_ETFMaxRPM";
-            this.cb_V_ETFMaxRPM.Size = new System.Drawing.Size(142, 19);
-            this.cb_V_ETFMaxRPM.TabIndex = 0;
-            this.cb_V_ETFMaxRPM.Text = "Torque Factor At Max ";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
-            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = true;
             // 
             // F_ItemRandomiser
             // 
@@ -2758,9 +2825,13 @@
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
-            this.tp_WitemsSetting.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tp_WitemsStats.ResumeLayout(false);
+            this.tc_itemStats.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_V_ETFMaxRPM.ResumeLayout(false);
+            this.gb_V_ETFMaxRPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
             this.gb_V_EORPM.ResumeLayout(false);
             this.gb_V_EORPM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
@@ -2781,10 +2852,6 @@
             this.gb_AirDensity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
-            this.gb_V_ETFMaxRPM.ResumeLayout(false);
-            this.gb_V_ETFMaxRPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2839,7 +2906,7 @@
         private PictureBox pb_PHTest;
         private TabControl tc_TabWindows;
         private TabPage tp_WItemRandom;
-        private TabPage tp_WitemsSetting;
+        private TabPage tp_WitemsStats;
         private Button b_DeselectAll;
         private Button b_CheckAll;
         private Button b_Randomise;
@@ -2849,7 +2916,7 @@
         private TabPage tp_Search;
         private BindingSource levelsLinesBindingSource;
         private CheckedListBox clb_SearchResults;
-        private TabControl tabControl1;
+        private TabControl tc_itemStats;
         private TabPage tp_VehicleStats;
         private GroupBox gb_AirDensity;
         private Label l_AD_max;
@@ -2894,5 +2961,6 @@
         private Label l_V_ETFMaxRPM_Min;
         private NumericUpDown nud_V_ETFMaxRPM_Min;
         private CheckBox cb_V_ETFMaxRPM;
+        private Button bt_ItenStatsSet;
     }
 }

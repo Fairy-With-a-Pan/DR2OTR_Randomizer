@@ -13,6 +13,7 @@ public partial class F_ItemRandomiser : Form
 {
     LevelsLines levelLines = new LevelsLines();
 
+    string path;
     public F_ItemRandomiser()
     {
         InitializeComponent();
@@ -83,7 +84,6 @@ public partial class F_ItemRandomiser : Form
         "yucatan_casino.txt"
     };
 
-    string path;
     private void Form1_Load(object sender, EventArgs e)
     {
 
@@ -254,10 +254,41 @@ public partial class F_ItemRandomiser : Form
             tc_Items.SelectTab(tp_Search);
         }
     }
-
-    private void groupBox1_Enter(object sender, EventArgs e)
+    private void bt_ItenStatsSet_Click(object sender, EventArgs e)
     {
+        if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
+        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        
+        Random rand = new Random();
 
+        List<GroupBox> allGroupBoxes = new List<GroupBox>();
+
+        foreach(TabPage tabpage in tc_itemStats.TabPages)
+        {   
+            foreach(GroupBox groupBox in tabpage.Controls)
+                {allGroupBoxes.Add(groupBox);}
+        }
+        foreach (GroupBox box in allGroupBoxes)
+        {
+
+            if (box.Controls.OfType<CheckBox>().First().Checked)
+            {
+                decimal dNum1 = box.Controls.OfType<NumericUpDown>().First().Value;
+                decimal dNum2 = box.Controls.OfType<NumericUpDown>().Last().Value;
+                int[] numbs = { Convert.ToInt32(dNum1), Convert.ToInt32(dNum2) }; Array.Sort(numbs);
+
+                for (int i = 0; i < itemFile.Length; i++)
+                {
+                    if (itemFile[i].Contains(box.Tag.ToString()))
+                    {
+                        int randStatNumb = rand.Next(numbs[0], numbs[1]);
+                        itemFile[i] =
+                            itemFile[i].Split('=')[0] + $"= \"{randStatNumb}\"";
+                    }
+                }
+            }
+        }
+        File.WriteAllLines($"{path}\\THISISATESTFILE.txt", itemFile);
     }
 }
 
