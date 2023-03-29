@@ -91,6 +91,34 @@
             this.bt_ItenStatsSet = new System.Windows.Forms.Button();
             this.tc_itemStats = new System.Windows.Forms.TabControl();
             this.tp_VehicleStats = new System.Windows.Forms.TabPage();
+            this.gb_V_TopSpeed = new System.Windows.Forms.GroupBox();
+            this.l_V_TopSpeed_Dec = new System.Windows.Forms.Label();
+            this.l_V_TopSpeed_Max = new System.Windows.Forms.Label();
+            this.nud_V_TopSpeed_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_TopSpeed_Min = new System.Windows.Forms.Label();
+            this.nud_V_TopSpeed_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_TopSpeed = new System.Windows.Forms.CheckBox();
+            this.gb_V_MVSEP = new System.Windows.Forms.GroupBox();
+            this.l_V_MVSEP_Dec = new System.Windows.Forms.Label();
+            this.l__V_MVSEP_Max = new System.Windows.Forms.Label();
+            this.nud__V_MVSEP_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_MVSEP_Min = new System.Windows.Forms.Label();
+            this.nud__V_MVSEP_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_MVSEP = new System.Windows.Forms.CheckBox();
+            this.gb_V_MinVSWE = new System.Windows.Forms.GroupBox();
+            this.l_V_MinVSWE_Dec = new System.Windows.Forms.Label();
+            this.l_V_MinVSWE_Max = new System.Windows.Forms.Label();
+            this.nud_V_MinVSWE_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_MinVSWE_Min = new System.Windows.Forms.Label();
+            this.nud_V_MinVSWE_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_MinVSWE = new System.Windows.Forms.CheckBox();
+            this.gb_V_ETMinRPM = new System.Windows.Forms.GroupBox();
+            this.l_V_ETMinRPM_Dec = new System.Windows.Forms.Label();
+            this.l_V_ETMinRPM_Max = new System.Windows.Forms.Label();
+            this.nud_V_ETMinRPM_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_ETMinRPM_Min = new System.Windows.Forms.Label();
+            this.nud_V_ETMinRPM_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_ETMinRPM = new System.Windows.Forms.CheckBox();
             this.gb_V_ETFMaxRPM = new System.Windows.Forms.GroupBox();
             this.l_V_ETFMaxRPM_Dec = new System.Windows.Forms.Label();
             this.l_V_ETFMaxRPM_Max = new System.Windows.Forms.Label();
@@ -135,6 +163,13 @@
             this.cb_AirDensity = new System.Windows.Forms.CheckBox();
             this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.tt_VehicleStats = new System.Windows.Forms.ToolTip(this.components);
+            this.gb_V_ExtraTorque = new System.Windows.Forms.GroupBox();
+            this.l_V_ExtraTorque_Dec = new System.Windows.Forms.Label();
+            this.l_V_ExtraTorque_Max = new System.Windows.Forms.Label();
+            this.nud_V_ExtraTorque_Max = new System.Windows.Forms.NumericUpDown();
+            this.l_V_ExtraTorque_Min = new System.Windows.Forms.Label();
+            this.nud_V_ExtraTorque_Min = new System.Windows.Forms.NumericUpDown();
+            this.cb_V_ExtraTorque = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -163,6 +198,18 @@
             this.tp_WitemsStats.SuspendLayout();
             this.tc_itemStats.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
+            this.gb_V_TopSpeed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).BeginInit();
+            this.gb_V_MVSEP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).BeginInit();
+            this.gb_V_MinVSWE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).BeginInit();
+            this.gb_V_ETMinRPM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).BeginInit();
             this.gb_V_ETFMaxRPM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
@@ -181,6 +228,9 @@
             this.gb_AirDensity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
+            this.gb_V_ExtraTorque.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2233,6 +2283,12 @@
             // 
             // tp_VehicleStats
             // 
+            this.tp_VehicleStats.AutoScroll = true;
+            this.tp_VehicleStats.Controls.Add(this.gb_V_ExtraTorque);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_TopSpeed);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_MVSEP);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_MinVSWE);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_ETMinRPM);
             this.tp_VehicleStats.Controls.Add(this.gb_V_ETFMaxRPM);
             this.tp_VehicleStats.Controls.Add(this.gb_V_EORPM);
             this.tp_VehicleStats.Controls.Add(this.gb_V_EMinRPM);
@@ -2247,6 +2303,364 @@
             this.tp_VehicleStats.Text = "Vehicle Stats";
             this.tp_VehicleStats.UseVisualStyleBackColor = true;
             // 
+            // gb_V_TopSpeed
+            // 
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Dec);
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Max);
+            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Max);
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Min);
+            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Min);
+            this.gb_V_TopSpeed.Controls.Add(this.cb_V_TopSpeed);
+            this.gb_V_TopSpeed.Location = new System.Drawing.Point(6, 550);
+            this.gb_V_TopSpeed.Name = "gb_V_TopSpeed";
+            this.gb_V_TopSpeed.Size = new System.Drawing.Size(665, 60);
+            this.gb_V_TopSpeed.TabIndex = 14;
+            this.gb_V_TopSpeed.TabStop = false;
+            this.gb_V_TopSpeed.Tag = "VehicleTopSpeed";
+            // 
+            // l_V_TopSpeed_Dec
+            // 
+            this.l_V_TopSpeed_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_TopSpeed_Dec.Name = "l_V_TopSpeed_Dec";
+            this.l_V_TopSpeed_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_TopSpeed_Dec.TabIndex = 7;
+            this.l_V_TopSpeed_Dec.Text = "Setting high will make the vehicle go very slow but gradually get faster. Setting" +
+    " very low makes it freak out";
+            this.l_V_TopSpeed_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_TopSpeed_Max
+            // 
+            this.l_V_TopSpeed_Max.AutoSize = true;
+            this.l_V_TopSpeed_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_TopSpeed_Max.Name = "l_V_TopSpeed_Max";
+            this.l_V_TopSpeed_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_TopSpeed_Max.TabIndex = 4;
+            this.l_V_TopSpeed_Max.Text = "Maximum:";
+            // 
+            // nud_V_TopSpeed_Max
+            // 
+            this.nud_V_TopSpeed_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_TopSpeed_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_TopSpeed_Max.Name = "nud_V_TopSpeed_Max";
+            this.nud_V_TopSpeed_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_TopSpeed_Max.TabIndex = 3;
+            this.nud_V_TopSpeed_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_TopSpeed_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_TopSpeed_Min
+            // 
+            this.l_V_TopSpeed_Min.AutoSize = true;
+            this.l_V_TopSpeed_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_TopSpeed_Min.Name = "l_V_TopSpeed_Min";
+            this.l_V_TopSpeed_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_TopSpeed_Min.TabIndex = 2;
+            this.l_V_TopSpeed_Min.Text = "Minimum:";
+            // 
+            // nud_V_TopSpeed_Min
+            // 
+            this.nud_V_TopSpeed_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_TopSpeed_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_TopSpeed_Min.Name = "nud_V_TopSpeed_Min";
+            this.nud_V_TopSpeed_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_TopSpeed_Min.TabIndex = 1;
+            this.nud_V_TopSpeed_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_TopSpeed_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_TopSpeed
+            // 
+            this.cb_V_TopSpeed.AutoSize = true;
+            this.cb_V_TopSpeed.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_TopSpeed.Name = "cb_V_TopSpeed";
+            this.cb_V_TopSpeed.Size = new System.Drawing.Size(120, 19);
+            this.cb_V_TopSpeed.TabIndex = 0;
+            this.cb_V_TopSpeed.Text = "Vehicle Top Speed";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_TopSpeed, "The average defualt is: 37");
+            this.cb_V_TopSpeed.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_MVSEP
+            // 
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Dec);
+            this.gb_V_MVSEP.Controls.Add(this.l__V_MVSEP_Max);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Max);
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.cb_V_MVSEP);
+            this.gb_V_MVSEP.Location = new System.Drawing.Point(6, 490);
+            this.gb_V_MVSEP.Name = "gb_V_MVSEP";
+            this.gb_V_MVSEP.Size = new System.Drawing.Size(665, 60);
+            this.gb_V_MVSEP.TabIndex = 13;
+            this.gb_V_MVSEP.TabStop = false;
+            this.gb_V_MVSEP.Tag = "MinVehicleSpeedToEjectPlayer";
+            // 
+            // l_V_MVSEP_Dec
+            // 
+            this.l_V_MVSEP_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_MVSEP_Dec.Name = "l_V_MVSEP_Dec";
+            this.l_V_MVSEP_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_MVSEP_Dec.TabIndex = 7;
+            this.l_V_MVSEP_Dec.Text = "Recomended to set fairly high unless you like getting thrown off bikes";
+            this.l_V_MVSEP_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l__V_MVSEP_Max
+            // 
+            this.l__V_MVSEP_Max.AutoSize = true;
+            this.l__V_MVSEP_Max.Location = new System.Drawing.Point(540, 13);
+            this.l__V_MVSEP_Max.Name = "l__V_MVSEP_Max";
+            this.l__V_MVSEP_Max.Size = new System.Drawing.Size(65, 15);
+            this.l__V_MVSEP_Max.TabIndex = 4;
+            this.l__V_MVSEP_Max.Text = "Maximum:";
+            // 
+            // nud__V_MVSEP_Max
+            // 
+            this.nud__V_MVSEP_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud__V_MVSEP_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud__V_MVSEP_Max.Name = "nud__V_MVSEP_Max";
+            this.nud__V_MVSEP_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud__V_MVSEP_Max.TabIndex = 3;
+            this.nud__V_MVSEP_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud__V_MVSEP_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_MVSEP_Min
+            // 
+            this.l_V_MVSEP_Min.AutoSize = true;
+            this.l_V_MVSEP_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_MVSEP_Min.Name = "l_V_MVSEP_Min";
+            this.l_V_MVSEP_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_MVSEP_Min.TabIndex = 2;
+            this.l_V_MVSEP_Min.Text = "Minimum:";
+            // 
+            // nud__V_MVSEP_Min
+            // 
+            this.nud__V_MVSEP_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud__V_MVSEP_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud__V_MVSEP_Min.Name = "nud__V_MVSEP_Min";
+            this.nud__V_MVSEP_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud__V_MVSEP_Min.TabIndex = 1;
+            this.nud__V_MVSEP_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud__V_MVSEP_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_MVSEP
+            // 
+            this.cb_V_MVSEP.AutoSize = true;
+            this.cb_V_MVSEP.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_MVSEP.Name = "cb_V_MVSEP";
+            this.cb_V_MVSEP.Size = new System.Drawing.Size(160, 19);
+            this.cb_V_MVSEP.TabIndex = 0;
+            this.cb_V_MVSEP.Text = "Min Speed To Eject Player";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MVSEP, "The average defualt is: 70");
+            this.cb_V_MVSEP.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_MinVSWE
+            // 
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Dec);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.cb_V_MinVSWE);
+            this.gb_V_MinVSWE.Location = new System.Drawing.Point(6, 430);
+            this.gb_V_MinVSWE.Name = "gb_V_MinVSWE";
+            this.gb_V_MinVSWE.Size = new System.Drawing.Size(665, 60);
+            this.gb_V_MinVSWE.TabIndex = 12;
+            this.gb_V_MinVSWE.TabStop = false;
+            this.gb_V_MinVSWE.Tag = "MinVehicleSpeedForWheeliesAndEndos";
+            // 
+            // l_V_MinVSWE_Dec
+            // 
+            this.l_V_MinVSWE_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_MinVSWE_Dec.Name = "l_V_MinVSWE_Dec";
+            this.l_V_MinVSWE_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_MinVSWE_Dec.TabIndex = 7;
+            this.l_V_MinVSWE_Dec.Text = "Recomended to give this a higher value having it to low makes controling bike ver" +
+    "y hard.";
+            this.l_V_MinVSWE_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_MinVSWE_Max
+            // 
+            this.l_V_MinVSWE_Max.AutoSize = true;
+            this.l_V_MinVSWE_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_MinVSWE_Max.Name = "l_V_MinVSWE_Max";
+            this.l_V_MinVSWE_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_MinVSWE_Max.TabIndex = 4;
+            this.l_V_MinVSWE_Max.Text = "Maximum:";
+            // 
+            // nud_V_MinVSWE_Max
+            // 
+            this.nud_V_MinVSWE_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_MinVSWE_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_MinVSWE_Max.Name = "nud_V_MinVSWE_Max";
+            this.nud_V_MinVSWE_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_MinVSWE_Max.TabIndex = 3;
+            this.nud_V_MinVSWE_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_MinVSWE_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_MinVSWE_Min
+            // 
+            this.l_V_MinVSWE_Min.AutoSize = true;
+            this.l_V_MinVSWE_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_MinVSWE_Min.Name = "l_V_MinVSWE_Min";
+            this.l_V_MinVSWE_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_MinVSWE_Min.TabIndex = 2;
+            this.l_V_MinVSWE_Min.Text = "Minimum:";
+            // 
+            // nud_V_MinVSWE_Min
+            // 
+            this.nud_V_MinVSWE_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_MinVSWE_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_MinVSWE_Min.Name = "nud_V_MinVSWE_Min";
+            this.nud_V_MinVSWE_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_MinVSWE_Min.TabIndex = 1;
+            this.nud_V_MinVSWE_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_MinVSWE_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_MinVSWE
+            // 
+            this.cb_V_MinVSWE.AutoSize = true;
+            this.cb_V_MinVSWE.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_MinVSWE.Name = "cb_V_MinVSWE";
+            this.cb_V_MinVSWE.Size = new System.Drawing.Size(152, 19);
+            this.cb_V_MinVSWE.TabIndex = 0;
+            this.cb_V_MinVSWE.Text = "Min Speed For Wheelies";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MinVSWE, "The average defualt is: 2");
+            this.cb_V_MinVSWE.UseVisualStyleBackColor = true;
+            // 
+            // gb_V_ETMinRPM
+            // 
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Dec);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.cb_V_ETMinRPM);
+            this.gb_V_ETMinRPM.Location = new System.Drawing.Point(6, 370);
+            this.gb_V_ETMinRPM.Name = "gb_V_ETMinRPM";
+            this.gb_V_ETMinRPM.Size = new System.Drawing.Size(665, 60);
+            this.gb_V_ETMinRPM.TabIndex = 11;
+            this.gb_V_ETMinRPM.TabStop = false;
+            this.gb_V_ETMinRPM.Tag = "Engine_TorqueFactorAtMinRPM";
+            // 
+            // l_V_ETMinRPM_Dec
+            // 
+            this.l_V_ETMinRPM_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_ETMinRPM_Dec.Name = "l_V_ETMinRPM_Dec";
+            this.l_V_ETMinRPM_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_ETMinRPM_Dec.TabIndex = 7;
+            this.l_V_ETMinRPM_Dec.Text = "If this gets set to high the vehicle will become very slow and hard to steer.";
+            this.l_V_ETMinRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_ETMinRPM_Max
+            // 
+            this.l_V_ETMinRPM_Max.AutoSize = true;
+            this.l_V_ETMinRPM_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_ETMinRPM_Max.Name = "l_V_ETMinRPM_Max";
+            this.l_V_ETMinRPM_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_ETMinRPM_Max.TabIndex = 4;
+            this.l_V_ETMinRPM_Max.Text = "Maximum:";
+            // 
+            // nud_V_ETMinRPM_Max
+            // 
+            this.nud_V_ETMinRPM_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_ETMinRPM_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETMinRPM_Max.Name = "nud_V_ETMinRPM_Max";
+            this.nud_V_ETMinRPM_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETMinRPM_Max.TabIndex = 3;
+            this.nud_V_ETMinRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ETMinRPM_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_ETMinRPM_Min
+            // 
+            this.l_V_ETMinRPM_Min.AutoSize = true;
+            this.l_V_ETMinRPM_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_ETMinRPM_Min.Name = "l_V_ETMinRPM_Min";
+            this.l_V_ETMinRPM_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_ETMinRPM_Min.TabIndex = 2;
+            this.l_V_ETMinRPM_Min.Text = "Minimum:";
+            // 
+            // nud_V_ETMinRPM_Min
+            // 
+            this.nud_V_ETMinRPM_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_ETMinRPM_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ETMinRPM_Min.Name = "nud_V_ETMinRPM_Min";
+            this.nud_V_ETMinRPM_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ETMinRPM_Min.TabIndex = 1;
+            this.nud_V_ETMinRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ETMinRPM_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_ETMinRPM
+            // 
+            this.cb_V_ETMinRPM.AutoSize = true;
+            this.cb_V_ETMinRPM.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_ETMinRPM.Name = "cb_V_ETMinRPM";
+            this.cb_V_ETMinRPM.Size = new System.Drawing.Size(137, 19);
+            this.cb_V_ETMinRPM.TabIndex = 0;
+            this.cb_V_ETMinRPM.Text = "Torque Factor At Min";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETMinRPM, "The average defualt is: 0.77");
+            this.cb_V_ETMinRPM.UseVisualStyleBackColor = true;
+            // 
             // gb_V_ETFMaxRPM
             // 
             this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
@@ -2255,9 +2669,9 @@
             this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
             this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
             this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
-            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 330);
+            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 310);
             this.gb_V_ETFMaxRPM.Name = "gb_V_ETFMaxRPM";
-            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(665, 60);
             this.gb_V_ETFMaxRPM.TabIndex = 10;
             this.gb_V_ETFMaxRPM.TabStop = false;
             this.gb_V_ETFMaxRPM.Tag = "Engine_TorqueFactorAtMaxRPM";
@@ -2344,9 +2758,9 @@
             this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
             this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
             this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
-            this.gb_V_EORPM.Location = new System.Drawing.Point(6, 267);
+            this.gb_V_EORPM.Location = new System.Drawing.Point(6, 250);
             this.gb_V_EORPM.Name = "gb_V_EORPM";
-            this.gb_V_EORPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EORPM.Size = new System.Drawing.Size(665, 60);
             this.gb_V_EORPM.TabIndex = 9;
             this.gb_V_EORPM.TabStop = false;
             this.gb_V_EORPM.Tag = "Engine_OptRPM";
@@ -2433,9 +2847,9 @@
             this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_min);
             this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
             this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
-            this.gb_V_EMinRPM.Location = new System.Drawing.Point(6, 135);
+            this.gb_V_EMinRPM.Location = new System.Drawing.Point(6, 130);
             this.gb_V_EMinRPM.Name = "gb_V_EMinRPM";
-            this.gb_V_EMinRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMinRPM.Size = new System.Drawing.Size(665, 60);
             this.gb_V_EMinRPM.TabIndex = 9;
             this.gb_V_EMinRPM.TabStop = false;
             this.gb_V_EMinRPM.Tag = "Engine_MinRPM";
@@ -2523,9 +2937,9 @@
             this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
             this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
             this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
-            this.gb_V_EMT.Location = new System.Drawing.Point(6, 201);
+            this.gb_V_EMT.Location = new System.Drawing.Point(6, 190);
             this.gb_V_EMT.Name = "gb_V_EMT";
-            this.gb_V_EMT.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMT.Size = new System.Drawing.Size(665, 60);
             this.gb_V_EMT.TabIndex = 8;
             this.gb_V_EMT.TabStop = false;
             this.gb_V_EMT.Tag = "Engine_MaxTorque";
@@ -2612,9 +3026,9 @@
             this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
             this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
             this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
-            this.gb_V_EMaxRPM.Location = new System.Drawing.Point(6, 69);
+            this.gb_V_EMaxRPM.Location = new System.Drawing.Point(6, 70);
             this.gb_V_EMaxRPM.Name = "gb_V_EMaxRPM";
-            this.gb_V_EMaxRPM.Size = new System.Drawing.Size(686, 60);
+            this.gb_V_EMaxRPM.Size = new System.Drawing.Size(665, 60);
             this.gb_V_EMaxRPM.TabIndex = 3;
             this.gb_V_EMaxRPM.TabStop = false;
             this.gb_V_EMaxRPM.Tag = "Engine_MaxRPM";
@@ -2702,9 +3116,9 @@
             this.gb_AirDensity.Controls.Add(this.l_AD_min);
             this.gb_AirDensity.Controls.Add(this.nud_AD_Min);
             this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
-            this.gb_AirDensity.Location = new System.Drawing.Point(6, 6);
+            this.gb_AirDensity.Location = new System.Drawing.Point(6, 10);
             this.gb_AirDensity.Name = "gb_AirDensity";
-            this.gb_AirDensity.Size = new System.Drawing.Size(686, 60);
+            this.gb_AirDensity.Size = new System.Drawing.Size(665, 60);
             this.gb_AirDensity.TabIndex = 2;
             this.gb_AirDensity.TabStop = false;
             this.gb_AirDensity.Tag = "AirDensity";
@@ -2785,6 +3199,96 @@
             this.fbd_DataFileFolder.ShowNewFolderButton = false;
             this.fbd_DataFileFolder.UseDescriptionForTitle = true;
             // 
+            // gb_V_ExtraTorque
+            // 
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Dec);
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Max);
+            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Max);
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Min);
+            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Min);
+            this.gb_V_ExtraTorque.Controls.Add(this.cb_V_ExtraTorque);
+            this.gb_V_ExtraTorque.Location = new System.Drawing.Point(6, 610);
+            this.gb_V_ExtraTorque.Name = "gb_V_ExtraTorque";
+            this.gb_V_ExtraTorque.Size = new System.Drawing.Size(665, 60);
+            this.gb_V_ExtraTorque.TabIndex = 15;
+            this.gb_V_ExtraTorque.TabStop = false;
+            this.gb_V_ExtraTorque.Tag = "ExtraTorqueFactor";
+            // 
+            // l_V_ExtraTorque_Dec
+            // 
+            this.l_V_ExtraTorque_Dec.Location = new System.Drawing.Point(168, 10);
+            this.l_V_ExtraTorque_Dec.Name = "l_V_ExtraTorque_Dec";
+            this.l_V_ExtraTorque_Dec.Size = new System.Drawing.Size(201, 50);
+            this.l_V_ExtraTorque_Dec.TabIndex = 7;
+            this.l_V_ExtraTorque_Dec.Text = "Setting this very high will cause the vehicle to spin the higher the faster it sp" +
+    "ins.";
+            this.l_V_ExtraTorque_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_V_ExtraTorque_Max
+            // 
+            this.l_V_ExtraTorque_Max.AutoSize = true;
+            this.l_V_ExtraTorque_Max.Location = new System.Drawing.Point(540, 13);
+            this.l_V_ExtraTorque_Max.Name = "l_V_ExtraTorque_Max";
+            this.l_V_ExtraTorque_Max.Size = new System.Drawing.Size(65, 15);
+            this.l_V_ExtraTorque_Max.TabIndex = 4;
+            this.l_V_ExtraTorque_Max.Text = "Maximum:";
+            // 
+            // nud_V_ExtraTorque_Max
+            // 
+            this.nud_V_ExtraTorque_Max.Location = new System.Drawing.Point(540, 31);
+            this.nud_V_ExtraTorque_Max.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ExtraTorque_Max.Name = "nud_V_ExtraTorque_Max";
+            this.nud_V_ExtraTorque_Max.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ExtraTorque_Max.TabIndex = 3;
+            this.nud_V_ExtraTorque_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ExtraTorque_Max.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // l_V_ExtraTorque_Min
+            // 
+            this.l_V_ExtraTorque_Min.AutoSize = true;
+            this.l_V_ExtraTorque_Min.Location = new System.Drawing.Point(410, 13);
+            this.l_V_ExtraTorque_Min.Name = "l_V_ExtraTorque_Min";
+            this.l_V_ExtraTorque_Min.Size = new System.Drawing.Size(63, 15);
+            this.l_V_ExtraTorque_Min.TabIndex = 2;
+            this.l_V_ExtraTorque_Min.Text = "Minimum:";
+            // 
+            // nud_V_ExtraTorque_Min
+            // 
+            this.nud_V_ExtraTorque_Min.Location = new System.Drawing.Point(410, 31);
+            this.nud_V_ExtraTorque_Min.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nud_V_ExtraTorque_Min.Name = "nud_V_ExtraTorque_Min";
+            this.nud_V_ExtraTorque_Min.Size = new System.Drawing.Size(86, 23);
+            this.nud_V_ExtraTorque_Min.TabIndex = 1;
+            this.nud_V_ExtraTorque_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_V_ExtraTorque_Min.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cb_V_ExtraTorque
+            // 
+            this.cb_V_ExtraTorque.AutoSize = true;
+            this.cb_V_ExtraTorque.Location = new System.Drawing.Point(6, 25);
+            this.cb_V_ExtraTorque.Name = "cb_V_ExtraTorque";
+            this.cb_V_ExtraTorque.Size = new System.Drawing.Size(127, 19);
+            this.cb_V_ExtraTorque.TabIndex = 0;
+            this.cb_V_ExtraTorque.Text = "Extra Torque Factor";
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ExtraTorque, "The average defualt is: 0.5");
+            this.cb_V_ExtraTorque.UseVisualStyleBackColor = true;
+            // 
             // F_ItemRandomiser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2828,6 +3332,22 @@
             this.tp_WitemsStats.ResumeLayout(false);
             this.tc_itemStats.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_V_TopSpeed.ResumeLayout(false);
+            this.gb_V_TopSpeed.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).EndInit();
+            this.gb_V_MVSEP.ResumeLayout(false);
+            this.gb_V_MVSEP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).EndInit();
+            this.gb_V_MinVSWE.ResumeLayout(false);
+            this.gb_V_MinVSWE.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).EndInit();
+            this.gb_V_ETMinRPM.ResumeLayout(false);
+            this.gb_V_ETMinRPM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).EndInit();
             this.gb_V_ETFMaxRPM.ResumeLayout(false);
             this.gb_V_ETFMaxRPM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
@@ -2852,6 +3372,10 @@
             this.gb_AirDensity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
+            this.gb_V_ExtraTorque.ResumeLayout(false);
+            this.gb_V_ExtraTorque.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2962,5 +3486,40 @@
         private NumericUpDown nud_V_ETFMaxRPM_Min;
         private CheckBox cb_V_ETFMaxRPM;
         private Button bt_ItenStatsSet;
+        private GroupBox gb_V_ETMinRPM;
+        private Label l_V_ETMinRPM_Dec;
+        private Label l_V_ETMinRPM_Max;
+        private NumericUpDown nud_V_ETMinRPM_Max;
+        private Label l_V_ETMinRPM_Min;
+        private NumericUpDown nud_V_ETMinRPM_Min;
+        private CheckBox cb_V_ETMinRPM;
+        private GroupBox gb_V_MinVSWE;
+        private Label l_V_MinVSWE_Dec;
+        private Label l_V_MinVSWE_Max;
+        private NumericUpDown nud_V_MinVSWE_Max;
+        private Label l_V_MinVSWE_Min;
+        private NumericUpDown nud_V_MinVSWE_Min;
+        private CheckBox cb_V_MinVSWE;
+        private GroupBox gb_V_TopSpeed;
+        private Label l_V_TopSpeed_Dec;
+        private Label l_V_TopSpeed_Max;
+        private NumericUpDown nud_V_TopSpeed_Max;
+        private Label l_V_TopSpeed_Min;
+        private NumericUpDown nud_V_TopSpeed_Min;
+        private CheckBox cb_V_TopSpeed;
+        private GroupBox gb_V_MVSEP;
+        private Label l_V_MVSEP_Dec;
+        private Label l__V_MVSEP_Max;
+        private NumericUpDown nud__V_MVSEP_Max;
+        private Label l_V_MVSEP_Min;
+        private NumericUpDown nud__V_MVSEP_Min;
+        private CheckBox cb_V_MVSEP;
+        private GroupBox gb_V_ExtraTorque;
+        private Label l_V_ExtraTorque_Dec;
+        private Label l_V_ExtraTorque_Max;
+        private NumericUpDown nud_V_ExtraTorque_Max;
+        private Label l_V_ExtraTorque_Min;
+        private NumericUpDown nud_V_ExtraTorque_Min;
+        private CheckBox cb_V_ExtraTorque;
     }
 }
