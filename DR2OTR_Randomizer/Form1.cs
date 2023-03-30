@@ -290,5 +290,10 @@ public partial class F_ItemRandomiser : Form
         }
         File.WriteAllLines($"{path}\\THISISATESTFILE.txt", itemFile);
     }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
+    }
 }
 
