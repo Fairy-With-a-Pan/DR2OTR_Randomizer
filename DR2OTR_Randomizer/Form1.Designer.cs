@@ -2,8 +2,8 @@
 {
     partial class F_ItemRandomiser
     {
-        
-        
+
+
         /// <summary>
         ///  Required designer variable.
         /// </summary>
@@ -30,167 +30,310 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsm_File = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_open = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_Quit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_PH = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_Options = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_Backup = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsm_About = new System.Windows.Forms.ToolStripMenuItem();
-            this.tc_Items = new System.Windows.Forms.TabControl();
-            this.tp_BasicCombo = new System.Windows.Forms.TabPage();
-            this.clb_BasicCombo = new System.Windows.Forms.CheckedListBox();
-            this.tp_BasicFood = new System.Windows.Forms.TabPage();
-            this.clb_BasicFood = new System.Windows.Forms.CheckedListBox();
-            this.tp_BasicLarge = new System.Windows.Forms.TabPage();
-            this.clb_BasicLarge = new System.Windows.Forms.CheckedListBox();
-            this.tp_BasicSmall = new System.Windows.Forms.TabPage();
-            this.clb_BasicSmall = new System.Windows.Forms.CheckedListBox();
-            this.tp_Bugged = new System.Windows.Forms.TabPage();
-            this.clb_Bugged = new System.Windows.Forms.CheckedListBox();
-            this.tp_Clothing = new System.Windows.Forms.TabPage();
-            this.clb_Clothing = new System.Windows.Forms.CheckedListBox();
-            this.tp_CombinedFireArmsSpray = new System.Windows.Forms.TabPage();
-            this.clb_CombinedFireArmsSpray = new System.Windows.Forms.CheckedListBox();
-            this.tp_CombinedFoodSpoiled = new System.Windows.Forms.TabPage();
-            this.clb_CombinedFoodSpoiled = new System.Windows.Forms.CheckedListBox();
-            this.tp_CombinedThowingMelee = new System.Windows.Forms.TabPage();
-            this.clb_CombinedThowingMelee = new System.Windows.Forms.CheckedListBox();
-            this.tp_ComboFireArmSpray = new System.Windows.Forms.TabPage();
-            this.clb_ComboFireArmSpray = new System.Windows.Forms.CheckedListBox();
-            this.tp_DLC = new System.Windows.Forms.TabPage();
-            this.clb_DLC = new System.Windows.Forms.CheckedListBox();
-            this.tp_Explosive = new System.Windows.Forms.TabPage();
-            this.clb_Explosive = new System.Windows.Forms.CheckedListBox();
-            this.tp_KeyItems = new System.Windows.Forms.TabPage();
-            this.clb_KeyItems = new System.Windows.Forms.CheckedListBox();
-            this.tp_Magazines = new System.Windows.Forms.TabPage();
-            this.clb_Magazines = new System.Windows.Forms.CheckedListBox();
-            this.tp_Mannequin = new System.Windows.Forms.TabPage();
-            this.clb_Mannequin = new System.Windows.Forms.CheckedListBox();
-            this.tp_PushPlaced = new System.Windows.Forms.TabPage();
-            this.clb_PushPlaced = new System.Windows.Forms.CheckedListBox();
-            this.tp_Special = new System.Windows.Forms.TabPage();
-            this.clb_Special = new System.Windows.Forms.CheckedListBox();
-            this.tp_Vehicles = new System.Windows.Forms.TabPage();
-            this.clb_Vehicles = new System.Windows.Forms.CheckedListBox();
-            this.tp_Search = new System.Windows.Forms.TabPage();
-            this.clb_SearchResults = new System.Windows.Forms.CheckedListBox();
-            this.levelsLinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pb_PHTest = new System.Windows.Forms.PictureBox();
-            this.tc_TabWindows = new System.Windows.Forms.TabControl();
-            this.tp_WItemRandom = new System.Windows.Forms.TabPage();
-            this.tb_ItemsSearch = new System.Windows.Forms.TextBox();
-            this.tb_TestBox = new System.Windows.Forms.TextBox();
-            this.b_Randomise = new System.Windows.Forms.Button();
-            this.b_DeselectAll = new System.Windows.Forms.Button();
-            this.b_CheckAll = new System.Windows.Forms.Button();
-            this.tp_WitemsStats = new System.Windows.Forms.TabPage();
-            this.bt_ItenStatsSet = new System.Windows.Forms.Button();
-            this.tc_itemStats = new System.Windows.Forms.TabControl();
-            this.tp_VehicleStats = new System.Windows.Forms.TabPage();
-            this.gb_V_InitialSpeed = new System.Windows.Forms.GroupBox();
-            this.l_V_InitialSpeed_Dec = new System.Windows.Forms.Label();
-            this.l_V_InitialSpeed_Max = new System.Windows.Forms.Label();
-            this.nud_V_InitialSpeed_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_InitialSpeed_Min = new System.Windows.Forms.Label();
-            this.nud_V_InitialSpeed_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_InitialSpeed = new System.Windows.Forms.CheckBox();
-            this.gb_V_ExtraTorque = new System.Windows.Forms.GroupBox();
-            this.l_V_ExtraTorque_Dec = new System.Windows.Forms.Label();
-            this.l_V_ExtraTorque_Max = new System.Windows.Forms.Label();
-            this.nud_V_ExtraTorque_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_ExtraTorque_Min = new System.Windows.Forms.Label();
-            this.nud_V_ExtraTorque_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_ExtraTorque = new System.Windows.Forms.CheckBox();
-            this.gb_V_TopSpeed = new System.Windows.Forms.GroupBox();
-            this.l_V_TopSpeed_Dec = new System.Windows.Forms.Label();
-            this.l_V_TopSpeed_Max = new System.Windows.Forms.Label();
-            this.nud_V_TopSpeed_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_TopSpeed_Min = new System.Windows.Forms.Label();
-            this.nud_V_TopSpeed_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_TopSpeed = new System.Windows.Forms.CheckBox();
-            this.gb_V_MVSEP = new System.Windows.Forms.GroupBox();
-            this.l_V_MVSEP_Dec = new System.Windows.Forms.Label();
-            this.l__V_MVSEP_Max = new System.Windows.Forms.Label();
-            this.nud__V_MVSEP_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_MVSEP_Min = new System.Windows.Forms.Label();
-            this.nud__V_MVSEP_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_MVSEP = new System.Windows.Forms.CheckBox();
-            this.gb_V_MinVSWE = new System.Windows.Forms.GroupBox();
-            this.l_V_MinVSWE_Dec = new System.Windows.Forms.Label();
-            this.l_V_MinVSWE_Max = new System.Windows.Forms.Label();
-            this.nud_V_MinVSWE_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_MinVSWE_Min = new System.Windows.Forms.Label();
-            this.nud_V_MinVSWE_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_MinVSWE = new System.Windows.Forms.CheckBox();
-            this.gb_V_ETMinRPM = new System.Windows.Forms.GroupBox();
-            this.l_V_ETMinRPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_ETMinRPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_ETMinRPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_ETMinRPM_Min = new System.Windows.Forms.Label();
-            this.nud_V_ETMinRPM_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_ETMinRPM = new System.Windows.Forms.CheckBox();
-            this.gb_V_ETFMaxRPM = new System.Windows.Forms.GroupBox();
-            this.l_V_ETFMaxRPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_ETFMaxRPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_ETFMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_ETFMaxRPM_Min = new System.Windows.Forms.Label();
-            this.nud_V_ETFMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_ETFMaxRPM = new System.Windows.Forms.CheckBox();
-            this.gb_V_EORPM = new System.Windows.Forms.GroupBox();
-            this.l_V_EORPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_EORPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_EORPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_EORPM_Min = new System.Windows.Forms.Label();
-            this.nud_V_EORPM_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_EORPM = new System.Windows.Forms.CheckBox();
-            this.gb_V_EMinRPM = new System.Windows.Forms.GroupBox();
-            this.l_V_EMinRPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_EMinRPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_EMinRPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_EMinRPM_min = new System.Windows.Forms.Label();
-            this.nud_V_EMinRPM_min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_EMinRPM = new System.Windows.Forms.CheckBox();
-            this.gb_V_EMT = new System.Windows.Forms.GroupBox();
-            this.l_V_EMT_Dec = new System.Windows.Forms.Label();
-            this.l_V_EMT_Max = new System.Windows.Forms.Label();
-            this.nud_V_EMT_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_EMT_Min = new System.Windows.Forms.Label();
-            this.nud_V_EMT_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_EMT = new System.Windows.Forms.CheckBox();
-            this.gb_V_EMaxRPM = new System.Windows.Forms.GroupBox();
-            this.l_V_EMaxRPM_Dec = new System.Windows.Forms.Label();
-            this.l_V_EMaxRPM_Max = new System.Windows.Forms.Label();
-            this.nud_V_EMaxRPM_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_EMaxRPM_Min = new System.Windows.Forms.Label();
-            this.nud_V_EMaxRPM_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_EMaxRPM = new System.Windows.Forms.CheckBox();
-            this.gb_AirDensity = new System.Windows.Forms.GroupBox();
-            this.l_V_AD_Dec = new System.Windows.Forms.Label();
-            this.l_AD_max = new System.Windows.Forms.Label();
-            this.nud_AD_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_AD_min = new System.Windows.Forms.Label();
-            this.nud_AD_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_AirDensity = new System.Windows.Forms.CheckBox();
-            this.fbd_DataFileFolder = new System.Windows.Forms.FolderBrowserDialog();
-            this.tt_VehicleStats = new System.Windows.Forms.ToolTip(this.components);
-            this.gb_V_MaxRideSpeed = new System.Windows.Forms.GroupBox();
-            this.l_V_MaxRideSpeed_Dec = new System.Windows.Forms.Label();
-            this.l_V_MaxRideSpeed_Max = new System.Windows.Forms.Label();
-            this.nud_V_MaxRideSpeed_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_MaxRideSpeed_Min = new System.Windows.Forms.Label();
-            this.nud_V_MaxRideSpeed_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_MaxRideSpeed = new System.Windows.Forms.CheckBox();
-            this.gb_V_MaxRotationSpeed = new System.Windows.Forms.GroupBox();
-            this.l_V_MaxRotationSpeed_Dec = new System.Windows.Forms.Label();
-            this.l_V_MaxRotationSpeed_Max = new System.Windows.Forms.Label();
-            this.nud_V_MaxRotationSpeed_Max = new System.Windows.Forms.NumericUpDown();
-            this.l_V_MaxRotationSpeed_Min = new System.Windows.Forms.Label();
-            this.nud_V_MaxRotationSpeed_Min = new System.Windows.Forms.NumericUpDown();
-            this.cb_V_MaxRotationSpeed = new System.Windows.Forms.CheckBox();
+            this.components = (new global::System.ComponentModel.Container());
+            this.menuStrip1 = (new global::System.Windows.Forms.MenuStrip());
+            this.tsm_File = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_open = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_Quit = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_PH = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_Options = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_Backup = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tsm_About = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.tc_Items = (new global::System.Windows.Forms.TabControl());
+            this.tp_BasicCombo = (new global::System.Windows.Forms.TabPage());
+            this.clb_BasicCombo = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_BasicFood = (new global::System.Windows.Forms.TabPage());
+            this.clb_BasicFood = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_BasicLarge = (new global::System.Windows.Forms.TabPage());
+            this.clb_BasicLarge = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_BasicSmall = (new global::System.Windows.Forms.TabPage());
+            this.clb_BasicSmall = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Bugged = (new global::System.Windows.Forms.TabPage());
+            this.clb_Bugged = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Clothing = (new global::System.Windows.Forms.TabPage());
+            this.clb_Clothing = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_CombinedFireArmsSpray = (new global::System.Windows.Forms.TabPage());
+            this.clb_CombinedFireArmsSpray = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_CombinedFoodSpoiled = (new global::System.Windows.Forms.TabPage());
+            this.clb_CombinedFoodSpoiled = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_CombinedThowingMelee = (new global::System.Windows.Forms.TabPage());
+            this.clb_CombinedThowingMelee = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_ComboFireArmSpray = (new global::System.Windows.Forms.TabPage());
+            this.clb_ComboFireArmSpray = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_DLC = (new global::System.Windows.Forms.TabPage());
+            this.clb_DLC = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Explosive = (new global::System.Windows.Forms.TabPage());
+            this.clb_Explosive = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_KeyItems = (new global::System.Windows.Forms.TabPage());
+            this.clb_KeyItems = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Magazines = (new global::System.Windows.Forms.TabPage());
+            this.clb_Magazines = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Mannequin = (new global::System.Windows.Forms.TabPage());
+            this.clb_Mannequin = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_PushPlaced = (new global::System.Windows.Forms.TabPage());
+            this.clb_PushPlaced = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Special = (new global::System.Windows.Forms.TabPage());
+            this.clb_Special = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Vehicles = (new global::System.Windows.Forms.TabPage());
+            this.clb_Vehicles = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_Search = (new global::System.Windows.Forms.TabPage());
+            this.clb_SearchResults = (new global::System.Windows.Forms.CheckedListBox());
+            this.levelsLinesBindingSource = (new global::System.Windows.Forms.BindingSource(this.components));
+            this.pb_PHTest = (new global::System.Windows.Forms.PictureBox());
+            this.tc_TabWindows = (new global::System.Windows.Forms.TabControl());
+            this.tp_WItemRandom = (new global::System.Windows.Forms.TabPage());
+            this.tb_ItemsSearch = (new global::System.Windows.Forms.TextBox());
+            this.tb_TestBox = (new global::System.Windows.Forms.TextBox());
+            this.b_Randomise = (new global::System.Windows.Forms.Button());
+            this.b_DeselectAll = (new global::System.Windows.Forms.Button());
+            this.b_CheckAll = (new global::System.Windows.Forms.Button());
+            this.tp_WitemsStats = (new global::System.Windows.Forms.TabPage());
+            this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
+            this.tc_itemStats = (new global::System.Windows.Forms.TabControl());
+            this.tp_VehicleStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_V_RotateSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_RotateSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_RotateSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_RotateSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_RotateSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_RotateSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_RotateSpeed = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_MaxRotationSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_MaxRotationSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_MaxRotationSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_MaxRotationSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_MaxRotationSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_MaxRotationSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_MaxRotationSpeed = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_MaxRideSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_MaxRideSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_MaxRideSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_MaxRideSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_MaxRideSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_MaxRideSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_MaxRideSpeed = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_InitialSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_InitialSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_InitialSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_InitialSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_InitialSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_InitialSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_InitialSpeed = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_ExtraTorque = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_ExtraTorque_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_ExtraTorque_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_ExtraTorque_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ExtraTorque_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_ExtraTorque_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_ExtraTorque = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_TopSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_TopSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_TopSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_TopSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_TopSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_TopSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_TopSpeed = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_MVSEP = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_MVSEP_Dec = (new global::System.Windows.Forms.Label());
+            this.l__V_MVSEP_Max = (new global::System.Windows.Forms.Label());
+            this.nud__V_MVSEP_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_MVSEP_Min = (new global::System.Windows.Forms.Label());
+            this.nud__V_MVSEP_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_MVSEP = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_MinVSWE = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_MinVSWE_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_MinVSWE_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_MinVSWE_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_MinVSWE_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_MinVSWE_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_MinVSWE = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_ETMinRPM = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_ETMinRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_ETMinRPM_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETMinRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETMinRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_ETMinRPM = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_ETFMaxRPM = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_ETFMaxRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_ETFMaxRPM = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_EORPM = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_EORPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_EORPM_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_EORPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EORPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EORPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_EORPM = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_EMinRPM = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_EMinRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_EMinRPM_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMinRPM_min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMinRPM_min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_EMinRPM = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_EMT = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_EMT_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_EMT_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMT_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMT_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMT_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_EMT = (new global::System.Windows.Forms.CheckBox());
+            this.gb_V_EMaxRPM = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_EMaxRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_EMaxRPM_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMaxRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_EMaxRPM = (new global::System.Windows.Forms.CheckBox());
+            this.gb_AirDensity = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_AD_Dec = (new global::System.Windows.Forms.Label());
+            this.l_AD_max = (new global::System.Windows.Forms.Label());
+            this.nud_AD_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_AD_min = (new global::System.Windows.Forms.Label());
+            this.nud_AD_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_AirDensity = (new global::System.Windows.Forms.CheckBox());
+            this.tp_NPC = (new global::System.Windows.Forms.TabPage());
+            this.gb_NPC_Max_PP = (new global::System.Windows.Forms.GroupBox());
+            this.l_NPC_Max_PP_Dec = (new global::System.Windows.Forms.Label());
+            this.l_NPC_Max_PP_Max = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_Max_PP_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_NPC_Max_PP_Min = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_Max_PP_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_NPC_Max_PP = (new global::System.Windows.Forms.CheckBox());
+            this.gb_NPC_HealthAmount = (new global::System.Windows.Forms.GroupBox());
+            this.l_NPC_HealthAmount_Dec = (new global::System.Windows.Forms.Label());
+            this.l_NPC_HealthAmount_Max = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_HealthAmount_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_NPC_HealthAmount_Min = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_HealthAmount_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_NPC_HealthAmount = (new global::System.Windows.Forms.CheckBox());
+            this.gb_NPC_DamPerKMH = (new global::System.Windows.Forms.GroupBox());
+            this.l_NPC_DamPerKMH_Dec = (new global::System.Windows.Forms.Label());
+            this.l_NPC_DamPerKMH_Max = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_DamPerKMH_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_NPC_DamPerKMH_Min = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_DamPerKMH_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_NPC_DamPerKMH = (new global::System.Windows.Forms.CheckBox());
+            this.gb_NPC_MSDBoss = (new global::System.Windows.Forms.GroupBox());
+            this.l_NPC_MSDBoss_Dec = (new global::System.Windows.Forms.Label());
+            this.l_NPC_MSDBoss_Max = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_MSDBoss_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_NPC_MSDBoss_Min = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_MSDBoss_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_NPC_MSDBoss = (new global::System.Windows.Forms.CheckBox());
+            this.gb_NPC_FlatBossDam = (new global::System.Windows.Forms.GroupBox());
+            this.l_NPC_FlatBoss_Dec = (new global::System.Windows.Forms.Label());
+            this.l_NPC_FlatBoss_Max = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_FlatBoss_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_NPC_FlatBoss_Min = (new global::System.Windows.Forms.Label());
+            this.nud_NPC_FlatBoss_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_NPC_FlatBoss = (new global::System.Windows.Forms.CheckBox());
+            this.tp_FireArms = (new global::System.Windows.Forms.TabPage());
+            this.gb_FA_SpraySupply = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_SpraySupply_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_SpraySupply_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_SpraySupply_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_SpraySupply_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_SpraySupply_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_SpraySupply = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FA_MaxBurst = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_MaxBurst_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_MaxBurst_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_MaxBurst_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_MaxBurst_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_MaxBurst_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_MaxBurst = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FA_NumBullets = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_NumBullets_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_NumBullets_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_NumBullets_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_NumBullets_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_NumBullets_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_NumBullets = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FA_BulletRange = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_BulletRange_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_BulletRange_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_BulletRange_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_BulletRange_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_BulletRange_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_BulletRange = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FA_BaseBullDam = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_BaseBullDam_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_BaseBullDam_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_BaseBullDam_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_BaseBullDam_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_BaseBullDam_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_BaseBullDam = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FA_FireRate = (new global::System.Windows.Forms.GroupBox());
+            this.l_FA_FireRate_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FA_FireRate_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FA_FireRate_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FA_FireRate_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FA_FireRate_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FA_FireRate = (new global::System.Windows.Forms.CheckBox());
+            this.tp_WorldStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_W_PayoutCount = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_PayoutCount_Dec = (new global::System.Windows.Forms.Label());
+            this.label2 = (new global::System.Windows.Forms.Label());
+            this.numericUpDown1 = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_PayoutCount_Min = (new global::System.Windows.Forms.Label());
+            this.numericUpDown2 = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_PayoutCount = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_Payout = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_Payout_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_Payout_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_Payout_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_Payout_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_Payout_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_Payout = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_Amount = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_Amount_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_Amount_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_Amount_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_Amount_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_Amount_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_Amount = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_PPAward = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_PPAward_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_PPAward_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_PPAward_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_PPAward_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_PPAward_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_PPAward = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_CostHigh = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_CostHigh_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_CostHigh_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostHigh_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_CostHigh_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostHigh_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_CostHigh = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_CostMid = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_CostMid_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_CostMid_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostMid_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_CostMid_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostMid_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_CostMid = (new global::System.Windows.Forms.CheckBox());
+            this.gb_W_CostLow = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_CostLow_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_CostLow_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostLow_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_CostLow_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_CostLow_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_CostLow = (new global::System.Windows.Forms.CheckBox());
+            this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
+            this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
+            this.gb_W_PP_Multi = (new global::System.Windows.Forms.GroupBox());
+            this.l_W_PP_Multi_Dec = (new global::System.Windows.Forms.Label());
+            this.l_W_PP_Multi_Max = (new global::System.Windows.Forms.Label());
+            this.nud_W_PP_Multi_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_W_PP_Multi_Min = (new global::System.Windows.Forms.Label());
+            this.nud_W_PP_Multi_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_W_PP_Multi = (new global::System.Windows.Forms.CheckBox());
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -212,119 +355,175 @@
             this.tp_Special.SuspendLayout();
             this.tp_Vehicles.SuspendLayout();
             this.tp_Search.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
             this.tp_WitemsStats.SuspendLayout();
             this.tc_itemStats.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
-            this.gb_V_InitialSpeed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Min)).BeginInit();
-            this.gb_V_ExtraTorque.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).BeginInit();
-            this.gb_V_TopSpeed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).BeginInit();
-            this.gb_V_MVSEP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).BeginInit();
-            this.gb_V_MinVSWE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).BeginInit();
-            this.gb_V_ETMinRPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).BeginInit();
-            this.gb_V_ETFMaxRPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
-            this.gb_V_EORPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
-            this.gb_V_EMinRPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).BeginInit();
-            this.gb_V_EMT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).BeginInit();
-            this.gb_V_EMaxRPM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
-            this.gb_AirDensity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
-            this.gb_V_MaxRideSpeed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Min)).BeginInit();
+            this.gb_V_RotateSpeed.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Min)).BeginInit();
             this.gb_V_MaxRotationSpeed.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Max)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Min)).BeginInit();
+            this.gb_V_MaxRideSpeed.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Min)).BeginInit();
+            this.gb_V_InitialSpeed.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Min)).BeginInit();
+            this.gb_V_ExtraTorque.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).BeginInit();
+            this.gb_V_TopSpeed.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).BeginInit();
+            this.gb_V_MVSEP.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).BeginInit();
+            this.gb_V_MinVSWE.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).BeginInit();
+            this.gb_V_ETMinRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).BeginInit();
+            this.gb_V_ETFMaxRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
+            this.gb_V_EORPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
+            this.gb_V_EMinRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).BeginInit();
+            this.gb_V_EMT.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).BeginInit();
+            this.gb_V_EMaxRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
+            this.gb_AirDensity.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
+            this.tp_NPC.SuspendLayout();
+            this.gb_NPC_Max_PP.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_Max_PP_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_Max_PP_Min)).BeginInit();
+            this.gb_NPC_HealthAmount.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_HealthAmount_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_HealthAmount_Min)).BeginInit();
+            this.gb_NPC_DamPerKMH.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_DamPerKMH_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_DamPerKMH_Min)).BeginInit();
+            this.gb_NPC_MSDBoss.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_MSDBoss_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_MSDBoss_Min)).BeginInit();
+            this.gb_NPC_FlatBossDam.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Min)).BeginInit();
+            this.tp_FireArms.SuspendLayout();
+            this.gb_FA_SpraySupply.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Min)).BeginInit();
+            this.gb_FA_MaxBurst.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Min)).BeginInit();
+            this.gb_FA_NumBullets.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_NumBullets_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_NumBullets_Min)).BeginInit();
+            this.gb_FA_BulletRange.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BulletRange_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BulletRange_Min)).BeginInit();
+            this.gb_FA_BaseBullDam.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BaseBullDam_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BaseBullDam_Min)).BeginInit();
+            this.gb_FA_FireRate.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).BeginInit();
+            this.tp_WorldStats.SuspendLayout();
+            this.gb_W_PayoutCount.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.gb_W_Payout.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Payout_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Payout_Min)).BeginInit();
+            this.gb_W_Amount.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Amount_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Amount_Min)).BeginInit();
+            this.gb_W_PPAward.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PPAward_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PPAward_Min)).BeginInit();
+            this.gb_W_CostHigh.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostHigh_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostHigh_Min)).BeginInit();
+            this.gb_W_CostMid.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostMid_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostMid_Min)).BeginInit();
+            this.gb_W_CostLow.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Min)).BeginInit();
+            this.gb_W_PP_Multi.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PP_Multi_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PP_Multi_Min)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_File,
-            this.tsm_PH,
-            this.tsm_Options});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(750, 28);
-            this.menuStrip1.TabIndex = 18;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ImageScalingSize = (new global::System.Drawing.Size(20, 20));
+            this.menuStrip1.Items.AddRange(new global::System.Windows.Forms.ToolStripItem[] { this.tsm_File, this.tsm_PH, this.tsm_Options });
+            this.menuStrip1.Location = (new global::System.Drawing.Point(0, 0));
+            this.menuStrip1.Name = ("menuStrip1");
+            this.menuStrip1.Size = (new global::System.Drawing.Size(750, 24));
+            this.menuStrip1.TabIndex = (18);
+            this.menuStrip1.Text = ("menuStrip1");
             // 
             // tsm_File
             // 
-            this.tsm_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_open,
-            this.tsm_Quit});
-            this.tsm_File.Name = "tsm_File";
-            this.tsm_File.Size = new System.Drawing.Size(46, 24);
-            this.tsm_File.Text = "File";
+            this.tsm_File.DropDownItems.AddRange(new global::System.Windows.Forms.ToolStripItem[] { this.tsm_open, this.tsm_Quit });
+            this.tsm_File.Name = ("tsm_File");
+            this.tsm_File.Size = (new global::System.Drawing.Size(37, 20));
+            this.tsm_File.Text = ("File");
             // 
             // tsm_open
             // 
-            this.tsm_open.Name = "tsm_open";
-            this.tsm_open.Size = new System.Drawing.Size(229, 26);
-            this.tsm_open.Text = "Open datafile Folder";
-            this.tsm_open.Click += new System.EventHandler(this.tsm_open_Click);
+            this.tsm_open.Name = ("tsm_open");
+            this.tsm_open.Size = (new global::System.Drawing.Size(181, 22));
+            this.tsm_open.Text = ("Open datafile Folder");
+            this.tsm_open.Click += (this.tsm_open_Click);
             // 
             // tsm_Quit
             // 
-            this.tsm_Quit.Name = "tsm_Quit";
-            this.tsm_Quit.Size = new System.Drawing.Size(229, 26);
-            this.tsm_Quit.Text = "Quit";
-            this.tsm_Quit.Click += new System.EventHandler(this.tsm_Quit_Click);
+            this.tsm_Quit.Name = ("tsm_Quit");
+            this.tsm_Quit.Size = (new global::System.Drawing.Size(181, 22));
+            this.tsm_Quit.Text = ("Quit");
+            this.tsm_Quit.Click += (this.tsm_Quit_Click);
             // 
             // tsm_PH
             // 
-            this.tsm_PH.Name = "tsm_PH";
-            this.tsm_PH.Size = new System.Drawing.Size(108, 24);
-            this.tsm_PH.Text = "Place Holder";
+            this.tsm_PH.Name = ("tsm_PH");
+            this.tsm_PH.Size = (new global::System.Drawing.Size(86, 20));
+            this.tsm_PH.Text = ("Place Holder");
             // 
             // tsm_Options
             // 
-            this.tsm_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_Backup,
-            this.tsm_About});
-            this.tsm_Options.Name = "tsm_Options";
-            this.tsm_Options.Size = new System.Drawing.Size(75, 24);
-            this.tsm_Options.Text = "Options";
+            this.tsm_Options.DropDownItems.AddRange(new global::System.Windows.Forms.ToolStripItem[] { this.tsm_Backup, this.tsm_About });
+            this.tsm_Options.Name = ("tsm_Options");
+            this.tsm_Options.Size = (new global::System.Drawing.Size(61, 20));
+            this.tsm_Options.Text = ("Options");
             // 
             // tsm_Backup
             // 
-            this.tsm_Backup.Name = "tsm_Backup";
-            this.tsm_Backup.Size = new System.Drawing.Size(140, 26);
-            this.tsm_Backup.Text = "Backup";
+            this.tsm_Backup.Name = ("tsm_Backup");
+            this.tsm_Backup.Size = (new global::System.Drawing.Size(113, 22));
+            this.tsm_Backup.Text = ("Backup");
             // 
             // tsm_About
             // 
-            this.tsm_About.Name = "tsm_About";
-            this.tsm_About.Size = new System.Drawing.Size(140, 26);
-            this.tsm_About.Text = "About";
+            this.tsm_About.Name = ("tsm_About");
+            this.tsm_About.Size = (new global::System.Drawing.Size(113, 22));
+            this.tsm_About.Text = ("About");
             // 
             // tc_Items
             // 
@@ -347,1869 +546,435 @@
             this.tc_Items.Controls.Add(this.tp_Special);
             this.tc_Items.Controls.Add(this.tp_Vehicles);
             this.tc_Items.Controls.Add(this.tp_Search);
-            this.tc_Items.Location = new System.Drawing.Point(6, 6);
-            this.tc_Items.Name = "tc_Items";
-            this.tc_Items.SelectedIndex = 0;
-            this.tc_Items.Size = new System.Drawing.Size(345, 430);
-            this.tc_Items.TabIndex = 19;
+            this.tc_Items.Location = (new global::System.Drawing.Point(6, 6));
+            this.tc_Items.Name = ("tc_Items");
+            this.tc_Items.SelectedIndex = (0);
+            this.tc_Items.Size = (new global::System.Drawing.Size(345, 430));
+            this.tc_Items.TabIndex = (19);
             // 
             // tp_BasicCombo
             // 
             this.tp_BasicCombo.Controls.Add(this.clb_BasicCombo);
-            this.tp_BasicCombo.Location = new System.Drawing.Point(4, 29);
-            this.tp_BasicCombo.Name = "tp_BasicCombo";
-            this.tp_BasicCombo.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_BasicCombo.Size = new System.Drawing.Size(337, 397);
-            this.tp_BasicCombo.TabIndex = 0;
-            this.tp_BasicCombo.Text = "Basic Combo";
-            this.tp_BasicCombo.UseVisualStyleBackColor = true;
+            this.tp_BasicCombo.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_BasicCombo.Name = ("tp_BasicCombo");
+            this.tp_BasicCombo.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_BasicCombo.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_BasicCombo.TabIndex = (0);
+            this.tp_BasicCombo.Text = ("Basic Combo");
+            this.tp_BasicCombo.UseVisualStyleBackColor = (true);
             // 
             // clb_BasicCombo
             // 
-            this.clb_BasicCombo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_BasicCombo.FormattingEnabled = true;
-            this.clb_BasicCombo.Items.AddRange(new object[] {
-            "\"AlienHead\"",
-            "\"Amp\"",
-            "\"BaseballBat\"",
-            "\"Battery\"",
-            "\"BigDrillMotor\"",
-            "\"BingoBall\"",
-            "\"BobsToy\"",
-            "\"BowieKnife\"",
-            "\"BoxingGloves\"",
-            "\"Bucket\"",
-            "\"BullSkull\"",
-            "\"CementSaw\"",
-            "\"Chainsaw\"",
-            "\"ComputerCase\"",
-            "\"ConstructionHat\"",
-            "\"Defibrillator\"",
-            "\"ElectricGuitar\"",
-            "\"ElectricProd\"",
-            "\"EscapePod\"",
-            "\"FireAxe\"",
-            "\"FiremanFireAxe\"",
-            "\"Flashlight\"",
-            "\"GiantStuffedBear\"",
-            "\"GoblinMask\"",
-            "\"GrassTrimmer\"",
-            "\"HunkOfMeat\"",
-            "\"LawnDart\"",
-            "\"LeadPipe\"",
-            "\"LeafBlower\"",
-            "\"LeafRake\"",
-            "\"LizardMask\"",
-            "\"Machete\"",
-            "\"MedicalTray\"",
-            "\"MMAGloves\"",
-            "\"MotorOil\"",
-            "\"Newspaper\"",
-            "\"Paddle\"",
-            "\"PaintCan\"",
-            "\"Parasol\"",
-            "\"PitchFork\"",
-            "\"Plates\"",
-            "\"PonyOnStick\"",
-            "\"PowerDrill\"",
-            "\"PsychoMachete\"",
-            "\"PushBroom\"",
-            "\"Pylon\"",
-            "\"RCHelicopter\"",
-            "\"SawBlade\"",
-            "\"ServbotMask\"",
-            "\"Sickle\"",
-            "\"SledgeHammer\"",
-            "\"Spear\"",
-            "\"TennisBallLauncher\"",
-            "\"Tikitorch\"",
-            "\"TwoByFour\"",
-            "\"VacuumCleaner\"",
-            "\"WoodSwordAndShield\""});
-            this.clb_BasicCombo.Location = new System.Drawing.Point(6, 6);
-            this.clb_BasicCombo.Name = "clb_BasicCombo";
-            this.clb_BasicCombo.Size = new System.Drawing.Size(325, 396);
-            this.clb_BasicCombo.TabIndex = 0;
+            this.clb_BasicCombo.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_BasicCombo.FormattingEnabled = (true);
+            this.clb_BasicCombo.Items.AddRange(new global::System.Object[] { "\"AlienHead\"", "\"Amp\"", "\"BaseballBat\"", "\"Battery\"", "\"BigDrillMotor\"", "\"BingoBall\"", "\"BobsToy\"", "\"BowieKnife\"", "\"BoxingGloves\"", "\"Bucket\"", "\"BullSkull\"", "\"CementSaw\"", "\"Chainsaw\"", "\"ComputerCase\"", "\"ConstructionHat\"", "\"Defibrillator\"", "\"ElectricGuitar\"", "\"ElectricProd\"", "\"EscapePod\"", "\"FireAxe\"", "\"FiremanFireAxe\"", "\"Flashlight\"", "\"GiantStuffedBear\"", "\"GoblinMask\"", "\"GrassTrimmer\"", "\"HunkOfMeat\"", "\"LawnDart\"", "\"LeadPipe\"", "\"LeafBlower\"", "\"LeafRake\"", "\"LizardMask\"", "\"Machete\"", "\"MedicalTray\"", "\"MMAGloves\"", "\"MotorOil\"", "\"Newspaper\"", "\"Paddle\"", "\"PaintCan\"", "\"Parasol\"", "\"PitchFork\"", "\"Plates\"", "\"PonyOnStick\"", "\"PowerDrill\"", "\"PsychoMachete\"", "\"PushBroom\"", "\"Pylon\"", "\"RCHelicopter\"", "\"SawBlade\"", "\"ServbotMask\"", "\"Sickle\"", "\"SledgeHammer\"", "\"Spear\"", "\"TennisBallLauncher\"", "\"Tikitorch\"", "\"TwoByFour\"", "\"VacuumCleaner\"", "\"WoodSwordAndShield\"" });
+            this.clb_BasicCombo.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_BasicCombo.Name = ("clb_BasicCombo");
+            this.clb_BasicCombo.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_BasicCombo.TabIndex = (0);
             // 
             // tp_BasicFood
             // 
             this.tp_BasicFood.Controls.Add(this.clb_BasicFood);
-            this.tp_BasicFood.Location = new System.Drawing.Point(4, 29);
-            this.tp_BasicFood.Name = "tp_BasicFood";
-            this.tp_BasicFood.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_BasicFood.Size = new System.Drawing.Size(337, 397);
-            this.tp_BasicFood.TabIndex = 1;
-            this.tp_BasicFood.Text = "Basic Food";
-            this.tp_BasicFood.UseVisualStyleBackColor = true;
+            this.tp_BasicFood.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_BasicFood.Name = ("tp_BasicFood");
+            this.tp_BasicFood.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_BasicFood.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_BasicFood.TabIndex = (1);
+            this.tp_BasicFood.Text = ("Basic Food");
+            this.tp_BasicFood.UseVisualStyleBackColor = (true);
             // 
             // clb_BasicFood
             // 
-            this.clb_BasicFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_BasicFood.FormattingEnabled = true;
-            this.clb_BasicFood.Items.AddRange(new object[] {
-            "\"Apple\"",
-            "\"Bacon\"",
-            "\"BakedPotato\"",
-            "\"BBQChicken\"",
-            "\"BBQRibs\"",
-            "\"Beans\"",
-            "\"Beer\"",
-            "\"Brownie\"",
-            "\"Burrito\"",
-            "\"Cake\"",
-            "\"Chili\"",
-            "\"Coffee\"",
-            "\"CoffeeCreamer\"",
-            "\"Cookies\"",
-            "\"CottonCandy\"",
-            "\"Donuts\"",
-            "\"DrinkCocktail\"",
-            "\"Fish\"",
-            "\"Fries\"",
-            "\"Hamburger\"",
-            "\"HotDog\"",
-            "\"IceCream\"",
-            "\"Jellybeans\"",
-            "\"LargeSoda\"",
-            "\"lobster\"",
-            "\"Melon\"",
-            "\"Milk\"",
-            "\"OnionRing\"",
-            "\"OrangeJuice\"",
-            "\"Pasta\"",
-            "\"Pie\"",
-            "\"Pineapple\"",
-            "\"Pizza\"",
-            "\"Popcorn\"",
-            "\"Pretzel\"",
-            "\"Snack\"",
-            "\"Steak\"",
-            "\"Sushi\"",
-            "\"Taco\"",
-            "\"Vodka\"",
-            "\"Whiskey\"",
-            "\"Wine\""});
-            this.clb_BasicFood.Location = new System.Drawing.Point(6, 6);
-            this.clb_BasicFood.Name = "clb_BasicFood";
-            this.clb_BasicFood.Size = new System.Drawing.Size(325, 396);
-            this.clb_BasicFood.TabIndex = 1;
+            this.clb_BasicFood.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_BasicFood.FormattingEnabled = (true);
+            this.clb_BasicFood.Items.AddRange(new global::System.Object[] { "\"Apple\"", "\"Bacon\"", "\"BakedPotato\"", "\"BBQChicken\"", "\"BBQRibs\"", "\"Beans\"", "\"Beer\"", "\"Brownie\"", "\"Burrito\"", "\"Cake\"", "\"Chili\"", "\"Coffee\"", "\"CoffeeCreamer\"", "\"Cookies\"", "\"CottonCandy\"", "\"Donuts\"", "\"DrinkCocktail\"", "\"Fish\"", "\"Fries\"", "\"Hamburger\"", "\"HotDog\"", "\"IceCream\"", "\"Jellybeans\"", "\"LargeSoda\"", "\"lobster\"", "\"Melon\"", "\"Milk\"", "\"OnionRing\"", "\"OrangeJuice\"", "\"Pasta\"", "\"Pie\"", "\"Pineapple\"", "\"Pizza\"", "\"Popcorn\"", "\"Pretzel\"", "\"Snack\"", "\"Steak\"", "\"Sushi\"", "\"Taco\"", "\"Vodka\"", "\"Whiskey\"", "\"Wine\"" });
+            this.clb_BasicFood.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_BasicFood.Name = ("clb_BasicFood");
+            this.clb_BasicFood.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_BasicFood.TabIndex = (1);
             // 
             // tp_BasicLarge
             // 
             this.tp_BasicLarge.Controls.Add(this.clb_BasicLarge);
-            this.tp_BasicLarge.Location = new System.Drawing.Point(4, 29);
-            this.tp_BasicLarge.Name = "tp_BasicLarge";
-            this.tp_BasicLarge.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_BasicLarge.Size = new System.Drawing.Size(337, 397);
-            this.tp_BasicLarge.TabIndex = 2;
-            this.tp_BasicLarge.Text = "Basic Large";
-            this.tp_BasicLarge.UseVisualStyleBackColor = true;
+            this.tp_BasicLarge.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_BasicLarge.Name = ("tp_BasicLarge");
+            this.tp_BasicLarge.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_BasicLarge.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_BasicLarge.TabIndex = (2);
+            this.tp_BasicLarge.Text = ("Basic Large");
+            this.tp_BasicLarge.UseVisualStyleBackColor = (true);
             // 
             // clb_BasicLarge
             // 
-            this.clb_BasicLarge.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_BasicLarge.FormattingEnabled = true;
-            this.clb_BasicLarge.Items.AddRange(new object[] {
-            "\"AdBoard\"",
-            "\"Barrel_Large\"",
-            "\"Bench_2\"",
-            "\"Bench\"",
-            "\"BikeEngine\"",
-            "\"Bust_Centurion\"",
-            "\"CardboardBox\"",
-            "\"CardboardCutout\"",
-            "\"CashRegister\"",
-            "\"Chair_1\"",
-            "\"Chair_10\"",
-            "\"Chair_2\"",
-            "\"Chair_3\"",
-            "\"Chair_4\"",
-            "\"Chair_5\"",
-            "\"Chair_6\"",
-            "\"Chair_7\"",
-            "\"Chair_8\"",
-            "\"Chair_9\"",
-            "\"Chair_Casino\"",
-            "\"ChuckStandee\"",
-            "\"CookingPot\"",
-            "\"FrankStandee\"",
-            "\"GarbageBag\"",
-            "\"GarbageCan_1\"",
-            "\"GarbageCan_2\"",
-            "\"GarbageCan_3\"",
-            "\"GarbageCan_4\"",
-            "\"GasBarrel\"",
-            "\"Generator\"",
-            "\"GiantDice\"",
-            "\"GumballMachine\"",
-            "\"HeadStatue\"",
-            "\"Keg\"",
-            "\"LargeShoppingBoxes\"",
-            "\"LcdMonitor\"",
-            "\"LibertyTorch\"",
-            "\"Mailbox\"",
-            "\"MedicineBall\"",
-            "\"MetalBarricade\"",
-            "\"MilitaryCrate\"",
-            "\"NewspaperBox\"",
-            "\"NoveltyBeerMug\"",
-            "\"NoveltyBottle\"",
-            "\"NoveltyCellPhone\"",
-            "\"NoveltyPerfume\"",
-            "\"NoveltyPokerChip\"",
-            "\"Pallet\"",
-            "\"Particle_Board\"",
-            "\"PatioTable\"",
-            "\"PlasticBin\"",
-            "\"PottedPlant_1\"",
-            "\"PottedPlant_2\"",
-            "\"PottedPlant_3\"",
-            "\"PottedPlant_4\"",
-            "\"PottedPlant_4\"",
-            "\"PottedPlant_5\"",
-            "\"PottedPlant_6\"",
-            "\"PottedPlant_7\"",
-            "\"PottedPlant_8\"",
-            "\"RotatingDisplay\"",
-            "\"RouletteWheel\"",
-            "\"SandwichBoard\"",
-            "\"SC37_ShoppingBoxes\"",
-            "\"SmallSuitcase\"",
-            "\"SpaceBench\"",
-            "\"SpeakerWeapon\"",
-            "\"SpoolWire\"",
-            "\"SquareSign\"",
-            "\"SteelShelving\"",
-            "\"Suitcase\"",
-            "\"Swordfish\"",
-            "\"TikiMask\"",
-            "\"TIODPlywood1\"",
-            "\"TIODPlywood2\"",
-            "\"TreasureChest\"",
-            "\"Vase2\"",
-            "\"Vase3\"",
-            "\"VelvetPole\"",
-            "\"WaterCooler\""});
-            this.clb_BasicLarge.Location = new System.Drawing.Point(6, 6);
-            this.clb_BasicLarge.Name = "clb_BasicLarge";
-            this.clb_BasicLarge.Size = new System.Drawing.Size(325, 396);
-            this.clb_BasicLarge.TabIndex = 2;
+            this.clb_BasicLarge.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_BasicLarge.FormattingEnabled = (true);
+            this.clb_BasicLarge.Items.AddRange(new global::System.Object[] { "\"AdBoard\"", "\"Barrel_Large\"", "\"Bench_2\"", "\"Bench\"", "\"BikeEngine\"", "\"Bust_Centurion\"", "\"CardboardBox\"", "\"CardboardCutout\"", "\"CashRegister\"", "\"Chair_1\"", "\"Chair_10\"", "\"Chair_2\"", "\"Chair_3\"", "\"Chair_4\"", "\"Chair_5\"", "\"Chair_6\"", "\"Chair_7\"", "\"Chair_8\"", "\"Chair_9\"", "\"Chair_Casino\"", "\"ChuckStandee\"", "\"CookingPot\"", "\"FrankStandee\"", "\"GarbageBag\"", "\"GarbageCan_1\"", "\"GarbageCan_2\"", "\"GarbageCan_3\"", "\"GarbageCan_4\"", "\"GasBarrel\"", "\"Generator\"", "\"GiantDice\"", "\"GumballMachine\"", "\"HeadStatue\"", "\"Keg\"", "\"LargeShoppingBoxes\"", "\"LcdMonitor\"", "\"LibertyTorch\"", "\"Mailbox\"", "\"MedicineBall\"", "\"MetalBarricade\"", "\"MilitaryCrate\"", "\"NewspaperBox\"", "\"NoveltyBeerMug\"", "\"NoveltyBottle\"", "\"NoveltyCellPhone\"", "\"NoveltyPerfume\"", "\"NoveltyPokerChip\"", "\"Pallet\"", "\"Particle_Board\"", "\"PatioTable\"", "\"PlasticBin\"", "\"PottedPlant_1\"", "\"PottedPlant_2\"", "\"PottedPlant_3\"", "\"PottedPlant_4\"", "\"PottedPlant_4\"", "\"PottedPlant_5\"", "\"PottedPlant_6\"", "\"PottedPlant_7\"", "\"PottedPlant_8\"", "\"RotatingDisplay\"", "\"RouletteWheel\"", "\"SandwichBoard\"", "\"SC37_ShoppingBoxes\"", "\"SmallSuitcase\"", "\"SpaceBench\"", "\"SpeakerWeapon\"", "\"SpoolWire\"", "\"SquareSign\"", "\"SteelShelving\"", "\"Suitcase\"", "\"Swordfish\"", "\"TikiMask\"", "\"TIODPlywood1\"", "\"TIODPlywood2\"", "\"TreasureChest\"", "\"Vase2\"", "\"Vase3\"", "\"VelvetPole\"", "\"WaterCooler\"" });
+            this.clb_BasicLarge.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_BasicLarge.Name = ("clb_BasicLarge");
+            this.clb_BasicLarge.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_BasicLarge.TabIndex = (2);
             // 
             // tp_BasicSmall
             // 
             this.tp_BasicSmall.Controls.Add(this.clb_BasicSmall);
-            this.tp_BasicSmall.Location = new System.Drawing.Point(4, 29);
-            this.tp_BasicSmall.Name = "tp_BasicSmall";
-            this.tp_BasicSmall.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_BasicSmall.Size = new System.Drawing.Size(337, 397);
-            this.tp_BasicSmall.TabIndex = 3;
-            this.tp_BasicSmall.Text = "Basic Small";
-            this.tp_BasicSmall.UseVisualStyleBackColor = true;
+            this.tp_BasicSmall.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_BasicSmall.Name = ("tp_BasicSmall");
+            this.tp_BasicSmall.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_BasicSmall.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_BasicSmall.TabIndex = (3);
+            this.tp_BasicSmall.Text = ("Basic Small");
+            this.tp_BasicSmall.UseVisualStyleBackColor = (true);
             // 
             // clb_BasicSmall
             // 
-            this.clb_BasicSmall.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_BasicSmall.FormattingEnabled = true;
-            this.clb_BasicSmall.Items.AddRange(new object[] {
-            "\"AcousticGuitar\"",
-            "\"AlienProbe\"",
-            "\"Basketball\"",
-            "\"BassGuitar\"",
-            "\"BassGuitar\"",
-            "\"battleaxe\"",
-            "\"BBQChef_MeatCleaver\"",
-            "\"BeachBall\"",
-            "\"BikeForks\"",
-            "\"BowlingBall\"",
-            "\"BowlingPin\"",
-            "\"Brick\"",
-            "\"Broadsword\"",
-            "\"BroomHandle\"",
-            "\"ChefKnife\"",
-            "\"CinderBlock\"",
-            "\"Coffeepot\"",
-            "\"ComedyTrophy\"",
-            "\"CookingOil\"",
-            "\"CroupierStick\"",
-            "\"Crowbar\"",
-            "\"DonkeyLamp\"",
-            "\"Dumbbell\"",
-            "\"FoamHand\"",
-            "\"Football\"",
-            "\"GiftShopLamp\"",
-            "\"GreenHunkOfMeat\"",
-            "\"HandBag\"",
-            "\"HandleBar\"",
-            "\"Hanger\"",
-            "\"HockeyStick\"",
-            "\"HotelLamp\"",
-            "\"KatanaSword\"",
-            "\"Keyboard\"",
-            "\"Lamp\"",
-            "\"Lance\"",
-            "\"LongStick\"",
-            "\"MagicianSword\"",
-            "\"MeatCleaver\"",
-            "\"Microscope\"",
-            "\"MicStand\"",
-            "\"MoneyCase_Americana\"",
-            "\"MoneyCase_Atlantica\"",
-            "\"MoneyCase_Helicopter\"",
-            "\"MoneyCase_Protester\"",
-            "\"MoneyCase_Scoops\"",
-            "\"MoneyCase_SlotRanch\"",
-            "\"MoneyCase_TK\"",
-            "\"MoneyCase_Yucatan\"",
-            "\"MoneyCase\"",
-            "\"NightStick\"",
-            "\"NinjaBroadSword\"",
-            "\"NinjaKatanaSword\"",
-            "\"NinjaSword\"",
-            "\"Pan_heat\"",
-            "\"Pan\"",
-            "\"PoolBall\"",
-            "\"PoolCue\"",
-            "\"ProtesterSign\"",
-            "\"PsychoMeatCleaver\"",
-            "\"PsychoMiningPick\"",
-            "\"Scissors\"",
-            "\"Shampoo\"",
-            "\"Shovel\"",
-            "\"ShowerHead\"",
-            "\"SoccerBall\"",
-            "\"SpaceHammer\"",
-            "\"SpotLight\"",
-            "\"StepLadder\"",
-            "\"TIR_chair\"",
-            "\"TIR_Sign\"",
-            "\"TIRBaseballBat\"",
-            "\"TIRPan\"",
-            "\"TIRStepLadder\"",
-            "\"TIRTwoByFour\"",
-            "\"Tomahawk\"",
-            "\"ToyRocketShip\"",
-            "\"VelvetRope\"",
-            "\"WackyHammer\"",
-            "\"WaterBottle\"",
-            "\"WheelPawn\"",
-            "\"WrenchLarge\""});
-            this.clb_BasicSmall.Location = new System.Drawing.Point(6, 6);
-            this.clb_BasicSmall.Name = "clb_BasicSmall";
-            this.clb_BasicSmall.Size = new System.Drawing.Size(325, 396);
-            this.clb_BasicSmall.TabIndex = 3;
+            this.clb_BasicSmall.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_BasicSmall.FormattingEnabled = (true);
+            this.clb_BasicSmall.Items.AddRange(new global::System.Object[] { "\"AcousticGuitar\"", "\"AlienProbe\"", "\"Basketball\"", "\"BassGuitar\"", "\"BassGuitar\"", "\"battleaxe\"", "\"BBQChef_MeatCleaver\"", "\"BeachBall\"", "\"BikeForks\"", "\"BowlingBall\"", "\"BowlingPin\"", "\"Brick\"", "\"Broadsword\"", "\"BroomHandle\"", "\"ChefKnife\"", "\"CinderBlock\"", "\"Coffeepot\"", "\"ComedyTrophy\"", "\"CookingOil\"", "\"CroupierStick\"", "\"Crowbar\"", "\"DonkeyLamp\"", "\"Dumbbell\"", "\"FoamHand\"", "\"Football\"", "\"GiftShopLamp\"", "\"GreenHunkOfMeat\"", "\"HandBag\"", "\"HandleBar\"", "\"Hanger\"", "\"HockeyStick\"", "\"HotelLamp\"", "\"KatanaSword\"", "\"Keyboard\"", "\"Lamp\"", "\"Lance\"", "\"LongStick\"", "\"MagicianSword\"", "\"MeatCleaver\"", "\"Microscope\"", "\"MicStand\"", "\"MoneyCase_Americana\"", "\"MoneyCase_Atlantica\"", "\"MoneyCase_Helicopter\"", "\"MoneyCase_Protester\"", "\"MoneyCase_Scoops\"", "\"MoneyCase_SlotRanch\"", "\"MoneyCase_TK\"", "\"MoneyCase_Yucatan\"", "\"MoneyCase\"", "\"NightStick\"", "\"NinjaBroadSword\"", "\"NinjaKatanaSword\"", "\"NinjaSword\"", "\"Pan_heat\"", "\"Pan\"", "\"PoolBall\"", "\"PoolCue\"", "\"ProtesterSign\"", "\"PsychoMeatCleaver\"", "\"PsychoMiningPick\"", "\"Scissors\"", "\"Shampoo\"", "\"Shovel\"", "\"ShowerHead\"", "\"SoccerBall\"", "\"SpaceHammer\"", "\"SpotLight\"", "\"StepLadder\"", "\"TIR_chair\"", "\"TIR_Sign\"", "\"TIRBaseballBat\"", "\"TIRPan\"", "\"TIRStepLadder\"", "\"TIRTwoByFour\"", "\"Tomahawk\"", "\"ToyRocketShip\"", "\"VelvetRope\"", "\"WackyHammer\"", "\"WaterBottle\"", "\"WheelPawn\"", "\"WrenchLarge\"" });
+            this.clb_BasicSmall.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_BasicSmall.Name = ("clb_BasicSmall");
+            this.clb_BasicSmall.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_BasicSmall.TabIndex = (3);
             // 
             // tp_Bugged
             // 
             this.tp_Bugged.Controls.Add(this.clb_Bugged);
-            this.tp_Bugged.Location = new System.Drawing.Point(4, 29);
-            this.tp_Bugged.Name = "tp_Bugged";
-            this.tp_Bugged.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Bugged.Size = new System.Drawing.Size(337, 397);
-            this.tp_Bugged.TabIndex = 4;
-            this.tp_Bugged.Text = "Bugged";
-            this.tp_Bugged.UseVisualStyleBackColor = true;
+            this.tp_Bugged.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Bugged.Name = ("tp_Bugged");
+            this.tp_Bugged.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Bugged.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Bugged.TabIndex = (4);
+            this.tp_Bugged.Text = ("Bugged");
+            this.tp_Bugged.UseVisualStyleBackColor = (true);
             // 
             // clb_Bugged
             // 
-            this.clb_Bugged.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Bugged.FormattingEnabled = true;
-            this.clb_Bugged.Items.AddRange(new object[] {
-            "\"HamsterBall_Blue_Gyroscope\"",
-            "\"HangmanGun\"",
-            "\"Intestine\"",
-            "\"MascotMurderballLauncher\" ",
-            "\"MilitiaSniperRifle\"",
-            "\"MinigameMooseHeadBlue\"",
-            "\"MinigameMooseHeadGreen\"",
-            "\"MinigameMooseHeadRed\"",
-            "\"MinigameMooseHeadYellow\"",
-            "\"Mole\"",
-            "\"RB_couch\"",
-            "\"SpaceWorm\"",
-            "\"Theremin\" ",
-            "\"Vase\" ",
-            "\"Wormhole\""});
-            this.clb_Bugged.Location = new System.Drawing.Point(6, 6);
-            this.clb_Bugged.Name = "clb_Bugged";
-            this.clb_Bugged.Size = new System.Drawing.Size(325, 396);
-            this.clb_Bugged.TabIndex = 4;
+            this.clb_Bugged.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Bugged.FormattingEnabled = (true);
+            this.clb_Bugged.Items.AddRange(new global::System.Object[] { "\"HamsterBall_Blue_Gyroscope\"", "\"HangmanGun\"", "\"Intestine\"", "\"MascotMurderballLauncher\" ", "\"MilitiaSniperRifle\"", "\"MinigameMooseHeadBlue\"", "\"MinigameMooseHeadGreen\"", "\"MinigameMooseHeadRed\"", "\"MinigameMooseHeadYellow\"", "\"Mole\"", "\"RB_couch\"", "\"SpaceWorm\"", "\"Theremin\" ", "\"Vase\" ", "\"Wormhole\"" });
+            this.clb_Bugged.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Bugged.Name = ("clb_Bugged");
+            this.clb_Bugged.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Bugged.TabIndex = (4);
             // 
             // tp_Clothing
             // 
             this.tp_Clothing.Controls.Add(this.clb_Clothing);
-            this.tp_Clothing.Location = new System.Drawing.Point(4, 29);
-            this.tp_Clothing.Name = "tp_Clothing";
-            this.tp_Clothing.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Clothing.Size = new System.Drawing.Size(337, 397);
-            this.tp_Clothing.TabIndex = 5;
-            this.tp_Clothing.Text = "Clothing";
-            this.tp_Clothing.UseVisualStyleBackColor = true;
+            this.tp_Clothing.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Clothing.Name = ("tp_Clothing");
+            this.tp_Clothing.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Clothing.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Clothing.TabIndex = (5);
+            this.tp_Clothing.Text = ("Clothing");
+            this.tp_Clothing.UseVisualStyleBackColor = (true);
             // 
             // clb_Clothing
             // 
-            this.clb_Clothing.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Clothing.FormattingEnabled = true;
-            this.clb_Clothing.Items.AddRange(new object[] {
-            "\"AlienBoots\"",
-            "\"AlienMask\"",
-            "\"AlienOutfitDispenser\"",
-            "\"AlienSuit\"",
-            "\"AlternateOutfit\"",
-            "\"AmericanShowmanHelmetDispenser\"",
-            "\"AmericanShowmanOutfitDispenser\"",
-            "\"ArmyJacketPantsDispenser\"",
-            "\"ArthurOutfitDispenser\"",
-            "\"BaldNoHairDispenser\"",
-            "\"BananaHammockDispenser\"",
-            "\"BareFeetChuckDispenser\"",
-            "\"BaseballCapSportDispenser\"",
-            "\"BaseballCapTIRDispenser\"",
-            "\"BaseballUniformDispenser\"",
-            "\"BasketballHighTopsDispenser\"",
-            "\"BasketballUniformDispenser\"",
-            "\"BlackCanvasSneakersDispenser\"",
-            "\"BlackCowboyBootsDispenser\"",
-            "\"BlackCowboyHatDispenser\"",
-            "\"BlackCowboyOutfitDispenser\"",
-            "\"BlackDressShoesDispenser\"",
-            "\"BlackMilitaryBootsDispenser\"",
-            "\"BlackRimmedGlassesDispenser\"",
-            "\"BlackTuxedoBowTieDispenser\"",
-            "\"BlueOysterBikerOutfitDispenser\"",
-            "\"BunnySlippersDispenser\"",
-            "\"CardiganSlacksDispenser\"",
-            "\"ChuckColouredHairBlueDispenser\"",
-            "\"ChuckColouredHairGreyDispenser\"",
-            "\"ChuckColouredHairPinkDispenser\"",
-            "\"ChuckyOutfitDispenser\"",
-            "\"CleatsDispenser\"",
-            "\"CoconutBraHolaDressDispenser\"",
-            "\"ComedianOutfitDispenser\"",
-            "\"DarkAviatorGlassesDispenser\"",
-            "\"DealerOutfitDispenser\"",
-            "\"DealerVisorDispenser\"",
-            "\"FedoraDispenser\"",
-            "\"FishNetshirtwhitepantsDispenser\"",
-            "\"FlipFlopsDispenser\"",
-            "\"FlowerHeadPieceDispenser\"",
-            "\"FootballHelmetDispenser\"",
-            "\"FootballUniformDispenser\"",
-            "\"FortuneTshirt1BlueJeansDispenser\"",
-            "\"FortuneTshirt2BlackJeansDispenser\"",
-            "\"FunnyMaskBlankaDispenser\"",
-            "\"FunnyMaskLizardDispenser\"",
-            "\"FunnyMaskServbotDispenser\"",
-            "\"FunnyMaskZombieDispenser\"",
-            "\"HawaiianShirt1shortsDispenser\"",
-            "\"HawaiianShirt2shortsDispenser\"",
-            "\"HawaiianShirt3PantsDispenser\"",
-            "\"HawaiianShirt4PantsDispenser\"",
-            "\"HipHopOutfitDispenser\"",
-            "\"HookerBootsDispenser\"",
-            "\"HygieneMaskDispenser\"",
-            "\"KidsSuperHeroBootsDispenser\"",
-            "\"KidsSuperHeroCostumeDispenser\"",
-            "\"KidsSuperHeroEyeMaskDispenser\"",
-            "\"KnottedTopCutoffsDispenser\"",
-            "\"LadiesHatDispenser\"",
-            "\"LargeRhinestoneGlassesDispenser\"",
-            "\"midlengthtshirtjeansdispenser\"",
-            "\"MohawkHairDispenser\"",
-            "\"NakedOutfitDispenser\"",
-            "\"NinjaChestDispenser\"",
-            "\"NinjaFaceWearDispenser\"",
-            "\"NinjaFeetDispenser\"",
-            "\"NinjaHeadwearDispenser\"",
-            "\"NinjaOutfit\"",
-            "\"NoveltyGlassesDispenser\"",
-            "\"OnePiecePajamaDispenser\"",
-            "\"plaidsuitbrownshirttiedispenser\"",
-            "\"PoloShirtBlueJeansDispenser\"",
-            "\"ProtomanBody\"",
-            "\"ProtomanBoots\"",
-            "\"ProtomanDispenser\"",
-            "\"ProtomanHelmet\"",
-            "\"PsychopathChestDispenser\"",
-            "\"PsychopathFacewearDispenser\"",
-            "\"PsychopathFeetDispenser\"",
-            "\"PsychopathHeadwearDispenser\"",
-            "\"PsychopathOutfit\"",
-            "\"RussianHatDispenser\"",
-            "\"SandalsWhiteSocksDispenser\"",
-            "\"SexySpaceGirlBody\"",
-            "\"SexySpaceGirlBoots\"",
-            "\"SexySpaceGirlDispenser\"",
-            "\"SexySpaceGirlHair\"",
-            "\"ShowGirlHeadPieceDispenser\"",
-            "\"SkaterOutfitDispenser\"",
-            "\"SoldierChestDispenser\"",
-            "\"SoldierFacewearDispenser\"",
-            "\"SoldierFeetDispenser\"",
-            "\"SoldierHeadwearDispenser\"",
-            "\"SoldierOutfit\"",
-            "\"SpaceSuitBody\"",
-            "\"SpaceSuitBoots\"",
-            "\"SpaceSuitHelmet\"",
-            "\"SportFanChestDispenser\"",
-            "\"SportFanFacewearDispenser\"",
-            "\"SportFanFeetDispenser\"",
-            "\"SportFanHeadwearDispenser\"",
-            "\"SportFanOutfit\"",
-            "\"SportGlassesDispenser\"",
-            "\"SportyTrackSuitDispenser\"",
-            "\"SummerDressDispenser\"",
-            "\"SurfWetsuitDispenser\"",
-            "\"SwatHelmetDispenser\"",
-            "\"SWATOutfitDispenser\"",
-            "\"TanJacketSlacksTurtleneckDispenser\"",
-            "\"TatteredClothesDispenser\"",
-            "\"TennisHeadBandDispenser\"",
-            "\"TennisOutfitDispenser\"",
-            "\"TIR_ChampionDispenser\"",
-            "\"TirFanOutfitDispenser\"",
-            "\"TIRWrestlingOutfit\"",
-            "\"TouristBoatHatDispenser\"",
-            "\"TubeTopMiniSkirtDispenser\"",
-            "\"TuqueDispenser\"",
-            "\"UranusZoneShirtDispenser\"",
-            "\"WhiteCowboyBootsDispenser\"",
-            "\"WhiteCowboyHatDispenser\"",
-            "\"WhiteCowboyOutfitDispenser\"",
-            "\"WhiteLeisureSuitDispenser\"",
-            "\"WhiteLowheelsDispenser\"",
-            "\"WhiteTennisShoesSocksDispenser\"",
-            "\"WildFrontierHatDispenser\"",
-            "\"WilliametteMallSecurityDispenser\"",
-            "\"YellowSneakersDispenser\"",
-            "\"YellowTintedGlassesDispenser\"",
-            "\"YellowTrackSuitDispenser\""});
-            this.clb_Clothing.Location = new System.Drawing.Point(6, 6);
-            this.clb_Clothing.Name = "clb_Clothing";
-            this.clb_Clothing.Size = new System.Drawing.Size(325, 396);
-            this.clb_Clothing.TabIndex = 5;
+            this.clb_Clothing.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Clothing.FormattingEnabled = (true);
+            this.clb_Clothing.Items.AddRange(new global::System.Object[] { "\"AlienBoots\"", "\"AlienMask\"", "\"AlienOutfitDispenser\"", "\"AlienSuit\"", "\"AlternateOutfit\"", "\"AmericanShowmanHelmetDispenser\"", "\"AmericanShowmanOutfitDispenser\"", "\"ArmyJacketPantsDispenser\"", "\"ArthurOutfitDispenser\"", "\"BaldNoHairDispenser\"", "\"BananaHammockDispenser\"", "\"BareFeetChuckDispenser\"", "\"BaseballCapSportDispenser\"", "\"BaseballCapTIRDispenser\"", "\"BaseballUniformDispenser\"", "\"BasketballHighTopsDispenser\"", "\"BasketballUniformDispenser\"", "\"BlackCanvasSneakersDispenser\"", "\"BlackCowboyBootsDispenser\"", "\"BlackCowboyHatDispenser\"", "\"BlackCowboyOutfitDispenser\"", "\"BlackDressShoesDispenser\"", "\"BlackMilitaryBootsDispenser\"", "\"BlackRimmedGlassesDispenser\"", "\"BlackTuxedoBowTieDispenser\"", "\"BlueOysterBikerOutfitDispenser\"", "\"BunnySlippersDispenser\"", "\"CardiganSlacksDispenser\"", "\"ChuckColouredHairBlueDispenser\"", "\"ChuckColouredHairGreyDispenser\"", "\"ChuckColouredHairPinkDispenser\"", "\"ChuckyOutfitDispenser\"", "\"CleatsDispenser\"", "\"CoconutBraHolaDressDispenser\"", "\"ComedianOutfitDispenser\"", "\"DarkAviatorGlassesDispenser\"", "\"DealerOutfitDispenser\"", "\"DealerVisorDispenser\"", "\"FedoraDispenser\"", "\"FishNetshirtwhitepantsDispenser\"", "\"FlipFlopsDispenser\"", "\"FlowerHeadPieceDispenser\"", "\"FootballHelmetDispenser\"", "\"FootballUniformDispenser\"", "\"FortuneTshirt1BlueJeansDispenser\"", "\"FortuneTshirt2BlackJeansDispenser\"", "\"FunnyMaskBlankaDispenser\"", "\"FunnyMaskLizardDispenser\"", "\"FunnyMaskServbotDispenser\"", "\"FunnyMaskZombieDispenser\"", "\"HawaiianShirt1shortsDispenser\"", "\"HawaiianShirt2shortsDispenser\"", "\"HawaiianShirt3PantsDispenser\"", "\"HawaiianShirt4PantsDispenser\"", "\"HipHopOutfitDispenser\"", "\"HookerBootsDispenser\"", "\"HygieneMaskDispenser\"", "\"KidsSuperHeroBootsDispenser\"", "\"KidsSuperHeroCostumeDispenser\"", "\"KidsSuperHeroEyeMaskDispenser\"", "\"KnottedTopCutoffsDispenser\"", "\"LadiesHatDispenser\"", "\"LargeRhinestoneGlassesDispenser\"", "\"midlengthtshirtjeansdispenser\"", "\"MohawkHairDispenser\"", "\"NakedOutfitDispenser\"", "\"NinjaChestDispenser\"", "\"NinjaFaceWearDispenser\"", "\"NinjaFeetDispenser\"", "\"NinjaHeadwearDispenser\"", "\"NinjaOutfit\"", "\"NoveltyGlassesDispenser\"", "\"OnePiecePajamaDispenser\"", "\"plaidsuitbrownshirttiedispenser\"", "\"PoloShirtBlueJeansDispenser\"", "\"ProtomanBody\"", "\"ProtomanBoots\"", "\"ProtomanDispenser\"", "\"ProtomanHelmet\"", "\"PsychopathChestDispenser\"", "\"PsychopathFacewearDispenser\"", "\"PsychopathFeetDispenser\"", "\"PsychopathHeadwearDispenser\"", "\"PsychopathOutfit\"", "\"RussianHatDispenser\"", "\"SandalsWhiteSocksDispenser\"", "\"SexySpaceGirlBody\"", "\"SexySpaceGirlBoots\"", "\"SexySpaceGirlDispenser\"", "\"SexySpaceGirlHair\"", "\"ShowGirlHeadPieceDispenser\"", "\"SkaterOutfitDispenser\"", "\"SoldierChestDispenser\"", "\"SoldierFacewearDispenser\"", "\"SoldierFeetDispenser\"", "\"SoldierHeadwearDispenser\"", "\"SoldierOutfit\"", "\"SpaceSuitBody\"", "\"SpaceSuitBoots\"", "\"SpaceSuitHelmet\"", "\"SportFanChestDispenser\"", "\"SportFanFacewearDispenser\"", "\"SportFanFeetDispenser\"", "\"SportFanHeadwearDispenser\"", "\"SportFanOutfit\"", "\"SportGlassesDispenser\"", "\"SportyTrackSuitDispenser\"", "\"SummerDressDispenser\"", "\"SurfWetsuitDispenser\"", "\"SwatHelmetDispenser\"", "\"SWATOutfitDispenser\"", "\"TanJacketSlacksTurtleneckDispenser\"", "\"TatteredClothesDispenser\"", "\"TennisHeadBandDispenser\"", "\"TennisOutfitDispenser\"", "\"TIR_ChampionDispenser\"", "\"TirFanOutfitDispenser\"", "\"TIRWrestlingOutfit\"", "\"TouristBoatHatDispenser\"", "\"TubeTopMiniSkirtDispenser\"", "\"TuqueDispenser\"", "\"UranusZoneShirtDispenser\"", "\"WhiteCowboyBootsDispenser\"", "\"WhiteCowboyHatDispenser\"", "\"WhiteCowboyOutfitDispenser\"", "\"WhiteLeisureSuitDispenser\"", "\"WhiteLowheelsDispenser\"", "\"WhiteTennisShoesSocksDispenser\"", "\"WildFrontierHatDispenser\"", "\"WilliametteMallSecurityDispenser\"", "\"YellowSneakersDispenser\"", "\"YellowTintedGlassesDispenser\"", "\"YellowTrackSuitDispenser\"" });
+            this.clb_Clothing.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Clothing.Name = ("clb_Clothing");
+            this.clb_Clothing.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Clothing.TabIndex = (5);
             // 
             // tp_CombinedFireArmsSpray
             // 
             this.tp_CombinedFireArmsSpray.Controls.Add(this.clb_CombinedFireArmsSpray);
-            this.tp_CombinedFireArmsSpray.Location = new System.Drawing.Point(4, 29);
-            this.tp_CombinedFireArmsSpray.Name = "tp_CombinedFireArmsSpray";
-            this.tp_CombinedFireArmsSpray.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_CombinedFireArmsSpray.Size = new System.Drawing.Size(337, 397);
-            this.tp_CombinedFireArmsSpray.TabIndex = 6;
-            this.tp_CombinedFireArmsSpray.Text = "Combined Fire Arms & Spray";
-            this.tp_CombinedFireArmsSpray.UseVisualStyleBackColor = true;
+            this.tp_CombinedFireArmsSpray.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_CombinedFireArmsSpray.Name = ("tp_CombinedFireArmsSpray");
+            this.tp_CombinedFireArmsSpray.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_CombinedFireArmsSpray.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_CombinedFireArmsSpray.TabIndex = (6);
+            this.tp_CombinedFireArmsSpray.Text = ("Combined Fire Arms & Spray");
+            this.tp_CombinedFireArmsSpray.UseVisualStyleBackColor = (true);
             // 
             // clb_CombinedFireArmsSpray
             // 
-            this.clb_CombinedFireArmsSpray.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_CombinedFireArmsSpray.FormattingEnabled = true;
-            this.clb_CombinedFireArmsSpray.Items.AddRange(new object[] {
-            "\"AirHorn\"",
-            "\"BagofMarbles\"",
-            "\"Barrett50Caliber\"",
-            "\"BaseballBat_Metal\"",
-            "\"CannedDrinks\"",
-            "\"CasinoChips\"",
-            "\"CementSaw_combo\"",
-            "\"FireCrackers\"",
-            "\"FireSpitter\"",
-            "\"FlameThrower\"",
-            "\"FlamingAces\"",
-            "\"gemblower\"",
-            "\"GolfClub\"",
-            "\"HandGun\"",
-            "\"Ketchup\"",
-            "\"LaserEyes\"",
-            "\"LightningGun\"",
-            "\"Mayonnaise\"",
-            "\"MinigameSniper\"",
-            "\"MusicDiscs\"",
-            "\"NineIron\"",
-            "\"PitchForkShotgun\"",
-            "\"PlateLauncher\"",
-            "\"PlayingCards\"",
-            "\"ProtomanBlaster\"",
-            "\"RayGun\"",
-            "\"SawLauncher\"",
-            "\"SBFG\"",
-            "\"SGBallLauncherBlue\"",
-            "\"SGBallLauncherGreen\"",
-            "\"SGBallLauncherRed\"",
-            "\"SGBallLauncherYellow\"",
-            "\"SixShooter\"",
-            "\"SpaceballBat\"",
-            "\"SuperMassager\"",
-            "\"VinylRecords\"",
-            "\"WhippedCream\"",
-            "\"ZombieThrower\""});
-            this.clb_CombinedFireArmsSpray.Location = new System.Drawing.Point(6, 6);
-            this.clb_CombinedFireArmsSpray.Name = "clb_CombinedFireArmsSpray";
-            this.clb_CombinedFireArmsSpray.Size = new System.Drawing.Size(325, 396);
-            this.clb_CombinedFireArmsSpray.TabIndex = 6;
+            this.clb_CombinedFireArmsSpray.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_CombinedFireArmsSpray.FormattingEnabled = (true);
+            this.clb_CombinedFireArmsSpray.Items.AddRange(new global::System.Object[] { "\"AirHorn\"", "\"BagofMarbles\"", "\"Barrett50Caliber\"", "\"BaseballBat_Metal\"", "\"CannedDrinks\"", "\"CasinoChips\"", "\"CementSaw_combo\"", "\"FireCrackers\"", "\"FireSpitter\"", "\"FlameThrower\"", "\"FlamingAces\"", "\"gemblower\"", "\"GolfClub\"", "\"HandGun\"", "\"Ketchup\"", "\"LaserEyes\"", "\"LightningGun\"", "\"Mayonnaise\"", "\"MinigameSniper\"", "\"MusicDiscs\"", "\"NineIron\"", "\"PitchForkShotgun\"", "\"PlateLauncher\"", "\"PlayingCards\"", "\"ProtomanBlaster\"", "\"RayGun\"", "\"SawLauncher\"", "\"SBFG\"", "\"SGBallLauncherBlue\"", "\"SGBallLauncherGreen\"", "\"SGBallLauncherRed\"", "\"SGBallLauncherYellow\"", "\"SixShooter\"", "\"SpaceballBat\"", "\"SuperMassager\"", "\"VinylRecords\"", "\"WhippedCream\"", "\"ZombieThrower\"" });
+            this.clb_CombinedFireArmsSpray.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_CombinedFireArmsSpray.Name = ("clb_CombinedFireArmsSpray");
+            this.clb_CombinedFireArmsSpray.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_CombinedFireArmsSpray.TabIndex = (6);
             // 
             // tp_CombinedFoodSpoiled
             // 
             this.tp_CombinedFoodSpoiled.Controls.Add(this.clb_CombinedFoodSpoiled);
-            this.tp_CombinedFoodSpoiled.Location = new System.Drawing.Point(4, 29);
-            this.tp_CombinedFoodSpoiled.Name = "tp_CombinedFoodSpoiled";
-            this.tp_CombinedFoodSpoiled.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_CombinedFoodSpoiled.Size = new System.Drawing.Size(337, 397);
-            this.tp_CombinedFoodSpoiled.TabIndex = 7;
-            this.tp_CombinedFoodSpoiled.Text = "Combined Food & Spoiled";
-            this.tp_CombinedFoodSpoiled.UseVisualStyleBackColor = true;
+            this.tp_CombinedFoodSpoiled.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_CombinedFoodSpoiled.Name = ("tp_CombinedFoodSpoiled");
+            this.tp_CombinedFoodSpoiled.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_CombinedFoodSpoiled.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_CombinedFoodSpoiled.TabIndex = (7);
+            this.tp_CombinedFoodSpoiled.Text = ("Combined Food & Spoiled");
+            this.tp_CombinedFoodSpoiled.UseVisualStyleBackColor = (true);
             // 
             // clb_CombinedFoodSpoiled
             // 
-            this.clb_CombinedFoodSpoiled.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_CombinedFoodSpoiled.FormattingEnabled = true;
-            this.clb_CombinedFoodSpoiled.Items.AddRange(new object[] {
-            "\"BeerHat\"",
-            "\"EnergizerJuice\"",
-            "\"NectarJuice\"",
-            "\"PainKillerJuice\"",
-            "\"QuickStepJuice\"",
-            "\"RandomizerJuice\"",
-            "\"RepulseJuice\"",
-            "\"SpaceSteak\"",
-            "\"SpitfireJuice\"",
-            "\"SpoiledBacon\"",
-            "\"SpoiledBBQChicken\"",
-            "\"SpoiledBBQRibs\"",
-            "\"SpoiledFish\"",
-            "\"SpoiledHamburger\"",
-            "\"SpoiledHotDog\"",
-            "\"SpoiledLobster\"",
-            "\"SpoiledSteak\"",
-            "\"SpoiledSushi\"",
-            "\"UntouchableJuice\"",
-            "\"ZombaitJuice\""});
-            this.clb_CombinedFoodSpoiled.Location = new System.Drawing.Point(6, 6);
-            this.clb_CombinedFoodSpoiled.Name = "clb_CombinedFoodSpoiled";
-            this.clb_CombinedFoodSpoiled.Size = new System.Drawing.Size(325, 396);
-            this.clb_CombinedFoodSpoiled.TabIndex = 7;
+            this.clb_CombinedFoodSpoiled.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_CombinedFoodSpoiled.FormattingEnabled = (true);
+            this.clb_CombinedFoodSpoiled.Items.AddRange(new global::System.Object[] { "\"BeerHat\"", "\"EnergizerJuice\"", "\"NectarJuice\"", "\"PainKillerJuice\"", "\"QuickStepJuice\"", "\"RandomizerJuice\"", "\"RepulseJuice\"", "\"SpaceSteak\"", "\"SpitfireJuice\"", "\"SpoiledBacon\"", "\"SpoiledBBQChicken\"", "\"SpoiledBBQRibs\"", "\"SpoiledFish\"", "\"SpoiledHamburger\"", "\"SpoiledHotDog\"", "\"SpoiledLobster\"", "\"SpoiledSteak\"", "\"SpoiledSushi\"", "\"UntouchableJuice\"", "\"ZombaitJuice\"" });
+            this.clb_CombinedFoodSpoiled.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_CombinedFoodSpoiled.Name = ("clb_CombinedFoodSpoiled");
+            this.clb_CombinedFoodSpoiled.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_CombinedFoodSpoiled.TabIndex = (7);
             // 
             // tp_CombinedThowingMelee
             // 
             this.tp_CombinedThowingMelee.Controls.Add(this.clb_CombinedThowingMelee);
-            this.tp_CombinedThowingMelee.Location = new System.Drawing.Point(4, 29);
-            this.tp_CombinedThowingMelee.Name = "tp_CombinedThowingMelee";
-            this.tp_CombinedThowingMelee.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_CombinedThowingMelee.Size = new System.Drawing.Size(337, 397);
-            this.tp_CombinedThowingMelee.TabIndex = 8;
-            this.tp_CombinedThowingMelee.Text = "Combined Thowing & Melee";
-            this.tp_CombinedThowingMelee.UseVisualStyleBackColor = true;
+            this.tp_CombinedThowingMelee.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_CombinedThowingMelee.Name = ("tp_CombinedThowingMelee");
+            this.tp_CombinedThowingMelee.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_CombinedThowingMelee.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_CombinedThowingMelee.TabIndex = (8);
+            this.tp_CombinedThowingMelee.Text = ("Combined Thowing & Melee");
+            this.tp_CombinedThowingMelee.UseVisualStyleBackColor = (true);
             // 
             // clb_CombinedThowingMelee
             // 
-            this.clb_CombinedThowingMelee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_CombinedThowingMelee.FormattingEnabled = true;
-            this.clb_CombinedThowingMelee.Items.AddRange(new object[] {
-            "\"ATMHacker\"",
-            "\"Auger\"",
-            "\"BurningSkull\"",
-            "\"Combo_Paddlesaw\"",
-            "\"defiler\"",
-            "\"Driller\"",
-            "\"ElectricRake\"",
-            "\"FlamingGloves\"",
-            "\"FlamingSwordAndShield\"",
-            "\"HandiChipper\"",
-            "\"KnifeGloves\"",
-            "\"LaserLightSword\"",
-            "\"mmagloves_spiked\"",
-            "\"ParaBlower\"",
-            "\"poleweapon\"",
-            "\"PortableLawnMower\"",
-            "\"PowerExsanguinator\"",
-            "\"PowerGuitar\"",
-            "\"Reaper\"",
-            "\"Shocker\"",
-            "\"SpikedBat\"",
-            "\"SpikedSwordAndShield\"",
-            "\"SuperSlicer\"",
-            "\"TeslaBall\"",
-            "\"Thor\"",
-            "\"WeedTendonizer\"",
-            "\"WingManJar\""});
-            this.clb_CombinedThowingMelee.Location = new System.Drawing.Point(6, 6);
-            this.clb_CombinedThowingMelee.Name = "clb_CombinedThowingMelee";
-            this.clb_CombinedThowingMelee.Size = new System.Drawing.Size(325, 396);
-            this.clb_CombinedThowingMelee.TabIndex = 8;
+            this.clb_CombinedThowingMelee.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_CombinedThowingMelee.FormattingEnabled = (true);
+            this.clb_CombinedThowingMelee.Items.AddRange(new global::System.Object[] { "\"ATMHacker\"", "\"Auger\"", "\"BurningSkull\"", "\"Combo_Paddlesaw\"", "\"defiler\"", "\"Driller\"", "\"ElectricRake\"", "\"FlamingGloves\"", "\"FlamingSwordAndShield\"", "\"HandiChipper\"", "\"KnifeGloves\"", "\"LaserLightSword\"", "\"mmagloves_spiked\"", "\"ParaBlower\"", "\"poleweapon\"", "\"PortableLawnMower\"", "\"PowerExsanguinator\"", "\"PowerGuitar\"", "\"Reaper\"", "\"Shocker\"", "\"SpikedBat\"", "\"SpikedSwordAndShield\"", "\"SuperSlicer\"", "\"TeslaBall\"", "\"Thor\"", "\"WeedTendonizer\"", "\"WingManJar\"" });
+            this.clb_CombinedThowingMelee.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_CombinedThowingMelee.Name = ("clb_CombinedThowingMelee");
+            this.clb_CombinedThowingMelee.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_CombinedThowingMelee.TabIndex = (8);
             // 
             // tp_ComboFireArmSpray
             // 
             this.tp_ComboFireArmSpray.Controls.Add(this.clb_ComboFireArmSpray);
-            this.tp_ComboFireArmSpray.Location = new System.Drawing.Point(4, 29);
-            this.tp_ComboFireArmSpray.Name = "tp_ComboFireArmSpray";
-            this.tp_ComboFireArmSpray.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_ComboFireArmSpray.Size = new System.Drawing.Size(337, 397);
-            this.tp_ComboFireArmSpray.TabIndex = 9;
-            this.tp_ComboFireArmSpray.Text = "Combo Fire Arm & Spray";
-            this.tp_ComboFireArmSpray.UseVisualStyleBackColor = true;
+            this.tp_ComboFireArmSpray.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_ComboFireArmSpray.Name = ("tp_ComboFireArmSpray");
+            this.tp_ComboFireArmSpray.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_ComboFireArmSpray.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_ComboFireArmSpray.TabIndex = (9);
+            this.tp_ComboFireArmSpray.Text = ("Combo Fire Arm & Spray");
+            this.tp_ComboFireArmSpray.UseVisualStyleBackColor = (true);
             // 
             // clb_ComboFireArmSpray
             // 
-            this.clb_ComboFireArmSpray.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_ComboFireArmSpray.FormattingEnabled = true;
-            this.clb_ComboFireArmSpray.Items.AddRange(new object[] {
-            "\"BFG\"",
-            "\"BowandArrow\"",
-            "\"BoxOfNails\"",
-            "\"EnhancedM16\"",
-            "\"EnhancedM249\"",
-            "\"EnhancedMAR\"",
-            "\"FireExtinguisher\"",
-            "\"Gems\"",
-            "\"LeafBlower\"",
-            "\"M16\"",
-            "\"M249\"",
-            "\"MercAssaultRifle\"",
-            "\"Shotgun\"",
-            "\"SpitballGun\"",
-            "\"Spraypaint\"",
-            "\"TennisRacket\"",
-            "\"WaterGun\""});
-            this.clb_ComboFireArmSpray.Location = new System.Drawing.Point(6, 6);
-            this.clb_ComboFireArmSpray.Name = "clb_ComboFireArmSpray";
-            this.clb_ComboFireArmSpray.Size = new System.Drawing.Size(325, 396);
-            this.clb_ComboFireArmSpray.TabIndex = 9;
+            this.clb_ComboFireArmSpray.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_ComboFireArmSpray.FormattingEnabled = (true);
+            this.clb_ComboFireArmSpray.Items.AddRange(new global::System.Object[] { "\"BFG\"", "\"BowandArrow\"", "\"BoxOfNails\"", "\"EnhancedM16\"", "\"EnhancedM249\"", "\"EnhancedMAR\"", "\"FireExtinguisher\"", "\"Gems\"", "\"LeafBlower\"", "\"M16\"", "\"M249\"", "\"MercAssaultRifle\"", "\"Shotgun\"", "\"SpitballGun\"", "\"Spraypaint\"", "\"TennisRacket\"", "\"WaterGun\"" });
+            this.clb_ComboFireArmSpray.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_ComboFireArmSpray.Name = ("clb_ComboFireArmSpray");
+            this.clb_ComboFireArmSpray.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_ComboFireArmSpray.TabIndex = (9);
             // 
             // tp_DLC
             // 
             this.tp_DLC.Controls.Add(this.clb_DLC);
-            this.tp_DLC.Location = new System.Drawing.Point(4, 29);
-            this.tp_DLC.Name = "tp_DLC";
-            this.tp_DLC.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_DLC.Size = new System.Drawing.Size(337, 397);
-            this.tp_DLC.TabIndex = 10;
-            this.tp_DLC.Text = "DLC";
-            this.tp_DLC.UseVisualStyleBackColor = true;
+            this.tp_DLC.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_DLC.Name = ("tp_DLC");
+            this.tp_DLC.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_DLC.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_DLC.TabIndex = (10);
+            this.tp_DLC.Text = ("DLC");
+            this.tp_DLC.UseVisualStyleBackColor = (true);
             // 
             // clb_DLC
             // 
-            this.clb_DLC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_DLC.FormattingEnabled = true;
-            this.clb_DLC.Items.AddRange(new object[] {
-            "\"DLC_BBQChef_Chest\"",
-            "\"DLC_BBQChef_Face\"",
-            "\"DLC_BBQChef_Feet\"",
-            "\"DLC_BBQChef_Head\"",
-            "\"DLC_CosPlay_Chest\"",
-            "\"DLC_CosPlay_Face\"",
-            "\"DLC_CosPlay_Feet\"",
-            "\"DLC_CosPlay_Head\"",
-            "\"DLC_Cyborg_Chest\"",
-            "\"DLC_Cyborg_Face\"",
-            "\"DLC_Cyborg_Feet\"",
-            "\"DLC_Cyborg_Head\"",
-            "\"DLC_Fireman_Chest\"",
-            "\"DLC_Fireman_Feet\"",
-            "\"DLC_Fireman_Head\"",
-            "\"DLC_Fireman_Face\""});
-            this.clb_DLC.Location = new System.Drawing.Point(6, 6);
-            this.clb_DLC.Name = "clb_DLC";
-            this.clb_DLC.Size = new System.Drawing.Size(325, 396);
-            this.clb_DLC.TabIndex = 10;
+            this.clb_DLC.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_DLC.FormattingEnabled = (true);
+            this.clb_DLC.Items.AddRange(new global::System.Object[] { "\"DLC_BBQChef_Chest\"", "\"DLC_BBQChef_Face\"", "\"DLC_BBQChef_Feet\"", "\"DLC_BBQChef_Head\"", "\"DLC_CosPlay_Chest\"", "\"DLC_CosPlay_Face\"", "\"DLC_CosPlay_Feet\"", "\"DLC_CosPlay_Head\"", "\"DLC_Cyborg_Chest\"", "\"DLC_Cyborg_Face\"", "\"DLC_Cyborg_Feet\"", "\"DLC_Cyborg_Head\"", "\"DLC_Fireman_Chest\"", "\"DLC_Fireman_Feet\"", "\"DLC_Fireman_Head\"", "\"DLC_Fireman_Face\"" });
+            this.clb_DLC.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_DLC.Name = ("clb_DLC");
+            this.clb_DLC.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_DLC.TabIndex = (10);
             // 
             // tp_Explosive
             // 
             this.tp_Explosive.Controls.Add(this.clb_Explosive);
-            this.tp_Explosive.Location = new System.Drawing.Point(4, 29);
-            this.tp_Explosive.Name = "tp_Explosive";
-            this.tp_Explosive.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Explosive.Size = new System.Drawing.Size(337, 397);
-            this.tp_Explosive.TabIndex = 11;
-            this.tp_Explosive.Text = "Explosive";
-            this.tp_Explosive.UseVisualStyleBackColor = true;
+            this.tp_Explosive.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Explosive.Name = ("tp_Explosive");
+            this.tp_Explosive.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Explosive.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Explosive.TabIndex = (11);
+            this.tp_Explosive.Text = ("Explosive");
+            this.tp_Explosive.UseVisualStyleBackColor = (true);
             // 
             // clb_Explosive
             // 
-            this.clb_Explosive.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Explosive.FormattingEnabled = true;
-            this.clb_Explosive.Items.AddRange(new object[] {
-            "\"AcetyleneTank\"",
-            "\"BouncingBeauty\"",
-            "\"BowandArrow_explosive\"",
-            "\"BoykinGrenade\"",
-            "\"Combo_PropaneTankNails\"",
-            "\"CryoPod\"",
-            "\"Dynameat\"",
-            "\"Dynamite\"",
-            "\"FireworkRockets\"",
-            "\"FireworksBazooka_Bomber\"",
-            "\"FireworksBazooka_reward\"",
-            "\"FireworksBazooka\"",
-            "\"FlashGrenade\"",
-            "\"FreezerBomb\"",
-            "\"GasCanister\"",
-            "\"GasolineCanister\"",
-            "\"Grenade\"",
-            "\"HailMary\"",
-            "\"LaserGun\"",
-            "\"LiquidNitrogen\"",
-            "\"MolotovBottle\"",
-            "\"Pegasus\"",
-            "\"PropaneTank\"",
-            "\"QueenBeeJar\"",
-            "\"RemoteMine\"",
-            "\"SnowballCannon\"",
-            "\"StickyBomb\""});
-            this.clb_Explosive.Location = new System.Drawing.Point(6, 6);
-            this.clb_Explosive.Name = "clb_Explosive";
-            this.clb_Explosive.Size = new System.Drawing.Size(325, 396);
-            this.clb_Explosive.TabIndex = 11;
+            this.clb_Explosive.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Explosive.FormattingEnabled = (true);
+            this.clb_Explosive.Items.AddRange(new global::System.Object[] { "\"AcetyleneTank\"", "\"BouncingBeauty\"", "\"BowandArrow_explosive\"", "\"BoykinGrenade\"", "\"Combo_PropaneTankNails\"", "\"CryoPod\"", "\"Dynameat\"", "\"Dynamite\"", "\"FireworkRockets\"", "\"FireworksBazooka_Bomber\"", "\"FireworksBazooka_reward\"", "\"FireworksBazooka\"", "\"FlashGrenade\"", "\"FreezerBomb\"", "\"GasCanister\"", "\"GasolineCanister\"", "\"Grenade\"", "\"HailMary\"", "\"LaserGun\"", "\"LiquidNitrogen\"", "\"MolotovBottle\"", "\"Pegasus\"", "\"PropaneTank\"", "\"QueenBeeJar\"", "\"RemoteMine\"", "\"SnowballCannon\"", "\"StickyBomb\"" });
+            this.clb_Explosive.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Explosive.Name = ("clb_Explosive");
+            this.clb_Explosive.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Explosive.TabIndex = (11);
             // 
             // tp_KeyItems
             // 
             this.tp_KeyItems.Controls.Add(this.clb_KeyItems);
-            this.tp_KeyItems.Location = new System.Drawing.Point(4, 29);
-            this.tp_KeyItems.Name = "tp_KeyItems";
-            this.tp_KeyItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_KeyItems.Size = new System.Drawing.Size(337, 397);
-            this.tp_KeyItems.TabIndex = 17;
-            this.tp_KeyItems.Text = "Key Items";
-            this.tp_KeyItems.UseVisualStyleBackColor = true;
+            this.tp_KeyItems.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_KeyItems.Name = ("tp_KeyItems");
+            this.tp_KeyItems.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_KeyItems.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_KeyItems.TabIndex = (17);
+            this.tp_KeyItems.Text = ("Key Items");
+            this.tp_KeyItems.UseVisualStyleBackColor = (true);
             // 
             // clb_KeyItems
             // 
-            this.clb_KeyItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_KeyItems.FormattingEnabled = true;
-            this.clb_KeyItems.Items.AddRange(new object[] {
-            "\"Key_caseofqueens\"",
-            "\"Key_photo\"",
-            "\"Key_champagne\"",
-            "\"Key_giftbasket\"",
-            "\"Key_labsuit\"",
-            "\"Key_bluetooth\"",
-            "\"Key_usbdrive\"",
-            "\"Zombrex\"",
-            "\"Key_undergroundkey\"",
-            "\"Key_sportscar\"",
-            "\"Key_commando\"",
-            "\"Key_chopper\"",
-            "\"Key_MasterKey\"",
-            "\"Key_train\"",
-            "\"Key_superbike\"",
-            "\"Key_gauze\"",
-            "\"Key_zombrexbasket\"",
-            "\"Key_painkillers\"",
-            "\"Key_sutures\"",
-            "\"Key_silkthong\"",
-            "\"key_lockbox18\"",
-            "\"key_lockbox1\"",
-            "\"key_lockbox12\"",
-            "\"key_lockbox13\"",
-            "\"key_lockbox14\"",
-            "\"key_lockbox15\"",
-            "\"key_lockbox16\"",
-            "\"key_lockbox17\"",
-            "\"key_lockbox19\"",
-            "\"key_lockbox20\"",
-            "\"key_lockbox2\"",
-            "\"key_lockbox3\"",
-            "\"key_lockbox4\"",
-            "\"key_lockbox5\"",
-            "\"key_lockbox6\"",
-            "\"key_lockbox7\"",
-            "\"key_lockbox8\"",
-            "\"key_lockbox9\"",
-            "\"key_lockbox10\"",
-            "\"key_lockbox11\""});
-            this.clb_KeyItems.Location = new System.Drawing.Point(6, 6);
-            this.clb_KeyItems.Name = "clb_KeyItems";
-            this.clb_KeyItems.Size = new System.Drawing.Size(325, 396);
-            this.clb_KeyItems.TabIndex = 17;
+            this.clb_KeyItems.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_KeyItems.FormattingEnabled = (true);
+            this.clb_KeyItems.Items.AddRange(new global::System.Object[] { "\"Key_caseofqueens\"", "\"Key_photo\"", "\"Key_champagne\"", "\"Key_giftbasket\"", "\"Key_labsuit\"", "\"Key_bluetooth\"", "\"Key_usbdrive\"", "\"Zombrex\"", "\"Key_undergroundkey\"", "\"Key_sportscar\"", "\"Key_commando\"", "\"Key_chopper\"", "\"Key_MasterKey\"", "\"Key_train\"", "\"Key_superbike\"", "\"Key_gauze\"", "\"Key_zombrexbasket\"", "\"Key_painkillers\"", "\"Key_sutures\"", "\"Key_silkthong\"", "\"key_lockbox18\"", "\"key_lockbox1\"", "\"key_lockbox12\"", "\"key_lockbox13\"", "\"key_lockbox14\"", "\"key_lockbox15\"", "\"key_lockbox16\"", "\"key_lockbox17\"", "\"key_lockbox19\"", "\"key_lockbox20\"", "\"key_lockbox2\"", "\"key_lockbox3\"", "\"key_lockbox4\"", "\"key_lockbox5\"", "\"key_lockbox6\"", "\"key_lockbox7\"", "\"key_lockbox8\"", "\"key_lockbox9\"", "\"key_lockbox10\"", "\"key_lockbox11\"" });
+            this.clb_KeyItems.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_KeyItems.Name = ("clb_KeyItems");
+            this.clb_KeyItems.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_KeyItems.TabIndex = (17);
             // 
             // tp_Magazines
             // 
             this.tp_Magazines.Controls.Add(this.clb_Magazines);
-            this.tp_Magazines.Location = new System.Drawing.Point(4, 29);
-            this.tp_Magazines.Name = "tp_Magazines";
-            this.tp_Magazines.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Magazines.Size = new System.Drawing.Size(337, 397);
-            this.tp_Magazines.TabIndex = 12;
-            this.tp_Magazines.Text = "Magazines";
-            this.tp_Magazines.UseVisualStyleBackColor = true;
+            this.tp_Magazines.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Magazines.Name = ("tp_Magazines");
+            this.tp_Magazines.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Magazines.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Magazines.TabIndex = (12);
+            this.tp_Magazines.Text = ("Magazines");
+            this.tp_Magazines.UseVisualStyleBackColor = (true);
             // 
             // clb_Magazines
             // 
-            this.clb_Magazines.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Magazines.FormattingEnabled = true;
-            this.clb_Magazines.Items.AddRange(new object[] {
-            "\"Camera_Magazine_1\"",
-            "\"Camera_Magazine_2\"",
-            "\"Camera_Magazine_3\"",
-            "\"Magazine_Alcohol_Hangover_Cures\"",
-            "\"Magazine_Economy_Lords_Of_Cash\"",
-            "\"Magazine_Economy_Thrifty_Trader\"",
-            "\"Magazine_Food_Healthy_Choices\"",
-            "\"Magazine_Food_The_World_Chef\"",
-            "\"Magazine_Four_Wheel_Fun\"",
-            "\"Magazine_Gambling_Fortune_City_Riches\"",
-            "\"Magazine_Gambling_Luck_You\"",
-            "\"Magazine_Gambling_Wealth\"",
-            "\"Magazine_Item_Edged_Lone_Blade\"",
-            "\"Magazine_Item_Furniture_Designer_For_Homes\"",
-            "\"Magazine_Item_Sports_Total_Sporting_Weekly\"",
-            "\"Magazine_Item_Toy_Toyapalooza\"",
-            "\"Magazine_Juice_Top_Ten_Drink_Mixes\"",
-            "\"Magazine_Leadership_For_Losers\"",
-            "\"Magazine_PP_Female_Survivor_Playboy\"",
-            "\"Magazine_PP_Psycho_Dangerous_People_Weekly\"",
-            "\"Magazine_PP_Survivor_Angel_Prince\"",
-            "\"Magazine_PP_Weapon_Armed_And_Awesome\"",
-            "\"Magazine_PP_Weapon_Basic_Training_Monthly\"",
-            "\"Magazine_PP_Weapon_Fortune_Fighter\"",
-            "\"Magazine_PP_Zombie_Spectral_Talkers\"",
-            "\"Magazine_PP_Zombie_Undead_Solutions\"",
-            "\"Magazine_Shotokan_Karate_Made_Easy\"",
-            "\"Magazine_Sports_To_The_Extreme\"",
-            "\"Magazine_Stunt_Devils\"",
-            "\"Mgz_Item_Construction_Jackhammer_Weekly\"",
-            "\"Mgz_Item_Entertainment_Video_Game_Weekly\"",
-            "\"Mgz_Item_Entertainment_Video_Game_Weekly\""});
-            this.clb_Magazines.Location = new System.Drawing.Point(6, 6);
-            this.clb_Magazines.Name = "clb_Magazines";
-            this.clb_Magazines.Size = new System.Drawing.Size(325, 396);
-            this.clb_Magazines.TabIndex = 12;
+            this.clb_Magazines.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Magazines.FormattingEnabled = (true);
+            this.clb_Magazines.Items.AddRange(new global::System.Object[] { "\"Camera_Magazine_1\"", "\"Camera_Magazine_2\"", "\"Camera_Magazine_3\"", "\"Magazine_Alcohol_Hangover_Cures\"", "\"Magazine_Economy_Lords_Of_Cash\"", "\"Magazine_Economy_Thrifty_Trader\"", "\"Magazine_Food_Healthy_Choices\"", "\"Magazine_Food_The_World_Chef\"", "\"Magazine_Four_Wheel_Fun\"", "\"Magazine_Gambling_Fortune_City_Riches\"", "\"Magazine_Gambling_Luck_You\"", "\"Magazine_Gambling_Wealth\"", "\"Magazine_Item_Edged_Lone_Blade\"", "\"Magazine_Item_Furniture_Designer_For_Homes\"", "\"Magazine_Item_Sports_Total_Sporting_Weekly\"", "\"Magazine_Item_Toy_Toyapalooza\"", "\"Magazine_Juice_Top_Ten_Drink_Mixes\"", "\"Magazine_Leadership_For_Losers\"", "\"Magazine_PP_Female_Survivor_Playboy\"", "\"Magazine_PP_Psycho_Dangerous_People_Weekly\"", "\"Magazine_PP_Survivor_Angel_Prince\"", "\"Magazine_PP_Weapon_Armed_And_Awesome\"", "\"Magazine_PP_Weapon_Basic_Training_Monthly\"", "\"Magazine_PP_Weapon_Fortune_Fighter\"", "\"Magazine_PP_Zombie_Spectral_Talkers\"", "\"Magazine_PP_Zombie_Undead_Solutions\"", "\"Magazine_Shotokan_Karate_Made_Easy\"", "\"Magazine_Sports_To_The_Extreme\"", "\"Magazine_Stunt_Devils\"", "\"Mgz_Item_Construction_Jackhammer_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"" });
+            this.clb_Magazines.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Magazines.Name = ("clb_Magazines");
+            this.clb_Magazines.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Magazines.TabIndex = (12);
             // 
             // tp_Mannequin
             // 
             this.tp_Mannequin.Controls.Add(this.clb_Mannequin);
-            this.tp_Mannequin.Location = new System.Drawing.Point(4, 29);
-            this.tp_Mannequin.Name = "tp_Mannequin";
-            this.tp_Mannequin.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Mannequin.Size = new System.Drawing.Size(337, 397);
-            this.tp_Mannequin.TabIndex = 13;
-            this.tp_Mannequin.Text = "Mannequin";
-            this.tp_Mannequin.UseVisualStyleBackColor = true;
+            this.tp_Mannequin.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Mannequin.Name = ("tp_Mannequin");
+            this.tp_Mannequin.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Mannequin.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Mannequin.TabIndex = (13);
+            this.tp_Mannequin.Text = ("Mannequin");
+            this.tp_Mannequin.UseVisualStyleBackColor = (true);
             // 
             // clb_Mannequin
             // 
-            this.clb_Mannequin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Mannequin.FormattingEnabled = true;
-            this.clb_Mannequin.Items.AddRange(new object[] {
-            "\"Mannequin_Female\"",
-            "\"Mannequin_Male\"",
-            "\"MannequinFemaleHead\"",
-            "\"MannequinFemaleHeadTorso\"",
-            "\"MannequinFemaleLeftArm\"",
-            "\"MannequinFemaleLeftLeg\"",
-            "\"MannequinFemaleLLegLFoot\"",
-            "\"MannequinFemaleRightArm\"",
-            "\"MannequinFemaleRightLeg\"",
-            "\"MannequinFemaleWaistRLegRFoot\"",
-            "\"MannequinMaleHead\"",
-            "\"MannequinMaleLeftArm\"",
-            "\"MannequinMaleLeftLeg\"",
-            "\"MannequinMaleRightArm\"",
-            "\"MannequinMaleRightLeg\"",
-            "\"MannequinMaleTorsoLLegRLeg\""});
-            this.clb_Mannequin.Location = new System.Drawing.Point(6, 6);
-            this.clb_Mannequin.Name = "clb_Mannequin";
-            this.clb_Mannequin.Size = new System.Drawing.Size(325, 396);
-            this.clb_Mannequin.TabIndex = 13;
+            this.clb_Mannequin.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Mannequin.FormattingEnabled = (true);
+            this.clb_Mannequin.Items.AddRange(new global::System.Object[] { "\"Mannequin_Female\"", "\"Mannequin_Male\"", "\"MannequinFemaleHead\"", "\"MannequinFemaleHeadTorso\"", "\"MannequinFemaleLeftArm\"", "\"MannequinFemaleLeftLeg\"", "\"MannequinFemaleLLegLFoot\"", "\"MannequinFemaleRightArm\"", "\"MannequinFemaleRightLeg\"", "\"MannequinFemaleWaistRLegRFoot\"", "\"MannequinMaleHead\"", "\"MannequinMaleLeftArm\"", "\"MannequinMaleLeftLeg\"", "\"MannequinMaleRightArm\"", "\"MannequinMaleRightLeg\"", "\"MannequinMaleTorsoLLegRLeg\"" });
+            this.clb_Mannequin.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Mannequin.Name = ("clb_Mannequin");
+            this.clb_Mannequin.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Mannequin.TabIndex = (13);
             // 
             // tp_PushPlaced
             // 
             this.tp_PushPlaced.Controls.Add(this.clb_PushPlaced);
-            this.tp_PushPlaced.Location = new System.Drawing.Point(4, 29);
-            this.tp_PushPlaced.Name = "tp_PushPlaced";
-            this.tp_PushPlaced.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_PushPlaced.Size = new System.Drawing.Size(337, 397);
-            this.tp_PushPlaced.TabIndex = 14;
-            this.tp_PushPlaced.Text = "Push & Placed";
-            this.tp_PushPlaced.UseVisualStyleBackColor = true;
+            this.tp_PushPlaced.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_PushPlaced.Name = ("tp_PushPlaced");
+            this.tp_PushPlaced.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_PushPlaced.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_PushPlaced.TabIndex = (14);
+            this.tp_PushPlaced.Text = ("Push & Placed");
+            this.tp_PushPlaced.UseVisualStyleBackColor = (true);
             // 
             // clb_PushPlaced
             // 
-            this.clb_PushPlaced.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_PushPlaced.FormattingEnabled = true;
-            this.clb_PushPlaced.Items.AddRange(new object[] {
-            "\"CarTire\"",
-            "\"Combo_BucketDrill\"",
-            "\"Combo_RemoteControlBucketDrill1\"",
-            "\"Combo_RemoteControlBucketDrill2\"",
-            "\"Combo_RemoteControlBucketDrill3\"",
-            "\"Combo_RemoteControlBucketDrill4\"",
-            "\"Dolly\"",
-            "\"DrinkCart\"",
-            "\"Drum\"",
-            "\"ElectricThunder\"",
-            "\"ElectrocutionChair\"",
-            "\"Flare\"",
-            "\"FountainLizard\"",
-            "\"FunnyPainting\"",
-            "\"GiantSpaceshipToy\"",
-            "\"GiantStuffedBull\"",
-            "\"GiantStuffedDonkey\"",
-            "\"GiantStuffedElephant\"",
-            "\"GiantStuffedRabbit\"",
-            "\"HeliBlade\"",
-            "\"KCMooseHead\"",
-            "\"Lawnmower\"",
-            "\"MascotMask\"",
-            "\"MoltenCannon\"",
-            "\"MooseHead\"",
-            "\"Painting\"",
-            "\"Painting2\"",
-            "\"Painting3\"",
-            "\"PeaceArt\"",
-            "\"stickin_painting\"",
-            "\"StickIt_PonyOnStick\"",
-            "\"stickit_ServbotMask\"",
-            "\"SullivanFlare_PlayerVersion\"",
-            "\"TeddyBearSentryGun\"",
-            "\"UtilityCart\"",
-            "\"WheelBarrow\"",
-            "\"WheelChair\"",
-            "\"ZapShine\"",
-            "\"ZombieMask\""});
-            this.clb_PushPlaced.Location = new System.Drawing.Point(6, 6);
-            this.clb_PushPlaced.Name = "clb_PushPlaced";
-            this.clb_PushPlaced.Size = new System.Drawing.Size(325, 396);
-            this.clb_PushPlaced.TabIndex = 14;
+            this.clb_PushPlaced.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_PushPlaced.FormattingEnabled = (true);
+            this.clb_PushPlaced.Items.AddRange(new global::System.Object[] { "\"CarTire\"", "\"Combo_BucketDrill\"", "\"Combo_RemoteControlBucketDrill1\"", "\"Combo_RemoteControlBucketDrill2\"", "\"Combo_RemoteControlBucketDrill3\"", "\"Combo_RemoteControlBucketDrill4\"", "\"Dolly\"", "\"DrinkCart\"", "\"Drum\"", "\"ElectricThunder\"", "\"ElectrocutionChair\"", "\"Flare\"", "\"FountainLizard\"", "\"FunnyPainting\"", "\"GiantSpaceshipToy\"", "\"GiantStuffedBull\"", "\"GiantStuffedDonkey\"", "\"GiantStuffedElephant\"", "\"GiantStuffedRabbit\"", "\"HeliBlade\"", "\"KCMooseHead\"", "\"Lawnmower\"", "\"MascotMask\"", "\"MoltenCannon\"", "\"MooseHead\"", "\"Painting\"", "\"Painting2\"", "\"Painting3\"", "\"PeaceArt\"", "\"stickin_painting\"", "\"StickIt_PonyOnStick\"", "\"stickit_ServbotMask\"", "\"SullivanFlare_PlayerVersion\"", "\"TeddyBearSentryGun\"", "\"UtilityCart\"", "\"WheelBarrow\"", "\"WheelChair\"", "\"ZapShine\"", "\"ZombieMask\"" });
+            this.clb_PushPlaced.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_PushPlaced.Name = ("clb_PushPlaced");
+            this.clb_PushPlaced.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_PushPlaced.TabIndex = (14);
             // 
             // tp_Special
             // 
             this.tp_Special.Controls.Add(this.clb_Special);
-            this.tp_Special.Location = new System.Drawing.Point(4, 29);
-            this.tp_Special.Name = "tp_Special";
-            this.tp_Special.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Special.Size = new System.Drawing.Size(337, 397);
-            this.tp_Special.TabIndex = 15;
-            this.tp_Special.Text = "Special";
-            this.tp_Special.UseVisualStyleBackColor = true;
+            this.tp_Special.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Special.Name = ("tp_Special");
+            this.tp_Special.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Special.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Special.TabIndex = (15);
+            this.tp_Special.Text = ("Special");
+            this.tp_Special.UseVisualStyleBackColor = (true);
             // 
             // clb_Special
             // 
-            this.clb_Special.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Special.FormattingEnabled = true;
-            this.clb_Special.Items.AddRange(new object[] {
-            "\"AluminumTennisRacket\"",
-            "\"AppleMoney\"",
-            "\"FiveHundredDollars\"",
-            "\"FiveThousandDollars\"",
-            "\"GamblingDollars\"",
-            "\"GiantPinkChainsaw\"",
-            "\"HundredThousandDollars\"",
-            "\"OneHundredDollars\"",
-            "\"OneThousandDollars\"",
-            "\"ProtomanBlasterAndShield\"",
-            "\"ProtomanShield\"",
-            "\"TenThousandDollars\"",
-            "\"TwoThousandDollars\"",
-            "\"Zombrex\""});
-            this.clb_Special.Location = new System.Drawing.Point(6, 6);
-            this.clb_Special.Name = "clb_Special";
-            this.clb_Special.Size = new System.Drawing.Size(325, 396);
-            this.clb_Special.TabIndex = 15;
+            this.clb_Special.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Special.FormattingEnabled = (true);
+            this.clb_Special.Items.AddRange(new global::System.Object[] { "\"AluminumTennisRacket\"", "\"AppleMoney\"", "\"FiveHundredDollars\"", "\"FiveThousandDollars\"", "\"GamblingDollars\"", "\"GiantPinkChainsaw\"", "\"HundredThousandDollars\"", "\"OneHundredDollars\"", "\"OneThousandDollars\"", "\"ProtomanBlasterAndShield\"", "\"ProtomanShield\"", "\"TenThousandDollars\"", "\"TwoThousandDollars\"", "\"Zombrex\"" });
+            this.clb_Special.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Special.Name = ("clb_Special");
+            this.clb_Special.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Special.TabIndex = (15);
             // 
             // tp_Vehicles
             // 
             this.tp_Vehicles.Controls.Add(this.clb_Vehicles);
-            this.tp_Vehicles.Location = new System.Drawing.Point(4, 29);
-            this.tp_Vehicles.Name = "tp_Vehicles";
-            this.tp_Vehicles.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Vehicles.Size = new System.Drawing.Size(337, 397);
-            this.tp_Vehicles.TabIndex = 16;
-            this.tp_Vehicles.Text = "Vehicles";
-            this.tp_Vehicles.UseVisualStyleBackColor = true;
+            this.tp_Vehicles.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Vehicles.Name = ("tp_Vehicles");
+            this.tp_Vehicles.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Vehicles.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Vehicles.TabIndex = (16);
+            this.tp_Vehicles.Text = ("Vehicles");
+            this.tp_Vehicles.UseVisualStyleBackColor = (true);
             // 
             // clb_Vehicles
             // 
-            this.clb_Vehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_Vehicles.FormattingEnabled = true;
-            this.clb_Vehicles.Items.AddRange(new object[] {
-            "\"BazookaBike\"",
-            "\"ChainsawBike\"",
-            "\"ChopperBikeSingle\"",
-            "\"ClownCar\"",
-            "\"GirlsBike\"",
-            "\"HamsterBall_Blue\"",
-            "\"HamsterBall_Green\"",
-            "\"HamsterBall_Red\"",
-            "\"HamsterBall_Yellow\"",
-            "\"HamsterBall_Yellow_Gyroscope\"",
-            "\"Hummer\"",
-            "\"IndustrialCart\"",
-            "\"IndustrialClownCar\"",
-            "\"M249Bike\"",
-            "\"MercenaryBike\"",
-            "\"RabbitBike\"",
-            "\"SecurityCart\"",
-            "\"Skateboard\"",
-            "\"SportsCar\"",
-            "\"SuperBike\"",
-            "\"TIRBike\"",
-            "\"TIRBikeGreenUF\"",
-            "\"UltimateFanBike\"",
-            "\"WheelchairBike\"",
-            "\"WheelchairTank\""});
-            this.clb_Vehicles.Location = new System.Drawing.Point(6, 6);
-            this.clb_Vehicles.Name = "clb_Vehicles";
-            this.clb_Vehicles.Size = new System.Drawing.Size(325, 396);
-            this.clb_Vehicles.TabIndex = 16;
+            this.clb_Vehicles.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_Vehicles.FormattingEnabled = (true);
+            this.clb_Vehicles.Items.AddRange(new global::System.Object[] { "\"BazookaBike\"", "\"ChainsawBike\"", "\"ChopperBikeSingle\"", "\"ClownCar\"", "\"GirlsBike\"", "\"HamsterBall_Blue\"", "\"HamsterBall_Green\"", "\"HamsterBall_Red\"", "\"HamsterBall_Yellow\"", "\"HamsterBall_Yellow_Gyroscope\"", "\"Hummer\"", "\"IndustrialCart\"", "\"IndustrialClownCar\"", "\"M249Bike\"", "\"MercenaryBike\"", "\"RabbitBike\"", "\"SecurityCart\"", "\"Skateboard\"", "\"SportsCar\"", "\"SuperBike\"", "\"TIRBike\"", "\"TIRBikeGreenUF\"", "\"UltimateFanBike\"", "\"WheelchairBike\"", "\"WheelchairTank\"" });
+            this.clb_Vehicles.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_Vehicles.Name = ("clb_Vehicles");
+            this.clb_Vehicles.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_Vehicles.TabIndex = (16);
             // 
             // tp_Search
             // 
             this.tp_Search.Controls.Add(this.clb_SearchResults);
-            this.tp_Search.Location = new System.Drawing.Point(4, 29);
-            this.tp_Search.Name = "tp_Search";
-            this.tp_Search.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Search.Size = new System.Drawing.Size(337, 397);
-            this.tp_Search.TabIndex = 18;
-            this.tp_Search.Text = "Search";
-            this.tp_Search.UseVisualStyleBackColor = true;
+            this.tp_Search.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_Search.Name = ("tp_Search");
+            this.tp_Search.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_Search.Size = (new global::System.Drawing.Size(337, 402));
+            this.tp_Search.TabIndex = (18);
+            this.tp_Search.Text = ("Search");
+            this.tp_Search.UseVisualStyleBackColor = (true);
             // 
             // clb_SearchResults
             // 
-            this.clb_SearchResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clb_SearchResults.CheckOnClick = true;
-            this.clb_SearchResults.FormattingEnabled = true;
-            this.clb_SearchResults.Items.AddRange(new object[] {
-            "\"AlienHead\"",
-            "\"Amp\"",
-            "\"BaseballBat\"",
-            "\"Battery\"",
-            "\"BigDrillMotor\"",
-            "\"BingoBall\"",
-            "\"BobsToy\"",
-            "\"BowieKnife\"",
-            "\"BoxingGloves\"",
-            "\"Bucket\"",
-            "\"BullSkull\"",
-            "\"CementSaw\"",
-            "\"Chainsaw\"",
-            "\"ComputerCase\"",
-            "\"ConstructionHat\"",
-            "\"Defibrillator\"",
-            "\"ElectricGuitar\"",
-            "\"ElectricProd\"",
-            "\"EscapePod\"",
-            "\"FireAxe\"",
-            "\"FiremanFireAxe\"",
-            "\"Flashlight\"",
-            "\"GiantStuffedBear\"",
-            "\"GoblinMask\"",
-            "\"GrassTrimmer\"",
-            "\"HunkOfMeat\"",
-            "\"LawnDart\"",
-            "\"LeadPipe\"",
-            "\"LeafRake\"",
-            "\"LizardMask\"",
-            "\"Machete\"",
-            "\"MedicalTray\"",
-            "\"MMAGloves\"",
-            "\"MotorOil\"",
-            "\"Newspaper\"",
-            "\"Paddle\"",
-            "\"PaintCan\"",
-            "\"Parasol\"",
-            "\"PitchFork\"",
-            "\"Plates\"",
-            "\"PonyOnStick\"",
-            "\"PowerDrill\"",
-            "\"PsychoMachete\"",
-            "\"PushBroom\"",
-            "\"Pylon\"",
-            "\"RCHelicopter\"",
-            "\"SawBlade\"",
-            "\"ServbotMask\"",
-            "\"Sickle\"",
-            "\"SledgeHammer\"",
-            "\"Spear\"",
-            "\"TennisBallLauncher\"",
-            "\"Tikitorch\"",
-            "\"TwoByFour\"",
-            "\"VacuumCleaner\"",
-            "\"WoodSwordAndShield\"",
-            "\"Apple\"",
-            "\"Bacon\"",
-            "\"BakedPotato\"",
-            "\"BBQChicken\"",
-            "\"BBQRibs\"",
-            "\"Beans\"",
-            "\"Beer\"",
-            "\"Brownie\"",
-            "\"Burrito\"",
-            "\"Cake\"",
-            "\"Chili\"",
-            "\"Coffee\"",
-            "\"CoffeeCreamer\"",
-            "\"Cookies\"",
-            "\"CottonCandy\"",
-            "\"Donuts\"",
-            "\"DrinkCocktail\"",
-            "\"Fish\"",
-            "\"Fries\"",
-            "\"Hamburger\"",
-            "\"HotDog\"",
-            "\"IceCream\"",
-            "\"Jellybeans\"",
-            "\"LargeSoda\"",
-            "\"lobster\"",
-            "\"Melon\"",
-            "\"Milk\"",
-            "\"OnionRing\"",
-            "\"OrangeJuice\"",
-            "\"Pasta\"",
-            "\"Pie\"",
-            "\"Pineapple\"",
-            "\"Pizza\"",
-            "\"Popcorn\"",
-            "\"Pretzel\"",
-            "\"Snack\"",
-            "\"Steak\"",
-            "\"Sushi\"",
-            "\"Taco\"",
-            "\"Vodka\"",
-            "\"Whiskey\"",
-            "\"Wine\"",
-            "\"AdBoard\"",
-            "\"Barrel_Large\"",
-            "\"Bench_2\"",
-            "\"Bench\"",
-            "\"BikeEngine\"",
-            "\"Bust_Centurion\"",
-            "\"CardboardBox\"",
-            "\"CardboardCutout\"",
-            "\"CashRegister\"",
-            "\"Chair_1\"",
-            "\"Chair_10\"",
-            "\"Chair_2\"",
-            "\"Chair_3\"",
-            "\"Chair_4\"",
-            "\"Chair_5\"",
-            "\"Chair_6\"",
-            "\"Chair_7\"",
-            "\"Chair_8\"",
-            "\"Chair_9\"",
-            "\"Chair_Casino\"",
-            "\"ChuckStandee\"",
-            "\"CookingPot\"",
-            "\"FrankStandee\"",
-            "\"GarbageBag\"",
-            "\"GarbageCan_1\"",
-            "\"GarbageCan_2\"",
-            "\"GarbageCan_3\"",
-            "\"GarbageCan_4\"",
-            "\"GasBarrel\"",
-            "\"Generator\"",
-            "\"GiantDice\"",
-            "\"GumballMachine\"",
-            "\"HeadStatue\"",
-            "\"Keg\"",
-            "\"LargeShoppingBoxes\"",
-            "\"LcdMonitor\"",
-            "\"LibertyTorch\"",
-            "\"Mailbox\"",
-            "\"MedicineBall\"",
-            "\"MetalBarricade\"",
-            "\"MilitaryCrate\"",
-            "\"NewspaperBox\"",
-            "\"NoveltyBeerMug\"",
-            "\"NoveltyBottle\"",
-            "\"NoveltyCellPhone\"",
-            "\"NoveltyPerfume\"",
-            "\"NoveltyPokerChip\"",
-            "\"Pallet\"",
-            "\"Particle_Board\"",
-            "\"PatioTable\"",
-            "\"PlasticBin\"",
-            "\"PottedPlant_1\"",
-            "\"PottedPlant_2\"",
-            "\"PottedPlant_3\"",
-            "\"PottedPlant_4\"",
-            "\"PottedPlant_4\"",
-            "\"PottedPlant_5\"",
-            "\"PottedPlant_6\"",
-            "\"PottedPlant_7\"",
-            "\"PottedPlant_8\"",
-            "\"RotatingDisplay\"",
-            "\"RouletteWheel\"",
-            "\"SandwichBoard\"",
-            "\"SC37_ShoppingBoxes\"",
-            "\"SmallSuitcase\"",
-            "\"SpaceBench\"",
-            "\"SpeakerWeapon\"",
-            "\"SpoolWire\"",
-            "\"SquareSign\"",
-            "\"SteelShelving\"",
-            "\"Suitcase\"",
-            "\"Swordfish\"",
-            "\"TikiMask\"",
-            "\"TIODPlywood1\"",
-            "\"TIODPlywood2\"",
-            "\"TreasureChest\"",
-            "\"Vase2\"",
-            "\"Vase3\"",
-            "\"VelvetPole\"",
-            "\"WaterCooler\"",
-            "\"AcousticGuitar\"",
-            "\"AlienProbe\"",
-            "\"Basketball\"",
-            "\"BassGuitar\"",
-            "\"BassGuitar\"",
-            "\"battleaxe\"",
-            "\"BBQChef_MeatCleaver\"",
-            "\"BeachBall\"",
-            "\"BikeForks\"",
-            "\"BowlingBall\"",
-            "\"BowlingPin\"",
-            "\"Brick\"",
-            "\"Broadsword\"",
-            "\"BroomHandle\"",
-            "\"ChefKnife\"",
-            "\"CinderBlock\"",
-            "\"Coffeepot\"",
-            "\"ComedyTrophy\"",
-            "\"CookingOil\"",
-            "\"CroupierStick\"",
-            "\"Crowbar\"",
-            "\"DonkeyLamp\"",
-            "\"Dumbbell\"",
-            "\"FoamHand\"",
-            "\"Football\"",
-            "\"GiftShopLamp\"",
-            "\"GreenHunkOfMeat\"",
-            "\"HandBag\"",
-            "\"HandleBar\"",
-            "\"Hanger\"",
-            "\"HockeyStick\"",
-            "\"HotelLamp\"",
-            "\"KatanaSword\"",
-            "\"Keyboard\"",
-            "\"Lamp\"",
-            "\"Lance\"",
-            "\"LongStick\"",
-            "\"MagicianSword\"",
-            "\"MeatCleaver\"",
-            "\"Microscope\"",
-            "\"MicStand\"",
-            "\"MoneyCase_Americana\"",
-            "\"MoneyCase_Atlantica\"",
-            "\"MoneyCase_Helicopter\"",
-            "\"MoneyCase_Protester\"",
-            "\"MoneyCase_Scoops\"",
-            "\"MoneyCase_SlotRanch\"",
-            "\"MoneyCase_TK\"",
-            "\"MoneyCase_Yucatan\"",
-            "\"MoneyCase\"",
-            "\"NightStick\"",
-            "\"NinjaBroadSword\"",
-            "\"NinjaKatanaSword\"",
-            "\"NinjaSword\"",
-            "\"Pan_heat\"",
-            "\"Pan\"",
-            "\"PoolBall\"",
-            "\"PoolCue\"",
-            "\"ProtesterSign\"",
-            "\"PsychoMeatCleaver\"",
-            "\"PsychoMiningPick\"",
-            "\"Scissors\"",
-            "\"Shampoo\"",
-            "\"Shovel\"",
-            "\"ShowerHead\"",
-            "\"SoccerBall\"",
-            "\"SpaceHammer\"",
-            "\"SpotLight\"",
-            "\"StepLadder\"",
-            "\"TIR_chair\"",
-            "\"TIR_Sign\"",
-            "\"TIRBaseballBat\"",
-            "\"TIRPan\"",
-            "\"TIRStepLadder\"",
-            "\"TIRTwoByFour\"",
-            "\"Tomahawk\"",
-            "\"ToyRocketShip\"",
-            "\"VelvetRope\"",
-            "\"WackyHammer\"",
-            "\"WaterBottle\"",
-            "\"WheelPawn\"",
-            "\"WrenchLarge\"",
-            "\"HangmanGun\"",
-            "\"Intestine\"",
-            "\"MascotMurderballLauncher\" ",
-            "\"MilitiaSniperRifle\"",
-            "\"MinigameMooseHeadBlue\"",
-            "\"MinigameMooseHeadGreen\"",
-            "\"MinigameMooseHeadRed\"",
-            "\"MinigameMooseHeadYellow\"",
-            "\"Mole\"",
-            "\"RB_couch\"",
-            "\"SpaceWorm\"",
-            "\"Theremin\" ",
-            "\"Vase\" ",
-            "\"Wormhole\"",
-            "\"AlienBoots\"",
-            "\"AlienMask\"",
-            "\"AlienOutfitDispenser\"",
-            "\"AlienSuit\"",
-            "\"AlternateOutfit\"",
-            "\"AmericanShowmanHelmetDispenser\"",
-            "\"AmericanShowmanOutfitDispenser\"",
-            "\"ArmyJacketPantsDispenser\"",
-            "\"ArthurOutfitDispenser\"",
-            "\"BaldNoHairDispenser\"",
-            "\"BananaHammockDispenser\"",
-            "\"BareFeetChuckDispenser\"",
-            "\"BaseballCapSportDispenser\"",
-            "\"BaseballCapTIRDispenser\"",
-            "\"BaseballUniformDispenser\"",
-            "\"BasketballHighTopsDispenser\"",
-            "\"BasketballUniformDispenser\"",
-            "\"BlackCanvasSneakersDispenser\"",
-            "\"BlackCowboyBootsDispenser\"",
-            "\"BlackCowboyHatDispenser\"",
-            "\"BlackCowboyOutfitDispenser\"",
-            "\"BlackDressShoesDispenser\"",
-            "\"BlackMilitaryBootsDispenser\"",
-            "\"BlackRimmedGlassesDispenser\"",
-            "\"BlackTuxedoBowTieDispenser\"",
-            "\"BlueOysterBikerOutfitDispenser\"",
-            "\"BunnySlippersDispenser\"",
-            "\"CardiganSlacksDispenser\"",
-            "\"ChuckColouredHairBlueDispenser\"",
-            "\"ChuckColouredHairGreyDispenser\"",
-            "\"ChuckColouredHairPinkDispenser\"",
-            "\"ChuckyOutfitDispenser\"",
-            "\"CleatsDispenser\"",
-            "\"CoconutBraHolaDressDispenser\"",
-            "\"ComedianOutfitDispenser\"",
-            "\"DarkAviatorGlassesDispenser\"",
-            "\"DealerOutfitDispenser\"",
-            "\"DealerVisorDispenser\"",
-            "\"FedoraDispenser\"",
-            "\"FishNetshirtwhitepantsDispenser\"",
-            "\"FlipFlopsDispenser\"",
-            "\"FlowerHeadPieceDispenser\"",
-            "\"FootballHelmetDispenser\"",
-            "\"FootballUniformDispenser\"",
-            "\"FortuneTshirt1BlueJeansDispenser\"",
-            "\"FortuneTshirt2BlackJeansDispenser\"",
-            "\"FunnyMaskBlankaDispenser\"",
-            "\"FunnyMaskLizardDispenser\"",
-            "\"FunnyMaskServbotDispenser\"",
-            "\"FunnyMaskZombieDispenser\"",
-            "\"HawaiianShirt1shortsDispenser\"",
-            "\"HawaiianShirt2shortsDispenser\"",
-            "\"HawaiianShirt3PantsDispenser\"",
-            "\"HawaiianShirt4PantsDispenser\"",
-            "\"HipHopOutfitDispenser\"",
-            "\"HookerBootsDispenser\"",
-            "\"HygieneMaskDispenser\"",
-            "\"KidsSuperHeroBootsDispenser\"",
-            "\"KidsSuperHeroCostumeDispenser\"",
-            "\"KidsSuperHeroEyeMaskDispenser\"",
-            "\"KnottedTopCutoffsDispenser\"",
-            "\"LadiesHatDispenser\"",
-            "\"LargeRhinestoneGlassesDispenser\"",
-            "\"midlengthtshirtjeansdispenser\"",
-            "\"MohawkHairDispenser\"",
-            "\"NakedOutfitDispenser\"",
-            "\"NinjaChestDispenser\"",
-            "\"NinjaFaceWearDispenser\"",
-            "\"NinjaFeetDispenser\"",
-            "\"NinjaHeadwearDispenser\"",
-            "\"NinjaOutfit\"",
-            "\"NoveltyGlassesDispenser\"",
-            "\"OnePiecePajamaDispenser\"",
-            "\"plaidsuitbrownshirttiedispenser\"",
-            "\"PoloShirtBlueJeansDispenser\"",
-            "\"ProtomanBody\"",
-            "\"ProtomanBoots\"",
-            "\"ProtomanDispenser\"",
-            "\"ProtomanHelmet\"",
-            "\"PsychopathChestDispenser\"",
-            "\"PsychopathFacewearDispenser\"",
-            "\"PsychopathFeetDispenser\"",
-            "\"PsychopathHeadwearDispenser\"",
-            "\"PsychopathOutfit\"",
-            "\"RussianHatDispenser\"",
-            "\"SandalsWhiteSocksDispenser\"",
-            "\"SexySpaceGirlBody\"",
-            "\"SexySpaceGirlBoots\"",
-            "\"SexySpaceGirlDispenser\"",
-            "\"SexySpaceGirlHair\"",
-            "\"ShowGirlHeadPieceDispenser\"",
-            "\"SkaterOutfitDispenser\"",
-            "\"SoldierChestDispenser\"",
-            "\"SoldierFacewearDispenser\"",
-            "\"SoldierFeetDispenser\"",
-            "\"SoldierHeadwearDispenser\"",
-            "\"SoldierOutfit\"",
-            "\"SpaceSuitBody\"",
-            "\"SpaceSuitBoots\"",
-            "\"SpaceSuitHelmet\"",
-            "\"SportFanChestDispenser\"",
-            "\"SportFanFacewearDispenser\"",
-            "\"SportFanFeetDispenser\"",
-            "\"SportFanHeadwearDispenser\"",
-            "\"SportFanOutfit\"",
-            "\"SportGlassesDispenser\"",
-            "\"SportyTrackSuitDispenser\"",
-            "\"SummerDressDispenser\"",
-            "\"SurfWetsuitDispenser\"",
-            "\"SwatHelmetDispenser\"",
-            "\"SWATOutfitDispenser\"",
-            "\"TanJacketSlacksTurtleneckDispenser\"",
-            "\"TatteredClothesDispenser\"",
-            "\"TennisHeadBandDispenser\"",
-            "\"TennisOutfitDispenser\"",
-            "\"TIR_ChampionDispenser\"",
-            "\"TirFanOutfitDispenser\"",
-            "\"TIRWrestlingOutfit\"",
-            "\"TouristBoatHatDispenser\"",
-            "\"TubeTopMiniSkirtDispenser\"",
-            "\"TuqueDispenser\"",
-            "\"UranusZoneShirtDispenser\"",
-            "\"WhiteCowboyBootsDispenser\"",
-            "\"WhiteCowboyHatDispenser\"",
-            "\"WhiteCowboyOutfitDispenser\"",
-            "\"WhiteLeisureSuitDispenser\"",
-            "\"WhiteLowheelsDispenser\"",
-            "\"WhiteTennisShoesSocksDispenser\"",
-            "\"WildFrontierHatDispenser\"",
-            "\"WilliametteMallSecurityDispenser\"",
-            "\"YellowSneakersDispenser\"",
-            "\"YellowTintedGlassesDispenser\"",
-            "\"YellowTrackSuitDispenser\"",
-            "\"AirHorn\"",
-            "\"BagofMarbles\"",
-            "\"Barrett50Caliber\"",
-            "\"BaseballBat_Metal\"",
-            "\"CannedDrinks\"",
-            "\"CasinoChips\"",
-            "\"CementSaw_combo\"",
-            "\"FireCrackers\"",
-            "\"FireSpitter\"",
-            "\"FlameThrower\"",
-            "\"FlamingAces\"",
-            "\"gemblower\"",
-            "\"GolfClub\"",
-            "\"HandGun\"",
-            "\"Ketchup\"",
-            "\"LaserEyes\"",
-            "\"LightningGun\"",
-            "\"Mayonnaise\"",
-            "\"MinigameSniper\"",
-            "\"MusicDiscs\"",
-            "\"NineIron\"",
-            "\"PitchForkShotgun\"",
-            "\"PlateLauncher\"",
-            "\"PlayingCards\"",
-            "\"ProtomanBlaster\"",
-            "\"RayGun\"",
-            "\"SawLauncher\"",
-            "\"SBFG\"",
-            "\"SGBallLauncherBlue\"",
-            "\"SGBallLauncherGreen\"",
-            "\"SGBallLauncherRed\"",
-            "\"SGBallLauncherYellow\"",
-            "\"SixShooter\"",
-            "\"SpaceballBat\"",
-            "\"SuperMassager\"",
-            "\"VinylRecords\"",
-            "\"WhippedCream\"",
-            "\"ZombieThrower\"",
-            "\"BeerHat\"",
-            "\"EnergizerJuice\"",
-            "\"NectarJuice\"",
-            "\"PainKillerJuice\"",
-            "\"QuickStepJuice\"",
-            "\"RandomizerJuice\"",
-            "\"RepulseJuice\"",
-            "\"SpaceSteak\"",
-            "\"SpitfireJuice\"",
-            "\"SpoiledBacon\"",
-            "\"SpoiledBBQChicken\"",
-            "\"SpoiledBBQRibs\"",
-            "\"SpoiledFish\"",
-            "\"SpoiledHamburger\"",
-            "\"SpoiledHotDog\"",
-            "\"SpoiledLobster\"",
-            "\"SpoiledSteak\"",
-            "\"SpoiledSushi\"",
-            "\"UntouchableJuice\"",
-            "\"ZombaitJuice\"",
-            "\"ATMHacker\"",
-            "\"Auger\"",
-            "\"BurningSkull\"",
-            "\"Combo_Paddlesaw\"",
-            "\"defiler\"",
-            "\"Driller\"",
-            "\"ElectricRake\"",
-            "\"FlamingGloves\"",
-            "\"FlamingSwordAndShield\"",
-            "\"HandiChipper\"",
-            "\"KnifeGloves\"",
-            "\"LaserLightSword\"",
-            "\"mmagloves_spiked\"",
-            "\"ParaBlower\"",
-            "\"poleweapon\"",
-            "\"PortableLawnMower\"",
-            "\"PowerExsanguinator\"",
-            "\"PowerGuitar\"",
-            "\"Reaper\"",
-            "\"Shocker\"",
-            "\"SpikedBat\"",
-            "\"SpikedSwordAndShield\"",
-            "\"SuperSlicer\"",
-            "\"TeslaBall\"",
-            "\"Thor\"",
-            "\"WeedTendonizer\"",
-            "\"WingManJar\"",
-            "\"BFG\"",
-            "\"BowandArrow\"",
-            "\"BoxOfNails\"",
-            "\"EnhancedM16\"",
-            "\"EnhancedM249\"",
-            "\"EnhancedMAR\"",
-            "\"FireExtinguisher\"",
-            "\"Gems\"",
-            "\"LeafBlower\"",
-            "\"LeafBlower\"",
-            "\"M16\"",
-            "\"M249\"",
-            "\"MercAssaultRifle\"",
-            "\"Shotgun\"",
-            "\"SpitballGun\"",
-            "\"Spraypaint\"",
-            "\"TennisRacket\"",
-            "\"WaterGun\"",
-            "\"DLC_BBQChef_Chest\"",
-            "\"DLC_BBQChef_Face\"",
-            "\"DLC_BBQChef_Feet\"",
-            "\"DLC_BBQChef_Head\"",
-            "\"DLC_CosPlay_Chest\"",
-            "\"DLC_CosPlay_Face\"",
-            "\"DLC_CosPlay_Feet\"",
-            "\"DLC_CosPlay_Head\"",
-            "\"DLC_Cyborg_Chest\"",
-            "\"DLC_Cyborg_Face\"",
-            "\"DLC_Cyborg_Feet\"",
-            "\"DLC_Cyborg_Head\"",
-            "\"DLC_Fireman_Chest\"",
-            "\"DLC_Fireman_Feet\"",
-            "\"DLC_Fireman_Head\"",
-            "\"DLC_Fireman_Face\"",
-            "\"AcetyleneTank\"",
-            "\"BouncingBeauty\"",
-            "\"BowandArrow_explosive\"",
-            "\"BoykinGrenade\"",
-            "\"Combo_PropaneTankNails\"",
-            "\"CryoPod\"",
-            "\"Dynameat\"",
-            "\"Dynamite\"",
-            "\"FireworkRockets\"",
-            "\"FireworksBazooka_Bomber\"",
-            "\"FireworksBazooka_reward\"",
-            "\"FireworksBazooka\"",
-            "\"FlashGrenade\"",
-            "\"FreezerBomb\"",
-            "\"GasCanister\"",
-            "\"GasolineCanister\"",
-            "\"Grenade\"",
-            "\"HailMary\"",
-            "\"LaserGun\"",
-            "\"LiquidNitrogen\"",
-            "\"MolotovBottle\"",
-            "\"Pegasus\"",
-            "\"PropaneTank\"",
-            "\"QueenBeeJar\"",
-            "\"RemoteMine\"",
-            "\"SnowballCannon\"",
-            "\"StickyBomb\"",
-            "\"Key_caseofqueens\"",
-            "\"Key_photo\"",
-            "\"Key_champagne\"",
-            "\"Key_giftbasket\"",
-            "\"Key_labsuit\"",
-            "\"Key_bluetooth\"",
-            "\"Key_usbdrive\"",
-            "\"Key_undergroundkey\"",
-            "\"Key_sportscar\"",
-            "\"Key_commando\"",
-            "\"Key_chopper\"",
-            "\"Key_MasterKey\"",
-            "\"Key_train\"",
-            "\"Key_superbike\"",
-            "\"Key_gauze\"",
-            "\"Key_zombrexbasket\"",
-            "\"Key_painkillers\"",
-            "\"Key_sutures\"",
-            "\"Key_silkthong\"",
-            "\"key_lockbox18\"",
-            "\"key_lockbox1\"",
-            "\"key_lockbox12\"",
-            "\"key_lockbox13\"",
-            "\"key_lockbox14\"",
-            "\"key_lockbox15\"",
-            "\"key_lockbox16\"",
-            "\"key_lockbox17\"",
-            "\"key_lockbox19\"",
-            "\"key_lockbox20\"",
-            "\"key_lockbox2\"",
-            "\"key_lockbox3\"",
-            "\"key_lockbox4\"",
-            "\"key_lockbox5\"",
-            "\"key_lockbox6\"",
-            "\"key_lockbox7\"",
-            "\"key_lockbox8\"",
-            "\"key_lockbox9\"",
-            "\"key_lockbox10\"",
-            "\"key_lockbox11\"",
-            "\"Camera_Magazine_1\"",
-            "\"Camera_Magazine_2\"",
-            "\"Camera_Magazine_3\"",
-            "\"Magazine_Alcohol_Hangover_Cures\"",
-            "\"Magazine_Economy_Lords_Of_Cash\"",
-            "\"Magazine_Economy_Thrifty_Trader\"",
-            "\"Magazine_Food_Healthy_Choices\"",
-            "\"Magazine_Food_The_World_Chef\"",
-            "\"Magazine_Four_Wheel_Fun\"",
-            "\"Magazine_Gambling_Fortune_City_Riches\"",
-            "\"Magazine_Gambling_Luck_You\"",
-            "\"Magazine_Gambling_Wealth\"",
-            "\"Magazine_Item_Edged_Lone_Blade\"",
-            "\"Magazine_Item_Furniture_Designer_For_Homes\"",
-            "\"Magazine_Item_Sports_Total_Sporting_Weekly\"",
-            "\"Magazine_Item_Toy_Toyapalooza\"",
-            "\"Magazine_Juice_Top_Ten_Drink_Mixes\"",
-            "\"Magazine_Leadership_For_Losers\"",
-            "\"Magazine_PP_Female_Survivor_Playboy\"",
-            "\"Magazine_PP_Psycho_Dangerous_People_Weekly\"",
-            "\"Magazine_PP_Survivor_Angel_Prince\"",
-            "\"Magazine_PP_Weapon_Armed_And_Awesome\"",
-            "\"Magazine_PP_Weapon_Basic_Training_Monthly\"",
-            "\"Magazine_PP_Weapon_Fortune_Fighter\"",
-            "\"Magazine_PP_Zombie_Spectral_Talkers\"",
-            "\"Magazine_PP_Zombie_Undead_Solutions\"",
-            "\"Magazine_Shotokan_Karate_Made_Easy\"",
-            "\"Magazine_Sports_To_The_Extreme\"",
-            "\"Magazine_Stunt_Devils\"",
-            "\"Mgz_Item_Construction_Jackhammer_Weekly\"",
-            "\"Mgz_Item_Entertainment_Video_Game_Weekly\"",
-            "\"Mgz_Item_Entertainment_Video_Game_Weekly\"",
-            "\"Mannequin_Female\"",
-            "\"Mannequin_Male\"",
-            "\"MannequinFemaleHead\"",
-            "\"MannequinFemaleHeadTorso\"",
-            "\"MannequinFemaleLeftArm\"",
-            "\"MannequinFemaleLeftLeg\"",
-            "\"MannequinFemaleLLegLFoot\"",
-            "\"MannequinFemaleRightArm\"",
-            "\"MannequinFemaleRightLeg\"",
-            "\"MannequinFemaleWaistRLegRFoot\"",
-            "\"MannequinMaleHead\"",
-            "\"MannequinMaleLeftArm\"",
-            "\"MannequinMaleLeftLeg\"",
-            "\"MannequinMaleRightArm\"",
-            "\"MannequinMaleRightLeg\"",
-            "\"MannequinMaleTorsoLLegRLeg\"",
-            "\"CarTire\"",
-            "\"Combo_BucketDrill\"",
-            "\"Combo_RemoteControlBucketDrill1\"",
-            "\"Combo_RemoteControlBucketDrill2\"",
-            "\"Combo_RemoteControlBucketDrill3\"",
-            "\"Combo_RemoteControlBucketDrill4\"",
-            "\"Dolly\"",
-            "\"DrinkCart\"",
-            "\"Drum\"",
-            "\"ElectricThunder\"",
-            "\"ElectrocutionChair\"",
-            "\"Flare\"",
-            "\"FountainLizard\"",
-            "\"FunnyPainting\"",
-            "\"GiantSpaceshipToy\"",
-            "\"GiantStuffedBull\"",
-            "\"GiantStuffedDonkey\"",
-            "\"GiantStuffedElephant\"",
-            "\"GiantStuffedRabbit\"",
-            "\"HeliBlade\"",
-            "\"KCMooseHead\"",
-            "\"Lawnmower\"",
-            "\"MascotMask\"",
-            "\"MoltenCannon\"",
-            "\"MooseHead\"",
-            "\"Painting\"",
-            "\"Painting2\"",
-            "\"Painting3\"",
-            "\"PeaceArt\"",
-            "\"stickin_painting\"",
-            "\"StickIt_PonyOnStick\"",
-            "\"stickit_ServbotMask\"",
-            "\"SullivanFlare_PlayerVersion\"",
-            "\"TeddyBearSentryGun\"",
-            "\"UtilityCart\"",
-            "\"WheelBarrow\"",
-            "\"WheelChair\"",
-            "\"ZapShine\"",
-            "\"ZombieMask\"",
-            "\"AluminumTennisRacket\"",
-            "\"AppleMoney\"",
-            "\"FiveHundredDollars\"",
-            "\"FiveThousandDollars\"",
-            "\"GamblingDollars\"",
-            "\"GiantPinkChainsaw\"",
-            "\"HundredThousandDollars\"",
-            "\"OneHundredDollars\"",
-            "\"OneThousandDollars\"",
-            "\"ProtomanBlasterAndShield\"",
-            "\"ProtomanShield\"",
-            "\"TenThousandDollars\"",
-            "\"TwoThousandDollars\"",
-            "\"Zombrex\"",
-            "\"Zombrex\"",
-            "\"BazookaBike\"",
-            "\"ChainsawBike\"",
-            "\"ChopperBikeSingle\"",
-            "\"ClownCar\"",
-            "\"GirlsBike\"",
-            "\"Hummer\"",
-            "\"IndustrialCart\"",
-            "\"IndustrialClownCar\"",
-            "\"M249Bike\"",
-            "\"MercenaryBike\"",
-            "\"RabbitBike\"",
-            "\"SecurityCart\"",
-            "\"Skateboard\"",
-            "\"SportsCar\"",
-            "\"SuperBike\"",
-            "\"TIRBike\"",
-            "\"TIRBikeGreenUF\"",
-            "\"UltimateFanBike\"",
-            "\"WheelchairBike\"",
-            "\"WheelchairTank\""});
-            this.clb_SearchResults.Location = new System.Drawing.Point(6, 6);
-            this.clb_SearchResults.Name = "clb_SearchResults";
-            this.clb_SearchResults.Size = new System.Drawing.Size(325, 396);
-            this.clb_SearchResults.TabIndex = 17;
+            this.clb_SearchResults.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_SearchResults.CheckOnClick = (true);
+            this.clb_SearchResults.FormattingEnabled = (true);
+            this.clb_SearchResults.Items.AddRange(new global::System.Object[] { "\"AlienHead\"", "\"Amp\"", "\"BaseballBat\"", "\"Battery\"", "\"BigDrillMotor\"", "\"BingoBall\"", "\"BobsToy\"", "\"BowieKnife\"", "\"BoxingGloves\"", "\"Bucket\"", "\"BullSkull\"", "\"CementSaw\"", "\"Chainsaw\"", "\"ComputerCase\"", "\"ConstructionHat\"", "\"Defibrillator\"", "\"ElectricGuitar\"", "\"ElectricProd\"", "\"EscapePod\"", "\"FireAxe\"", "\"FiremanFireAxe\"", "\"Flashlight\"", "\"GiantStuffedBear\"", "\"GoblinMask\"", "\"GrassTrimmer\"", "\"HunkOfMeat\"", "\"LawnDart\"", "\"LeadPipe\"", "\"LeafRake\"", "\"LizardMask\"", "\"Machete\"", "\"MedicalTray\"", "\"MMAGloves\"", "\"MotorOil\"", "\"Newspaper\"", "\"Paddle\"", "\"PaintCan\"", "\"Parasol\"", "\"PitchFork\"", "\"Plates\"", "\"PonyOnStick\"", "\"PowerDrill\"", "\"PsychoMachete\"", "\"PushBroom\"", "\"Pylon\"", "\"RCHelicopter\"", "\"SawBlade\"", "\"ServbotMask\"", "\"Sickle\"", "\"SledgeHammer\"", "\"Spear\"", "\"TennisBallLauncher\"", "\"Tikitorch\"", "\"TwoByFour\"", "\"VacuumCleaner\"", "\"WoodSwordAndShield\"", "\"Apple\"", "\"Bacon\"", "\"BakedPotato\"", "\"BBQChicken\"", "\"BBQRibs\"", "\"Beans\"", "\"Beer\"", "\"Brownie\"", "\"Burrito\"", "\"Cake\"", "\"Chili\"", "\"Coffee\"", "\"CoffeeCreamer\"", "\"Cookies\"", "\"CottonCandy\"", "\"Donuts\"", "\"DrinkCocktail\"", "\"Fish\"", "\"Fries\"", "\"Hamburger\"", "\"HotDog\"", "\"IceCream\"", "\"Jellybeans\"", "\"LargeSoda\"", "\"lobster\"", "\"Melon\"", "\"Milk\"", "\"OnionRing\"", "\"OrangeJuice\"", "\"Pasta\"", "\"Pie\"", "\"Pineapple\"", "\"Pizza\"", "\"Popcorn\"", "\"Pretzel\"", "\"Snack\"", "\"Steak\"", "\"Sushi\"", "\"Taco\"", "\"Vodka\"", "\"Whiskey\"", "\"Wine\"", "\"AdBoard\"", "\"Barrel_Large\"", "\"Bench_2\"", "\"Bench\"", "\"BikeEngine\"", "\"Bust_Centurion\"", "\"CardboardBox\"", "\"CardboardCutout\"", "\"CashRegister\"", "\"Chair_1\"", "\"Chair_10\"", "\"Chair_2\"", "\"Chair_3\"", "\"Chair_4\"", "\"Chair_5\"", "\"Chair_6\"", "\"Chair_7\"", "\"Chair_8\"", "\"Chair_9\"", "\"Chair_Casino\"", "\"ChuckStandee\"", "\"CookingPot\"", "\"FrankStandee\"", "\"GarbageBag\"", "\"GarbageCan_1\"", "\"GarbageCan_2\"", "\"GarbageCan_3\"", "\"GarbageCan_4\"", "\"GasBarrel\"", "\"Generator\"", "\"GiantDice\"", "\"GumballMachine\"", "\"HeadStatue\"", "\"Keg\"", "\"LargeShoppingBoxes\"", "\"LcdMonitor\"", "\"LibertyTorch\"", "\"Mailbox\"", "\"MedicineBall\"", "\"MetalBarricade\"", "\"MilitaryCrate\"", "\"NewspaperBox\"", "\"NoveltyBeerMug\"", "\"NoveltyBottle\"", "\"NoveltyCellPhone\"", "\"NoveltyPerfume\"", "\"NoveltyPokerChip\"", "\"Pallet\"", "\"Particle_Board\"", "\"PatioTable\"", "\"PlasticBin\"", "\"PottedPlant_1\"", "\"PottedPlant_2\"", "\"PottedPlant_3\"", "\"PottedPlant_4\"", "\"PottedPlant_4\"", "\"PottedPlant_5\"", "\"PottedPlant_6\"", "\"PottedPlant_7\"", "\"PottedPlant_8\"", "\"RotatingDisplay\"", "\"RouletteWheel\"", "\"SandwichBoard\"", "\"SC37_ShoppingBoxes\"", "\"SmallSuitcase\"", "\"SpaceBench\"", "\"SpeakerWeapon\"", "\"SpoolWire\"", "\"SquareSign\"", "\"SteelShelving\"", "\"Suitcase\"", "\"Swordfish\"", "\"TikiMask\"", "\"TIODPlywood1\"", "\"TIODPlywood2\"", "\"TreasureChest\"", "\"Vase2\"", "\"Vase3\"", "\"VelvetPole\"", "\"WaterCooler\"", "\"AcousticGuitar\"", "\"AlienProbe\"", "\"Basketball\"", "\"BassGuitar\"", "\"BassGuitar\"", "\"battleaxe\"", "\"BBQChef_MeatCleaver\"", "\"BeachBall\"", "\"BikeForks\"", "\"BowlingBall\"", "\"BowlingPin\"", "\"Brick\"", "\"Broadsword\"", "\"BroomHandle\"", "\"ChefKnife\"", "\"CinderBlock\"", "\"Coffeepot\"", "\"ComedyTrophy\"", "\"CookingOil\"", "\"CroupierStick\"", "\"Crowbar\"", "\"DonkeyLamp\"", "\"Dumbbell\"", "\"FoamHand\"", "\"Football\"", "\"GiftShopLamp\"", "\"GreenHunkOfMeat\"", "\"HandBag\"", "\"HandleBar\"", "\"Hanger\"", "\"HockeyStick\"", "\"HotelLamp\"", "\"KatanaSword\"", "\"Keyboard\"", "\"Lamp\"", "\"Lance\"", "\"LongStick\"", "\"MagicianSword\"", "\"MeatCleaver\"", "\"Microscope\"", "\"MicStand\"", "\"MoneyCase_Americana\"", "\"MoneyCase_Atlantica\"", "\"MoneyCase_Helicopter\"", "\"MoneyCase_Protester\"", "\"MoneyCase_Scoops\"", "\"MoneyCase_SlotRanch\"", "\"MoneyCase_TK\"", "\"MoneyCase_Yucatan\"", "\"MoneyCase\"", "\"NightStick\"", "\"NinjaBroadSword\"", "\"NinjaKatanaSword\"", "\"NinjaSword\"", "\"Pan_heat\"", "\"Pan\"", "\"PoolBall\"", "\"PoolCue\"", "\"ProtesterSign\"", "\"PsychoMeatCleaver\"", "\"PsychoMiningPick\"", "\"Scissors\"", "\"Shampoo\"", "\"Shovel\"", "\"ShowerHead\"", "\"SoccerBall\"", "\"SpaceHammer\"", "\"SpotLight\"", "\"StepLadder\"", "\"TIR_chair\"", "\"TIR_Sign\"", "\"TIRBaseballBat\"", "\"TIRPan\"", "\"TIRStepLadder\"", "\"TIRTwoByFour\"", "\"Tomahawk\"", "\"ToyRocketShip\"", "\"VelvetRope\"", "\"WackyHammer\"", "\"WaterBottle\"", "\"WheelPawn\"", "\"WrenchLarge\"", "\"HangmanGun\"", "\"Intestine\"", "\"MascotMurderballLauncher\" ", "\"MilitiaSniperRifle\"", "\"MinigameMooseHeadBlue\"", "\"MinigameMooseHeadGreen\"", "\"MinigameMooseHeadRed\"", "\"MinigameMooseHeadYellow\"", "\"Mole\"", "\"RB_couch\"", "\"SpaceWorm\"", "\"Theremin\" ", "\"Vase\" ", "\"Wormhole\"", "\"AlienBoots\"", "\"AlienMask\"", "\"AlienOutfitDispenser\"", "\"AlienSuit\"", "\"AlternateOutfit\"", "\"AmericanShowmanHelmetDispenser\"", "\"AmericanShowmanOutfitDispenser\"", "\"ArmyJacketPantsDispenser\"", "\"ArthurOutfitDispenser\"", "\"BaldNoHairDispenser\"", "\"BananaHammockDispenser\"", "\"BareFeetChuckDispenser\"", "\"BaseballCapSportDispenser\"", "\"BaseballCapTIRDispenser\"", "\"BaseballUniformDispenser\"", "\"BasketballHighTopsDispenser\"", "\"BasketballUniformDispenser\"", "\"BlackCanvasSneakersDispenser\"", "\"BlackCowboyBootsDispenser\"", "\"BlackCowboyHatDispenser\"", "\"BlackCowboyOutfitDispenser\"", "\"BlackDressShoesDispenser\"", "\"BlackMilitaryBootsDispenser\"", "\"BlackRimmedGlassesDispenser\"", "\"BlackTuxedoBowTieDispenser\"", "\"BlueOysterBikerOutfitDispenser\"", "\"BunnySlippersDispenser\"", "\"CardiganSlacksDispenser\"", "\"ChuckColouredHairBlueDispenser\"", "\"ChuckColouredHairGreyDispenser\"", "\"ChuckColouredHairPinkDispenser\"", "\"ChuckyOutfitDispenser\"", "\"CleatsDispenser\"", "\"CoconutBraHolaDressDispenser\"", "\"ComedianOutfitDispenser\"", "\"DarkAviatorGlassesDispenser\"", "\"DealerOutfitDispenser\"", "\"DealerVisorDispenser\"", "\"FedoraDispenser\"", "\"FishNetshirtwhitepantsDispenser\"", "\"FlipFlopsDispenser\"", "\"FlowerHeadPieceDispenser\"", "\"FootballHelmetDispenser\"", "\"FootballUniformDispenser\"", "\"FortuneTshirt1BlueJeansDispenser\"", "\"FortuneTshirt2BlackJeansDispenser\"", "\"FunnyMaskBlankaDispenser\"", "\"FunnyMaskLizardDispenser\"", "\"FunnyMaskServbotDispenser\"", "\"FunnyMaskZombieDispenser\"", "\"HawaiianShirt1shortsDispenser\"", "\"HawaiianShirt2shortsDispenser\"", "\"HawaiianShirt3PantsDispenser\"", "\"HawaiianShirt4PantsDispenser\"", "\"HipHopOutfitDispenser\"", "\"HookerBootsDispenser\"", "\"HygieneMaskDispenser\"", "\"KidsSuperHeroBootsDispenser\"", "\"KidsSuperHeroCostumeDispenser\"", "\"KidsSuperHeroEyeMaskDispenser\"", "\"KnottedTopCutoffsDispenser\"", "\"LadiesHatDispenser\"", "\"LargeRhinestoneGlassesDispenser\"", "\"midlengthtshirtjeansdispenser\"", "\"MohawkHairDispenser\"", "\"NakedOutfitDispenser\"", "\"NinjaChestDispenser\"", "\"NinjaFaceWearDispenser\"", "\"NinjaFeetDispenser\"", "\"NinjaHeadwearDispenser\"", "\"NinjaOutfit\"", "\"NoveltyGlassesDispenser\"", "\"OnePiecePajamaDispenser\"", "\"plaidsuitbrownshirttiedispenser\"", "\"PoloShirtBlueJeansDispenser\"", "\"ProtomanBody\"", "\"ProtomanBoots\"", "\"ProtomanDispenser\"", "\"ProtomanHelmet\"", "\"PsychopathChestDispenser\"", "\"PsychopathFacewearDispenser\"", "\"PsychopathFeetDispenser\"", "\"PsychopathHeadwearDispenser\"", "\"PsychopathOutfit\"", "\"RussianHatDispenser\"", "\"SandalsWhiteSocksDispenser\"", "\"SexySpaceGirlBody\"", "\"SexySpaceGirlBoots\"", "\"SexySpaceGirlDispenser\"", "\"SexySpaceGirlHair\"", "\"ShowGirlHeadPieceDispenser\"", "\"SkaterOutfitDispenser\"", "\"SoldierChestDispenser\"", "\"SoldierFacewearDispenser\"", "\"SoldierFeetDispenser\"", "\"SoldierHeadwearDispenser\"", "\"SoldierOutfit\"", "\"SpaceSuitBody\"", "\"SpaceSuitBoots\"", "\"SpaceSuitHelmet\"", "\"SportFanChestDispenser\"", "\"SportFanFacewearDispenser\"", "\"SportFanFeetDispenser\"", "\"SportFanHeadwearDispenser\"", "\"SportFanOutfit\"", "\"SportGlassesDispenser\"", "\"SportyTrackSuitDispenser\"", "\"SummerDressDispenser\"", "\"SurfWetsuitDispenser\"", "\"SwatHelmetDispenser\"", "\"SWATOutfitDispenser\"", "\"TanJacketSlacksTurtleneckDispenser\"", "\"TatteredClothesDispenser\"", "\"TennisHeadBandDispenser\"", "\"TennisOutfitDispenser\"", "\"TIR_ChampionDispenser\"", "\"TirFanOutfitDispenser\"", "\"TIRWrestlingOutfit\"", "\"TouristBoatHatDispenser\"", "\"TubeTopMiniSkirtDispenser\"", "\"TuqueDispenser\"", "\"UranusZoneShirtDispenser\"", "\"WhiteCowboyBootsDispenser\"", "\"WhiteCowboyHatDispenser\"", "\"WhiteCowboyOutfitDispenser\"", "\"WhiteLeisureSuitDispenser\"", "\"WhiteLowheelsDispenser\"", "\"WhiteTennisShoesSocksDispenser\"", "\"WildFrontierHatDispenser\"", "\"WilliametteMallSecurityDispenser\"", "\"YellowSneakersDispenser\"", "\"YellowTintedGlassesDispenser\"", "\"YellowTrackSuitDispenser\"", "\"AirHorn\"", "\"BagofMarbles\"", "\"Barrett50Caliber\"", "\"BaseballBat_Metal\"", "\"CannedDrinks\"", "\"CasinoChips\"", "\"CementSaw_combo\"", "\"FireCrackers\"", "\"FireSpitter\"", "\"FlameThrower\"", "\"FlamingAces\"", "\"gemblower\"", "\"GolfClub\"", "\"HandGun\"", "\"Ketchup\"", "\"LaserEyes\"", "\"LightningGun\"", "\"Mayonnaise\"", "\"MinigameSniper\"", "\"MusicDiscs\"", "\"NineIron\"", "\"PitchForkShotgun\"", "\"PlateLauncher\"", "\"PlayingCards\"", "\"ProtomanBlaster\"", "\"RayGun\"", "\"SawLauncher\"", "\"SBFG\"", "\"SGBallLauncherBlue\"", "\"SGBallLauncherGreen\"", "\"SGBallLauncherRed\"", "\"SGBallLauncherYellow\"", "\"SixShooter\"", "\"SpaceballBat\"", "\"SuperMassager\"", "\"VinylRecords\"", "\"WhippedCream\"", "\"ZombieThrower\"", "\"BeerHat\"", "\"EnergizerJuice\"", "\"NectarJuice\"", "\"PainKillerJuice\"", "\"QuickStepJuice\"", "\"RandomizerJuice\"", "\"RepulseJuice\"", "\"SpaceSteak\"", "\"SpitfireJuice\"", "\"SpoiledBacon\"", "\"SpoiledBBQChicken\"", "\"SpoiledBBQRibs\"", "\"SpoiledFish\"", "\"SpoiledHamburger\"", "\"SpoiledHotDog\"", "\"SpoiledLobster\"", "\"SpoiledSteak\"", "\"SpoiledSushi\"", "\"UntouchableJuice\"", "\"ZombaitJuice\"", "\"ATMHacker\"", "\"Auger\"", "\"BurningSkull\"", "\"Combo_Paddlesaw\"", "\"defiler\"", "\"Driller\"", "\"ElectricRake\"", "\"FlamingGloves\"", "\"FlamingSwordAndShield\"", "\"HandiChipper\"", "\"KnifeGloves\"", "\"LaserLightSword\"", "\"mmagloves_spiked\"", "\"ParaBlower\"", "\"poleweapon\"", "\"PortableLawnMower\"", "\"PowerExsanguinator\"", "\"PowerGuitar\"", "\"Reaper\"", "\"Shocker\"", "\"SpikedBat\"", "\"SpikedSwordAndShield\"", "\"SuperSlicer\"", "\"TeslaBall\"", "\"Thor\"", "\"WeedTendonizer\"", "\"WingManJar\"", "\"BFG\"", "\"BowandArrow\"", "\"BoxOfNails\"", "\"EnhancedM16\"", "\"EnhancedM249\"", "\"EnhancedMAR\"", "\"FireExtinguisher\"", "\"Gems\"", "\"LeafBlower\"", "\"LeafBlower\"", "\"M16\"", "\"M249\"", "\"MercAssaultRifle\"", "\"Shotgun\"", "\"SpitballGun\"", "\"Spraypaint\"", "\"TennisRacket\"", "\"WaterGun\"", "\"DLC_BBQChef_Chest\"", "\"DLC_BBQChef_Face\"", "\"DLC_BBQChef_Feet\"", "\"DLC_BBQChef_Head\"", "\"DLC_CosPlay_Chest\"", "\"DLC_CosPlay_Face\"", "\"DLC_CosPlay_Feet\"", "\"DLC_CosPlay_Head\"", "\"DLC_Cyborg_Chest\"", "\"DLC_Cyborg_Face\"", "\"DLC_Cyborg_Feet\"", "\"DLC_Cyborg_Head\"", "\"DLC_Fireman_Chest\"", "\"DLC_Fireman_Feet\"", "\"DLC_Fireman_Head\"", "\"DLC_Fireman_Face\"", "\"AcetyleneTank\"", "\"BouncingBeauty\"", "\"BowandArrow_explosive\"", "\"BoykinGrenade\"", "\"Combo_PropaneTankNails\"", "\"CryoPod\"", "\"Dynameat\"", "\"Dynamite\"", "\"FireworkRockets\"", "\"FireworksBazooka_Bomber\"", "\"FireworksBazooka_reward\"", "\"FireworksBazooka\"", "\"FlashGrenade\"", "\"FreezerBomb\"", "\"GasCanister\"", "\"GasolineCanister\"", "\"Grenade\"", "\"HailMary\"", "\"LaserGun\"", "\"LiquidNitrogen\"", "\"MolotovBottle\"", "\"Pegasus\"", "\"PropaneTank\"", "\"QueenBeeJar\"", "\"RemoteMine\"", "\"SnowballCannon\"", "\"StickyBomb\"", "\"Key_caseofqueens\"", "\"Key_photo\"", "\"Key_champagne\"", "\"Key_giftbasket\"", "\"Key_labsuit\"", "\"Key_bluetooth\"", "\"Key_usbdrive\"", "\"Key_undergroundkey\"", "\"Key_sportscar\"", "\"Key_commando\"", "\"Key_chopper\"", "\"Key_MasterKey\"", "\"Key_train\"", "\"Key_superbike\"", "\"Key_gauze\"", "\"Key_zombrexbasket\"", "\"Key_painkillers\"", "\"Key_sutures\"", "\"Key_silkthong\"", "\"key_lockbox18\"", "\"key_lockbox1\"", "\"key_lockbox12\"", "\"key_lockbox13\"", "\"key_lockbox14\"", "\"key_lockbox15\"", "\"key_lockbox16\"", "\"key_lockbox17\"", "\"key_lockbox19\"", "\"key_lockbox20\"", "\"key_lockbox2\"", "\"key_lockbox3\"", "\"key_lockbox4\"", "\"key_lockbox5\"", "\"key_lockbox6\"", "\"key_lockbox7\"", "\"key_lockbox8\"", "\"key_lockbox9\"", "\"key_lockbox10\"", "\"key_lockbox11\"", "\"Camera_Magazine_1\"", "\"Camera_Magazine_2\"", "\"Camera_Magazine_3\"", "\"Magazine_Alcohol_Hangover_Cures\"", "\"Magazine_Economy_Lords_Of_Cash\"", "\"Magazine_Economy_Thrifty_Trader\"", "\"Magazine_Food_Healthy_Choices\"", "\"Magazine_Food_The_World_Chef\"", "\"Magazine_Four_Wheel_Fun\"", "\"Magazine_Gambling_Fortune_City_Riches\"", "\"Magazine_Gambling_Luck_You\"", "\"Magazine_Gambling_Wealth\"", "\"Magazine_Item_Edged_Lone_Blade\"", "\"Magazine_Item_Furniture_Designer_For_Homes\"", "\"Magazine_Item_Sports_Total_Sporting_Weekly\"", "\"Magazine_Item_Toy_Toyapalooza\"", "\"Magazine_Juice_Top_Ten_Drink_Mixes\"", "\"Magazine_Leadership_For_Losers\"", "\"Magazine_PP_Female_Survivor_Playboy\"", "\"Magazine_PP_Psycho_Dangerous_People_Weekly\"", "\"Magazine_PP_Survivor_Angel_Prince\"", "\"Magazine_PP_Weapon_Armed_And_Awesome\"", "\"Magazine_PP_Weapon_Basic_Training_Monthly\"", "\"Magazine_PP_Weapon_Fortune_Fighter\"", "\"Magazine_PP_Zombie_Spectral_Talkers\"", "\"Magazine_PP_Zombie_Undead_Solutions\"", "\"Magazine_Shotokan_Karate_Made_Easy\"", "\"Magazine_Sports_To_The_Extreme\"", "\"Magazine_Stunt_Devils\"", "\"Mgz_Item_Construction_Jackhammer_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"", "\"Mannequin_Female\"", "\"Mannequin_Male\"", "\"MannequinFemaleHead\"", "\"MannequinFemaleHeadTorso\"", "\"MannequinFemaleLeftArm\"", "\"MannequinFemaleLeftLeg\"", "\"MannequinFemaleLLegLFoot\"", "\"MannequinFemaleRightArm\"", "\"MannequinFemaleRightLeg\"", "\"MannequinFemaleWaistRLegRFoot\"", "\"MannequinMaleHead\"", "\"MannequinMaleLeftArm\"", "\"MannequinMaleLeftLeg\"", "\"MannequinMaleRightArm\"", "\"MannequinMaleRightLeg\"", "\"MannequinMaleTorsoLLegRLeg\"", "\"CarTire\"", "\"Combo_BucketDrill\"", "\"Combo_RemoteControlBucketDrill1\"", "\"Combo_RemoteControlBucketDrill2\"", "\"Combo_RemoteControlBucketDrill3\"", "\"Combo_RemoteControlBucketDrill4\"", "\"Dolly\"", "\"DrinkCart\"", "\"Drum\"", "\"ElectricThunder\"", "\"ElectrocutionChair\"", "\"Flare\"", "\"FountainLizard\"", "\"FunnyPainting\"", "\"GiantSpaceshipToy\"", "\"GiantStuffedBull\"", "\"GiantStuffedDonkey\"", "\"GiantStuffedElephant\"", "\"GiantStuffedRabbit\"", "\"HeliBlade\"", "\"KCMooseHead\"", "\"Lawnmower\"", "\"MascotMask\"", "\"MoltenCannon\"", "\"MooseHead\"", "\"Painting\"", "\"Painting2\"", "\"Painting3\"", "\"PeaceArt\"", "\"stickin_painting\"", "\"StickIt_PonyOnStick\"", "\"stickit_ServbotMask\"", "\"SullivanFlare_PlayerVersion\"", "\"TeddyBearSentryGun\"", "\"UtilityCart\"", "\"WheelBarrow\"", "\"WheelChair\"", "\"ZapShine\"", "\"ZombieMask\"", "\"AluminumTennisRacket\"", "\"AppleMoney\"", "\"FiveHundredDollars\"", "\"FiveThousandDollars\"", "\"GamblingDollars\"", "\"GiantPinkChainsaw\"", "\"HundredThousandDollars\"", "\"OneHundredDollars\"", "\"OneThousandDollars\"", "\"ProtomanBlasterAndShield\"", "\"ProtomanShield\"", "\"TenThousandDollars\"", "\"TwoThousandDollars\"", "\"Zombrex\"", "\"Zombrex\"", "\"BazookaBike\"", "\"ChainsawBike\"", "\"ChopperBikeSingle\"", "\"ClownCar\"", "\"GirlsBike\"", "\"Hummer\"", "\"IndustrialCart\"", "\"IndustrialClownCar\"", "\"M249Bike\"", "\"MercenaryBike\"", "\"RabbitBike\"", "\"SecurityCart\"", "\"Skateboard\"", "\"SportsCar\"", "\"SuperBike\"", "\"TIRBike\"", "\"TIRBikeGreenUF\"", "\"UltimateFanBike\"", "\"WheelchairBike\"", "\"WheelchairTank\"" });
+            this.clb_SearchResults.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_SearchResults.Name = ("clb_SearchResults");
+            this.clb_SearchResults.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_SearchResults.TabIndex = (17);
             // 
             // levelsLinesBindingSource
             // 
-            this.levelsLinesBindingSource.DataSource = typeof(DR2OTR_Randomizer.Resources.LevelsLines);
+            this.levelsLinesBindingSource.DataSource = (typeof(global::DR2OTR_Randomizer.Resources.LevelsLines));
             // 
             // pb_PHTest
             // 
-            this.pb_PHTest.Image = global::DR2OTR_Randomizer.Properties.Resources.PH_TestImage;
-            this.pb_PHTest.Location = new System.Drawing.Point(353, 33);
-            this.pb_PHTest.Name = "pb_PHTest";
-            this.pb_PHTest.Size = new System.Drawing.Size(359, 124);
-            this.pb_PHTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pb_PHTest.TabIndex = 20;
-            this.pb_PHTest.TabStop = false;
+            this.pb_PHTest.Image = (global::DR2OTR_Randomizer.Properties.Resources.PH_TestImage);
+            this.pb_PHTest.Location = (new global::System.Drawing.Point(353, 33));
+            this.pb_PHTest.Name = ("pb_PHTest");
+            this.pb_PHTest.Size = (new global::System.Drawing.Size(359, 124));
+            this.pb_PHTest.SizeMode = (global::System.Windows.Forms.PictureBoxSizeMode.CenterImage);
+            this.pb_PHTest.TabIndex = (20);
+            this.pb_PHTest.TabStop = (false);
             // 
             // tc_TabWindows
             // 
             this.tc_TabWindows.Controls.Add(this.tp_WItemRandom);
             this.tc_TabWindows.Controls.Add(this.tp_WitemsStats);
-            this.tc_TabWindows.Location = new System.Drawing.Point(12, 31);
-            this.tc_TabWindows.Name = "tc_TabWindows";
-            this.tc_TabWindows.SelectedIndex = 0;
-            this.tc_TabWindows.Size = new System.Drawing.Size(726, 500);
-            this.tc_TabWindows.TabIndex = 23;
+            this.tc_TabWindows.Location = (new global::System.Drawing.Point(12, 31));
+            this.tc_TabWindows.Name = ("tc_TabWindows");
+            this.tc_TabWindows.SelectedIndex = (0);
+            this.tc_TabWindows.Size = (new global::System.Drawing.Size(726, 500));
+            this.tc_TabWindows.TabIndex = (23);
             // 
             // tp_WItemRandom
             // 
@@ -2220,101 +985,104 @@
             this.tp_WItemRandom.Controls.Add(this.b_CheckAll);
             this.tp_WItemRandom.Controls.Add(this.tc_Items);
             this.tp_WItemRandom.Controls.Add(this.pb_PHTest);
-            this.tp_WItemRandom.Location = new System.Drawing.Point(4, 29);
-            this.tp_WItemRandom.Name = "tp_WItemRandom";
-            this.tp_WItemRandom.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_WItemRandom.Size = new System.Drawing.Size(718, 467);
-            this.tp_WItemRandom.TabIndex = 0;
-            this.tp_WItemRandom.Text = "Items Randomiser";
-            this.tp_WItemRandom.UseVisualStyleBackColor = true;
+            this.tp_WItemRandom.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_WItemRandom.Name = ("tp_WItemRandom");
+            this.tp_WItemRandom.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_WItemRandom.Size = (new global::System.Drawing.Size(718, 472));
+            this.tp_WItemRandom.TabIndex = (0);
+            this.tp_WItemRandom.Text = ("Items Randomiser");
+            this.tp_WItemRandom.UseVisualStyleBackColor = (true);
             // 
             // tb_ItemsSearch
             // 
-            this.tb_ItemsSearch.Location = new System.Drawing.Point(353, 6);
-            this.tb_ItemsSearch.Name = "tb_ItemsSearch";
-            this.tb_ItemsSearch.Size = new System.Drawing.Size(359, 27);
-            this.tb_ItemsSearch.TabIndex = 27;
-            this.tb_ItemsSearch.Click += new System.EventHandler(this.tb_ItemsSearch_Click);
-            this.tb_ItemsSearch.TextChanged += new System.EventHandler(this.tb_ItemsSearch_TextChanged);
+            this.tb_ItemsSearch.Location = (new global::System.Drawing.Point(353, 6));
+            this.tb_ItemsSearch.Name = ("tb_ItemsSearch");
+            this.tb_ItemsSearch.Size = (new global::System.Drawing.Size(359, 23));
+            this.tb_ItemsSearch.TabIndex = (27);
+            this.tb_ItemsSearch.Click += (this.tb_ItemsSearch_Click);
+            this.tb_ItemsSearch.TextChanged += (this.tb_ItemsSearch_TextChanged);
             // 
             // tb_TestBox
             // 
-            this.tb_TestBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_TestBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_TestBox.Location = new System.Drawing.Point(353, 163);
-            this.tb_TestBox.Multiline = true;
-            this.tb_TestBox.Name = "tb_TestBox";
-            this.tb_TestBox.Size = new System.Drawing.Size(359, 50);
-            this.tb_TestBox.TabIndex = 26;
-            this.tb_TestBox.Text = "This is will have info about the current selected item in it. For now it is being" +
-    " used as a place holder.";
-            this.tb_TestBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_TestBox.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.tb_TestBox.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.tb_TestBox.Location = (new global::System.Drawing.Point(353, 163));
+            this.tb_TestBox.Multiline = (true);
+            this.tb_TestBox.Name = ("tb_TestBox");
+            this.tb_TestBox.Size = (new global::System.Drawing.Size(359, 50));
+            this.tb_TestBox.TabIndex = (26);
+            this.tb_TestBox.Text = ("This is will have info about the current selected item in it. For now it is being used as a place holder.");
+            this.tb_TestBox.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
             // 
             // b_Randomise
             // 
-            this.b_Randomise.Location = new System.Drawing.Point(353, 397);
-            this.b_Randomise.Name = "b_Randomise";
-            this.b_Randomise.Size = new System.Drawing.Size(359, 50);
-            this.b_Randomise.TabIndex = 25;
-            this.b_Randomise.Text = "Randomise With Selected Items";
-            this.b_Randomise.UseVisualStyleBackColor = true;
-            this.b_Randomise.Click += new System.EventHandler(this.b_Randomise_Click);
+            this.b_Randomise.Location = (new global::System.Drawing.Point(353, 397));
+            this.b_Randomise.Name = ("b_Randomise");
+            this.b_Randomise.Size = (new global::System.Drawing.Size(359, 50));
+            this.b_Randomise.TabIndex = (25);
+            this.b_Randomise.Text = ("Randomise With Selected Items");
+            this.b_Randomise.UseVisualStyleBackColor = (true);
+            this.b_Randomise.Click += (this.b_Randomise_Click);
             // 
             // b_DeselectAll
             // 
-            this.b_DeselectAll.Location = new System.Drawing.Point(184, 443);
-            this.b_DeselectAll.Name = "b_DeselectAll";
-            this.b_DeselectAll.Size = new System.Drawing.Size(157, 23);
-            this.b_DeselectAll.TabIndex = 24;
-            this.b_DeselectAll.Text = "Uncheck All";
-            this.b_DeselectAll.UseVisualStyleBackColor = true;
-            this.b_DeselectAll.Click += new System.EventHandler(this.b_DeselectAll_Click);
+            this.b_DeselectAll.Location = (new global::System.Drawing.Point(184, 443));
+            this.b_DeselectAll.Name = ("b_DeselectAll");
+            this.b_DeselectAll.Size = (new global::System.Drawing.Size(157, 23));
+            this.b_DeselectAll.TabIndex = (24);
+            this.b_DeselectAll.Text = ("Uncheck All");
+            this.b_DeselectAll.UseVisualStyleBackColor = (true);
+            this.b_DeselectAll.Click += (this.b_DeselectAll_Click);
             // 
             // b_CheckAll
             // 
-            this.b_CheckAll.Location = new System.Drawing.Point(16, 443);
-            this.b_CheckAll.Name = "b_CheckAll";
-            this.b_CheckAll.Size = new System.Drawing.Size(162, 23);
-            this.b_CheckAll.TabIndex = 23;
-            this.b_CheckAll.Text = "Check All";
-            this.b_CheckAll.UseVisualStyleBackColor = true;
-            this.b_CheckAll.Click += new System.EventHandler(this.b_CheckAll_Click);
+            this.b_CheckAll.Location = (new global::System.Drawing.Point(16, 443));
+            this.b_CheckAll.Name = ("b_CheckAll");
+            this.b_CheckAll.Size = (new global::System.Drawing.Size(162, 23));
+            this.b_CheckAll.TabIndex = (23);
+            this.b_CheckAll.Text = ("Check All");
+            this.b_CheckAll.UseVisualStyleBackColor = (true);
+            this.b_CheckAll.Click += (this.b_CheckAll_Click);
             // 
             // tp_WitemsStats
             // 
-            this.tp_WitemsStats.AutoScroll = true;
+            this.tp_WitemsStats.AutoScroll = (true);
             this.tp_WitemsStats.Controls.Add(this.bt_ItenStatsSet);
             this.tp_WitemsStats.Controls.Add(this.tc_itemStats);
-            this.tp_WitemsStats.Location = new System.Drawing.Point(4, 29);
-            this.tp_WitemsStats.Name = "tp_WitemsStats";
-            this.tp_WitemsStats.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_WitemsStats.Size = new System.Drawing.Size(718, 467);
-            this.tp_WitemsStats.TabIndex = 1;
-            this.tp_WitemsStats.Text = "Items Stats";
-            this.tp_WitemsStats.UseVisualStyleBackColor = true;
+            this.tp_WitemsStats.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_WitemsStats.Name = ("tp_WitemsStats");
+            this.tp_WitemsStats.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_WitemsStats.Size = (new global::System.Drawing.Size(718, 472));
+            this.tp_WitemsStats.TabIndex = (1);
+            this.tp_WitemsStats.Text = ("Items Stats");
+            this.tp_WitemsStats.UseVisualStyleBackColor = (true);
             // 
             // bt_ItenStatsSet
             // 
-            this.bt_ItenStatsSet.Location = new System.Drawing.Point(10, 6);
-            this.bt_ItenStatsSet.Name = "bt_ItenStatsSet";
-            this.bt_ItenStatsSet.Size = new System.Drawing.Size(138, 41);
-            this.bt_ItenStatsSet.TabIndex = 2;
-            this.bt_ItenStatsSet.Text = "Randomize";
-            this.bt_ItenStatsSet.UseVisualStyleBackColor = true;
-            this.bt_ItenStatsSet.Click += new System.EventHandler(this.bt_ItenStatsSet_Click);
+            this.bt_ItenStatsSet.Location = (new global::System.Drawing.Point(10, 6));
+            this.bt_ItenStatsSet.Name = ("bt_ItenStatsSet");
+            this.bt_ItenStatsSet.Size = (new global::System.Drawing.Size(138, 41));
+            this.bt_ItenStatsSet.TabIndex = (2);
+            this.bt_ItenStatsSet.Text = ("Randomize");
+            this.bt_ItenStatsSet.UseVisualStyleBackColor = (true);
+            this.bt_ItenStatsSet.Click += (this.bt_ItenStatsSet_Click);
             // 
             // tc_itemStats
             // 
             this.tc_itemStats.Controls.Add(this.tp_VehicleStats);
-            this.tc_itemStats.Location = new System.Drawing.Point(6, 51);
-            this.tc_itemStats.Name = "tc_itemStats";
-            this.tc_itemStats.SelectedIndex = 0;
-            this.tc_itemStats.Size = new System.Drawing.Size(706, 415);
-            this.tc_itemStats.TabIndex = 1;
+            this.tc_itemStats.Controls.Add(this.tp_NPC);
+            this.tc_itemStats.Controls.Add(this.tp_FireArms);
+            this.tc_itemStats.Controls.Add(this.tp_WorldStats);
+            this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 51));
+            this.tc_itemStats.Name = ("tc_itemStats");
+            this.tc_itemStats.SelectedIndex = (0);
+            this.tc_itemStats.Size = (new global::System.Drawing.Size(706, 415));
+            this.tc_itemStats.TabIndex = (1);
             // 
             // tp_VehicleStats
             // 
-            this.tp_VehicleStats.AutoScroll = true;
+            this.tp_VehicleStats.AutoScroll = (true);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_RotateSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_MaxRotationSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_MaxRideSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_InitialSpeed);
@@ -2329,1179 +1097,86 @@
             this.tp_VehicleStats.Controls.Add(this.gb_V_EMT);
             this.tp_VehicleStats.Controls.Add(this.gb_V_EMaxRPM);
             this.tp_VehicleStats.Controls.Add(this.gb_AirDensity);
-            this.tp_VehicleStats.Location = new System.Drawing.Point(4, 29);
-            this.tp_VehicleStats.Name = "tp_VehicleStats";
-            this.tp_VehicleStats.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_VehicleStats.Size = new System.Drawing.Size(698, 382);
-            this.tp_VehicleStats.TabIndex = 0;
-            this.tp_VehicleStats.Text = "Vehicle Stats";
-            this.tp_VehicleStats.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_InitialSpeed
-            // 
-            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Dec);
-            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Max);
-            this.gb_V_InitialSpeed.Controls.Add(this.nud_V_InitialSpeed_Max);
-            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Min);
-            this.gb_V_InitialSpeed.Controls.Add(this.nud_V_InitialSpeed_Min);
-            this.gb_V_InitialSpeed.Controls.Add(this.cb_V_InitialSpeed);
-            this.gb_V_InitialSpeed.Location = new System.Drawing.Point(6, 670);
-            this.gb_V_InitialSpeed.Name = "gb_V_InitialSpeed";
-            this.gb_V_InitialSpeed.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_InitialSpeed.TabIndex = 16;
-            this.gb_V_InitialSpeed.TabStop = false;
-            this.gb_V_InitialSpeed.Tag = "InitialSpeed";
-            // 
-            // l_V_InitialSpeed_Dec
-            // 
-            this.l_V_InitialSpeed_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_InitialSpeed_Dec.Name = "l_V_InitialSpeed_Dec";
-            this.l_V_InitialSpeed_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_InitialSpeed_Dec.TabIndex = 7;
-            this.l_V_InitialSpeed_Dec.Text = "The launch speed for the skate board setting this very high will teleport";
-            this.l_V_InitialSpeed_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.l_V_InitialSpeed_Dec.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // l_V_InitialSpeed_Max
-            // 
-            this.l_V_InitialSpeed_Max.AutoSize = true;
-            this.l_V_InitialSpeed_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_InitialSpeed_Max.Name = "l_V_InitialSpeed_Max";
-            this.l_V_InitialSpeed_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_InitialSpeed_Max.TabIndex = 4;
-            this.l_V_InitialSpeed_Max.Text = "Maximum:";
-            // 
-            // nud_V_InitialSpeed_Max
-            // 
-            this.nud_V_InitialSpeed_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_InitialSpeed_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_InitialSpeed_Max.Name = "nud_V_InitialSpeed_Max";
-            this.nud_V_InitialSpeed_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_InitialSpeed_Max.TabIndex = 3;
-            this.nud_V_InitialSpeed_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_InitialSpeed_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_InitialSpeed_Min
-            // 
-            this.l_V_InitialSpeed_Min.AutoSize = true;
-            this.l_V_InitialSpeed_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_InitialSpeed_Min.Name = "l_V_InitialSpeed_Min";
-            this.l_V_InitialSpeed_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_InitialSpeed_Min.TabIndex = 2;
-            this.l_V_InitialSpeed_Min.Text = "Minimum:";
-            // 
-            // nud_V_InitialSpeed_Min
-            // 
-            this.nud_V_InitialSpeed_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_InitialSpeed_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_InitialSpeed_Min.Name = "nud_V_InitialSpeed_Min";
-            this.nud_V_InitialSpeed_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_InitialSpeed_Min.TabIndex = 1;
-            this.nud_V_InitialSpeed_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_InitialSpeed_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_InitialSpeed
-            // 
-            this.cb_V_InitialSpeed.AutoSize = true;
-            this.cb_V_InitialSpeed.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_InitialSpeed.Name = "cb_V_InitialSpeed";
-            this.cb_V_InitialSpeed.Size = new System.Drawing.Size(194, 24);
-            this.cb_V_InitialSpeed.TabIndex = 0;
-            this.cb_V_InitialSpeed.Text = "Skateboard Initial Speed";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_InitialSpeed, "The average defualt is: 0.5");
-            this.cb_V_InitialSpeed.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_ExtraTorque
-            // 
-            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Dec);
-            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Max);
-            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Max);
-            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Min);
-            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Min);
-            this.gb_V_ExtraTorque.Controls.Add(this.cb_V_ExtraTorque);
-            this.gb_V_ExtraTorque.Location = new System.Drawing.Point(6, 610);
-            this.gb_V_ExtraTorque.Name = "gb_V_ExtraTorque";
-            this.gb_V_ExtraTorque.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_ExtraTorque.TabIndex = 15;
-            this.gb_V_ExtraTorque.TabStop = false;
-            this.gb_V_ExtraTorque.Tag = "ExtraTorqueFactor";
-            // 
-            // l_V_ExtraTorque_Dec
-            // 
-            this.l_V_ExtraTorque_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_ExtraTorque_Dec.Name = "l_V_ExtraTorque_Dec";
-            this.l_V_ExtraTorque_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_ExtraTorque_Dec.TabIndex = 7;
-            this.l_V_ExtraTorque_Dec.Text = "Setting this very high will cause the vehicle to spin the higher the faster it sp" +
-    "ins.";
-            this.l_V_ExtraTorque_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_ExtraTorque_Max
-            // 
-            this.l_V_ExtraTorque_Max.AutoSize = true;
-            this.l_V_ExtraTorque_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_ExtraTorque_Max.Name = "l_V_ExtraTorque_Max";
-            this.l_V_ExtraTorque_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_ExtraTorque_Max.TabIndex = 4;
-            this.l_V_ExtraTorque_Max.Text = "Maximum:";
-            // 
-            // nud_V_ExtraTorque_Max
-            // 
-            this.nud_V_ExtraTorque_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_ExtraTorque_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ExtraTorque_Max.Name = "nud_V_ExtraTorque_Max";
-            this.nud_V_ExtraTorque_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ExtraTorque_Max.TabIndex = 3;
-            this.nud_V_ExtraTorque_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ExtraTorque_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_ExtraTorque_Min
-            // 
-            this.l_V_ExtraTorque_Min.AutoSize = true;
-            this.l_V_ExtraTorque_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_ExtraTorque_Min.Name = "l_V_ExtraTorque_Min";
-            this.l_V_ExtraTorque_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_ExtraTorque_Min.TabIndex = 2;
-            this.l_V_ExtraTorque_Min.Text = "Minimum:";
-            // 
-            // nud_V_ExtraTorque_Min
-            // 
-            this.nud_V_ExtraTorque_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_ExtraTorque_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ExtraTorque_Min.Name = "nud_V_ExtraTorque_Min";
-            this.nud_V_ExtraTorque_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ExtraTorque_Min.TabIndex = 1;
-            this.nud_V_ExtraTorque_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ExtraTorque_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_ExtraTorque
-            // 
-            this.cb_V_ExtraTorque.AutoSize = true;
-            this.cb_V_ExtraTorque.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_ExtraTorque.Name = "cb_V_ExtraTorque";
-            this.cb_V_ExtraTorque.Size = new System.Drawing.Size(158, 24);
-            this.cb_V_ExtraTorque.TabIndex = 0;
-            this.cb_V_ExtraTorque.Text = "Extra Torque Factor";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ExtraTorque, "The average defualt is: 0.5");
-            this.cb_V_ExtraTorque.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_TopSpeed
-            // 
-            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Dec);
-            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Max);
-            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Max);
-            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Min);
-            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Min);
-            this.gb_V_TopSpeed.Controls.Add(this.cb_V_TopSpeed);
-            this.gb_V_TopSpeed.Location = new System.Drawing.Point(6, 550);
-            this.gb_V_TopSpeed.Name = "gb_V_TopSpeed";
-            this.gb_V_TopSpeed.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_TopSpeed.TabIndex = 14;
-            this.gb_V_TopSpeed.TabStop = false;
-            this.gb_V_TopSpeed.Tag = "VehicleTopSpeed";
-            // 
-            // l_V_TopSpeed_Dec
-            // 
-            this.l_V_TopSpeed_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_TopSpeed_Dec.Name = "l_V_TopSpeed_Dec";
-            this.l_V_TopSpeed_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_TopSpeed_Dec.TabIndex = 7;
-            this.l_V_TopSpeed_Dec.Text = "Setting high will make the vehicle go very slow but gradually get faster. Setting" +
-    " very low makes it freak out";
-            this.l_V_TopSpeed_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_TopSpeed_Max
-            // 
-            this.l_V_TopSpeed_Max.AutoSize = true;
-            this.l_V_TopSpeed_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_TopSpeed_Max.Name = "l_V_TopSpeed_Max";
-            this.l_V_TopSpeed_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_TopSpeed_Max.TabIndex = 4;
-            this.l_V_TopSpeed_Max.Text = "Maximum:";
-            // 
-            // nud_V_TopSpeed_Max
-            // 
-            this.nud_V_TopSpeed_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_TopSpeed_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_TopSpeed_Max.Name = "nud_V_TopSpeed_Max";
-            this.nud_V_TopSpeed_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_TopSpeed_Max.TabIndex = 3;
-            this.nud_V_TopSpeed_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_TopSpeed_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_TopSpeed_Min
-            // 
-            this.l_V_TopSpeed_Min.AutoSize = true;
-            this.l_V_TopSpeed_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_TopSpeed_Min.Name = "l_V_TopSpeed_Min";
-            this.l_V_TopSpeed_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_TopSpeed_Min.TabIndex = 2;
-            this.l_V_TopSpeed_Min.Text = "Minimum:";
-            // 
-            // nud_V_TopSpeed_Min
-            // 
-            this.nud_V_TopSpeed_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_TopSpeed_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_TopSpeed_Min.Name = "nud_V_TopSpeed_Min";
-            this.nud_V_TopSpeed_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_TopSpeed_Min.TabIndex = 1;
-            this.nud_V_TopSpeed_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_TopSpeed_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_TopSpeed
-            // 
-            this.cb_V_TopSpeed.AutoSize = true;
-            this.cb_V_TopSpeed.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_TopSpeed.Name = "cb_V_TopSpeed";
-            this.cb_V_TopSpeed.Size = new System.Drawing.Size(153, 24);
-            this.cb_V_TopSpeed.TabIndex = 0;
-            this.cb_V_TopSpeed.Text = "Vehicle Top Speed";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_TopSpeed, "The average defualt is: 37");
-            this.cb_V_TopSpeed.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_MVSEP
-            // 
-            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Dec);
-            this.gb_V_MVSEP.Controls.Add(this.l__V_MVSEP_Max);
-            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Max);
-            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Min);
-            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Min);
-            this.gb_V_MVSEP.Controls.Add(this.cb_V_MVSEP);
-            this.gb_V_MVSEP.Location = new System.Drawing.Point(6, 490);
-            this.gb_V_MVSEP.Name = "gb_V_MVSEP";
-            this.gb_V_MVSEP.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_MVSEP.TabIndex = 13;
-            this.gb_V_MVSEP.TabStop = false;
-            this.gb_V_MVSEP.Tag = "MinVehicleSpeedToEjectPlayer";
-            // 
-            // l_V_MVSEP_Dec
-            // 
-            this.l_V_MVSEP_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_MVSEP_Dec.Name = "l_V_MVSEP_Dec";
-            this.l_V_MVSEP_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_MVSEP_Dec.TabIndex = 7;
-            this.l_V_MVSEP_Dec.Text = "Recomended to set fairly high unless you like getting thrown off bikes";
-            this.l_V_MVSEP_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l__V_MVSEP_Max
-            // 
-            this.l__V_MVSEP_Max.AutoSize = true;
-            this.l__V_MVSEP_Max.Location = new System.Drawing.Point(540, 13);
-            this.l__V_MVSEP_Max.Name = "l__V_MVSEP_Max";
-            this.l__V_MVSEP_Max.Size = new System.Drawing.Size(78, 20);
-            this.l__V_MVSEP_Max.TabIndex = 4;
-            this.l__V_MVSEP_Max.Text = "Maximum:";
-            // 
-            // nud__V_MVSEP_Max
-            // 
-            this.nud__V_MVSEP_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud__V_MVSEP_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud__V_MVSEP_Max.Name = "nud__V_MVSEP_Max";
-            this.nud__V_MVSEP_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud__V_MVSEP_Max.TabIndex = 3;
-            this.nud__V_MVSEP_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud__V_MVSEP_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_MVSEP_Min
-            // 
-            this.l_V_MVSEP_Min.AutoSize = true;
-            this.l_V_MVSEP_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_MVSEP_Min.Name = "l_V_MVSEP_Min";
-            this.l_V_MVSEP_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_MVSEP_Min.TabIndex = 2;
-            this.l_V_MVSEP_Min.Text = "Minimum:";
-            // 
-            // nud__V_MVSEP_Min
-            // 
-            this.nud__V_MVSEP_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud__V_MVSEP_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud__V_MVSEP_Min.Name = "nud__V_MVSEP_Min";
-            this.nud__V_MVSEP_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud__V_MVSEP_Min.TabIndex = 1;
-            this.nud__V_MVSEP_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud__V_MVSEP_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_MVSEP
-            // 
-            this.cb_V_MVSEP.AutoSize = true;
-            this.cb_V_MVSEP.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_MVSEP.Name = "cb_V_MVSEP";
-            this.cb_V_MVSEP.Size = new System.Drawing.Size(202, 24);
-            this.cb_V_MVSEP.TabIndex = 0;
-            this.cb_V_MVSEP.Text = "Min Speed To Eject Player";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_MVSEP, "The average defualt is: 70");
-            this.cb_V_MVSEP.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_MinVSWE
-            // 
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Dec);
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Max);
-            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Max);
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Min);
-            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Min);
-            this.gb_V_MinVSWE.Controls.Add(this.cb_V_MinVSWE);
-            this.gb_V_MinVSWE.Location = new System.Drawing.Point(6, 430);
-            this.gb_V_MinVSWE.Name = "gb_V_MinVSWE";
-            this.gb_V_MinVSWE.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_MinVSWE.TabIndex = 12;
-            this.gb_V_MinVSWE.TabStop = false;
-            this.gb_V_MinVSWE.Tag = "MinVehicleSpeedForWheeliesAndEndos";
-            // 
-            // l_V_MinVSWE_Dec
-            // 
-            this.l_V_MinVSWE_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_MinVSWE_Dec.Name = "l_V_MinVSWE_Dec";
-            this.l_V_MinVSWE_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_MinVSWE_Dec.TabIndex = 7;
-            this.l_V_MinVSWE_Dec.Text = "Recomended to give this a higher value having it to low makes controling bike ver" +
-    "y hard.";
-            this.l_V_MinVSWE_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_MinVSWE_Max
-            // 
-            this.l_V_MinVSWE_Max.AutoSize = true;
-            this.l_V_MinVSWE_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_MinVSWE_Max.Name = "l_V_MinVSWE_Max";
-            this.l_V_MinVSWE_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_MinVSWE_Max.TabIndex = 4;
-            this.l_V_MinVSWE_Max.Text = "Maximum:";
-            // 
-            // nud_V_MinVSWE_Max
-            // 
-            this.nud_V_MinVSWE_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_MinVSWE_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MinVSWE_Max.Name = "nud_V_MinVSWE_Max";
-            this.nud_V_MinVSWE_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MinVSWE_Max.TabIndex = 3;
-            this.nud_V_MinVSWE_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MinVSWE_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_MinVSWE_Min
-            // 
-            this.l_V_MinVSWE_Min.AutoSize = true;
-            this.l_V_MinVSWE_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_MinVSWE_Min.Name = "l_V_MinVSWE_Min";
-            this.l_V_MinVSWE_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_MinVSWE_Min.TabIndex = 2;
-            this.l_V_MinVSWE_Min.Text = "Minimum:";
-            // 
-            // nud_V_MinVSWE_Min
-            // 
-            this.nud_V_MinVSWE_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_MinVSWE_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MinVSWE_Min.Name = "nud_V_MinVSWE_Min";
-            this.nud_V_MinVSWE_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MinVSWE_Min.TabIndex = 1;
-            this.nud_V_MinVSWE_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MinVSWE_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_MinVSWE
-            // 
-            this.cb_V_MinVSWE.AutoSize = true;
-            this.cb_V_MinVSWE.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_MinVSWE.Name = "cb_V_MinVSWE";
-            this.cb_V_MinVSWE.Size = new System.Drawing.Size(191, 24);
-            this.cb_V_MinVSWE.TabIndex = 0;
-            this.cb_V_MinVSWE.Text = "Min Speed For Wheelies";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_MinVSWE, "The average defualt is: 2");
-            this.cb_V_MinVSWE.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_ETMinRPM
-            // 
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Dec);
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Max);
-            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Max);
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Min);
-            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Min);
-            this.gb_V_ETMinRPM.Controls.Add(this.cb_V_ETMinRPM);
-            this.gb_V_ETMinRPM.Location = new System.Drawing.Point(6, 370);
-            this.gb_V_ETMinRPM.Name = "gb_V_ETMinRPM";
-            this.gb_V_ETMinRPM.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_ETMinRPM.TabIndex = 11;
-            this.gb_V_ETMinRPM.TabStop = false;
-            this.gb_V_ETMinRPM.Tag = "Engine_TorqueFactorAtMinRPM";
-            // 
-            // l_V_ETMinRPM_Dec
-            // 
-            this.l_V_ETMinRPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_ETMinRPM_Dec.Name = "l_V_ETMinRPM_Dec";
-            this.l_V_ETMinRPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_ETMinRPM_Dec.TabIndex = 7;
-            this.l_V_ETMinRPM_Dec.Text = "If this gets set to high the vehicle will become very slow and hard to steer.";
-            this.l_V_ETMinRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_ETMinRPM_Max
-            // 
-            this.l_V_ETMinRPM_Max.AutoSize = true;
-            this.l_V_ETMinRPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_ETMinRPM_Max.Name = "l_V_ETMinRPM_Max";
-            this.l_V_ETMinRPM_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_ETMinRPM_Max.TabIndex = 4;
-            this.l_V_ETMinRPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_ETMinRPM_Max
-            // 
-            this.nud_V_ETMinRPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_ETMinRPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETMinRPM_Max.Name = "nud_V_ETMinRPM_Max";
-            this.nud_V_ETMinRPM_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ETMinRPM_Max.TabIndex = 3;
-            this.nud_V_ETMinRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ETMinRPM_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_ETMinRPM_Min
-            // 
-            this.l_V_ETMinRPM_Min.AutoSize = true;
-            this.l_V_ETMinRPM_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_ETMinRPM_Min.Name = "l_V_ETMinRPM_Min";
-            this.l_V_ETMinRPM_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_ETMinRPM_Min.TabIndex = 2;
-            this.l_V_ETMinRPM_Min.Text = "Minimum:";
-            // 
-            // nud_V_ETMinRPM_Min
-            // 
-            this.nud_V_ETMinRPM_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_ETMinRPM_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETMinRPM_Min.Name = "nud_V_ETMinRPM_Min";
-            this.nud_V_ETMinRPM_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ETMinRPM_Min.TabIndex = 1;
-            this.nud_V_ETMinRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ETMinRPM_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_ETMinRPM
-            // 
-            this.cb_V_ETMinRPM.AutoSize = true;
-            this.cb_V_ETMinRPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_ETMinRPM.Name = "cb_V_ETMinRPM";
-            this.cb_V_ETMinRPM.Size = new System.Drawing.Size(169, 24);
-            this.cb_V_ETMinRPM.TabIndex = 0;
-            this.cb_V_ETMinRPM.Text = "Torque Factor At Min";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ETMinRPM, "The average defualt is: 0.77");
-            this.cb_V_ETMinRPM.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_ETFMaxRPM
-            // 
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
-            this.gb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 310);
-            this.gb_V_ETFMaxRPM.Name = "gb_V_ETFMaxRPM";
-            this.gb_V_ETFMaxRPM.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_ETFMaxRPM.TabIndex = 10;
-            this.gb_V_ETFMaxRPM.TabStop = false;
-            this.gb_V_ETFMaxRPM.Tag = "Engine_TorqueFactorAtMaxRPM";
-            // 
-            // l_V_ETFMaxRPM_Dec
-            // 
-            this.l_V_ETFMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_ETFMaxRPM_Dec.Name = "l_V_ETFMaxRPM_Dec";
-            this.l_V_ETFMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_ETFMaxRPM_Dec.TabIndex = 7;
-            this.l_V_ETFMaxRPM_Dec.Text = "Will greatly increase the vehicles speed the higher you set.";
-            this.l_V_ETFMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_ETFMaxRPM_Max
-            // 
-            this.l_V_ETFMaxRPM_Max.AutoSize = true;
-            this.l_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_ETFMaxRPM_Max.Name = "l_V_ETFMaxRPM_Max";
-            this.l_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_ETFMaxRPM_Max.TabIndex = 4;
-            this.l_V_ETFMaxRPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_ETFMaxRPM_Max
-            // 
-            this.nud_V_ETFMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_ETFMaxRPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETFMaxRPM_Max.Name = "nud_V_ETFMaxRPM_Max";
-            this.nud_V_ETFMaxRPM_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ETFMaxRPM_Max.TabIndex = 3;
-            this.nud_V_ETFMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ETFMaxRPM_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_ETFMaxRPM_Min
-            // 
-            this.l_V_ETFMaxRPM_Min.AutoSize = true;
-            this.l_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_ETFMaxRPM_Min.Name = "l_V_ETFMaxRPM_Min";
-            this.l_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_ETFMaxRPM_Min.TabIndex = 2;
-            this.l_V_ETFMaxRPM_Min.Text = "Minimum:";
-            // 
-            // nud_V_ETFMaxRPM_Min
-            // 
-            this.nud_V_ETFMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_ETFMaxRPM_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_ETFMaxRPM_Min.Name = "nud_V_ETFMaxRPM_Min";
-            this.nud_V_ETFMaxRPM_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_ETFMaxRPM_Min.TabIndex = 1;
-            this.nud_V_ETFMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_ETFMaxRPM_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_ETFMaxRPM
-            // 
-            this.cb_V_ETFMaxRPM.AutoSize = true;
-            this.cb_V_ETFMaxRPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_ETFMaxRPM.Name = "cb_V_ETFMaxRPM";
-            this.cb_V_ETFMaxRPM.Size = new System.Drawing.Size(176, 24);
-            this.cb_V_ETFMaxRPM.TabIndex = 0;
-            this.cb_V_ETFMaxRPM.Text = "Torque Factor At Max ";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
-            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_EORPM
-            // 
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Dec);
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Max);
-            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Max);
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
-            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
-            this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
-            this.gb_V_EORPM.Location = new System.Drawing.Point(6, 250);
-            this.gb_V_EORPM.Name = "gb_V_EORPM";
-            this.gb_V_EORPM.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_EORPM.TabIndex = 9;
-            this.gb_V_EORPM.TabStop = false;
-            this.gb_V_EORPM.Tag = "Engine_OptRPM";
-            // 
-            // l_V_EORPM_Dec
-            // 
-            this.l_V_EORPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_EORPM_Dec.Name = "l_V_EORPM_Dec";
-            this.l_V_EORPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_EORPM_Dec.TabIndex = 7;
-            this.l_V_EORPM_Dec.Text = "Give increased speed while keeping some control when set high.";
-            this.l_V_EORPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_EORPM_Max
-            // 
-            this.l_V_EORPM_Max.AutoSize = true;
-            this.l_V_EORPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_EORPM_Max.Name = "l_V_EORPM_Max";
-            this.l_V_EORPM_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_EORPM_Max.TabIndex = 4;
-            this.l_V_EORPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_EORPM_Max
-            // 
-            this.nud_V_EORPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_EORPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EORPM_Max.Name = "nud_V_EORPM_Max";
-            this.nud_V_EORPM_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EORPM_Max.TabIndex = 3;
-            this.nud_V_EORPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EORPM_Max.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            // 
-            // l_V_EORPM_Min
-            // 
-            this.l_V_EORPM_Min.AutoSize = true;
-            this.l_V_EORPM_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_EORPM_Min.Name = "l_V_EORPM_Min";
-            this.l_V_EORPM_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_EORPM_Min.TabIndex = 2;
-            this.l_V_EORPM_Min.Text = "Minimum:";
-            // 
-            // nud_V_EORPM_Min
-            // 
-            this.nud_V_EORPM_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_EORPM_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EORPM_Min.Name = "nud_V_EORPM_Min";
-            this.nud_V_EORPM_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EORPM_Min.TabIndex = 1;
-            this.nud_V_EORPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EORPM_Min.Value = new decimal(new int[] {
-            3473,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_EORPM
-            // 
-            this.cb_V_EORPM.AutoSize = true;
-            this.cb_V_EORPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_EORPM.Name = "cb_V_EORPM";
-            this.cb_V_EORPM.Size = new System.Drawing.Size(144, 24);
-            this.cb_V_EORPM.TabIndex = 0;
-            this.cb_V_EORPM.Text = "Vehicle Opt RPM:";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EORPM, "The average defualt is: 3473");
-            this.cb_V_EORPM.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_EMinRPM
-            // 
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Dec);
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Max);
-            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_Max);
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_min);
-            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
-            this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
-            this.gb_V_EMinRPM.Location = new System.Drawing.Point(6, 130);
-            this.gb_V_EMinRPM.Name = "gb_V_EMinRPM";
-            this.gb_V_EMinRPM.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_EMinRPM.TabIndex = 9;
-            this.gb_V_EMinRPM.TabStop = false;
-            this.gb_V_EMinRPM.Tag = "Engine_MinRPM";
-            // 
-            // l_V_EMinRPM_Dec
-            // 
-            this.l_V_EMinRPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_EMinRPM_Dec.Name = "l_V_EMinRPM_Dec";
-            this.l_V_EMinRPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_EMinRPM_Dec.TabIndex = 7;
-            this.l_V_EMinRPM_Dec.Text = "Gives a burst of speed when first acelerating. Setting higher can cause it to aut" +
-    "o acelerate.";
-            this.l_V_EMinRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_EMinRPM_Max
-            // 
-            this.l_V_EMinRPM_Max.AutoSize = true;
-            this.l_V_EMinRPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_EMinRPM_Max.Name = "l_V_EMinRPM_Max";
-            this.l_V_EMinRPM_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_EMinRPM_Max.TabIndex = 4;
-            this.l_V_EMinRPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_EMinRPM_Max
-            // 
-            this.nud_V_EMinRPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_EMinRPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMinRPM_Max.Name = "nud_V_EMinRPM_Max";
-            this.nud_V_EMinRPM_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMinRPM_Max.TabIndex = 3;
-            this.nud_V_EMinRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMinRPM_Max.Value = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            // 
-            // l_V_EMinRPM_min
-            // 
-            this.l_V_EMinRPM_min.AutoSize = true;
-            this.l_V_EMinRPM_min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_EMinRPM_min.Name = "l_V_EMinRPM_min";
-            this.l_V_EMinRPM_min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_EMinRPM_min.TabIndex = 2;
-            this.l_V_EMinRPM_min.Text = "Minimum:";
-            // 
-            // nud_V_EMinRPM_min
-            // 
-            this.nud_V_EMinRPM_min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_EMinRPM_min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMinRPM_min.Name = "nud_V_EMinRPM_min";
-            this.nud_V_EMinRPM_min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMinRPM_min.TabIndex = 1;
-            this.nud_V_EMinRPM_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMinRPM_min.Value = new decimal(new int[] {
-            885,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_EMinRPM
-            // 
-            this.cb_V_EMinRPM.AutoSize = true;
-            this.cb_V_EMinRPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_EMinRPM.Name = "cb_V_EMinRPM";
-            this.cb_V_EMinRPM.Size = new System.Drawing.Size(141, 24);
-            this.cb_V_EMinRPM.TabIndex = 0;
-            this.cb_V_EMinRPM.Text = "Vehicle Min RPM";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMinRPM, "The average defualt is: 885");
-            this.cb_V_EMinRPM.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_EMT
-            // 
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Dec);
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Max);
-            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Max);
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
-            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
-            this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
-            this.gb_V_EMT.Location = new System.Drawing.Point(6, 190);
-            this.gb_V_EMT.Name = "gb_V_EMT";
-            this.gb_V_EMT.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_EMT.TabIndex = 8;
-            this.gb_V_EMT.TabStop = false;
-            this.gb_V_EMT.Tag = "Engine_MaxTorque";
-            // 
-            // l_V_EMT_Dec
-            // 
-            this.l_V_EMT_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_EMT_Dec.Name = "l_V_EMT_Dec";
-            this.l_V_EMT_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_EMT_Dec.TabIndex = 7;
-            this.l_V_EMT_Dec.Text = "Similar to max rpm but with a little less control and bit more kick.";
-            this.l_V_EMT_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_EMT_Max
-            // 
-            this.l_V_EMT_Max.AutoSize = true;
-            this.l_V_EMT_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_EMT_Max.Name = "l_V_EMT_Max";
-            this.l_V_EMT_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_EMT_Max.TabIndex = 4;
-            this.l_V_EMT_Max.Text = "Maximum:";
-            // 
-            // nud_V_EMT_Max
-            // 
-            this.nud_V_EMT_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_EMT_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMT_Max.Name = "nud_V_EMT_Max";
-            this.nud_V_EMT_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMT_Max.TabIndex = 3;
-            this.nud_V_EMT_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMT_Max.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // l_V_EMT_Min
-            // 
-            this.l_V_EMT_Min.AutoSize = true;
-            this.l_V_EMT_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_EMT_Min.Name = "l_V_EMT_Min";
-            this.l_V_EMT_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_EMT_Min.TabIndex = 2;
-            this.l_V_EMT_Min.Text = "Minimum:";
-            // 
-            // nud_V_EMT_Min
-            // 
-            this.nud_V_EMT_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_EMT_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMT_Min.Name = "nud_V_EMT_Min";
-            this.nud_V_EMT_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMT_Min.TabIndex = 1;
-            this.nud_V_EMT_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMT_Min.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_EMT
-            // 
-            this.cb_V_EMT.AutoSize = true;
-            this.cb_V_EMT.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_EMT.Name = "cb_V_EMT";
-            this.cb_V_EMT.Size = new System.Drawing.Size(163, 24);
-            this.cb_V_EMT.TabIndex = 0;
-            this.cb_V_EMT.Text = "Vehicle Max Torque:";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMT, "The average defualt is: 100");
-            this.cb_V_EMT.UseVisualStyleBackColor = true;
-            // 
-            // gb_V_EMaxRPM
-            // 
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Dec);
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Max);
-            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Max);
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
-            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
-            this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
-            this.gb_V_EMaxRPM.Location = new System.Drawing.Point(6, 70);
-            this.gb_V_EMaxRPM.Name = "gb_V_EMaxRPM";
-            this.gb_V_EMaxRPM.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_EMaxRPM.TabIndex = 3;
-            this.gb_V_EMaxRPM.TabStop = false;
-            this.gb_V_EMaxRPM.Tag = "Engine_MaxRPM";
-            // 
-            // l_V_EMaxRPM_Dec
-            // 
-            this.l_V_EMaxRPM_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_EMaxRPM_Dec.Name = "l_V_EMaxRPM_Dec";
-            this.l_V_EMaxRPM_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_EMaxRPM_Dec.TabIndex = 7;
-            this.l_V_EMaxRPM_Dec.Text = "One of the stats that controls the vehicles speed. May start to auto acelerate at" +
-    " higher values.";
-            this.l_V_EMaxRPM_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_EMaxRPM_Max
-            // 
-            this.l_V_EMaxRPM_Max.AutoSize = true;
-            this.l_V_EMaxRPM_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_EMaxRPM_Max.Name = "l_V_EMaxRPM_Max";
-            this.l_V_EMaxRPM_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_EMaxRPM_Max.TabIndex = 4;
-            this.l_V_EMaxRPM_Max.Text = "Maximum:";
-            // 
-            // nud_V_EMaxRPM_Max
-            // 
-            this.nud_V_EMaxRPM_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_EMaxRPM_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMaxRPM_Max.Name = "nud_V_EMaxRPM_Max";
-            this.nud_V_EMaxRPM_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMaxRPM_Max.TabIndex = 3;
-            this.nud_V_EMaxRPM_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMaxRPM_Max.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            // 
-            // l_V_EMaxRPM_Min
-            // 
-            this.l_V_EMaxRPM_Min.AutoSize = true;
-            this.l_V_EMaxRPM_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_EMaxRPM_Min.Name = "l_V_EMaxRPM_Min";
-            this.l_V_EMaxRPM_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_EMaxRPM_Min.TabIndex = 2;
-            this.l_V_EMaxRPM_Min.Text = "Minimum:";
-            // 
-            // nud_V_EMaxRPM_Min
-            // 
-            this.nud_V_EMaxRPM_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_EMaxRPM_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_EMaxRPM_Min.Name = "nud_V_EMaxRPM_Min";
-            this.nud_V_EMaxRPM_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_EMaxRPM_Min.TabIndex = 1;
-            this.nud_V_EMaxRPM_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_EMaxRPM_Min.Value = new decimal(new int[] {
-            3550,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_EMaxRPM
-            // 
-            this.cb_V_EMaxRPM.AutoSize = true;
-            this.cb_V_EMaxRPM.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_EMaxRPM.Name = "cb_V_EMaxRPM";
-            this.cb_V_EMaxRPM.Size = new System.Drawing.Size(147, 24);
-            this.cb_V_EMaxRPM.TabIndex = 0;
-            this.cb_V_EMaxRPM.Text = "Vehicle Max RPM:";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMaxRPM, "The average defualt is: 3550");
-            this.cb_V_EMaxRPM.UseVisualStyleBackColor = true;
-            // 
-            // gb_AirDensity
-            // 
-            this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
-            this.gb_AirDensity.Controls.Add(this.l_AD_max);
-            this.gb_AirDensity.Controls.Add(this.nud_AD_Max);
-            this.gb_AirDensity.Controls.Add(this.l_AD_min);
-            this.gb_AirDensity.Controls.Add(this.nud_AD_Min);
-            this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
-            this.gb_AirDensity.Location = new System.Drawing.Point(6, 10);
-            this.gb_AirDensity.Name = "gb_AirDensity";
-            this.gb_AirDensity.Size = new System.Drawing.Size(665, 60);
-            this.gb_AirDensity.TabIndex = 2;
-            this.gb_AirDensity.TabStop = false;
-            this.gb_AirDensity.Tag = "AirDensity";
-            // 
-            // l_V_AD_Dec
-            // 
-            this.l_V_AD_Dec.Location = new System.Drawing.Point(138, 10);
-            this.l_V_AD_Dec.Name = "l_V_AD_Dec";
-            this.l_V_AD_Dec.Size = new System.Drawing.Size(231, 50);
-            this.l_V_AD_Dec.TabIndex = 7;
-            this.l_V_AD_Dec.Text = "Controls how much air resistance there is for the vehicle. The lower the less air" +
-    " resistance.";
-            this.l_V_AD_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_AD_max
-            // 
-            this.l_AD_max.AutoSize = true;
-            this.l_AD_max.Location = new System.Drawing.Point(540, 13);
-            this.l_AD_max.Name = "l_AD_max";
-            this.l_AD_max.Size = new System.Drawing.Size(78, 20);
-            this.l_AD_max.TabIndex = 4;
-            this.l_AD_max.Text = "Maximum:";
-            // 
-            // nud_AD_Max
-            // 
-            this.nud_AD_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_AD_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_AD_Max.Name = "nud_AD_Max";
-            this.nud_AD_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_AD_Max.TabIndex = 3;
-            this.nud_AD_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_AD_Max.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // l_AD_min
-            // 
-            this.l_AD_min.AutoSize = true;
-            this.l_AD_min.Location = new System.Drawing.Point(410, 13);
-            this.l_AD_min.Name = "l_AD_min";
-            this.l_AD_min.Size = new System.Drawing.Size(75, 20);
-            this.l_AD_min.TabIndex = 2;
-            this.l_AD_min.Text = "Minimum:";
-            // 
-            // nud_AD_Min
-            // 
-            this.nud_AD_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_AD_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_AD_Min.Name = "nud_AD_Min";
-            this.nud_AD_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_AD_Min.TabIndex = 1;
-            this.nud_AD_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cb_AirDensity
-            // 
-            this.cb_AirDensity.AutoSize = true;
-            this.cb_AirDensity.Location = new System.Drawing.Point(6, 25);
-            this.cb_AirDensity.Name = "cb_AirDensity";
-            this.cb_AirDensity.Size = new System.Drawing.Size(157, 24);
-            this.cb_AirDensity.TabIndex = 0;
-            this.cb_AirDensity.Text = "Vehicle Air Density:";
-            this.tt_VehicleStats.SetToolTip(this.cb_AirDensity, "The average defualt is: 0.7");
-            this.cb_AirDensity.UseVisualStyleBackColor = true;
-            // 
-            // fbd_DataFileFolder
-            // 
-            this.fbd_DataFileFolder.Description = "Select the upacked datafile folder";
-            this.fbd_DataFileFolder.ShowNewFolderButton = false;
-            this.fbd_DataFileFolder.UseDescriptionForTitle = true;
-            // 
-            // gb_V_MaxRideSpeed
-            // 
-            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Dec);
-            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Max);
-            this.gb_V_MaxRideSpeed.Controls.Add(this.nud_V_MaxRideSpeed_Max);
-            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Min);
-            this.gb_V_MaxRideSpeed.Controls.Add(this.nud_V_MaxRideSpeed_Min);
-            this.gb_V_MaxRideSpeed.Controls.Add(this.cb_V_MaxRideSpeed);
-            this.gb_V_MaxRideSpeed.Location = new System.Drawing.Point(6, 730);
-            this.gb_V_MaxRideSpeed.Name = "gb_V_MaxRideSpeed";
-            this.gb_V_MaxRideSpeed.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_MaxRideSpeed.TabIndex = 17;
-            this.gb_V_MaxRideSpeed.TabStop = false;
-            this.gb_V_MaxRideSpeed.Tag = "MaxRideSpeed";
-            // 
-            // l_V_MaxRideSpeed_Dec
-            // 
-            this.l_V_MaxRideSpeed_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_MaxRideSpeed_Dec.Name = "l_V_MaxRideSpeed_Dec";
-            this.l_V_MaxRideSpeed_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_MaxRideSpeed_Dec.TabIndex = 7;
-            this.l_V_MaxRideSpeed_Dec.Text = "The maxim speed the skateboard can go you will keep going faster as kick of the f" +
-    "loor";
-            this.l_V_MaxRideSpeed_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // l_V_MaxRideSpeed_Max
-            // 
-            this.l_V_MaxRideSpeed_Max.AutoSize = true;
-            this.l_V_MaxRideSpeed_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_MaxRideSpeed_Max.Name = "l_V_MaxRideSpeed_Max";
-            this.l_V_MaxRideSpeed_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_MaxRideSpeed_Max.TabIndex = 4;
-            this.l_V_MaxRideSpeed_Max.Text = "Maximum:";
-            // 
-            // nud_V_MaxRideSpeed_Max
-            // 
-            this.nud_V_MaxRideSpeed_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_MaxRideSpeed_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MaxRideSpeed_Max.Name = "nud_V_MaxRideSpeed_Max";
-            this.nud_V_MaxRideSpeed_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MaxRideSpeed_Max.TabIndex = 3;
-            this.nud_V_MaxRideSpeed_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MaxRideSpeed_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
-            // l_V_MaxRideSpeed_Min
-            // 
-            this.l_V_MaxRideSpeed_Min.AutoSize = true;
-            this.l_V_MaxRideSpeed_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_MaxRideSpeed_Min.Name = "l_V_MaxRideSpeed_Min";
-            this.l_V_MaxRideSpeed_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_MaxRideSpeed_Min.TabIndex = 2;
-            this.l_V_MaxRideSpeed_Min.Text = "Minimum:";
-            // 
-            // nud_V_MaxRideSpeed_Min
-            // 
-            this.nud_V_MaxRideSpeed_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_MaxRideSpeed_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MaxRideSpeed_Min.Name = "nud_V_MaxRideSpeed_Min";
-            this.nud_V_MaxRideSpeed_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MaxRideSpeed_Min.TabIndex = 1;
-            this.nud_V_MaxRideSpeed_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MaxRideSpeed_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cb_V_MaxRideSpeed
-            // 
-            this.cb_V_MaxRideSpeed.AutoSize = true;
-            this.cb_V_MaxRideSpeed.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_MaxRideSpeed.Name = "cb_V_MaxRideSpeed";
-            this.cb_V_MaxRideSpeed.Size = new System.Drawing.Size(187, 24);
-            this.cb_V_MaxRideSpeed.TabIndex = 0;
-            this.cb_V_MaxRideSpeed.Text = "Skateboard Ride Speed";
-            this.tt_VehicleStats.SetToolTip(this.cb_V_MaxRideSpeed, "The average defualt is: 0.5");
-            this.cb_V_MaxRideSpeed.UseVisualStyleBackColor = true;
+            this.tp_VehicleStats.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_VehicleStats.Name = ("tp_VehicleStats");
+            this.tp_VehicleStats.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_VehicleStats.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_VehicleStats.TabIndex = (0);
+            this.tp_VehicleStats.Text = ("Vehicle Stats");
+            this.tp_VehicleStats.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_RotateSpeed
+            // 
+            this.gb_V_RotateSpeed.Controls.Add(this.l_V_RotateSpeed_Dec);
+            this.gb_V_RotateSpeed.Controls.Add(this.l_V_RotateSpeed_Max);
+            this.gb_V_RotateSpeed.Controls.Add(this.nud_V_RotateSpeed_Max);
+            this.gb_V_RotateSpeed.Controls.Add(this.l_V_RotateSpeed_Min);
+            this.gb_V_RotateSpeed.Controls.Add(this.nud_V_RotateSpeed_Min);
+            this.gb_V_RotateSpeed.Controls.Add(this.cb_V_RotateSpeed);
+            this.gb_V_RotateSpeed.Location = (new global::System.Drawing.Point(6, 850));
+            this.gb_V_RotateSpeed.Name = ("gb_V_RotateSpeed");
+            this.gb_V_RotateSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_RotateSpeed.TabIndex = (19);
+            this.gb_V_RotateSpeed.TabStop = (false);
+            this.gb_V_RotateSpeed.Tag = ("RotationSpeed");
+            // 
+            // l_V_RotateSpeed_Dec
+            // 
+            this.l_V_RotateSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_RotateSpeed_Dec.Name = ("l_V_RotateSpeed_Dec");
+            this.l_V_RotateSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_RotateSpeed_Dec.TabIndex = (7);
+            this.l_V_RotateSpeed_Dec.Text = ("The speed the Skateboard will rotate\r\n(will not rotate faster then what max rotate speed is set to)");
+            this.l_V_RotateSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_RotateSpeed_Max
+            // 
+            this.l_V_RotateSpeed_Max.AutoSize = (true);
+            this.l_V_RotateSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_RotateSpeed_Max.Name = ("l_V_RotateSpeed_Max");
+            this.l_V_RotateSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_RotateSpeed_Max.TabIndex = (4);
+            this.l_V_RotateSpeed_Max.Text = ("Maximum:");
+            // 
+            // nud_V_RotateSpeed_Max
+            // 
+            this.nud_V_RotateSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_RotateSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_RotateSpeed_Max.Name = ("nud_V_RotateSpeed_Max");
+            this.nud_V_RotateSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_RotateSpeed_Max.TabIndex = (3);
+            this.nud_V_RotateSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_RotateSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_RotateSpeed_Min
+            // 
+            this.l_V_RotateSpeed_Min.AutoSize = (true);
+            this.l_V_RotateSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_RotateSpeed_Min.Name = ("l_V_RotateSpeed_Min");
+            this.l_V_RotateSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_RotateSpeed_Min.TabIndex = (2);
+            this.l_V_RotateSpeed_Min.Text = ("Minimum:");
+            // 
+            // nud_V_RotateSpeed_Min
+            // 
+            this.nud_V_RotateSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_RotateSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_RotateSpeed_Min.Name = ("nud_V_RotateSpeed_Min");
+            this.nud_V_RotateSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_RotateSpeed_Min.TabIndex = (1);
+            this.nud_V_RotateSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_RotateSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_RotateSpeed
+            // 
+            this.cb_V_RotateSpeed.AutoSize = (true);
+            this.cb_V_RotateSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_RotateSpeed.Name = ("cb_V_RotateSpeed");
+            this.cb_V_RotateSpeed.Size = (new global::System.Drawing.Size(157, 19));
+            this.cb_V_RotateSpeed.TabIndex = (0);
+            this.cb_V_RotateSpeed.Text = ("Skateboard Rotate Speed");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_RotateSpeed, "The average defualt is: 1");
+            this.cb_V_RotateSpeed.UseVisualStyleBackColor = (true);
             // 
             // gb_V_MaxRotationSpeed
             // 
@@ -3511,100 +1186,2497 @@
             this.gb_V_MaxRotationSpeed.Controls.Add(this.l_V_MaxRotationSpeed_Min);
             this.gb_V_MaxRotationSpeed.Controls.Add(this.nud_V_MaxRotationSpeed_Min);
             this.gb_V_MaxRotationSpeed.Controls.Add(this.cb_V_MaxRotationSpeed);
-            this.gb_V_MaxRotationSpeed.Location = new System.Drawing.Point(6, 790);
-            this.gb_V_MaxRotationSpeed.Name = "gb_V_MaxRotationSpeed";
-            this.gb_V_MaxRotationSpeed.Size = new System.Drawing.Size(665, 60);
-            this.gb_V_MaxRotationSpeed.TabIndex = 18;
-            this.gb_V_MaxRotationSpeed.TabStop = false;
-            this.gb_V_MaxRotationSpeed.Tag = "MaxRotationSpeed";
+            this.gb_V_MaxRotationSpeed.Location = (new global::System.Drawing.Point(6, 790));
+            this.gb_V_MaxRotationSpeed.Name = ("gb_V_MaxRotationSpeed");
+            this.gb_V_MaxRotationSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MaxRotationSpeed.TabIndex = (18);
+            this.gb_V_MaxRotationSpeed.TabStop = (false);
+            this.gb_V_MaxRotationSpeed.Tag = ("MaxRotationSpeed");
             // 
             // l_V_MaxRotationSpeed_Dec
             // 
-            this.l_V_MaxRotationSpeed_Dec.Location = new System.Drawing.Point(168, 10);
-            this.l_V_MaxRotationSpeed_Dec.Name = "l_V_MaxRotationSpeed_Dec";
-            this.l_V_MaxRotationSpeed_Dec.Size = new System.Drawing.Size(201, 50);
-            this.l_V_MaxRotationSpeed_Dec.TabIndex = 7;
-            this.l_V_MaxRotationSpeed_Dec.Text = "The max speed the skateboard will rotate at";
-            this.l_V_MaxRotationSpeed_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.l_V_MaxRotationSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_MaxRotationSpeed_Dec.Name = ("l_V_MaxRotationSpeed_Dec");
+            this.l_V_MaxRotationSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MaxRotationSpeed_Dec.TabIndex = (7);
+            this.l_V_MaxRotationSpeed_Dec.Text = ("The max speed the skateboard will rotate at");
+            this.l_V_MaxRotationSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
             // l_V_MaxRotationSpeed_Max
             // 
-            this.l_V_MaxRotationSpeed_Max.AutoSize = true;
-            this.l_V_MaxRotationSpeed_Max.Location = new System.Drawing.Point(540, 13);
-            this.l_V_MaxRotationSpeed_Max.Name = "l_V_MaxRotationSpeed_Max";
-            this.l_V_MaxRotationSpeed_Max.Size = new System.Drawing.Size(78, 20);
-            this.l_V_MaxRotationSpeed_Max.TabIndex = 4;
-            this.l_V_MaxRotationSpeed_Max.Text = "Maximum:";
+            this.l_V_MaxRotationSpeed_Max.AutoSize = (true);
+            this.l_V_MaxRotationSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_MaxRotationSpeed_Max.Name = ("l_V_MaxRotationSpeed_Max");
+            this.l_V_MaxRotationSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_MaxRotationSpeed_Max.TabIndex = (4);
+            this.l_V_MaxRotationSpeed_Max.Text = ("Maximum:");
             // 
             // nud_V_MaxRotationSpeed_Max
             // 
-            this.nud_V_MaxRotationSpeed_Max.Location = new System.Drawing.Point(540, 31);
-            this.nud_V_MaxRotationSpeed_Max.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MaxRotationSpeed_Max.Name = "nud_V_MaxRotationSpeed_Max";
-            this.nud_V_MaxRotationSpeed_Max.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MaxRotationSpeed_Max.TabIndex = 3;
-            this.nud_V_MaxRotationSpeed_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MaxRotationSpeed_Max.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
+            this.nud_V_MaxRotationSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_MaxRotationSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MaxRotationSpeed_Max.Name = ("nud_V_MaxRotationSpeed_Max");
+            this.nud_V_MaxRotationSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MaxRotationSpeed_Max.TabIndex = (3);
+            this.nud_V_MaxRotationSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MaxRotationSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
             // 
             // l_V_MaxRotationSpeed_Min
             // 
-            this.l_V_MaxRotationSpeed_Min.AutoSize = true;
-            this.l_V_MaxRotationSpeed_Min.Location = new System.Drawing.Point(410, 13);
-            this.l_V_MaxRotationSpeed_Min.Name = "l_V_MaxRotationSpeed_Min";
-            this.l_V_MaxRotationSpeed_Min.Size = new System.Drawing.Size(75, 20);
-            this.l_V_MaxRotationSpeed_Min.TabIndex = 2;
-            this.l_V_MaxRotationSpeed_Min.Text = "Minimum:";
+            this.l_V_MaxRotationSpeed_Min.AutoSize = (true);
+            this.l_V_MaxRotationSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_MaxRotationSpeed_Min.Name = ("l_V_MaxRotationSpeed_Min");
+            this.l_V_MaxRotationSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MaxRotationSpeed_Min.TabIndex = (2);
+            this.l_V_MaxRotationSpeed_Min.Text = ("Minimum:");
             // 
             // nud_V_MaxRotationSpeed_Min
             // 
-            this.nud_V_MaxRotationSpeed_Min.Location = new System.Drawing.Point(410, 31);
-            this.nud_V_MaxRotationSpeed_Min.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nud_V_MaxRotationSpeed_Min.Name = "nud_V_MaxRotationSpeed_Min";
-            this.nud_V_MaxRotationSpeed_Min.Size = new System.Drawing.Size(86, 27);
-            this.nud_V_MaxRotationSpeed_Min.TabIndex = 1;
-            this.nud_V_MaxRotationSpeed_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nud_V_MaxRotationSpeed_Min.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nud_V_MaxRotationSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_MaxRotationSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MaxRotationSpeed_Min.Name = ("nud_V_MaxRotationSpeed_Min");
+            this.nud_V_MaxRotationSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MaxRotationSpeed_Min.TabIndex = (1);
+            this.nud_V_MaxRotationSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MaxRotationSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
             // cb_V_MaxRotationSpeed
             // 
-            this.cb_V_MaxRotationSpeed.AutoSize = true;
-            this.cb_V_MaxRotationSpeed.Location = new System.Drawing.Point(6, 25);
-            this.cb_V_MaxRotationSpeed.Name = "cb_V_MaxRotationSpeed";
-            this.cb_V_MaxRotationSpeed.Size = new System.Drawing.Size(246, 24);
-            this.cb_V_MaxRotationSpeed.TabIndex = 0;
-            this.cb_V_MaxRotationSpeed.Text = "Skateboard Max Rotation Speed";
+            this.cb_V_MaxRotationSpeed.AutoSize = (true);
+            this.cb_V_MaxRotationSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_MaxRotationSpeed.Name = ("cb_V_MaxRotationSpeed");
+            this.cb_V_MaxRotationSpeed.Size = (new global::System.Drawing.Size(121, 19));
+            this.cb_V_MaxRotationSpeed.TabIndex = (0);
+            this.cb_V_MaxRotationSpeed.Text = ("Max Rotate Speed");
             this.tt_VehicleStats.SetToolTip(this.cb_V_MaxRotationSpeed, "The average defualt is: 0.5");
-            this.cb_V_MaxRotationSpeed.UseVisualStyleBackColor = true;
+            this.cb_V_MaxRotationSpeed.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_MaxRideSpeed
+            // 
+            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Dec);
+            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Max);
+            this.gb_V_MaxRideSpeed.Controls.Add(this.nud_V_MaxRideSpeed_Max);
+            this.gb_V_MaxRideSpeed.Controls.Add(this.l_V_MaxRideSpeed_Min);
+            this.gb_V_MaxRideSpeed.Controls.Add(this.nud_V_MaxRideSpeed_Min);
+            this.gb_V_MaxRideSpeed.Controls.Add(this.cb_V_MaxRideSpeed);
+            this.gb_V_MaxRideSpeed.Location = (new global::System.Drawing.Point(6, 730));
+            this.gb_V_MaxRideSpeed.Name = ("gb_V_MaxRideSpeed");
+            this.gb_V_MaxRideSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MaxRideSpeed.TabIndex = (17);
+            this.gb_V_MaxRideSpeed.TabStop = (false);
+            this.gb_V_MaxRideSpeed.Tag = ("MaxRideSpeed");
+            // 
+            // l_V_MaxRideSpeed_Dec
+            // 
+            this.l_V_MaxRideSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_MaxRideSpeed_Dec.Name = ("l_V_MaxRideSpeed_Dec");
+            this.l_V_MaxRideSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MaxRideSpeed_Dec.TabIndex = (7);
+            this.l_V_MaxRideSpeed_Dec.Text = ("The maxim speed the skateboard can go you will keep going faster as kick of the floor");
+            this.l_V_MaxRideSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_MaxRideSpeed_Max
+            // 
+            this.l_V_MaxRideSpeed_Max.AutoSize = (true);
+            this.l_V_MaxRideSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_MaxRideSpeed_Max.Name = ("l_V_MaxRideSpeed_Max");
+            this.l_V_MaxRideSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_MaxRideSpeed_Max.TabIndex = (4);
+            this.l_V_MaxRideSpeed_Max.Text = ("Maximum:");
+            // 
+            // nud_V_MaxRideSpeed_Max
+            // 
+            this.nud_V_MaxRideSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_MaxRideSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MaxRideSpeed_Max.Name = ("nud_V_MaxRideSpeed_Max");
+            this.nud_V_MaxRideSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MaxRideSpeed_Max.TabIndex = (3);
+            this.nud_V_MaxRideSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MaxRideSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_MaxRideSpeed_Min
+            // 
+            this.l_V_MaxRideSpeed_Min.AutoSize = (true);
+            this.l_V_MaxRideSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_MaxRideSpeed_Min.Name = ("l_V_MaxRideSpeed_Min");
+            this.l_V_MaxRideSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MaxRideSpeed_Min.TabIndex = (2);
+            this.l_V_MaxRideSpeed_Min.Text = ("Minimum:");
+            // 
+            // nud_V_MaxRideSpeed_Min
+            // 
+            this.nud_V_MaxRideSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_MaxRideSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MaxRideSpeed_Min.Name = ("nud_V_MaxRideSpeed_Min");
+            this.nud_V_MaxRideSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MaxRideSpeed_Min.TabIndex = (1);
+            this.nud_V_MaxRideSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MaxRideSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_MaxRideSpeed
+            // 
+            this.cb_V_MaxRideSpeed.AutoSize = (true);
+            this.cb_V_MaxRideSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_MaxRideSpeed.Name = ("cb_V_MaxRideSpeed");
+            this.cb_V_MaxRideSpeed.Size = (new global::System.Drawing.Size(146, 19));
+            this.cb_V_MaxRideSpeed.TabIndex = (0);
+            this.cb_V_MaxRideSpeed.Text = ("Skateboard Ride Speed");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MaxRideSpeed, "The average defualt is: 0.5");
+            this.cb_V_MaxRideSpeed.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_InitialSpeed
+            // 
+            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Dec);
+            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Max);
+            this.gb_V_InitialSpeed.Controls.Add(this.nud_V_InitialSpeed_Max);
+            this.gb_V_InitialSpeed.Controls.Add(this.l_V_InitialSpeed_Min);
+            this.gb_V_InitialSpeed.Controls.Add(this.nud_V_InitialSpeed_Min);
+            this.gb_V_InitialSpeed.Controls.Add(this.cb_V_InitialSpeed);
+            this.gb_V_InitialSpeed.Location = (new global::System.Drawing.Point(6, 670));
+            this.gb_V_InitialSpeed.Name = ("gb_V_InitialSpeed");
+            this.gb_V_InitialSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_InitialSpeed.TabIndex = (16);
+            this.gb_V_InitialSpeed.TabStop = (false);
+            this.gb_V_InitialSpeed.Tag = ("InitialSpeed");
+            // 
+            // l_V_InitialSpeed_Dec
+            // 
+            this.l_V_InitialSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_InitialSpeed_Dec.Name = ("l_V_InitialSpeed_Dec");
+            this.l_V_InitialSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_InitialSpeed_Dec.TabIndex = (7);
+            this.l_V_InitialSpeed_Dec.Text = ("The launch speed for the skate board setting this very high will teleport");
+            this.l_V_InitialSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_InitialSpeed_Max
+            // 
+            this.l_V_InitialSpeed_Max.AutoSize = (true);
+            this.l_V_InitialSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_InitialSpeed_Max.Name = ("l_V_InitialSpeed_Max");
+            this.l_V_InitialSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_InitialSpeed_Max.TabIndex = (4);
+            this.l_V_InitialSpeed_Max.Text = ("Maximum:");
+            // 
+            // nud_V_InitialSpeed_Max
+            // 
+            this.nud_V_InitialSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_InitialSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_InitialSpeed_Max.Name = ("nud_V_InitialSpeed_Max");
+            this.nud_V_InitialSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_InitialSpeed_Max.TabIndex = (3);
+            this.nud_V_InitialSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_InitialSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_InitialSpeed_Min
+            // 
+            this.l_V_InitialSpeed_Min.AutoSize = (true);
+            this.l_V_InitialSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_InitialSpeed_Min.Name = ("l_V_InitialSpeed_Min");
+            this.l_V_InitialSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_InitialSpeed_Min.TabIndex = (2);
+            this.l_V_InitialSpeed_Min.Text = ("Minimum:");
+            // 
+            // nud_V_InitialSpeed_Min
+            // 
+            this.nud_V_InitialSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_InitialSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_InitialSpeed_Min.Name = ("nud_V_InitialSpeed_Min");
+            this.nud_V_InitialSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_InitialSpeed_Min.TabIndex = (1);
+            this.nud_V_InitialSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_InitialSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_InitialSpeed
+            // 
+            this.cb_V_InitialSpeed.AutoSize = (true);
+            this.cb_V_InitialSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_InitialSpeed.Name = ("cb_V_InitialSpeed");
+            this.cb_V_InitialSpeed.Size = (new global::System.Drawing.Size(152, 19));
+            this.cb_V_InitialSpeed.TabIndex = (0);
+            this.cb_V_InitialSpeed.Text = ("Skateboard Initial Speed");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_InitialSpeed, "The average defualt is: 0.5");
+            this.cb_V_InitialSpeed.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_ExtraTorque
+            // 
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Dec);
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Max);
+            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Max);
+            this.gb_V_ExtraTorque.Controls.Add(this.l_V_ExtraTorque_Min);
+            this.gb_V_ExtraTorque.Controls.Add(this.nud_V_ExtraTorque_Min);
+            this.gb_V_ExtraTorque.Controls.Add(this.cb_V_ExtraTorque);
+            this.gb_V_ExtraTorque.Location = (new global::System.Drawing.Point(6, 610));
+            this.gb_V_ExtraTorque.Name = ("gb_V_ExtraTorque");
+            this.gb_V_ExtraTorque.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_ExtraTorque.TabIndex = (15);
+            this.gb_V_ExtraTorque.TabStop = (false);
+            this.gb_V_ExtraTorque.Tag = ("ExtraTorqueFactor");
+            // 
+            // l_V_ExtraTorque_Dec
+            // 
+            this.l_V_ExtraTorque_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_ExtraTorque_Dec.Name = ("l_V_ExtraTorque_Dec");
+            this.l_V_ExtraTorque_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_ExtraTorque_Dec.TabIndex = (7);
+            this.l_V_ExtraTorque_Dec.Text = ("Setting this very high will cause the vehicle to spin the higher the faster it spins.");
+            this.l_V_ExtraTorque_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_ExtraTorque_Max
+            // 
+            this.l_V_ExtraTorque_Max.AutoSize = (true);
+            this.l_V_ExtraTorque_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_ExtraTorque_Max.Name = ("l_V_ExtraTorque_Max");
+            this.l_V_ExtraTorque_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_ExtraTorque_Max.TabIndex = (4);
+            this.l_V_ExtraTorque_Max.Text = ("Maximum:");
+            // 
+            // nud_V_ExtraTorque_Max
+            // 
+            this.nud_V_ExtraTorque_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_ExtraTorque_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ExtraTorque_Max.Name = ("nud_V_ExtraTorque_Max");
+            this.nud_V_ExtraTorque_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ExtraTorque_Max.TabIndex = (3);
+            this.nud_V_ExtraTorque_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ExtraTorque_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_ExtraTorque_Min
+            // 
+            this.l_V_ExtraTorque_Min.AutoSize = (true);
+            this.l_V_ExtraTorque_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_ExtraTorque_Min.Name = ("l_V_ExtraTorque_Min");
+            this.l_V_ExtraTorque_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_ExtraTorque_Min.TabIndex = (2);
+            this.l_V_ExtraTorque_Min.Text = ("Minimum:");
+            // 
+            // nud_V_ExtraTorque_Min
+            // 
+            this.nud_V_ExtraTorque_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_ExtraTorque_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ExtraTorque_Min.Name = ("nud_V_ExtraTorque_Min");
+            this.nud_V_ExtraTorque_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ExtraTorque_Min.TabIndex = (1);
+            this.nud_V_ExtraTorque_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ExtraTorque_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_ExtraTorque
+            // 
+            this.cb_V_ExtraTorque.AutoSize = (true);
+            this.cb_V_ExtraTorque.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_ExtraTorque.Name = ("cb_V_ExtraTorque");
+            this.cb_V_ExtraTorque.Size = (new global::System.Drawing.Size(127, 19));
+            this.cb_V_ExtraTorque.TabIndex = (0);
+            this.cb_V_ExtraTorque.Text = ("Extra Torque Factor");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ExtraTorque, "The average defualt is: 0.5");
+            this.cb_V_ExtraTorque.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_TopSpeed
+            // 
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Dec);
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Max);
+            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Max);
+            this.gb_V_TopSpeed.Controls.Add(this.l_V_TopSpeed_Min);
+            this.gb_V_TopSpeed.Controls.Add(this.nud_V_TopSpeed_Min);
+            this.gb_V_TopSpeed.Controls.Add(this.cb_V_TopSpeed);
+            this.gb_V_TopSpeed.Location = (new global::System.Drawing.Point(6, 550));
+            this.gb_V_TopSpeed.Name = ("gb_V_TopSpeed");
+            this.gb_V_TopSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_TopSpeed.TabIndex = (14);
+            this.gb_V_TopSpeed.TabStop = (false);
+            this.gb_V_TopSpeed.Tag = ("VehicleTopSpeed");
+            // 
+            // l_V_TopSpeed_Dec
+            // 
+            this.l_V_TopSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_TopSpeed_Dec.Name = ("l_V_TopSpeed_Dec");
+            this.l_V_TopSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_TopSpeed_Dec.TabIndex = (7);
+            this.l_V_TopSpeed_Dec.Text = ("Setting high will make the vehicle go very slow but gradually get faster. Setting very low makes it freak out");
+            this.l_V_TopSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_TopSpeed_Max
+            // 
+            this.l_V_TopSpeed_Max.AutoSize = (true);
+            this.l_V_TopSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_TopSpeed_Max.Name = ("l_V_TopSpeed_Max");
+            this.l_V_TopSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_TopSpeed_Max.TabIndex = (4);
+            this.l_V_TopSpeed_Max.Text = ("Maximum:");
+            // 
+            // nud_V_TopSpeed_Max
+            // 
+            this.nud_V_TopSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_TopSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_TopSpeed_Max.Name = ("nud_V_TopSpeed_Max");
+            this.nud_V_TopSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_TopSpeed_Max.TabIndex = (3);
+            this.nud_V_TopSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_TopSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_TopSpeed_Min
+            // 
+            this.l_V_TopSpeed_Min.AutoSize = (true);
+            this.l_V_TopSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_TopSpeed_Min.Name = ("l_V_TopSpeed_Min");
+            this.l_V_TopSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_TopSpeed_Min.TabIndex = (2);
+            this.l_V_TopSpeed_Min.Text = ("Minimum:");
+            // 
+            // nud_V_TopSpeed_Min
+            // 
+            this.nud_V_TopSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_TopSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_TopSpeed_Min.Name = ("nud_V_TopSpeed_Min");
+            this.nud_V_TopSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_TopSpeed_Min.TabIndex = (1);
+            this.nud_V_TopSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_TopSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_TopSpeed
+            // 
+            this.cb_V_TopSpeed.AutoSize = (true);
+            this.cb_V_TopSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_TopSpeed.Name = ("cb_V_TopSpeed");
+            this.cb_V_TopSpeed.Size = (new global::System.Drawing.Size(120, 19));
+            this.cb_V_TopSpeed.TabIndex = (0);
+            this.cb_V_TopSpeed.Text = ("Vehicle Top Speed");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_TopSpeed, "The average defualt is: 37");
+            this.cb_V_TopSpeed.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_MVSEP
+            // 
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Dec);
+            this.gb_V_MVSEP.Controls.Add(this.l__V_MVSEP_Max);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Max);
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.cb_V_MVSEP);
+            this.gb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 490));
+            this.gb_V_MVSEP.Name = ("gb_V_MVSEP");
+            this.gb_V_MVSEP.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MVSEP.TabIndex = (13);
+            this.gb_V_MVSEP.TabStop = (false);
+            this.gb_V_MVSEP.Tag = ("MinVehicleSpeedToEjectPlayer");
+            // 
+            // l_V_MVSEP_Dec
+            // 
+            this.l_V_MVSEP_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_MVSEP_Dec.Name = ("l_V_MVSEP_Dec");
+            this.l_V_MVSEP_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MVSEP_Dec.TabIndex = (7);
+            this.l_V_MVSEP_Dec.Text = ("Recomended to set fairly high unless you like getting thrown off bikes");
+            this.l_V_MVSEP_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l__V_MVSEP_Max
+            // 
+            this.l__V_MVSEP_Max.AutoSize = (true);
+            this.l__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l__V_MVSEP_Max.Name = ("l__V_MVSEP_Max");
+            this.l__V_MVSEP_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l__V_MVSEP_Max.TabIndex = (4);
+            this.l__V_MVSEP_Max.Text = ("Maximum:");
+            // 
+            // nud__V_MVSEP_Max
+            // 
+            this.nud__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud__V_MVSEP_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud__V_MVSEP_Max.Name = ("nud__V_MVSEP_Max");
+            this.nud__V_MVSEP_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud__V_MVSEP_Max.TabIndex = (3);
+            this.nud__V_MVSEP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud__V_MVSEP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_MVSEP_Min
+            // 
+            this.l_V_MVSEP_Min.AutoSize = (true);
+            this.l_V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_MVSEP_Min.Name = ("l_V_MVSEP_Min");
+            this.l_V_MVSEP_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MVSEP_Min.TabIndex = (2);
+            this.l_V_MVSEP_Min.Text = ("Minimum:");
+            // 
+            // nud__V_MVSEP_Min
+            // 
+            this.nud__V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud__V_MVSEP_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud__V_MVSEP_Min.Name = ("nud__V_MVSEP_Min");
+            this.nud__V_MVSEP_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud__V_MVSEP_Min.TabIndex = (1);
+            this.nud__V_MVSEP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud__V_MVSEP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_MVSEP
+            // 
+            this.cb_V_MVSEP.AutoSize = (true);
+            this.cb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_MVSEP.Name = ("cb_V_MVSEP");
+            this.cb_V_MVSEP.Size = (new global::System.Drawing.Size(160, 19));
+            this.cb_V_MVSEP.TabIndex = (0);
+            this.cb_V_MVSEP.Text = ("Min Speed To Eject Player");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MVSEP, "The average defualt is: 70");
+            this.cb_V_MVSEP.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_MinVSWE
+            // 
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Dec);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.cb_V_MinVSWE);
+            this.gb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 430));
+            this.gb_V_MinVSWE.Name = ("gb_V_MinVSWE");
+            this.gb_V_MinVSWE.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MinVSWE.TabIndex = (12);
+            this.gb_V_MinVSWE.TabStop = (false);
+            this.gb_V_MinVSWE.Tag = ("MinVehicleSpeedForWheeliesAndEndos");
+            // 
+            // l_V_MinVSWE_Dec
+            // 
+            this.l_V_MinVSWE_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_MinVSWE_Dec.Name = ("l_V_MinVSWE_Dec");
+            this.l_V_MinVSWE_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MinVSWE_Dec.TabIndex = (7);
+            this.l_V_MinVSWE_Dec.Text = ("Recomended to give this a higher value having it to low makes controling bike very hard.");
+            this.l_V_MinVSWE_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_MinVSWE_Max
+            // 
+            this.l_V_MinVSWE_Max.AutoSize = (true);
+            this.l_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_MinVSWE_Max.Name = ("l_V_MinVSWE_Max");
+            this.l_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_MinVSWE_Max.TabIndex = (4);
+            this.l_V_MinVSWE_Max.Text = ("Maximum:");
+            // 
+            // nud_V_MinVSWE_Max
+            // 
+            this.nud_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_MinVSWE_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Max.Name = ("nud_V_MinVSWE_Max");
+            this.nud_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MinVSWE_Max.TabIndex = (3);
+            this.nud_V_MinVSWE_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MinVSWE_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_MinVSWE_Min
+            // 
+            this.l_V_MinVSWE_Min.AutoSize = (true);
+            this.l_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_MinVSWE_Min.Name = ("l_V_MinVSWE_Min");
+            this.l_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MinVSWE_Min.TabIndex = (2);
+            this.l_V_MinVSWE_Min.Text = ("Minimum:");
+            // 
+            // nud_V_MinVSWE_Min
+            // 
+            this.nud_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_MinVSWE_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Min.Name = ("nud_V_MinVSWE_Min");
+            this.nud_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MinVSWE_Min.TabIndex = (1);
+            this.nud_V_MinVSWE_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MinVSWE_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_MinVSWE
+            // 
+            this.cb_V_MinVSWE.AutoSize = (true);
+            this.cb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_MinVSWE.Name = ("cb_V_MinVSWE");
+            this.cb_V_MinVSWE.Size = (new global::System.Drawing.Size(152, 19));
+            this.cb_V_MinVSWE.TabIndex = (0);
+            this.cb_V_MinVSWE.Text = ("Min Speed For Wheelies");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MinVSWE, "The average defualt is: 2");
+            this.cb_V_MinVSWE.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_ETMinRPM
+            // 
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Dec);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.cb_V_ETMinRPM);
+            this.gb_V_ETMinRPM.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_V_ETMinRPM.Name = ("gb_V_ETMinRPM");
+            this.gb_V_ETMinRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_ETMinRPM.TabIndex = (11);
+            this.gb_V_ETMinRPM.TabStop = (false);
+            this.gb_V_ETMinRPM.Tag = ("Engine_TorqueFactorAtMinRPM");
+            // 
+            // l_V_ETMinRPM_Dec
+            // 
+            this.l_V_ETMinRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_ETMinRPM_Dec.Name = ("l_V_ETMinRPM_Dec");
+            this.l_V_ETMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_ETMinRPM_Dec.TabIndex = (7);
+            this.l_V_ETMinRPM_Dec.Text = ("If this gets set to high the vehicle will become very slow and hard to steer.");
+            this.l_V_ETMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_ETMinRPM_Max
+            // 
+            this.l_V_ETMinRPM_Max.AutoSize = (true);
+            this.l_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_ETMinRPM_Max.Name = ("l_V_ETMinRPM_Max");
+            this.l_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_ETMinRPM_Max.TabIndex = (4);
+            this.l_V_ETMinRPM_Max.Text = ("Maximum:");
+            // 
+            // nud_V_ETMinRPM_Max
+            // 
+            this.nud_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_ETMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETMinRPM_Max.Name = ("nud_V_ETMinRPM_Max");
+            this.nud_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETMinRPM_Max.TabIndex = (3);
+            this.nud_V_ETMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_ETMinRPM_Min
+            // 
+            this.l_V_ETMinRPM_Min.AutoSize = (true);
+            this.l_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_ETMinRPM_Min.Name = ("l_V_ETMinRPM_Min");
+            this.l_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_ETMinRPM_Min.TabIndex = (2);
+            this.l_V_ETMinRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_ETMinRPM_Min
+            // 
+            this.nud_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_ETMinRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETMinRPM_Min.Name = ("nud_V_ETMinRPM_Min");
+            this.nud_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETMinRPM_Min.TabIndex = (1);
+            this.nud_V_ETMinRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETMinRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_ETMinRPM
+            // 
+            this.cb_V_ETMinRPM.AutoSize = (true);
+            this.cb_V_ETMinRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_ETMinRPM.Name = ("cb_V_ETMinRPM");
+            this.cb_V_ETMinRPM.Size = (new global::System.Drawing.Size(137, 19));
+            this.cb_V_ETMinRPM.TabIndex = (0);
+            this.cb_V_ETMinRPM.Text = ("Torque Factor At Min");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETMinRPM, "The average defualt is: 0.77");
+            this.cb_V_ETMinRPM.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_ETFMaxRPM
+            // 
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
+            this.gb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_V_ETFMaxRPM.Name = ("gb_V_ETFMaxRPM");
+            this.gb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_ETFMaxRPM.TabIndex = (10);
+            this.gb_V_ETFMaxRPM.TabStop = (false);
+            this.gb_V_ETFMaxRPM.Tag = ("Engine_TorqueFactorAtMaxRPM");
+            // 
+            // l_V_ETFMaxRPM_Dec
+            // 
+            this.l_V_ETFMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_ETFMaxRPM_Dec.Name = ("l_V_ETFMaxRPM_Dec");
+            this.l_V_ETFMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_ETFMaxRPM_Dec.TabIndex = (7);
+            this.l_V_ETFMaxRPM_Dec.Text = ("Will greatly increase the vehicles speed the higher you set.");
+            this.l_V_ETFMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_ETFMaxRPM_Max
+            // 
+            this.l_V_ETFMaxRPM_Max.AutoSize = (true);
+            this.l_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_ETFMaxRPM_Max.Name = ("l_V_ETFMaxRPM_Max");
+            this.l_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_ETFMaxRPM_Max.TabIndex = (4);
+            this.l_V_ETFMaxRPM_Max.Text = ("Maximum:");
+            // 
+            // nud_V_ETFMaxRPM_Max
+            // 
+            this.nud_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_ETFMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETFMaxRPM_Max.Name = ("nud_V_ETFMaxRPM_Max");
+            this.nud_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETFMaxRPM_Max.TabIndex = (3);
+            this.nud_V_ETFMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETFMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_ETFMaxRPM_Min
+            // 
+            this.l_V_ETFMaxRPM_Min.AutoSize = (true);
+            this.l_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_ETFMaxRPM_Min.Name = ("l_V_ETFMaxRPM_Min");
+            this.l_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_ETFMaxRPM_Min.TabIndex = (2);
+            this.l_V_ETFMaxRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_ETFMaxRPM_Min
+            // 
+            this.nud_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_ETFMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETFMaxRPM_Min.Name = ("nud_V_ETFMaxRPM_Min");
+            this.nud_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETFMaxRPM_Min.TabIndex = (1);
+            this.nud_V_ETFMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETFMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_ETFMaxRPM
+            // 
+            this.cb_V_ETFMaxRPM.AutoSize = (true);
+            this.cb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_ETFMaxRPM.Name = ("cb_V_ETFMaxRPM");
+            this.cb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(142, 19));
+            this.cb_V_ETFMaxRPM.TabIndex = (0);
+            this.cb_V_ETFMaxRPM.Text = ("Torque Factor At Max ");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
+            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_EORPM
+            // 
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Dec);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
+            this.gb_V_EORPM.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_V_EORPM.Name = ("gb_V_EORPM");
+            this.gb_V_EORPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EORPM.TabIndex = (9);
+            this.gb_V_EORPM.TabStop = (false);
+            this.gb_V_EORPM.Tag = ("Engine_OptRPM");
+            // 
+            // l_V_EORPM_Dec
+            // 
+            this.l_V_EORPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EORPM_Dec.Name = ("l_V_EORPM_Dec");
+            this.l_V_EORPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EORPM_Dec.TabIndex = (7);
+            this.l_V_EORPM_Dec.Text = ("Give increased speed while keeping some control when set high.");
+            this.l_V_EORPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_EORPM_Max
+            // 
+            this.l_V_EORPM_Max.AutoSize = (true);
+            this.l_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EORPM_Max.Name = ("l_V_EORPM_Max");
+            this.l_V_EORPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EORPM_Max.TabIndex = (4);
+            this.l_V_EORPM_Max.Text = ("Maximum:");
+            // 
+            // nud_V_EORPM_Max
+            // 
+            this.nud_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EORPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EORPM_Max.Name = ("nud_V_EORPM_Max");
+            this.nud_V_EORPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EORPM_Max.TabIndex = (3);
+            this.nud_V_EORPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EORPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l_V_EORPM_Min
+            // 
+            this.l_V_EORPM_Min.AutoSize = (true);
+            this.l_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EORPM_Min.Name = ("l_V_EORPM_Min");
+            this.l_V_EORPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EORPM_Min.TabIndex = (2);
+            this.l_V_EORPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EORPM_Min
+            // 
+            this.nud_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EORPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EORPM_Min.Name = ("nud_V_EORPM_Min");
+            this.nud_V_EORPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EORPM_Min.TabIndex = (1);
+            this.nud_V_EORPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EORPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3473, 0, 0, 0 }));
+            // 
+            // cb_V_EORPM
+            // 
+            this.cb_V_EORPM.AutoSize = (true);
+            this.cb_V_EORPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EORPM.Name = ("cb_V_EORPM");
+            this.cb_V_EORPM.Size = (new global::System.Drawing.Size(117, 19));
+            this.cb_V_EORPM.TabIndex = (0);
+            this.cb_V_EORPM.Text = ("Vehicle Opt RPM:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EORPM, "The average defualt is: 3473");
+            this.cb_V_EORPM.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_EMinRPM
+            // 
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Dec);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_min);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
+            this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
+            this.gb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_V_EMinRPM.Name = ("gb_V_EMinRPM");
+            this.gb_V_EMinRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMinRPM.TabIndex = (9);
+            this.gb_V_EMinRPM.TabStop = (false);
+            this.gb_V_EMinRPM.Tag = ("Engine_MinRPM");
+            // 
+            // l_V_EMinRPM_Dec
+            // 
+            this.l_V_EMinRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMinRPM_Dec.Name = ("l_V_EMinRPM_Dec");
+            this.l_V_EMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMinRPM_Dec.TabIndex = (7);
+            this.l_V_EMinRPM_Dec.Text = ("Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.");
+            this.l_V_EMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_EMinRPM_Max
+            // 
+            this.l_V_EMinRPM_Max.AutoSize = (true);
+            this.l_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMinRPM_Max.Name = ("l_V_EMinRPM_Max");
+            this.l_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMinRPM_Max.TabIndex = (4);
+            this.l_V_EMinRPM_Max.Text = ("Maximum:");
+            // 
+            // nud_V_EMinRPM_Max
+            // 
+            this.nud_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMinRPM_Max.Name = ("nud_V_EMinRPM_Max");
+            this.nud_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMinRPM_Max.TabIndex = (3);
+            this.nud_V_EMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 5000, 0, 0, 0 }));
+            // 
+            // l_V_EMinRPM_min
+            // 
+            this.l_V_EMinRPM_min.AutoSize = (true);
+            this.l_V_EMinRPM_min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMinRPM_min.Name = ("l_V_EMinRPM_min");
+            this.l_V_EMinRPM_min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMinRPM_min.TabIndex = (2);
+            this.l_V_EMinRPM_min.Text = ("Minimum:");
+            // 
+            // nud_V_EMinRPM_min
+            // 
+            this.nud_V_EMinRPM_min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMinRPM_min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMinRPM_min.Name = ("nud_V_EMinRPM_min");
+            this.nud_V_EMinRPM_min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMinRPM_min.TabIndex = (1);
+            this.nud_V_EMinRPM_min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMinRPM_min.Value = (new global::System.Decimal(new global::System.Int32[] { 885, 0, 0, 0 }));
+            // 
+            // cb_V_EMinRPM
+            // 
+            this.cb_V_EMinRPM.AutoSize = (true);
+            this.cb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMinRPM.Name = ("cb_V_EMinRPM");
+            this.cb_V_EMinRPM.Size = (new global::System.Drawing.Size(115, 19));
+            this.cb_V_EMinRPM.TabIndex = (0);
+            this.cb_V_EMinRPM.Text = ("Vehicle Min RPM");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMinRPM, "The average defualt is: 885");
+            this.cb_V_EMinRPM.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_EMT
+            // 
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Dec);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
+            this.gb_V_EMT.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_V_EMT.Name = ("gb_V_EMT");
+            this.gb_V_EMT.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMT.TabIndex = (8);
+            this.gb_V_EMT.TabStop = (false);
+            this.gb_V_EMT.Tag = ("Engine_MaxTorque");
+            // 
+            // l_V_EMT_Dec
+            // 
+            this.l_V_EMT_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMT_Dec.Name = ("l_V_EMT_Dec");
+            this.l_V_EMT_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMT_Dec.TabIndex = (7);
+            this.l_V_EMT_Dec.Text = ("Similar to max rpm but with a little less control and bit more kick.");
+            this.l_V_EMT_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_EMT_Max
+            // 
+            this.l_V_EMT_Max.AutoSize = (true);
+            this.l_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMT_Max.Name = ("l_V_EMT_Max");
+            this.l_V_EMT_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMT_Max.TabIndex = (4);
+            this.l_V_EMT_Max.Text = ("Maximum:");
+            // 
+            // nud_V_EMT_Max
+            // 
+            this.nud_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMT_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMT_Max.Name = ("nud_V_EMT_Max");
+            this.nud_V_EMT_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMT_Max.TabIndex = (3);
+            this.nud_V_EMT_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMT_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
+            // 
+            // l_V_EMT_Min
+            // 
+            this.l_V_EMT_Min.AutoSize = (true);
+            this.l_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMT_Min.Name = ("l_V_EMT_Min");
+            this.l_V_EMT_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMT_Min.TabIndex = (2);
+            this.l_V_EMT_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EMT_Min
+            // 
+            this.nud_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMT_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMT_Min.Name = ("nud_V_EMT_Min");
+            this.nud_V_EMT_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMT_Min.TabIndex = (1);
+            this.nud_V_EMT_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMT_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // cb_V_EMT
+            // 
+            this.cb_V_EMT.AutoSize = (true);
+            this.cb_V_EMT.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMT.Name = ("cb_V_EMT");
+            this.cb_V_EMT.Size = (new global::System.Drawing.Size(131, 19));
+            this.cb_V_EMT.TabIndex = (0);
+            this.cb_V_EMT.Text = ("Vehicle Max Torque:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMT, "The average defualt is: 100");
+            this.cb_V_EMT.UseVisualStyleBackColor = (true);
+            // 
+            // gb_V_EMaxRPM
+            // 
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Dec);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
+            this.gb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_V_EMaxRPM.Name = ("gb_V_EMaxRPM");
+            this.gb_V_EMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMaxRPM.TabIndex = (3);
+            this.gb_V_EMaxRPM.TabStop = (false);
+            this.gb_V_EMaxRPM.Tag = ("Engine_MaxRPM");
+            // 
+            // l_V_EMaxRPM_Dec
+            // 
+            this.l_V_EMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMaxRPM_Dec.Name = ("l_V_EMaxRPM_Dec");
+            this.l_V_EMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMaxRPM_Dec.TabIndex = (7);
+            this.l_V_EMaxRPM_Dec.Text = ("One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.");
+            this.l_V_EMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_EMaxRPM_Max
+            // 
+            this.l_V_EMaxRPM_Max.AutoSize = (true);
+            this.l_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMaxRPM_Max.Name = ("l_V_EMaxRPM_Max");
+            this.l_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMaxRPM_Max.TabIndex = (4);
+            this.l_V_EMaxRPM_Max.Text = ("Maximum:");
+            // 
+            // nud_V_EMaxRPM_Max
+            // 
+            this.nud_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMaxRPM_Max.Name = ("nud_V_EMaxRPM_Max");
+            this.nud_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMaxRPM_Max.TabIndex = (3);
+            this.nud_V_EMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l_V_EMaxRPM_Min
+            // 
+            this.l_V_EMaxRPM_Min.AutoSize = (true);
+            this.l_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMaxRPM_Min.Name = ("l_V_EMaxRPM_Min");
+            this.l_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMaxRPM_Min.TabIndex = (2);
+            this.l_V_EMaxRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EMaxRPM_Min
+            // 
+            this.nud_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMaxRPM_Min.Name = ("nud_V_EMaxRPM_Min");
+            this.nud_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMaxRPM_Min.TabIndex = (1);
+            this.nud_V_EMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3550, 0, 0, 0 }));
+            // 
+            // cb_V_EMaxRPM
+            // 
+            this.cb_V_EMaxRPM.AutoSize = (true);
+            this.cb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMaxRPM.Name = ("cb_V_EMaxRPM");
+            this.cb_V_EMaxRPM.Size = (new global::System.Drawing.Size(120, 19));
+            this.cb_V_EMaxRPM.TabIndex = (0);
+            this.cb_V_EMaxRPM.Text = ("Vehicle Max RPM:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMaxRPM, "The average defualt is: 3550");
+            this.cb_V_EMaxRPM.UseVisualStyleBackColor = (true);
+            // 
+            // gb_AirDensity
+            // 
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
+            this.gb_AirDensity.Controls.Add(this.l_AD_max);
+            this.gb_AirDensity.Controls.Add(this.nud_AD_Max);
+            this.gb_AirDensity.Controls.Add(this.l_AD_min);
+            this.gb_AirDensity.Controls.Add(this.nud_AD_Min);
+            this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
+            this.gb_AirDensity.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_AirDensity.Name = ("gb_AirDensity");
+            this.gb_AirDensity.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_AirDensity.TabIndex = (2);
+            this.gb_AirDensity.TabStop = (false);
+            this.gb_AirDensity.Tag = ("AirDensity");
+            // 
+            // l_V_AD_Dec
+            // 
+            this.l_V_AD_Dec.Location = (new global::System.Drawing.Point(138, 10));
+            this.l_V_AD_Dec.Name = ("l_V_AD_Dec");
+            this.l_V_AD_Dec.Size = (new global::System.Drawing.Size(231, 50));
+            this.l_V_AD_Dec.TabIndex = (7);
+            this.l_V_AD_Dec.Text = ("Controls how much air resistance there is for the vehicle. The lower the less air resistance.");
+            this.l_V_AD_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_AD_max
+            // 
+            this.l_AD_max.AutoSize = (true);
+            this.l_AD_max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_AD_max.Name = ("l_AD_max");
+            this.l_AD_max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_AD_max.TabIndex = (4);
+            this.l_AD_max.Text = ("Maximum:");
+            // 
+            // nud_AD_Max
+            // 
+            this.nud_AD_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_AD_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_AD_Max.Name = ("nud_AD_Max");
+            this.nud_AD_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_AD_Max.TabIndex = (3);
+            this.nud_AD_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_AD_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
+            // 
+            // l_AD_min
+            // 
+            this.l_AD_min.AutoSize = (true);
+            this.l_AD_min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_AD_min.Name = ("l_AD_min");
+            this.l_AD_min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_AD_min.TabIndex = (2);
+            this.l_AD_min.Text = ("Minimum:");
+            // 
+            // nud_AD_Min
+            // 
+            this.nud_AD_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_AD_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_AD_Min.Name = ("nud_AD_Min");
+            this.nud_AD_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_AD_Min.TabIndex = (1);
+            this.nud_AD_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            // 
+            // cb_AirDensity
+            // 
+            this.cb_AirDensity.AutoSize = (true);
+            this.cb_AirDensity.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_AirDensity.Name = ("cb_AirDensity");
+            this.cb_AirDensity.Size = (new global::System.Drawing.Size(126, 19));
+            this.cb_AirDensity.TabIndex = (0);
+            this.cb_AirDensity.Text = ("Vehicle Air Density:");
+            this.tt_VehicleStats.SetToolTip(this.cb_AirDensity, "The average defualt is: 0.7");
+            this.cb_AirDensity.UseVisualStyleBackColor = (true);
+            // 
+            // tp_NPC
+            // 
+            this.tp_NPC.AutoScroll = (true);
+            this.tp_NPC.Controls.Add(this.gb_NPC_Max_PP);
+            this.tp_NPC.Controls.Add(this.gb_NPC_HealthAmount);
+            this.tp_NPC.Controls.Add(this.gb_NPC_DamPerKMH);
+            this.tp_NPC.Controls.Add(this.gb_NPC_MSDBoss);
+            this.tp_NPC.Controls.Add(this.gb_NPC_FlatBossDam);
+            this.tp_NPC.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_NPC.Name = ("tp_NPC");
+            this.tp_NPC.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_NPC.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_NPC.TabIndex = (1);
+            this.tp_NPC.Text = ("NPC Stats");
+            this.tp_NPC.UseVisualStyleBackColor = (true);
+            // 
+            // gb_NPC_Max_PP
+            // 
+            this.gb_NPC_Max_PP.Controls.Add(this.l_NPC_Max_PP_Dec);
+            this.gb_NPC_Max_PP.Controls.Add(this.l_NPC_Max_PP_Max);
+            this.gb_NPC_Max_PP.Controls.Add(this.nud_NPC_Max_PP_Max);
+            this.gb_NPC_Max_PP.Controls.Add(this.l_NPC_Max_PP_Min);
+            this.gb_NPC_Max_PP.Controls.Add(this.nud_NPC_Max_PP_Min);
+            this.gb_NPC_Max_PP.Controls.Add(this.cb_NPC_Max_PP);
+            this.gb_NPC_Max_PP.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_NPC_Max_PP.Name = ("gb_NPC_Max_PP");
+            this.gb_NPC_Max_PP.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_NPC_Max_PP.TabIndex = (24);
+            this.gb_NPC_Max_PP.TabStop = (false);
+            this.gb_NPC_Max_PP.Tag = ("Max_pp");
+            // 
+            // l_NPC_Max_PP_Dec
+            // 
+            this.l_NPC_Max_PP_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_NPC_Max_PP_Dec.Name = ("l_NPC_Max_PP_Dec");
+            this.l_NPC_Max_PP_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_NPC_Max_PP_Dec.TabIndex = (7);
+            this.l_NPC_Max_PP_Dec.Text = ("The max amount of PP you get from photos of NPC");
+            this.l_NPC_Max_PP_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_NPC_Max_PP_Max
+            // 
+            this.l_NPC_Max_PP_Max.AutoSize = (true);
+            this.l_NPC_Max_PP_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_NPC_Max_PP_Max.Name = ("l_NPC_Max_PP_Max");
+            this.l_NPC_Max_PP_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_NPC_Max_PP_Max.TabIndex = (4);
+            this.l_NPC_Max_PP_Max.Text = ("Maximum:");
+            // 
+            // nud_NPC_Max_PP_Max
+            // 
+            this.nud_NPC_Max_PP_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_NPC_Max_PP_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_Max_PP_Max.Name = ("nud_NPC_Max_PP_Max");
+            this.nud_NPC_Max_PP_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_Max_PP_Max.TabIndex = (3);
+            this.nud_NPC_Max_PP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_Max_PP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_NPC_Max_PP_Min
+            // 
+            this.l_NPC_Max_PP_Min.AutoSize = (true);
+            this.l_NPC_Max_PP_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_NPC_Max_PP_Min.Name = ("l_NPC_Max_PP_Min");
+            this.l_NPC_Max_PP_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_NPC_Max_PP_Min.TabIndex = (2);
+            this.l_NPC_Max_PP_Min.Text = ("Minimum:");
+            // 
+            // nud_NPC_Max_PP_Min
+            // 
+            this.nud_NPC_Max_PP_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_NPC_Max_PP_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_Max_PP_Min.Name = ("nud_NPC_Max_PP_Min");
+            this.nud_NPC_Max_PP_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_Max_PP_Min.TabIndex = (1);
+            this.nud_NPC_Max_PP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_Max_PP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_NPC_Max_PP
+            // 
+            this.cb_NPC_Max_PP.AutoSize = (true);
+            this.cb_NPC_Max_PP.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_NPC_Max_PP.Name = ("cb_NPC_Max_PP");
+            this.cb_NPC_Max_PP.Size = (new global::System.Drawing.Size(147, 19));
+            this.cb_NPC_Max_PP.TabIndex = (0);
+            this.cb_NPC_Max_PP.Text = ("NPC Photo PP amount");
+            this.cb_NPC_Max_PP.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_NPC_Max_PP, "The average defualt is: 430");
+            this.cb_NPC_Max_PP.UseVisualStyleBackColor = (true);
+            // 
+            // gb_NPC_HealthAmount
+            // 
+            this.gb_NPC_HealthAmount.Controls.Add(this.l_NPC_HealthAmount_Dec);
+            this.gb_NPC_HealthAmount.Controls.Add(this.l_NPC_HealthAmount_Max);
+            this.gb_NPC_HealthAmount.Controls.Add(this.nud_NPC_HealthAmount_Max);
+            this.gb_NPC_HealthAmount.Controls.Add(this.l_NPC_HealthAmount_Min);
+            this.gb_NPC_HealthAmount.Controls.Add(this.nud_NPC_HealthAmount_Min);
+            this.gb_NPC_HealthAmount.Controls.Add(this.cb_NPC_HealthAmount);
+            this.gb_NPC_HealthAmount.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_NPC_HealthAmount.Name = ("gb_NPC_HealthAmount");
+            this.gb_NPC_HealthAmount.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_NPC_HealthAmount.TabIndex = (23);
+            this.gb_NPC_HealthAmount.TabStop = (false);
+            this.gb_NPC_HealthAmount.Tag = ("HealthAmount");
+            // 
+            // l_NPC_HealthAmount_Dec
+            // 
+            this.l_NPC_HealthAmount_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_NPC_HealthAmount_Dec.Name = ("l_NPC_HealthAmount_Dec");
+            this.l_NPC_HealthAmount_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_NPC_HealthAmount_Dec.TabIndex = (7);
+            this.l_NPC_HealthAmount_Dec.Text = ("This will efect all npc both enemy and frendly npcs");
+            this.l_NPC_HealthAmount_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_NPC_HealthAmount_Max
+            // 
+            this.l_NPC_HealthAmount_Max.AutoSize = (true);
+            this.l_NPC_HealthAmount_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_NPC_HealthAmount_Max.Name = ("l_NPC_HealthAmount_Max");
+            this.l_NPC_HealthAmount_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_NPC_HealthAmount_Max.TabIndex = (4);
+            this.l_NPC_HealthAmount_Max.Text = ("Maximum:");
+            // 
+            // nud_NPC_HealthAmount_Max
+            // 
+            this.nud_NPC_HealthAmount_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_NPC_HealthAmount_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_HealthAmount_Max.Name = ("nud_NPC_HealthAmount_Max");
+            this.nud_NPC_HealthAmount_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_HealthAmount_Max.TabIndex = (3);
+            this.nud_NPC_HealthAmount_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_HealthAmount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_NPC_HealthAmount_Min
+            // 
+            this.l_NPC_HealthAmount_Min.AutoSize = (true);
+            this.l_NPC_HealthAmount_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_NPC_HealthAmount_Min.Name = ("l_NPC_HealthAmount_Min");
+            this.l_NPC_HealthAmount_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_NPC_HealthAmount_Min.TabIndex = (2);
+            this.l_NPC_HealthAmount_Min.Text = ("Minimum:");
+            // 
+            // nud_NPC_HealthAmount_Min
+            // 
+            this.nud_NPC_HealthAmount_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_NPC_HealthAmount_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_HealthAmount_Min.Name = ("nud_NPC_HealthAmount_Min");
+            this.nud_NPC_HealthAmount_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_HealthAmount_Min.TabIndex = (1);
+            this.nud_NPC_HealthAmount_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_HealthAmount_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_NPC_HealthAmount
+            // 
+            this.cb_NPC_HealthAmount.AutoSize = (true);
+            this.cb_NPC_HealthAmount.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_NPC_HealthAmount.Name = ("cb_NPC_HealthAmount");
+            this.cb_NPC_HealthAmount.Size = (new global::System.Drawing.Size(135, 19));
+            this.cb_NPC_HealthAmount.TabIndex = (0);
+            this.cb_NPC_HealthAmount.Text = ("NPC Health Amount");
+            this.cb_NPC_HealthAmount.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_NPC_HealthAmount, "The average defualt is: 2306");
+            this.cb_NPC_HealthAmount.UseVisualStyleBackColor = (true);
+            // 
+            // gb_NPC_DamPerKMH
+            // 
+            this.gb_NPC_DamPerKMH.Controls.Add(this.l_NPC_DamPerKMH_Dec);
+            this.gb_NPC_DamPerKMH.Controls.Add(this.l_NPC_DamPerKMH_Max);
+            this.gb_NPC_DamPerKMH.Controls.Add(this.nud_NPC_DamPerKMH_Max);
+            this.gb_NPC_DamPerKMH.Controls.Add(this.l_NPC_DamPerKMH_Min);
+            this.gb_NPC_DamPerKMH.Controls.Add(this.nud_NPC_DamPerKMH_Min);
+            this.gb_NPC_DamPerKMH.Controls.Add(this.cb_NPC_DamPerKMH);
+            this.gb_NPC_DamPerKMH.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_NPC_DamPerKMH.Name = ("gb_NPC_DamPerKMH");
+            this.gb_NPC_DamPerKMH.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_NPC_DamPerKMH.TabIndex = (22);
+            this.gb_NPC_DamPerKMH.TabStop = (false);
+            this.gb_NPC_DamPerKMH.Tag = ("DamageBOSS_PerKMH");
+            // 
+            // l_NPC_DamPerKMH_Dec
+            // 
+            this.l_NPC_DamPerKMH_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_NPC_DamPerKMH_Dec.Name = ("l_NPC_DamPerKMH_Dec");
+            this.l_NPC_DamPerKMH_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_NPC_DamPerKMH_Dec.TabIndex = (7);
+            this.l_NPC_DamPerKMH_Dec.Text = ("The faster you go the more damage you do to an enemy");
+            this.l_NPC_DamPerKMH_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_NPC_DamPerKMH_Max
+            // 
+            this.l_NPC_DamPerKMH_Max.AutoSize = (true);
+            this.l_NPC_DamPerKMH_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_NPC_DamPerKMH_Max.Name = ("l_NPC_DamPerKMH_Max");
+            this.l_NPC_DamPerKMH_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_NPC_DamPerKMH_Max.TabIndex = (4);
+            this.l_NPC_DamPerKMH_Max.Text = ("Maximum:");
+            // 
+            // nud_NPC_DamPerKMH_Max
+            // 
+            this.nud_NPC_DamPerKMH_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_NPC_DamPerKMH_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_DamPerKMH_Max.Name = ("nud_NPC_DamPerKMH_Max");
+            this.nud_NPC_DamPerKMH_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_DamPerKMH_Max.TabIndex = (3);
+            this.nud_NPC_DamPerKMH_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_DamPerKMH_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_NPC_DamPerKMH_Min
+            // 
+            this.l_NPC_DamPerKMH_Min.AutoSize = (true);
+            this.l_NPC_DamPerKMH_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_NPC_DamPerKMH_Min.Name = ("l_NPC_DamPerKMH_Min");
+            this.l_NPC_DamPerKMH_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_NPC_DamPerKMH_Min.TabIndex = (2);
+            this.l_NPC_DamPerKMH_Min.Text = ("Minimum:");
+            // 
+            // nud_NPC_DamPerKMH_Min
+            // 
+            this.nud_NPC_DamPerKMH_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_NPC_DamPerKMH_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_DamPerKMH_Min.Name = ("nud_NPC_DamPerKMH_Min");
+            this.nud_NPC_DamPerKMH_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_DamPerKMH_Min.TabIndex = (1);
+            this.nud_NPC_DamPerKMH_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_DamPerKMH_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_NPC_DamPerKMH
+            // 
+            this.cb_NPC_DamPerKMH.AutoSize = (true);
+            this.cb_NPC_DamPerKMH.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_NPC_DamPerKMH.Name = ("cb_NPC_DamPerKMH");
+            this.cb_NPC_DamPerKMH.Size = (new global::System.Drawing.Size(150, 19));
+            this.cb_NPC_DamPerKMH.TabIndex = (0);
+            this.cb_NPC_DamPerKMH.Text = ("Damage done per KMH");
+            this.cb_NPC_DamPerKMH.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_NPC_DamPerKMH, "The average defualt is: 4");
+            this.cb_NPC_DamPerKMH.UseVisualStyleBackColor = (true);
+            // 
+            // gb_NPC_MSDBoss
+            // 
+            this.gb_NPC_MSDBoss.Controls.Add(this.l_NPC_MSDBoss_Dec);
+            this.gb_NPC_MSDBoss.Controls.Add(this.l_NPC_MSDBoss_Max);
+            this.gb_NPC_MSDBoss.Controls.Add(this.nud_NPC_MSDBoss_Max);
+            this.gb_NPC_MSDBoss.Controls.Add(this.l_NPC_MSDBoss_Min);
+            this.gb_NPC_MSDBoss.Controls.Add(this.nud_NPC_MSDBoss_Min);
+            this.gb_NPC_MSDBoss.Controls.Add(this.cb_NPC_MSDBoss);
+            this.gb_NPC_MSDBoss.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_NPC_MSDBoss.Name = ("gb_NPC_MSDBoss");
+            this.gb_NPC_MSDBoss.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_NPC_MSDBoss.TabIndex = (21);
+            this.gb_NPC_MSDBoss.TabStop = (false);
+            this.gb_NPC_MSDBoss.Tag = ("DamageBOSS_MinSpeed");
+            // 
+            // l_NPC_MSDBoss_Dec
+            // 
+            this.l_NPC_MSDBoss_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_NPC_MSDBoss_Dec.Name = ("l_NPC_MSDBoss_Dec");
+            this.l_NPC_MSDBoss_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_NPC_MSDBoss_Dec.TabIndex = (7);
+            this.l_NPC_MSDBoss_Dec.Text = ("The minimum speed needed to deal damage to a enemy");
+            this.l_NPC_MSDBoss_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_NPC_MSDBoss_Max
+            // 
+            this.l_NPC_MSDBoss_Max.AutoSize = (true);
+            this.l_NPC_MSDBoss_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_NPC_MSDBoss_Max.Name = ("l_NPC_MSDBoss_Max");
+            this.l_NPC_MSDBoss_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_NPC_MSDBoss_Max.TabIndex = (4);
+            this.l_NPC_MSDBoss_Max.Text = ("Maximum:");
+            // 
+            // nud_NPC_MSDBoss_Max
+            // 
+            this.nud_NPC_MSDBoss_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_NPC_MSDBoss_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_MSDBoss_Max.Name = ("nud_NPC_MSDBoss_Max");
+            this.nud_NPC_MSDBoss_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_MSDBoss_Max.TabIndex = (3);
+            this.nud_NPC_MSDBoss_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_MSDBoss_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_NPC_MSDBoss_Min
+            // 
+            this.l_NPC_MSDBoss_Min.AutoSize = (true);
+            this.l_NPC_MSDBoss_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_NPC_MSDBoss_Min.Name = ("l_NPC_MSDBoss_Min");
+            this.l_NPC_MSDBoss_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_NPC_MSDBoss_Min.TabIndex = (2);
+            this.l_NPC_MSDBoss_Min.Text = ("Minimum:");
+            // 
+            // nud_NPC_MSDBoss_Min
+            // 
+            this.nud_NPC_MSDBoss_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_NPC_MSDBoss_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_MSDBoss_Min.Name = ("nud_NPC_MSDBoss_Min");
+            this.nud_NPC_MSDBoss_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_MSDBoss_Min.TabIndex = (1);
+            this.nud_NPC_MSDBoss_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_MSDBoss_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_NPC_MSDBoss
+            // 
+            this.cb_NPC_MSDBoss.AutoSize = (true);
+            this.cb_NPC_MSDBoss.Location = (new global::System.Drawing.Point(6, 17));
+            this.cb_NPC_MSDBoss.Name = ("cb_NPC_MSDBoss");
+            this.cb_NPC_MSDBoss.Size = (new global::System.Drawing.Size(150, 34));
+            this.cb_NPC_MSDBoss.TabIndex = (0);
+            this.cb_NPC_MSDBoss.Text = ("Speed need to damage \r\nenemys");
+            this.cb_NPC_MSDBoss.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_NPC_MSDBoss, "The average defualt is: 18");
+            this.cb_NPC_MSDBoss.UseVisualStyleBackColor = (true);
+            // 
+            // gb_NPC_FlatBossDam
+            // 
+            this.gb_NPC_FlatBossDam.Controls.Add(this.l_NPC_FlatBoss_Dec);
+            this.gb_NPC_FlatBossDam.Controls.Add(this.l_NPC_FlatBoss_Max);
+            this.gb_NPC_FlatBossDam.Controls.Add(this.nud_NPC_FlatBoss_Max);
+            this.gb_NPC_FlatBossDam.Controls.Add(this.l_NPC_FlatBoss_Min);
+            this.gb_NPC_FlatBossDam.Controls.Add(this.nud_NPC_FlatBoss_Min);
+            this.gb_NPC_FlatBossDam.Controls.Add(this.cb_NPC_FlatBoss);
+            this.gb_NPC_FlatBossDam.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_NPC_FlatBossDam.Name = ("gb_NPC_FlatBossDam");
+            this.gb_NPC_FlatBossDam.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_NPC_FlatBossDam.TabIndex = (20);
+            this.gb_NPC_FlatBossDam.TabStop = (false);
+            this.gb_NPC_FlatBossDam.Tag = ("DamageBOSS_Flat");
+            // 
+            // l_NPC_FlatBoss_Dec
+            // 
+            this.l_NPC_FlatBoss_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_NPC_FlatBoss_Dec.Name = ("l_NPC_FlatBoss_Dec");
+            this.l_NPC_FlatBoss_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_NPC_FlatBoss_Dec.TabIndex = (7);
+            this.l_NPC_FlatBoss_Dec.Text = ("The base damage done when hitting an enemy npc with a vehicle");
+            this.l_NPC_FlatBoss_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_NPC_FlatBoss_Max
+            // 
+            this.l_NPC_FlatBoss_Max.AutoSize = (true);
+            this.l_NPC_FlatBoss_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_NPC_FlatBoss_Max.Name = ("l_NPC_FlatBoss_Max");
+            this.l_NPC_FlatBoss_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_NPC_FlatBoss_Max.TabIndex = (4);
+            this.l_NPC_FlatBoss_Max.Text = ("Maximum:");
+            // 
+            // nud_NPC_FlatBoss_Max
+            // 
+            this.nud_NPC_FlatBoss_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_NPC_FlatBoss_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_FlatBoss_Max.Name = ("nud_NPC_FlatBoss_Max");
+            this.nud_NPC_FlatBoss_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_FlatBoss_Max.TabIndex = (3);
+            this.nud_NPC_FlatBoss_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_FlatBoss_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_NPC_FlatBoss_Min
+            // 
+            this.l_NPC_FlatBoss_Min.AutoSize = (true);
+            this.l_NPC_FlatBoss_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_NPC_FlatBoss_Min.Name = ("l_NPC_FlatBoss_Min");
+            this.l_NPC_FlatBoss_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_NPC_FlatBoss_Min.TabIndex = (2);
+            this.l_NPC_FlatBoss_Min.Text = ("Minimum:");
+            // 
+            // nud_NPC_FlatBoss_Min
+            // 
+            this.nud_NPC_FlatBoss_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_NPC_FlatBoss_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_NPC_FlatBoss_Min.Name = ("nud_NPC_FlatBoss_Min");
+            this.nud_NPC_FlatBoss_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_NPC_FlatBoss_Min.TabIndex = (1);
+            this.nud_NPC_FlatBoss_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_NPC_FlatBoss_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_NPC_FlatBoss
+            // 
+            this.cb_NPC_FlatBoss.AutoSize = (true);
+            this.cb_NPC_FlatBoss.Location = (new global::System.Drawing.Point(6, 17));
+            this.cb_NPC_FlatBoss.Name = ("cb_NPC_FlatBoss");
+            this.cb_NPC_FlatBoss.Size = (new global::System.Drawing.Size(128, 34));
+            this.cb_NPC_FlatBoss.TabIndex = (0);
+            this.cb_NPC_FlatBoss.Text = ("Damage to enemys\r\n(vehicle)");
+            this.cb_NPC_FlatBoss.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_NPC_FlatBoss, "The average defualt is: 29");
+            this.cb_NPC_FlatBoss.UseVisualStyleBackColor = (true);
+            // 
+            // tp_FireArms
+            // 
+            this.tp_FireArms.Controls.Add(this.gb_FA_SpraySupply);
+            this.tp_FireArms.Controls.Add(this.gb_FA_MaxBurst);
+            this.tp_FireArms.Controls.Add(this.gb_FA_NumBullets);
+            this.tp_FireArms.Controls.Add(this.gb_FA_BulletRange);
+            this.tp_FireArms.Controls.Add(this.gb_FA_BaseBullDam);
+            this.tp_FireArms.Controls.Add(this.gb_FA_FireRate);
+            this.tp_FireArms.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_FireArms.Name = ("tp_FireArms");
+            this.tp_FireArms.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_FireArms.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_FireArms.TabIndex = (2);
+            this.tp_FireArms.Text = ("Fire Arms");
+            this.tp_FireArms.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_SpraySupply
+            // 
+            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Dec);
+            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Max);
+            this.gb_FA_SpraySupply.Controls.Add(this.nud_FA_SpraySupply_Max);
+            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Min);
+            this.gb_FA_SpraySupply.Controls.Add(this.nud_FA_SpraySupply_Min);
+            this.gb_FA_SpraySupply.Controls.Add(this.cb_FA_SpraySupply);
+            this.gb_FA_SpraySupply.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_FA_SpraySupply.Name = ("gb_FA_SpraySupply");
+            this.gb_FA_SpraySupply.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_SpraySupply.TabIndex = (26);
+            this.gb_FA_SpraySupply.TabStop = (false);
+            this.gb_FA_SpraySupply.Tag = ("SpraySupply");
+            // 
+            // l_FA_SpraySupply_Dec
+            // 
+            this.l_FA_SpraySupply_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_SpraySupply_Dec.Name = ("l_FA_SpraySupply_Dec");
+            this.l_FA_SpraySupply_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_SpraySupply_Dec.TabIndex = (7);
+            this.l_FA_SpraySupply_Dec.Text = ("The amount of ammo for spray weapons.");
+            this.l_FA_SpraySupply_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_SpraySupply_Max
+            // 
+            this.l_FA_SpraySupply_Max.AutoSize = (true);
+            this.l_FA_SpraySupply_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_SpraySupply_Max.Name = ("l_FA_SpraySupply_Max");
+            this.l_FA_SpraySupply_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_SpraySupply_Max.TabIndex = (4);
+            this.l_FA_SpraySupply_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_SpraySupply_Max
+            // 
+            this.nud_FA_SpraySupply_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_SpraySupply_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_SpraySupply_Max.Name = ("nud_FA_SpraySupply_Max");
+            this.nud_FA_SpraySupply_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_SpraySupply_Max.TabIndex = (3);
+            this.nud_FA_SpraySupply_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_SpraySupply_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_SpraySupply_Min
+            // 
+            this.l_FA_SpraySupply_Min.AutoSize = (true);
+            this.l_FA_SpraySupply_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_SpraySupply_Min.Name = ("l_FA_SpraySupply_Min");
+            this.l_FA_SpraySupply_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_SpraySupply_Min.TabIndex = (2);
+            this.l_FA_SpraySupply_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_SpraySupply_Min
+            // 
+            this.nud_FA_SpraySupply_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_SpraySupply_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_SpraySupply_Min.Name = ("nud_FA_SpraySupply_Min");
+            this.nud_FA_SpraySupply_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_SpraySupply_Min.TabIndex = (1);
+            this.nud_FA_SpraySupply_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_SpraySupply_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_SpraySupply
+            // 
+            this.cb_FA_SpraySupply.AutoSize = (true);
+            this.cb_FA_SpraySupply.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_SpraySupply.Name = ("cb_FA_SpraySupply");
+            this.cb_FA_SpraySupply.Size = (new global::System.Drawing.Size(142, 19));
+            this.cb_FA_SpraySupply.TabIndex = (0);
+            this.cb_FA_SpraySupply.Text = ("Spray Weapon Ammo");
+            this.cb_FA_SpraySupply.TextAlign = (global::System.Drawing.ContentAlignment.MiddleRight);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_SpraySupply, "The average defualt is: 41");
+            this.cb_FA_SpraySupply.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_MaxBurst
+            // 
+            this.gb_FA_MaxBurst.Controls.Add(this.l_FA_MaxBurst_Dec);
+            this.gb_FA_MaxBurst.Controls.Add(this.l_FA_MaxBurst_Max);
+            this.gb_FA_MaxBurst.Controls.Add(this.nud_FA_MaxBurst_Max);
+            this.gb_FA_MaxBurst.Controls.Add(this.l_FA_MaxBurst_Min);
+            this.gb_FA_MaxBurst.Controls.Add(this.nud_FA_MaxBurst_Min);
+            this.gb_FA_MaxBurst.Controls.Add(this.cb_FA_MaxBurst);
+            this.gb_FA_MaxBurst.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_FA_MaxBurst.Name = ("gb_FA_MaxBurst");
+            this.gb_FA_MaxBurst.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_MaxBurst.TabIndex = (25);
+            this.gb_FA_MaxBurst.TabStop = (false);
+            this.gb_FA_MaxBurst.Tag = ("MaxBurstBulletCount");
+            // 
+            // l_FA_MaxBurst_Dec
+            // 
+            this.l_FA_MaxBurst_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_MaxBurst_Dec.Name = ("l_FA_MaxBurst_Dec");
+            this.l_FA_MaxBurst_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_MaxBurst_Dec.TabIndex = (7);
+            this.l_FA_MaxBurst_Dec.Text = ("Number of bullest fired from a burst shot.");
+            this.l_FA_MaxBurst_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_MaxBurst_Max
+            // 
+            this.l_FA_MaxBurst_Max.AutoSize = (true);
+            this.l_FA_MaxBurst_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_MaxBurst_Max.Name = ("l_FA_MaxBurst_Max");
+            this.l_FA_MaxBurst_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_MaxBurst_Max.TabIndex = (4);
+            this.l_FA_MaxBurst_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_MaxBurst_Max
+            // 
+            this.nud_FA_MaxBurst_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_MaxBurst_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_MaxBurst_Max.Name = ("nud_FA_MaxBurst_Max");
+            this.nud_FA_MaxBurst_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_MaxBurst_Max.TabIndex = (3);
+            this.nud_FA_MaxBurst_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_MaxBurst_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_MaxBurst_Min
+            // 
+            this.l_FA_MaxBurst_Min.AutoSize = (true);
+            this.l_FA_MaxBurst_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_MaxBurst_Min.Name = ("l_FA_MaxBurst_Min");
+            this.l_FA_MaxBurst_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_MaxBurst_Min.TabIndex = (2);
+            this.l_FA_MaxBurst_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_MaxBurst_Min
+            // 
+            this.nud_FA_MaxBurst_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_MaxBurst_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_MaxBurst_Min.Name = ("nud_FA_MaxBurst_Min");
+            this.nud_FA_MaxBurst_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_MaxBurst_Min.TabIndex = (1);
+            this.nud_FA_MaxBurst_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_MaxBurst_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_MaxBurst
+            // 
+            this.cb_FA_MaxBurst.AutoSize = (true);
+            this.cb_FA_MaxBurst.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_MaxBurst.Name = ("cb_FA_MaxBurst");
+            this.cb_FA_MaxBurst.Size = (new global::System.Drawing.Size(122, 19));
+            this.cb_FA_MaxBurst.TabIndex = (0);
+            this.cb_FA_MaxBurst.Text = ("Burst Bullet Count");
+            this.cb_FA_MaxBurst.TextAlign = (global::System.Drawing.ContentAlignment.MiddleRight);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_MaxBurst, "The average defualt is: 3");
+            this.cb_FA_MaxBurst.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_NumBullets
+            // 
+            this.gb_FA_NumBullets.Controls.Add(this.l_FA_NumBullets_Dec);
+            this.gb_FA_NumBullets.Controls.Add(this.l_FA_NumBullets_Max);
+            this.gb_FA_NumBullets.Controls.Add(this.nud_FA_NumBullets_Max);
+            this.gb_FA_NumBullets.Controls.Add(this.l_FA_NumBullets_Min);
+            this.gb_FA_NumBullets.Controls.Add(this.nud_FA_NumBullets_Min);
+            this.gb_FA_NumBullets.Controls.Add(this.cb_FA_NumBullets);
+            this.gb_FA_NumBullets.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_FA_NumBullets.Name = ("gb_FA_NumBullets");
+            this.gb_FA_NumBullets.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_NumBullets.TabIndex = (24);
+            this.gb_FA_NumBullets.TabStop = (false);
+            this.gb_FA_NumBullets.Tag = ("NumPelletsPerShot");
+            // 
+            // l_FA_NumBullets_Dec
+            // 
+            this.l_FA_NumBullets_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_NumBullets_Dec.Name = ("l_FA_NumBullets_Dec");
+            this.l_FA_NumBullets_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_NumBullets_Dec.TabIndex = (7);
+            this.l_FA_NumBullets_Dec.Text = ("This can cause some weapons to bug just drop and pick them back up to fix it.");
+            this.l_FA_NumBullets_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_NumBullets_Max
+            // 
+            this.l_FA_NumBullets_Max.AutoSize = (true);
+            this.l_FA_NumBullets_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_NumBullets_Max.Name = ("l_FA_NumBullets_Max");
+            this.l_FA_NumBullets_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_NumBullets_Max.TabIndex = (4);
+            this.l_FA_NumBullets_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_NumBullets_Max
+            // 
+            this.nud_FA_NumBullets_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_NumBullets_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
+            this.nud_FA_NumBullets_Max.Name = ("nud_FA_NumBullets_Max");
+            this.nud_FA_NumBullets_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_NumBullets_Max.TabIndex = (3);
+            this.nud_FA_NumBullets_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_NumBullets_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_NumBullets_Min
+            // 
+            this.l_FA_NumBullets_Min.AutoSize = (true);
+            this.l_FA_NumBullets_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_NumBullets_Min.Name = ("l_FA_NumBullets_Min");
+            this.l_FA_NumBullets_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_NumBullets_Min.TabIndex = (2);
+            this.l_FA_NumBullets_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_NumBullets_Min
+            // 
+            this.nud_FA_NumBullets_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_NumBullets_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_NumBullets_Min.Name = ("nud_FA_NumBullets_Min");
+            this.nud_FA_NumBullets_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_NumBullets_Min.TabIndex = (1);
+            this.nud_FA_NumBullets_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_NumBullets_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_NumBullets
+            // 
+            this.cb_FA_NumBullets.AutoSize = (true);
+            this.cb_FA_NumBullets.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_NumBullets.Name = ("cb_FA_NumBullets");
+            this.cb_FA_NumBullets.Size = (new global::System.Drawing.Size(169, 19));
+            this.cb_FA_NumBullets.TabIndex = (0);
+            this.cb_FA_NumBullets.Text = ("Number of Bullets Per Shot");
+            this.cb_FA_NumBullets.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_NumBullets, "The average defualt is: 2");
+            this.cb_FA_NumBullets.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_BulletRange
+            // 
+            this.gb_FA_BulletRange.Controls.Add(this.l_FA_BulletRange_Dec);
+            this.gb_FA_BulletRange.Controls.Add(this.l_FA_BulletRange_Max);
+            this.gb_FA_BulletRange.Controls.Add(this.nud_FA_BulletRange_Max);
+            this.gb_FA_BulletRange.Controls.Add(this.l_FA_BulletRange_Min);
+            this.gb_FA_BulletRange.Controls.Add(this.nud_FA_BulletRange_Min);
+            this.gb_FA_BulletRange.Controls.Add(this.cb_FA_BulletRange);
+            this.gb_FA_BulletRange.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_FA_BulletRange.Name = ("gb_FA_BulletRange");
+            this.gb_FA_BulletRange.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_BulletRange.TabIndex = (23);
+            this.gb_FA_BulletRange.TabStop = (false);
+            this.gb_FA_BulletRange.Tag = ("MaxBulletDistance");
+            // 
+            // l_FA_BulletRange_Dec
+            // 
+            this.l_FA_BulletRange_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_BulletRange_Dec.Name = ("l_FA_BulletRange_Dec");
+            this.l_FA_BulletRange_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_BulletRange_Dec.TabIndex = (7);
+            this.l_FA_BulletRange_Dec.Text = ("Max range for fire arms.");
+            this.l_FA_BulletRange_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_BulletRange_Max
+            // 
+            this.l_FA_BulletRange_Max.AutoSize = (true);
+            this.l_FA_BulletRange_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_BulletRange_Max.Name = ("l_FA_BulletRange_Max");
+            this.l_FA_BulletRange_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_BulletRange_Max.TabIndex = (4);
+            this.l_FA_BulletRange_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_BulletRange_Max
+            // 
+            this.nud_FA_BulletRange_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_BulletRange_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_BulletRange_Max.Name = ("nud_FA_BulletRange_Max");
+            this.nud_FA_BulletRange_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_BulletRange_Max.TabIndex = (3);
+            this.nud_FA_BulletRange_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_BulletRange_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_BulletRange_Min
+            // 
+            this.l_FA_BulletRange_Min.AutoSize = (true);
+            this.l_FA_BulletRange_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_BulletRange_Min.Name = ("l_FA_BulletRange_Min");
+            this.l_FA_BulletRange_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_BulletRange_Min.TabIndex = (2);
+            this.l_FA_BulletRange_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_BulletRange_Min
+            // 
+            this.nud_FA_BulletRange_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_BulletRange_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_BulletRange_Min.Name = ("nud_FA_BulletRange_Min");
+            this.nud_FA_BulletRange_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_BulletRange_Min.TabIndex = (1);
+            this.nud_FA_BulletRange_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_BulletRange_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_BulletRange
+            // 
+            this.cb_FA_BulletRange.AutoSize = (true);
+            this.cb_FA_BulletRange.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_BulletRange.Name = ("cb_FA_BulletRange");
+            this.cb_FA_BulletRange.Size = (new global::System.Drawing.Size(130, 19));
+            this.cb_FA_BulletRange.TabIndex = (0);
+            this.cb_FA_BulletRange.Text = ("Max Bullet Distance");
+            this.cb_FA_BulletRange.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_BulletRange, "The average defualt is: 38");
+            this.cb_FA_BulletRange.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_BaseBullDam
+            // 
+            this.gb_FA_BaseBullDam.Controls.Add(this.l_FA_BaseBullDam_Dec);
+            this.gb_FA_BaseBullDam.Controls.Add(this.l_FA_BaseBullDam_Max);
+            this.gb_FA_BaseBullDam.Controls.Add(this.nud_FA_BaseBullDam_Max);
+            this.gb_FA_BaseBullDam.Controls.Add(this.l_FA_BaseBullDam_Min);
+            this.gb_FA_BaseBullDam.Controls.Add(this.nud_FA_BaseBullDam_Min);
+            this.gb_FA_BaseBullDam.Controls.Add(this.cb_FA_BaseBullDam);
+            this.gb_FA_BaseBullDam.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_FA_BaseBullDam.Name = ("gb_FA_BaseBullDam");
+            this.gb_FA_BaseBullDam.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_BaseBullDam.TabIndex = (22);
+            this.gb_FA_BaseBullDam.TabStop = (false);
+            this.gb_FA_BaseBullDam.Tag = ("BaseBulletDamage");
+            // 
+            // l_FA_BaseBullDam_Dec
+            // 
+            this.l_FA_BaseBullDam_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_BaseBullDam_Dec.Name = ("l_FA_BaseBullDam_Dec");
+            this.l_FA_BaseBullDam_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_BaseBullDam_Dec.TabIndex = (7);
+            this.l_FA_BaseBullDam_Dec.Text = ("Damage for for fire arms.");
+            this.l_FA_BaseBullDam_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_BaseBullDam_Max
+            // 
+            this.l_FA_BaseBullDam_Max.AutoSize = (true);
+            this.l_FA_BaseBullDam_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_BaseBullDam_Max.Name = ("l_FA_BaseBullDam_Max");
+            this.l_FA_BaseBullDam_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_BaseBullDam_Max.TabIndex = (4);
+            this.l_FA_BaseBullDam_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_BaseBullDam_Max
+            // 
+            this.nud_FA_BaseBullDam_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_BaseBullDam_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_BaseBullDam_Max.Name = ("nud_FA_BaseBullDam_Max");
+            this.nud_FA_BaseBullDam_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_BaseBullDam_Max.TabIndex = (3);
+            this.nud_FA_BaseBullDam_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_BaseBullDam_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_BaseBullDam_Min
+            // 
+            this.l_FA_BaseBullDam_Min.AutoSize = (true);
+            this.l_FA_BaseBullDam_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_BaseBullDam_Min.Name = ("l_FA_BaseBullDam_Min");
+            this.l_FA_BaseBullDam_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_BaseBullDam_Min.TabIndex = (2);
+            this.l_FA_BaseBullDam_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_BaseBullDam_Min
+            // 
+            this.nud_FA_BaseBullDam_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_BaseBullDam_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_BaseBullDam_Min.Name = ("nud_FA_BaseBullDam_Min");
+            this.nud_FA_BaseBullDam_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_BaseBullDam_Min.TabIndex = (1);
+            this.nud_FA_BaseBullDam_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_BaseBullDam_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_BaseBullDam
+            // 
+            this.cb_FA_BaseBullDam.AutoSize = (true);
+            this.cb_FA_BaseBullDam.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_BaseBullDam.Name = ("cb_FA_BaseBullDam");
+            this.cb_FA_BaseBullDam.Size = (new global::System.Drawing.Size(103, 19));
+            this.cb_FA_BaseBullDam.TabIndex = (0);
+            this.cb_FA_BaseBullDam.Text = ("Bullet Damage");
+            this.cb_FA_BaseBullDam.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_BaseBullDam, "The average defualt is: 49");
+            this.cb_FA_BaseBullDam.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FA_FireRate
+            // 
+            this.gb_FA_FireRate.Controls.Add(this.l_FA_FireRate_Dec);
+            this.gb_FA_FireRate.Controls.Add(this.l_FA_FireRate_Max);
+            this.gb_FA_FireRate.Controls.Add(this.nud_FA_FireRate_Max);
+            this.gb_FA_FireRate.Controls.Add(this.l_FA_FireRate_Min);
+            this.gb_FA_FireRate.Controls.Add(this.nud_FA_FireRate_Min);
+            this.gb_FA_FireRate.Controls.Add(this.cb_FA_FireRate);
+            this.gb_FA_FireRate.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_FA_FireRate.Name = ("gb_FA_FireRate");
+            this.gb_FA_FireRate.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FA_FireRate.TabIndex = (21);
+            this.gb_FA_FireRate.TabStop = (false);
+            this.gb_FA_FireRate.Tag = ("FiringRate");
+            // 
+            // l_FA_FireRate_Dec
+            // 
+            this.l_FA_FireRate_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FA_FireRate_Dec.Name = ("l_FA_FireRate_Dec");
+            this.l_FA_FireRate_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FA_FireRate_Dec.TabIndex = (7);
+            this.l_FA_FireRate_Dec.Text = ("Speed the weapon will fire at");
+            this.l_FA_FireRate_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FA_FireRate_Max
+            // 
+            this.l_FA_FireRate_Max.AutoSize = (true);
+            this.l_FA_FireRate_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FA_FireRate_Max.Name = ("l_FA_FireRate_Max");
+            this.l_FA_FireRate_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FA_FireRate_Max.TabIndex = (4);
+            this.l_FA_FireRate_Max.Text = ("Maximum:");
+            // 
+            // nud_FA_FireRate_Max
+            // 
+            this.nud_FA_FireRate_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FA_FireRate_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_FireRate_Max.Name = ("nud_FA_FireRate_Max");
+            this.nud_FA_FireRate_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_FireRate_Max.TabIndex = (3);
+            this.nud_FA_FireRate_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_FireRate_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_FA_FireRate_Min
+            // 
+            this.l_FA_FireRate_Min.AutoSize = (true);
+            this.l_FA_FireRate_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FA_FireRate_Min.Name = ("l_FA_FireRate_Min");
+            this.l_FA_FireRate_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FA_FireRate_Min.TabIndex = (2);
+            this.l_FA_FireRate_Min.Text = ("Minimum:");
+            // 
+            // nud_FA_FireRate_Min
+            // 
+            this.nud_FA_FireRate_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FA_FireRate_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FA_FireRate_Min.Name = ("nud_FA_FireRate_Min");
+            this.nud_FA_FireRate_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FA_FireRate_Min.TabIndex = (1);
+            this.nud_FA_FireRate_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FA_FireRate_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FA_FireRate
+            // 
+            this.cb_FA_FireRate.AutoSize = (true);
+            this.cb_FA_FireRate.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FA_FireRate.Name = ("cb_FA_FireRate");
+            this.cb_FA_FireRate.Size = (new global::System.Drawing.Size(71, 19));
+            this.cb_FA_FireRate.TabIndex = (0);
+            this.cb_FA_FireRate.Text = ("Fire Rate");
+            this.cb_FA_FireRate.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_FA_FireRate, "The average defualt is: 4");
+            this.cb_FA_FireRate.UseVisualStyleBackColor = (true);
+            // 
+            // tp_WorldStats
+            // 
+            this.tp_WorldStats.AutoScroll = (true);
+            this.tp_WorldStats.Controls.Add(this.gb_W_PP_Multi);
+            this.tp_WorldStats.Controls.Add(this.gb_W_PayoutCount);
+            this.tp_WorldStats.Controls.Add(this.gb_W_Payout);
+            this.tp_WorldStats.Controls.Add(this.gb_W_Amount);
+            this.tp_WorldStats.Controls.Add(this.gb_W_PPAward);
+            this.tp_WorldStats.Controls.Add(this.gb_W_CostHigh);
+            this.tp_WorldStats.Controls.Add(this.gb_W_CostMid);
+            this.tp_WorldStats.Controls.Add(this.gb_W_CostLow);
+            this.tp_WorldStats.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_WorldStats.Name = ("tp_WorldStats");
+            this.tp_WorldStats.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_WorldStats.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_WorldStats.TabIndex = (3);
+            this.tp_WorldStats.Text = ("World Stats");
+            this.tp_WorldStats.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_PayoutCount
+            // 
+            this.gb_W_PayoutCount.Controls.Add(this.l_W_PayoutCount_Dec);
+            this.gb_W_PayoutCount.Controls.Add(this.label2);
+            this.gb_W_PayoutCount.Controls.Add(this.numericUpDown1);
+            this.gb_W_PayoutCount.Controls.Add(this.l_W_PayoutCount_Min);
+            this.gb_W_PayoutCount.Controls.Add(this.numericUpDown2);
+            this.gb_W_PayoutCount.Controls.Add(this.cb_W_PayoutCount);
+            this.gb_W_PayoutCount.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_W_PayoutCount.Name = ("gb_W_PayoutCount");
+            this.gb_W_PayoutCount.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_PayoutCount.TabIndex = (28);
+            this.gb_W_PayoutCount.TabStop = (false);
+            this.gb_W_PayoutCount.Tag = ("PayoutCount ");
+            // 
+            // l_W_PayoutCount_Dec
+            // 
+            this.l_W_PayoutCount_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_PayoutCount_Dec.Name = ("l_W_PayoutCount_Dec");
+            this.l_W_PayoutCount_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_PayoutCount_Dec.TabIndex = (7);
+            this.l_W_PayoutCount_Dec.Text = ("How many times you can win on a slot machine.");
+            this.l_W_PayoutCount_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = (true);
+            this.label2.Location = (new global::System.Drawing.Point(540, 13));
+            this.label2.Name = ("label2");
+            this.label2.Size = (new global::System.Drawing.Size(65, 15));
+            this.label2.TabIndex = (4);
+            this.label2.Text = ("Maximum:");
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = (new global::System.Drawing.Point(540, 31));
+            this.numericUpDown1.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.numericUpDown1.Name = ("numericUpDown1");
+            this.numericUpDown1.Size = (new global::System.Drawing.Size(86, 23));
+            this.numericUpDown1.TabIndex = (3);
+            this.numericUpDown1.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.numericUpDown1.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_PayoutCount_Min
+            // 
+            this.l_W_PayoutCount_Min.AutoSize = (true);
+            this.l_W_PayoutCount_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_PayoutCount_Min.Name = ("l_W_PayoutCount_Min");
+            this.l_W_PayoutCount_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_PayoutCount_Min.TabIndex = (2);
+            this.l_W_PayoutCount_Min.Text = ("Minimum:");
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = (new global::System.Drawing.Point(410, 31));
+            this.numericUpDown2.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.numericUpDown2.Name = ("numericUpDown2");
+            this.numericUpDown2.Size = (new global::System.Drawing.Size(86, 23));
+            this.numericUpDown2.TabIndex = (1);
+            this.numericUpDown2.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.numericUpDown2.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_PayoutCount
+            // 
+            this.cb_W_PayoutCount.AutoSize = (true);
+            this.cb_W_PayoutCount.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_PayoutCount.Name = ("cb_W_PayoutCount");
+            this.cb_W_PayoutCount.Size = (new global::System.Drawing.Size(99, 19));
+            this.cb_W_PayoutCount.TabIndex = (0);
+            this.cb_W_PayoutCount.Text = ("Payout Count");
+            this.cb_W_PayoutCount.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_PayoutCount, "The average defualt is: 700");
+            this.cb_W_PayoutCount.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_Payout
+            // 
+            this.gb_W_Payout.Controls.Add(this.l_W_Payout_Dec);
+            this.gb_W_Payout.Controls.Add(this.l_W_Payout_Max);
+            this.gb_W_Payout.Controls.Add(this.nud_W_Payout_Max);
+            this.gb_W_Payout.Controls.Add(this.l_W_Payout_Min);
+            this.gb_W_Payout.Controls.Add(this.nud_W_Payout_Min);
+            this.gb_W_Payout.Controls.Add(this.cb_W_Payout);
+            this.gb_W_Payout.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_W_Payout.Name = ("gb_W_Payout");
+            this.gb_W_Payout.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_Payout.TabIndex = (27);
+            this.gb_W_Payout.TabStop = (false);
+            this.gb_W_Payout.Tag = ("PayoutAmount ");
+            // 
+            // l_W_Payout_Dec
+            // 
+            this.l_W_Payout_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_Payout_Dec.Name = ("l_W_Payout_Dec");
+            this.l_W_Payout_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_Payout_Dec.TabIndex = (7);
+            this.l_W_Payout_Dec.Text = ("The payout you get for winning a slot machine");
+            this.l_W_Payout_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_Payout_Max
+            // 
+            this.l_W_Payout_Max.AutoSize = (true);
+            this.l_W_Payout_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_Payout_Max.Name = ("l_W_Payout_Max");
+            this.l_W_Payout_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_Payout_Max.TabIndex = (4);
+            this.l_W_Payout_Max.Text = ("Maximum:");
+            // 
+            // nud_W_Payout_Max
+            // 
+            this.nud_W_Payout_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_Payout_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_Payout_Max.Name = ("nud_W_Payout_Max");
+            this.nud_W_Payout_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_Payout_Max.TabIndex = (3);
+            this.nud_W_Payout_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_Payout_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_Payout_Min
+            // 
+            this.l_W_Payout_Min.AutoSize = (true);
+            this.l_W_Payout_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_Payout_Min.Name = ("l_W_Payout_Min");
+            this.l_W_Payout_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_Payout_Min.TabIndex = (2);
+            this.l_W_Payout_Min.Text = ("Minimum:");
+            // 
+            // nud_W_Payout_Min
+            // 
+            this.nud_W_Payout_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_Payout_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_Payout_Min.Name = ("nud_W_Payout_Min");
+            this.nud_W_Payout_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_Payout_Min.TabIndex = (1);
+            this.nud_W_Payout_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_Payout_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_Payout
+            // 
+            this.cb_W_Payout.AutoSize = (true);
+            this.cb_W_Payout.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_Payout.Name = ("cb_W_Payout");
+            this.cb_W_Payout.Size = (new global::System.Drawing.Size(110, 19));
+            this.cb_W_Payout.TabIndex = (0);
+            this.cb_W_Payout.Text = ("Payout Amount");
+            this.cb_W_Payout.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_Payout, "The average defualt is: 700");
+            this.cb_W_Payout.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_Amount
+            // 
+            this.gb_W_Amount.Controls.Add(this.l_W_Amount_Dec);
+            this.gb_W_Amount.Controls.Add(this.l_W_Amount_Max);
+            this.gb_W_Amount.Controls.Add(this.nud_W_Amount_Max);
+            this.gb_W_Amount.Controls.Add(this.l_W_Amount_Min);
+            this.gb_W_Amount.Controls.Add(this.nud_W_Amount_Min);
+            this.gb_W_Amount.Controls.Add(this.cb_W_Amount);
+            this.gb_W_Amount.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_W_Amount.Name = ("gb_W_Amount");
+            this.gb_W_Amount.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_Amount.TabIndex = (26);
+            this.gb_W_Amount.TabStop = (false);
+            this.gb_W_Amount.Tag = ("\tAmount");
+            // 
+            // l_W_Amount_Dec
+            // 
+            this.l_W_Amount_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_Amount_Dec.Name = ("l_W_Amount_Dec");
+            this.l_W_Amount_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_Amount_Dec.TabIndex = (7);
+            this.l_W_Amount_Dec.Text = ("The amount of money the player is given when pick up cash.\r\n(There is 9 types of pick up)");
+            this.l_W_Amount_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_Amount_Max
+            // 
+            this.l_W_Amount_Max.AutoSize = (true);
+            this.l_W_Amount_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_Amount_Max.Name = ("l_W_Amount_Max");
+            this.l_W_Amount_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_Amount_Max.TabIndex = (4);
+            this.l_W_Amount_Max.Text = ("Maximum:");
+            // 
+            // nud_W_Amount_Max
+            // 
+            this.nud_W_Amount_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_Amount_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_Amount_Max.Name = ("nud_W_Amount_Max");
+            this.nud_W_Amount_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_Amount_Max.TabIndex = (3);
+            this.nud_W_Amount_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_Amount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_Amount_Min
+            // 
+            this.l_W_Amount_Min.AutoSize = (true);
+            this.l_W_Amount_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_Amount_Min.Name = ("l_W_Amount_Min");
+            this.l_W_Amount_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_Amount_Min.TabIndex = (2);
+            this.l_W_Amount_Min.Text = ("Minimum:");
+            // 
+            // nud_W_Amount_Min
+            // 
+            this.nud_W_Amount_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_Amount_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_Amount_Min.Name = ("nud_W_Amount_Min");
+            this.nud_W_Amount_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_Amount_Min.TabIndex = (1);
+            this.nud_W_Amount_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_Amount_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_Amount
+            // 
+            this.cb_W_Amount.AutoSize = (true);
+            this.cb_W_Amount.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_Amount.Name = ("cb_W_Amount");
+            this.cb_W_Amount.Size = (new global::System.Drawing.Size(150, 19));
+            this.cb_W_Amount.TabIndex = (0);
+            this.cb_W_Amount.Text = ("Money PickUp Amount");
+            this.cb_W_Amount.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_Amount, "The average defualt is: 13300");
+            this.cb_W_Amount.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_PPAward
+            // 
+            this.gb_W_PPAward.Controls.Add(this.l_W_PPAward_Dec);
+            this.gb_W_PPAward.Controls.Add(this.l_W_PPAward_Max);
+            this.gb_W_PPAward.Controls.Add(this.nud_W_PPAward_Max);
+            this.gb_W_PPAward.Controls.Add(this.l_W_PPAward_Min);
+            this.gb_W_PPAward.Controls.Add(this.nud_W_PPAward_Min);
+            this.gb_W_PPAward.Controls.Add(this.cb_W_PPAward);
+            this.gb_W_PPAward.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_W_PPAward.Name = ("gb_W_PPAward");
+            this.gb_W_PPAward.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_PPAward.TabIndex = (25);
+            this.gb_W_PPAward.TabStop = (false);
+            this.gb_W_PPAward.Tag = ("PPAward ");
+            // 
+            // l_W_PPAward_Dec
+            // 
+            this.l_W_PPAward_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_PPAward_Dec.Name = ("l_W_PPAward_Dec");
+            this.l_W_PPAward_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_PPAward_Dec.TabIndex = (7);
+            this.l_W_PPAward_Dec.Text = ("The amount of PP awarded for completeing a minigame.");
+            this.l_W_PPAward_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_PPAward_Max
+            // 
+            this.l_W_PPAward_Max.AutoSize = (true);
+            this.l_W_PPAward_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_PPAward_Max.Name = ("l_W_PPAward_Max");
+            this.l_W_PPAward_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_PPAward_Max.TabIndex = (4);
+            this.l_W_PPAward_Max.Text = ("Maximum:");
+            // 
+            // nud_W_PPAward_Max
+            // 
+            this.nud_W_PPAward_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_PPAward_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_PPAward_Max.Name = ("nud_W_PPAward_Max");
+            this.nud_W_PPAward_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_PPAward_Max.TabIndex = (3);
+            this.nud_W_PPAward_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_PPAward_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_PPAward_Min
+            // 
+            this.l_W_PPAward_Min.AutoSize = (true);
+            this.l_W_PPAward_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_PPAward_Min.Name = ("l_W_PPAward_Min");
+            this.l_W_PPAward_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_PPAward_Min.TabIndex = (2);
+            this.l_W_PPAward_Min.Text = ("Minimum:");
+            // 
+            // nud_W_PPAward_Min
+            // 
+            this.nud_W_PPAward_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_PPAward_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_PPAward_Min.Name = ("nud_W_PPAward_Min");
+            this.nud_W_PPAward_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_PPAward_Min.TabIndex = (1);
+            this.nud_W_PPAward_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_PPAward_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_PPAward
+            // 
+            this.cb_W_PPAward.AutoSize = (true);
+            this.cb_W_PPAward.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_PPAward.Name = ("cb_W_PPAward");
+            this.cb_W_PPAward.Size = (new global::System.Drawing.Size(90, 19));
+            this.cb_W_PPAward.TabIndex = (0);
+            this.cb_W_PPAward.Text = ("PP Awarded");
+            this.cb_W_PPAward.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_PPAward, "The average defualt is: 695");
+            this.cb_W_PPAward.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_CostHigh
+            // 
+            this.gb_W_CostHigh.Controls.Add(this.l_W_CostHigh_Dec);
+            this.gb_W_CostHigh.Controls.Add(this.l_W_CostHigh_Max);
+            this.gb_W_CostHigh.Controls.Add(this.nud_W_CostHigh_Max);
+            this.gb_W_CostHigh.Controls.Add(this.l_W_CostHigh_Min);
+            this.gb_W_CostHigh.Controls.Add(this.nud_W_CostHigh_Min);
+            this.gb_W_CostHigh.Controls.Add(this.cb_W_CostHigh);
+            this.gb_W_CostHigh.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_W_CostHigh.Name = ("gb_W_CostHigh");
+            this.gb_W_CostHigh.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_CostHigh.TabIndex = (24);
+            this.gb_W_CostHigh.TabStop = (false);
+            this.gb_W_CostHigh.Tag = ("Cost3");
+            // 
+            // l_W_CostHigh_Dec
+            // 
+            this.l_W_CostHigh_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_CostHigh_Dec.Name = ("l_W_CostHigh_Dec");
+            this.l_W_CostHigh_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_CostHigh_Dec.TabIndex = (7);
+            this.l_W_CostHigh_Dec.Text = ("The high price for interactables.");
+            this.l_W_CostHigh_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_CostHigh_Max
+            // 
+            this.l_W_CostHigh_Max.AutoSize = (true);
+            this.l_W_CostHigh_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_CostHigh_Max.Name = ("l_W_CostHigh_Max");
+            this.l_W_CostHigh_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_CostHigh_Max.TabIndex = (4);
+            this.l_W_CostHigh_Max.Text = ("Maximum:");
+            // 
+            // nud_W_CostHigh_Max
+            // 
+            this.nud_W_CostHigh_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_CostHigh_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostHigh_Max.Name = ("nud_W_CostHigh_Max");
+            this.nud_W_CostHigh_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostHigh_Max.TabIndex = (3);
+            this.nud_W_CostHigh_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostHigh_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_CostHigh_Min
+            // 
+            this.l_W_CostHigh_Min.AutoSize = (true);
+            this.l_W_CostHigh_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_CostHigh_Min.Name = ("l_W_CostHigh_Min");
+            this.l_W_CostHigh_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_CostHigh_Min.TabIndex = (2);
+            this.l_W_CostHigh_Min.Text = ("Minimum:");
+            // 
+            // nud_W_CostHigh_Min
+            // 
+            this.nud_W_CostHigh_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_CostHigh_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostHigh_Min.Name = ("nud_W_CostHigh_Min");
+            this.nud_W_CostHigh_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostHigh_Min.TabIndex = (1);
+            this.nud_W_CostHigh_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostHigh_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_CostHigh
+            // 
+            this.cb_W_CostHigh.AutoSize = (true);
+            this.cb_W_CostHigh.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_CostHigh.Name = ("cb_W_CostHigh");
+            this.cb_W_CostHigh.Size = (new global::System.Drawing.Size(87, 19));
+            this.cb_W_CostHigh.TabIndex = (0);
+            this.cb_W_CostHigh.Text = ("Price (high)");
+            this.cb_W_CostHigh.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_CostHigh, "The average defualt is: 6145");
+            this.cb_W_CostHigh.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_CostMid
+            // 
+            this.gb_W_CostMid.Controls.Add(this.l_W_CostMid_Dec);
+            this.gb_W_CostMid.Controls.Add(this.l_W_CostMid_Max);
+            this.gb_W_CostMid.Controls.Add(this.nud_W_CostMid_Max);
+            this.gb_W_CostMid.Controls.Add(this.l_W_CostMid_Min);
+            this.gb_W_CostMid.Controls.Add(this.nud_W_CostMid_Min);
+            this.gb_W_CostMid.Controls.Add(this.cb_W_CostMid);
+            this.gb_W_CostMid.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_W_CostMid.Name = ("gb_W_CostMid");
+            this.gb_W_CostMid.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_CostMid.TabIndex = (23);
+            this.gb_W_CostMid.TabStop = (false);
+            this.gb_W_CostMid.Tag = ("Cost2");
+            // 
+            // l_W_CostMid_Dec
+            // 
+            this.l_W_CostMid_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_CostMid_Dec.Name = ("l_W_CostMid_Dec");
+            this.l_W_CostMid_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_CostMid_Dec.TabIndex = (7);
+            this.l_W_CostMid_Dec.Text = ("The medium price for interactables.");
+            this.l_W_CostMid_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_CostMid_Max
+            // 
+            this.l_W_CostMid_Max.AutoSize = (true);
+            this.l_W_CostMid_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_CostMid_Max.Name = ("l_W_CostMid_Max");
+            this.l_W_CostMid_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_CostMid_Max.TabIndex = (4);
+            this.l_W_CostMid_Max.Text = ("Maximum:");
+            // 
+            // nud_W_CostMid_Max
+            // 
+            this.nud_W_CostMid_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_CostMid_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostMid_Max.Name = ("nud_W_CostMid_Max");
+            this.nud_W_CostMid_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostMid_Max.TabIndex = (3);
+            this.nud_W_CostMid_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostMid_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_CostMid_Min
+            // 
+            this.l_W_CostMid_Min.AutoSize = (true);
+            this.l_W_CostMid_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_CostMid_Min.Name = ("l_W_CostMid_Min");
+            this.l_W_CostMid_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_CostMid_Min.TabIndex = (2);
+            this.l_W_CostMid_Min.Text = ("Minimum:");
+            // 
+            // nud_W_CostMid_Min
+            // 
+            this.nud_W_CostMid_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_CostMid_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostMid_Min.Name = ("nud_W_CostMid_Min");
+            this.nud_W_CostMid_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostMid_Min.TabIndex = (1);
+            this.nud_W_CostMid_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostMid_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_CostMid
+            // 
+            this.cb_W_CostMid.AutoSize = (true);
+            this.cb_W_CostMid.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_CostMid.Name = ("cb_W_CostMid");
+            this.cb_W_CostMid.Size = (new global::System.Drawing.Size(84, 19));
+            this.cb_W_CostMid.TabIndex = (0);
+            this.cb_W_CostMid.Text = ("Price (mid)");
+            this.cb_W_CostMid.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_CostMid, "The average defualt is: 2918");
+            this.cb_W_CostMid.UseVisualStyleBackColor = (true);
+            // 
+            // gb_W_CostLow
+            // 
+            this.gb_W_CostLow.Controls.Add(this.l_W_CostLow_Dec);
+            this.gb_W_CostLow.Controls.Add(this.l_W_CostLow_Max);
+            this.gb_W_CostLow.Controls.Add(this.nud_W_CostLow_Max);
+            this.gb_W_CostLow.Controls.Add(this.l_W_CostLow_Min);
+            this.gb_W_CostLow.Controls.Add(this.nud_W_CostLow_Min);
+            this.gb_W_CostLow.Controls.Add(this.cb_W_CostLow);
+            this.gb_W_CostLow.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_W_CostLow.Name = ("gb_W_CostLow");
+            this.gb_W_CostLow.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_CostLow.TabIndex = (22);
+            this.gb_W_CostLow.TabStop = (false);
+            this.gb_W_CostLow.Tag = ("Cost ");
+            // 
+            // l_W_CostLow_Dec
+            // 
+            this.l_W_CostLow_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_CostLow_Dec.Name = ("l_W_CostLow_Dec");
+            this.l_W_CostLow_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_CostLow_Dec.TabIndex = (7);
+            this.l_W_CostLow_Dec.Text = ("The low price for interactables.");
+            this.l_W_CostLow_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_CostLow_Max
+            // 
+            this.l_W_CostLow_Max.AutoSize = (true);
+            this.l_W_CostLow_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_CostLow_Max.Name = ("l_W_CostLow_Max");
+            this.l_W_CostLow_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_CostLow_Max.TabIndex = (4);
+            this.l_W_CostLow_Max.Text = ("Maximum:");
+            // 
+            // nud_W_CostLow_Max
+            // 
+            this.nud_W_CostLow_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_CostLow_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostLow_Max.Name = ("nud_W_CostLow_Max");
+            this.nud_W_CostLow_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostLow_Max.TabIndex = (3);
+            this.nud_W_CostLow_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostLow_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_CostLow_Min
+            // 
+            this.l_W_CostLow_Min.AutoSize = (true);
+            this.l_W_CostLow_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_CostLow_Min.Name = ("l_W_CostLow_Min");
+            this.l_W_CostLow_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_CostLow_Min.TabIndex = (2);
+            this.l_W_CostLow_Min.Text = ("Minimum:");
+            // 
+            // nud_W_CostLow_Min
+            // 
+            this.nud_W_CostLow_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_CostLow_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_CostLow_Min.Name = ("nud_W_CostLow_Min");
+            this.nud_W_CostLow_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_CostLow_Min.TabIndex = (1);
+            this.nud_W_CostLow_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_CostLow_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_CostLow
+            // 
+            this.cb_W_CostLow.AutoSize = (true);
+            this.cb_W_CostLow.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_CostLow.Name = ("cb_W_CostLow");
+            this.cb_W_CostLow.Size = (new global::System.Drawing.Size(82, 19));
+            this.cb_W_CostLow.TabIndex = (0);
+            this.cb_W_CostLow.Text = ("Price (low)");
+            this.cb_W_CostLow.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_CostLow, "The average defualt is: 1552");
+            this.cb_W_CostLow.UseVisualStyleBackColor = (true);
+            // 
+            // fbd_DataFileFolder
+            // 
+            this.fbd_DataFileFolder.Description = ("Select the upacked datafile folder");
+            this.fbd_DataFileFolder.ShowNewFolderButton = (false);
+            this.fbd_DataFileFolder.UseDescriptionForTitle = (true);
+            // 
+            // gb_W_PP_Multi
+            // 
+            this.gb_W_PP_Multi.Controls.Add(this.l_W_PP_Multi_Dec);
+            this.gb_W_PP_Multi.Controls.Add(this.l_W_PP_Multi_Max);
+            this.gb_W_PP_Multi.Controls.Add(this.nud_W_PP_Multi_Max);
+            this.gb_W_PP_Multi.Controls.Add(this.l_W_PP_Multi_Min);
+            this.gb_W_PP_Multi.Controls.Add(this.nud_W_PP_Multi_Min);
+            this.gb_W_PP_Multi.Controls.Add(this.cb_W_PP_Multi);
+            this.gb_W_PP_Multi.Location = (new global::System.Drawing.Point(6, 430));
+            this.gb_W_PP_Multi.Name = ("gb_W_PP_Multi");
+            this.gb_W_PP_Multi.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_W_PP_Multi.TabIndex = (29);
+            this.gb_W_PP_Multi.TabStop = (false);
+            this.gb_W_PP_Multi.Tag = ("PP_Multiplier");
+            // 
+            // l_W_PP_Multi_Dec
+            // 
+            this.l_W_PP_Multi_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_W_PP_Multi_Dec.Name = ("l_W_PP_Multi_Dec");
+            this.l_W_PP_Multi_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_W_PP_Multi_Dec.TabIndex = (7);
+            this.l_W_PP_Multi_Dec.Text = ("How much PP is mulitiplied when you own that weapns combo card");
+            this.l_W_PP_Multi_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_W_PP_Multi_Max
+            // 
+            this.l_W_PP_Multi_Max.AutoSize = (true);
+            this.l_W_PP_Multi_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_W_PP_Multi_Max.Name = ("l_W_PP_Multi_Max");
+            this.l_W_PP_Multi_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_W_PP_Multi_Max.TabIndex = (4);
+            this.l_W_PP_Multi_Max.Text = ("Maximum:");
+            // 
+            // nud_W_PP_Multi_Max
+            // 
+            this.nud_W_PP_Multi_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_W_PP_Multi_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_PP_Multi_Max.Name = ("nud_W_PP_Multi_Max");
+            this.nud_W_PP_Multi_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_PP_Multi_Max.TabIndex = (3);
+            this.nud_W_PP_Multi_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_PP_Multi_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_W_PP_Multi_Min
+            // 
+            this.l_W_PP_Multi_Min.AutoSize = (true);
+            this.l_W_PP_Multi_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_W_PP_Multi_Min.Name = ("l_W_PP_Multi_Min");
+            this.l_W_PP_Multi_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_W_PP_Multi_Min.TabIndex = (2);
+            this.l_W_PP_Multi_Min.Text = ("Minimum:");
+            // 
+            // nud_W_PP_Multi_Min
+            // 
+            this.nud_W_PP_Multi_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_W_PP_Multi_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_W_PP_Multi_Min.Name = ("nud_W_PP_Multi_Min");
+            this.nud_W_PP_Multi_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_W_PP_Multi_Min.TabIndex = (1);
+            this.nud_W_PP_Multi_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_W_PP_Multi_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_W_PP_Multi
+            // 
+            this.cb_W_PP_Multi.AutoSize = (true);
+            this.cb_W_PP_Multi.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_W_PP_Multi.Name = ("cb_W_PP_Multi");
+            this.cb_W_PP_Multi.Size = (new global::System.Drawing.Size(94, 19));
+            this.cb_W_PP_Multi.TabIndex = (0);
+            this.cb_W_PP_Multi.Text = ("PP Multiplier");
+            this.cb_W_PP_Multi.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_W_PP_Multi, "The average defualt is: 2");
+            this.cb_W_PP_Multi.UseVisualStyleBackColor = (true);
             // 
             // F_ItemRandomiser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 534);
+            this.AutoScaleDimensions = (new global::System.Drawing.SizeF(7F, 15F));
+            this.AutoScaleMode = (global::System.Windows.Forms.AutoScaleMode.Font);
+            this.ClientSize = (new global::System.Drawing.Size(750, 534));
             this.Controls.Add(this.tc_TabWindows);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "F_ItemRandomiser";
-            this.Text = "DR2OTR Randomizer";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.FormBorderStyle = (global::System.Windows.Forms.FormBorderStyle.FixedSingle);
+            this.HelpButton = (true);
+            this.MainMenuStrip = (this.menuStrip1);
+            this.MaximizeBox = (false);
+            this.Name = ("F_ItemRandomiser");
+            this.Text = ("DR2OTR Randomizer");
+            this.Load += (this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tc_Items.ResumeLayout(false);
@@ -3627,73 +3699,155 @@
             this.tp_Special.ResumeLayout(false);
             this.tp_Vehicles.ResumeLayout(false);
             this.tp_Search.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).EndInit();
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
             this.tp_WitemsStats.ResumeLayout(false);
             this.tc_itemStats.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
-            this.gb_V_InitialSpeed.ResumeLayout(false);
-            this.gb_V_InitialSpeed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Min)).EndInit();
-            this.gb_V_ExtraTorque.ResumeLayout(false);
-            this.gb_V_ExtraTorque.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).EndInit();
-            this.gb_V_TopSpeed.ResumeLayout(false);
-            this.gb_V_TopSpeed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).EndInit();
-            this.gb_V_MVSEP.ResumeLayout(false);
-            this.gb_V_MVSEP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).EndInit();
-            this.gb_V_MinVSWE.ResumeLayout(false);
-            this.gb_V_MinVSWE.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).EndInit();
-            this.gb_V_ETMinRPM.ResumeLayout(false);
-            this.gb_V_ETMinRPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).EndInit();
-            this.gb_V_ETFMaxRPM.ResumeLayout(false);
-            this.gb_V_ETFMaxRPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
-            this.gb_V_EORPM.ResumeLayout(false);
-            this.gb_V_EORPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).EndInit();
-            this.gb_V_EMinRPM.ResumeLayout(false);
-            this.gb_V_EMinRPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).EndInit();
-            this.gb_V_EMT.ResumeLayout(false);
-            this.gb_V_EMT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).EndInit();
-            this.gb_V_EMaxRPM.ResumeLayout(false);
-            this.gb_V_EMaxRPM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
-            this.gb_AirDensity.ResumeLayout(false);
-            this.gb_AirDensity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
-            this.gb_V_MaxRideSpeed.ResumeLayout(false);
-            this.gb_V_MaxRideSpeed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Min)).EndInit();
+            this.gb_V_RotateSpeed.ResumeLayout(false);
+            this.gb_V_RotateSpeed.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Min)).EndInit();
             this.gb_V_MaxRotationSpeed.ResumeLayout(false);
             this.gb_V_MaxRotationSpeed.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Max)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRotationSpeed_Min)).EndInit();
+            this.gb_V_MaxRideSpeed.ResumeLayout(false);
+            this.gb_V_MaxRideSpeed.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MaxRideSpeed_Min)).EndInit();
+            this.gb_V_InitialSpeed.ResumeLayout(false);
+            this.gb_V_InitialSpeed.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_InitialSpeed_Min)).EndInit();
+            this.gb_V_ExtraTorque.ResumeLayout(false);
+            this.gb_V_ExtraTorque.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ExtraTorque_Min)).EndInit();
+            this.gb_V_TopSpeed.ResumeLayout(false);
+            this.gb_V_TopSpeed.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).EndInit();
+            this.gb_V_MVSEP.ResumeLayout(false);
+            this.gb_V_MVSEP.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).EndInit();
+            this.gb_V_MinVSWE.ResumeLayout(false);
+            this.gb_V_MinVSWE.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).EndInit();
+            this.gb_V_ETMinRPM.ResumeLayout(false);
+            this.gb_V_ETMinRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).EndInit();
+            this.gb_V_ETFMaxRPM.ResumeLayout(false);
+            this.gb_V_ETFMaxRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
+            this.gb_V_EORPM.ResumeLayout(false);
+            this.gb_V_EORPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).EndInit();
+            this.gb_V_EMinRPM.ResumeLayout(false);
+            this.gb_V_EMinRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).EndInit();
+            this.gb_V_EMT.ResumeLayout(false);
+            this.gb_V_EMT.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).EndInit();
+            this.gb_V_EMaxRPM.ResumeLayout(false);
+            this.gb_V_EMaxRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
+            this.gb_AirDensity.ResumeLayout(false);
+            this.gb_AirDensity.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
+            this.tp_NPC.ResumeLayout(false);
+            this.gb_NPC_Max_PP.ResumeLayout(false);
+            this.gb_NPC_Max_PP.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_Max_PP_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_Max_PP_Min)).EndInit();
+            this.gb_NPC_HealthAmount.ResumeLayout(false);
+            this.gb_NPC_HealthAmount.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_HealthAmount_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_HealthAmount_Min)).EndInit();
+            this.gb_NPC_DamPerKMH.ResumeLayout(false);
+            this.gb_NPC_DamPerKMH.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_DamPerKMH_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_DamPerKMH_Min)).EndInit();
+            this.gb_NPC_MSDBoss.ResumeLayout(false);
+            this.gb_NPC_MSDBoss.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_MSDBoss_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_MSDBoss_Min)).EndInit();
+            this.gb_NPC_FlatBossDam.ResumeLayout(false);
+            this.gb_NPC_FlatBossDam.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Min)).EndInit();
+            this.tp_FireArms.ResumeLayout(false);
+            this.gb_FA_SpraySupply.ResumeLayout(false);
+            this.gb_FA_SpraySupply.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Min)).EndInit();
+            this.gb_FA_MaxBurst.ResumeLayout(false);
+            this.gb_FA_MaxBurst.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Min)).EndInit();
+            this.gb_FA_NumBullets.ResumeLayout(false);
+            this.gb_FA_NumBullets.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_NumBullets_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_NumBullets_Min)).EndInit();
+            this.gb_FA_BulletRange.ResumeLayout(false);
+            this.gb_FA_BulletRange.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BulletRange_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BulletRange_Min)).EndInit();
+            this.gb_FA_BaseBullDam.ResumeLayout(false);
+            this.gb_FA_BaseBullDam.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BaseBullDam_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_BaseBullDam_Min)).EndInit();
+            this.gb_FA_FireRate.ResumeLayout(false);
+            this.gb_FA_FireRate.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).EndInit();
+            this.tp_WorldStats.ResumeLayout(false);
+            this.gb_W_PayoutCount.ResumeLayout(false);
+            this.gb_W_PayoutCount.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.gb_W_Payout.ResumeLayout(false);
+            this.gb_W_Payout.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Payout_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Payout_Min)).EndInit();
+            this.gb_W_Amount.ResumeLayout(false);
+            this.gb_W_Amount.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Amount_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_Amount_Min)).EndInit();
+            this.gb_W_PPAward.ResumeLayout(false);
+            this.gb_W_PPAward.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PPAward_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PPAward_Min)).EndInit();
+            this.gb_W_CostHigh.ResumeLayout(false);
+            this.gb_W_CostHigh.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostHigh_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostHigh_Min)).EndInit();
+            this.gb_W_CostMid.ResumeLayout(false);
+            this.gb_W_CostMid.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostMid_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostMid_Min)).EndInit();
+            this.gb_W_CostLow.ResumeLayout(false);
+            this.gb_W_CostLow.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Min)).EndInit();
+            this.gb_W_PP_Multi.ResumeLayout(false);
+            this.gb_W_PP_Multi.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PP_Multi_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_PP_Multi_Min)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -3857,5 +4011,148 @@
         private Label l_V_MaxRideSpeed_Min;
         private NumericUpDown nud_V_MaxRideSpeed_Min;
         private CheckBox cb_V_MaxRideSpeed;
+        private GroupBox gb_V_RotateSpeed;
+        private Label l_V_RotateSpeed_Dec;
+        private Label l_V_RotateSpeed_Max;
+        private NumericUpDown nud_V_RotateSpeed_Max;
+        private Label l_V_RotateSpeed_Min;
+        private NumericUpDown nud_V_RotateSpeed_Min;
+        private CheckBox cb_V_RotateSpeed;
+        private TabPage tp_NPC;
+        private GroupBox gb_NPC_FlatBossDam;
+        private Label l_NPC_FlatBoss_Dec;
+        private Label l_NPC_FlatBoss_Max;
+        private NumericUpDown nud_NPC_FlatBoss_Max;
+        private Label l_NPC_FlatBoss_Min;
+        private NumericUpDown nud_NPC_FlatBoss_Min;
+        private CheckBox cb_NPC_FlatBoss;
+        private GroupBox gb_NPC_DamPerKMH;
+        private Label l_NPC_DamPerKMH_Dec;
+        private Label l_NPC_DamPerKMH_Max;
+        private NumericUpDown nud_NPC_DamPerKMH_Max;
+        private Label l_NPC_DamPerKMH_Min;
+        private NumericUpDown nud_NPC_DamPerKMH_Min;
+        private CheckBox cb_NPC_DamPerKMH;
+        private GroupBox gb_NPC_MSDBoss;
+        private Label l_NPC_MSDBoss_Dec;
+        private Label l_NPC_MSDBoss_Max;
+        private NumericUpDown nud_NPC_MSDBoss_Max;
+        private Label l_NPC_MSDBoss_Min;
+        private NumericUpDown nud_NPC_MSDBoss_Min;
+        private CheckBox cb_NPC_MSDBoss;
+        private GroupBox gb_NPC_HealthAmount;
+        private Label l_NPC_HealthAmount_Dec;
+        private Label l_NPC_HealthAmount_Max;
+        private NumericUpDown nud_NPC_HealthAmount_Max;
+        private Label l_NPC_HealthAmount_Min;
+        private NumericUpDown nud_NPC_HealthAmount_Min;
+        private CheckBox cb_NPC_HealthAmount;
+        private GroupBox gb_NPC_Max_PP;
+        private Label l_NPC_Max_PP_Dec;
+        private Label l_NPC_Max_PP_Max;
+        private NumericUpDown nud_NPC_Max_PP_Max;
+        private Label l_NPC_Max_PP_Min;
+        private NumericUpDown nud_NPC_Max_PP_Min;
+        private CheckBox cb_NPC_Max_PP;
+        private TabPage tp_FireArms;
+        private GroupBox gb_FA_BaseBullDam;
+        private Label l_FA_BaseBullDam_Dec;
+        private Label l_FA_BaseBullDam_Max;
+        private NumericUpDown nud_FA_BaseBullDam_Max;
+        private Label l_FA_BaseBullDam_Min;
+        private NumericUpDown nud_FA_BaseBullDam_Min;
+        private CheckBox cb_FA_BaseBullDam;
+        private GroupBox gb_FA_FireRate;
+        private Label l_FA_FireRate_Dec;
+        private Label l_FA_FireRate_Max;
+        private NumericUpDown nud_FA_FireRate_Max;
+        private Label l_FA_FireRate_Min;
+        private NumericUpDown nud_FA_FireRate_Min;
+        private CheckBox cb_FA_FireRate;
+        private global::System.Windows.Forms.GroupBox gb_FA_BulletRange;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Dec;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Max;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_BulletRange;
+        private global::System.Windows.Forms.GroupBox gb_FA_NumBullets;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Dec;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Max;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_NumBullets;
+        private global::System.Windows.Forms.GroupBox gb_FA_MaxBurst;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Dec;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Max;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_MaxBurst;
+        private global::System.Windows.Forms.GroupBox gb_FA_SpraySupply;
+        private global::System.Windows.Forms.Label l_FA_SpraySupply_Dec;
+        private global::System.Windows.Forms.Label l_FA_SpraySupply_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_SpraySupply_Max;
+        private global::System.Windows.Forms.Label l_FA_SpraySupply_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_SpraySupply_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_SpraySupply;
+        private global::System.Windows.Forms.TabPage tp_WorldStats;
+        private global::System.Windows.Forms.GroupBox gb_W_CostLow;
+        private global::System.Windows.Forms.Label l_W_CostLow_Dec;
+        private global::System.Windows.Forms.Label l_W_CostLow_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Max;
+        private global::System.Windows.Forms.Label l_W_CostLow_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostLow;
+        private global::System.Windows.Forms.GroupBox gb_W_CostMid;
+        private global::System.Windows.Forms.Label l_W_CostMid_Dec;
+        private global::System.Windows.Forms.Label l_W_CostMid_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Max;
+        private global::System.Windows.Forms.Label l_W_CostMid_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostMid;
+        private global::System.Windows.Forms.GroupBox gb_W_CostHigh;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Dec;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Max;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostHigh;
+        private global::System.Windows.Forms.GroupBox gb_W_PPAward;
+        private global::System.Windows.Forms.Label l_W_PPAward_Dec;
+        private global::System.Windows.Forms.Label l_W_PPAward_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Max;
+        private global::System.Windows.Forms.Label l_W_PPAward_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_PPAward;
+        private global::System.Windows.Forms.GroupBox gb_W_Amount;
+        private global::System.Windows.Forms.Label l_W_Amount_Dec;
+        private global::System.Windows.Forms.Label l_W_Amount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Max;
+        private global::System.Windows.Forms.Label l_W_Amount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_Amount;
+        private global::System.Windows.Forms.GroupBox gb_W_PayoutCount;
+        private global::System.Windows.Forms.Label l_W_PayoutCount_Dec;
+        private global::System.Windows.Forms.Label label2;
+        private global::System.Windows.Forms.NumericUpDown numericUpDown1;
+        private global::System.Windows.Forms.Label l_W_PayoutCount_Min;
+        private global::System.Windows.Forms.NumericUpDown numericUpDown2;
+        private global::System.Windows.Forms.CheckBox cb_W_PayoutCount;
+        private global::System.Windows.Forms.GroupBox gb_W_Payout;
+        private global::System.Windows.Forms.Label l_W_Payout_Dec;
+        private global::System.Windows.Forms.Label l_W_Payout_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Max;
+        private global::System.Windows.Forms.Label l_W_Payout_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_Payout;
+        private global::System.Windows.Forms.GroupBox gb_W_PP_Multi;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Dec;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Max;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_PP_Multi;
     }
 }

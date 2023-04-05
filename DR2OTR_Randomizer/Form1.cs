@@ -26,7 +26,7 @@ public partial class F_ItemRandomiser : Form
             , "WARNING");
             Process.GetCurrentProcess().Kill();
         }
-        
+
         var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
         //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
@@ -47,12 +47,12 @@ public partial class F_ItemRandomiser : Form
 
         //Adds the data from the data table to the check list box for filtering
         clb_SearchResults.DataSource = dt.DefaultView;
-        
+
         //Gets the string name of the Item in the datatable columns and dislpays that name
         //and sets the Value for each Item in the Check list box the same as the dispaly name
         clb_SearchResults.DisplayMember = "Item";
         clb_SearchResults.ValueMember = "Item";
-        
+
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
     }
@@ -158,7 +158,7 @@ public partial class F_ItemRandomiser : Form
             }
             if (item.Name == "clb_SearchResults")
             {
-                foreach(DataRowView itemName in clb_SearchResults.CheckedItems)
+                foreach (DataRowView itemName in clb_SearchResults.CheckedItems)
                 {
                     //Because im using a data table for the search clb i have to 
                     //get the item name from the DataRow with the row name "Item"
@@ -258,15 +258,15 @@ public partial class F_ItemRandomiser : Form
     {
         if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
-        
+
         Random rand = new Random();
 
         List<GroupBox> allGroupBoxes = new List<GroupBox>();
 
-        foreach(TabPage tabpage in tc_itemStats.TabPages)
-        {   
-            foreach(GroupBox groupBox in tabpage.Controls)
-                {allGroupBoxes.Add(groupBox);}
+        foreach (TabPage tabpage in tc_itemStats.TabPages)
+        {
+            foreach (GroupBox groupBox in tabpage.Controls)
+            { allGroupBoxes.Add(groupBox); }
         }
         foreach (GroupBox box in allGroupBoxes)
         {
@@ -289,11 +289,6 @@ public partial class F_ItemRandomiser : Form
             }
         }
         File.WriteAllLines($"{path}\\THISISATESTFILE.txt", itemFile);
-    }
-
-    private void label1_Click(object sender, EventArgs e)
-    {
-
     }
 }
 
