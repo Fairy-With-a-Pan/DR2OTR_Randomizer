@@ -88,6 +88,7 @@
             this.b_DeselectAll = (new global::System.Windows.Forms.Button());
             this.b_CheckAll = (new global::System.Windows.Forms.Button());
             this.tp_WitemsStats = (new global::System.Windows.Forms.TabPage());
+            this.bt_IS_CheckAllActiveTab = (new global::System.Windows.Forms.Button());
             this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
             this.tc_itemStats = (new global::System.Windows.Forms.TabControl());
             this.tp_VehicleStats = (new global::System.Windows.Forms.TabPage());
@@ -247,13 +248,6 @@
             this.nud_NPC_FlatBoss_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_NPC_FlatBoss = (new global::System.Windows.Forms.CheckBox());
             this.tp_FireArms = (new global::System.Windows.Forms.TabPage());
-            this.gb_FA_SpraySupply = (new global::System.Windows.Forms.GroupBox());
-            this.l_FA_SpraySupply_Dec = (new global::System.Windows.Forms.Label());
-            this.l_FA_SpraySupply_Max = (new global::System.Windows.Forms.Label());
-            this.nud_FA_SpraySupply_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_FA_SpraySupply_Min = (new global::System.Windows.Forms.Label());
-            this.nud_FA_SpraySupply_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_FA_SpraySupply = (new global::System.Windows.Forms.CheckBox());
             this.gb_FA_MaxBurst = (new global::System.Windows.Forms.GroupBox());
             this.l_FA_MaxBurst_Dec = (new global::System.Windows.Forms.Label());
             this.l_FA_MaxBurst_Max = (new global::System.Windows.Forms.Label());
@@ -290,13 +284,6 @@
             this.nud_FA_FireRate_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_FA_FireRate = (new global::System.Windows.Forms.CheckBox());
             this.tp_WorldStats = (new global::System.Windows.Forms.TabPage());
-            this.gb_W_ProjectDamage = (new global::System.Windows.Forms.GroupBox());
-            this.l_W_ProjectDamage_Dec = (new global::System.Windows.Forms.Label());
-            this.l_W_ProjectDamage_Max = (new global::System.Windows.Forms.Label());
-            this.nud_W_ProjectDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_W_ProjectDamage_Min = (new global::System.Windows.Forms.Label());
-            this.nud_W_ProjectDamage_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_W_ProjectDamage = (new global::System.Windows.Forms.CheckBox());
             this.gb_W_ThrowForce = (new global::System.Windows.Forms.GroupBox());
             this.l_W_ThrowForce_Dec = (new global::System.Windows.Forms.Label());
             this.l_W_ThrowForce_Max = (new global::System.Windows.Forms.Label());
@@ -368,43 +355,6 @@
             this.nud_W_CostLow_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_W_CostLow = (new global::System.Windows.Forms.CheckBox());
             this.tp_ExplosivesSpray = (new global::System.Windows.Forms.TabPage());
-            this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
-            this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
-            this.gb_ES_SprayAmmo = (new global::System.Windows.Forms.GroupBox());
-            this.l_ES_SprayAmmo_Dec = (new global::System.Windows.Forms.Label());
-            this.l_ES_SprayAmmo_Max = (new global::System.Windows.Forms.Label());
-            this.nud_ES_SprayAmmo_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_ES_SprayAmmo_Min = (new global::System.Windows.Forms.Label());
-            this.nud_ES_SprayAmmo_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_ES_SprayAmmo = (new global::System.Windows.Forms.CheckBox());
-            this.gb_ES_ExplodeRadius = (new global::System.Windows.Forms.GroupBox());
-            this.l_ES_ExplodeRadius_Dec = (new global::System.Windows.Forms.Label());
-            this.l_ES_ExplodeRadius_Max = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ExplodeRadius_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_ES_ExplodeRadius_Min = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ExplodeRadius_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_ES_ExplodeRadius = (new global::System.Windows.Forms.CheckBox());
-            this.gb_ES_MaxDamage = (new global::System.Windows.Forms.GroupBox());
-            this.l_ES_MaxDamage_Dec = (new global::System.Windows.Forms.Label());
-            this.l_ES_MaxDamage_Max = (new global::System.Windows.Forms.Label());
-            this.nud_ES_MaxDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_ES_MaxDamage_Min = (new global::System.Windows.Forms.Label());
-            this.nud_ES_MaxDamage_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_ES_MaxDamage = (new global::System.Windows.Forms.CheckBox());
-            this.gb_ES_ExpolsiveDelay = (new global::System.Windows.Forms.GroupBox());
-            this.l_ES_ExpolsiveDelay_Dec = (new global::System.Windows.Forms.Label());
-            this.l_ES_ExpolsiveDelay_Max = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ExpolsiveDelay_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_ES_ExpolsiveDelay_Min = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ExpolsiveDelay_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_ES_ExpolsiveDelay = (new global::System.Windows.Forms.CheckBox());
-            this.gb_ES_ProjectileSpin = (new global::System.Windows.Forms.GroupBox());
-            this.l_ES_ProjectileSpin_Dec = (new global::System.Windows.Forms.Label());
-            this.l_ES_ProjectileSpin_Max = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ProjectileSpin_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_ES_ProjectileSpin_Min = (new global::System.Windows.Forms.Label());
-            this.nud_ES_ProjectileSpin_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_ES_ProjectileSpin = (new global::System.Windows.Forms.CheckBox());
             this.gb_ES_ThrowablesAmmo = (new global::System.Windows.Forms.GroupBox());
             this.l_ES_ThrowablesAmmo_Dec = (new global::System.Windows.Forms.Label());
             this.l_ES_ThrowablesAmmo_Max = (new global::System.Windows.Forms.Label());
@@ -412,6 +362,72 @@
             this.l_ES_ThrowablesAmmo_Min = (new global::System.Windows.Forms.Label());
             this.nud_ES_ThrowablesAmmo_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_ES_ThrowablesAmmo = (new global::System.Windows.Forms.CheckBox());
+            this.gb_ES_ProjectileSpin = (new global::System.Windows.Forms.GroupBox());
+            this.l_ES_ProjectileSpin_Dec = (new global::System.Windows.Forms.Label());
+            this.l_ES_ProjectileSpin_Max = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ProjectileSpin_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_ES_ProjectileSpin_Min = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ProjectileSpin_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_ES_ProjectileSpin = (new global::System.Windows.Forms.CheckBox());
+            this.gb_ES_ExpolsiveDelay = (new global::System.Windows.Forms.GroupBox());
+            this.l_ES_ExpolsiveDelay_Dec = (new global::System.Windows.Forms.Label());
+            this.l_ES_ExpolsiveDelay_Max = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ExpolsiveDelay_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_ES_ExpolsiveDelay_Min = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ExpolsiveDelay_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_ES_ExpolsiveDelay = (new global::System.Windows.Forms.CheckBox());
+            this.gb_ES_MaxDamage = (new global::System.Windows.Forms.GroupBox());
+            this.l_ES_MaxDamage_Dec = (new global::System.Windows.Forms.Label());
+            this.l_ES_MaxDamage_Max = (new global::System.Windows.Forms.Label());
+            this.nud_ES_MaxDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_ES_MaxDamage_Min = (new global::System.Windows.Forms.Label());
+            this.nud_ES_MaxDamage_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_ES_MaxDamage = (new global::System.Windows.Forms.CheckBox());
+            this.gb_ES_ExplodeRadius = (new global::System.Windows.Forms.GroupBox());
+            this.l_ES_ExplodeRadius_Dec = (new global::System.Windows.Forms.Label());
+            this.l_ES_ExplodeRadius_Max = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ExplodeRadius_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_ES_ExplodeRadius_Min = (new global::System.Windows.Forms.Label());
+            this.nud_ES_ExplodeRadius_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_ES_ExplodeRadius = (new global::System.Windows.Forms.CheckBox());
+            this.gb_ES_SprayAmmo = (new global::System.Windows.Forms.GroupBox());
+            this.l_ES_SprayAmmo_Dec = (new global::System.Windows.Forms.Label());
+            this.l_ES_SprayAmmo_Max = (new global::System.Windows.Forms.Label());
+            this.nud_ES_SprayAmmo_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_ES_SprayAmmo_Min = (new global::System.Windows.Forms.Label());
+            this.nud_ES_SprayAmmo_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_ES_SprayAmmo = (new global::System.Windows.Forms.CheckBox());
+            this.tp_FoodDamage = (new global::System.Windows.Forms.TabPage());
+            this.gb_FD_MaxDperA = (new global::System.Windows.Forms.GroupBox());
+            this.label1 = (new global::System.Windows.Forms.Label());
+            this.label2 = (new global::System.Windows.Forms.Label());
+            this.numericUpDown1 = (new global::System.Windows.Forms.NumericUpDown());
+            this.label3 = (new global::System.Windows.Forms.Label());
+            this.numericUpDown2 = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FD_MaxDperA = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FD_ProjectDamage = (new global::System.Windows.Forms.GroupBox());
+            this.l_FD_ProjectDamage_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FD_ProjectDamage_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FD_ProjectDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FD_ProjectDamage_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FD_ProjectDamage_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FD_ProjectDamage = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FD_HealthBoost = (new global::System.Windows.Forms.GroupBox());
+            this.l_FD_HealthBoost_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FD_HealthBoost_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FD_HealthBoost_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FD_HealthBoost_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FD_HealthBoost_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FD_HealthBoost = (new global::System.Windows.Forms.CheckBox());
+            this.gb_FD_AttackDamage = (new global::System.Windows.Forms.GroupBox());
+            this.l_FD_AttackDamage_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FD_AttackDamage_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FD_AttackDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.c = (new global::System.Windows.Forms.Label());
+            this.nud_FD_AttackDamage_Dec = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_FD_AttackDamage = (new global::System.Windows.Forms.CheckBox());
+            this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
+            this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -508,9 +524,6 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Min)).BeginInit();
             this.tp_FireArms.SuspendLayout();
-            this.gb_FA_SpraySupply.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Min)).BeginInit();
             this.gb_FA_MaxBurst.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Min)).BeginInit();
@@ -527,9 +540,6 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).BeginInit();
             this.tp_WorldStats.SuspendLayout();
-            this.gb_W_ProjectDamage.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ProjectDamage_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ProjectDamage_Min)).BeginInit();
             this.gb_W_ThrowForce.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Min)).BeginInit();
@@ -561,24 +571,37 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Min)).BeginInit();
             this.tp_ExplosivesSpray.SuspendLayout();
-            this.gb_ES_SprayAmmo.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Min)).BeginInit();
-            this.gb_ES_ExplodeRadius.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Min)).BeginInit();
-            this.gb_ES_MaxDamage.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Min)).BeginInit();
-            this.gb_ES_ExpolsiveDelay.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Min)).BeginInit();
-            this.gb_ES_ProjectileSpin.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Min)).BeginInit();
             this.gb_ES_ThrowablesAmmo.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ThrowablesAmmo_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ThrowablesAmmo_Min)).BeginInit();
+            this.gb_ES_ProjectileSpin.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Min)).BeginInit();
+            this.gb_ES_ExpolsiveDelay.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Min)).BeginInit();
+            this.gb_ES_MaxDamage.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Min)).BeginInit();
+            this.gb_ES_ExplodeRadius.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Min)).BeginInit();
+            this.gb_ES_SprayAmmo.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Min)).BeginInit();
+            this.tp_FoodDamage.SuspendLayout();
+            this.gb_FD_MaxDperA.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.gb_FD_ProjectDamage.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Min)).BeginInit();
+            this.gb_FD_HealthBoost.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_HealthBoost_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_HealthBoost_Min)).BeginInit();
+            this.gb_FD_AttackDamage.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Dec)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1159,6 +1182,7 @@
             // tp_WitemsStats
             // 
             this.tp_WitemsStats.AutoScroll = (true);
+            this.tp_WitemsStats.Controls.Add(this.bt_IS_CheckAllActiveTab);
             this.tp_WitemsStats.Controls.Add(this.bt_ItenStatsSet);
             this.tp_WitemsStats.Controls.Add(this.tc_itemStats);
             this.tp_WitemsStats.Location = (new global::System.Drawing.Point(4, 24));
@@ -1168,6 +1192,16 @@
             this.tp_WitemsStats.TabIndex = (1);
             this.tp_WitemsStats.Text = ("Items Stats");
             this.tp_WitemsStats.UseVisualStyleBackColor = (true);
+            // 
+            // bt_IS_CheckAllActiveTab
+            // 
+            this.bt_IS_CheckAllActiveTab.Location = (new global::System.Drawing.Point(154, 6));
+            this.bt_IS_CheckAllActiveTab.Name = ("bt_IS_CheckAllActiveTab");
+            this.bt_IS_CheckAllActiveTab.Size = (new global::System.Drawing.Size(80, 41));
+            this.bt_IS_CheckAllActiveTab.TabIndex = (3);
+            this.bt_IS_CheckAllActiveTab.Text = ("Check All in Active Tab");
+            this.bt_IS_CheckAllActiveTab.UseVisualStyleBackColor = (true);
+            this.bt_IS_CheckAllActiveTab.Click += (this.bt_IS_CheckAllActiveTab_Click);
             // 
             // bt_ItenStatsSet
             // 
@@ -1186,6 +1220,7 @@
             this.tc_itemStats.Controls.Add(this.tp_FireArms);
             this.tc_itemStats.Controls.Add(this.tp_WorldStats);
             this.tc_itemStats.Controls.Add(this.tp_ExplosivesSpray);
+            this.tc_itemStats.Controls.Add(this.tp_FoodDamage);
             this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 51));
             this.tc_itemStats.Name = ("tc_itemStats");
             this.tc_itemStats.SelectedIndex = (0);
@@ -1551,7 +1586,7 @@
             this.nud_V_ExtraTorque_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_V_ExtraTorque_Max.TabIndex = (3);
             this.nud_V_ExtraTorque_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ExtraTorque_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_V_ExtraTorque_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
             // 
             // l_V_ExtraTorque_Min
             // 
@@ -1624,7 +1659,7 @@
             this.nud_V_TopSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_V_TopSpeed_Max.TabIndex = (3);
             this.nud_V_TopSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_TopSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_V_TopSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
             // 
             // l_V_TopSpeed_Min
             // 
@@ -1697,7 +1732,7 @@
             this.nud__V_MVSEP_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud__V_MVSEP_Max.TabIndex = (3);
             this.nud__V_MVSEP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud__V_MVSEP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud__V_MVSEP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
             // 
             // l_V_MVSEP_Min
             // 
@@ -1716,7 +1751,7 @@
             this.nud__V_MVSEP_Min.Size = (new global::System.Drawing.Size(86, 23));
             this.nud__V_MVSEP_Min.TabIndex = (1);
             this.nud__V_MVSEP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud__V_MVSEP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.nud__V_MVSEP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // cb_V_MVSEP
             // 
@@ -1770,7 +1805,7 @@
             this.nud_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_V_MinVSWE_Max.TabIndex = (3);
             this.nud_V_MinVSWE_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_MinVSWE_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
             // 
             // l_V_MinVSWE_Min
             // 
@@ -1789,7 +1824,7 @@
             this.nud_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_V_MinVSWE_Min.TabIndex = (1);
             this.nud_V_MinVSWE_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_MinVSWE_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // cb_V_MinVSWE
             // 
@@ -1916,7 +1951,7 @@
             this.nud_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_V_ETFMaxRPM_Max.TabIndex = (3);
             this.nud_V_ETFMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ETFMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_V_ETFMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
             // 
             // l_V_ETFMaxRPM_Min
             // 
@@ -2519,7 +2554,7 @@
             this.nud_NPC_Max_PP_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_NPC_Max_PP_Max.TabIndex = (3);
             this.nud_NPC_Max_PP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_NPC_Max_PP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_NPC_Max_PP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 2500, 0, 0, 0 }));
             // 
             // l_NPC_Max_PP_Min
             // 
@@ -2593,7 +2628,7 @@
             this.nud_NPC_HealthAmount_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_NPC_HealthAmount_Max.TabIndex = (3);
             this.nud_NPC_HealthAmount_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_NPC_HealthAmount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_NPC_HealthAmount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // l_NPC_HealthAmount_Min
             // 
@@ -2850,7 +2885,6 @@
             // 
             // tp_FireArms
             // 
-            this.tp_FireArms.Controls.Add(this.gb_FA_SpraySupply);
             this.tp_FireArms.Controls.Add(this.gb_FA_MaxBurst);
             this.tp_FireArms.Controls.Add(this.gb_FA_NumBullets);
             this.tp_FireArms.Controls.Add(this.gb_FA_BulletRange);
@@ -2863,80 +2897,6 @@
             this.tp_FireArms.TabIndex = (2);
             this.tp_FireArms.Text = ("Fire Arms");
             this.tp_FireArms.UseVisualStyleBackColor = (true);
-            // 
-            // gb_FA_SpraySupply
-            // 
-            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Dec);
-            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Max);
-            this.gb_FA_SpraySupply.Controls.Add(this.nud_FA_SpraySupply_Max);
-            this.gb_FA_SpraySupply.Controls.Add(this.l_FA_SpraySupply_Min);
-            this.gb_FA_SpraySupply.Controls.Add(this.nud_FA_SpraySupply_Min);
-            this.gb_FA_SpraySupply.Controls.Add(this.cb_FA_SpraySupply);
-            this.gb_FA_SpraySupply.Location = (new global::System.Drawing.Point(6, 310));
-            this.gb_FA_SpraySupply.Name = ("gb_FA_SpraySupply");
-            this.gb_FA_SpraySupply.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_FA_SpraySupply.TabIndex = (26);
-            this.gb_FA_SpraySupply.TabStop = (false);
-            this.gb_FA_SpraySupply.Tag = ("SpraySupply");
-            // 
-            // l_FA_SpraySupply_Dec
-            // 
-            this.l_FA_SpraySupply_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_FA_SpraySupply_Dec.Name = ("l_FA_SpraySupply_Dec");
-            this.l_FA_SpraySupply_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_FA_SpraySupply_Dec.TabIndex = (7);
-            this.l_FA_SpraySupply_Dec.Text = ("The amount of ammo for spray weapons.");
-            this.l_FA_SpraySupply_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_FA_SpraySupply_Max
-            // 
-            this.l_FA_SpraySupply_Max.AutoSize = (true);
-            this.l_FA_SpraySupply_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_FA_SpraySupply_Max.Name = ("l_FA_SpraySupply_Max");
-            this.l_FA_SpraySupply_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_FA_SpraySupply_Max.TabIndex = (4);
-            this.l_FA_SpraySupply_Max.Text = ("Maximum:");
-            // 
-            // nud_FA_SpraySupply_Max
-            // 
-            this.nud_FA_SpraySupply_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_FA_SpraySupply_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_FA_SpraySupply_Max.Name = ("nud_FA_SpraySupply_Max");
-            this.nud_FA_SpraySupply_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_FA_SpraySupply_Max.TabIndex = (3);
-            this.nud_FA_SpraySupply_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_SpraySupply_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
-            // 
-            // l_FA_SpraySupply_Min
-            // 
-            this.l_FA_SpraySupply_Min.AutoSize = (true);
-            this.l_FA_SpraySupply_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_FA_SpraySupply_Min.Name = ("l_FA_SpraySupply_Min");
-            this.l_FA_SpraySupply_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_FA_SpraySupply_Min.TabIndex = (2);
-            this.l_FA_SpraySupply_Min.Text = ("Minimum:");
-            // 
-            // nud_FA_SpraySupply_Min
-            // 
-            this.nud_FA_SpraySupply_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_FA_SpraySupply_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_FA_SpraySupply_Min.Name = ("nud_FA_SpraySupply_Min");
-            this.nud_FA_SpraySupply_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_FA_SpraySupply_Min.TabIndex = (1);
-            this.nud_FA_SpraySupply_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_SpraySupply_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_FA_SpraySupply
-            // 
-            this.cb_FA_SpraySupply.AutoSize = (true);
-            this.cb_FA_SpraySupply.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_FA_SpraySupply.Name = ("cb_FA_SpraySupply");
-            this.cb_FA_SpraySupply.Size = (new global::System.Drawing.Size(142, 19));
-            this.cb_FA_SpraySupply.TabIndex = (0);
-            this.cb_FA_SpraySupply.Text = ("Spray Weapon Ammo");
-            this.cb_FA_SpraySupply.TextAlign = (global::System.Drawing.ContentAlignment.MiddleRight);
-            this.tt_VehicleStats.SetToolTip(this.cb_FA_SpraySupply, "The average defualt is: 41");
-            this.cb_FA_SpraySupply.UseVisualStyleBackColor = (true);
             // 
             // gb_FA_MaxBurst
             // 
@@ -2979,7 +2939,7 @@
             this.nud_FA_MaxBurst_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_FA_MaxBurst_Max.TabIndex = (3);
             this.nud_FA_MaxBurst_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_MaxBurst_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FA_MaxBurst_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 25, 0, 0, 0 }));
             // 
             // l_FA_MaxBurst_Min
             // 
@@ -3053,7 +3013,7 @@
             this.nud_FA_NumBullets_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_FA_NumBullets_Max.TabIndex = (3);
             this.nud_FA_NumBullets_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_NumBullets_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FA_NumBullets_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 50, 0, 0, 0 }));
             // 
             // l_FA_NumBullets_Min
             // 
@@ -3127,7 +3087,7 @@
             this.nud_FA_BulletRange_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_FA_BulletRange_Max.TabIndex = (3);
             this.nud_FA_BulletRange_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_BulletRange_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FA_BulletRange_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
             // 
             // l_FA_BulletRange_Min
             // 
@@ -3201,7 +3161,7 @@
             this.nud_FA_BaseBullDam_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_FA_BaseBullDam_Max.TabIndex = (3);
             this.nud_FA_BaseBullDam_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_BaseBullDam_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FA_BaseBullDam_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
             // 
             // l_FA_BaseBullDam_Min
             // 
@@ -3275,7 +3235,7 @@
             this.nud_FA_FireRate_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_FA_FireRate_Max.TabIndex = (3);
             this.nud_FA_FireRate_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_FA_FireRate_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FA_FireRate_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // l_FA_FireRate_Min
             // 
@@ -3311,7 +3271,6 @@
             // tp_WorldStats
             // 
             this.tp_WorldStats.AutoScroll = (true);
-            this.tp_WorldStats.Controls.Add(this.gb_W_ProjectDamage);
             this.tp_WorldStats.Controls.Add(this.gb_W_ThrowForce);
             this.tp_WorldStats.Controls.Add(this.gb_W_Durability);
             this.tp_WorldStats.Controls.Add(this.gb_W_PP_Multi);
@@ -3329,80 +3288,6 @@
             this.tp_WorldStats.TabIndex = (3);
             this.tp_WorldStats.Text = ("World Stats");
             this.tp_WorldStats.UseVisualStyleBackColor = (true);
-            // 
-            // gb_W_ProjectDamage
-            // 
-            this.gb_W_ProjectDamage.Controls.Add(this.l_W_ProjectDamage_Dec);
-            this.gb_W_ProjectDamage.Controls.Add(this.l_W_ProjectDamage_Max);
-            this.gb_W_ProjectDamage.Controls.Add(this.nud_W_ProjectDamage_Max);
-            this.gb_W_ProjectDamage.Controls.Add(this.l_W_ProjectDamage_Min);
-            this.gb_W_ProjectDamage.Controls.Add(this.nud_W_ProjectDamage_Min);
-            this.gb_W_ProjectDamage.Controls.Add(this.cb_W_ProjectDamage);
-            this.gb_W_ProjectDamage.Location = (new global::System.Drawing.Point(6, 550));
-            this.gb_W_ProjectDamage.Name = ("gb_W_ProjectDamage");
-            this.gb_W_ProjectDamage.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_W_ProjectDamage.TabIndex = (32);
-            this.gb_W_ProjectDamage.TabStop = (false);
-            this.gb_W_ProjectDamage.Tag = ("MaxProjectileDamage");
-            // 
-            // l_W_ProjectDamage_Dec
-            // 
-            this.l_W_ProjectDamage_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_W_ProjectDamage_Dec.Name = ("l_W_ProjectDamage_Dec");
-            this.l_W_ProjectDamage_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_W_ProjectDamage_Dec.TabIndex = (7);
-            this.l_W_ProjectDamage_Dec.Text = ("Amount of damage done when an item as be thrown");
-            this.l_W_ProjectDamage_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_W_ProjectDamage_Max
-            // 
-            this.l_W_ProjectDamage_Max.AutoSize = (true);
-            this.l_W_ProjectDamage_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_W_ProjectDamage_Max.Name = ("l_W_ProjectDamage_Max");
-            this.l_W_ProjectDamage_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_W_ProjectDamage_Max.TabIndex = (4);
-            this.l_W_ProjectDamage_Max.Text = ("Maximum:");
-            // 
-            // nud_W_ProjectDamage_Max
-            // 
-            this.nud_W_ProjectDamage_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_W_ProjectDamage_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_W_ProjectDamage_Max.Name = ("nud_W_ProjectDamage_Max");
-            this.nud_W_ProjectDamage_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_W_ProjectDamage_Max.TabIndex = (3);
-            this.nud_W_ProjectDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_ProjectDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
-            // 
-            // l_W_ProjectDamage_Min
-            // 
-            this.l_W_ProjectDamage_Min.AutoSize = (true);
-            this.l_W_ProjectDamage_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_W_ProjectDamage_Min.Name = ("l_W_ProjectDamage_Min");
-            this.l_W_ProjectDamage_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_W_ProjectDamage_Min.TabIndex = (2);
-            this.l_W_ProjectDamage_Min.Text = ("Minimum:");
-            // 
-            // nud_W_ProjectDamage_Min
-            // 
-            this.nud_W_ProjectDamage_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_W_ProjectDamage_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_W_ProjectDamage_Min.Name = ("nud_W_ProjectDamage_Min");
-            this.nud_W_ProjectDamage_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_W_ProjectDamage_Min.TabIndex = (1);
-            this.nud_W_ProjectDamage_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_ProjectDamage_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_W_ProjectDamage
-            // 
-            this.cb_W_ProjectDamage.AutoSize = (true);
-            this.cb_W_ProjectDamage.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_W_ProjectDamage.Name = ("cb_W_ProjectDamage");
-            this.cb_W_ProjectDamage.Size = (new global::System.Drawing.Size(140, 19));
-            this.cb_W_ProjectDamage.TabIndex = (0);
-            this.cb_W_ProjectDamage.Text = ("Thrown Item Damage");
-            this.cb_W_ProjectDamage.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_W_ProjectDamage, "The average defualt is: 48");
-            this.cb_W_ProjectDamage.UseVisualStyleBackColor = (true);
             // 
             // gb_W_ThrowForce
             // 
@@ -3445,7 +3330,7 @@
             this.nud_W_ThrowForce_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_ThrowForce_Max.TabIndex = (3);
             this.nud_W_ThrowForce_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_ThrowForce_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_ThrowForce_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
             // 
             // l_W_ThrowForce_Min
             // 
@@ -3491,7 +3376,7 @@
             this.gb_W_Durability.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_Durability.TabIndex = (30);
             this.gb_W_Durability.TabStop = (false);
-            this.gb_W_Durability.Tag = ("Durability");
+            this.gb_W_Durability.Tag = ("\tDurability");
             // 
             // l_W_Durability_Dec
             // 
@@ -3519,7 +3404,7 @@
             this.nud_W_Durability_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_Durability_Max.TabIndex = (3);
             this.nud_W_Durability_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_Durability_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_Durability_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // l_W_Durability_Min
             // 
@@ -3593,7 +3478,7 @@
             this.nud_W_PP_Multi_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_PP_Multi_Max.TabIndex = (3);
             this.nud_W_PP_Multi_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_PP_Multi_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_PP_Multi_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
             // 
             // l_W_PP_Multi_Min
             // 
@@ -3741,7 +3626,7 @@
             this.nud_W_Payout_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_Payout_Max.TabIndex = (3);
             this.nud_W_Payout_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_Payout_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_Payout_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // l_W_Payout_Min
             // 
@@ -3815,7 +3700,7 @@
             this.nud_W_Amount_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_Amount_Max.TabIndex = (3);
             this.nud_W_Amount_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_Amount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_Amount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 50000, 0, 0, 0 }));
             // 
             // l_W_Amount_Min
             // 
@@ -3889,7 +3774,7 @@
             this.nud_W_PPAward_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_PPAward_Max.TabIndex = (3);
             this.nud_W_PPAward_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_PPAward_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_PPAward_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 2500, 0, 0, 0 }));
             // 
             // l_W_PPAward_Min
             // 
@@ -3963,7 +3848,7 @@
             this.nud_W_CostHigh_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_CostHigh_Max.TabIndex = (3);
             this.nud_W_CostHigh_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_CostHigh_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_CostHigh_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
             // 
             // l_W_CostHigh_Min
             // 
@@ -4037,7 +3922,7 @@
             this.nud_W_CostMid_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_CostMid_Max.TabIndex = (3);
             this.nud_W_CostMid_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_CostMid_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_CostMid_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 7500, 0, 0, 0 }));
             // 
             // l_W_CostMid_Min
             // 
@@ -4111,7 +3996,7 @@
             this.nud_W_CostLow_Max.Size = (new global::System.Drawing.Size(86, 23));
             this.nud_W_CostLow_Max.TabIndex = (3);
             this.nud_W_CostLow_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_W_CostLow_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_W_CostLow_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 5000, 0, 0, 0 }));
             // 
             // l_W_CostLow_Min
             // 
@@ -4161,233 +4046,153 @@
             this.tp_ExplosivesSpray.Text = ("Explosives, Spray & Launch");
             this.tp_ExplosivesSpray.UseVisualStyleBackColor = (true);
             // 
-            // fbd_DataFileFolder
+            // gb_ES_ThrowablesAmmo
             // 
-            this.fbd_DataFileFolder.Description = ("Select the upacked datafile folder");
-            this.fbd_DataFileFolder.ShowNewFolderButton = (false);
-            this.fbd_DataFileFolder.UseDescriptionForTitle = (true);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Dec);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Max);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.nud_ES_ThrowablesAmmo_Max);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Min);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.nud_ES_ThrowablesAmmo_Min);
+            this.gb_ES_ThrowablesAmmo.Controls.Add(this.cb_ES_ThrowablesAmmo);
+            this.gb_ES_ThrowablesAmmo.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_ES_ThrowablesAmmo.Name = ("gb_ES_ThrowablesAmmo");
+            this.gb_ES_ThrowablesAmmo.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_ES_ThrowablesAmmo.TabIndex = (38);
+            this.gb_ES_ThrowablesAmmo.TabStop = (false);
+            this.gb_ES_ThrowablesAmmo.Tag = ("NumberOfThrowables");
             // 
-            // gb_ES_SprayAmmo
+            // l_ES_ThrowablesAmmo_Dec
             // 
-            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Dec);
-            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Max);
-            this.gb_ES_SprayAmmo.Controls.Add(this.nud_ES_SprayAmmo_Max);
-            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Min);
-            this.gb_ES_SprayAmmo.Controls.Add(this.nud_ES_SprayAmmo_Min);
-            this.gb_ES_SprayAmmo.Controls.Add(this.cb_ES_SprayAmmo);
-            this.gb_ES_SprayAmmo.Location = (new global::System.Drawing.Point(6, 10));
-            this.gb_ES_SprayAmmo.Name = ("gb_ES_SprayAmmo");
-            this.gb_ES_SprayAmmo.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_ES_SprayAmmo.TabIndex = (33);
-            this.gb_ES_SprayAmmo.TabStop = (false);
-            this.gb_ES_SprayAmmo.Tag = ("SpraySupply");
+            this.l_ES_ThrowablesAmmo_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_ES_ThrowablesAmmo_Dec.Name = ("l_ES_ThrowablesAmmo_Dec");
+            this.l_ES_ThrowablesAmmo_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_ES_ThrowablesAmmo_Dec.TabIndex = (7);
+            this.l_ES_ThrowablesAmmo_Dec.Text = ("Ammo for all throwables");
+            this.l_ES_ThrowablesAmmo_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // l_ES_SprayAmmo_Dec
+            // l_ES_ThrowablesAmmo_Max
             // 
-            this.l_ES_SprayAmmo_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_ES_SprayAmmo_Dec.Name = ("l_ES_SprayAmmo_Dec");
-            this.l_ES_SprayAmmo_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_ES_SprayAmmo_Dec.TabIndex = (7);
-            this.l_ES_SprayAmmo_Dec.Text = ("The ammount of ammo spray items have. This shows up in came as a precentage");
-            this.l_ES_SprayAmmo_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.l_ES_ThrowablesAmmo_Max.AutoSize = (true);
+            this.l_ES_ThrowablesAmmo_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_ES_ThrowablesAmmo_Max.Name = ("l_ES_ThrowablesAmmo_Max");
+            this.l_ES_ThrowablesAmmo_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_ES_ThrowablesAmmo_Max.TabIndex = (4);
+            this.l_ES_ThrowablesAmmo_Max.Text = ("Maximum:");
             // 
-            // l_ES_SprayAmmo_Max
+            // nud_ES_ThrowablesAmmo_Max
             // 
-            this.l_ES_SprayAmmo_Max.AutoSize = (true);
-            this.l_ES_SprayAmmo_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_ES_SprayAmmo_Max.Name = ("l_ES_SprayAmmo_Max");
-            this.l_ES_SprayAmmo_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_ES_SprayAmmo_Max.TabIndex = (4);
-            this.l_ES_SprayAmmo_Max.Text = ("Maximum:");
+            this.nud_ES_ThrowablesAmmo_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_ES_ThrowablesAmmo_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ThrowablesAmmo_Max.Name = ("nud_ES_ThrowablesAmmo_Max");
+            this.nud_ES_ThrowablesAmmo_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ThrowablesAmmo_Max.TabIndex = (3);
+            this.nud_ES_ThrowablesAmmo_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ThrowablesAmmo_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
             // 
-            // nud_ES_SprayAmmo_Max
+            // l_ES_ThrowablesAmmo_Min
             // 
-            this.nud_ES_SprayAmmo_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_ES_SprayAmmo_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_SprayAmmo_Max.Name = ("nud_ES_SprayAmmo_Max");
-            this.nud_ES_SprayAmmo_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_SprayAmmo_Max.TabIndex = (3);
-            this.nud_ES_SprayAmmo_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_SprayAmmo_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.l_ES_ThrowablesAmmo_Min.AutoSize = (true);
+            this.l_ES_ThrowablesAmmo_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_ES_ThrowablesAmmo_Min.Name = ("l_ES_ThrowablesAmmo_Min");
+            this.l_ES_ThrowablesAmmo_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_ES_ThrowablesAmmo_Min.TabIndex = (2);
+            this.l_ES_ThrowablesAmmo_Min.Text = ("Minimum:");
             // 
-            // l_ES_SprayAmmo_Min
+            // nud_ES_ThrowablesAmmo_Min
             // 
-            this.l_ES_SprayAmmo_Min.AutoSize = (true);
-            this.l_ES_SprayAmmo_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_ES_SprayAmmo_Min.Name = ("l_ES_SprayAmmo_Min");
-            this.l_ES_SprayAmmo_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_ES_SprayAmmo_Min.TabIndex = (2);
-            this.l_ES_SprayAmmo_Min.Text = ("Minimum:");
+            this.nud_ES_ThrowablesAmmo_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_ES_ThrowablesAmmo_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ThrowablesAmmo_Min.Name = ("nud_ES_ThrowablesAmmo_Min");
+            this.nud_ES_ThrowablesAmmo_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ThrowablesAmmo_Min.TabIndex = (1);
+            this.nud_ES_ThrowablesAmmo_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ThrowablesAmmo_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
-            // nud_ES_SprayAmmo_Min
+            // cb_ES_ThrowablesAmmo
             // 
-            this.nud_ES_SprayAmmo_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_ES_SprayAmmo_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_SprayAmmo_Min.Name = ("nud_ES_SprayAmmo_Min");
-            this.nud_ES_SprayAmmo_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_SprayAmmo_Min.TabIndex = (1);
-            this.nud_ES_SprayAmmo_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_SprayAmmo_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.cb_ES_ThrowablesAmmo.AutoSize = (true);
+            this.cb_ES_ThrowablesAmmo.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_ES_ThrowablesAmmo.Name = ("cb_ES_ThrowablesAmmo");
+            this.cb_ES_ThrowablesAmmo.Size = (new global::System.Drawing.Size(126, 19));
+            this.cb_ES_ThrowablesAmmo.TabIndex = (0);
+            this.cb_ES_ThrowablesAmmo.Text = ("Throwables Ammo");
+            this.cb_ES_ThrowablesAmmo.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_ES_ThrowablesAmmo, "The average defualt is: 250");
+            this.cb_ES_ThrowablesAmmo.UseVisualStyleBackColor = (true);
             // 
-            // cb_ES_SprayAmmo
+            // gb_ES_ProjectileSpin
             // 
-            this.cb_ES_SprayAmmo.AutoSize = (true);
-            this.cb_ES_SprayAmmo.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_ES_SprayAmmo.Name = ("cb_ES_SprayAmmo");
-            this.cb_ES_SprayAmmo.Size = (new global::System.Drawing.Size(122, 19));
-            this.cb_ES_SprayAmmo.TabIndex = (0);
-            this.cb_ES_SprayAmmo.Text = ("Spray Item Ammo");
-            this.cb_ES_SprayAmmo.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_ES_SprayAmmo, "The average defualt is: 41");
-            this.cb_ES_SprayAmmo.UseVisualStyleBackColor = (true);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Dec);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Max);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.nud_ES_ProjectileSpin_Max);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Min);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.nud_ES_ProjectileSpin_Min);
+            this.gb_ES_ProjectileSpin.Controls.Add(this.cb_ES_ProjectileSpin);
+            this.gb_ES_ProjectileSpin.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_ES_ProjectileSpin.Name = ("gb_ES_ProjectileSpin");
+            this.gb_ES_ProjectileSpin.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_ES_ProjectileSpin.TabIndex = (37);
+            this.gb_ES_ProjectileSpin.TabStop = (false);
+            this.gb_ES_ProjectileSpin.Tag = ("PropelledSpinImpulse");
             // 
-            // gb_ES_ExplodeRadius
+            // l_ES_ProjectileSpin_Dec
             // 
-            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Dec);
-            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Max);
-            this.gb_ES_ExplodeRadius.Controls.Add(this.nud_ES_ExplodeRadius_Max);
-            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Min);
-            this.gb_ES_ExplodeRadius.Controls.Add(this.nud_ES_ExplodeRadius_Min);
-            this.gb_ES_ExplodeRadius.Controls.Add(this.cb_ES_ExplodeRadius);
-            this.gb_ES_ExplodeRadius.Location = (new global::System.Drawing.Point(6, 70));
-            this.gb_ES_ExplodeRadius.Name = ("gb_ES_ExplodeRadius");
-            this.gb_ES_ExplodeRadius.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_ES_ExplodeRadius.TabIndex = (34);
-            this.gb_ES_ExplodeRadius.TabStop = (false);
-            this.gb_ES_ExplodeRadius.Tag = ("ExplodeRadius");
+            this.l_ES_ProjectileSpin_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_ES_ProjectileSpin_Dec.Name = ("l_ES_ProjectileSpin_Dec");
+            this.l_ES_ProjectileSpin_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_ES_ProjectileSpin_Dec.TabIndex = (7);
+            this.l_ES_ProjectileSpin_Dec.Text = ("How much spin a projectile as once its been shot");
+            this.l_ES_ProjectileSpin_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // l_ES_ExplodeRadius_Dec
+            // l_ES_ProjectileSpin_Max
             // 
-            this.l_ES_ExplodeRadius_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_ES_ExplodeRadius_Dec.Name = ("l_ES_ExplodeRadius_Dec");
-            this.l_ES_ExplodeRadius_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_ES_ExplodeRadius_Dec.TabIndex = (7);
-            this.l_ES_ExplodeRadius_Dec.Text = ("This will affect everything that explodes including explosive firearms like the rocket launcher.");
-            this.l_ES_ExplodeRadius_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.l_ES_ProjectileSpin_Max.AutoSize = (true);
+            this.l_ES_ProjectileSpin_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_ES_ProjectileSpin_Max.Name = ("l_ES_ProjectileSpin_Max");
+            this.l_ES_ProjectileSpin_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_ES_ProjectileSpin_Max.TabIndex = (4);
+            this.l_ES_ProjectileSpin_Max.Text = ("Maximum:");
             // 
-            // l_ES_ExplodeRadius_Max
+            // nud_ES_ProjectileSpin_Max
             // 
-            this.l_ES_ExplodeRadius_Max.AutoSize = (true);
-            this.l_ES_ExplodeRadius_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_ES_ExplodeRadius_Max.Name = ("l_ES_ExplodeRadius_Max");
-            this.l_ES_ExplodeRadius_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_ES_ExplodeRadius_Max.TabIndex = (4);
-            this.l_ES_ExplodeRadius_Max.Text = ("Maximum:");
+            this.nud_ES_ProjectileSpin_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_ES_ProjectileSpin_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ProjectileSpin_Max.Name = ("nud_ES_ProjectileSpin_Max");
+            this.nud_ES_ProjectileSpin_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ProjectileSpin_Max.TabIndex = (3);
+            this.nud_ES_ProjectileSpin_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ProjectileSpin_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
             // 
-            // nud_ES_ExplodeRadius_Max
+            // l_ES_ProjectileSpin_Min
             // 
-            this.nud_ES_ExplodeRadius_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_ES_ExplodeRadius_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ExplodeRadius_Max.Name = ("nud_ES_ExplodeRadius_Max");
-            this.nud_ES_ExplodeRadius_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ExplodeRadius_Max.TabIndex = (3);
-            this.nud_ES_ExplodeRadius_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ExplodeRadius_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.l_ES_ProjectileSpin_Min.AutoSize = (true);
+            this.l_ES_ProjectileSpin_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_ES_ProjectileSpin_Min.Name = ("l_ES_ProjectileSpin_Min");
+            this.l_ES_ProjectileSpin_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_ES_ProjectileSpin_Min.TabIndex = (2);
+            this.l_ES_ProjectileSpin_Min.Text = ("Minimum:");
             // 
-            // l_ES_ExplodeRadius_Min
+            // nud_ES_ProjectileSpin_Min
             // 
-            this.l_ES_ExplodeRadius_Min.AutoSize = (true);
-            this.l_ES_ExplodeRadius_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_ES_ExplodeRadius_Min.Name = ("l_ES_ExplodeRadius_Min");
-            this.l_ES_ExplodeRadius_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_ES_ExplodeRadius_Min.TabIndex = (2);
-            this.l_ES_ExplodeRadius_Min.Text = ("Minimum:");
+            this.nud_ES_ProjectileSpin_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_ES_ProjectileSpin_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ProjectileSpin_Min.Name = ("nud_ES_ProjectileSpin_Min");
+            this.nud_ES_ProjectileSpin_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ProjectileSpin_Min.TabIndex = (1);
+            this.nud_ES_ProjectileSpin_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ProjectileSpin_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
-            // nud_ES_ExplodeRadius_Min
+            // cb_ES_ProjectileSpin
             // 
-            this.nud_ES_ExplodeRadius_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_ES_ExplodeRadius_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ExplodeRadius_Min.Name = ("nud_ES_ExplodeRadius_Min");
-            this.nud_ES_ExplodeRadius_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ExplodeRadius_Min.TabIndex = (1);
-            this.nud_ES_ExplodeRadius_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ExplodeRadius_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_ES_ExplodeRadius
-            // 
-            this.cb_ES_ExplodeRadius.AutoSize = (true);
-            this.cb_ES_ExplodeRadius.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_ES_ExplodeRadius.Name = ("cb_ES_ExplodeRadius");
-            this.cb_ES_ExplodeRadius.Size = (new global::System.Drawing.Size(113, 19));
-            this.cb_ES_ExplodeRadius.TabIndex = (0);
-            this.cb_ES_ExplodeRadius.Text = ("Explosive Radius");
-            this.cb_ES_ExplodeRadius.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_ES_ExplodeRadius, "The average defualt is: 4");
-            this.cb_ES_ExplodeRadius.UseVisualStyleBackColor = (true);
-            // 
-            // gb_ES_MaxDamage
-            // 
-            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Dec);
-            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Max);
-            this.gb_ES_MaxDamage.Controls.Add(this.nud_ES_MaxDamage_Max);
-            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Min);
-            this.gb_ES_MaxDamage.Controls.Add(this.nud_ES_MaxDamage_Min);
-            this.gb_ES_MaxDamage.Controls.Add(this.cb_ES_MaxDamage);
-            this.gb_ES_MaxDamage.Location = (new global::System.Drawing.Point(6, 130));
-            this.gb_ES_MaxDamage.Name = ("gb_ES_MaxDamage");
-            this.gb_ES_MaxDamage.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_ES_MaxDamage.TabIndex = (35);
-            this.gb_ES_MaxDamage.TabStop = (false);
-            this.gb_ES_MaxDamage.Tag = ("MaxDamage");
-            // 
-            // l_ES_MaxDamage_Dec
-            // 
-            this.l_ES_MaxDamage_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_ES_MaxDamage_Dec.Name = ("l_ES_MaxDamage_Dec");
-            this.l_ES_MaxDamage_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_ES_MaxDamage_Dec.TabIndex = (7);
-            this.l_ES_MaxDamage_Dec.Text = ("As long as you have more than 1 bar of HP you will not die instantly to explosions. (Most of the time)");
-            this.l_ES_MaxDamage_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_ES_MaxDamage_Max
-            // 
-            this.l_ES_MaxDamage_Max.AutoSize = (true);
-            this.l_ES_MaxDamage_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_ES_MaxDamage_Max.Name = ("l_ES_MaxDamage_Max");
-            this.l_ES_MaxDamage_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_ES_MaxDamage_Max.TabIndex = (4);
-            this.l_ES_MaxDamage_Max.Text = ("Maximum:");
-            // 
-            // nud_ES_MaxDamage_Max
-            // 
-            this.nud_ES_MaxDamage_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_ES_MaxDamage_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_MaxDamage_Max.Name = ("nud_ES_MaxDamage_Max");
-            this.nud_ES_MaxDamage_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_MaxDamage_Max.TabIndex = (3);
-            this.nud_ES_MaxDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_MaxDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
-            // 
-            // l_ES_MaxDamage_Min
-            // 
-            this.l_ES_MaxDamage_Min.AutoSize = (true);
-            this.l_ES_MaxDamage_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_ES_MaxDamage_Min.Name = ("l_ES_MaxDamage_Min");
-            this.l_ES_MaxDamage_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_ES_MaxDamage_Min.TabIndex = (2);
-            this.l_ES_MaxDamage_Min.Text = ("Minimum:");
-            // 
-            // nud_ES_MaxDamage_Min
-            // 
-            this.nud_ES_MaxDamage_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_ES_MaxDamage_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_MaxDamage_Min.Name = ("nud_ES_MaxDamage_Min");
-            this.nud_ES_MaxDamage_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_MaxDamage_Min.TabIndex = (1);
-            this.nud_ES_MaxDamage_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_MaxDamage_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_ES_MaxDamage
-            // 
-            this.cb_ES_MaxDamage.AutoSize = (true);
-            this.cb_ES_MaxDamage.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_ES_MaxDamage.Name = ("cb_ES_MaxDamage");
-            this.cb_ES_MaxDamage.Size = (new global::System.Drawing.Size(122, 19));
-            this.cb_ES_MaxDamage.TabIndex = (0);
-            this.cb_ES_MaxDamage.Text = ("Explosive Damage");
-            this.cb_ES_MaxDamage.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_ES_MaxDamage, "The average defualt is: 4");
-            this.cb_ES_MaxDamage.UseVisualStyleBackColor = (true);
+            this.cb_ES_ProjectileSpin.AutoSize = (true);
+            this.cb_ES_ProjectileSpin.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_ES_ProjectileSpin.Name = ("cb_ES_ProjectileSpin");
+            this.cb_ES_ProjectileSpin.Size = (new global::System.Drawing.Size(101, 19));
+            this.cb_ES_ProjectileSpin.TabIndex = (0);
+            this.cb_ES_ProjectileSpin.Text = ("Projectile Spin");
+            this.cb_ES_ProjectileSpin.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_ES_ProjectileSpin, "The average defualt is: 3");
+            this.cb_ES_ProjectileSpin.UseVisualStyleBackColor = (true);
             // 
             // gb_ES_ExpolsiveDelay
             // 
@@ -4462,153 +4267,543 @@
             this.tt_VehicleStats.SetToolTip(this.cb_ES_ExpolsiveDelay, "The average defualt is: 5");
             this.cb_ES_ExpolsiveDelay.UseVisualStyleBackColor = (true);
             // 
-            // gb_ES_ProjectileSpin
+            // gb_ES_MaxDamage
             // 
-            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Dec);
-            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Max);
-            this.gb_ES_ProjectileSpin.Controls.Add(this.nud_ES_ProjectileSpin_Max);
-            this.gb_ES_ProjectileSpin.Controls.Add(this.l_ES_ProjectileSpin_Min);
-            this.gb_ES_ProjectileSpin.Controls.Add(this.nud_ES_ProjectileSpin_Min);
-            this.gb_ES_ProjectileSpin.Controls.Add(this.cb_ES_ProjectileSpin);
-            this.gb_ES_ProjectileSpin.Location = (new global::System.Drawing.Point(6, 250));
-            this.gb_ES_ProjectileSpin.Name = ("gb_ES_ProjectileSpin");
-            this.gb_ES_ProjectileSpin.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_ES_ProjectileSpin.TabIndex = (37);
-            this.gb_ES_ProjectileSpin.TabStop = (false);
-            this.gb_ES_ProjectileSpin.Tag = ("PropelledSpinImpulse");
+            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Dec);
+            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Max);
+            this.gb_ES_MaxDamage.Controls.Add(this.nud_ES_MaxDamage_Max);
+            this.gb_ES_MaxDamage.Controls.Add(this.l_ES_MaxDamage_Min);
+            this.gb_ES_MaxDamage.Controls.Add(this.nud_ES_MaxDamage_Min);
+            this.gb_ES_MaxDamage.Controls.Add(this.cb_ES_MaxDamage);
+            this.gb_ES_MaxDamage.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_ES_MaxDamage.Name = ("gb_ES_MaxDamage");
+            this.gb_ES_MaxDamage.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_ES_MaxDamage.TabIndex = (35);
+            this.gb_ES_MaxDamage.TabStop = (false);
+            this.gb_ES_MaxDamage.Tag = ("MaxDamage");
             // 
-            // l_ES_ProjectileSpin_Dec
+            // l_ES_MaxDamage_Dec
             // 
-            this.l_ES_ProjectileSpin_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_ES_ProjectileSpin_Dec.Name = ("l_ES_ProjectileSpin_Dec");
-            this.l_ES_ProjectileSpin_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_ES_ProjectileSpin_Dec.TabIndex = (7);
-            this.l_ES_ProjectileSpin_Dec.Text = ("How much spin a projectile as once its been shot");
-            this.l_ES_ProjectileSpin_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.l_ES_MaxDamage_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_ES_MaxDamage_Dec.Name = ("l_ES_MaxDamage_Dec");
+            this.l_ES_MaxDamage_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_ES_MaxDamage_Dec.TabIndex = (7);
+            this.l_ES_MaxDamage_Dec.Text = ("As long as you have more than 1 bar of HP you will not die instantly to explosions. (Most of the time)");
+            this.l_ES_MaxDamage_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // l_ES_ProjectileSpin_Max
+            // l_ES_MaxDamage_Max
             // 
-            this.l_ES_ProjectileSpin_Max.AutoSize = (true);
-            this.l_ES_ProjectileSpin_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_ES_ProjectileSpin_Max.Name = ("l_ES_ProjectileSpin_Max");
-            this.l_ES_ProjectileSpin_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_ES_ProjectileSpin_Max.TabIndex = (4);
-            this.l_ES_ProjectileSpin_Max.Text = ("Maximum:");
+            this.l_ES_MaxDamage_Max.AutoSize = (true);
+            this.l_ES_MaxDamage_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_ES_MaxDamage_Max.Name = ("l_ES_MaxDamage_Max");
+            this.l_ES_MaxDamage_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_ES_MaxDamage_Max.TabIndex = (4);
+            this.l_ES_MaxDamage_Max.Text = ("Maximum:");
             // 
-            // nud_ES_ProjectileSpin_Max
+            // nud_ES_MaxDamage_Max
             // 
-            this.nud_ES_ProjectileSpin_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_ES_ProjectileSpin_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ProjectileSpin_Max.Name = ("nud_ES_ProjectileSpin_Max");
-            this.nud_ES_ProjectileSpin_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ProjectileSpin_Max.TabIndex = (3);
-            this.nud_ES_ProjectileSpin_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ProjectileSpin_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_ES_MaxDamage_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_ES_MaxDamage_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_MaxDamage_Max.Name = ("nud_ES_MaxDamage_Max");
+            this.nud_ES_MaxDamage_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_MaxDamage_Max.TabIndex = (3);
+            this.nud_ES_MaxDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_MaxDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 250, 0, 0, 0 }));
             // 
-            // l_ES_ProjectileSpin_Min
+            // l_ES_MaxDamage_Min
             // 
-            this.l_ES_ProjectileSpin_Min.AutoSize = (true);
-            this.l_ES_ProjectileSpin_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_ES_ProjectileSpin_Min.Name = ("l_ES_ProjectileSpin_Min");
-            this.l_ES_ProjectileSpin_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_ES_ProjectileSpin_Min.TabIndex = (2);
-            this.l_ES_ProjectileSpin_Min.Text = ("Minimum:");
+            this.l_ES_MaxDamage_Min.AutoSize = (true);
+            this.l_ES_MaxDamage_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_ES_MaxDamage_Min.Name = ("l_ES_MaxDamage_Min");
+            this.l_ES_MaxDamage_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_ES_MaxDamage_Min.TabIndex = (2);
+            this.l_ES_MaxDamage_Min.Text = ("Minimum:");
             // 
-            // nud_ES_ProjectileSpin_Min
+            // nud_ES_MaxDamage_Min
             // 
-            this.nud_ES_ProjectileSpin_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_ES_ProjectileSpin_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ProjectileSpin_Min.Name = ("nud_ES_ProjectileSpin_Min");
-            this.nud_ES_ProjectileSpin_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ProjectileSpin_Min.TabIndex = (1);
-            this.nud_ES_ProjectileSpin_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ProjectileSpin_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.nud_ES_MaxDamage_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_ES_MaxDamage_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_MaxDamage_Min.Name = ("nud_ES_MaxDamage_Min");
+            this.nud_ES_MaxDamage_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_MaxDamage_Min.TabIndex = (1);
+            this.nud_ES_MaxDamage_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_MaxDamage_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
-            // cb_ES_ProjectileSpin
+            // cb_ES_MaxDamage
             // 
-            this.cb_ES_ProjectileSpin.AutoSize = (true);
-            this.cb_ES_ProjectileSpin.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_ES_ProjectileSpin.Name = ("cb_ES_ProjectileSpin");
-            this.cb_ES_ProjectileSpin.Size = (new global::System.Drawing.Size(101, 19));
-            this.cb_ES_ProjectileSpin.TabIndex = (0);
-            this.cb_ES_ProjectileSpin.Text = ("Projectile Spin");
-            this.cb_ES_ProjectileSpin.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_ES_ProjectileSpin, "The average defualt is: 5");
-            this.cb_ES_ProjectileSpin.UseVisualStyleBackColor = (true);
+            this.cb_ES_MaxDamage.AutoSize = (true);
+            this.cb_ES_MaxDamage.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_ES_MaxDamage.Name = ("cb_ES_MaxDamage");
+            this.cb_ES_MaxDamage.Size = (new global::System.Drawing.Size(122, 19));
+            this.cb_ES_MaxDamage.TabIndex = (0);
+            this.cb_ES_MaxDamage.Text = ("Explosive Damage");
+            this.cb_ES_MaxDamage.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_ES_MaxDamage, "The average defualt is: 4");
+            this.cb_ES_MaxDamage.UseVisualStyleBackColor = (true);
             // 
-            // gb_ES_ThrowablesAmmo
+            // gb_ES_ExplodeRadius
             // 
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Dec);
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Max);
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.nud_ES_ThrowablesAmmo_Max);
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.l_ES_ThrowablesAmmo_Min);
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.nud_ES_ThrowablesAmmo_Min);
-            this.gb_ES_ThrowablesAmmo.Controls.Add(this.cb_ES_ThrowablesAmmo);
-            this.gb_ES_ThrowablesAmmo.Location = (new global::System.Drawing.Point(6, 310));
-            this.gb_ES_ThrowablesAmmo.Name = ("gb_ES_ThrowablesAmmo");
-            this.gb_ES_ThrowablesAmmo.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_ES_ThrowablesAmmo.TabIndex = (38);
-            this.gb_ES_ThrowablesAmmo.TabStop = (false);
-            this.gb_ES_ThrowablesAmmo.Tag = ("NumberOfThrowables");
+            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Dec);
+            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Max);
+            this.gb_ES_ExplodeRadius.Controls.Add(this.nud_ES_ExplodeRadius_Max);
+            this.gb_ES_ExplodeRadius.Controls.Add(this.l_ES_ExplodeRadius_Min);
+            this.gb_ES_ExplodeRadius.Controls.Add(this.nud_ES_ExplodeRadius_Min);
+            this.gb_ES_ExplodeRadius.Controls.Add(this.cb_ES_ExplodeRadius);
+            this.gb_ES_ExplodeRadius.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_ES_ExplodeRadius.Name = ("gb_ES_ExplodeRadius");
+            this.gb_ES_ExplodeRadius.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_ES_ExplodeRadius.TabIndex = (34);
+            this.gb_ES_ExplodeRadius.TabStop = (false);
+            this.gb_ES_ExplodeRadius.Tag = ("ExplodeRadius");
             // 
-            // l_ES_ThrowablesAmmo_Dec
+            // l_ES_ExplodeRadius_Dec
             // 
-            this.l_ES_ThrowablesAmmo_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_ES_ThrowablesAmmo_Dec.Name = ("l_ES_ThrowablesAmmo_Dec");
-            this.l_ES_ThrowablesAmmo_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_ES_ThrowablesAmmo_Dec.TabIndex = (7);
-            this.l_ES_ThrowablesAmmo_Dec.Text = ("Ammo for all throwables");
-            this.l_ES_ThrowablesAmmo_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.l_ES_ExplodeRadius_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_ES_ExplodeRadius_Dec.Name = ("l_ES_ExplodeRadius_Dec");
+            this.l_ES_ExplodeRadius_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_ES_ExplodeRadius_Dec.TabIndex = (7);
+            this.l_ES_ExplodeRadius_Dec.Text = ("This will affect everything that explodes including explosive firearms like the rocket launcher.");
+            this.l_ES_ExplodeRadius_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // l_ES_ThrowablesAmmo_Max
+            // l_ES_ExplodeRadius_Max
             // 
-            this.l_ES_ThrowablesAmmo_Max.AutoSize = (true);
-            this.l_ES_ThrowablesAmmo_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_ES_ThrowablesAmmo_Max.Name = ("l_ES_ThrowablesAmmo_Max");
-            this.l_ES_ThrowablesAmmo_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_ES_ThrowablesAmmo_Max.TabIndex = (4);
-            this.l_ES_ThrowablesAmmo_Max.Text = ("Maximum:");
+            this.l_ES_ExplodeRadius_Max.AutoSize = (true);
+            this.l_ES_ExplodeRadius_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_ES_ExplodeRadius_Max.Name = ("l_ES_ExplodeRadius_Max");
+            this.l_ES_ExplodeRadius_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_ES_ExplodeRadius_Max.TabIndex = (4);
+            this.l_ES_ExplodeRadius_Max.Text = ("Maximum:");
             // 
-            // nud_ES_ThrowablesAmmo_Max
+            // nud_ES_ExplodeRadius_Max
             // 
-            this.nud_ES_ThrowablesAmmo_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_ES_ThrowablesAmmo_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ThrowablesAmmo_Max.Name = ("nud_ES_ThrowablesAmmo_Max");
-            this.nud_ES_ThrowablesAmmo_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ThrowablesAmmo_Max.TabIndex = (3);
-            this.nud_ES_ThrowablesAmmo_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ThrowablesAmmo_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_ES_ExplodeRadius_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_ES_ExplodeRadius_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ExplodeRadius_Max.Name = ("nud_ES_ExplodeRadius_Max");
+            this.nud_ES_ExplodeRadius_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ExplodeRadius_Max.TabIndex = (3);
+            this.nud_ES_ExplodeRadius_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ExplodeRadius_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 250, 0, 0, 0 }));
             // 
-            // l_ES_ThrowablesAmmo_Min
+            // l_ES_ExplodeRadius_Min
             // 
-            this.l_ES_ThrowablesAmmo_Min.AutoSize = (true);
-            this.l_ES_ThrowablesAmmo_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_ES_ThrowablesAmmo_Min.Name = ("l_ES_ThrowablesAmmo_Min");
-            this.l_ES_ThrowablesAmmo_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_ES_ThrowablesAmmo_Min.TabIndex = (2);
-            this.l_ES_ThrowablesAmmo_Min.Text = ("Minimum:");
+            this.l_ES_ExplodeRadius_Min.AutoSize = (true);
+            this.l_ES_ExplodeRadius_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_ES_ExplodeRadius_Min.Name = ("l_ES_ExplodeRadius_Min");
+            this.l_ES_ExplodeRadius_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_ES_ExplodeRadius_Min.TabIndex = (2);
+            this.l_ES_ExplodeRadius_Min.Text = ("Minimum:");
             // 
-            // nud_ES_ThrowablesAmmo_Min
+            // nud_ES_ExplodeRadius_Min
             // 
-            this.nud_ES_ThrowablesAmmo_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_ES_ThrowablesAmmo_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_ES_ThrowablesAmmo_Min.Name = ("nud_ES_ThrowablesAmmo_Min");
-            this.nud_ES_ThrowablesAmmo_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_ES_ThrowablesAmmo_Min.TabIndex = (1);
-            this.nud_ES_ThrowablesAmmo_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_ES_ThrowablesAmmo_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.nud_ES_ExplodeRadius_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_ES_ExplodeRadius_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_ExplodeRadius_Min.Name = ("nud_ES_ExplodeRadius_Min");
+            this.nud_ES_ExplodeRadius_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_ExplodeRadius_Min.TabIndex = (1);
+            this.nud_ES_ExplodeRadius_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_ExplodeRadius_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
-            // cb_ES_ThrowablesAmmo
+            // cb_ES_ExplodeRadius
             // 
-            this.cb_ES_ThrowablesAmmo.AutoSize = (true);
-            this.cb_ES_ThrowablesAmmo.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_ES_ThrowablesAmmo.Name = ("cb_ES_ThrowablesAmmo");
-            this.cb_ES_ThrowablesAmmo.Size = (new global::System.Drawing.Size(126, 19));
-            this.cb_ES_ThrowablesAmmo.TabIndex = (0);
-            this.cb_ES_ThrowablesAmmo.Text = ("Throwables Ammo");
-            this.cb_ES_ThrowablesAmmo.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
-            this.tt_VehicleStats.SetToolTip(this.cb_ES_ThrowablesAmmo, "The average defualt is: 5");
-            this.cb_ES_ThrowablesAmmo.UseVisualStyleBackColor = (true);
+            this.cb_ES_ExplodeRadius.AutoSize = (true);
+            this.cb_ES_ExplodeRadius.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_ES_ExplodeRadius.Name = ("cb_ES_ExplodeRadius");
+            this.cb_ES_ExplodeRadius.Size = (new global::System.Drawing.Size(113, 19));
+            this.cb_ES_ExplodeRadius.TabIndex = (0);
+            this.cb_ES_ExplodeRadius.Text = ("Explosive Radius");
+            this.cb_ES_ExplodeRadius.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_ES_ExplodeRadius, "The average defualt is: 4");
+            this.cb_ES_ExplodeRadius.UseVisualStyleBackColor = (true);
+            // 
+            // gb_ES_SprayAmmo
+            // 
+            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Dec);
+            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Max);
+            this.gb_ES_SprayAmmo.Controls.Add(this.nud_ES_SprayAmmo_Max);
+            this.gb_ES_SprayAmmo.Controls.Add(this.l_ES_SprayAmmo_Min);
+            this.gb_ES_SprayAmmo.Controls.Add(this.nud_ES_SprayAmmo_Min);
+            this.gb_ES_SprayAmmo.Controls.Add(this.cb_ES_SprayAmmo);
+            this.gb_ES_SprayAmmo.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_ES_SprayAmmo.Name = ("gb_ES_SprayAmmo");
+            this.gb_ES_SprayAmmo.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_ES_SprayAmmo.TabIndex = (33);
+            this.gb_ES_SprayAmmo.TabStop = (false);
+            this.gb_ES_SprayAmmo.Tag = ("SpraySupply");
+            // 
+            // l_ES_SprayAmmo_Dec
+            // 
+            this.l_ES_SprayAmmo_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_ES_SprayAmmo_Dec.Name = ("l_ES_SprayAmmo_Dec");
+            this.l_ES_SprayAmmo_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_ES_SprayAmmo_Dec.TabIndex = (7);
+            this.l_ES_SprayAmmo_Dec.Text = ("The ammount of ammo spray items have. This shows up in came as a precentage");
+            this.l_ES_SprayAmmo_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_ES_SprayAmmo_Max
+            // 
+            this.l_ES_SprayAmmo_Max.AutoSize = (true);
+            this.l_ES_SprayAmmo_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_ES_SprayAmmo_Max.Name = ("l_ES_SprayAmmo_Max");
+            this.l_ES_SprayAmmo_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_ES_SprayAmmo_Max.TabIndex = (4);
+            this.l_ES_SprayAmmo_Max.Text = ("Maximum:");
+            // 
+            // nud_ES_SprayAmmo_Max
+            // 
+            this.nud_ES_SprayAmmo_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_ES_SprayAmmo_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_SprayAmmo_Max.Name = ("nud_ES_SprayAmmo_Max");
+            this.nud_ES_SprayAmmo_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_SprayAmmo_Max.TabIndex = (3);
+            this.nud_ES_SprayAmmo_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_SprayAmmo_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
+            // 
+            // l_ES_SprayAmmo_Min
+            // 
+            this.l_ES_SprayAmmo_Min.AutoSize = (true);
+            this.l_ES_SprayAmmo_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_ES_SprayAmmo_Min.Name = ("l_ES_SprayAmmo_Min");
+            this.l_ES_SprayAmmo_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_ES_SprayAmmo_Min.TabIndex = (2);
+            this.l_ES_SprayAmmo_Min.Text = ("Minimum:");
+            // 
+            // nud_ES_SprayAmmo_Min
+            // 
+            this.nud_ES_SprayAmmo_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_ES_SprayAmmo_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_ES_SprayAmmo_Min.Name = ("nud_ES_SprayAmmo_Min");
+            this.nud_ES_SprayAmmo_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_ES_SprayAmmo_Min.TabIndex = (1);
+            this.nud_ES_SprayAmmo_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_ES_SprayAmmo_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_ES_SprayAmmo
+            // 
+            this.cb_ES_SprayAmmo.AutoSize = (true);
+            this.cb_ES_SprayAmmo.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_ES_SprayAmmo.Name = ("cb_ES_SprayAmmo");
+            this.cb_ES_SprayAmmo.Size = (new global::System.Drawing.Size(122, 19));
+            this.cb_ES_SprayAmmo.TabIndex = (0);
+            this.cb_ES_SprayAmmo.Text = ("Spray Item Ammo");
+            this.cb_ES_SprayAmmo.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_ES_SprayAmmo, "The average defualt is: 41");
+            this.cb_ES_SprayAmmo.UseVisualStyleBackColor = (true);
+            // 
+            // tp_FoodDamage
+            // 
+            this.tp_FoodDamage.Controls.Add(this.gb_FD_MaxDperA);
+            this.tp_FoodDamage.Controls.Add(this.gb_FD_ProjectDamage);
+            this.tp_FoodDamage.Controls.Add(this.gb_FD_HealthBoost);
+            this.tp_FoodDamage.Controls.Add(this.gb_FD_AttackDamage);
+            this.tp_FoodDamage.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_FoodDamage.Name = ("tp_FoodDamage");
+            this.tp_FoodDamage.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_FoodDamage.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_FoodDamage.TabIndex = (5);
+            this.tp_FoodDamage.Text = ("Food and Damage");
+            this.tp_FoodDamage.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FD_MaxDperA
+            // 
+            this.gb_FD_MaxDperA.Controls.Add(this.label1);
+            this.gb_FD_MaxDperA.Controls.Add(this.label2);
+            this.gb_FD_MaxDperA.Controls.Add(this.numericUpDown1);
+            this.gb_FD_MaxDperA.Controls.Add(this.label3);
+            this.gb_FD_MaxDperA.Controls.Add(this.numericUpDown2);
+            this.gb_FD_MaxDperA.Controls.Add(this.cb_FD_MaxDperA);
+            this.gb_FD_MaxDperA.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_FD_MaxDperA.Name = ("gb_FD_MaxDperA");
+            this.gb_FD_MaxDperA.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FD_MaxDperA.TabIndex = (42);
+            this.gb_FD_MaxDperA.TabStop = (false);
+            this.gb_FD_MaxDperA.Tag = ("MaxDamageDealtPerAttack");
+            // 
+            // label1
+            // 
+            this.label1.Location = (new global::System.Drawing.Point(168, 10));
+            this.label1.Name = ("label1");
+            this.label1.Size = (new global::System.Drawing.Size(201, 50));
+            this.label1.TabIndex = (7);
+            this.label1.Text = ("The maximum damage for each hit this affects everything apart from firearms and explosives.");
+            this.label1.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = (true);
+            this.label2.Location = (new global::System.Drawing.Point(540, 13));
+            this.label2.Name = ("label2");
+            this.label2.Size = (new global::System.Drawing.Size(65, 15));
+            this.label2.TabIndex = (4);
+            this.label2.Text = ("Maximum:");
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = (new global::System.Drawing.Point(540, 31));
+            this.numericUpDown1.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.numericUpDown1.Name = ("numericUpDown1");
+            this.numericUpDown1.Size = (new global::System.Drawing.Size(86, 23));
+            this.numericUpDown1.TabIndex = (3);
+            this.numericUpDown1.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.numericUpDown1.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = (true);
+            this.label3.Location = (new global::System.Drawing.Point(410, 13));
+            this.label3.Name = ("label3");
+            this.label3.Size = (new global::System.Drawing.Size(63, 15));
+            this.label3.TabIndex = (2);
+            this.label3.Text = ("Minimum:");
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = (new global::System.Drawing.Point(410, 31));
+            this.numericUpDown2.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.numericUpDown2.Name = ("numericUpDown2");
+            this.numericUpDown2.Size = (new global::System.Drawing.Size(86, 23));
+            this.numericUpDown2.TabIndex = (1);
+            this.numericUpDown2.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.numericUpDown2.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FD_MaxDperA
+            // 
+            this.cb_FD_MaxDperA.AutoSize = (true);
+            this.cb_FD_MaxDperA.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FD_MaxDperA.Name = ("cb_FD_MaxDperA");
+            this.cb_FD_MaxDperA.Size = (new global::System.Drawing.Size(133, 19));
+            this.cb_FD_MaxDperA.TabIndex = (0);
+            this.cb_FD_MaxDperA.Text = ("Max Damage Attack");
+            this.cb_FD_MaxDperA.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_FD_MaxDperA, "The average defualt is: 48");
+            this.cb_FD_MaxDperA.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FD_ProjectDamage
+            // 
+            this.gb_FD_ProjectDamage.Controls.Add(this.l_FD_ProjectDamage_Dec);
+            this.gb_FD_ProjectDamage.Controls.Add(this.l_FD_ProjectDamage_Max);
+            this.gb_FD_ProjectDamage.Controls.Add(this.nud_FD_ProjectDamage_Max);
+            this.gb_FD_ProjectDamage.Controls.Add(this.l_FD_ProjectDamage_Min);
+            this.gb_FD_ProjectDamage.Controls.Add(this.nud_FD_ProjectDamage_Min);
+            this.gb_FD_ProjectDamage.Controls.Add(this.cb_FD_ProjectDamage);
+            this.gb_FD_ProjectDamage.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_FD_ProjectDamage.Name = ("gb_FD_ProjectDamage");
+            this.gb_FD_ProjectDamage.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FD_ProjectDamage.TabIndex = (41);
+            this.gb_FD_ProjectDamage.TabStop = (false);
+            this.gb_FD_ProjectDamage.Tag = ("MaxProjectileDamage");
+            // 
+            // l_FD_ProjectDamage_Dec
+            // 
+            this.l_FD_ProjectDamage_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FD_ProjectDamage_Dec.Name = ("l_FD_ProjectDamage_Dec");
+            this.l_FD_ProjectDamage_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FD_ProjectDamage_Dec.TabIndex = (7);
+            this.l_FD_ProjectDamage_Dec.Text = ("Amount of damage done when an item as be thrown");
+            this.l_FD_ProjectDamage_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FD_ProjectDamage_Max
+            // 
+            this.l_FD_ProjectDamage_Max.AutoSize = (true);
+            this.l_FD_ProjectDamage_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FD_ProjectDamage_Max.Name = ("l_FD_ProjectDamage_Max");
+            this.l_FD_ProjectDamage_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FD_ProjectDamage_Max.TabIndex = (4);
+            this.l_FD_ProjectDamage_Max.Text = ("Maximum:");
+            // 
+            // nud_FD_ProjectDamage_Max
+            // 
+            this.nud_FD_ProjectDamage_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FD_ProjectDamage_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_ProjectDamage_Max.Name = ("nud_FD_ProjectDamage_Max");
+            this.nud_FD_ProjectDamage_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_ProjectDamage_Max.TabIndex = (3);
+            this.nud_FD_ProjectDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_ProjectDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
+            // 
+            // l_FD_ProjectDamage_Min
+            // 
+            this.l_FD_ProjectDamage_Min.AutoSize = (true);
+            this.l_FD_ProjectDamage_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FD_ProjectDamage_Min.Name = ("l_FD_ProjectDamage_Min");
+            this.l_FD_ProjectDamage_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FD_ProjectDamage_Min.TabIndex = (2);
+            this.l_FD_ProjectDamage_Min.Text = ("Minimum:");
+            // 
+            // nud_FD_ProjectDamage_Min
+            // 
+            this.nud_FD_ProjectDamage_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FD_ProjectDamage_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_ProjectDamage_Min.Name = ("nud_FD_ProjectDamage_Min");
+            this.nud_FD_ProjectDamage_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_ProjectDamage_Min.TabIndex = (1);
+            this.nud_FD_ProjectDamage_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_ProjectDamage_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FD_ProjectDamage
+            // 
+            this.cb_FD_ProjectDamage.AutoSize = (true);
+            this.cb_FD_ProjectDamage.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FD_ProjectDamage.Name = ("cb_FD_ProjectDamage");
+            this.cb_FD_ProjectDamage.Size = (new global::System.Drawing.Size(140, 19));
+            this.cb_FD_ProjectDamage.TabIndex = (0);
+            this.cb_FD_ProjectDamage.Text = ("Thrown Item Damage");
+            this.cb_FD_ProjectDamage.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_FD_ProjectDamage, "The average defualt is: 48");
+            this.cb_FD_ProjectDamage.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FD_HealthBoost
+            // 
+            this.gb_FD_HealthBoost.Controls.Add(this.l_FD_HealthBoost_Dec);
+            this.gb_FD_HealthBoost.Controls.Add(this.l_FD_HealthBoost_Max);
+            this.gb_FD_HealthBoost.Controls.Add(this.nud_FD_HealthBoost_Max);
+            this.gb_FD_HealthBoost.Controls.Add(this.l_FD_HealthBoost_Min);
+            this.gb_FD_HealthBoost.Controls.Add(this.nud_FD_HealthBoost_Min);
+            this.gb_FD_HealthBoost.Controls.Add(this.cb_FD_HealthBoost);
+            this.gb_FD_HealthBoost.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_FD_HealthBoost.Name = ("gb_FD_HealthBoost");
+            this.gb_FD_HealthBoost.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FD_HealthBoost.TabIndex = (40);
+            this.gb_FD_HealthBoost.TabStop = (false);
+            this.gb_FD_HealthBoost.Tag = ("\tHealthBoost");
+            // 
+            // l_FD_HealthBoost_Dec
+            // 
+            this.l_FD_HealthBoost_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FD_HealthBoost_Dec.Name = ("l_FD_HealthBoost_Dec");
+            this.l_FD_HealthBoost_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FD_HealthBoost_Dec.TabIndex = (7);
+            this.l_FD_HealthBoost_Dec.Text = ("The amount of health restored by eating food items (every 100 equals one health bar).");
+            this.l_FD_HealthBoost_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FD_HealthBoost_Max
+            // 
+            this.l_FD_HealthBoost_Max.AutoSize = (true);
+            this.l_FD_HealthBoost_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FD_HealthBoost_Max.Name = ("l_FD_HealthBoost_Max");
+            this.l_FD_HealthBoost_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FD_HealthBoost_Max.TabIndex = (4);
+            this.l_FD_HealthBoost_Max.Text = ("Maximum:");
+            // 
+            // nud_FD_HealthBoost_Max
+            // 
+            this.nud_FD_HealthBoost_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FD_HealthBoost_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            this.nud_FD_HealthBoost_Max.Name = ("nud_FD_HealthBoost_Max");
+            this.nud_FD_HealthBoost_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_HealthBoost_Max.TabIndex = (3);
+            this.nud_FD_HealthBoost_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_HealthBoost_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
+            // 
+            // l_FD_HealthBoost_Min
+            // 
+            this.l_FD_HealthBoost_Min.AutoSize = (true);
+            this.l_FD_HealthBoost_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FD_HealthBoost_Min.Name = ("l_FD_HealthBoost_Min");
+            this.l_FD_HealthBoost_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FD_HealthBoost_Min.TabIndex = (2);
+            this.l_FD_HealthBoost_Min.Text = ("Minimum:");
+            // 
+            // nud_FD_HealthBoost_Min
+            // 
+            this.nud_FD_HealthBoost_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FD_HealthBoost_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_HealthBoost_Min.Name = ("nud_FD_HealthBoost_Min");
+            this.nud_FD_HealthBoost_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_HealthBoost_Min.TabIndex = (1);
+            this.nud_FD_HealthBoost_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_HealthBoost_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FD_HealthBoost
+            // 
+            this.cb_FD_HealthBoost.AutoSize = (true);
+            this.cb_FD_HealthBoost.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FD_HealthBoost.Name = ("cb_FD_HealthBoost");
+            this.cb_FD_HealthBoost.Size = (new global::System.Drawing.Size(150, 19));
+            this.cb_FD_HealthBoost.TabIndex = (0);
+            this.cb_FD_HealthBoost.Text = ("Health Restore Amount");
+            this.cb_FD_HealthBoost.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_FD_HealthBoost, "The average defualt is: 300");
+            this.cb_FD_HealthBoost.UseVisualStyleBackColor = (true);
+            // 
+            // gb_FD_AttackDamage
+            // 
+            this.gb_FD_AttackDamage.Controls.Add(this.l_FD_AttackDamage_Dec);
+            this.gb_FD_AttackDamage.Controls.Add(this.l_FD_AttackDamage_Max);
+            this.gb_FD_AttackDamage.Controls.Add(this.nud_FD_AttackDamage_Max);
+            this.gb_FD_AttackDamage.Controls.Add(this.c);
+            this.gb_FD_AttackDamage.Controls.Add(this.nud_FD_AttackDamage_Dec);
+            this.gb_FD_AttackDamage.Controls.Add(this.cb_FD_AttackDamage);
+            this.gb_FD_AttackDamage.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_FD_AttackDamage.Name = ("gb_FD_AttackDamage");
+            this.gb_FD_AttackDamage.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_FD_AttackDamage.TabIndex = (39);
+            this.gb_FD_AttackDamage.TabStop = (false);
+            this.gb_FD_AttackDamage.Tag = ("\tAttackDamage");
+            // 
+            // l_FD_AttackDamage_Dec
+            // 
+            this.l_FD_AttackDamage_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FD_AttackDamage_Dec.Name = ("l_FD_AttackDamage_Dec");
+            this.l_FD_AttackDamage_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FD_AttackDamage_Dec.TabIndex = (7);
+            this.l_FD_AttackDamage_Dec.Text = ("The damage amount for all melee attacks including zombies and NPC's.");
+            this.l_FD_AttackDamage_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_FD_AttackDamage_Max
+            // 
+            this.l_FD_AttackDamage_Max.AutoSize = (true);
+            this.l_FD_AttackDamage_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FD_AttackDamage_Max.Name = ("l_FD_AttackDamage_Max");
+            this.l_FD_AttackDamage_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FD_AttackDamage_Max.TabIndex = (4);
+            this.l_FD_AttackDamage_Max.Text = ("Maximum:");
+            // 
+            // nud_FD_AttackDamage_Max
+            // 
+            this.nud_FD_AttackDamage_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FD_AttackDamage_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_AttackDamage_Max.Name = ("nud_FD_AttackDamage_Max");
+            this.nud_FD_AttackDamage_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_AttackDamage_Max.TabIndex = (3);
+            this.nud_FD_AttackDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_AttackDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
+            // 
+            // c
+            // 
+            this.c.AutoSize = (true);
+            this.c.Location = (new global::System.Drawing.Point(410, 13));
+            this.c.Name = ("c");
+            this.c.Size = (new global::System.Drawing.Size(63, 15));
+            this.c.TabIndex = (2);
+            this.c.Text = ("Minimum:");
+            // 
+            // nud_FD_AttackDamage_Dec
+            // 
+            this.nud_FD_AttackDamage_Dec.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FD_AttackDamage_Dec.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_AttackDamage_Dec.Name = ("nud_FD_AttackDamage_Dec");
+            this.nud_FD_AttackDamage_Dec.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_AttackDamage_Dec.TabIndex = (1);
+            this.nud_FD_AttackDamage_Dec.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_AttackDamage_Dec.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_FD_AttackDamage
+            // 
+            this.cb_FD_AttackDamage.AutoSize = (true);
+            this.cb_FD_AttackDamage.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_FD_AttackDamage.Name = ("cb_FD_AttackDamage");
+            this.cb_FD_AttackDamage.Size = (new global::System.Drawing.Size(122, 19));
+            this.cb_FD_AttackDamage.TabIndex = (0);
+            this.cb_FD_AttackDamage.Text = ("All Melee Damage");
+            this.cb_FD_AttackDamage.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_FD_AttackDamage, "The average defualt is: 63");
+            this.cb_FD_AttackDamage.UseVisualStyleBackColor = (true);
+            // 
+            // fbd_DataFileFolder
+            // 
+            this.fbd_DataFileFolder.Description = ("Select the upacked datafile folder");
+            this.fbd_DataFileFolder.ShowNewFolderButton = (false);
+            this.fbd_DataFileFolder.UseDescriptionForTitle = (true);
             // 
             // F_ItemRandomiser
             // 
@@ -4745,10 +4940,6 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_FlatBoss_Min)).EndInit();
             this.tp_FireArms.ResumeLayout(false);
-            this.gb_FA_SpraySupply.ResumeLayout(false);
-            this.gb_FA_SpraySupply.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_SpraySupply_Min)).EndInit();
             this.gb_FA_MaxBurst.ResumeLayout(false);
             this.gb_FA_MaxBurst.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_MaxBurst_Max)).EndInit();
@@ -4770,10 +4961,6 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).EndInit();
             this.tp_WorldStats.ResumeLayout(false);
-            this.gb_W_ProjectDamage.ResumeLayout(false);
-            this.gb_W_ProjectDamage.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ProjectDamage_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ProjectDamage_Min)).EndInit();
             this.gb_W_ThrowForce.ResumeLayout(false);
             this.gb_W_ThrowForce.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Max)).EndInit();
@@ -4815,30 +5002,47 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_CostLow_Min)).EndInit();
             this.tp_ExplosivesSpray.ResumeLayout(false);
-            this.gb_ES_SprayAmmo.ResumeLayout(false);
-            this.gb_ES_SprayAmmo.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Min)).EndInit();
-            this.gb_ES_ExplodeRadius.ResumeLayout(false);
-            this.gb_ES_ExplodeRadius.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Min)).EndInit();
-            this.gb_ES_MaxDamage.ResumeLayout(false);
-            this.gb_ES_MaxDamage.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Min)).EndInit();
-            this.gb_ES_ExpolsiveDelay.ResumeLayout(false);
-            this.gb_ES_ExpolsiveDelay.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Min)).EndInit();
-            this.gb_ES_ProjectileSpin.ResumeLayout(false);
-            this.gb_ES_ProjectileSpin.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Min)).EndInit();
             this.gb_ES_ThrowablesAmmo.ResumeLayout(false);
             this.gb_ES_ThrowablesAmmo.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ThrowablesAmmo_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ThrowablesAmmo_Min)).EndInit();
+            this.gb_ES_ProjectileSpin.ResumeLayout(false);
+            this.gb_ES_ProjectileSpin.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ProjectileSpin_Min)).EndInit();
+            this.gb_ES_ExpolsiveDelay.ResumeLayout(false);
+            this.gb_ES_ExpolsiveDelay.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExpolsiveDelay_Min)).EndInit();
+            this.gb_ES_MaxDamage.ResumeLayout(false);
+            this.gb_ES_MaxDamage.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_MaxDamage_Min)).EndInit();
+            this.gb_ES_ExplodeRadius.ResumeLayout(false);
+            this.gb_ES_ExplodeRadius.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_ExplodeRadius_Min)).EndInit();
+            this.gb_ES_SprayAmmo.ResumeLayout(false);
+            this.gb_ES_SprayAmmo.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Min)).EndInit();
+            this.tp_FoodDamage.ResumeLayout(false);
+            this.gb_FD_MaxDperA.ResumeLayout(false);
+            this.gb_FD_MaxDperA.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.gb_FD_ProjectDamage.ResumeLayout(false);
+            this.gb_FD_ProjectDamage.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Min)).EndInit();
+            this.gb_FD_HealthBoost.ResumeLayout(false);
+            this.gb_FD_HealthBoost.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_HealthBoost_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_HealthBoost_Min)).EndInit();
+            this.gb_FD_AttackDamage.ResumeLayout(false);
+            this.gb_FD_AttackDamage.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Dec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -5083,13 +5287,6 @@
         private global::System.Windows.Forms.Label l_FA_MaxBurst_Min;
         private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Min;
         private global::System.Windows.Forms.CheckBox cb_FA_MaxBurst;
-        private global::System.Windows.Forms.GroupBox gb_FA_SpraySupply;
-        private global::System.Windows.Forms.Label l_FA_SpraySupply_Dec;
-        private global::System.Windows.Forms.Label l_FA_SpraySupply_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_SpraySupply_Max;
-        private global::System.Windows.Forms.Label l_FA_SpraySupply_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_SpraySupply_Min;
-        private global::System.Windows.Forms.CheckBox cb_FA_SpraySupply;
         private global::System.Windows.Forms.TabPage tp_WorldStats;
         private global::System.Windows.Forms.GroupBox gb_W_CostLow;
         private global::System.Windows.Forms.Label l_W_CostLow_Dec;
@@ -5175,13 +5372,6 @@
         private global::System.Windows.Forms.Label l_NPC_MinSurvSpeed_Min;
         private global::System.Windows.Forms.NumericUpDown nud_NPC_MinSurvSpeed_Min;
         private global::System.Windows.Forms.CheckBox cb_NPC_MinSurvSpeed;
-        private global::System.Windows.Forms.GroupBox gb_W_ProjectDamage;
-        private global::System.Windows.Forms.Label l_W_ProjectDamage_Dec;
-        private global::System.Windows.Forms.Label l_W_ProjectDamage_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_ProjectDamage_Max;
-        private global::System.Windows.Forms.Label l_W_ProjectDamage_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_ProjectDamage_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_ProjectDamage;
         private global::System.Windows.Forms.TabPage tp_ExplosivesSpray;
         private global::System.Windows.Forms.GroupBox gb_ES_SprayAmmo;
         private global::System.Windows.Forms.Label l_ES_SprayAmmo_Dec;
@@ -5225,5 +5415,35 @@
         private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Min;
         private global::System.Windows.Forms.NumericUpDown nud_ES_ProjectileSpin_Min;
         private global::System.Windows.Forms.CheckBox cb_ES_ProjectileSpin;
+        private global::System.Windows.Forms.TabPage tp_FoodDamage;
+        private global::System.Windows.Forms.GroupBox gb_FD_HealthBoost;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Dec;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Max;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Min;
+        private global::System.Windows.Forms.CheckBox cb_FD_HealthBoost;
+        private global::System.Windows.Forms.GroupBox gb_FD_AttackDamage;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Dec;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Max;
+        private global::System.Windows.Forms.Label c;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Dec;
+        private global::System.Windows.Forms.CheckBox cb_FD_AttackDamage;
+        private global::System.Windows.Forms.GroupBox gb_FD_MaxDperA;
+        private global::System.Windows.Forms.Label label1;
+        private global::System.Windows.Forms.Label label2;
+        private global::System.Windows.Forms.NumericUpDown numericUpDown1;
+        private global::System.Windows.Forms.Label label3;
+        private global::System.Windows.Forms.NumericUpDown numericUpDown2;
+        private global::System.Windows.Forms.CheckBox cb_FD_MaxDperA;
+        private global::System.Windows.Forms.GroupBox gb_FD_ProjectDamage;
+        private global::System.Windows.Forms.Label l_FD_ProjectDamage_Dec;
+        private global::System.Windows.Forms.Label l_FD_ProjectDamage_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_ProjectDamage_Max;
+        private global::System.Windows.Forms.Label l_FD_ProjectDamage_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_ProjectDamage_Min;
+        private global::System.Windows.Forms.CheckBox cb_FD_ProjectDamage;
+        private global::System.Windows.Forms.Button bt_IS_CheckAllActiveTab;
     }
 }

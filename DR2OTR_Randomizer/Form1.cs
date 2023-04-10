@@ -288,7 +288,23 @@ public partial class F_ItemRandomiser : Form
                 }
             }
         }
-        File.WriteAllLines($"{path}\\THISISATESTFILE.txt", itemFile);
+        File.WriteAllLines($"{path}\\items.txt", itemFile);
+        MessageBox.Show("Item stats have successfully been randomized", "Success");
+    }
+
+    private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
+    {
+        TabPage activePage = tc_itemStats.SelectedTab;
+
+        List<CheckBox> allActiveCheckBoxes = new List<CheckBox>();
+
+        foreach (GroupBox tab in activePage.Controls)
+        {
+            allActiveCheckBoxes.Add(tab.Controls.OfType<CheckBox>().First());
+        }
+        foreach (CheckBox checkBox in allActiveCheckBoxes)
+        {
+            checkBox.Checked = !checkBox.Checked;
+        }
     }
 }
-
