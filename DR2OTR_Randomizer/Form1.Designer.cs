@@ -86,7 +86,7 @@
             this.tb_TestBox = (new global::System.Windows.Forms.TextBox());
             this.b_Randomise = (new global::System.Windows.Forms.Button());
             this.b_DeselectAll = (new global::System.Windows.Forms.Button());
-            this.b_CheckAll = (new global::System.Windows.Forms.Button());
+            this.b_ToggleAll = (new global::System.Windows.Forms.Button());
             this.tp_WitemsStats = (new global::System.Windows.Forms.TabPage());
             this.bt_IS_CheckAllActiveTab = (new global::System.Windows.Forms.Button());
             this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
@@ -399,11 +399,11 @@
             this.cb_ES_SprayAmmo = (new global::System.Windows.Forms.CheckBox());
             this.tp_FoodDamage = (new global::System.Windows.Forms.TabPage());
             this.gb_FD_MaxDperA = (new global::System.Windows.Forms.GroupBox());
-            this.label1 = (new global::System.Windows.Forms.Label());
-            this.label2 = (new global::System.Windows.Forms.Label());
-            this.numericUpDown1 = (new global::System.Windows.Forms.NumericUpDown());
-            this.label3 = (new global::System.Windows.Forms.Label());
-            this.numericUpDown2 = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FD_MaxDperA_Dec = (new global::System.Windows.Forms.Label());
+            this.l_FD_MaxDperA_Max = (new global::System.Windows.Forms.Label());
+            this.nud_FD_MaxDperA_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_FD_MaxDperA_Min = (new global::System.Windows.Forms.Label());
+            this.nud_FD_MaxDperA_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_FD_MaxDperA = (new global::System.Windows.Forms.CheckBox());
             this.gb_FD_ProjectDamage = (new global::System.Windows.Forms.GroupBox());
             this.l_FD_ProjectDamage_Dec = (new global::System.Windows.Forms.Label());
@@ -423,11 +423,53 @@
             this.l_FD_AttackDamage_Dec = (new global::System.Windows.Forms.Label());
             this.l_FD_AttackDamage_Max = (new global::System.Windows.Forms.Label());
             this.nud_FD_AttackDamage_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.c = (new global::System.Windows.Forms.Label());
+            this.l_FD_AttackDamage_Min = (new global::System.Windows.Forms.Label());
             this.nud_FD_AttackDamage_Dec = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_FD_AttackDamage = (new global::System.Windows.Forms.CheckBox());
+            this.tp_UnstableStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_US_NPCItems = (new global::System.Windows.Forms.GroupBox());
+            this.cb_US_NPCItems = (new global::System.Windows.Forms.CheckBox());
+            this.l_US_NPCItems_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_US_PropToThrow = (new global::System.Windows.Forms.GroupBox());
+            this.cb_US_PropToThrow = (new global::System.Windows.Forms.CheckBox());
+            this.l_US_PropToThrow_Dec = (new global::System.Windows.Forms.Label());
+            this.tc_US_Items = (new global::System.Windows.Forms.TabControl());
+            this.tp_US_BasicCombo = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_BasicCombo = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_BasicFood = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_BasicFood = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_BasicLarage = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_BasicLarage = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_BasicSmall = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_BasicSmall = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Bugged = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Bugged = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_CombinedFireArms = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_CombinedFireArms = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_CombFood = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_CombFood = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_CombMelee = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_CombMelee = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_ComboFireArms = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_ComboFireArms = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Explosive = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Explosive = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_KeyItems = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_KeyItems = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Magazines = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Magazines = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Mannequin = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Mannequin = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Pushed = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Pushed = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Special = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Special = (new global::System.Windows.Forms.CheckedListBox());
+            this.tp_US_Vehicles = (new global::System.Windows.Forms.TabPage());
+            this.clb_US_Vehicles = (new global::System.Windows.Forms.CheckedListBox());
+            this.l_US_Warning_Msg = (new global::System.Windows.Forms.Label());
             this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
             this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
+            this.clb_US_FireArms = (new global::System.Windows.Forms.CheckedListBox());
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -591,8 +633,8 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_ES_SprayAmmo_Min)).BeginInit();
             this.tp_FoodDamage.SuspendLayout();
             this.gb_FD_MaxDperA.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_MaxDperA_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_MaxDperA_Min)).BeginInit();
             this.gb_FD_ProjectDamage.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Min)).BeginInit();
@@ -602,6 +644,26 @@
             this.gb_FD_AttackDamage.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Dec)).BeginInit();
+            this.tp_UnstableStats.SuspendLayout();
+            this.gb_US_NPCItems.SuspendLayout();
+            this.gb_US_PropToThrow.SuspendLayout();
+            this.tc_US_Items.SuspendLayout();
+            this.tp_US_BasicCombo.SuspendLayout();
+            this.tp_US_BasicFood.SuspendLayout();
+            this.tp_US_BasicLarage.SuspendLayout();
+            this.tp_US_BasicSmall.SuspendLayout();
+            this.tp_US_Bugged.SuspendLayout();
+            this.tp_US_CombinedFireArms.SuspendLayout();
+            this.tp_US_CombFood.SuspendLayout();
+            this.tp_US_CombMelee.SuspendLayout();
+            this.tp_US_ComboFireArms.SuspendLayout();
+            this.tp_US_Explosive.SuspendLayout();
+            this.tp_US_KeyItems.SuspendLayout();
+            this.tp_US_Magazines.SuspendLayout();
+            this.tp_US_Mannequin.SuspendLayout();
+            this.tp_US_Pushed.SuspendLayout();
+            this.tp_US_Special.SuspendLayout();
+            this.tp_US_Vehicles.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1117,7 +1179,7 @@
             this.tp_WItemRandom.Controls.Add(this.tb_TestBox);
             this.tp_WItemRandom.Controls.Add(this.b_Randomise);
             this.tp_WItemRandom.Controls.Add(this.b_DeselectAll);
-            this.tp_WItemRandom.Controls.Add(this.b_CheckAll);
+            this.tp_WItemRandom.Controls.Add(this.b_ToggleAll);
             this.tp_WItemRandom.Controls.Add(this.tc_Items);
             this.tp_WItemRandom.Controls.Add(this.pb_PHTest);
             this.tp_WItemRandom.Location = (new global::System.Drawing.Point(4, 24));
@@ -1169,15 +1231,15 @@
             this.b_DeselectAll.UseVisualStyleBackColor = (true);
             this.b_DeselectAll.Click += (this.b_DeselectAll_Click);
             // 
-            // b_CheckAll
+            // b_ToggleAll
             // 
-            this.b_CheckAll.Location = (new global::System.Drawing.Point(16, 443));
-            this.b_CheckAll.Name = ("b_CheckAll");
-            this.b_CheckAll.Size = (new global::System.Drawing.Size(162, 23));
-            this.b_CheckAll.TabIndex = (23);
-            this.b_CheckAll.Text = ("Check All");
-            this.b_CheckAll.UseVisualStyleBackColor = (true);
-            this.b_CheckAll.Click += (this.b_CheckAll_Click);
+            this.b_ToggleAll.Location = (new global::System.Drawing.Point(16, 443));
+            this.b_ToggleAll.Name = ("b_ToggleAll");
+            this.b_ToggleAll.Size = (new global::System.Drawing.Size(162, 23));
+            this.b_ToggleAll.TabIndex = (23);
+            this.b_ToggleAll.Text = ("Toggle All");
+            this.b_ToggleAll.UseVisualStyleBackColor = (true);
+            this.b_ToggleAll.Click += (this.b_ToggleAll_Click);
             // 
             // tp_WitemsStats
             // 
@@ -1197,9 +1259,9 @@
             // 
             this.bt_IS_CheckAllActiveTab.Location = (new global::System.Drawing.Point(154, 6));
             this.bt_IS_CheckAllActiveTab.Name = ("bt_IS_CheckAllActiveTab");
-            this.bt_IS_CheckAllActiveTab.Size = (new global::System.Drawing.Size(80, 41));
+            this.bt_IS_CheckAllActiveTab.Size = (new global::System.Drawing.Size(110, 41));
             this.bt_IS_CheckAllActiveTab.TabIndex = (3);
-            this.bt_IS_CheckAllActiveTab.Text = ("Check All in Active Tab");
+            this.bt_IS_CheckAllActiveTab.Text = ("Toggle all stats in Active tab");
             this.bt_IS_CheckAllActiveTab.UseVisualStyleBackColor = (true);
             this.bt_IS_CheckAllActiveTab.Click += (this.bt_IS_CheckAllActiveTab_Click);
             // 
@@ -1221,6 +1283,7 @@
             this.tc_itemStats.Controls.Add(this.tp_WorldStats);
             this.tc_itemStats.Controls.Add(this.tp_ExplosivesSpray);
             this.tc_itemStats.Controls.Add(this.tp_FoodDamage);
+            this.tc_itemStats.Controls.Add(this.tp_UnstableStats);
             this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 51));
             this.tc_itemStats.Name = ("tc_itemStats");
             this.tc_itemStats.SelectedIndex = (0);
@@ -4505,11 +4568,11 @@
             // 
             // gb_FD_MaxDperA
             // 
-            this.gb_FD_MaxDperA.Controls.Add(this.label1);
-            this.gb_FD_MaxDperA.Controls.Add(this.label2);
-            this.gb_FD_MaxDperA.Controls.Add(this.numericUpDown1);
-            this.gb_FD_MaxDperA.Controls.Add(this.label3);
-            this.gb_FD_MaxDperA.Controls.Add(this.numericUpDown2);
+            this.gb_FD_MaxDperA.Controls.Add(this.l_FD_MaxDperA_Dec);
+            this.gb_FD_MaxDperA.Controls.Add(this.l_FD_MaxDperA_Max);
+            this.gb_FD_MaxDperA.Controls.Add(this.nud_FD_MaxDperA_Max);
+            this.gb_FD_MaxDperA.Controls.Add(this.l_FD_MaxDperA_Min);
+            this.gb_FD_MaxDperA.Controls.Add(this.nud_FD_MaxDperA_Min);
             this.gb_FD_MaxDperA.Controls.Add(this.cb_FD_MaxDperA);
             this.gb_FD_MaxDperA.Location = (new global::System.Drawing.Point(6, 190));
             this.gb_FD_MaxDperA.Name = ("gb_FD_MaxDperA");
@@ -4518,52 +4581,52 @@
             this.gb_FD_MaxDperA.TabStop = (false);
             this.gb_FD_MaxDperA.Tag = ("MaxDamageDealtPerAttack");
             // 
-            // label1
+            // l_FD_MaxDperA_Dec
             // 
-            this.label1.Location = (new global::System.Drawing.Point(168, 10));
-            this.label1.Name = ("label1");
-            this.label1.Size = (new global::System.Drawing.Size(201, 50));
-            this.label1.TabIndex = (7);
-            this.label1.Text = ("The maximum damage for each hit this affects everything apart from firearms and explosives.");
-            this.label1.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.l_FD_MaxDperA_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_FD_MaxDperA_Dec.Name = ("l_FD_MaxDperA_Dec");
+            this.l_FD_MaxDperA_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_FD_MaxDperA_Dec.TabIndex = (7);
+            this.l_FD_MaxDperA_Dec.Text = ("The maximum damage for each hit this affects everything apart from firearms and explosives.");
+            this.l_FD_MaxDperA_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // label2
+            // l_FD_MaxDperA_Max
             // 
-            this.label2.AutoSize = (true);
-            this.label2.Location = (new global::System.Drawing.Point(540, 13));
-            this.label2.Name = ("label2");
-            this.label2.Size = (new global::System.Drawing.Size(65, 15));
-            this.label2.TabIndex = (4);
-            this.label2.Text = ("Maximum:");
+            this.l_FD_MaxDperA_Max.AutoSize = (true);
+            this.l_FD_MaxDperA_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_FD_MaxDperA_Max.Name = ("l_FD_MaxDperA_Max");
+            this.l_FD_MaxDperA_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_FD_MaxDperA_Max.TabIndex = (4);
+            this.l_FD_MaxDperA_Max.Text = ("Maximum:");
             // 
-            // numericUpDown1
+            // nud_FD_MaxDperA_Max
             // 
-            this.numericUpDown1.Location = (new global::System.Drawing.Point(540, 31));
-            this.numericUpDown1.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.numericUpDown1.Name = ("numericUpDown1");
-            this.numericUpDown1.Size = (new global::System.Drawing.Size(86, 23));
-            this.numericUpDown1.TabIndex = (3);
-            this.numericUpDown1.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.numericUpDown1.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            this.nud_FD_MaxDperA_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_FD_MaxDperA_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_MaxDperA_Max.Name = ("nud_FD_MaxDperA_Max");
+            this.nud_FD_MaxDperA_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_MaxDperA_Max.TabIndex = (3);
+            this.nud_FD_MaxDperA_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_MaxDperA_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
             // 
-            // label3
+            // l_FD_MaxDperA_Min
             // 
-            this.label3.AutoSize = (true);
-            this.label3.Location = (new global::System.Drawing.Point(410, 13));
-            this.label3.Name = ("label3");
-            this.label3.Size = (new global::System.Drawing.Size(63, 15));
-            this.label3.TabIndex = (2);
-            this.label3.Text = ("Minimum:");
+            this.l_FD_MaxDperA_Min.AutoSize = (true);
+            this.l_FD_MaxDperA_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FD_MaxDperA_Min.Name = ("l_FD_MaxDperA_Min");
+            this.l_FD_MaxDperA_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FD_MaxDperA_Min.TabIndex = (2);
+            this.l_FD_MaxDperA_Min.Text = ("Minimum:");
             // 
-            // numericUpDown2
+            // nud_FD_MaxDperA_Min
             // 
-            this.numericUpDown2.Location = (new global::System.Drawing.Point(410, 31));
-            this.numericUpDown2.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.numericUpDown2.Name = ("numericUpDown2");
-            this.numericUpDown2.Size = (new global::System.Drawing.Size(86, 23));
-            this.numericUpDown2.TabIndex = (1);
-            this.numericUpDown2.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.numericUpDown2.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            this.nud_FD_MaxDperA_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_FD_MaxDperA_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_FD_MaxDperA_Min.Name = ("nud_FD_MaxDperA_Min");
+            this.nud_FD_MaxDperA_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_FD_MaxDperA_Min.TabIndex = (1);
+            this.nud_FD_MaxDperA_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_FD_MaxDperA_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
             // 
             // cb_FD_MaxDperA
             // 
@@ -4730,7 +4793,7 @@
             this.gb_FD_AttackDamage.Controls.Add(this.l_FD_AttackDamage_Dec);
             this.gb_FD_AttackDamage.Controls.Add(this.l_FD_AttackDamage_Max);
             this.gb_FD_AttackDamage.Controls.Add(this.nud_FD_AttackDamage_Max);
-            this.gb_FD_AttackDamage.Controls.Add(this.c);
+            this.gb_FD_AttackDamage.Controls.Add(this.l_FD_AttackDamage_Min);
             this.gb_FD_AttackDamage.Controls.Add(this.nud_FD_AttackDamage_Dec);
             this.gb_FD_AttackDamage.Controls.Add(this.cb_FD_AttackDamage);
             this.gb_FD_AttackDamage.Location = (new global::System.Drawing.Point(6, 10));
@@ -4768,14 +4831,14 @@
             this.nud_FD_AttackDamage_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
             this.nud_FD_AttackDamage_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 500, 0, 0, 0 }));
             // 
-            // c
+            // l_FD_AttackDamage_Min
             // 
-            this.c.AutoSize = (true);
-            this.c.Location = (new global::System.Drawing.Point(410, 13));
-            this.c.Name = ("c");
-            this.c.Size = (new global::System.Drawing.Size(63, 15));
-            this.c.TabIndex = (2);
-            this.c.Text = ("Minimum:");
+            this.l_FD_AttackDamage_Min.AutoSize = (true);
+            this.l_FD_AttackDamage_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_FD_AttackDamage_Min.Name = ("l_FD_AttackDamage_Min");
+            this.l_FD_AttackDamage_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_FD_AttackDamage_Min.TabIndex = (2);
+            this.l_FD_AttackDamage_Min.Text = ("Minimum:");
             // 
             // nud_FD_AttackDamage_Dec
             // 
@@ -4799,11 +4862,485 @@
             this.tt_VehicleStats.SetToolTip(this.cb_FD_AttackDamage, "The average defualt is: 63");
             this.cb_FD_AttackDamage.UseVisualStyleBackColor = (true);
             // 
+            // tp_UnstableStats
+            // 
+            this.tp_UnstableStats.Controls.Add(this.gb_US_NPCItems);
+            this.tp_UnstableStats.Controls.Add(this.gb_US_PropToThrow);
+            this.tp_UnstableStats.Controls.Add(this.tc_US_Items);
+            this.tp_UnstableStats.Controls.Add(this.l_US_Warning_Msg);
+            this.tp_UnstableStats.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_UnstableStats.Name = ("tp_UnstableStats");
+            this.tp_UnstableStats.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_UnstableStats.Size = (new global::System.Drawing.Size(698, 387));
+            this.tp_UnstableStats.TabIndex = (6);
+            this.tp_UnstableStats.Text = ("Unstable Stats");
+            this.tp_UnstableStats.UseVisualStyleBackColor = (true);
+            // 
+            // gb_US_NPCItems
+            // 
+            this.gb_US_NPCItems.Controls.Add(this.cb_US_NPCItems);
+            this.gb_US_NPCItems.Controls.Add(this.l_US_NPCItems_Dec);
+            this.gb_US_NPCItems.Location = (new global::System.Drawing.Point(353, 170));
+            this.gb_US_NPCItems.Name = ("gb_US_NPCItems");
+            this.gb_US_NPCItems.Size = (new global::System.Drawing.Size(339, 70));
+            this.gb_US_NPCItems.TabIndex = (22);
+            this.gb_US_NPCItems.TabStop = (false);
+            this.gb_US_NPCItems.Tag = ("\tWithProp");
+            // 
+            // cb_US_NPCItems
+            // 
+            this.cb_US_NPCItems.AutoSize = (true);
+            this.cb_US_NPCItems.Location = (new global::System.Drawing.Point(6, 30));
+            this.cb_US_NPCItems.Name = ("cb_US_NPCItems");
+            this.cb_US_NPCItems.Size = (new global::System.Drawing.Size(128, 19));
+            this.cb_US_NPCItems.TabIndex = (0);
+            this.cb_US_NPCItems.Text = ("NPC's Spawn Items");
+            this.cb_US_NPCItems.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_US_NPCItems, "The average defualt is: 63");
+            this.cb_US_NPCItems.UseVisualStyleBackColor = (true);
+            // 
+            // l_US_NPCItems_Dec
+            // 
+            this.l_US_NPCItems_Dec.Location = (new global::System.Drawing.Point(132, 15));
+            this.l_US_NPCItems_Dec.Name = ("l_US_NPCItems_Dec");
+            this.l_US_NPCItems_Dec.Size = (new global::System.Drawing.Size(200, 50));
+            this.l_US_NPCItems_Dec.TabIndex = (7);
+            this.l_US_NPCItems_Dec.Text = ("The items that npc spawn with. If an NPC spawns with a vehicel it will give them interesting physics.");
+            this.l_US_NPCItems_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_US_PropToThrow
+            // 
+            this.gb_US_PropToThrow.Controls.Add(this.cb_US_PropToThrow);
+            this.gb_US_PropToThrow.Controls.Add(this.l_US_PropToThrow_Dec);
+            this.gb_US_PropToThrow.Location = (new global::System.Drawing.Point(353, 100));
+            this.gb_US_PropToThrow.Name = ("gb_US_PropToThrow");
+            this.gb_US_PropToThrow.Size = (new global::System.Drawing.Size(339, 70));
+            this.gb_US_PropToThrow.TabIndex = (21);
+            this.gb_US_PropToThrow.TabStop = (false);
+            this.gb_US_PropToThrow.Tag = ("PropToThrow");
+            // 
+            // cb_US_PropToThrow
+            // 
+            this.cb_US_PropToThrow.AutoSize = (true);
+            this.cb_US_PropToThrow.Location = (new global::System.Drawing.Point(6, 30));
+            this.cb_US_PropToThrow.Name = ("cb_US_PropToThrow");
+            this.cb_US_PropToThrow.Size = (new global::System.Drawing.Size(102, 19));
+            this.cb_US_PropToThrow.TabIndex = (0);
+            this.cb_US_PropToThrow.Text = ("Prop To Throw");
+            this.cb_US_PropToThrow.TextAlign = (global::System.Drawing.ContentAlignment.BottomLeft);
+            this.tt_VehicleStats.SetToolTip(this.cb_US_PropToThrow, "The average defualt is: 63");
+            this.cb_US_PropToThrow.UseVisualStyleBackColor = (true);
+            // 
+            // l_US_PropToThrow_Dec
+            // 
+            this.l_US_PropToThrow_Dec.Location = (new global::System.Drawing.Point(132, 15));
+            this.l_US_PropToThrow_Dec.Name = ("l_US_PropToThrow_Dec");
+            this.l_US_PropToThrow_Dec.Size = (new global::System.Drawing.Size(200, 50));
+            this.l_US_PropToThrow_Dec.TabIndex = (7);
+            this.l_US_PropToThrow_Dec.Text = ("The Item that is thrown out of items like the Firecrackers, Gems and Rocket laucher.");
+            this.l_US_PropToThrow_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // tc_US_Items
+            // 
+            this.tc_US_Items.Controls.Add(this.tp_US_BasicCombo);
+            this.tc_US_Items.Controls.Add(this.tp_US_BasicFood);
+            this.tc_US_Items.Controls.Add(this.tp_US_BasicLarage);
+            this.tc_US_Items.Controls.Add(this.tp_US_BasicSmall);
+            this.tc_US_Items.Controls.Add(this.tp_US_Bugged);
+            this.tc_US_Items.Controls.Add(this.tp_US_CombinedFireArms);
+            this.tc_US_Items.Controls.Add(this.tp_US_CombFood);
+            this.tc_US_Items.Controls.Add(this.tp_US_CombMelee);
+            this.tc_US_Items.Controls.Add(this.tp_US_ComboFireArms);
+            this.tc_US_Items.Controls.Add(this.tp_US_Explosive);
+            this.tc_US_Items.Controls.Add(this.tp_US_KeyItems);
+            this.tc_US_Items.Controls.Add(this.tp_US_Magazines);
+            this.tc_US_Items.Controls.Add(this.tp_US_Mannequin);
+            this.tc_US_Items.Controls.Add(this.tp_US_Pushed);
+            this.tc_US_Items.Controls.Add(this.tp_US_Special);
+            this.tc_US_Items.Controls.Add(this.tp_US_Vehicles);
+            this.tc_US_Items.Location = (new global::System.Drawing.Point(6, 6));
+            this.tc_US_Items.Name = ("tc_US_Items");
+            this.tc_US_Items.SelectedIndex = (0);
+            this.tc_US_Items.Size = (new global::System.Drawing.Size(345, 375));
+            this.tc_US_Items.TabIndex = (20);
+            // 
+            // tp_US_BasicCombo
+            // 
+            this.tp_US_BasicCombo.Controls.Add(this.clb_US_BasicCombo);
+            this.tp_US_BasicCombo.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_BasicCombo.Name = ("tp_US_BasicCombo");
+            this.tp_US_BasicCombo.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_BasicCombo.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_BasicCombo.TabIndex = (0);
+            this.tp_US_BasicCombo.Text = ("Basic Combo");
+            this.tp_US_BasicCombo.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_BasicCombo
+            // 
+            this.clb_US_BasicCombo.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_BasicCombo.CheckOnClick = (true);
+            this.clb_US_BasicCombo.FormattingEnabled = (true);
+            this.clb_US_BasicCombo.Items.AddRange(new global::System.Object[] { "\"AlienHead\"", "\"Amp\"", "\"BaseballBat\"", "\"Battery\"", "\"BigDrillMotor\"", "\"BingoBall\"", "\"BobsToy\"", "\"BowieKnife\"", "\"BoxingGloves\"", "\"Bucket\"", "\"BullSkull\"", "\"CementSaw\"", "\"Chainsaw\"", "\"ComputerCase\"", "\"ConstructionHat\"", "\"Defibrillator\"", "\"ElectricGuitar\"", "\"ElectricProd\"", "\"EscapePod\"", "\"FireAxe\"", "\"FiremanFireAxe\"", "\"Flashlight\"", "\"GiantStuffedBear\"", "\"GoblinMask\"", "\"GrassTrimmer\"", "\"HunkOfMeat\"", "\"LawnDart\"", "\"LeadPipe\"", "\"LeafBlower\"", "\"LeafRake\"", "\"LizardMask\"", "\"Machete\"", "\"MedicalTray\"", "\"MMAGloves\"", "\"MotorOil\"", "\"Newspaper\"", "\"Paddle\"", "\"PaintCan\"", "\"Parasol\"", "\"PitchFork\"", "\"Plates\"", "\"PonyOnStick\"", "\"PowerDrill\"", "\"PsychoMachete\"", "\"PushBroom\"", "\"Pylon\"", "\"RCHelicopter\"", "\"SawBlade\"", "\"ServbotMask\"", "\"Sickle\"", "\"SledgeHammer\"", "\"Spear\"", "\"TennisBallLauncher\"", "\"Tikitorch\"", "\"TwoByFour\"", "\"VacuumCleaner\"", "\"WoodSwordAndShield\"" });
+            this.clb_US_BasicCombo.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_BasicCombo.Name = ("clb_US_BasicCombo");
+            this.clb_US_BasicCombo.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_BasicCombo.TabIndex = (0);
+            // 
+            // tp_US_BasicFood
+            // 
+            this.tp_US_BasicFood.Controls.Add(this.clb_US_BasicFood);
+            this.tp_US_BasicFood.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_BasicFood.Name = ("tp_US_BasicFood");
+            this.tp_US_BasicFood.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_BasicFood.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_BasicFood.TabIndex = (1);
+            this.tp_US_BasicFood.Text = ("Basic Food");
+            this.tp_US_BasicFood.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_BasicFood
+            // 
+            this.clb_US_BasicFood.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_BasicFood.CheckOnClick = (true);
+            this.clb_US_BasicFood.FormattingEnabled = (true);
+            this.clb_US_BasicFood.Items.AddRange(new global::System.Object[] { "\"Apple\"", "\"Bacon\"", "\"BakedPotato\"", "\"BBQChicken\"", "\"BBQRibs\"", "\"Beans\"", "\"Beer\"", "\"Brownie\"", "\"Burrito\"", "\"Cake\"", "\"Chili\"", "\"Coffee\"", "\"CoffeeCreamer\"", "\"Cookies\"", "\"CottonCandy\"", "\"Donuts\"", "\"DrinkCocktail\"", "\"Fish\"", "\"Fries\"", "\"Hamburger\"", "\"HotDog\"", "\"IceCream\"", "\"Jellybeans\"", "\"LargeSoda\"", "\"lobster\"", "\"Melon\"", "\"Milk\"", "\"OnionRing\"", "\"OrangeJuice\"", "\"Pasta\"", "\"Pie\"", "\"Pineapple\"", "\"Pizza\"", "\"Popcorn\"", "\"Pretzel\"", "\"Snack\"", "\"Steak\"", "\"Sushi\"", "\"Taco\"", "\"Vodka\"", "\"Whiskey\"", "\"Wine\"" });
+            this.clb_US_BasicFood.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_BasicFood.Name = ("clb_US_BasicFood");
+            this.clb_US_BasicFood.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_BasicFood.TabIndex = (1);
+            // 
+            // tp_US_BasicLarage
+            // 
+            this.tp_US_BasicLarage.Controls.Add(this.clb_US_BasicLarage);
+            this.tp_US_BasicLarage.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_BasicLarage.Name = ("tp_US_BasicLarage");
+            this.tp_US_BasicLarage.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_BasicLarage.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_BasicLarage.TabIndex = (2);
+            this.tp_US_BasicLarage.Text = ("Basic Large");
+            this.tp_US_BasicLarage.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_BasicLarage
+            // 
+            this.clb_US_BasicLarage.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_BasicLarage.CheckOnClick = (true);
+            this.clb_US_BasicLarage.FormattingEnabled = (true);
+            this.clb_US_BasicLarage.Items.AddRange(new global::System.Object[] { "\"AdBoard\"", "\"Barrel_Large\"", "\"Bench_2\"", "\"Bench\"", "\"BikeEngine\"", "\"Bust_Centurion\"", "\"CardboardBox\"", "\"CardboardCutout\"", "\"CashRegister\"", "\"Chair_1\"", "\"Chair_10\"", "\"Chair_2\"", "\"Chair_3\"", "\"Chair_4\"", "\"Chair_5\"", "\"Chair_6\"", "\"Chair_7\"", "\"Chair_8\"", "\"Chair_9\"", "\"Chair_Casino\"", "\"ChuckStandee\"", "\"CookingPot\"", "\"FrankStandee\"", "\"GarbageBag\"", "\"GarbageCan_1\"", "\"GarbageCan_2\"", "\"GarbageCan_3\"", "\"GarbageCan_4\"", "\"GasBarrel\"", "\"Generator\"", "\"GiantDice\"", "\"GumballMachine\"", "\"HeadStatue\"", "\"Keg\"", "\"LargeShoppingBoxes\"", "\"LcdMonitor\"", "\"LibertyTorch\"", "\"Mailbox\"", "\"MedicineBall\"", "\"MetalBarricade\"", "\"MilitaryCrate\"", "\"NewspaperBox\"", "\"NoveltyBeerMug\"", "\"NoveltyBottle\"", "\"NoveltyCellPhone\"", "\"NoveltyPerfume\"", "\"NoveltyPokerChip\"", "\"Pallet\"", "\"Particle_Board\"", "\"PatioTable\"", "\"PlasticBin\"", "\"PottedPlant_1\"", "\"PottedPlant_2\"", "\"PottedPlant_3\"", "\"PottedPlant_4\"", "\"PottedPlant_4\"", "\"PottedPlant_5\"", "\"PottedPlant_6\"", "\"PottedPlant_7\"", "\"PottedPlant_8\"", "\"RotatingDisplay\"", "\"RouletteWheel\"", "\"SandwichBoard\"", "\"SC37_ShoppingBoxes\"", "\"SmallSuitcase\"", "\"SpaceBench\"", "\"SpeakerWeapon\"", "\"SpoolWire\"", "\"SquareSign\"", "\"SteelShelving\"", "\"Suitcase\"", "\"Swordfish\"", "\"TikiMask\"", "\"TIODPlywood1\"", "\"TIODPlywood2\"", "\"TreasureChest\"", "\"Vase2\"", "\"Vase3\"", "\"VelvetPole\"", "\"WaterCooler\"" });
+            this.clb_US_BasicLarage.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_BasicLarage.Name = ("clb_US_BasicLarage");
+            this.clb_US_BasicLarage.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_BasicLarage.TabIndex = (2);
+            // 
+            // tp_US_BasicSmall
+            // 
+            this.tp_US_BasicSmall.Controls.Add(this.clb_US_BasicSmall);
+            this.tp_US_BasicSmall.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_BasicSmall.Name = ("tp_US_BasicSmall");
+            this.tp_US_BasicSmall.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_BasicSmall.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_BasicSmall.TabIndex = (3);
+            this.tp_US_BasicSmall.Text = ("Basic Small");
+            this.tp_US_BasicSmall.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_BasicSmall
+            // 
+            this.clb_US_BasicSmall.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_BasicSmall.CheckOnClick = (true);
+            this.clb_US_BasicSmall.FormattingEnabled = (true);
+            this.clb_US_BasicSmall.Items.AddRange(new global::System.Object[] { "\"AcousticGuitar\"", "\"AlienProbe\"", "\"Basketball\"", "\"BassGuitar\"", "\"BassGuitar\"", "\"battleaxe\"", "\"BBQChef_MeatCleaver\"", "\"BeachBall\"", "\"BikeForks\"", "\"BowlingBall\"", "\"BowlingPin\"", "\"Brick\"", "\"Broadsword\"", "\"BroomHandle\"", "\"ChefKnife\"", "\"CinderBlock\"", "\"Coffeepot\"", "\"ComedyTrophy\"", "\"CookingOil\"", "\"CroupierStick\"", "\"Crowbar\"", "\"DonkeyLamp\"", "\"Dumbbell\"", "\"FoamHand\"", "\"Football\"", "\"GiftShopLamp\"", "\"GreenHunkOfMeat\"", "\"HandBag\"", "\"HandleBar\"", "\"Hanger\"", "\"HockeyStick\"", "\"HotelLamp\"", "\"KatanaSword\"", "\"Keyboard\"", "\"Lamp\"", "\"Lance\"", "\"LongStick\"", "\"MagicianSword\"", "\"MeatCleaver\"", "\"Microscope\"", "\"MicStand\"", "\"MoneyCase_Americana\"", "\"MoneyCase_Atlantica\"", "\"MoneyCase_Helicopter\"", "\"MoneyCase_Protester\"", "\"MoneyCase_Scoops\"", "\"MoneyCase_SlotRanch\"", "\"MoneyCase_TK\"", "\"MoneyCase_Yucatan\"", "\"MoneyCase\"", "\"NightStick\"", "\"NinjaBroadSword\"", "\"NinjaKatanaSword\"", "\"NinjaSword\"", "\"Pan_heat\"", "\"Pan\"", "\"PoolBall\"", "\"PoolCue\"", "\"ProtesterSign\"", "\"PsychoMeatCleaver\"", "\"PsychoMiningPick\"", "\"Scissors\"", "\"Shampoo\"", "\"Shovel\"", "\"ShowerHead\"", "\"SoccerBall\"", "\"SpaceHammer\"", "\"SpotLight\"", "\"StepLadder\"", "\"TIR_chair\"", "\"TIR_Sign\"", "\"TIRBaseballBat\"", "\"TIRPan\"", "\"TIRStepLadder\"", "\"TIRTwoByFour\"", "\"Tomahawk\"", "\"ToyRocketShip\"", "\"VelvetRope\"", "\"WackyHammer\"", "\"WaterBottle\"", "\"WheelPawn\"", "\"WrenchLarge\"" });
+            this.clb_US_BasicSmall.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_BasicSmall.Name = ("clb_US_BasicSmall");
+            this.clb_US_BasicSmall.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_BasicSmall.TabIndex = (3);
+            // 
+            // tp_US_Bugged
+            // 
+            this.tp_US_Bugged.Controls.Add(this.clb_US_Bugged);
+            this.tp_US_Bugged.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Bugged.Name = ("tp_US_Bugged");
+            this.tp_US_Bugged.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Bugged.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Bugged.TabIndex = (4);
+            this.tp_US_Bugged.Text = ("Bugged");
+            this.tp_US_Bugged.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Bugged
+            // 
+            this.clb_US_Bugged.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Bugged.CheckOnClick = (true);
+            this.clb_US_Bugged.FormattingEnabled = (true);
+            this.clb_US_Bugged.Items.AddRange(new global::System.Object[] { "\"HamsterBall_Blue_Gyroscope\"", "\"HangmanGun\"", "\"Intestine\"", "\"MascotMurderballLauncher\" ", "\"MilitiaSniperRifle\"", "\"MinigameMooseHeadBlue\"", "\"MinigameMooseHeadGreen\"", "\"MinigameMooseHeadRed\"", "\"MinigameMooseHeadYellow\"", "\"Mole\"", "\"RB_couch\"", "\"SpaceWorm\"", "\"Theremin\" ", "\"Vase\" ", "\"Wormhole\"" });
+            this.clb_US_Bugged.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Bugged.Name = ("clb_US_Bugged");
+            this.clb_US_Bugged.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Bugged.TabIndex = (4);
+            // 
+            // tp_US_CombinedFireArms
+            // 
+            this.tp_US_CombinedFireArms.Controls.Add(this.clb_US_CombinedFireArms);
+            this.tp_US_CombinedFireArms.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_CombinedFireArms.Name = ("tp_US_CombinedFireArms");
+            this.tp_US_CombinedFireArms.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_CombinedFireArms.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_CombinedFireArms.TabIndex = (18);
+            this.tp_US_CombinedFireArms.Text = ("Combined Fire Arms & Spray");
+            this.tp_US_CombinedFireArms.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_CombinedFireArms
+            // 
+            this.clb_US_CombinedFireArms.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_CombinedFireArms.CheckOnClick = (true);
+            this.clb_US_CombinedFireArms.FormattingEnabled = (true);
+            this.clb_US_CombinedFireArms.Items.AddRange(new global::System.Object[] { "\"AirHorn\"", "\"BagofMarbles\"", "\"Barrett50Caliber\"", "\"BaseballBat_Metal\"", "\"CannedDrinks\"", "\"CasinoChips\"", "\"CementSaw_combo\"", "\"FireCrackers\"", "\"FireSpitter\"", "\"FlameThrower\"", "\"FlamingAces\"", "\"gemblower\"", "\"GolfClub\"", "\"HandGun\"", "\"Ketchup\"", "\"LaserEyes\"", "\"LightningGun\"", "\"Mayonnaise\"", "\"MinigameSniper\"", "\"MusicDiscs\"", "\"NineIron\"", "\"PitchForkShotgun\"", "\"PlateLauncher\"", "\"PlayingCards\"", "\"ProtomanBlaster\"", "\"RayGun\"", "\"SawLauncher\"", "\"SBFG\"", "\"SGBallLauncherBlue\"", "\"SGBallLauncherGreen\"", "\"SGBallLauncherRed\"", "\"SGBallLauncherYellow\"", "\"SixShooter\"", "\"SpaceballBat\"", "\"SuperMassager\"", "\"VinylRecords\"", "\"WhippedCream\"", "\"ZombieThrower\"" });
+            this.clb_US_CombinedFireArms.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_CombinedFireArms.Name = ("clb_US_CombinedFireArms");
+            this.clb_US_CombinedFireArms.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_CombinedFireArms.TabIndex = (7);
+            // 
+            // tp_US_CombFood
+            // 
+            this.tp_US_CombFood.Controls.Add(this.clb_US_CombFood);
+            this.tp_US_CombFood.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_CombFood.Name = ("tp_US_CombFood");
+            this.tp_US_CombFood.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_CombFood.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_CombFood.TabIndex = (7);
+            this.tp_US_CombFood.Text = ("Combined Food & Spoiled");
+            this.tp_US_CombFood.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_CombFood
+            // 
+            this.clb_US_CombFood.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_CombFood.CheckOnClick = (true);
+            this.clb_US_CombFood.FormattingEnabled = (true);
+            this.clb_US_CombFood.Items.AddRange(new global::System.Object[] { "\"BeerHat\"", "\"EnergizerJuice\"", "\"NectarJuice\"", "\"PainKillerJuice\"", "\"QuickStepJuice\"", "\"RandomizerJuice\"", "\"RepulseJuice\"", "\"SpaceSteak\"", "\"SpitfireJuice\"", "\"SpoiledBacon\"", "\"SpoiledBBQChicken\"", "\"SpoiledBBQRibs\"", "\"SpoiledFish\"", "\"SpoiledHamburger\"", "\"SpoiledHotDog\"", "\"SpoiledLobster\"", "\"SpoiledSteak\"", "\"SpoiledSushi\"", "\"UntouchableJuice\"", "\"ZombaitJuice\"" });
+            this.clb_US_CombFood.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_CombFood.Name = ("clb_US_CombFood");
+            this.clb_US_CombFood.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_CombFood.TabIndex = (7);
+            // 
+            // tp_US_CombMelee
+            // 
+            this.tp_US_CombMelee.Controls.Add(this.clb_US_CombMelee);
+            this.tp_US_CombMelee.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_CombMelee.Name = ("tp_US_CombMelee");
+            this.tp_US_CombMelee.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_CombMelee.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_CombMelee.TabIndex = (8);
+            this.tp_US_CombMelee.Text = ("Combined Thowing & Melee");
+            this.tp_US_CombMelee.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_CombMelee
+            // 
+            this.clb_US_CombMelee.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_CombMelee.CheckOnClick = (true);
+            this.clb_US_CombMelee.FormattingEnabled = (true);
+            this.clb_US_CombMelee.Items.AddRange(new global::System.Object[] { "\"ATMHacker\"", "\"Auger\"", "\"BurningSkull\"", "\"Combo_Paddlesaw\"", "\"defiler\"", "\"Driller\"", "\"ElectricRake\"", "\"FlamingGloves\"", "\"FlamingSwordAndShield\"", "\"HandiChipper\"", "\"KnifeGloves\"", "\"LaserLightSword\"", "\"mmagloves_spiked\"", "\"ParaBlower\"", "\"poleweapon\"", "\"PortableLawnMower\"", "\"PowerExsanguinator\"", "\"PowerGuitar\"", "\"Reaper\"", "\"Shocker\"", "\"SpikedBat\"", "\"SpikedSwordAndShield\"", "\"SuperSlicer\"", "\"TeslaBall\"", "\"Thor\"", "\"WeedTendonizer\"", "\"WingManJar\"" });
+            this.clb_US_CombMelee.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_CombMelee.Name = ("clb_US_CombMelee");
+            this.clb_US_CombMelee.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_CombMelee.TabIndex = (8);
+            // 
+            // tp_US_ComboFireArms
+            // 
+            this.tp_US_ComboFireArms.Controls.Add(this.clb_US_ComboFireArms);
+            this.tp_US_ComboFireArms.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_ComboFireArms.Name = ("tp_US_ComboFireArms");
+            this.tp_US_ComboFireArms.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_ComboFireArms.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_ComboFireArms.TabIndex = (9);
+            this.tp_US_ComboFireArms.Text = ("Combo Fire Arm & Spray");
+            this.tp_US_ComboFireArms.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_ComboFireArms
+            // 
+            this.clb_US_ComboFireArms.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_ComboFireArms.CheckOnClick = (true);
+            this.clb_US_ComboFireArms.FormattingEnabled = (true);
+            this.clb_US_ComboFireArms.Items.AddRange(new global::System.Object[] { "\"BFG\"", "\"BowandArrow\"", "\"BoxOfNails\"", "\"EnhancedM16\"", "\"EnhancedM249\"", "\"EnhancedMAR\"", "\"FireExtinguisher\"", "\"Gems\"", "\"LeafBlower\"", "\"M16\"", "\"M249\"", "\"MercAssaultRifle\"", "\"Shotgun\"", "\"SpitballGun\"", "\"Spraypaint\"", "\"TennisRacket\"", "\"WaterGun\"" });
+            this.clb_US_ComboFireArms.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_ComboFireArms.Name = ("clb_US_ComboFireArms");
+            this.clb_US_ComboFireArms.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_ComboFireArms.TabIndex = (9);
+            // 
+            // tp_US_Explosive
+            // 
+            this.tp_US_Explosive.Controls.Add(this.clb_US_Explosive);
+            this.tp_US_Explosive.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Explosive.Name = ("tp_US_Explosive");
+            this.tp_US_Explosive.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Explosive.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Explosive.TabIndex = (19);
+            this.tp_US_Explosive.Text = ("Explosive");
+            this.tp_US_Explosive.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Explosive
+            // 
+            this.clb_US_Explosive.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Explosive.CheckOnClick = (true);
+            this.clb_US_Explosive.FormattingEnabled = (true);
+            this.clb_US_Explosive.Items.AddRange(new global::System.Object[] { "\"AcetyleneTank\"", "\"BouncingBeauty\"", "\"BowandArrow_explosive\"", "\"BoykinGrenade\"", "\"Combo_PropaneTankNails\"", "\"CryoPod\"", "\"Dynameat\"", "\"Dynamite\"", "\"FireworkRockets\"", "\"FireworksBazooka_Bomber\"", "\"FireworksBazooka_reward\"", "\"FireworksBazooka\"", "\"FlashGrenade\"", "\"FreezerBomb\"", "\"GasCanister\"", "\"GasolineCanister\"", "\"Grenade\"", "\"HailMary\"", "\"LaserGun\"", "\"LiquidNitrogen\"", "\"MolotovBottle\"", "\"Pegasus\"", "\"PropaneTank\"", "\"QueenBeeJar\"", "\"RemoteMine\"", "\"SnowballCannon\"", "\"StickyBomb\"" });
+            this.clb_US_Explosive.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Explosive.Name = ("clb_US_Explosive");
+            this.clb_US_Explosive.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Explosive.TabIndex = (12);
+            // 
+            // tp_US_KeyItems
+            // 
+            this.tp_US_KeyItems.Controls.Add(this.clb_US_KeyItems);
+            this.tp_US_KeyItems.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_KeyItems.Name = ("tp_US_KeyItems");
+            this.tp_US_KeyItems.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_KeyItems.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_KeyItems.TabIndex = (17);
+            this.tp_US_KeyItems.Text = ("Key Items");
+            this.tp_US_KeyItems.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_KeyItems
+            // 
+            this.clb_US_KeyItems.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_KeyItems.CheckOnClick = (true);
+            this.clb_US_KeyItems.FormattingEnabled = (true);
+            this.clb_US_KeyItems.Items.AddRange(new global::System.Object[] { "\"Key_caseofqueens\"", "\"Key_photo\"", "\"Key_champagne\"", "\"Key_giftbasket\"", "\"Key_labsuit\"", "\"Key_bluetooth\"", "\"Key_usbdrive\"", "\"Zombrex\"", "\"Key_undergroundkey\"", "\"Key_sportscar\"", "\"Key_commando\"", "\"Key_chopper\"", "\"Key_MasterKey\"", "\"Key_train\"", "\"Key_superbike\"", "\"Key_gauze\"", "\"Key_zombrexbasket\"", "\"Key_painkillers\"", "\"Key_sutures\"", "\"Key_silkthong\"", "\"key_lockbox18\"", "\"key_lockbox1\"", "\"key_lockbox12\"", "\"key_lockbox13\"", "\"key_lockbox14\"", "\"key_lockbox15\"", "\"key_lockbox16\"", "\"key_lockbox17\"", "\"key_lockbox19\"", "\"key_lockbox20\"", "\"key_lockbox2\"", "\"key_lockbox3\"", "\"key_lockbox4\"", "\"key_lockbox5\"", "\"key_lockbox6\"", "\"key_lockbox7\"", "\"key_lockbox8\"", "\"key_lockbox9\"", "\"key_lockbox10\"", "\"key_lockbox11\"" });
+            this.clb_US_KeyItems.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_KeyItems.Name = ("clb_US_KeyItems");
+            this.clb_US_KeyItems.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_KeyItems.TabIndex = (17);
+            // 
+            // tp_US_Magazines
+            // 
+            this.tp_US_Magazines.Controls.Add(this.clb_US_Magazines);
+            this.tp_US_Magazines.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Magazines.Name = ("tp_US_Magazines");
+            this.tp_US_Magazines.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Magazines.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Magazines.TabIndex = (12);
+            this.tp_US_Magazines.Text = ("Magazines");
+            this.tp_US_Magazines.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Magazines
+            // 
+            this.clb_US_Magazines.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Magazines.CheckOnClick = (true);
+            this.clb_US_Magazines.FormattingEnabled = (true);
+            this.clb_US_Magazines.Items.AddRange(new global::System.Object[] { "\"Camera_Magazine_1\"", "\"Camera_Magazine_2\"", "\"Camera_Magazine_3\"", "\"Magazine_Alcohol_Hangover_Cures\"", "\"Magazine_Economy_Lords_Of_Cash\"", "\"Magazine_Economy_Thrifty_Trader\"", "\"Magazine_Food_Healthy_Choices\"", "\"Magazine_Food_The_World_Chef\"", "\"Magazine_Four_Wheel_Fun\"", "\"Magazine_Gambling_Fortune_City_Riches\"", "\"Magazine_Gambling_Luck_You\"", "\"Magazine_Gambling_Wealth\"", "\"Magazine_Item_Edged_Lone_Blade\"", "\"Magazine_Item_Furniture_Designer_For_Homes\"", "\"Magazine_Item_Sports_Total_Sporting_Weekly\"", "\"Magazine_Item_Toy_Toyapalooza\"", "\"Magazine_Juice_Top_Ten_Drink_Mixes\"", "\"Magazine_Leadership_For_Losers\"", "\"Magazine_PP_Female_Survivor_Playboy\"", "\"Magazine_PP_Psycho_Dangerous_People_Weekly\"", "\"Magazine_PP_Survivor_Angel_Prince\"", "\"Magazine_PP_Weapon_Armed_And_Awesome\"", "\"Magazine_PP_Weapon_Basic_Training_Monthly\"", "\"Magazine_PP_Weapon_Fortune_Fighter\"", "\"Magazine_PP_Zombie_Spectral_Talkers\"", "\"Magazine_PP_Zombie_Undead_Solutions\"", "\"Magazine_Shotokan_Karate_Made_Easy\"", "\"Magazine_Sports_To_The_Extreme\"", "\"Magazine_Stunt_Devils\"", "\"Mgz_Item_Construction_Jackhammer_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"", "\"Mgz_Item_Entertainment_Video_Game_Weekly\"" });
+            this.clb_US_Magazines.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Magazines.Name = ("clb_US_Magazines");
+            this.clb_US_Magazines.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Magazines.TabIndex = (12);
+            // 
+            // tp_US_Mannequin
+            // 
+            this.tp_US_Mannequin.Controls.Add(this.clb_US_Mannequin);
+            this.tp_US_Mannequin.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Mannequin.Name = ("tp_US_Mannequin");
+            this.tp_US_Mannequin.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Mannequin.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Mannequin.TabIndex = (13);
+            this.tp_US_Mannequin.Text = ("Mannequin");
+            this.tp_US_Mannequin.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Mannequin
+            // 
+            this.clb_US_Mannequin.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Mannequin.CheckOnClick = (true);
+            this.clb_US_Mannequin.FormattingEnabled = (true);
+            this.clb_US_Mannequin.Items.AddRange(new global::System.Object[] { "\"Mannequin_Female\"", "\"Mannequin_Male\"", "\"MannequinFemaleHead\"", "\"MannequinFemaleHeadTorso\"", "\"MannequinFemaleLeftArm\"", "\"MannequinFemaleLeftLeg\"", "\"MannequinFemaleLLegLFoot\"", "\"MannequinFemaleRightArm\"", "\"MannequinFemaleRightLeg\"", "\"MannequinFemaleWaistRLegRFoot\"", "\"MannequinMaleHead\"", "\"MannequinMaleLeftArm\"", "\"MannequinMaleLeftLeg\"", "\"MannequinMaleRightArm\"", "\"MannequinMaleRightLeg\"", "\"MannequinMaleTorsoLLegRLeg\"" });
+            this.clb_US_Mannequin.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Mannequin.Name = ("clb_US_Mannequin");
+            this.clb_US_Mannequin.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Mannequin.TabIndex = (13);
+            // 
+            // tp_US_Pushed
+            // 
+            this.tp_US_Pushed.Controls.Add(this.clb_US_Pushed);
+            this.tp_US_Pushed.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Pushed.Name = ("tp_US_Pushed");
+            this.tp_US_Pushed.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Pushed.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Pushed.TabIndex = (14);
+            this.tp_US_Pushed.Text = ("Push & Placed");
+            this.tp_US_Pushed.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Pushed
+            // 
+            this.clb_US_Pushed.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Pushed.CheckOnClick = (true);
+            this.clb_US_Pushed.FormattingEnabled = (true);
+            this.clb_US_Pushed.Items.AddRange(new global::System.Object[] { "\"CarTire\"", "\"Combo_BucketDrill\"", "\"Combo_RemoteControlBucketDrill1\"", "\"Combo_RemoteControlBucketDrill2\"", "\"Combo_RemoteControlBucketDrill3\"", "\"Combo_RemoteControlBucketDrill4\"", "\"Dolly\"", "\"DrinkCart\"", "\"Drum\"", "\"ElectricThunder\"", "\"ElectrocutionChair\"", "\"Flare\"", "\"FountainLizard\"", "\"FunnyPainting\"", "\"GiantSpaceshipToy\"", "\"GiantStuffedBull\"", "\"GiantStuffedDonkey\"", "\"GiantStuffedElephant\"", "\"GiantStuffedRabbit\"", "\"HeliBlade\"", "\"KCMooseHead\"", "\"Lawnmower\"", "\"MascotMask\"", "\"MoltenCannon\"", "\"MooseHead\"", "\"Painting\"", "\"Painting2\"", "\"Painting3\"", "\"PeaceArt\"", "\"stickin_painting\"", "\"StickIt_PonyOnStick\"", "\"stickit_ServbotMask\"", "\"SullivanFlare_PlayerVersion\"", "\"TeddyBearSentryGun\"", "\"UtilityCart\"", "\"WheelBarrow\"", "\"WheelChair\"", "\"ZapShine\"", "\"ZombieMask\"" });
+            this.clb_US_Pushed.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Pushed.Name = ("clb_US_Pushed");
+            this.clb_US_Pushed.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Pushed.TabIndex = (14);
+            // 
+            // tp_US_Special
+            // 
+            this.tp_US_Special.Controls.Add(this.clb_US_Special);
+            this.tp_US_Special.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Special.Name = ("tp_US_Special");
+            this.tp_US_Special.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Special.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Special.TabIndex = (15);
+            this.tp_US_Special.Text = ("Special");
+            this.tp_US_Special.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Special
+            // 
+            this.clb_US_Special.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Special.CheckOnClick = (true);
+            this.clb_US_Special.FormattingEnabled = (true);
+            this.clb_US_Special.Items.AddRange(new global::System.Object[] { "\"AluminumTennisRacket\"", "\"AppleMoney\"", "\"FiveHundredDollars\"", "\"FiveThousandDollars\"", "\"GamblingDollars\"", "\"GiantPinkChainsaw\"", "\"HundredThousandDollars\"", "\"OneHundredDollars\"", "\"OneThousandDollars\"", "\"ProtomanBlasterAndShield\"", "\"ProtomanShield\"", "\"TenThousandDollars\"", "\"TwoThousandDollars\"", "\"Zombrex\"" });
+            this.clb_US_Special.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Special.Name = ("clb_US_Special");
+            this.clb_US_Special.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Special.TabIndex = (15);
+            // 
+            // tp_US_Vehicles
+            // 
+            this.tp_US_Vehicles.Controls.Add(this.clb_US_Vehicles);
+            this.tp_US_Vehicles.Location = (new global::System.Drawing.Point(4, 24));
+            this.tp_US_Vehicles.Name = ("tp_US_Vehicles");
+            this.tp_US_Vehicles.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tp_US_Vehicles.Size = (new global::System.Drawing.Size(337, 347));
+            this.tp_US_Vehicles.TabIndex = (16);
+            this.tp_US_Vehicles.Text = ("Vehicles");
+            this.tp_US_Vehicles.UseVisualStyleBackColor = (true);
+            // 
+            // clb_US_Vehicles
+            // 
+            this.clb_US_Vehicles.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_Vehicles.CheckOnClick = (true);
+            this.clb_US_Vehicles.FormattingEnabled = (true);
+            this.clb_US_Vehicles.Items.AddRange(new global::System.Object[] { "\"BazookaBike\"", "\"ChainsawBike\"", "\"ChopperBikeSingle\"", "\"ClownCar\"", "\"GirlsBike\"", "\"HamsterBall_Blue\"", "\"HamsterBall_Green\"", "\"HamsterBall_Red\"", "\"HamsterBall_Yellow\"", "\"HamsterBall_Yellow_Gyroscope\"", "\"Hummer\"", "\"IndustrialCart\"", "\"IndustrialClownCar\"", "\"M249Bike\"", "\"MercenaryBike\"", "\"RabbitBike\"", "\"SecurityCart\"", "\"Skateboard\"", "\"SportsCar\"", "\"SuperBike\"", "\"TIRBike\"", "\"TIRBikeGreenUF\"", "\"UltimateFanBike\"", "\"WheelchairBike\"", "\"WheelchairTank\"" });
+            this.clb_US_Vehicles.Location = (new global::System.Drawing.Point(6, 3));
+            this.clb_US_Vehicles.Name = ("clb_US_Vehicles");
+            this.clb_US_Vehicles.Size = (new global::System.Drawing.Size(325, 342));
+            this.clb_US_Vehicles.TabIndex = (16);
+            // 
+            // l_US_Warning_Msg
+            // 
+            this.l_US_Warning_Msg.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Bold, global::System.Drawing.GraphicsUnit.Point));
+            this.l_US_Warning_Msg.Location = (new global::System.Drawing.Point(375, 30));
+            this.l_US_Warning_Msg.Name = ("l_US_Warning_Msg");
+            this.l_US_Warning_Msg.Size = (new global::System.Drawing.Size(300, 70));
+            this.l_US_Warning_Msg.TabIndex = (0);
+            this.l_US_Warning_Msg.Text = ("These setting will make the game unstable that may cause crashing/softlocking if using any of these. Its recomended to save when ever you have the chance.");
+            this.l_US_Warning_Msg.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
             // fbd_DataFileFolder
             // 
             this.fbd_DataFileFolder.Description = ("Select the upacked datafile folder");
             this.fbd_DataFileFolder.ShowNewFolderButton = (false);
             this.fbd_DataFileFolder.UseDescriptionForTitle = (true);
+            // 
+            // clb_US_FireArms
+            // 
+            this.clb_US_FireArms.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
+            this.clb_US_FireArms.FormattingEnabled = (true);
+            this.clb_US_FireArms.Items.AddRange(new global::System.Object[] { "\"AirHorn\"", "\"BagofMarbles\"", "\"Barrett50Caliber\"", "\"BaseballBat_Metal\"", "\"CannedDrinks\"", "\"CasinoChips\"", "\"CementSaw_combo\"", "\"FireCrackers\"", "\"FireSpitter\"", "\"FlameThrower\"", "\"FlamingAces\"", "\"gemblower\"", "\"GolfClub\"", "\"HandGun\"", "\"Ketchup\"", "\"LaserEyes\"", "\"LightningGun\"", "\"Mayonnaise\"", "\"MinigameSniper\"", "\"MusicDiscs\"", "\"NineIron\"", "\"PitchForkShotgun\"", "\"PlateLauncher\"", "\"PlayingCards\"", "\"ProtomanBlaster\"", "\"RayGun\"", "\"SawLauncher\"", "\"SBFG\"", "\"SGBallLauncherBlue\"", "\"SGBallLauncherGreen\"", "\"SGBallLauncherRed\"", "\"SGBallLauncherYellow\"", "\"SixShooter\"", "\"SpaceballBat\"", "\"SuperMassager\"", "\"VinylRecords\"", "\"WhippedCream\"", "\"ZombieThrower\"" });
+            this.clb_US_FireArms.Location = (new global::System.Drawing.Point(6, 6));
+            this.clb_US_FireArms.Name = ("clb_US_FireArms");
+            this.clb_US_FireArms.Size = (new global::System.Drawing.Size(325, 396));
+            this.clb_US_FireArms.TabIndex = (6);
             // 
             // F_ItemRandomiser
             // 
@@ -5029,8 +5566,8 @@
             this.tp_FoodDamage.ResumeLayout(false);
             this.gb_FD_MaxDperA.ResumeLayout(false);
             this.gb_FD_MaxDperA.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_MaxDperA_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_MaxDperA_Min)).EndInit();
             this.gb_FD_ProjectDamage.ResumeLayout(false);
             this.gb_FD_ProjectDamage.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_ProjectDamage_Max)).EndInit();
@@ -5043,6 +5580,28 @@
             this.gb_FD_AttackDamage.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FD_AttackDamage_Dec)).EndInit();
+            this.tp_UnstableStats.ResumeLayout(false);
+            this.gb_US_NPCItems.ResumeLayout(false);
+            this.gb_US_NPCItems.PerformLayout();
+            this.gb_US_PropToThrow.ResumeLayout(false);
+            this.gb_US_PropToThrow.PerformLayout();
+            this.tc_US_Items.ResumeLayout(false);
+            this.tp_US_BasicCombo.ResumeLayout(false);
+            this.tp_US_BasicFood.ResumeLayout(false);
+            this.tp_US_BasicLarage.ResumeLayout(false);
+            this.tp_US_BasicSmall.ResumeLayout(false);
+            this.tp_US_Bugged.ResumeLayout(false);
+            this.tp_US_CombinedFireArms.ResumeLayout(false);
+            this.tp_US_CombFood.ResumeLayout(false);
+            this.tp_US_CombMelee.ResumeLayout(false);
+            this.tp_US_ComboFireArms.ResumeLayout(false);
+            this.tp_US_Explosive.ResumeLayout(false);
+            this.tp_US_KeyItems.ResumeLayout(false);
+            this.tp_US_Magazines.ResumeLayout(false);
+            this.tp_US_Mannequin.ResumeLayout(false);
+            this.tp_US_Pushed.ResumeLayout(false);
+            this.tp_US_Special.ResumeLayout(false);
+            this.tp_US_Vehicles.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -5098,7 +5657,7 @@
         private TabPage tp_WItemRandom;
         private TabPage tp_WitemsStats;
         private Button b_DeselectAll;
-        private Button b_CheckAll;
+        private Button b_ToggleAll;
         private Button b_Randomise;
         private TextBox tb_TestBox;
         private FolderBrowserDialog fbd_DataFileFolder;
@@ -5427,15 +5986,15 @@
         private global::System.Windows.Forms.Label l_FD_AttackDamage_Dec;
         private global::System.Windows.Forms.Label l_FD_AttackDamage_Max;
         private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Max;
-        private global::System.Windows.Forms.Label c;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Min;
         private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Dec;
         private global::System.Windows.Forms.CheckBox cb_FD_AttackDamage;
         private global::System.Windows.Forms.GroupBox gb_FD_MaxDperA;
-        private global::System.Windows.Forms.Label label1;
-        private global::System.Windows.Forms.Label label2;
-        private global::System.Windows.Forms.NumericUpDown numericUpDown1;
-        private global::System.Windows.Forms.Label label3;
-        private global::System.Windows.Forms.NumericUpDown numericUpDown2;
+        private global::System.Windows.Forms.Label l_FD_MaxDperA_Dec;
+        private global::System.Windows.Forms.Label l_FD_MaxDperA_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_MaxDperA_Max;
+        private global::System.Windows.Forms.Label l_FD_MaxDperA_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_MaxDperA_Min;
         private global::System.Windows.Forms.CheckBox cb_FD_MaxDperA;
         private global::System.Windows.Forms.GroupBox gb_FD_ProjectDamage;
         private global::System.Windows.Forms.Label l_FD_ProjectDamage_Dec;
@@ -5445,5 +6004,53 @@
         private global::System.Windows.Forms.NumericUpDown nud_FD_ProjectDamage_Min;
         private global::System.Windows.Forms.CheckBox cb_FD_ProjectDamage;
         private global::System.Windows.Forms.Button bt_IS_CheckAllActiveTab;
+        private global::System.Windows.Forms.TabPage tp_UnstableStats;
+        private global::System.Windows.Forms.Label l_US_Warning_Msg;
+        private global::System.Windows.Forms.Label l_US_PropToThrow_Dec;
+        private global::System.Windows.Forms.CheckBox cb_US_PropToThrow;
+        private global::System.Windows.Forms.TabControl tc_US_Items;
+        private global::System.Windows.Forms.TabPage tp_US_BasicCombo;
+        private global::System.Windows.Forms.CheckedListBox clb_US_BasicCombo;
+        private global::System.Windows.Forms.TabPage tp_US_BasicFood;
+        private global::System.Windows.Forms.CheckedListBox clb_US_BasicFood;
+        private global::System.Windows.Forms.TabPage tp_US_BasicLarage;
+        private global::System.Windows.Forms.CheckedListBox clb_US_BasicLarage;
+        private global::System.Windows.Forms.TabPage tp_US_BasicSmall;
+        private global::System.Windows.Forms.CheckedListBox clb_US_BasicSmall;
+        private global::System.Windows.Forms.TabPage tp_US_Bugged;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Bugged;
+        private global::System.Windows.Forms.TabPage tp_US_CombinedFireArms;
+        private global::System.Windows.Forms.TabPage tabPage6;
+        private global::System.Windows.Forms.CheckedListBox checkedListBox6;
+        private global::System.Windows.Forms.TabPage tabPage7;
+        private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
+        private global::System.Windows.Forms.TabPage tp_US_CombFood;
+        private global::System.Windows.Forms.CheckedListBox clb_US_CombFood;
+        private global::System.Windows.Forms.TabPage tp_US_CombMelee;
+        private global::System.Windows.Forms.CheckedListBox clb_US_CombMelee;
+        private global::System.Windows.Forms.TabPage tp_US_ComboFireArms;
+        private global::System.Windows.Forms.CheckedListBox clb_US_ComboFireArms;
+        private global::System.Windows.Forms.TabPage tabPage11;
+        private global::System.Windows.Forms.CheckedListBox checkedListBox11;
+        private global::System.Windows.Forms.TabPage tabPage12;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Explosive;
+        private global::System.Windows.Forms.TabPage tp_US_KeyItems;
+        private global::System.Windows.Forms.CheckedListBox clb_US_KeyItems;
+        private global::System.Windows.Forms.TabPage tp_US_Magazines;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Magazines;
+        private global::System.Windows.Forms.TabPage tp_US_Mannequin;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Mannequin;
+        private global::System.Windows.Forms.TabPage tp_US_Pushed;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Pushed;
+        private global::System.Windows.Forms.TabPage tp_US_Special;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Special;
+        private global::System.Windows.Forms.TabPage tp_US_Vehicles;
+        private global::System.Windows.Forms.CheckedListBox clb_US_Vehicles;
+        private global::System.Windows.Forms.CheckedListBox clb_US_CombinedFireArms;
+        private global::System.Windows.Forms.TabPage tp_US_Explosive;
+        private global::System.Windows.Forms.GroupBox gb_US_PropToThrow;
+        private global::System.Windows.Forms.GroupBox gb_US_NPCItems;
+        private global::System.Windows.Forms.CheckBox cb_US_NPCItems;
+        private global::System.Windows.Forms.Label l_US_NPCItems_Dec;
     }
 }

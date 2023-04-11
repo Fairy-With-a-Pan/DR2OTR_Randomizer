@@ -88,13 +88,6 @@ public partial class F_ItemRandomiser : Form
     {
 
     }
-    private void tc_Items_Click(object sender, EventArgs e)
-    {
-
-    }
-
-
-
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
         CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
@@ -104,13 +97,16 @@ public partial class F_ItemRandomiser : Form
         }
     }
 
-    private void b_CheckAll_Click(object sender, EventArgs e)
+    private void b_ToggleAll_Click(object sender, EventArgs e)
     {
 
         CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
         for (int i = 0; i < currentListBox.Items.Count; i++)
         {
-            currentListBox.SetItemChecked(i, true);
+            //Gets the check sate and then converts it to a bool for a toggle
+            var checkToBool = Convert.ToBoolean(currentListBox.GetItemCheckState(i));
+            checkToBool = !checkToBool;
+            currentListBox.SetItemChecked(i, checkToBool);
         }
 
     }
@@ -258,6 +254,53 @@ public partial class F_ItemRandomiser : Form
     {
         if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
+        {
+            RandomizeUnstableStats(itemFile);
+        }
+        else
+        {
+            RandomizeItemStats(itemFile);
+        }
+        
+
+        MessageBox.Show("Item stats have successfully been randomized", "Success");
+    }
+
+    private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
+    {
+        CheckAllItemsinTab();
+    }
+    private void CheckAllItemsinTab()
+    {
+        TabPage activePage = tc_itemStats.SelectedTab;
+
+        List<CheckBox> allActiveCheckBoxes = new List<CheckBox>();
+        if (activePage.Name == "tp_UnstableStats")
+        {
+            CheckedListBox currentCheckListBox =
+                tc_US_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
+            for (int i = 0; i < currentCheckListBox.Items.Count; i++)
+            {
+                var checkToBool = Convert.ToBoolean(currentCheckListBox.GetItemCheckState(i));
+                checkToBool = !checkToBool;
+                currentCheckListBox.SetItemChecked(i, checkToBool);
+            }
+        }
+        else
+        {
+            foreach (GroupBox tab in activePage.Controls)
+            {
+                allActiveCheckBoxes.Add(tab.Controls.OfType<CheckBox>().First());
+            }
+            foreach (CheckBox checkBox in allActiveCheckBoxes)
+            {
+                checkBox.Checked = !checkBox.Checked;
+            }
+        }
+    }
+    private void RandomizeItemStats(string[] itemFile)
+    {
 
         Random rand = new Random();
 
@@ -270,7 +313,6 @@ public partial class F_ItemRandomiser : Form
         }
         foreach (GroupBox box in allGroupBoxes)
         {
-
             if (box.Controls.OfType<CheckBox>().First().Checked)
             {
                 decimal dNum1 = box.Controls.OfType<NumericUpDown>().First().Value;
@@ -289,22 +331,43 @@ public partial class F_ItemRandomiser : Form
             }
         }
         File.WriteAllLines($"{path}\\items.txt", itemFile);
-        MessageBox.Show("Item stats have successfully been randomized", "Success");
     }
 
-    private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
+    private void RandomizeUnstableStats(string[] itemFile)
     {
-        TabPage activePage = tc_itemStats.SelectedTab;
+        //TODO:
+        //Add a message if more then one of the unstable checkboxes
+        //are ticked to ask if you want to do both if no is clicked
+        //return out of this so no items get randomized
+        Random rand = new Random();
 
-        List<CheckBox> allActiveCheckBoxes = new List<CheckBox>();
+        List<CheckedListBox> allCheckedListBoxes = new List<CheckedListBox>();
+        List<string> allItems = new List<string>();
 
-        foreach (GroupBox tab in activePage.Controls)
+        foreach (TabPage tabpage in tc_US_Items.Controls)
         {
-            allActiveCheckBoxes.Add(tab.Controls.OfType<CheckBox>().First());
+            allCheckedListBoxes.Add(tabpage.Controls.OfType<CheckedListBox>().First());
         }
-        foreach (CheckBox checkBox in allActiveCheckBoxes)
+        //Need to put a warning message saying a lot of items will cause the game to crash using this.
+        if (cb_US_PropToThrow.Checked)
         {
-            checkBox.Checked = !checkBox.Checked;
+            foreach (CheckedListBox checkedListBox in allCheckedListBoxes)
+            {
+                foreach (string item in checkedListBox.CheckedItems)
+                {
+                    allItems.Add(item);
+                }
+            }
+            for(int i = 0;i < itemFile.Length;i++)
+            {
+                if (itemFile[i].Contains(gb_US_PropToThrow.Tag.ToString()))
+                {
+                    int randItem = rand.Next(allItems.Count);
+                    itemFile[i] =
+                        itemFile[i].Split('=')[0] + $"= {allItems[randItem]}";
+                }
+            }
         }
+        File.WriteAllLines($"{path}\\items.txt", itemFile);
     }
 }
