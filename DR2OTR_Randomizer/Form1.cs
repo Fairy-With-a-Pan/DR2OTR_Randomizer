@@ -308,8 +308,11 @@ public partial class F_ItemRandomiser : Form
 
         foreach (TabPage tabpage in tc_itemStats.TabPages)
         {
-            foreach (GroupBox groupBox in tabpage.Controls)
-            { allGroupBoxes.Add(groupBox); }
+            if (tabpage.Name != "tp_UnstableStats")
+            {
+                foreach (GroupBox groupBox in tabpage.Controls)
+                { allGroupBoxes.Add(groupBox); }
+            }
         }
         foreach (GroupBox box in allGroupBoxes)
         {
