@@ -36,6 +36,7 @@
             this.tsm_open = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_Quit = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_PH = (new global::System.Windows.Forms.ToolStripMenuItem());
+            this.safeModeToolStripMenuItem = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_Options = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_Backup = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_About = (new global::System.Windows.Forms.ToolStripMenuItem());
@@ -79,11 +80,9 @@
             this.tp_Search = (new global::System.Windows.Forms.TabPage());
             this.clb_SearchResults = (new global::System.Windows.Forms.CheckedListBox());
             this.levelsLinesBindingSource = (new global::System.Windows.Forms.BindingSource(this.components));
-            this.pb_PHTest = (new global::System.Windows.Forms.PictureBox());
             this.tc_TabWindows = (new global::System.Windows.Forms.TabControl());
             this.tp_WItemRandom = (new global::System.Windows.Forms.TabPage());
             this.tb_ItemsSearch = (new global::System.Windows.Forms.TextBox());
-            this.tb_TestBox = (new global::System.Windows.Forms.TextBox());
             this.b_Randomise = (new global::System.Windows.Forms.Button());
             this.b_DeselectAll = (new global::System.Windows.Forms.Button());
             this.b_ToggleAll = (new global::System.Windows.Forms.Button());
@@ -92,6 +91,13 @@
             this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
             this.tc_itemStats = (new global::System.Windows.Forms.TabControl());
             this.tp_VehicleStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_V_EjectSpeed = (new global::System.Windows.Forms.GroupBox());
+            this.l_V_EjectSpeed_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_EjectSpeed_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_EjectSpeed_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EjectSpeed_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EjectSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_V_EjectSpeed = (new global::System.Windows.Forms.CheckBox());
             this.gb_V_RotateSpeed = (new global::System.Windows.Forms.GroupBox());
             this.l_V_RotateSpeed_Dec = (new global::System.Windows.Forms.Label());
             this.l_V_RotateSpeed_Max = (new global::System.Windows.Forms.Label());
@@ -284,6 +290,20 @@
             this.nud_FA_FireRate_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_FA_FireRate = (new global::System.Windows.Forms.CheckBox());
             this.tp_WorldStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_WS_WepPP = (new global::System.Windows.Forms.GroupBox());
+            this.l_WS_WepPP_Dec = (new global::System.Windows.Forms.Label());
+            this.l_WS_WepPP_Max = (new global::System.Windows.Forms.Label());
+            this.nud_WS_WepPP_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_WS_WepPP_Min = (new global::System.Windows.Forms.Label());
+            this.nud_WS_WepPP_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_WS_WepPP = (new global::System.Windows.Forms.CheckBox());
+            this.gb_WS_PPAmount = (new global::System.Windows.Forms.GroupBox());
+            this.l_WS_PPAmount_Dec = (new global::System.Windows.Forms.Label());
+            this.l_WS_PPAmount_Max = (new global::System.Windows.Forms.Label());
+            this.nud_WS_PPAmount_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_WS_PPAmount_Min = (new global::System.Windows.Forms.Label());
+            this.nud_WS_PPAmount_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.cb_WS_PPAmount = (new global::System.Windows.Forms.CheckBox());
             this.gb_W_ThrowForce = (new global::System.Windows.Forms.GroupBox());
             this.l_W_ThrowForce_Dec = (new global::System.Windows.Forms.Label());
             this.l_W_ThrowForce_Max = (new global::System.Windows.Forms.Label());
@@ -492,12 +512,14 @@
             this.tp_Vehicles.SuspendLayout();
             this.tp_Search.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
             this.tp_WitemsStats.SuspendLayout();
             this.tc_itemStats.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
+            this.gb_V_EjectSpeed.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Min)).BeginInit();
             this.gb_V_RotateSpeed.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Min)).BeginInit();
@@ -582,6 +604,12 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).BeginInit();
             this.tp_WorldStats.SuspendLayout();
+            this.gb_WS_WepPP.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_WepPP_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_WepPP_Min)).BeginInit();
+            this.gb_WS_PPAmount.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_PPAmount_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_PPAmount_Min)).BeginInit();
             this.gb_W_ThrowForce.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Min)).BeginInit();
@@ -699,9 +727,17 @@
             // 
             // tsm_PH
             // 
+            this.tsm_PH.DropDownItems.AddRange(new global::System.Windows.Forms.ToolStripItem[] { this.safeModeToolStripMenuItem });
             this.tsm_PH.Name = ("tsm_PH");
-            this.tsm_PH.Size = (new global::System.Drawing.Size(86, 20));
-            this.tsm_PH.Text = ("Place Holder");
+            this.tsm_PH.Size = (new global::System.Drawing.Size(61, 20));
+            this.tsm_PH.Text = ("Settings");
+            // 
+            // safeModeToolStripMenuItem
+            // 
+            this.safeModeToolStripMenuItem.Name = ("safeModeToolStripMenuItem");
+            this.safeModeToolStripMenuItem.Size = (new global::System.Drawing.Size(175, 22));
+            this.safeModeToolStripMenuItem.Text = ("Safe Mode Enabled");
+            this.safeModeToolStripMenuItem.Click += (this.safeModeToolStripMenuItem_Click);
             // 
             // tsm_Options
             // 
@@ -1153,16 +1189,6 @@
             // 
             this.levelsLinesBindingSource.DataSource = (typeof(global::DR2OTR_Randomizer.Resources.LevelsLines));
             // 
-            // pb_PHTest
-            // 
-            this.pb_PHTest.Image = (global::DR2OTR_Randomizer.Properties.Resources.PH_TestImage);
-            this.pb_PHTest.Location = (new global::System.Drawing.Point(353, 33));
-            this.pb_PHTest.Name = ("pb_PHTest");
-            this.pb_PHTest.Size = (new global::System.Drawing.Size(359, 124));
-            this.pb_PHTest.SizeMode = (global::System.Windows.Forms.PictureBoxSizeMode.CenterImage);
-            this.pb_PHTest.TabIndex = (20);
-            this.pb_PHTest.TabStop = (false);
-            // 
             // tc_TabWindows
             // 
             this.tc_TabWindows.Controls.Add(this.tp_WItemRandom);
@@ -1176,12 +1202,10 @@
             // tp_WItemRandom
             // 
             this.tp_WItemRandom.Controls.Add(this.tb_ItemsSearch);
-            this.tp_WItemRandom.Controls.Add(this.tb_TestBox);
             this.tp_WItemRandom.Controls.Add(this.b_Randomise);
             this.tp_WItemRandom.Controls.Add(this.b_DeselectAll);
             this.tp_WItemRandom.Controls.Add(this.b_ToggleAll);
             this.tp_WItemRandom.Controls.Add(this.tc_Items);
-            this.tp_WItemRandom.Controls.Add(this.pb_PHTest);
             this.tp_WItemRandom.Location = (new global::System.Drawing.Point(4, 24));
             this.tp_WItemRandom.Name = ("tp_WItemRandom");
             this.tp_WItemRandom.Padding = (new global::System.Windows.Forms.Padding(3));
@@ -1192,24 +1216,14 @@
             // 
             // tb_ItemsSearch
             // 
-            this.tb_ItemsSearch.Location = (new global::System.Drawing.Point(353, 6));
+            this.tb_ItemsSearch.CausesValidation = (false);
+            this.tb_ItemsSearch.Location = (new global::System.Drawing.Point(353, 30));
             this.tb_ItemsSearch.Name = ("tb_ItemsSearch");
+            this.tb_ItemsSearch.PlaceholderText = ("Search All");
             this.tb_ItemsSearch.Size = (new global::System.Drawing.Size(359, 23));
             this.tb_ItemsSearch.TabIndex = (27);
             this.tb_ItemsSearch.Click += (this.tb_ItemsSearch_Click);
             this.tb_ItemsSearch.TextChanged += (this.tb_ItemsSearch_TextChanged);
-            // 
-            // tb_TestBox
-            // 
-            this.tb_TestBox.BorderStyle = (global::System.Windows.Forms.BorderStyle.None);
-            this.tb_TestBox.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
-            this.tb_TestBox.Location = (new global::System.Drawing.Point(353, 163));
-            this.tb_TestBox.Multiline = (true);
-            this.tb_TestBox.Name = ("tb_TestBox");
-            this.tb_TestBox.Size = (new global::System.Drawing.Size(359, 50));
-            this.tb_TestBox.TabIndex = (26);
-            this.tb_TestBox.Text = ("This is will have info about the current selected item in it. For now it is being used as a place holder.");
-            this.tb_TestBox.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
             // 
             // b_Randomise
             // 
@@ -1254,6 +1268,7 @@
             this.tp_WitemsStats.TabIndex = (1);
             this.tp_WitemsStats.Text = ("Items Stats");
             this.tp_WitemsStats.UseVisualStyleBackColor = (true);
+            this.tp_WitemsStats.Click += (this.tp_WitemsStats_Click);
             // 
             // bt_IS_CheckAllActiveTab
             // 
@@ -1284,15 +1299,17 @@
             this.tc_itemStats.Controls.Add(this.tp_ExplosivesSpray);
             this.tc_itemStats.Controls.Add(this.tp_FoodDamage);
             this.tc_itemStats.Controls.Add(this.tp_UnstableStats);
-            this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 51));
+            this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 50));
             this.tc_itemStats.Name = ("tc_itemStats");
             this.tc_itemStats.SelectedIndex = (0);
             this.tc_itemStats.Size = (new global::System.Drawing.Size(706, 415));
             this.tc_itemStats.TabIndex = (1);
+            this.tc_itemStats.Click += (this.tc_itemStats_SelectedTab);
             // 
             // tp_VehicleStats
             // 
             this.tp_VehicleStats.AutoScroll = (true);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EjectSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_RotateSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_MaxRotationSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_MaxRideSpeed);
@@ -1316,6 +1333,79 @@
             this.tp_VehicleStats.Text = ("Vehicle Stats");
             this.tp_VehicleStats.UseVisualStyleBackColor = (true);
             // 
+            // gb_V_EjectSpeed
+            // 
+            this.gb_V_EjectSpeed.Controls.Add(this.l_V_EjectSpeed_Dec);
+            this.gb_V_EjectSpeed.Controls.Add(this.l_V_EjectSpeed_Max);
+            this.gb_V_EjectSpeed.Controls.Add(this.nud_V_EjectSpeed_Max);
+            this.gb_V_EjectSpeed.Controls.Add(this.l_V_EjectSpeed_Min);
+            this.gb_V_EjectSpeed.Controls.Add(this.nud_V_EjectSpeed_Min);
+            this.gb_V_EjectSpeed.Controls.Add(this.cb_V_EjectSpeed);
+            this.gb_V_EjectSpeed.Location = (new global::System.Drawing.Point(3, 910));
+            this.gb_V_EjectSpeed.Name = ("gb_V_EjectSpeed");
+            this.gb_V_EjectSpeed.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EjectSpeed.TabIndex = (20);
+            this.gb_V_EjectSpeed.TabStop = (false);
+            this.gb_V_EjectSpeed.Tag = ("EjectSpeed ");
+            // 
+            // l_V_EjectSpeed_Dec
+            // 
+            this.l_V_EjectSpeed_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EjectSpeed_Dec.Name = ("l_V_EjectSpeed_Dec");
+            this.l_V_EjectSpeed_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EjectSpeed_Dec.TabIndex = (7);
+            this.l_V_EjectSpeed_Dec.Text = ("The requied speed to be knocked off when hitting a wall or object.");
+            this.l_V_EjectSpeed_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_EjectSpeed_Max
+            // 
+            this.l_V_EjectSpeed_Max.AutoSize = (true);
+            this.l_V_EjectSpeed_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EjectSpeed_Max.Name = ("l_V_EjectSpeed_Max");
+            this.l_V_EjectSpeed_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EjectSpeed_Max.TabIndex = (4);
+            this.l_V_EjectSpeed_Max.Text = ("Maximum:");
+            // 
+            // nud_V_EjectSpeed_Max
+            // 
+            this.nud_V_EjectSpeed_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EjectSpeed_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EjectSpeed_Max.Name = ("nud_V_EjectSpeed_Max");
+            this.nud_V_EjectSpeed_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EjectSpeed_Max.TabIndex = (3);
+            this.nud_V_EjectSpeed_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EjectSpeed_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
+            // 
+            // l_V_EjectSpeed_Min
+            // 
+            this.l_V_EjectSpeed_Min.AutoSize = (true);
+            this.l_V_EjectSpeed_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EjectSpeed_Min.Name = ("l_V_EjectSpeed_Min");
+            this.l_V_EjectSpeed_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EjectSpeed_Min.TabIndex = (2);
+            this.l_V_EjectSpeed_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EjectSpeed_Min
+            // 
+            this.nud_V_EjectSpeed_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EjectSpeed_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EjectSpeed_Min.Name = ("nud_V_EjectSpeed_Min");
+            this.nud_V_EjectSpeed_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EjectSpeed_Min.TabIndex = (1);
+            this.nud_V_EjectSpeed_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EjectSpeed_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_V_EjectSpeed
+            // 
+            this.cb_V_EjectSpeed.AutoSize = (true);
+            this.cb_V_EjectSpeed.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EjectSpeed.Name = ("cb_V_EjectSpeed");
+            this.cb_V_EjectSpeed.Size = (new global::System.Drawing.Size(148, 19));
+            this.cb_V_EjectSpeed.TabIndex = (0);
+            this.cb_V_EjectSpeed.Text = ("Skateboard Eject Speed");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EjectSpeed, "The average defualt is: 1");
+            this.cb_V_EjectSpeed.UseVisualStyleBackColor = (true);
+            // 
             // gb_V_RotateSpeed
             // 
             this.gb_V_RotateSpeed.Controls.Add(this.l_V_RotateSpeed_Dec);
@@ -1329,7 +1419,7 @@
             this.gb_V_RotateSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_RotateSpeed.TabIndex = (19);
             this.gb_V_RotateSpeed.TabStop = (false);
-            this.gb_V_RotateSpeed.Tag = ("RotationSpeed");
+            this.gb_V_RotateSpeed.Tag = ("\tRotationSpeed");
             // 
             // l_V_RotateSpeed_Dec
             // 
@@ -1402,7 +1492,7 @@
             this.gb_V_MaxRotationSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_MaxRotationSpeed.TabIndex = (18);
             this.gb_V_MaxRotationSpeed.TabStop = (false);
-            this.gb_V_MaxRotationSpeed.Tag = ("MaxRotationSpeed");
+            this.gb_V_MaxRotationSpeed.Tag = ("\tMaxRotationSpeed");
             // 
             // l_V_MaxRotationSpeed_Dec
             // 
@@ -1475,7 +1565,7 @@
             this.gb_V_MaxRideSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_MaxRideSpeed.TabIndex = (17);
             this.gb_V_MaxRideSpeed.TabStop = (false);
-            this.gb_V_MaxRideSpeed.Tag = ("MaxRideSpeed");
+            this.gb_V_MaxRideSpeed.Tag = ("\tMaxRideSpeed");
             // 
             // l_V_MaxRideSpeed_Dec
             // 
@@ -1548,7 +1638,7 @@
             this.gb_V_InitialSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_InitialSpeed.TabIndex = (16);
             this.gb_V_InitialSpeed.TabStop = (false);
-            this.gb_V_InitialSpeed.Tag = ("InitialSpeed");
+            this.gb_V_InitialSpeed.Tag = ("\tInitialSpeed");
             // 
             // l_V_InitialSpeed_Dec
             // 
@@ -1621,7 +1711,7 @@
             this.gb_V_ExtraTorque.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_ExtraTorque.TabIndex = (15);
             this.gb_V_ExtraTorque.TabStop = (false);
-            this.gb_V_ExtraTorque.Tag = ("ExtraTorqueFactor");
+            this.gb_V_ExtraTorque.Tag = ("\tExtraTorqueFactor");
             // 
             // l_V_ExtraTorque_Dec
             // 
@@ -1694,7 +1784,7 @@
             this.gb_V_TopSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_TopSpeed.TabIndex = (14);
             this.gb_V_TopSpeed.TabStop = (false);
-            this.gb_V_TopSpeed.Tag = ("VehicleTopSpeed");
+            this.gb_V_TopSpeed.Tag = ("\tVehicleTopSpeed");
             // 
             // l_V_TopSpeed_Dec
             // 
@@ -1767,7 +1857,7 @@
             this.gb_V_MVSEP.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_MVSEP.TabIndex = (13);
             this.gb_V_MVSEP.TabStop = (false);
-            this.gb_V_MVSEP.Tag = ("MinVehicleSpeedToEjectPlayer");
+            this.gb_V_MVSEP.Tag = ("\tMinVehicleSpeedToEjectPlayer");
             // 
             // l_V_MVSEP_Dec
             // 
@@ -1840,7 +1930,7 @@
             this.gb_V_MinVSWE.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_MinVSWE.TabIndex = (12);
             this.gb_V_MinVSWE.TabStop = (false);
-            this.gb_V_MinVSWE.Tag = ("MinVehicleSpeedForWheeliesAndEndos");
+            this.gb_V_MinVSWE.Tag = ("\tMinVehicleSpeedForWheeliesAndEndos");
             // 
             // l_V_MinVSWE_Dec
             // 
@@ -1913,7 +2003,7 @@
             this.gb_V_ETMinRPM.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_ETMinRPM.TabIndex = (11);
             this.gb_V_ETMinRPM.TabStop = (false);
-            this.gb_V_ETMinRPM.Tag = ("Engine_TorqueFactorAtMinRPM");
+            this.gb_V_ETMinRPM.Tag = ("\tEngine_TorqueFactorAtMinRPM");
             // 
             // l_V_ETMinRPM_Dec
             // 
@@ -1986,7 +2076,7 @@
             this.gb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_ETFMaxRPM.TabIndex = (10);
             this.gb_V_ETFMaxRPM.TabStop = (false);
-            this.gb_V_ETFMaxRPM.Tag = ("Engine_TorqueFactorAtMaxRPM");
+            this.gb_V_ETFMaxRPM.Tag = ("\tEngine_TorqueFactorAtMaxRPM");
             // 
             // l_V_ETFMaxRPM_Dec
             // 
@@ -2059,7 +2149,7 @@
             this.gb_V_EORPM.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_EORPM.TabIndex = (9);
             this.gb_V_EORPM.TabStop = (false);
-            this.gb_V_EORPM.Tag = ("Engine_OptRPM");
+            this.gb_V_EORPM.Tag = ("\tEngine_OptRPM");
             // 
             // l_V_EORPM_Dec
             // 
@@ -2132,7 +2222,7 @@
             this.gb_V_EMinRPM.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_EMinRPM.TabIndex = (9);
             this.gb_V_EMinRPM.TabStop = (false);
-            this.gb_V_EMinRPM.Tag = ("Engine_MinRPM");
+            this.gb_V_EMinRPM.Tag = ("\tEngine_MinRPM");
             // 
             // l_V_EMinRPM_Dec
             // 
@@ -2205,7 +2295,7 @@
             this.gb_V_EMT.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_EMT.TabIndex = (8);
             this.gb_V_EMT.TabStop = (false);
-            this.gb_V_EMT.Tag = ("Engine_MaxTorque");
+            this.gb_V_EMT.Tag = ("\tEngine_MaxTorque");
             // 
             // l_V_EMT_Dec
             // 
@@ -2278,7 +2368,7 @@
             this.gb_V_EMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_V_EMaxRPM.TabIndex = (3);
             this.gb_V_EMaxRPM.TabStop = (false);
-            this.gb_V_EMaxRPM.Tag = ("Engine_MaxRPM");
+            this.gb_V_EMaxRPM.Tag = ("\tEngine_MaxRPM");
             // 
             // l_V_EMaxRPM_Dec
             // 
@@ -2351,7 +2441,7 @@
             this.gb_AirDensity.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_AirDensity.TabIndex = (2);
             this.gb_AirDensity.TabStop = (false);
-            this.gb_AirDensity.Tag = ("AirDensity");
+            this.gb_AirDensity.Tag = ("\tAirDensity");
             // 
             // l_V_AD_Dec
             // 
@@ -2441,7 +2531,7 @@
             this.gb_NPC_SURV_PerKMH.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_SURV_PerKMH.TabIndex = (25);
             this.gb_NPC_SURV_PerKMH.TabStop = (false);
-            this.gb_NPC_SURV_PerKMH.Tag = ("DamageSURV_PerKMH");
+            this.gb_NPC_SURV_PerKMH.Tag = ("\tDamageSURV_PerKMH");
             // 
             // l_NPC_SURV_PerKMH_Dec
             // 
@@ -2515,7 +2605,7 @@
             this.gb_NPC_MinSurvSpeed.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_MinSurvSpeed.TabIndex = (23);
             this.gb_NPC_MinSurvSpeed.TabStop = (false);
-            this.gb_NPC_MinSurvSpeed.Tag = ("DamageSURV_MinSpeed");
+            this.gb_NPC_MinSurvSpeed.Tag = ("\tDamageSURV_MinSpeed");
             // 
             // l_NPC_MinSurvSpeed_Dec
             // 
@@ -2589,7 +2679,7 @@
             this.gb_NPC_Max_PP.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_Max_PP.TabIndex = (24);
             this.gb_NPC_Max_PP.TabStop = (false);
-            this.gb_NPC_Max_PP.Tag = ("Max_pp");
+            this.gb_NPC_Max_PP.Tag = ("\tMax_pp");
             // 
             // l_NPC_Max_PP_Dec
             // 
@@ -2663,7 +2753,7 @@
             this.gb_NPC_HealthAmount.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_HealthAmount.TabIndex = (23);
             this.gb_NPC_HealthAmount.TabStop = (false);
-            this.gb_NPC_HealthAmount.Tag = ("HealthAmount");
+            this.gb_NPC_HealthAmount.Tag = ("\tHealthAmount");
             // 
             // l_NPC_HealthAmount_Dec
             // 
@@ -2737,7 +2827,7 @@
             this.gb_NPC_DamPerKMH.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_DamPerKMH.TabIndex = (22);
             this.gb_NPC_DamPerKMH.TabStop = (false);
-            this.gb_NPC_DamPerKMH.Tag = ("DamageBOSS_PerKMH");
+            this.gb_NPC_DamPerKMH.Tag = ("\tDamageBOSS_PerKMH");
             // 
             // l_NPC_DamPerKMH_Dec
             // 
@@ -2811,7 +2901,7 @@
             this.gb_NPC_MSDBoss.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_MSDBoss.TabIndex = (21);
             this.gb_NPC_MSDBoss.TabStop = (false);
-            this.gb_NPC_MSDBoss.Tag = ("DamageBOSS_MinSpeed");
+            this.gb_NPC_MSDBoss.Tag = ("\tDamageBOSS_MinSpeed");
             // 
             // l_NPC_MSDBoss_Dec
             // 
@@ -2885,7 +2975,7 @@
             this.gb_NPC_FlatBossDam.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_NPC_FlatBossDam.TabIndex = (20);
             this.gb_NPC_FlatBossDam.TabStop = (false);
-            this.gb_NPC_FlatBossDam.Tag = ("DamageBOSS_Flat");
+            this.gb_NPC_FlatBossDam.Tag = ("\tDamageBOSS_Flat");
             // 
             // l_NPC_FlatBoss_Dec
             // 
@@ -2974,7 +3064,7 @@
             this.gb_FA_MaxBurst.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FA_MaxBurst.TabIndex = (25);
             this.gb_FA_MaxBurst.TabStop = (false);
-            this.gb_FA_MaxBurst.Tag = ("MaxBurstBulletCount");
+            this.gb_FA_MaxBurst.Tag = ("\tMaxBurstBulletCount");
             // 
             // l_FA_MaxBurst_Dec
             // 
@@ -3048,7 +3138,7 @@
             this.gb_FA_NumBullets.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FA_NumBullets.TabIndex = (24);
             this.gb_FA_NumBullets.TabStop = (false);
-            this.gb_FA_NumBullets.Tag = ("NumPelletsPerShot");
+            this.gb_FA_NumBullets.Tag = ("\tNumPelletsPerShot");
             // 
             // l_FA_NumBullets_Dec
             // 
@@ -3122,7 +3212,7 @@
             this.gb_FA_BulletRange.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FA_BulletRange.TabIndex = (23);
             this.gb_FA_BulletRange.TabStop = (false);
-            this.gb_FA_BulletRange.Tag = ("MaxBulletDistance");
+            this.gb_FA_BulletRange.Tag = ("\tMaxBulletDistance");
             // 
             // l_FA_BulletRange_Dec
             // 
@@ -3196,7 +3286,7 @@
             this.gb_FA_BaseBullDam.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FA_BaseBullDam.TabIndex = (22);
             this.gb_FA_BaseBullDam.TabStop = (false);
-            this.gb_FA_BaseBullDam.Tag = ("BaseBulletDamage");
+            this.gb_FA_BaseBullDam.Tag = ("\tBaseBulletDamage");
             // 
             // l_FA_BaseBullDam_Dec
             // 
@@ -3270,7 +3360,7 @@
             this.gb_FA_FireRate.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FA_FireRate.TabIndex = (21);
             this.gb_FA_FireRate.TabStop = (false);
-            this.gb_FA_FireRate.Tag = ("FiringRate");
+            this.gb_FA_FireRate.Tag = ("\tFiringRate");
             // 
             // l_FA_FireRate_Dec
             // 
@@ -3334,6 +3424,8 @@
             // tp_WorldStats
             // 
             this.tp_WorldStats.AutoScroll = (true);
+            this.tp_WorldStats.Controls.Add(this.gb_WS_WepPP);
+            this.tp_WorldStats.Controls.Add(this.gb_WS_PPAmount);
             this.tp_WorldStats.Controls.Add(this.gb_W_ThrowForce);
             this.tp_WorldStats.Controls.Add(this.gb_W_Durability);
             this.tp_WorldStats.Controls.Add(this.gb_W_PP_Multi);
@@ -3352,6 +3444,154 @@
             this.tp_WorldStats.Text = ("World Stats");
             this.tp_WorldStats.UseVisualStyleBackColor = (true);
             // 
+            // gb_WS_WepPP
+            // 
+            this.gb_WS_WepPP.Controls.Add(this.l_WS_WepPP_Dec);
+            this.gb_WS_WepPP.Controls.Add(this.l_WS_WepPP_Max);
+            this.gb_WS_WepPP.Controls.Add(this.nud_WS_WepPP_Max);
+            this.gb_WS_WepPP.Controls.Add(this.l_WS_WepPP_Min);
+            this.gb_WS_WepPP.Controls.Add(this.nud_WS_WepPP_Min);
+            this.gb_WS_WepPP.Controls.Add(this.cb_WS_WepPP);
+            this.gb_WS_WepPP.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_WS_WepPP.Name = ("gb_WS_WepPP");
+            this.gb_WS_WepPP.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_WS_WepPP.TabIndex = (27);
+            this.gb_WS_WepPP.TabStop = (false);
+            this.gb_WS_WepPP.Tag = ("\tPrestigePointsAwarded");
+            // 
+            // l_WS_WepPP_Dec
+            // 
+            this.l_WS_WepPP_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_WS_WepPP_Dec.Name = ("l_WS_WepPP_Dec");
+            this.l_WS_WepPP_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_WS_WepPP_Dec.TabIndex = (7);
+            this.l_WS_WepPP_Dec.Text = ("The amount of PP awarded for killing zombies with weapons.");
+            this.l_WS_WepPP_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_WS_WepPP_Max
+            // 
+            this.l_WS_WepPP_Max.AutoSize = (true);
+            this.l_WS_WepPP_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_WS_WepPP_Max.Name = ("l_WS_WepPP_Max");
+            this.l_WS_WepPP_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_WS_WepPP_Max.TabIndex = (4);
+            this.l_WS_WepPP_Max.Text = ("Maximum:");
+            // 
+            // nud_WS_WepPP_Max
+            // 
+            this.nud_WS_WepPP_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_WS_WepPP_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_WS_WepPP_Max.Name = ("nud_WS_WepPP_Max");
+            this.nud_WS_WepPP_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_WS_WepPP_Max.TabIndex = (3);
+            this.nud_WS_WepPP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_WS_WepPP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 5000, 0, 0, 0 }));
+            // 
+            // l_WS_WepPP_Min
+            // 
+            this.l_WS_WepPP_Min.AutoSize = (true);
+            this.l_WS_WepPP_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_WS_WepPP_Min.Name = ("l_WS_WepPP_Min");
+            this.l_WS_WepPP_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_WS_WepPP_Min.TabIndex = (2);
+            this.l_WS_WepPP_Min.Text = ("Minimum:");
+            // 
+            // nud_WS_WepPP_Min
+            // 
+            this.nud_WS_WepPP_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_WS_WepPP_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_WS_WepPP_Min.Name = ("nud_WS_WepPP_Min");
+            this.nud_WS_WepPP_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_WS_WepPP_Min.TabIndex = (1);
+            this.nud_WS_WepPP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_WS_WepPP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_WS_WepPP
+            // 
+            this.cb_WS_WepPP.AutoSize = (true);
+            this.cb_WS_WepPP.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_WS_WepPP.Name = ("cb_WS_WepPP");
+            this.cb_WS_WepPP.Size = (new global::System.Drawing.Size(131, 19));
+            this.cb_WS_WepPP.TabIndex = (0);
+            this.cb_WS_WepPP.Text = ("PP For Weapon Kills");
+            this.cb_WS_WepPP.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_WS_WepPP, "The average defualt is: 120");
+            this.cb_WS_WepPP.UseVisualStyleBackColor = (true);
+            // 
+            // gb_WS_PPAmount
+            // 
+            this.gb_WS_PPAmount.Controls.Add(this.l_WS_PPAmount_Dec);
+            this.gb_WS_PPAmount.Controls.Add(this.l_WS_PPAmount_Max);
+            this.gb_WS_PPAmount.Controls.Add(this.nud_WS_PPAmount_Max);
+            this.gb_WS_PPAmount.Controls.Add(this.l_WS_PPAmount_Min);
+            this.gb_WS_PPAmount.Controls.Add(this.nud_WS_PPAmount_Min);
+            this.gb_WS_PPAmount.Controls.Add(this.cb_WS_PPAmount);
+            this.gb_WS_PPAmount.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_WS_PPAmount.Name = ("gb_WS_PPAmount");
+            this.gb_WS_PPAmount.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_WS_PPAmount.TabIndex = (26);
+            this.gb_WS_PPAmount.TabStop = (false);
+            this.gb_WS_PPAmount.Tag = ("\tPPAmount ");
+            // 
+            // l_WS_PPAmount_Dec
+            // 
+            this.l_WS_PPAmount_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_WS_PPAmount_Dec.Name = ("l_WS_PPAmount_Dec");
+            this.l_WS_PPAmount_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_WS_PPAmount_Dec.TabIndex = (7);
+            this.l_WS_PPAmount_Dec.Text = ("The amount of PP awarded for taking pictures of genres with your camera.");
+            this.l_WS_PPAmount_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_WS_PPAmount_Max
+            // 
+            this.l_WS_PPAmount_Max.AutoSize = (true);
+            this.l_WS_PPAmount_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_WS_PPAmount_Max.Name = ("l_WS_PPAmount_Max");
+            this.l_WS_PPAmount_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_WS_PPAmount_Max.TabIndex = (4);
+            this.l_WS_PPAmount_Max.Text = ("Maximum:");
+            // 
+            // nud_WS_PPAmount_Max
+            // 
+            this.nud_WS_PPAmount_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_WS_PPAmount_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_WS_PPAmount_Max.Name = ("nud_WS_PPAmount_Max");
+            this.nud_WS_PPAmount_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_WS_PPAmount_Max.TabIndex = (3);
+            this.nud_WS_PPAmount_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_WS_PPAmount_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 2000, 0, 0, 0 }));
+            // 
+            // l_WS_PPAmount_Min
+            // 
+            this.l_WS_PPAmount_Min.AutoSize = (true);
+            this.l_WS_PPAmount_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_WS_PPAmount_Min.Name = ("l_WS_PPAmount_Min");
+            this.l_WS_PPAmount_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_WS_PPAmount_Min.TabIndex = (2);
+            this.l_WS_PPAmount_Min.Text = ("Minimum:");
+            // 
+            // nud_WS_PPAmount_Min
+            // 
+            this.nud_WS_PPAmount_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_WS_PPAmount_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_WS_PPAmount_Min.Name = ("nud_WS_PPAmount_Min");
+            this.nud_WS_PPAmount_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_WS_PPAmount_Min.TabIndex = (1);
+            this.nud_WS_PPAmount_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_WS_PPAmount_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // cb_WS_PPAmount
+            // 
+            this.cb_WS_PPAmount.AutoSize = (true);
+            this.cb_WS_PPAmount.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_WS_PPAmount.Name = ("cb_WS_PPAmount");
+            this.cb_WS_PPAmount.Size = (new global::System.Drawing.Size(100, 19));
+            this.cb_WS_PPAmount.TabIndex = (0);
+            this.cb_WS_PPAmount.Text = ("PP For Photos");
+            this.cb_WS_PPAmount.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            this.tt_VehicleStats.SetToolTip(this.cb_WS_PPAmount, "The average defualt is: 1741");
+            this.cb_WS_PPAmount.UseVisualStyleBackColor = (true);
+            // 
             // gb_W_ThrowForce
             // 
             this.gb_W_ThrowForce.Controls.Add(this.l_W_ThrowForce_Dec);
@@ -3360,12 +3600,12 @@
             this.gb_W_ThrowForce.Controls.Add(this.l_W_ThrowForce_Min);
             this.gb_W_ThrowForce.Controls.Add(this.nud_W_ThrowForce_Min);
             this.gb_W_ThrowForce.Controls.Add(this.cb_W_ThrowForce);
-            this.gb_W_ThrowForce.Location = (new global::System.Drawing.Point(6, 490));
+            this.gb_W_ThrowForce.Location = (new global::System.Drawing.Point(6, 670));
             this.gb_W_ThrowForce.Name = ("gb_W_ThrowForce");
             this.gb_W_ThrowForce.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_ThrowForce.TabIndex = (31);
             this.gb_W_ThrowForce.TabStop = (false);
-            this.gb_W_ThrowForce.Tag = ("ThrowForce");
+            this.gb_W_ThrowForce.Tag = ("\tThrowForce");
             // 
             // l_W_ThrowForce_Dec
             // 
@@ -3434,7 +3674,7 @@
             this.gb_W_Durability.Controls.Add(this.l_W_Durability_Min);
             this.gb_W_Durability.Controls.Add(this.nud_W_Durability_min);
             this.gb_W_Durability.Controls.Add(this.cb_W_Durability);
-            this.gb_W_Durability.Location = (new global::System.Drawing.Point(6, 430));
+            this.gb_W_Durability.Location = (new global::System.Drawing.Point(6, 10));
             this.gb_W_Durability.Name = ("gb_W_Durability");
             this.gb_W_Durability.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_Durability.TabIndex = (30);
@@ -3508,12 +3748,12 @@
             this.gb_W_PP_Multi.Controls.Add(this.l_W_PP_Multi_Min);
             this.gb_W_PP_Multi.Controls.Add(this.nud_W_PP_Multi_Min);
             this.gb_W_PP_Multi.Controls.Add(this.cb_W_PP_Multi);
-            this.gb_W_PP_Multi.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_W_PP_Multi.Location = (new global::System.Drawing.Point(6, 430));
             this.gb_W_PP_Multi.Name = ("gb_W_PP_Multi");
             this.gb_W_PP_Multi.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_PP_Multi.TabIndex = (29);
             this.gb_W_PP_Multi.TabStop = (false);
-            this.gb_W_PP_Multi.Tag = ("PP_Multiplier");
+            this.gb_W_PP_Multi.Tag = ("\tPP_Multiplier");
             // 
             // l_W_PP_Multi_Dec
             // 
@@ -3582,12 +3822,12 @@
             this.gb_W_PayoutCount.Controls.Add(this.l_W_PayoutCount_Min);
             this.gb_W_PayoutCount.Controls.Add(this.nud_W_PayoutCount_Min);
             this.gb_W_PayoutCount.Controls.Add(this.cb_W_PayoutCount);
-            this.gb_W_PayoutCount.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_W_PayoutCount.Location = (new global::System.Drawing.Point(6, 190));
             this.gb_W_PayoutCount.Name = ("gb_W_PayoutCount");
             this.gb_W_PayoutCount.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_PayoutCount.TabIndex = (28);
             this.gb_W_PayoutCount.TabStop = (false);
-            this.gb_W_PayoutCount.Tag = ("PayoutCount ");
+            this.gb_W_PayoutCount.Tag = ("\tPayoutCount ");
             // 
             // l_W_PayoutCount_Dec
             // 
@@ -3656,12 +3896,12 @@
             this.gb_W_Payout.Controls.Add(this.l_W_Payout_Min);
             this.gb_W_Payout.Controls.Add(this.nud_W_Payout_Min);
             this.gb_W_Payout.Controls.Add(this.cb_W_Payout);
-            this.gb_W_Payout.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_W_Payout.Location = (new global::System.Drawing.Point(6, 130));
             this.gb_W_Payout.Name = ("gb_W_Payout");
             this.gb_W_Payout.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_Payout.TabIndex = (27);
             this.gb_W_Payout.TabStop = (false);
-            this.gb_W_Payout.Tag = ("PayoutAmount ");
+            this.gb_W_Payout.Tag = ("\tPayoutAmount ");
             // 
             // l_W_Payout_Dec
             // 
@@ -3730,7 +3970,7 @@
             this.gb_W_Amount.Controls.Add(this.l_W_Amount_Min);
             this.gb_W_Amount.Controls.Add(this.nud_W_Amount_Min);
             this.gb_W_Amount.Controls.Add(this.cb_W_Amount);
-            this.gb_W_Amount.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_W_Amount.Location = (new global::System.Drawing.Point(6, 70));
             this.gb_W_Amount.Name = ("gb_W_Amount");
             this.gb_W_Amount.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_Amount.TabIndex = (26);
@@ -3804,12 +4044,12 @@
             this.gb_W_PPAward.Controls.Add(this.l_W_PPAward_Min);
             this.gb_W_PPAward.Controls.Add(this.nud_W_PPAward_Min);
             this.gb_W_PPAward.Controls.Add(this.cb_W_PPAward);
-            this.gb_W_PPAward.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_W_PPAward.Location = (new global::System.Drawing.Point(6, 250));
             this.gb_W_PPAward.Name = ("gb_W_PPAward");
             this.gb_W_PPAward.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_PPAward.TabIndex = (25);
             this.gb_W_PPAward.TabStop = (false);
-            this.gb_W_PPAward.Tag = ("PPAward ");
+            this.gb_W_PPAward.Tag = ("\tPPAward ");
             // 
             // l_W_PPAward_Dec
             // 
@@ -3878,12 +4118,12 @@
             this.gb_W_CostHigh.Controls.Add(this.l_W_CostHigh_Min);
             this.gb_W_CostHigh.Controls.Add(this.nud_W_CostHigh_Min);
             this.gb_W_CostHigh.Controls.Add(this.cb_W_CostHigh);
-            this.gb_W_CostHigh.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_W_CostHigh.Location = (new global::System.Drawing.Point(6, 610));
             this.gb_W_CostHigh.Name = ("gb_W_CostHigh");
             this.gb_W_CostHigh.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_CostHigh.TabIndex = (24);
             this.gb_W_CostHigh.TabStop = (false);
-            this.gb_W_CostHigh.Tag = ("Cost3");
+            this.gb_W_CostHigh.Tag = ("\tCost3");
             // 
             // l_W_CostHigh_Dec
             // 
@@ -3952,12 +4192,12 @@
             this.gb_W_CostMid.Controls.Add(this.l_W_CostMid_Min);
             this.gb_W_CostMid.Controls.Add(this.nud_W_CostMid_Min);
             this.gb_W_CostMid.Controls.Add(this.cb_W_CostMid);
-            this.gb_W_CostMid.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_W_CostMid.Location = (new global::System.Drawing.Point(6, 550));
             this.gb_W_CostMid.Name = ("gb_W_CostMid");
             this.gb_W_CostMid.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_CostMid.TabIndex = (23);
             this.gb_W_CostMid.TabStop = (false);
-            this.gb_W_CostMid.Tag = ("Cost2");
+            this.gb_W_CostMid.Tag = ("\tCost2");
             // 
             // l_W_CostMid_Dec
             // 
@@ -4026,12 +4266,12 @@
             this.gb_W_CostLow.Controls.Add(this.l_W_CostLow_Min);
             this.gb_W_CostLow.Controls.Add(this.nud_W_CostLow_Min);
             this.gb_W_CostLow.Controls.Add(this.cb_W_CostLow);
-            this.gb_W_CostLow.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_W_CostLow.Location = (new global::System.Drawing.Point(6, 490));
             this.gb_W_CostLow.Name = ("gb_W_CostLow");
             this.gb_W_CostLow.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_W_CostLow.TabIndex = (22);
             this.gb_W_CostLow.TabStop = (false);
-            this.gb_W_CostLow.Tag = ("Cost ");
+            this.gb_W_CostLow.Tag = ("\tCost ");
             // 
             // l_W_CostLow_Dec
             // 
@@ -4122,7 +4362,7 @@
             this.gb_ES_ThrowablesAmmo.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_ThrowablesAmmo.TabIndex = (38);
             this.gb_ES_ThrowablesAmmo.TabStop = (false);
-            this.gb_ES_ThrowablesAmmo.Tag = ("NumberOfThrowables");
+            this.gb_ES_ThrowablesAmmo.Tag = ("\tNumberOfThrowables");
             // 
             // l_ES_ThrowablesAmmo_Dec
             // 
@@ -4196,7 +4436,7 @@
             this.gb_ES_ProjectileSpin.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_ProjectileSpin.TabIndex = (37);
             this.gb_ES_ProjectileSpin.TabStop = (false);
-            this.gb_ES_ProjectileSpin.Tag = ("PropelledSpinImpulse");
+            this.gb_ES_ProjectileSpin.Tag = ("\tPropelledSpinImpulse");
             // 
             // l_ES_ProjectileSpin_Dec
             // 
@@ -4270,7 +4510,7 @@
             this.gb_ES_ExpolsiveDelay.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_ExpolsiveDelay.TabIndex = (36);
             this.gb_ES_ExpolsiveDelay.TabStop = (false);
-            this.gb_ES_ExpolsiveDelay.Tag = ("DetonationDelay ");
+            this.gb_ES_ExpolsiveDelay.Tag = ("\tDetonationDelay ");
             // 
             // l_ES_ExpolsiveDelay_Dec
             // 
@@ -4343,7 +4583,7 @@
             this.gb_ES_MaxDamage.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_MaxDamage.TabIndex = (35);
             this.gb_ES_MaxDamage.TabStop = (false);
-            this.gb_ES_MaxDamage.Tag = ("MaxDamage");
+            this.gb_ES_MaxDamage.Tag = ("\tMaxDamage");
             // 
             // l_ES_MaxDamage_Dec
             // 
@@ -4417,7 +4657,7 @@
             this.gb_ES_ExplodeRadius.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_ExplodeRadius.TabIndex = (34);
             this.gb_ES_ExplodeRadius.TabStop = (false);
-            this.gb_ES_ExplodeRadius.Tag = ("ExplodeRadius");
+            this.gb_ES_ExplodeRadius.Tag = ("\tExplodeRadius");
             // 
             // l_ES_ExplodeRadius_Dec
             // 
@@ -4491,7 +4731,7 @@
             this.gb_ES_SprayAmmo.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_ES_SprayAmmo.TabIndex = (33);
             this.gb_ES_SprayAmmo.TabStop = (false);
-            this.gb_ES_SprayAmmo.Tag = ("SpraySupply");
+            this.gb_ES_SprayAmmo.Tag = ("\tSpraySupply");
             // 
             // l_ES_SprayAmmo_Dec
             // 
@@ -4579,7 +4819,7 @@
             this.gb_FD_MaxDperA.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FD_MaxDperA.TabIndex = (42);
             this.gb_FD_MaxDperA.TabStop = (false);
-            this.gb_FD_MaxDperA.Tag = ("MaxDamageDealtPerAttack");
+            this.gb_FD_MaxDperA.Tag = ("\tMaxDamageDealtPerAttack");
             // 
             // l_FD_MaxDperA_Dec
             // 
@@ -4653,7 +4893,7 @@
             this.gb_FD_ProjectDamage.Size = (new global::System.Drawing.Size(665, 60));
             this.gb_FD_ProjectDamage.TabIndex = (41);
             this.gb_FD_ProjectDamage.TabStop = (false);
-            this.gb_FD_ProjectDamage.Tag = ("MaxProjectileDamage");
+            this.gb_FD_ProjectDamage.Tag = ("\tMaxProjectileDamage");
             // 
             // l_FD_ProjectDamage_Dec
             // 
@@ -4917,7 +5157,7 @@
             this.gb_US_PropToThrow.Size = (new global::System.Drawing.Size(339, 70));
             this.gb_US_PropToThrow.TabIndex = (21);
             this.gb_US_PropToThrow.TabStop = (false);
-            this.gb_US_PropToThrow.Tag = ("PropToThrow");
+            this.gb_US_PropToThrow.Tag = ("\tPropToThrow");
             // 
             // cb_US_PropToThrow
             // 
@@ -5323,7 +5563,7 @@
             this.l_US_Warning_Msg.Name = ("l_US_Warning_Msg");
             this.l_US_Warning_Msg.Size = (new global::System.Drawing.Size(300, 70));
             this.l_US_Warning_Msg.TabIndex = (0);
-            this.l_US_Warning_Msg.Text = ("These setting will make the game unstable that may cause crashing/softlocking if using any of these. Its recomended to save when ever you have the chance.");
+            this.l_US_Warning_Msg.Text = ("These setting will make the game unstable that may cause crashing/softlocking or stop the game from launching. Its recomended to save when ever you have the chance.");
             this.l_US_Warning_Msg.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
             // fbd_DataFileFolder
@@ -5351,7 +5591,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
             this.FormBorderStyle = (global::System.Windows.Forms.FormBorderStyle.FixedSingle);
-            this.HelpButton = (true);
             this.MainMenuStrip = (this.menuStrip1);
             this.MaximizeBox = (false);
             this.Name = ("F_ItemRandomiser");
@@ -5380,13 +5619,16 @@
             this.tp_Vehicles.ResumeLayout(false);
             this.tp_Search.ResumeLayout(false);
             ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.pb_PHTest)).EndInit();
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
             this.tp_WitemsStats.ResumeLayout(false);
             this.tc_itemStats.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_V_EjectSpeed.ResumeLayout(false);
+            this.gb_V_EjectSpeed.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Min)).EndInit();
             this.gb_V_RotateSpeed.ResumeLayout(false);
             this.gb_V_RotateSpeed.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_RotateSpeed_Max)).EndInit();
@@ -5498,6 +5740,14 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_FA_FireRate_Min)).EndInit();
             this.tp_WorldStats.ResumeLayout(false);
+            this.gb_WS_WepPP.ResumeLayout(false);
+            this.gb_WS_WepPP.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_WepPP_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_WepPP_Min)).EndInit();
+            this.gb_WS_PPAmount.ResumeLayout(false);
+            this.gb_WS_PPAmount.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_PPAmount_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_WS_PPAmount_Min)).EndInit();
             this.gb_W_ThrowForce.ResumeLayout(false);
             this.gb_W_ThrowForce.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_W_ThrowForce_Max)).EndInit();
@@ -5652,14 +5902,12 @@
         private CheckedListBox clb_Special;
         private TabPage tp_Vehicles;
         private CheckedListBox clb_Vehicles;
-        private PictureBox pb_PHTest;
         private TabControl tc_TabWindows;
         private TabPage tp_WItemRandom;
         private TabPage tp_WitemsStats;
         private Button b_DeselectAll;
         private Button b_ToggleAll;
         private Button b_Randomise;
-        private TextBox tb_TestBox;
         private FolderBrowserDialog fbd_DataFileFolder;
         private TextBox tb_ItemsSearch;
         private TabPage tp_Search;
@@ -6052,5 +6300,27 @@
         private global::System.Windows.Forms.GroupBox gb_US_NPCItems;
         private global::System.Windows.Forms.CheckBox cb_US_NPCItems;
         private global::System.Windows.Forms.Label l_US_NPCItems_Dec;
+        private global::System.Windows.Forms.GroupBox gb_V_EjectSpeed;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_EjectSpeed;
+        private global::System.Windows.Forms.GroupBox gb_WS_PPAmount;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Dec;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Max;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Min;
+        private global::System.Windows.Forms.CheckBox cb_WS_PPAmount;
+        private global::System.Windows.Forms.GroupBox gb_WS_WepPP;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Dec;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Max;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Min;
+        private global::System.Windows.Forms.CheckBox cb_WS_WepPP;
+        private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
     }
 }

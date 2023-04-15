@@ -4,6 +4,7 @@ using DR2OTR_Randomizer.Resources;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Security.AccessControl;
 using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
@@ -11,6 +12,13 @@ namespace DR2OTR_Randomizer;
 
 public partial class F_ItemRandomiser : Form
 {
+    bool safeMode = true;
+
+    int[] unSafeLines = {
+        17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
+        19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
+        20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625, 78689, 78761, };
+
     LevelsLines levelLines = new LevelsLines();
 
     string path;
@@ -56,34 +64,6 @@ public partial class F_ItemRandomiser : Form
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
     }
-
-    string[] files =
-    {
-        "americana_casino.txt",
-        "arena_backstage.txt",
-        "atlantica_casino.txt",
-        "food_barn.txt",
-        "fortune_exterior.txt",
-        "items.txt",
-        "laboratory.txt",
-        "missions.txt",
-        "palisades.txt",
-        "rooftop_atlantica.txt",
-        "rooftop_hotel.txt",
-        "rooftop_royal.txt",
-        "rooftop_safehouse.txt",
-        "rooftop_theater.txt",
-        "rooftop_yucatan.txt",
-        "royal_flush.txt",
-        "safehouse.txt",
-        "south_plaza.txt",
-        "tape_die.txt",
-        "theme_park.txt",
-        "tkot_battle.txt",
-        "underground.txt",
-        "yucatan_casino.txt"
-    };
-
     private void Form1_Load(object sender, EventArgs e)
     {
 
@@ -120,86 +100,15 @@ public partial class F_ItemRandomiser : Form
 
     private void b_Randomise_Click(object sender, EventArgs e)
     {
-
-        bool vehiclesWarning = false;
-
-        //make a list of type check list box to store the check boxes inside of the tab control
-        List<CheckedListBox> allCheckboxes = new List<CheckedListBox>();
         //make a string list to store all the items in each of the check list boxes
         List<string> allItems = new List<string>();
-        //go though each tab page in the tab control
-        foreach (TabPage tabPage in tc_Items.TabPages)
-        {
-            if (tabPage.Controls.OfType<CheckedListBox>() != null)
-            {
-                //looks for a check list box inside of the tab page and then adds it to the check list box list
-                allCheckboxes.Add(tabPage.Controls.OfType<CheckedListBox>().First());
-            }
-        }
-        foreach (CheckedListBox item in allCheckboxes)
-        {
-            if (item.Name != "clb_SearchResults")
-            {
-                //once it has checked all of the tab pages and added all the list check boxes to the list
-                foreach (string itemName in item.CheckedItems)
-                {
-                    //look though each of the checklistbox in the list adds all items that are checked
-                    allItems.Add(itemName);
-                    if (clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
-                    {
-                        MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
-                        vehiclesWarning = true;
-                    }
-                }
-            }
-            if (item.Name == "clb_SearchResults")
-            {
-                foreach (DataRowView itemName in clb_SearchResults.CheckedItems)
-                {
-                    //Because im using a data table for the search clb i have to 
-                    //get the item name from the DataRow with the row name "Item"
-                    allItems.Add(itemName.Row["Item"].ToString());
-                }
-            }
-        }
+
+        GetItemsToRandomize(allItems);
+
         //Stop here if no items have been checked and added to the list
         if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
 
-
-        //gets the dictionary stored in the LevelLines class
-        var levels = LevelsLines.levels;
-        Random rand = new Random();
-        //goese though each of the levels in side of the dictionary
-        foreach (var level in levels)
-        {
-            foreach (string file in files)
-            {
-                //checks to see that the selected path has all the requied files
-                if (!File.Exists($"{path}\\{level.Value}"))
-                {
-                    //returns if it cant find any
-                    MessageBox.Show($"Could not find {level.Value} please check your datafile folder", "Warning");
-                    return;
-                }
-            }
-            //gets the current level file in the dictionary with the level.Value is the same as the files name
-            string[] levelFile = File.ReadAllLines($"{path}\\{level.Value}");
-            //adds all the lines inside of the current selected level to an array
-            foreach (int lines in level.Key)
-            {
-                //gets each line that needs to be changed by getting the dictionary key array witch as all the lines inside
-                int item = rand.Next(allItems.Count);
-                //changes the line by looking for the = inside of the string then
-                //rewiting all text after it with the current pick item
-                levelFile[lines - 1] =
-                    levelFile[lines - 1].Split('=')[0] + $"= {allItems[item]}";
-
-            }
-            //Writes all the lines inside of the levelfile array to the levels txt file
-            File.WriteAllLines($"{path}\\{level.Value}", levelFile);
-
-        }
-        MessageBox.Show("All levels successfully randomised with selected items", "Success");
+        RandomizeGameItems(allItems);
     }
     private void clb_SearchResults_ItemCheck(object sender, ItemCheckEventArgs e)
     {
@@ -237,10 +146,6 @@ public partial class F_ItemRandomiser : Form
         }
 
     }
-    private void tsm_Quit_Click(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
     private void tb_ItemsSearch_Click(object sender, EventArgs e)
     {
         //displays the search tab if its not already displayed and selects it
@@ -262,9 +167,18 @@ public partial class F_ItemRandomiser : Form
         {
             RandomizeItemStats(itemFile);
         }
-        
-
         MessageBox.Show("Item stats have successfully been randomized", "Success");
+    }
+    private void tc_itemStats_SelectedTab(object sender, EventArgs e)
+    {
+        if (tc_itemStats.SelectedTab.Text == "Unstable Stats")
+        {
+            bt_IS_CheckAllActiveTab.Text = "Toggle all itmes in Active tab";
+        }
+        else
+        {
+            bt_IS_CheckAllActiveTab.Text = "Toggle all stats in Active tab";
+        }
     }
 
     private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
@@ -299,6 +213,85 @@ public partial class F_ItemRandomiser : Form
             }
         }
     }
+    private void GetItemsToRandomize(List<string> allItems)
+    {
+        bool vehiclesWarning = false;
+        //make a list of type check list box to store the check boxes inside of the tab control
+        List<CheckedListBox> allCheckboxes = new List<CheckedListBox>();
+        //go though each tab page in the tab control
+        foreach (TabPage tabPage in tc_Items.TabPages)
+        {
+            if (tabPage.Controls.OfType<CheckedListBox>() != null)
+            {
+                //looks for a check list box inside of the tab page and then adds it to the check list box list
+                allCheckboxes.Add(tabPage.Controls.OfType<CheckedListBox>().First());
+            }
+        }
+        foreach (CheckedListBox item in allCheckboxes)
+        {
+            if (item.Name != "clb_SearchResults")
+            {
+                //once it has checked all of the tab pages and added all the list check boxes to the list
+                foreach (string itemName in item.CheckedItems)
+                {
+                    //look though each of the checklistbox in the list adds all items that are checked
+                    allItems.Add(itemName);
+                    if (clb_Vehicles.CheckedItems.Count >= 1 && !vehiclesWarning)
+                    {
+                        MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
+                        vehiclesWarning = true;
+                    }
+                }
+            }
+            if (item.Name == "clb_SearchResults")
+            {
+                foreach (DataRowView itemName in clb_SearchResults.CheckedItems)
+                {
+                    //Because im using a data table for the search clb i have to 
+                    //get the item name from the DataRow with the row name "Item"
+                    allItems.Add(itemName.Row["Item"].ToString());
+                }
+            }
+        }
+    }
+    private void RandomizeGameItems(List<string> allItems)
+    {
+        //gets the dictionary stored in the LevelLines class
+        var levels = LevelsLines.levels;
+        Random rand = new Random();
+        //goese though each of the levels in side of the dictionary
+        foreach (var level in levels)
+        {
+            //checks to see that the selected path has all the requied files
+            if (!File.Exists($"{path}\\{level.Value}"))
+            {
+                //returns if it cant find any
+                MessageBox.Show($"Could not find {level.Value} please check your datafile folder", "Warning");
+                return;
+            }
+            //gets the current level file in the dictionary with the level.Value is the same as the files name
+            string[] levelFile = File.ReadAllLines($"{path}\\{level.Value}");
+            //adds all the lines inside of the current selected level to an array
+            foreach (int lines in level.Key)
+            {
+                if (safeMode && level.Value == "palisades.txt")
+                {
+                    continue;
+                }
+                //gets each line that needs to be changed by getting the dictionary key array witch as all the lines inside
+                int item = rand.Next(allItems.Count);
+                //changes the line by looking for the = inside of the string then
+                //rewiting all text after it with the current pick item
+                levelFile[lines - 1] =
+                    levelFile[lines - 1].Split('=')[0] + $"= {allItems[item]}";
+
+            }
+            //Writes all the lines inside of the levelfile array to the levels txt file
+            File.WriteAllLines($"{path}\\{level.Value}", levelFile);
+
+        }
+        MessageBox.Show("All levels successfully randomised with selected items", "Success");
+    }
     private void RandomizeItemStats(string[] itemFile)
     {
 
@@ -326,6 +319,9 @@ public partial class F_ItemRandomiser : Form
                 {
                     if (itemFile[i].Contains(box.Tag.ToString()))
                     {
+                        if (unSafeLines.Contains(i + 1) && safeMode)
+                        { continue; }
+                        Debug.WriteLine("this was called this many times");
                         int randStatNumb = rand.Next(numbs[0], numbs[1]);
                         itemFile[i] =
                             itemFile[i].Split('=')[0] + $"= \"{randStatNumb}\"";
@@ -334,6 +330,7 @@ public partial class F_ItemRandomiser : Form
             }
         }
         File.WriteAllLines($"{path}\\items.txt", itemFile);
+        allGroupBoxes.Clear();
     }
 
     private void RandomizeUnstableStats(string[] itemFile)
@@ -361,7 +358,7 @@ public partial class F_ItemRandomiser : Form
                     allItems.Add(item);
                 }
             }
-            for(int i = 0;i < itemFile.Length;i++)
+            for (int i = 0; i < itemFile.Length; i++)
             {
                 if (itemFile[i].Contains(gb_US_PropToThrow.Tag.ToString()))
                 {
@@ -372,5 +369,21 @@ public partial class F_ItemRandomiser : Form
             }
         }
         File.WriteAllLines($"{path}\\items.txt", itemFile);
+    }
+    private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
+        safeMode = !safeMode;
+        if (safeMode) { safeModeToolStripMenuItem.Text = "Safe Mode Enabled"; }
+        else { safeModeToolStripMenuItem.Text = "Safe Mode Disabled"; }
+    }
+    private void tsm_Quit_Click(object sender, EventArgs e)
+    {
+        Application.Exit();
+    }
+
+    private void tp_WitemsStats_Click(object sender, EventArgs e)
+    {
+
     }
 }
