@@ -4,6 +4,7 @@ using DR2OTR_Randomizer.Resources;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Linq.Expressions;
 using System.Security.AccessControl;
 using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
@@ -25,17 +26,22 @@ public partial class F_ItemRandomiser : Form
     public F_ItemRandomiser()
     {
         InitializeComponent();
-        //use this to catch if the Allitems text file is missingq
-        if ($"{Application.StartupPath}\\Allitems.txt" == null)
+        //use this to catch if the Allitems or npcmodels file is missing
+        try
+        {
+            File.OpenRead($"{Application.StartupPath}\\Resources\\Allitems.txt");
+            File.OpenRead($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
+        }
+        catch (FileNotFoundException e)
         {
             MessageBox.Show
-            ("The \"Allitems.txt\" is missing please make sure it " +
-            "is in the same location as this programs exe "
+            ($"{e.FileName} \nIs missing or as been renamed."
             , "WARNING");
             Process.GetCurrentProcess().Kill();
         }
+        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Resources\\Allitems.txt");
+        //string[] npcModels = File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
 
-        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Allitems.txt");
         //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
         //Create a new data table to put inside the check list box
@@ -155,19 +161,44 @@ public partial class F_ItemRandomiser : Form
             tc_Items.SelectTab(tp_Search);
         }
     }
+    private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
+        safeMode = !safeMode;
+        if (safeMode) { safeModeToolStripMenuItem.Text = "Safe Mode Enabled"; }
+        else { safeModeToolStripMenuItem.Text = "Safe Mode Disabled"; }
+    }
     private void bt_ItenStatsSet_Click(object sender, EventArgs e)
     {
         if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
         if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
         {
-            RandomizeUnstableStats(itemFile);
+            RandomizeUnstableStats(itemFile, missionFile);
         }
         else
         {
             RandomizeItemStats(itemFile);
         }
         MessageBox.Show("Item stats have successfully been randomized", "Success");
+    }
+    private void bt_NPC_Model_Randomizer_Click(object sender, EventArgs e)
+    {
+        if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
+        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        var confirmResults = MessageBox.Show
+            ("This will change all NPC models apart from TK and Snow Flake." +
+            "\n\n\tAre you sure you want to change NPC models?", "Warning", MessageBoxButtons.YesNo);
+        if (confirmResults == DialogResult.Yes)
+        {
+            RandomizeNPCModels(itemFile);
+            File.WriteAllLines($"{path}\\items.txt", itemFile);
+        }
+        else
+        {
+            return;
+        }
     }
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
@@ -184,6 +215,10 @@ public partial class F_ItemRandomiser : Form
     private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
     {
         CheckAllItemsinTab();
+    }
+    private void tsm_Quit_Click(object sender, EventArgs e)
+    {
+        Application.Exit();
     }
     private void CheckAllItemsinTab()
     {
@@ -332,8 +367,33 @@ public partial class F_ItemRandomiser : Form
         File.WriteAllLines($"{path}\\items.txt", itemFile);
         allGroupBoxes.Clear();
     }
+    private void RandomizeNPCModels(string[] itemFile)
+    {
+        int[] ignoreNPC = { 28562, 28579, 28888, 28919, 28943, 28966, 28989, 29013,
+            29135, 29165, 30401, 94601, 94647, 96381, 96439, 96492 };
+        List<string> npcModels = new List<string>();
+        Random rand = new Random();
 
-    private void RandomizeUnstableStats(string[] itemFile)
+        npcModels.AddRange(File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt"));
+
+        for (int i = 0; i < itemFile.Length; i++)
+        {
+            if (itemFile[i].Contains($"\tAssetFilename = \"data/models/npcs/"))
+            {
+                int randModel = rand.Next(npcModels.Count);
+                if (ignoreNPC.Contains(i)) { continue; }
+                itemFile[i] = $"\tAssetFilename = \"data/models/npcs/{npcModels[randModel]}\"";
+                Debug.WriteLine(itemFile[i]);
+                npcModels.Remove(npcModels[randModel]);
+                if (randModel <= 0)
+                {
+                    npcModels.AddRange(File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt"));
+                }
+            }
+
+        }
+    }
+    private void RandomizeUnstableStats(string[] itemFile, string[] missionFile)
     {
         //TODO:
         //Add a message if more then one of the unstable checkboxes
@@ -349,15 +409,15 @@ public partial class F_ItemRandomiser : Form
             allCheckedListBoxes.Add(tabpage.Controls.OfType<CheckedListBox>().First());
         }
         //Need to put a warning message saying a lot of items will cause the game to crash using this.
+        foreach (CheckedListBox checkedListBox in allCheckedListBoxes)
+        {
+            foreach (string item in checkedListBox.CheckedItems)
+            {
+                allItems.Add(item);
+            }
+        }
         if (cb_US_PropToThrow.Checked)
         {
-            foreach (CheckedListBox checkedListBox in allCheckedListBoxes)
-            {
-                foreach (string item in checkedListBox.CheckedItems)
-                {
-                    allItems.Add(item);
-                }
-            }
             for (int i = 0; i < itemFile.Length; i++)
             {
                 if (itemFile[i].Contains(gb_US_PropToThrow.Tag.ToString()))
@@ -368,22 +428,19 @@ public partial class F_ItemRandomiser : Form
                 }
             }
         }
+        if (cb_US_NPCItems.Checked)
+        {
+            for (int i = 0; i < missionFile.Length; i++)
+            {
+                if (missionFile[i].Contains(gb_US_NPCItems.Tag.ToString()))
+                {
+                    int randItem = rand.Next(allItems.Count);
+                    missionFile[i] =
+                        missionFile[i].Split('=')[0] + $"= {allItems[randItem]}";
+                }
+            }
+        }
         File.WriteAllLines($"{path}\\items.txt", itemFile);
     }
-    private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
-        safeMode = !safeMode;
-        if (safeMode) { safeModeToolStripMenuItem.Text = "Safe Mode Enabled"; }
-        else { safeModeToolStripMenuItem.Text = "Safe Mode Disabled"; }
-    }
-    private void tsm_Quit_Click(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
 
-    private void tp_WitemsStats_Click(object sender, EventArgs e)
-    {
-
-    }
 }

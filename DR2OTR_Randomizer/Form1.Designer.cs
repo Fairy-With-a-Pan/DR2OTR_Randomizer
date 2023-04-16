@@ -87,6 +87,7 @@
             this.b_DeselectAll = (new global::System.Windows.Forms.Button());
             this.b_ToggleAll = (new global::System.Windows.Forms.Button());
             this.tp_WitemsStats = (new global::System.Windows.Forms.TabPage());
+            this.bt_NPC_Model_Randomizer = (new global::System.Windows.Forms.Button());
             this.bt_IS_CheckAllActiveTab = (new global::System.Windows.Forms.Button());
             this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
             this.tc_itemStats = (new global::System.Windows.Forms.TabControl());
@@ -198,10 +199,10 @@
             this.cb_V_EMaxRPM = (new global::System.Windows.Forms.CheckBox());
             this.gb_AirDensity = (new global::System.Windows.Forms.GroupBox());
             this.l_V_AD_Dec = (new global::System.Windows.Forms.Label());
-            this.l_AD_max = (new global::System.Windows.Forms.Label());
-            this.nud_AD_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_AD_min = (new global::System.Windows.Forms.Label());
-            this.nud_AD_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_AD_max = (new global::System.Windows.Forms.Label());
+            this.nud_V_AD_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_AD_min = (new global::System.Windows.Forms.Label());
+            this.nud_V_AD_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_AirDensity = (new global::System.Windows.Forms.CheckBox());
             this.tp_NPC = (new global::System.Windows.Forms.TabPage());
             this.gb_NPC_SURV_PerKMH = (new global::System.Windows.Forms.GroupBox());
@@ -563,8 +564,8 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
             this.gb_AirDensity.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).BeginInit();
             this.tp_NPC.SuspendLayout();
             this.gb_NPC_SURV_PerKMH.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_SURV_PerKMH_Max)).BeginInit();
@@ -1258,6 +1259,7 @@
             // tp_WitemsStats
             // 
             this.tp_WitemsStats.AutoScroll = (true);
+            this.tp_WitemsStats.Controls.Add(this.bt_NPC_Model_Randomizer);
             this.tp_WitemsStats.Controls.Add(this.bt_IS_CheckAllActiveTab);
             this.tp_WitemsStats.Controls.Add(this.bt_ItenStatsSet);
             this.tp_WitemsStats.Controls.Add(this.tc_itemStats);
@@ -1268,11 +1270,20 @@
             this.tp_WitemsStats.TabIndex = (1);
             this.tp_WitemsStats.Text = ("Items Stats");
             this.tp_WitemsStats.UseVisualStyleBackColor = (true);
-            this.tp_WitemsStats.Click += (this.tp_WitemsStats_Click);
+            // 
+            // bt_NPC_Model_Randomizer
+            // 
+            this.bt_NPC_Model_Randomizer.Location = (new global::System.Drawing.Point(180, 6));
+            this.bt_NPC_Model_Randomizer.Name = ("bt_NPC_Model_Randomizer");
+            this.bt_NPC_Model_Randomizer.Size = (new global::System.Drawing.Size(150, 41));
+            this.bt_NPC_Model_Randomizer.TabIndex = (4);
+            this.bt_NPC_Model_Randomizer.Text = ("Randomize NPC Models");
+            this.bt_NPC_Model_Randomizer.UseVisualStyleBackColor = (true);
+            this.bt_NPC_Model_Randomizer.Click += (this.bt_NPC_Model_Randomizer_Click);
             // 
             // bt_IS_CheckAllActiveTab
             // 
-            this.bt_IS_CheckAllActiveTab.Location = (new global::System.Drawing.Point(154, 6));
+            this.bt_IS_CheckAllActiveTab.Location = (new global::System.Drawing.Point(532, 6));
             this.bt_IS_CheckAllActiveTab.Name = ("bt_IS_CheckAllActiveTab");
             this.bt_IS_CheckAllActiveTab.Size = (new global::System.Drawing.Size(110, 41));
             this.bt_IS_CheckAllActiveTab.TabIndex = (3);
@@ -1284,9 +1295,9 @@
             // 
             this.bt_ItenStatsSet.Location = (new global::System.Drawing.Point(10, 6));
             this.bt_ItenStatsSet.Name = ("bt_ItenStatsSet");
-            this.bt_ItenStatsSet.Size = (new global::System.Drawing.Size(138, 41));
+            this.bt_ItenStatsSet.Size = (new global::System.Drawing.Size(160, 41));
             this.bt_ItenStatsSet.TabIndex = (2);
-            this.bt_ItenStatsSet.Text = ("Randomize");
+            this.bt_ItenStatsSet.Text = ("Randomize Selected Stats");
             this.bt_ItenStatsSet.UseVisualStyleBackColor = (true);
             this.bt_ItenStatsSet.Click += (this.bt_ItenStatsSet_Click);
             // 
@@ -2431,10 +2442,10 @@
             // gb_AirDensity
             // 
             this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
-            this.gb_AirDensity.Controls.Add(this.l_AD_max);
-            this.gb_AirDensity.Controls.Add(this.nud_AD_Max);
-            this.gb_AirDensity.Controls.Add(this.l_AD_min);
-            this.gb_AirDensity.Controls.Add(this.nud_AD_Min);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_max);
+            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Max);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_min);
+            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Min);
             this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
             this.gb_AirDensity.Location = (new global::System.Drawing.Point(6, 10));
             this.gb_AirDensity.Name = ("gb_AirDensity");
@@ -2452,42 +2463,42 @@
             this.l_V_AD_Dec.Text = ("Controls how much air resistance there is for the vehicle. The lower the less air resistance.");
             this.l_V_AD_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
-            // l_AD_max
+            // l_V_AD_max
             // 
-            this.l_AD_max.AutoSize = (true);
-            this.l_AD_max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_AD_max.Name = ("l_AD_max");
-            this.l_AD_max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_AD_max.TabIndex = (4);
-            this.l_AD_max.Text = ("Maximum:");
+            this.l_V_AD_max.AutoSize = (true);
+            this.l_V_AD_max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_AD_max.Name = ("l_V_AD_max");
+            this.l_V_AD_max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_AD_max.TabIndex = (4);
+            this.l_V_AD_max.Text = ("Maximum:");
             // 
-            // nud_AD_Max
+            // nud_V_AD_Max
             // 
-            this.nud_AD_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_AD_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_AD_Max.Name = ("nud_AD_Max");
-            this.nud_AD_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_AD_Max.TabIndex = (3);
-            this.nud_AD_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_AD_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
+            this.nud_V_AD_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_AD_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_AD_Max.Name = ("nud_V_AD_Max");
+            this.nud_V_AD_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_AD_Max.TabIndex = (3);
+            this.nud_V_AD_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_AD_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
             // 
-            // l_AD_min
+            // l_V_AD_min
             // 
-            this.l_AD_min.AutoSize = (true);
-            this.l_AD_min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_AD_min.Name = ("l_AD_min");
-            this.l_AD_min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_AD_min.TabIndex = (2);
-            this.l_AD_min.Text = ("Minimum:");
+            this.l_V_AD_min.AutoSize = (true);
+            this.l_V_AD_min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_AD_min.Name = ("l_V_AD_min");
+            this.l_V_AD_min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_AD_min.TabIndex = (2);
+            this.l_V_AD_min.Text = ("Minimum:");
             // 
-            // nud_AD_Min
+            // nud_V_AD_Min
             // 
-            this.nud_AD_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_AD_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_AD_Min.Name = ("nud_AD_Min");
-            this.nud_AD_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_AD_Min.TabIndex = (1);
-            this.nud_AD_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_AD_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_AD_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_AD_Min.Name = ("nud_V_AD_Min");
+            this.nud_V_AD_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_AD_Min.TabIndex = (1);
+            this.nud_V_AD_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
             // 
             // cb_AirDensity
             // 
@@ -5687,8 +5698,8 @@
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
             this.gb_AirDensity.ResumeLayout(false);
             this.gb_AirDensity.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_AD_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).EndInit();
             this.tp_NPC.ResumeLayout(false);
             this.gb_NPC_SURV_PerKMH.ResumeLayout(false);
             this.gb_NPC_SURV_PerKMH.PerformLayout();
@@ -5916,10 +5927,10 @@
         private TabControl tc_itemStats;
         private TabPage tp_VehicleStats;
         private GroupBox gb_AirDensity;
-        private Label l_AD_max;
-        private NumericUpDown nud_AD_Max;
-        private Label l_AD_min;
-        private NumericUpDown nud_AD_Min;
+        private Label l_V_AD_max;
+        private NumericUpDown nud_V_AD_Max;
+        private Label l_V_AD_min;
+        private NumericUpDown nud_V_AD_Min;
         private CheckBox cb_AirDensity;
         private Label l_V_AD_Dec;
         private ToolTip tt_VehicleStats;
@@ -6268,9 +6279,6 @@
         private global::System.Windows.Forms.TabPage tp_US_Bugged;
         private global::System.Windows.Forms.CheckedListBox clb_US_Bugged;
         private global::System.Windows.Forms.TabPage tp_US_CombinedFireArms;
-        private global::System.Windows.Forms.TabPage tabPage6;
-        private global::System.Windows.Forms.CheckedListBox checkedListBox6;
-        private global::System.Windows.Forms.TabPage tabPage7;
         private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
         private global::System.Windows.Forms.TabPage tp_US_CombFood;
         private global::System.Windows.Forms.CheckedListBox clb_US_CombFood;
@@ -6278,9 +6286,6 @@
         private global::System.Windows.Forms.CheckedListBox clb_US_CombMelee;
         private global::System.Windows.Forms.TabPage tp_US_ComboFireArms;
         private global::System.Windows.Forms.CheckedListBox clb_US_ComboFireArms;
-        private global::System.Windows.Forms.TabPage tabPage11;
-        private global::System.Windows.Forms.CheckedListBox checkedListBox11;
-        private global::System.Windows.Forms.TabPage tabPage12;
         private global::System.Windows.Forms.CheckedListBox clb_US_Explosive;
         private global::System.Windows.Forms.TabPage tp_US_KeyItems;
         private global::System.Windows.Forms.CheckedListBox clb_US_KeyItems;
@@ -6322,5 +6327,6 @@
         private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Min;
         private global::System.Windows.Forms.CheckBox cb_WS_WepPP;
         private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
+        private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
     }
 }
