@@ -10,7 +10,19 @@ using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DR2OTR_Randomizer;
-
+/// <summary>
+/// TO DO: There is a chance to softlock inside of overtime if the items for that mission
+/// have been picked up before the mission is active then loads a save that is in over time
+/// to get around this remove this line from missions.txt PrerequisiteMission = "OvertimeDoorLocked" 
+/// do this and the final mission will be unlocked once overtime as started without the need of the items
+/// 
+/// Implemt this by giving a warning if any of the items for over time have been selected for
+/// the randomizer or just added like the lab npc in case 8-2
+/// 
+/// WARNING: fortune exterior seems to crash after case 7-1 when the gas gets released
+/// Find out what is crashing it or if it cant be found make a warning telling the play to save
+/// when in the center of the exterior or just before going in to the exterior
+/// </summary>
 public partial class F_ItemRandomiser : Form
 {
     bool safeMode = true;
@@ -170,7 +182,8 @@ public partial class F_ItemRandomiser : Form
     }
     private void bt_ItenStatsSet_Click(object sender, EventArgs e)
     {
-        if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
+        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt")) 
+            { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
         string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
         if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
@@ -181,6 +194,12 @@ public partial class F_ItemRandomiser : Form
         {
             RandomizeItemStats(itemFile);
         }
+
+        //Change these so player is not instantly gunned down when getting to case 8-3 fight
+        missionFile[30323] = "\t\t\t\t\tWithProp = \"BobsToy\""; 
+        missionFile[30332] = "\t\t\t\t\tWithProp = \"BobsToy\"";
+        File.WriteAllLines($"{path}\\missions.txt", missionFile);
+        
         MessageBox.Show("Item stats have successfully been randomized", "Success");
     }
     private void bt_NPC_Model_Randomizer_Click(object sender, EventArgs e)
@@ -309,10 +328,7 @@ public partial class F_ItemRandomiser : Form
             //adds all the lines inside of the current selected level to an array
             foreach (int lines in level.Key)
             {
-                if (safeMode && level.Value == "palisades.txt")
-                {
-                    continue;
-                }
+                if (safeMode && level.Value == "palisades.txt") { continue; }
                 //gets each line that needs to be changed by getting the dictionary key array witch as all the lines inside
                 int item = rand.Next(allItems.Count);
                 //changes the line by looking for the = inside of the string then
@@ -329,6 +345,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeItemStats(string[] itemFile)
     {
+
 
         Random rand = new Random();
 
@@ -354,9 +371,7 @@ public partial class F_ItemRandomiser : Form
                 {
                     if (itemFile[i].Contains(box.Tag.ToString()))
                     {
-                        if (unSafeLines.Contains(i + 1) && safeMode)
-                        { continue; }
-                        Debug.WriteLine("this was called this many times");
+                        if (unSafeLines.Contains(i + 1) && safeMode) { continue; }
                         int randStatNumb = rand.Next(numbs[0], numbs[1]);
                         itemFile[i] =
                             itemFile[i].Split('=')[0] + $"= \"{randStatNumb}\"";
@@ -365,7 +380,6 @@ public partial class F_ItemRandomiser : Form
             }
         }
         File.WriteAllLines($"{path}\\items.txt", itemFile);
-        allGroupBoxes.Clear();
     }
     private void RandomizeNPCModels(string[] itemFile)
     {
@@ -427,6 +441,7 @@ public partial class F_ItemRandomiser : Form
                         itemFile[i].Split('=')[0] + $"= {allItems[randItem]}";
                 }
             }
+            File.WriteAllLines($"{path}\\items.txt", itemFile);
         }
         if (cb_US_NPCItems.Checked)
         {
@@ -439,8 +454,8 @@ public partial class F_ItemRandomiser : Form
                         missionFile[i].Split('=')[0] + $"= {allItems[randItem]}";
                 }
             }
+            File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
-        File.WriteAllLines($"{path}\\items.txt", itemFile);
     }
 
 }
