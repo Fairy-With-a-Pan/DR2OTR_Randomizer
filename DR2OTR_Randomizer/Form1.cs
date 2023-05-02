@@ -11,15 +11,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DR2OTR_Randomizer;
 /// <summary>
-/// TO DO: 
-/// Need to test fortune_exterior a bit more it becomes unstable and crashes after 7-1 but
-/// i have not tested if it crash before then.
+/// TODO:
+/// Need to spell check
 /// 
-/// Test to see what works better having the program to ask for the data file 
-/// location on start or letting the user chose from the drop down in the menu bar
+/// Try to find a better way for the item stats 
+/// as it is using over 300 controls and is causeing the 
+/// window to move slowly when draged
 /// 
-/// Refactor and optiomze the program and try to find a better way for the item stats 
-/// randomier that dosnt use as many controls
+/// 
+/// Refactor and optiomze the program 
+/// 
+/// 
 /// 
 /// </summary>
 public partial class F_ItemRandomiser : Form
@@ -37,6 +39,7 @@ public partial class F_ItemRandomiser : Form
     public F_ItemRandomiser()
     {
         InitializeComponent();
+
         //use this to catch if the Allitems or npcmodels file is missing
         try
         {
@@ -83,7 +86,6 @@ public partial class F_ItemRandomiser : Form
     }
     private void Form1_Load(object sender, EventArgs e)
     {
-        
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
@@ -116,7 +118,7 @@ public partial class F_ItemRandomiser : Form
 
     private void b_Randomise_Click(object sender, EventArgs e)
     {
-        
+
         //make a string list to store all the items in each of the check list boxes
         List<string> allItems = new List<string>();
 
@@ -129,8 +131,8 @@ public partial class F_ItemRandomiser : Form
     }
     private void bt_ItenStatsSet_Click(object sender, EventArgs e)
     {
-        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt")) 
-            { MessageBox.Show("Could not find items.txt", "Warning"); return; }
+        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt"))
+        { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
         string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
         if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
@@ -192,10 +194,20 @@ public partial class F_ItemRandomiser : Form
     }
     private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
         safeMode = !safeMode;
-        if (safeMode) { safeModeToolStripMenuItem.Text = "Safe Mode Enabled"; }
-        else { safeModeToolStripMenuItem.Text = "Safe Mode Disabled"; }
+        if (safeMode)
+        {
+            l_SafeMode_Text.Text = "Safe Mode Is Enabled";
+            l_SafeMode_Text.ForeColor = Color.Green;
+            safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
+        }
+        else
+        {
+            MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
+            safeModeToolStripMenuItem.Text = "Safe Mode Disabled";
+            l_SafeMode_Text.Text = "Safe Mode Is Disabled";
+            l_SafeMode_Text.ForeColor = Color.Red;
+        }
     }
     private void bt_NPC_Model_Randomizer_Click(object sender, EventArgs e)
     {
@@ -234,19 +246,19 @@ public partial class F_ItemRandomiser : Form
     {
         Application.Exit();
     }
-    private void SoftLockAndCrashPrevent(string buttonClicked,List<string> Allitems)
+    private void SoftLockAndCrashPrevent(string buttonClicked, List<string> Allitems)
     {
         List<string> missionFile = new List<string>();
         bool showonce = false;
         missionFile.AddRange(File.ReadAllLines($"{path}\\missions.txt"));
         //This will stop overtime softlocking if the player reloads while in overtime
-        if(buttonClicked == b_Randomise.Text)
+        if (buttonClicked == b_Randomise.Text)
         {
             foreach (string item in clb_KeyItems.Items)
             {
                 if (Allitems.Contains(item) && missionFile[50046] != "")
                 {
-                    missionFile[50046] = ""; 
+                    missionFile[50046] = "";
                 }
             }
             foreach (string item in clb_Vehicles.Items)
@@ -259,7 +271,7 @@ public partial class F_ItemRandomiser : Form
             }
         }
         //Change these so player is not instantly gunned down when getting to case 8-3 fight inside the lab
-        if(buttonClicked == bt_ItenStatsSet.Text)
+        if (buttonClicked == bt_ItenStatsSet.Text)
         {
             missionFile[30323] = "\t\t\t\t\tWithProp = \"BobsToy\"";
             missionFile[30332] = "\t\t\t\t\tWithProp = \"BobsToy\"";
@@ -331,6 +343,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeGameItems(List<string> allItems)
     {
+
         //gets the dictionary stored in the LevelLines class
         var levels = LevelsLines.levels;
         Random rand = new Random();
@@ -347,11 +360,11 @@ public partial class F_ItemRandomiser : Form
             //gets the current level file in the dictionary with the level.Value is the same as the files name
             string[] levelFile = File.ReadAllLines($"{path}\\{level.Value}");
             //adds all the lines inside of the current selected level to an array
-            foreach(int line in level.Key)
+            foreach (int line in level.Key)
             {
+
                 //skips palisades if in safemode due to crashing
                 if (safeMode && level.Value == "palisades.txt") { continue; }
-                
                 int item = rand.Next(allItems.Count);
 
                 levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
@@ -360,6 +373,10 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\{level.Value}", levelFile);
 
         }
+        MessageBox.Show
+        ("After case 7-1 once the gas as released the platinum and silver strip becomes unstable and can crash." +
+        " Its recommend to save before going to these places (the fortune park save point is safe and recommend).",
+        "Warning");
         MessageBox.Show("All levels successfully randomised with selected items", "Success");
     }
     private void RandomizeItemStats(string[] itemFile)
@@ -428,10 +445,11 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeUnstableStats(string[] itemFile, string[] missionFile)
     {
-        //TODO:
-        //Add a message if more then one of the unstable checkboxes
-        //are ticked to ask if you want to do both if no is clicked
-        //return out of this so no items get randomized
+        var confirmResult = MessageBox.Show
+            ("Enableing any of the unstable stats can cause soft locking and crashing" +
+            "Are sure you want to continue?", "Warning", MessageBoxButtons.YesNo);
+        if (confirmResult == DialogResult.No) { return; }
+        Debug.WriteLine("It has passed the message box");
         Random rand = new Random();
 
         List<CheckedListBox> allCheckedListBoxes = new List<CheckedListBox>();
@@ -441,7 +459,6 @@ public partial class F_ItemRandomiser : Form
         {
             allCheckedListBoxes.Add(tabpage.Controls.OfType<CheckedListBox>().First());
         }
-        //Need to put a warning message saying a lot of items will cause the game to crash using this.
         foreach (CheckedListBox checkedListBox in allCheckedListBoxes)
         {
             foreach (string item in checkedListBox.CheckedItems)
@@ -476,5 +493,4 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
-
 }

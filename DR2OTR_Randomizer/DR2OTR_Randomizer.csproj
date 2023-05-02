@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Resources\AllNPCModels.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -38,8 +38,6 @@
             this.tsm_PH = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.safeModeToolStripMenuItem = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_Options = (new global::System.Windows.Forms.ToolStripMenuItem());
-            this.tsm_Backup = (new global::System.Windows.Forms.ToolStripMenuItem());
-            this.tsm_About = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tc_Items = (new global::System.Windows.Forms.TabControl());
             this.tp_BasicCombo = (new global::System.Windows.Forms.TabPage());
             this.clb_BasicCombo = (new global::System.Windows.Forms.CheckedListBox());
@@ -79,7 +77,6 @@
             this.clb_Vehicles = (new global::System.Windows.Forms.CheckedListBox());
             this.tp_Search = (new global::System.Windows.Forms.TabPage());
             this.clb_SearchResults = (new global::System.Windows.Forms.CheckedListBox());
-            this.levelsLinesBindingSource = (new global::System.Windows.Forms.BindingSource(this.components));
             this.tc_TabWindows = (new global::System.Windows.Forms.TabControl());
             this.tp_WItemRandom = (new global::System.Windows.Forms.TabPage());
             this.tb_ItemsSearch = (new global::System.Windows.Forms.TextBox());
@@ -92,6 +89,69 @@
             this.bt_ItenStatsSet = (new global::System.Windows.Forms.Button());
             this.tc_itemStats = (new global::System.Windows.Forms.TabControl());
             this.tp_VehicleStats = (new global::System.Windows.Forms.TabPage());
+            this.gb_AirDensity = (new global::System.Windows.Forms.GroupBox());
+            this.cb_AirDensity = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_AD_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_AD_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_AD_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_AD_max = (new global::System.Windows.Forms.Label());
+            this.l_V_AD_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_V_EMaxRPM = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_EMaxRPM = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_EMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMaxRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMaxRPM_Max = (new global::System.Windows.Forms.Label());
+            this.l_V_EMaxRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_V_EMinRPM = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_EMinRPM = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_EMinRPM_min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMinRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMinRPM_Max = (new global::System.Windows.Forms.Label());
+            this.l_V_EMinRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_V_EMT = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_EMT = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_EMT_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMT_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EMT_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EMT_Max = (new global::System.Windows.Forms.Label());
+            this.l_V_EMT_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_V_EORPM = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_EORPM = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_EORPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EORPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_EORPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_EORPM_Max = (new global::System.Windows.Forms.Label());
+            this.l_V_EORPM_Dec = (new global::System.Windows.Forms.Label());
+            this.gb_V_ETFMaxRPM = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_ETFMaxRPM = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETFMaxRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.Label());
+            this.gb_V_ETMinRPM = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_ETMinRPM = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_ETMinRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETMinRPM_Min = (new global::System.Windows.Forms.Label());
+            this.l_V_ETMinRPM_Dec = (new global::System.Windows.Forms.Label());
+            this.nud_V_ETMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_ETMinRPM_Max = (new global::System.Windows.Forms.Label());
+            this.gb_V_MinVSWE = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_MinVSWE = (new global::System.Windows.Forms.CheckBox());
+            this.nud_V_MinVSWE_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l_V_MinVSWE_Dec = (new global::System.Windows.Forms.Label());
+            this.l_V_MinVSWE_Min = (new global::System.Windows.Forms.Label());
+            this.l_V_MinVSWE_Max = (new global::System.Windows.Forms.Label());
+            this.nud_V_MinVSWE_Max = (new global::System.Windows.Forms.NumericUpDown());
+            this.gb_V_MVSEP = (new global::System.Windows.Forms.GroupBox());
+            this.cb_V_MVSEP = (new global::System.Windows.Forms.CheckBox());
+            this.l_V_MVSEP_Dec = (new global::System.Windows.Forms.Label());
+            this.nud__V_MVSEP_Min = (new global::System.Windows.Forms.NumericUpDown());
+            this.l__V_MVSEP_Max = (new global::System.Windows.Forms.Label());
+            this.l_V_MVSEP_Min = (new global::System.Windows.Forms.Label());
+            this.nud__V_MVSEP_Max = (new global::System.Windows.Forms.NumericUpDown());
             this.gb_V_EjectSpeed = (new global::System.Windows.Forms.GroupBox());
             this.l_V_EjectSpeed_Dec = (new global::System.Windows.Forms.Label());
             this.l_V_EjectSpeed_Max = (new global::System.Windows.Forms.Label());
@@ -141,69 +201,6 @@
             this.l_V_TopSpeed_Min = (new global::System.Windows.Forms.Label());
             this.nud_V_TopSpeed_Min = (new global::System.Windows.Forms.NumericUpDown());
             this.cb_V_TopSpeed = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_MVSEP = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_MVSEP_Dec = (new global::System.Windows.Forms.Label());
-            this.l__V_MVSEP_Max = (new global::System.Windows.Forms.Label());
-            this.nud__V_MVSEP_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_MVSEP_Min = (new global::System.Windows.Forms.Label());
-            this.nud__V_MVSEP_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_MVSEP = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_MinVSWE = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_MinVSWE_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_MinVSWE_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_MinVSWE_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_MinVSWE_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_MinVSWE_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_MinVSWE = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_ETMinRPM = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_ETMinRPM_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_ETMinRPM_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_ETMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_ETMinRPM_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_ETMinRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_ETMinRPM = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_ETFMaxRPM = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_ETFMaxRPM_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_ETFMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_ETFMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_ETFMaxRPM = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_EORPM = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_EORPM_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_EORPM_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_EORPM_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_EORPM_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_EORPM_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_EORPM = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_EMinRPM = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_EMinRPM_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_EMinRPM_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMinRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_EMinRPM_min = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMinRPM_min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_EMinRPM = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_EMT = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_EMT_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_EMT_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMT_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_EMT_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMT_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_EMT = (new global::System.Windows.Forms.CheckBox());
-            this.gb_V_EMaxRPM = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_EMaxRPM_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_EMaxRPM_Max = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMaxRPM_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_EMaxRPM_Min = (new global::System.Windows.Forms.Label());
-            this.nud_V_EMaxRPM_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_V_EMaxRPM = (new global::System.Windows.Forms.CheckBox());
-            this.gb_AirDensity = (new global::System.Windows.Forms.GroupBox());
-            this.l_V_AD_Dec = (new global::System.Windows.Forms.Label());
-            this.l_V_AD_max = (new global::System.Windows.Forms.Label());
-            this.nud_V_AD_Max = (new global::System.Windows.Forms.NumericUpDown());
-            this.l_V_AD_min = (new global::System.Windows.Forms.Label());
-            this.nud_V_AD_Min = (new global::System.Windows.Forms.NumericUpDown());
-            this.cb_AirDensity = (new global::System.Windows.Forms.CheckBox());
             this.tp_NPC = (new global::System.Windows.Forms.TabPage());
             this.gb_NPC_SURV_PerKMH = (new global::System.Windows.Forms.GroupBox());
             this.l_NPC_SURV_PerKMH_Dec = (new global::System.Windows.Forms.Label());
@@ -491,6 +488,7 @@
             this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
             this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
             this.clb_US_FireArms = (new global::System.Windows.Forms.CheckedListBox());
+            this.l_SafeMode_Text = (new global::System.Windows.Forms.Label());
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -512,12 +510,38 @@
             this.tp_Special.SuspendLayout();
             this.tp_Vehicles.SuspendLayout();
             this.tp_Search.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).BeginInit();
             this.tc_TabWindows.SuspendLayout();
             this.tp_WItemRandom.SuspendLayout();
             this.tp_WitemsStats.SuspendLayout();
             this.tc_itemStats.SuspendLayout();
             this.tp_VehicleStats.SuspendLayout();
+            this.gb_AirDensity.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).BeginInit();
+            this.gb_V_EMaxRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
+            this.gb_V_EMinRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).BeginInit();
+            this.gb_V_EMT.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).BeginInit();
+            this.gb_V_EORPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
+            this.gb_V_ETFMaxRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
+            this.gb_V_ETMinRPM.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).BeginInit();
+            this.gb_V_MinVSWE.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).BeginInit();
+            this.gb_V_MVSEP.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).BeginInit();
             this.gb_V_EjectSpeed.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Min)).BeginInit();
@@ -539,33 +563,6 @@
             this.gb_V_TopSpeed.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).BeginInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).BeginInit();
-            this.gb_V_MVSEP.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).BeginInit();
-            this.gb_V_MinVSWE.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).BeginInit();
-            this.gb_V_ETMinRPM.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).BeginInit();
-            this.gb_V_ETFMaxRPM.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).BeginInit();
-            this.gb_V_EORPM.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).BeginInit();
-            this.gb_V_EMinRPM.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).BeginInit();
-            this.gb_V_EMT.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).BeginInit();
-            this.gb_V_EMaxRPM.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).BeginInit();
-            this.gb_AirDensity.SuspendLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).BeginInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).BeginInit();
             this.tp_NPC.SuspendLayout();
             this.gb_NPC_SURV_PerKMH.SuspendLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_NPC_SURV_PerKMH_Max)).BeginInit();
@@ -742,22 +739,9 @@
             // 
             // tsm_Options
             // 
-            this.tsm_Options.DropDownItems.AddRange(new global::System.Windows.Forms.ToolStripItem[] { this.tsm_Backup, this.tsm_About });
             this.tsm_Options.Name = ("tsm_Options");
-            this.tsm_Options.Size = (new global::System.Drawing.Size(61, 20));
-            this.tsm_Options.Text = ("Options");
-            // 
-            // tsm_Backup
-            // 
-            this.tsm_Backup.Name = ("tsm_Backup");
-            this.tsm_Backup.Size = (new global::System.Drawing.Size(113, 22));
-            this.tsm_Backup.Text = ("Backup");
-            // 
-            // tsm_About
-            // 
-            this.tsm_About.Name = ("tsm_About");
-            this.tsm_About.Size = (new global::System.Drawing.Size(113, 22));
-            this.tsm_About.Text = ("About");
+            this.tsm_Options.Size = (new global::System.Drawing.Size(52, 20));
+            this.tsm_Options.Text = ("About");
             // 
             // tc_Items
             // 
@@ -1186,10 +1170,6 @@
             this.clb_SearchResults.Size = (new global::System.Drawing.Size(325, 396));
             this.clb_SearchResults.TabIndex = (17);
             // 
-            // levelsLinesBindingSource
-            // 
-            this.levelsLinesBindingSource.DataSource = (typeof(global::DR2OTR_Randomizer.Resources.LevelsLines));
-            // 
             // tc_TabWindows
             // 
             this.tc_TabWindows.Controls.Add(this.tp_WItemRandom);
@@ -1320,6 +1300,15 @@
             // tp_VehicleStats
             // 
             this.tp_VehicleStats.AutoScroll = (true);
+            this.tp_VehicleStats.Controls.Add(this.gb_AirDensity);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMaxRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMinRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EMT);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_EORPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_ETFMaxRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_ETMinRPM);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_MinVSWE);
+            this.tp_VehicleStats.Controls.Add(this.gb_V_MVSEP);
             this.tp_VehicleStats.Controls.Add(this.gb_V_EjectSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_RotateSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_MaxRotationSpeed);
@@ -1327,15 +1316,6 @@
             this.tp_VehicleStats.Controls.Add(this.gb_V_InitialSpeed);
             this.tp_VehicleStats.Controls.Add(this.gb_V_ExtraTorque);
             this.tp_VehicleStats.Controls.Add(this.gb_V_TopSpeed);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_MVSEP);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_MinVSWE);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_ETMinRPM);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_ETFMaxRPM);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_EORPM);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_EMinRPM);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_EMT);
-            this.tp_VehicleStats.Controls.Add(this.gb_V_EMaxRPM);
-            this.tp_VehicleStats.Controls.Add(this.gb_AirDensity);
             this.tp_VehicleStats.Location = (new global::System.Drawing.Point(4, 24));
             this.tp_VehicleStats.Name = ("tp_VehicleStats");
             this.tp_VehicleStats.Padding = (new global::System.Windows.Forms.Padding(3));
@@ -1343,6 +1323,662 @@
             this.tp_VehicleStats.TabIndex = (0);
             this.tp_VehicleStats.Text = ("Vehicle Stats");
             this.tp_VehicleStats.UseVisualStyleBackColor = (true);
+            // 
+            // gb_AirDensity
+            // 
+            this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
+            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Min);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_Min);
+            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Max);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_max);
+            this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
+            this.gb_AirDensity.Location = (new global::System.Drawing.Point(6, 10));
+            this.gb_AirDensity.Name = ("gb_AirDensity");
+            this.gb_AirDensity.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_AirDensity.TabIndex = (33);
+            this.gb_AirDensity.TabStop = (false);
+            this.gb_AirDensity.Tag = ("\tAirDensity");
+            // 
+            // cb_AirDensity
+            // 
+            this.cb_AirDensity.AutoSize = (true);
+            this.cb_AirDensity.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_AirDensity.Name = ("cb_AirDensity");
+            this.cb_AirDensity.Size = (new global::System.Drawing.Size(126, 19));
+            this.cb_AirDensity.TabIndex = (21);
+            this.cb_AirDensity.Text = ("Vehicle Air Density:");
+            this.tt_VehicleStats.SetToolTip(this.cb_AirDensity, "The average defualt is: 0.7");
+            this.cb_AirDensity.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_AD_Min
+            // 
+            this.nud_V_AD_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_AD_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_AD_Min.Name = ("nud_V_AD_Min");
+            this.nud_V_AD_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_AD_Min.TabIndex = (22);
+            this.nud_V_AD_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            // 
+            // l_V_AD_Min
+            // 
+            this.l_V_AD_Min.AutoSize = (true);
+            this.l_V_AD_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_AD_Min.Name = ("l_V_AD_Min");
+            this.l_V_AD_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_AD_Min.TabIndex = (23);
+            this.l_V_AD_Min.Text = ("Minimum:");
+            // 
+            // nud_V_AD_Max
+            // 
+            this.nud_V_AD_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_AD_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_AD_Max.Name = ("nud_V_AD_Max");
+            this.nud_V_AD_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_AD_Max.TabIndex = (24);
+            this.nud_V_AD_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_AD_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
+            // 
+            // l_V_AD_max
+            // 
+            this.l_V_AD_max.AutoSize = (true);
+            this.l_V_AD_max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_AD_max.Name = ("l_V_AD_max");
+            this.l_V_AD_max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_AD_max.TabIndex = (25);
+            this.l_V_AD_max.Text = ("Maximum:");
+            // 
+            // l_V_AD_Dec
+            // 
+            this.l_V_AD_Dec.Location = (new global::System.Drawing.Point(138, 10));
+            this.l_V_AD_Dec.Name = ("l_V_AD_Dec");
+            this.l_V_AD_Dec.Size = (new global::System.Drawing.Size(231, 50));
+            this.l_V_AD_Dec.TabIndex = (26);
+            this.l_V_AD_Dec.Text = ("Controls how much air resistance there is for the vehicle. The lower the less air resistance.");
+            this.l_V_AD_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_V_EMaxRPM
+            // 
+            this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
+            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Max);
+            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Dec);
+            this.gb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 70));
+            this.gb_V_EMaxRPM.Name = ("gb_V_EMaxRPM");
+            this.gb_V_EMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMaxRPM.TabIndex = (75);
+            this.gb_V_EMaxRPM.TabStop = (false);
+            this.gb_V_EMaxRPM.Tag = ("\tEngine_MaxRPM");
+            // 
+            // cb_V_EMaxRPM
+            // 
+            this.cb_V_EMaxRPM.AutoSize = (true);
+            this.cb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMaxRPM.Name = ("cb_V_EMaxRPM");
+            this.cb_V_EMaxRPM.Size = (new global::System.Drawing.Size(120, 19));
+            this.cb_V_EMaxRPM.TabIndex = (27);
+            this.cb_V_EMaxRPM.Text = ("Vehicle Max RPM:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMaxRPM, "The average defualt is: 3550");
+            this.cb_V_EMaxRPM.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_EMaxRPM_Min
+            // 
+            this.nud_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMaxRPM_Min.Name = ("nud_V_EMaxRPM_Min");
+            this.nud_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMaxRPM_Min.TabIndex = (28);
+            this.nud_V_EMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3550, 0, 0, 0 }));
+            // 
+            // l_V_EMaxRPM_Min
+            // 
+            this.l_V_EMaxRPM_Min.AutoSize = (true);
+            this.l_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMaxRPM_Min.Name = ("l_V_EMaxRPM_Min");
+            this.l_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMaxRPM_Min.TabIndex = (29);
+            this.l_V_EMaxRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EMaxRPM_Max
+            // 
+            this.nud_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMaxRPM_Max.Name = ("nud_V_EMaxRPM_Max");
+            this.nud_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMaxRPM_Max.TabIndex = (30);
+            this.nud_V_EMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l_V_EMaxRPM_Max
+            // 
+            this.l_V_EMaxRPM_Max.AutoSize = (true);
+            this.l_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMaxRPM_Max.Name = ("l_V_EMaxRPM_Max");
+            this.l_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMaxRPM_Max.TabIndex = (31);
+            this.l_V_EMaxRPM_Max.Text = ("Maximum:");
+            // 
+            // l_V_EMaxRPM_Dec
+            // 
+            this.l_V_EMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMaxRPM_Dec.Name = ("l_V_EMaxRPM_Dec");
+            this.l_V_EMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMaxRPM_Dec.TabIndex = (32);
+            this.l_V_EMaxRPM_Dec.Text = ("One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.");
+            this.l_V_EMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_V_EMinRPM
+            // 
+            this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Min);
+            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Max);
+            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Dec);
+            this.gb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 130));
+            this.gb_V_EMinRPM.Name = ("gb_V_EMinRPM");
+            this.gb_V_EMinRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMinRPM.TabIndex = (74);
+            this.gb_V_EMinRPM.TabStop = (false);
+            this.gb_V_EMinRPM.Tag = ("\tEngine_MinRPM");
+            // 
+            // cb_V_EMinRPM
+            // 
+            this.cb_V_EMinRPM.AutoSize = (true);
+            this.cb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMinRPM.Name = ("cb_V_EMinRPM");
+            this.cb_V_EMinRPM.Size = (new global::System.Drawing.Size(115, 19));
+            this.cb_V_EMinRPM.TabIndex = (33);
+            this.cb_V_EMinRPM.Text = ("Vehicle Min RPM");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMinRPM, "The average defualt is: 885");
+            this.cb_V_EMinRPM.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_EMinRPM_min
+            // 
+            this.nud_V_EMinRPM_min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMinRPM_min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMinRPM_min.Name = ("nud_V_EMinRPM_min");
+            this.nud_V_EMinRPM_min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMinRPM_min.TabIndex = (34);
+            this.nud_V_EMinRPM_min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMinRPM_min.Value = (new global::System.Decimal(new global::System.Int32[] { 885, 0, 0, 0 }));
+            // 
+            // l_V_EMinRPM_Min
+            // 
+            this.l_V_EMinRPM_Min.AutoSize = (true);
+            this.l_V_EMinRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMinRPM_Min.Name = ("l_V_EMinRPM_Min");
+            this.l_V_EMinRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMinRPM_Min.TabIndex = (35);
+            this.l_V_EMinRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EMinRPM_Max
+            // 
+            this.nud_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMinRPM_Max.Name = ("nud_V_EMinRPM_Max");
+            this.nud_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMinRPM_Max.TabIndex = (36);
+            this.nud_V_EMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 5000, 0, 0, 0 }));
+            // 
+            // l_V_EMinRPM_Max
+            // 
+            this.l_V_EMinRPM_Max.AutoSize = (true);
+            this.l_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMinRPM_Max.Name = ("l_V_EMinRPM_Max");
+            this.l_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMinRPM_Max.TabIndex = (37);
+            this.l_V_EMinRPM_Max.Text = ("Maximum:");
+            // 
+            // l_V_EMinRPM_Dec
+            // 
+            this.l_V_EMinRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMinRPM_Dec.Name = ("l_V_EMinRPM_Dec");
+            this.l_V_EMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMinRPM_Dec.TabIndex = (38);
+            this.l_V_EMinRPM_Dec.Text = ("Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.");
+            this.l_V_EMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_V_EMT
+            // 
+            this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
+            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Max);
+            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Dec);
+            this.gb_V_EMT.Location = (new global::System.Drawing.Point(6, 190));
+            this.gb_V_EMT.Name = ("gb_V_EMT");
+            this.gb_V_EMT.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EMT.TabIndex = (73);
+            this.gb_V_EMT.TabStop = (false);
+            this.gb_V_EMT.Tag = ("\tEngine_MaxTorque");
+            // 
+            // cb_V_EMT
+            // 
+            this.cb_V_EMT.AutoSize = (true);
+            this.cb_V_EMT.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EMT.Name = ("cb_V_EMT");
+            this.cb_V_EMT.Size = (new global::System.Drawing.Size(131, 19));
+            this.cb_V_EMT.TabIndex = (39);
+            this.cb_V_EMT.Text = ("Vehicle Max Torque:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EMT, "The average defualt is: 100");
+            this.cb_V_EMT.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_EMT_Min
+            // 
+            this.nud_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EMT_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMT_Min.Name = ("nud_V_EMT_Min");
+            this.nud_V_EMT_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMT_Min.TabIndex = (40);
+            this.nud_V_EMT_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMT_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_EMT_Min
+            // 
+            this.l_V_EMT_Min.AutoSize = (true);
+            this.l_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EMT_Min.Name = ("l_V_EMT_Min");
+            this.l_V_EMT_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EMT_Min.TabIndex = (41);
+            this.l_V_EMT_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EMT_Max
+            // 
+            this.nud_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EMT_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EMT_Max.Name = ("nud_V_EMT_Max");
+            this.nud_V_EMT_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EMT_Max.TabIndex = (42);
+            this.nud_V_EMT_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EMT_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
+            // 
+            // l_V_EMT_Max
+            // 
+            this.l_V_EMT_Max.AutoSize = (true);
+            this.l_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EMT_Max.Name = ("l_V_EMT_Max");
+            this.l_V_EMT_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EMT_Max.TabIndex = (43);
+            this.l_V_EMT_Max.Text = ("Maximum:");
+            // 
+            // l_V_EMT_Dec
+            // 
+            this.l_V_EMT_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EMT_Dec.Name = ("l_V_EMT_Dec");
+            this.l_V_EMT_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EMT_Dec.TabIndex = (44);
+            this.l_V_EMT_Dec.Text = ("Similar to max rpm but with a little less control and bit more kick.");
+            this.l_V_EMT_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_V_EORPM
+            // 
+            this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
+            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Max);
+            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Dec);
+            this.gb_V_EORPM.Location = (new global::System.Drawing.Point(6, 250));
+            this.gb_V_EORPM.Name = ("gb_V_EORPM");
+            this.gb_V_EORPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_EORPM.TabIndex = (72);
+            this.gb_V_EORPM.TabStop = (false);
+            this.gb_V_EORPM.Tag = ("\tEngine_OptRPM");
+            // 
+            // cb_V_EORPM
+            // 
+            this.cb_V_EORPM.AutoSize = (true);
+            this.cb_V_EORPM.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_EORPM.Name = ("cb_V_EORPM");
+            this.cb_V_EORPM.Size = (new global::System.Drawing.Size(117, 19));
+            this.cb_V_EORPM.TabIndex = (45);
+            this.cb_V_EORPM.Text = ("Vehicle Opt RPM:");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_EORPM, "The average defualt is: 3473");
+            this.cb_V_EORPM.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_EORPM_Min
+            // 
+            this.nud_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud_V_EORPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EORPM_Min.Name = ("nud_V_EORPM_Min");
+            this.nud_V_EORPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EORPM_Min.TabIndex = (46);
+            this.nud_V_EORPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EORPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3473, 0, 0, 0 }));
+            // 
+            // l_V_EORPM_Min
+            // 
+            this.l_V_EORPM_Min.AutoSize = (true);
+            this.l_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_EORPM_Min.Name = ("l_V_EORPM_Min");
+            this.l_V_EORPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_EORPM_Min.TabIndex = (47);
+            this.l_V_EORPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_EORPM_Max
+            // 
+            this.nud_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud_V_EORPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_EORPM_Max.Name = ("nud_V_EORPM_Max");
+            this.nud_V_EORPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_EORPM_Max.TabIndex = (48);
+            this.nud_V_EORPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_EORPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l_V_EORPM_Max
+            // 
+            this.l_V_EORPM_Max.AutoSize = (true);
+            this.l_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l_V_EORPM_Max.Name = ("l_V_EORPM_Max");
+            this.l_V_EORPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_EORPM_Max.TabIndex = (49);
+            this.l_V_EORPM_Max.Text = ("Maximum:");
+            // 
+            // l_V_EORPM_Dec
+            // 
+            this.l_V_EORPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_EORPM_Dec.Name = ("l_V_EORPM_Dec");
+            this.l_V_EORPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_EORPM_Dec.TabIndex = (50);
+            this.l_V_EORPM_Dec.Text = ("Give increased speed while keeping some control when set high.");
+            this.l_V_EORPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // gb_V_ETFMaxRPM
+            // 
+            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
+            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
+            this.gb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 310));
+            this.gb_V_ETFMaxRPM.Name = ("gb_V_ETFMaxRPM");
+            this.gb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_ETFMaxRPM.TabIndex = (71);
+            this.gb_V_ETFMaxRPM.TabStop = (false);
+            this.gb_V_ETFMaxRPM.Tag = ("\tEngine_TorqueFactorAtMaxRPM");
+            // 
+            // cb_V_ETFMaxRPM
+            // 
+            this.cb_V_ETFMaxRPM.AutoSize = (true);
+            this.cb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 23));
+            this.cb_V_ETFMaxRPM.Name = ("cb_V_ETFMaxRPM");
+            this.cb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(142, 19));
+            this.cb_V_ETFMaxRPM.TabIndex = (51);
+            this.cb_V_ETFMaxRPM.Text = ("Torque Factor At Max ");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
+            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_ETFMaxRPM_Min
+            // 
+            this.nud_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 29));
+            this.nud_V_ETFMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETFMaxRPM_Min.Name = ("nud_V_ETFMaxRPM_Min");
+            this.nud_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETFMaxRPM_Min.TabIndex = (52);
+            this.nud_V_ETFMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETFMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // l_V_ETFMaxRPM_Min
+            // 
+            this.l_V_ETFMaxRPM_Min.AutoSize = (true);
+            this.l_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 11));
+            this.l_V_ETFMaxRPM_Min.Name = ("l_V_ETFMaxRPM_Min");
+            this.l_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_ETFMaxRPM_Min.TabIndex = (53);
+            this.l_V_ETFMaxRPM_Min.Text = ("Minimum:");
+            // 
+            // nud_V_ETFMaxRPM_Max
+            // 
+            this.nud_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 29));
+            this.nud_V_ETFMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETFMaxRPM_Max.Name = ("nud_V_ETFMaxRPM_Max");
+            this.nud_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETFMaxRPM_Max.TabIndex = (54);
+            this.nud_V_ETFMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETFMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
+            // 
+            // l_V_ETFMaxRPM_Dec
+            // 
+            this.l_V_ETFMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 8));
+            this.l_V_ETFMaxRPM_Dec.Name = ("l_V_ETFMaxRPM_Dec");
+            this.l_V_ETFMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_ETFMaxRPM_Dec.TabIndex = (56);
+            this.l_V_ETFMaxRPM_Dec.Text = ("Will greatly increase the vehicles speed the higher you set.");
+            this.l_V_ETFMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_ETFMaxRPM_Max
+            // 
+            this.l_V_ETFMaxRPM_Max.AutoSize = (true);
+            this.l_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 11));
+            this.l_V_ETFMaxRPM_Max.Name = ("l_V_ETFMaxRPM_Max");
+            this.l_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_ETFMaxRPM_Max.TabIndex = (55);
+            this.l_V_ETFMaxRPM_Max.Text = ("Maximum:");
+            // 
+            // gb_V_ETMinRPM
+            // 
+            this.gb_V_ETMinRPM.Controls.Add(this.cb_V_ETMinRPM);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Min);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Dec);
+            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Max);
+            this.gb_V_ETMinRPM.Location = (new global::System.Drawing.Point(6, 370));
+            this.gb_V_ETMinRPM.Name = ("gb_V_ETMinRPM");
+            this.gb_V_ETMinRPM.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_ETMinRPM.TabIndex = (70);
+            this.gb_V_ETMinRPM.TabStop = (false);
+            this.gb_V_ETMinRPM.Tag = ("\tEngine_TorqueFactorAtMinRPM");
+            // 
+            // cb_V_ETMinRPM
+            // 
+            this.cb_V_ETMinRPM.AutoSize = (true);
+            this.cb_V_ETMinRPM.Location = (new global::System.Drawing.Point(7, 28));
+            this.cb_V_ETMinRPM.Name = ("cb_V_ETMinRPM");
+            this.cb_V_ETMinRPM.Size = (new global::System.Drawing.Size(137, 19));
+            this.cb_V_ETMinRPM.TabIndex = (57);
+            this.cb_V_ETMinRPM.Text = ("Torque Factor At Min");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_ETMinRPM, "The average defualt is: 0.77");
+            this.cb_V_ETMinRPM.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_ETMinRPM_Min
+            // 
+            this.nud_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(411, 34));
+            this.nud_V_ETMinRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETMinRPM_Min.Name = ("nud_V_ETMinRPM_Min");
+            this.nud_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETMinRPM_Min.TabIndex = (58);
+            this.nud_V_ETMinRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETMinRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
+            // 
+            // l_V_ETMinRPM_Min
+            // 
+            this.l_V_ETMinRPM_Min.AutoSize = (true);
+            this.l_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(411, 16));
+            this.l_V_ETMinRPM_Min.Name = ("l_V_ETMinRPM_Min");
+            this.l_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_ETMinRPM_Min.TabIndex = (59);
+            this.l_V_ETMinRPM_Min.Text = ("Minimum:");
+            // 
+            // l_V_ETMinRPM_Dec
+            // 
+            this.l_V_ETMinRPM_Dec.Location = (new global::System.Drawing.Point(169, 13));
+            this.l_V_ETMinRPM_Dec.Name = ("l_V_ETMinRPM_Dec");
+            this.l_V_ETMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_ETMinRPM_Dec.TabIndex = (62);
+            this.l_V_ETMinRPM_Dec.Text = ("If this gets set to high the vehicle will become very slow and hard to steer.");
+            this.l_V_ETMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // nud_V_ETMinRPM_Max
+            // 
+            this.nud_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(541, 34));
+            this.nud_V_ETMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_ETMinRPM_Max.Name = ("nud_V_ETMinRPM_Max");
+            this.nud_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_ETMinRPM_Max.TabIndex = (60);
+            this.nud_V_ETMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_ETMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
+            // 
+            // l_V_ETMinRPM_Max
+            // 
+            this.l_V_ETMinRPM_Max.AutoSize = (true);
+            this.l_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(541, 16));
+            this.l_V_ETMinRPM_Max.Name = ("l_V_ETMinRPM_Max");
+            this.l_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_ETMinRPM_Max.TabIndex = (61);
+            this.l_V_ETMinRPM_Max.Text = ("Maximum:");
+            // 
+            // gb_V_MinVSWE
+            // 
+            this.gb_V_MinVSWE.Controls.Add(this.cb_V_MinVSWE);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Dec);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Min);
+            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Max);
+            this.gb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 430));
+            this.gb_V_MinVSWE.Name = ("gb_V_MinVSWE");
+            this.gb_V_MinVSWE.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MinVSWE.TabIndex = (69);
+            this.gb_V_MinVSWE.TabStop = (false);
+            this.gb_V_MinVSWE.Tag = ("\tMinVehicleSpeedForWheeliesAndEndos");
+            // 
+            // cb_V_MinVSWE
+            // 
+            this.cb_V_MinVSWE.AutoSize = (true);
+            this.cb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 26));
+            this.cb_V_MinVSWE.Name = ("cb_V_MinVSWE");
+            this.cb_V_MinVSWE.Size = (new global::System.Drawing.Size(152, 19));
+            this.cb_V_MinVSWE.TabIndex = (63);
+            this.cb_V_MinVSWE.Text = ("Min Speed For Wheelies");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MinVSWE, "The average defualt is: 2");
+            this.cb_V_MinVSWE.UseVisualStyleBackColor = (true);
+            // 
+            // nud_V_MinVSWE_Min
+            // 
+            this.nud_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 32));
+            this.nud_V_MinVSWE_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Min.Name = ("nud_V_MinVSWE_Min");
+            this.nud_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MinVSWE_Min.TabIndex = (64);
+            this.nud_V_MinVSWE_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MinVSWE_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l_V_MinVSWE_Dec
+            // 
+            this.l_V_MinVSWE_Dec.Location = (new global::System.Drawing.Point(168, 11));
+            this.l_V_MinVSWE_Dec.Name = ("l_V_MinVSWE_Dec");
+            this.l_V_MinVSWE_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MinVSWE_Dec.TabIndex = (68);
+            this.l_V_MinVSWE_Dec.Text = ("Recomended to give this a higher value having it to low makes controling bike very hard.");
+            this.l_V_MinVSWE_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // l_V_MinVSWE_Min
+            // 
+            this.l_V_MinVSWE_Min.AutoSize = (true);
+            this.l_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 14));
+            this.l_V_MinVSWE_Min.Name = ("l_V_MinVSWE_Min");
+            this.l_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MinVSWE_Min.TabIndex = (65);
+            this.l_V_MinVSWE_Min.Text = ("Minimum:");
+            // 
+            // l_V_MinVSWE_Max
+            // 
+            this.l_V_MinVSWE_Max.AutoSize = (true);
+            this.l_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 14));
+            this.l_V_MinVSWE_Max.Name = ("l_V_MinVSWE_Max");
+            this.l_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l_V_MinVSWE_Max.TabIndex = (67);
+            this.l_V_MinVSWE_Max.Text = ("Maximum:");
+            // 
+            // nud_V_MinVSWE_Max
+            // 
+            this.nud_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 32));
+            this.nud_V_MinVSWE_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud_V_MinVSWE_Max.Name = ("nud_V_MinVSWE_Max");
+            this.nud_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud_V_MinVSWE_Max.TabIndex = (66);
+            this.nud_V_MinVSWE_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud_V_MinVSWE_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
+            // 
+            // gb_V_MVSEP
+            // 
+            this.gb_V_MVSEP.Controls.Add(this.cb_V_MVSEP);
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Dec);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.l__V_MVSEP_Max);
+            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Min);
+            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Max);
+            this.gb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 490));
+            this.gb_V_MVSEP.Name = ("gb_V_MVSEP");
+            this.gb_V_MVSEP.Size = (new global::System.Drawing.Size(665, 60));
+            this.gb_V_MVSEP.TabIndex = (15);
+            this.gb_V_MVSEP.TabStop = (false);
+            this.gb_V_MVSEP.Tag = ("\tMinVehicleSpeedToEjectPlayer");
+            // 
+            // cb_V_MVSEP
+            // 
+            this.cb_V_MVSEP.AutoSize = (true);
+            this.cb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 25));
+            this.cb_V_MVSEP.Name = ("cb_V_MVSEP");
+            this.cb_V_MVSEP.Size = (new global::System.Drawing.Size(160, 19));
+            this.cb_V_MVSEP.TabIndex = (69);
+            this.cb_V_MVSEP.Text = ("Min Speed To Eject Player");
+            this.tt_VehicleStats.SetToolTip(this.cb_V_MVSEP, "The average defualt is: 70");
+            this.cb_V_MVSEP.UseVisualStyleBackColor = (true);
+            // 
+            // l_V_MVSEP_Dec
+            // 
+            this.l_V_MVSEP_Dec.Location = (new global::System.Drawing.Point(168, 10));
+            this.l_V_MVSEP_Dec.Name = ("l_V_MVSEP_Dec");
+            this.l_V_MVSEP_Dec.Size = (new global::System.Drawing.Size(201, 50));
+            this.l_V_MVSEP_Dec.TabIndex = (74);
+            this.l_V_MVSEP_Dec.Text = ("Recomended to set fairly high unless you like getting thrown off bikes");
+            this.l_V_MVSEP_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
+            // 
+            // nud__V_MVSEP_Min
+            // 
+            this.nud__V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 31));
+            this.nud__V_MVSEP_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud__V_MVSEP_Min.Name = ("nud__V_MVSEP_Min");
+            this.nud__V_MVSEP_Min.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud__V_MVSEP_Min.TabIndex = (70);
+            this.nud__V_MVSEP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud__V_MVSEP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
+            // 
+            // l__V_MVSEP_Max
+            // 
+            this.l__V_MVSEP_Max.AutoSize = (true);
+            this.l__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 13));
+            this.l__V_MVSEP_Max.Name = ("l__V_MVSEP_Max");
+            this.l__V_MVSEP_Max.Size = (new global::System.Drawing.Size(65, 15));
+            this.l__V_MVSEP_Max.TabIndex = (73);
+            this.l__V_MVSEP_Max.Text = ("Maximum:");
+            // 
+            // l_V_MVSEP_Min
+            // 
+            this.l_V_MVSEP_Min.AutoSize = (true);
+            this.l_V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 13));
+            this.l_V_MVSEP_Min.Name = ("l_V_MVSEP_Min");
+            this.l_V_MVSEP_Min.Size = (new global::System.Drawing.Size(63, 15));
+            this.l_V_MVSEP_Min.TabIndex = (71);
+            this.l_V_MVSEP_Min.Text = ("Minimum:");
+            // 
+            // nud__V_MVSEP_Max
+            // 
+            this.nud__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 31));
+            this.nud__V_MVSEP_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
+            this.nud__V_MVSEP_Max.Name = ("nud__V_MVSEP_Max");
+            this.nud__V_MVSEP_Max.Size = (new global::System.Drawing.Size(86, 23));
+            this.nud__V_MVSEP_Max.TabIndex = (72);
+            this.nud__V_MVSEP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
+            this.nud__V_MVSEP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
             // 
             // gb_V_EjectSpeed
             // 
@@ -1854,662 +2490,6 @@
             this.cb_V_TopSpeed.Text = ("Vehicle Top Speed");
             this.tt_VehicleStats.SetToolTip(this.cb_V_TopSpeed, "The average defualt is: 37");
             this.cb_V_TopSpeed.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_MVSEP
-            // 
-            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Dec);
-            this.gb_V_MVSEP.Controls.Add(this.l__V_MVSEP_Max);
-            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Max);
-            this.gb_V_MVSEP.Controls.Add(this.l_V_MVSEP_Min);
-            this.gb_V_MVSEP.Controls.Add(this.nud__V_MVSEP_Min);
-            this.gb_V_MVSEP.Controls.Add(this.cb_V_MVSEP);
-            this.gb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 490));
-            this.gb_V_MVSEP.Name = ("gb_V_MVSEP");
-            this.gb_V_MVSEP.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_MVSEP.TabIndex = (13);
-            this.gb_V_MVSEP.TabStop = (false);
-            this.gb_V_MVSEP.Tag = ("\tMinVehicleSpeedToEjectPlayer");
-            // 
-            // l_V_MVSEP_Dec
-            // 
-            this.l_V_MVSEP_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_MVSEP_Dec.Name = ("l_V_MVSEP_Dec");
-            this.l_V_MVSEP_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_MVSEP_Dec.TabIndex = (7);
-            this.l_V_MVSEP_Dec.Text = ("Recomended to set fairly high unless you like getting thrown off bikes");
-            this.l_V_MVSEP_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l__V_MVSEP_Max
-            // 
-            this.l__V_MVSEP_Max.AutoSize = (true);
-            this.l__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l__V_MVSEP_Max.Name = ("l__V_MVSEP_Max");
-            this.l__V_MVSEP_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l__V_MVSEP_Max.TabIndex = (4);
-            this.l__V_MVSEP_Max.Text = ("Maximum:");
-            // 
-            // nud__V_MVSEP_Max
-            // 
-            this.nud__V_MVSEP_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud__V_MVSEP_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud__V_MVSEP_Max.Name = ("nud__V_MVSEP_Max");
-            this.nud__V_MVSEP_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud__V_MVSEP_Max.TabIndex = (3);
-            this.nud__V_MVSEP_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud__V_MVSEP_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
-            // 
-            // l_V_MVSEP_Min
-            // 
-            this.l_V_MVSEP_Min.AutoSize = (true);
-            this.l_V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_MVSEP_Min.Name = ("l_V_MVSEP_Min");
-            this.l_V_MVSEP_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_MVSEP_Min.TabIndex = (2);
-            this.l_V_MVSEP_Min.Text = ("Minimum:");
-            // 
-            // nud__V_MVSEP_Min
-            // 
-            this.nud__V_MVSEP_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud__V_MVSEP_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud__V_MVSEP_Min.Name = ("nud__V_MVSEP_Min");
-            this.nud__V_MVSEP_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud__V_MVSEP_Min.TabIndex = (1);
-            this.nud__V_MVSEP_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud__V_MVSEP_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
-            // 
-            // cb_V_MVSEP
-            // 
-            this.cb_V_MVSEP.AutoSize = (true);
-            this.cb_V_MVSEP.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_MVSEP.Name = ("cb_V_MVSEP");
-            this.cb_V_MVSEP.Size = (new global::System.Drawing.Size(160, 19));
-            this.cb_V_MVSEP.TabIndex = (0);
-            this.cb_V_MVSEP.Text = ("Min Speed To Eject Player");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_MVSEP, "The average defualt is: 70");
-            this.cb_V_MVSEP.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_MinVSWE
-            // 
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Dec);
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Max);
-            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Max);
-            this.gb_V_MinVSWE.Controls.Add(this.l_V_MinVSWE_Min);
-            this.gb_V_MinVSWE.Controls.Add(this.nud_V_MinVSWE_Min);
-            this.gb_V_MinVSWE.Controls.Add(this.cb_V_MinVSWE);
-            this.gb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 430));
-            this.gb_V_MinVSWE.Name = ("gb_V_MinVSWE");
-            this.gb_V_MinVSWE.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_MinVSWE.TabIndex = (12);
-            this.gb_V_MinVSWE.TabStop = (false);
-            this.gb_V_MinVSWE.Tag = ("\tMinVehicleSpeedForWheeliesAndEndos");
-            // 
-            // l_V_MinVSWE_Dec
-            // 
-            this.l_V_MinVSWE_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_MinVSWE_Dec.Name = ("l_V_MinVSWE_Dec");
-            this.l_V_MinVSWE_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_MinVSWE_Dec.TabIndex = (7);
-            this.l_V_MinVSWE_Dec.Text = ("Recomended to give this a higher value having it to low makes controling bike very hard.");
-            this.l_V_MinVSWE_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_MinVSWE_Max
-            // 
-            this.l_V_MinVSWE_Max.AutoSize = (true);
-            this.l_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_MinVSWE_Max.Name = ("l_V_MinVSWE_Max");
-            this.l_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_MinVSWE_Max.TabIndex = (4);
-            this.l_V_MinVSWE_Max.Text = ("Maximum:");
-            // 
-            // nud_V_MinVSWE_Max
-            // 
-            this.nud_V_MinVSWE_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_MinVSWE_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_MinVSWE_Max.Name = ("nud_V_MinVSWE_Max");
-            this.nud_V_MinVSWE_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_MinVSWE_Max.TabIndex = (3);
-            this.nud_V_MinVSWE_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_MinVSWE_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100000, 0, 0, 0 }));
-            // 
-            // l_V_MinVSWE_Min
-            // 
-            this.l_V_MinVSWE_Min.AutoSize = (true);
-            this.l_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_MinVSWE_Min.Name = ("l_V_MinVSWE_Min");
-            this.l_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_MinVSWE_Min.TabIndex = (2);
-            this.l_V_MinVSWE_Min.Text = ("Minimum:");
-            // 
-            // nud_V_MinVSWE_Min
-            // 
-            this.nud_V_MinVSWE_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_MinVSWE_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_MinVSWE_Min.Name = ("nud_V_MinVSWE_Min");
-            this.nud_V_MinVSWE_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_MinVSWE_Min.TabIndex = (1);
-            this.nud_V_MinVSWE_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_MinVSWE_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
-            // 
-            // cb_V_MinVSWE
-            // 
-            this.cb_V_MinVSWE.AutoSize = (true);
-            this.cb_V_MinVSWE.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_MinVSWE.Name = ("cb_V_MinVSWE");
-            this.cb_V_MinVSWE.Size = (new global::System.Drawing.Size(152, 19));
-            this.cb_V_MinVSWE.TabIndex = (0);
-            this.cb_V_MinVSWE.Text = ("Min Speed For Wheelies");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_MinVSWE, "The average defualt is: 2");
-            this.cb_V_MinVSWE.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_ETMinRPM
-            // 
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Dec);
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Max);
-            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Max);
-            this.gb_V_ETMinRPM.Controls.Add(this.l_V_ETMinRPM_Min);
-            this.gb_V_ETMinRPM.Controls.Add(this.nud_V_ETMinRPM_Min);
-            this.gb_V_ETMinRPM.Controls.Add(this.cb_V_ETMinRPM);
-            this.gb_V_ETMinRPM.Location = (new global::System.Drawing.Point(6, 370));
-            this.gb_V_ETMinRPM.Name = ("gb_V_ETMinRPM");
-            this.gb_V_ETMinRPM.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_ETMinRPM.TabIndex = (11);
-            this.gb_V_ETMinRPM.TabStop = (false);
-            this.gb_V_ETMinRPM.Tag = ("\tEngine_TorqueFactorAtMinRPM");
-            // 
-            // l_V_ETMinRPM_Dec
-            // 
-            this.l_V_ETMinRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_ETMinRPM_Dec.Name = ("l_V_ETMinRPM_Dec");
-            this.l_V_ETMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_ETMinRPM_Dec.TabIndex = (7);
-            this.l_V_ETMinRPM_Dec.Text = ("If this gets set to high the vehicle will become very slow and hard to steer.");
-            this.l_V_ETMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_ETMinRPM_Max
-            // 
-            this.l_V_ETMinRPM_Max.AutoSize = (true);
-            this.l_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_ETMinRPM_Max.Name = ("l_V_ETMinRPM_Max");
-            this.l_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_ETMinRPM_Max.TabIndex = (4);
-            this.l_V_ETMinRPM_Max.Text = ("Maximum:");
-            // 
-            // nud_V_ETMinRPM_Max
-            // 
-            this.nud_V_ETMinRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_ETMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_ETMinRPM_Max.Name = ("nud_V_ETMinRPM_Max");
-            this.nud_V_ETMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_ETMinRPM_Max.TabIndex = (3);
-            this.nud_V_ETMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ETMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
-            // 
-            // l_V_ETMinRPM_Min
-            // 
-            this.l_V_ETMinRPM_Min.AutoSize = (true);
-            this.l_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_ETMinRPM_Min.Name = ("l_V_ETMinRPM_Min");
-            this.l_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_ETMinRPM_Min.TabIndex = (2);
-            this.l_V_ETMinRPM_Min.Text = ("Minimum:");
-            // 
-            // nud_V_ETMinRPM_Min
-            // 
-            this.nud_V_ETMinRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_ETMinRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_ETMinRPM_Min.Name = ("nud_V_ETMinRPM_Min");
-            this.nud_V_ETMinRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_ETMinRPM_Min.TabIndex = (1);
-            this.nud_V_ETMinRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ETMinRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_V_ETMinRPM
-            // 
-            this.cb_V_ETMinRPM.AutoSize = (true);
-            this.cb_V_ETMinRPM.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_ETMinRPM.Name = ("cb_V_ETMinRPM");
-            this.cb_V_ETMinRPM.Size = (new global::System.Drawing.Size(137, 19));
-            this.cb_V_ETMinRPM.TabIndex = (0);
-            this.cb_V_ETMinRPM.Text = ("Torque Factor At Min");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ETMinRPM, "The average defualt is: 0.77");
-            this.cb_V_ETMinRPM.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_ETFMaxRPM
-            // 
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Dec);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Max);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.l_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.nud_V_ETFMaxRPM_Min);
-            this.gb_V_ETFMaxRPM.Controls.Add(this.cb_V_ETFMaxRPM);
-            this.gb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 310));
-            this.gb_V_ETFMaxRPM.Name = ("gb_V_ETFMaxRPM");
-            this.gb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_ETFMaxRPM.TabIndex = (10);
-            this.gb_V_ETFMaxRPM.TabStop = (false);
-            this.gb_V_ETFMaxRPM.Tag = ("\tEngine_TorqueFactorAtMaxRPM");
-            // 
-            // l_V_ETFMaxRPM_Dec
-            // 
-            this.l_V_ETFMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_ETFMaxRPM_Dec.Name = ("l_V_ETFMaxRPM_Dec");
-            this.l_V_ETFMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_ETFMaxRPM_Dec.TabIndex = (7);
-            this.l_V_ETFMaxRPM_Dec.Text = ("Will greatly increase the vehicles speed the higher you set.");
-            this.l_V_ETFMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_ETFMaxRPM_Max
-            // 
-            this.l_V_ETFMaxRPM_Max.AutoSize = (true);
-            this.l_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_ETFMaxRPM_Max.Name = ("l_V_ETFMaxRPM_Max");
-            this.l_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_ETFMaxRPM_Max.TabIndex = (4);
-            this.l_V_ETFMaxRPM_Max.Text = ("Maximum:");
-            // 
-            // nud_V_ETFMaxRPM_Max
-            // 
-            this.nud_V_ETFMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_ETFMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_ETFMaxRPM_Max.Name = ("nud_V_ETFMaxRPM_Max");
-            this.nud_V_ETFMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_ETFMaxRPM_Max.TabIndex = (3);
-            this.nud_V_ETFMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ETFMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
-            // 
-            // l_V_ETFMaxRPM_Min
-            // 
-            this.l_V_ETFMaxRPM_Min.AutoSize = (true);
-            this.l_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_ETFMaxRPM_Min.Name = ("l_V_ETFMaxRPM_Min");
-            this.l_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_ETFMaxRPM_Min.TabIndex = (2);
-            this.l_V_ETFMaxRPM_Min.Text = ("Minimum:");
-            // 
-            // nud_V_ETFMaxRPM_Min
-            // 
-            this.nud_V_ETFMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_ETFMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_ETFMaxRPM_Min.Name = ("nud_V_ETFMaxRPM_Min");
-            this.nud_V_ETFMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_ETFMaxRPM_Min.TabIndex = (1);
-            this.nud_V_ETFMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_ETFMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 1, 0, 0, 0 }));
-            // 
-            // cb_V_ETFMaxRPM
-            // 
-            this.cb_V_ETFMaxRPM.AutoSize = (true);
-            this.cb_V_ETFMaxRPM.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_ETFMaxRPM.Name = ("cb_V_ETFMaxRPM");
-            this.cb_V_ETFMaxRPM.Size = (new global::System.Drawing.Size(142, 19));
-            this.cb_V_ETFMaxRPM.TabIndex = (0);
-            this.cb_V_ETFMaxRPM.Text = ("Torque Factor At Max ");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_ETFMaxRPM, "The average defualt is: 0.79");
-            this.cb_V_ETFMaxRPM.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_EORPM
-            // 
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Dec);
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Max);
-            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Max);
-            this.gb_V_EORPM.Controls.Add(this.l_V_EORPM_Min);
-            this.gb_V_EORPM.Controls.Add(this.nud_V_EORPM_Min);
-            this.gb_V_EORPM.Controls.Add(this.cb_V_EORPM);
-            this.gb_V_EORPM.Location = (new global::System.Drawing.Point(6, 250));
-            this.gb_V_EORPM.Name = ("gb_V_EORPM");
-            this.gb_V_EORPM.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_EORPM.TabIndex = (9);
-            this.gb_V_EORPM.TabStop = (false);
-            this.gb_V_EORPM.Tag = ("\tEngine_OptRPM");
-            // 
-            // l_V_EORPM_Dec
-            // 
-            this.l_V_EORPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_EORPM_Dec.Name = ("l_V_EORPM_Dec");
-            this.l_V_EORPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_EORPM_Dec.TabIndex = (7);
-            this.l_V_EORPM_Dec.Text = ("Give increased speed while keeping some control when set high.");
-            this.l_V_EORPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_EORPM_Max
-            // 
-            this.l_V_EORPM_Max.AutoSize = (true);
-            this.l_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_EORPM_Max.Name = ("l_V_EORPM_Max");
-            this.l_V_EORPM_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_EORPM_Max.TabIndex = (4);
-            this.l_V_EORPM_Max.Text = ("Maximum:");
-            // 
-            // nud_V_EORPM_Max
-            // 
-            this.nud_V_EORPM_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_EORPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EORPM_Max.Name = ("nud_V_EORPM_Max");
-            this.nud_V_EORPM_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EORPM_Max.TabIndex = (3);
-            this.nud_V_EORPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EORPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
-            // 
-            // l_V_EORPM_Min
-            // 
-            this.l_V_EORPM_Min.AutoSize = (true);
-            this.l_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_EORPM_Min.Name = ("l_V_EORPM_Min");
-            this.l_V_EORPM_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_EORPM_Min.TabIndex = (2);
-            this.l_V_EORPM_Min.Text = ("Minimum:");
-            // 
-            // nud_V_EORPM_Min
-            // 
-            this.nud_V_EORPM_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_EORPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EORPM_Min.Name = ("nud_V_EORPM_Min");
-            this.nud_V_EORPM_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EORPM_Min.TabIndex = (1);
-            this.nud_V_EORPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EORPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3473, 0, 0, 0 }));
-            // 
-            // cb_V_EORPM
-            // 
-            this.cb_V_EORPM.AutoSize = (true);
-            this.cb_V_EORPM.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_EORPM.Name = ("cb_V_EORPM");
-            this.cb_V_EORPM.Size = (new global::System.Drawing.Size(117, 19));
-            this.cb_V_EORPM.TabIndex = (0);
-            this.cb_V_EORPM.Text = ("Vehicle Opt RPM:");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EORPM, "The average defualt is: 3473");
-            this.cb_V_EORPM.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_EMinRPM
-            // 
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Dec);
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_Max);
-            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_Max);
-            this.gb_V_EMinRPM.Controls.Add(this.l_V_EMinRPM_min);
-            this.gb_V_EMinRPM.Controls.Add(this.nud_V_EMinRPM_min);
-            this.gb_V_EMinRPM.Controls.Add(this.cb_V_EMinRPM);
-            this.gb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 130));
-            this.gb_V_EMinRPM.Name = ("gb_V_EMinRPM");
-            this.gb_V_EMinRPM.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_EMinRPM.TabIndex = (9);
-            this.gb_V_EMinRPM.TabStop = (false);
-            this.gb_V_EMinRPM.Tag = ("\tEngine_MinRPM");
-            // 
-            // l_V_EMinRPM_Dec
-            // 
-            this.l_V_EMinRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_EMinRPM_Dec.Name = ("l_V_EMinRPM_Dec");
-            this.l_V_EMinRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_EMinRPM_Dec.TabIndex = (7);
-            this.l_V_EMinRPM_Dec.Text = ("Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.");
-            this.l_V_EMinRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_EMinRPM_Max
-            // 
-            this.l_V_EMinRPM_Max.AutoSize = (true);
-            this.l_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_EMinRPM_Max.Name = ("l_V_EMinRPM_Max");
-            this.l_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_EMinRPM_Max.TabIndex = (4);
-            this.l_V_EMinRPM_Max.Text = ("Maximum:");
-            // 
-            // nud_V_EMinRPM_Max
-            // 
-            this.nud_V_EMinRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_EMinRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMinRPM_Max.Name = ("nud_V_EMinRPM_Max");
-            this.nud_V_EMinRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMinRPM_Max.TabIndex = (3);
-            this.nud_V_EMinRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMinRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 5000, 0, 0, 0 }));
-            // 
-            // l_V_EMinRPM_min
-            // 
-            this.l_V_EMinRPM_min.AutoSize = (true);
-            this.l_V_EMinRPM_min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_EMinRPM_min.Name = ("l_V_EMinRPM_min");
-            this.l_V_EMinRPM_min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_EMinRPM_min.TabIndex = (2);
-            this.l_V_EMinRPM_min.Text = ("Minimum:");
-            // 
-            // nud_V_EMinRPM_min
-            // 
-            this.nud_V_EMinRPM_min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_EMinRPM_min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMinRPM_min.Name = ("nud_V_EMinRPM_min");
-            this.nud_V_EMinRPM_min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMinRPM_min.TabIndex = (1);
-            this.nud_V_EMinRPM_min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMinRPM_min.Value = (new global::System.Decimal(new global::System.Int32[] { 885, 0, 0, 0 }));
-            // 
-            // cb_V_EMinRPM
-            // 
-            this.cb_V_EMinRPM.AutoSize = (true);
-            this.cb_V_EMinRPM.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_EMinRPM.Name = ("cb_V_EMinRPM");
-            this.cb_V_EMinRPM.Size = (new global::System.Drawing.Size(115, 19));
-            this.cb_V_EMinRPM.TabIndex = (0);
-            this.cb_V_EMinRPM.Text = ("Vehicle Min RPM");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMinRPM, "The average defualt is: 885");
-            this.cb_V_EMinRPM.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_EMT
-            // 
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Dec);
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Max);
-            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Max);
-            this.gb_V_EMT.Controls.Add(this.l_V_EMT_Min);
-            this.gb_V_EMT.Controls.Add(this.nud_V_EMT_Min);
-            this.gb_V_EMT.Controls.Add(this.cb_V_EMT);
-            this.gb_V_EMT.Location = (new global::System.Drawing.Point(6, 190));
-            this.gb_V_EMT.Name = ("gb_V_EMT");
-            this.gb_V_EMT.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_EMT.TabIndex = (8);
-            this.gb_V_EMT.TabStop = (false);
-            this.gb_V_EMT.Tag = ("\tEngine_MaxTorque");
-            // 
-            // l_V_EMT_Dec
-            // 
-            this.l_V_EMT_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_EMT_Dec.Name = ("l_V_EMT_Dec");
-            this.l_V_EMT_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_EMT_Dec.TabIndex = (7);
-            this.l_V_EMT_Dec.Text = ("Similar to max rpm but with a little less control and bit more kick.");
-            this.l_V_EMT_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_EMT_Max
-            // 
-            this.l_V_EMT_Max.AutoSize = (true);
-            this.l_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_EMT_Max.Name = ("l_V_EMT_Max");
-            this.l_V_EMT_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_EMT_Max.TabIndex = (4);
-            this.l_V_EMT_Max.Text = ("Maximum:");
-            // 
-            // nud_V_EMT_Max
-            // 
-            this.nud_V_EMT_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_EMT_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMT_Max.Name = ("nud_V_EMT_Max");
-            this.nud_V_EMT_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMT_Max.TabIndex = (3);
-            this.nud_V_EMT_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMT_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 1000, 0, 0, 0 }));
-            // 
-            // l_V_EMT_Min
-            // 
-            this.l_V_EMT_Min.AutoSize = (true);
-            this.l_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_EMT_Min.Name = ("l_V_EMT_Min");
-            this.l_V_EMT_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_EMT_Min.TabIndex = (2);
-            this.l_V_EMT_Min.Text = ("Minimum:");
-            // 
-            // nud_V_EMT_Min
-            // 
-            this.nud_V_EMT_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_EMT_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMT_Min.Name = ("nud_V_EMT_Min");
-            this.nud_V_EMT_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMT_Min.TabIndex = (1);
-            this.nud_V_EMT_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMT_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 100, 0, 0, 0 }));
-            // 
-            // cb_V_EMT
-            // 
-            this.cb_V_EMT.AutoSize = (true);
-            this.cb_V_EMT.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_EMT.Name = ("cb_V_EMT");
-            this.cb_V_EMT.Size = (new global::System.Drawing.Size(131, 19));
-            this.cb_V_EMT.TabIndex = (0);
-            this.cb_V_EMT.Text = ("Vehicle Max Torque:");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMT, "The average defualt is: 100");
-            this.cb_V_EMT.UseVisualStyleBackColor = (true);
-            // 
-            // gb_V_EMaxRPM
-            // 
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Dec);
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Max);
-            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Max);
-            this.gb_V_EMaxRPM.Controls.Add(this.l_V_EMaxRPM_Min);
-            this.gb_V_EMaxRPM.Controls.Add(this.nud_V_EMaxRPM_Min);
-            this.gb_V_EMaxRPM.Controls.Add(this.cb_V_EMaxRPM);
-            this.gb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 70));
-            this.gb_V_EMaxRPM.Name = ("gb_V_EMaxRPM");
-            this.gb_V_EMaxRPM.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_V_EMaxRPM.TabIndex = (3);
-            this.gb_V_EMaxRPM.TabStop = (false);
-            this.gb_V_EMaxRPM.Tag = ("\tEngine_MaxRPM");
-            // 
-            // l_V_EMaxRPM_Dec
-            // 
-            this.l_V_EMaxRPM_Dec.Location = (new global::System.Drawing.Point(168, 10));
-            this.l_V_EMaxRPM_Dec.Name = ("l_V_EMaxRPM_Dec");
-            this.l_V_EMaxRPM_Dec.Size = (new global::System.Drawing.Size(201, 50));
-            this.l_V_EMaxRPM_Dec.TabIndex = (7);
-            this.l_V_EMaxRPM_Dec.Text = ("One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.");
-            this.l_V_EMaxRPM_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_EMaxRPM_Max
-            // 
-            this.l_V_EMaxRPM_Max.AutoSize = (true);
-            this.l_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_EMaxRPM_Max.Name = ("l_V_EMaxRPM_Max");
-            this.l_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_EMaxRPM_Max.TabIndex = (4);
-            this.l_V_EMaxRPM_Max.Text = ("Maximum:");
-            // 
-            // nud_V_EMaxRPM_Max
-            // 
-            this.nud_V_EMaxRPM_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_EMaxRPM_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMaxRPM_Max.Name = ("nud_V_EMaxRPM_Max");
-            this.nud_V_EMaxRPM_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMaxRPM_Max.TabIndex = (3);
-            this.nud_V_EMaxRPM_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMaxRPM_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10000, 0, 0, 0 }));
-            // 
-            // l_V_EMaxRPM_Min
-            // 
-            this.l_V_EMaxRPM_Min.AutoSize = (true);
-            this.l_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_EMaxRPM_Min.Name = ("l_V_EMaxRPM_Min");
-            this.l_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_EMaxRPM_Min.TabIndex = (2);
-            this.l_V_EMaxRPM_Min.Text = ("Minimum:");
-            // 
-            // nud_V_EMaxRPM_Min
-            // 
-            this.nud_V_EMaxRPM_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_EMaxRPM_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_EMaxRPM_Min.Name = ("nud_V_EMaxRPM_Min");
-            this.nud_V_EMaxRPM_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_EMaxRPM_Min.TabIndex = (1);
-            this.nud_V_EMaxRPM_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_EMaxRPM_Min.Value = (new global::System.Decimal(new global::System.Int32[] { 3550, 0, 0, 0 }));
-            // 
-            // cb_V_EMaxRPM
-            // 
-            this.cb_V_EMaxRPM.AutoSize = (true);
-            this.cb_V_EMaxRPM.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_V_EMaxRPM.Name = ("cb_V_EMaxRPM");
-            this.cb_V_EMaxRPM.Size = (new global::System.Drawing.Size(120, 19));
-            this.cb_V_EMaxRPM.TabIndex = (0);
-            this.cb_V_EMaxRPM.Text = ("Vehicle Max RPM:");
-            this.tt_VehicleStats.SetToolTip(this.cb_V_EMaxRPM, "The average defualt is: 3550");
-            this.cb_V_EMaxRPM.UseVisualStyleBackColor = (true);
-            // 
-            // gb_AirDensity
-            // 
-            this.gb_AirDensity.Controls.Add(this.l_V_AD_Dec);
-            this.gb_AirDensity.Controls.Add(this.l_V_AD_max);
-            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Max);
-            this.gb_AirDensity.Controls.Add(this.l_V_AD_min);
-            this.gb_AirDensity.Controls.Add(this.nud_V_AD_Min);
-            this.gb_AirDensity.Controls.Add(this.cb_AirDensity);
-            this.gb_AirDensity.Location = (new global::System.Drawing.Point(6, 10));
-            this.gb_AirDensity.Name = ("gb_AirDensity");
-            this.gb_AirDensity.Size = (new global::System.Drawing.Size(665, 60));
-            this.gb_AirDensity.TabIndex = (2);
-            this.gb_AirDensity.TabStop = (false);
-            this.gb_AirDensity.Tag = ("\tAirDensity");
-            // 
-            // l_V_AD_Dec
-            // 
-            this.l_V_AD_Dec.Location = (new global::System.Drawing.Point(138, 10));
-            this.l_V_AD_Dec.Name = ("l_V_AD_Dec");
-            this.l_V_AD_Dec.Size = (new global::System.Drawing.Size(231, 50));
-            this.l_V_AD_Dec.TabIndex = (7);
-            this.l_V_AD_Dec.Text = ("Controls how much air resistance there is for the vehicle. The lower the less air resistance.");
-            this.l_V_AD_Dec.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
-            // 
-            // l_V_AD_max
-            // 
-            this.l_V_AD_max.AutoSize = (true);
-            this.l_V_AD_max.Location = (new global::System.Drawing.Point(540, 13));
-            this.l_V_AD_max.Name = ("l_V_AD_max");
-            this.l_V_AD_max.Size = (new global::System.Drawing.Size(65, 15));
-            this.l_V_AD_max.TabIndex = (4);
-            this.l_V_AD_max.Text = ("Maximum:");
-            // 
-            // nud_V_AD_Max
-            // 
-            this.nud_V_AD_Max.Location = (new global::System.Drawing.Point(540, 31));
-            this.nud_V_AD_Max.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_AD_Max.Name = ("nud_V_AD_Max");
-            this.nud_V_AD_Max.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_AD_Max.TabIndex = (3);
-            this.nud_V_AD_Max.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            this.nud_V_AD_Max.Value = (new global::System.Decimal(new global::System.Int32[] { 10, 0, 0, 0 }));
-            // 
-            // l_V_AD_min
-            // 
-            this.l_V_AD_min.AutoSize = (true);
-            this.l_V_AD_min.Location = (new global::System.Drawing.Point(410, 13));
-            this.l_V_AD_min.Name = ("l_V_AD_min");
-            this.l_V_AD_min.Size = (new global::System.Drawing.Size(63, 15));
-            this.l_V_AD_min.TabIndex = (2);
-            this.l_V_AD_min.Text = ("Minimum:");
-            // 
-            // nud_V_AD_Min
-            // 
-            this.nud_V_AD_Min.Location = (new global::System.Drawing.Point(410, 31));
-            this.nud_V_AD_Min.Maximum = (new global::System.Decimal(new global::System.Int32[] { 10000000, 0, 0, 0 }));
-            this.nud_V_AD_Min.Name = ("nud_V_AD_Min");
-            this.nud_V_AD_Min.Size = (new global::System.Drawing.Size(86, 23));
-            this.nud_V_AD_Min.TabIndex = (1);
-            this.nud_V_AD_Min.TextAlign = (global::System.Windows.Forms.HorizontalAlignment.Center);
-            // 
-            // cb_AirDensity
-            // 
-            this.cb_AirDensity.AutoSize = (true);
-            this.cb_AirDensity.Location = (new global::System.Drawing.Point(6, 25));
-            this.cb_AirDensity.Name = ("cb_AirDensity");
-            this.cb_AirDensity.Size = (new global::System.Drawing.Size(126, 19));
-            this.cb_AirDensity.TabIndex = (0);
-            this.cb_AirDensity.Text = ("Vehicle Air Density:");
-            this.tt_VehicleStats.SetToolTip(this.cb_AirDensity, "The average defualt is: 0.7");
-            this.cb_AirDensity.UseVisualStyleBackColor = (true);
             // 
             // tp_NPC
             // 
@@ -5593,11 +5573,22 @@
             this.clb_US_FireArms.Size = (new global::System.Drawing.Size(325, 396));
             this.clb_US_FireArms.TabIndex = (6);
             // 
+            // l_SafeMode_Text
+            // 
+            this.l_SafeMode_Text.AutoSize = (true);
+            this.l_SafeMode_Text.Font = (new global::System.Drawing.Font("Segoe UI", 12F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            this.l_SafeMode_Text.ForeColor = (global::System.Drawing.Color.Green);
+            this.l_SafeMode_Text.Location = (new global::System.Drawing.Point(573, 30));
+            this.l_SafeMode_Text.Name = ("l_SafeMode_Text");
+            this.l_SafeMode_Text.Size = (new global::System.Drawing.Size(158, 21));
+            this.l_SafeMode_Text.TabIndex = (24);
+            this.l_SafeMode_Text.Text = ("Safe mode is enabled");
+            // 
             // F_ItemRandomiser
             // 
-            this.AutoScaleDimensions = (new global::System.Drawing.SizeF(7F, 15F));
-            this.AutoScaleMode = (global::System.Windows.Forms.AutoScaleMode.Font);
+            this.AutoScaleMode = (global::System.Windows.Forms.AutoScaleMode.None);
             this.ClientSize = (new global::System.Drawing.Size(750, 534));
+            this.Controls.Add(this.l_SafeMode_Text);
             this.Controls.Add(this.tc_TabWindows);
             this.Controls.Add(this.menuStrip1);
             this.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
@@ -5629,13 +5620,48 @@
             this.tp_Special.ResumeLayout(false);
             this.tp_Vehicles.ResumeLayout(false);
             this.tp_Search.ResumeLayout(false);
-            ((global::System.ComponentModel.ISupportInitialize)(this.levelsLinesBindingSource)).EndInit();
             this.tc_TabWindows.ResumeLayout(false);
             this.tp_WItemRandom.ResumeLayout(false);
             this.tp_WItemRandom.PerformLayout();
             this.tp_WitemsStats.ResumeLayout(false);
             this.tc_itemStats.ResumeLayout(false);
             this.tp_VehicleStats.ResumeLayout(false);
+            this.gb_AirDensity.ResumeLayout(false);
+            this.gb_AirDensity.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).EndInit();
+            this.gb_V_EMaxRPM.ResumeLayout(false);
+            this.gb_V_EMaxRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).EndInit();
+            this.gb_V_EMinRPM.ResumeLayout(false);
+            this.gb_V_EMinRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).EndInit();
+            this.gb_V_EMT.ResumeLayout(false);
+            this.gb_V_EMT.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).EndInit();
+            this.gb_V_EORPM.ResumeLayout(false);
+            this.gb_V_EORPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
+            this.gb_V_ETFMaxRPM.ResumeLayout(false);
+            this.gb_V_ETFMaxRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
+            this.gb_V_ETMinRPM.ResumeLayout(false);
+            this.gb_V_ETMinRPM.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).EndInit();
+            this.gb_V_MinVSWE.ResumeLayout(false);
+            this.gb_V_MinVSWE.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).EndInit();
+            this.gb_V_MVSEP.ResumeLayout(false);
+            this.gb_V_MVSEP.PerformLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).EndInit();
             this.gb_V_EjectSpeed.ResumeLayout(false);
             this.gb_V_EjectSpeed.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EjectSpeed_Max)).EndInit();
@@ -5664,42 +5690,6 @@
             this.gb_V_TopSpeed.PerformLayout();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Max)).EndInit();
             ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_TopSpeed_Min)).EndInit();
-            this.gb_V_MVSEP.ResumeLayout(false);
-            this.gb_V_MVSEP.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud__V_MVSEP_Min)).EndInit();
-            this.gb_V_MinVSWE.ResumeLayout(false);
-            this.gb_V_MinVSWE.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_MinVSWE_Min)).EndInit();
-            this.gb_V_ETMinRPM.ResumeLayout(false);
-            this.gb_V_ETMinRPM.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETMinRPM_Min)).EndInit();
-            this.gb_V_ETFMaxRPM.ResumeLayout(false);
-            this.gb_V_ETFMaxRPM.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_ETFMaxRPM_Min)).EndInit();
-            this.gb_V_EORPM.ResumeLayout(false);
-            this.gb_V_EORPM.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EORPM_Min)).EndInit();
-            this.gb_V_EMinRPM.ResumeLayout(false);
-            this.gb_V_EMinRPM.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMinRPM_min)).EndInit();
-            this.gb_V_EMT.ResumeLayout(false);
-            this.gb_V_EMT.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMT_Min)).EndInit();
-            this.gb_V_EMaxRPM.ResumeLayout(false);
-            this.gb_V_EMaxRPM.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_EMaxRPM_Min)).EndInit();
-            this.gb_AirDensity.ResumeLayout(false);
-            this.gb_AirDensity.PerformLayout();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Max)).EndInit();
-            ((global::System.ComponentModel.ISupportInitialize)(this.nud_V_AD_Min)).EndInit();
             this.tp_NPC.ResumeLayout(false);
             this.gb_NPC_SURV_PerKMH.ResumeLayout(false);
             this.gb_NPC_SURV_PerKMH.PerformLayout();
@@ -5874,8 +5864,6 @@
         private ToolStripMenuItem tsm_PH;
         private ToolStripMenuItem tsm_Options;
         private ToolStripMenuItem tsm_Quit;
-        private ToolStripMenuItem tsm_Backup;
-        private ToolStripMenuItem tsm_About;
         private TabControl tc_Items;
         private TabPage tp_BasicCombo;
         private CheckedListBox clb_BasicCombo;
@@ -5922,260 +5910,66 @@
         private FolderBrowserDialog fbd_DataFileFolder;
         private TextBox tb_ItemsSearch;
         private TabPage tp_Search;
-        private BindingSource levelsLinesBindingSource;
         private CheckedListBox clb_SearchResults;
-        private TabControl tc_itemStats;
-        private TabPage tp_VehicleStats;
-        private GroupBox gb_AirDensity;
-        private Label l_V_AD_max;
-        private NumericUpDown nud_V_AD_Max;
-        private Label l_V_AD_min;
-        private NumericUpDown nud_V_AD_Min;
-        private CheckBox cb_AirDensity;
-        private Label l_V_AD_Dec;
         private ToolTip tt_VehicleStats;
-        private GroupBox gb_V_EMaxRPM;
-        private Label l_V_EMaxRPM_Dec;
-        private Label l_V_EMaxRPM_Max;
-        private NumericUpDown nud_V_EMaxRPM_Max;
-        private Label l_V_EMaxRPM_Min;
-        private NumericUpDown nud_V_EMaxRPM_Min;
-        private CheckBox cb_V_EMaxRPM;
-        private GroupBox gb_V_EMT;
-        private Label l_V_EMT_Dec;
-        private Label l_V_EMT_Max;
-        private NumericUpDown nud_V_EMT_Max;
-        private Label l_V_EMT_Min;
-        private NumericUpDown nud_V_EMT_Min;
-        private CheckBox cb_V_EMT;
-        private GroupBox gb_V_EMinRPM;
-        private Label l_V_EMinRPM_Dec;
-        private Label l_V_EMinRPM_Max;
-        private NumericUpDown nud_V_EMinRPM_Max;
-        private Label l_V_EMinRPM_min;
-        private NumericUpDown nud_V_EMinRPM_min;
-        private CheckBox cb_V_EMinRPM;
-        private GroupBox gb_V_EORPM;
-        private Label l_V_EORPM_Dec;
-        private Label l_V_EORPM_Max;
-        private NumericUpDown nud_V_EORPM_Max;
-        private Label l_V_EORPM_Min;
-        private NumericUpDown nud_V_EORPM_Min;
-        private CheckBox cb_V_EORPM;
-        private GroupBox gb_V_ETFMaxRPM;
-        private Label l_V_ETFMaxRPM_Dec;
-        private Label l_V_ETFMaxRPM_Max;
-        private NumericUpDown nud_V_ETFMaxRPM_Max;
-        private Label l_V_ETFMaxRPM_Min;
-        private NumericUpDown nud_V_ETFMaxRPM_Min;
-        private CheckBox cb_V_ETFMaxRPM;
         private Button bt_ItenStatsSet;
-        private GroupBox gb_V_ETMinRPM;
-        private Label l_V_ETMinRPM_Dec;
-        private Label l_V_ETMinRPM_Max;
-        private NumericUpDown nud_V_ETMinRPM_Max;
-        private Label l_V_ETMinRPM_Min;
-        private NumericUpDown nud_V_ETMinRPM_Min;
-        private CheckBox cb_V_ETMinRPM;
-        private GroupBox gb_V_MinVSWE;
-        private Label l_V_MinVSWE_Dec;
-        private Label l_V_MinVSWE_Max;
-        private NumericUpDown nud_V_MinVSWE_Max;
-        private Label l_V_MinVSWE_Min;
-        private NumericUpDown nud_V_MinVSWE_Min;
-        private CheckBox cb_V_MinVSWE;
-        private GroupBox gb_V_TopSpeed;
-        private Label l_V_TopSpeed_Dec;
-        private Label l_V_TopSpeed_Max;
-        private NumericUpDown nud_V_TopSpeed_Max;
-        private Label l_V_TopSpeed_Min;
-        private NumericUpDown nud_V_TopSpeed_Min;
-        private CheckBox cb_V_TopSpeed;
-        private GroupBox gb_V_MVSEP;
-        private Label l_V_MVSEP_Dec;
-        private Label l__V_MVSEP_Max;
-        private NumericUpDown nud__V_MVSEP_Max;
-        private Label l_V_MVSEP_Min;
-        private NumericUpDown nud__V_MVSEP_Min;
-        private CheckBox cb_V_MVSEP;
-        private GroupBox gb_V_ExtraTorque;
-        private Label l_V_ExtraTorque_Dec;
-        private Label l_V_ExtraTorque_Max;
-        private NumericUpDown nud_V_ExtraTorque_Max;
-        private Label l_V_ExtraTorque_Min;
-        private NumericUpDown nud_V_ExtraTorque_Min;
-        private CheckBox cb_V_ExtraTorque;
-        private GroupBox gb_V_InitialSpeed;
-        private Label l_V_InitialSpeed_Dec;
-        private Label l_V_InitialSpeed_Max;
-        private NumericUpDown nud_V_InitialSpeed_Max;
-        private Label l_V_InitialSpeed_Min;
-        private NumericUpDown nud_V_InitialSpeed_Min;
-        private CheckBox cb_V_InitialSpeed;
-        private GroupBox gb_V_MaxRotationSpeed;
-        private Label l_V_MaxRotationSpeed_Dec;
-        private Label l_V_MaxRotationSpeed_Max;
-        private NumericUpDown nud_V_MaxRotationSpeed_Max;
-        private Label l_V_MaxRotationSpeed_Min;
-        private NumericUpDown nud_V_MaxRotationSpeed_Min;
-        private CheckBox cb_V_MaxRotationSpeed;
-        private GroupBox gb_V_MaxRideSpeed;
-        private Label l_V_MaxRideSpeed_Dec;
-        private Label l_V_MaxRideSpeed_Max;
-        private NumericUpDown nud_V_MaxRideSpeed_Max;
-        private Label l_V_MaxRideSpeed_Min;
-        private NumericUpDown nud_V_MaxRideSpeed_Min;
-        private CheckBox cb_V_MaxRideSpeed;
-        private GroupBox gb_V_RotateSpeed;
-        private Label l_V_RotateSpeed_Dec;
-        private Label l_V_RotateSpeed_Max;
-        private NumericUpDown nud_V_RotateSpeed_Max;
-        private Label l_V_RotateSpeed_Min;
-        private NumericUpDown nud_V_RotateSpeed_Min;
-        private CheckBox cb_V_RotateSpeed;
-        private TabPage tp_NPC;
-        private GroupBox gb_NPC_FlatBossDam;
-        private Label l_NPC_FlatBoss_Dec;
-        private Label l_NPC_FlatBoss_Max;
-        private NumericUpDown nud_NPC_FlatBoss_Max;
-        private Label l_NPC_FlatBoss_Min;
-        private NumericUpDown nud_NPC_FlatBoss_Min;
-        private CheckBox cb_NPC_FlatBoss;
-        private GroupBox gb_NPC_DamPerKMH;
-        private Label l_NPC_DamPerKMH_Dec;
-        private Label l_NPC_DamPerKMH_Max;
-        private NumericUpDown nud_NPC_DamPerKMH_Max;
-        private Label l_NPC_DamPerKMH_Min;
-        private NumericUpDown nud_NPC_DamPerKMH_Min;
-        private CheckBox cb_NPC_DamPerKMH;
-        private GroupBox gb_NPC_MSDBoss;
-        private Label l_NPC_MSDBoss_Dec;
-        private Label l_NPC_MSDBoss_Max;
-        private NumericUpDown nud_NPC_MSDBoss_Max;
-        private Label l_NPC_MSDBoss_Min;
-        private NumericUpDown nud_NPC_MSDBoss_Min;
-        private CheckBox cb_NPC_MSDBoss;
-        private GroupBox gb_NPC_HealthAmount;
-        private Label l_NPC_HealthAmount_Dec;
-        private Label l_NPC_HealthAmount_Max;
-        private NumericUpDown nud_NPC_HealthAmount_Max;
-        private Label l_NPC_HealthAmount_Min;
-        private NumericUpDown nud_NPC_HealthAmount_Min;
-        private CheckBox cb_NPC_HealthAmount;
-        private GroupBox gb_NPC_Max_PP;
-        private Label l_NPC_Max_PP_Dec;
-        private Label l_NPC_Max_PP_Max;
-        private NumericUpDown nud_NPC_Max_PP_Max;
-        private Label l_NPC_Max_PP_Min;
-        private NumericUpDown nud_NPC_Max_PP_Min;
-        private CheckBox cb_NPC_Max_PP;
-        private TabPage tp_FireArms;
-        private GroupBox gb_FA_BaseBullDam;
-        private Label l_FA_BaseBullDam_Dec;
-        private Label l_FA_BaseBullDam_Max;
-        private NumericUpDown nud_FA_BaseBullDam_Max;
-        private Label l_FA_BaseBullDam_Min;
-        private NumericUpDown nud_FA_BaseBullDam_Min;
-        private CheckBox cb_FA_BaseBullDam;
-        private GroupBox gb_FA_FireRate;
-        private Label l_FA_FireRate_Dec;
-        private Label l_FA_FireRate_Max;
-        private NumericUpDown nud_FA_FireRate_Max;
-        private Label l_FA_FireRate_Min;
-        private NumericUpDown nud_FA_FireRate_Min;
-        private CheckBox cb_FA_FireRate;
-        private global::System.Windows.Forms.GroupBox gb_FA_BulletRange;
-        private global::System.Windows.Forms.Label l_FA_BulletRange_Dec;
-        private global::System.Windows.Forms.Label l_FA_BulletRange_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Max;
-        private global::System.Windows.Forms.Label l_FA_BulletRange_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Min;
-        private global::System.Windows.Forms.CheckBox cb_FA_BulletRange;
-        private global::System.Windows.Forms.GroupBox gb_FA_NumBullets;
-        private global::System.Windows.Forms.Label l_FA_NumBullets_Dec;
-        private global::System.Windows.Forms.Label l_FA_NumBullets_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Max;
-        private global::System.Windows.Forms.Label l_FA_NumBullets_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Min;
-        private global::System.Windows.Forms.CheckBox cb_FA_NumBullets;
-        private global::System.Windows.Forms.GroupBox gb_FA_MaxBurst;
-        private global::System.Windows.Forms.Label l_FA_MaxBurst_Dec;
-        private global::System.Windows.Forms.Label l_FA_MaxBurst_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Max;
-        private global::System.Windows.Forms.Label l_FA_MaxBurst_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Min;
-        private global::System.Windows.Forms.CheckBox cb_FA_MaxBurst;
-        private global::System.Windows.Forms.TabPage tp_WorldStats;
-        private global::System.Windows.Forms.GroupBox gb_W_CostLow;
-        private global::System.Windows.Forms.Label l_W_CostLow_Dec;
-        private global::System.Windows.Forms.Label l_W_CostLow_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Max;
-        private global::System.Windows.Forms.Label l_W_CostLow_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_CostLow;
-        private global::System.Windows.Forms.GroupBox gb_W_CostMid;
-        private global::System.Windows.Forms.Label l_W_CostMid_Dec;
-        private global::System.Windows.Forms.Label l_W_CostMid_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Max;
-        private global::System.Windows.Forms.Label l_W_CostMid_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_CostMid;
-        private global::System.Windows.Forms.GroupBox gb_W_CostHigh;
-        private global::System.Windows.Forms.Label l_W_CostHigh_Dec;
-        private global::System.Windows.Forms.Label l_W_CostHigh_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Max;
-        private global::System.Windows.Forms.Label l_W_CostHigh_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_CostHigh;
-        private global::System.Windows.Forms.GroupBox gb_W_PPAward;
-        private global::System.Windows.Forms.Label l_W_PPAward_Dec;
-        private global::System.Windows.Forms.Label l_W_PPAward_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Max;
-        private global::System.Windows.Forms.Label l_W_PPAward_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_PPAward;
-        private global::System.Windows.Forms.GroupBox gb_W_Amount;
-        private global::System.Windows.Forms.Label l_W_Amount_Dec;
-        private global::System.Windows.Forms.Label l_W_Amount_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Max;
-        private global::System.Windows.Forms.Label l_W_Amount_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_Amount;
-        private global::System.Windows.Forms.GroupBox gb_W_PayoutCount;
-        private global::System.Windows.Forms.Label l_W_PayoutCount_Dec;
-        private global::System.Windows.Forms.Label l_W_PayoutCount_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PayoutCount_Max;
-        private global::System.Windows.Forms.Label l_W_PayoutCount_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PayoutCount_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_PayoutCount;
-        private global::System.Windows.Forms.GroupBox gb_W_Payout;
-        private global::System.Windows.Forms.Label l_W_Payout_Dec;
-        private global::System.Windows.Forms.Label l_W_Payout_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Max;
-        private global::System.Windows.Forms.Label l_W_Payout_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_Payout;
-        private global::System.Windows.Forms.GroupBox gb_W_PP_Multi;
-        private global::System.Windows.Forms.Label l_W_PP_Multi_Dec;
-        private global::System.Windows.Forms.Label l_W_PP_Multi_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Max;
-        private global::System.Windows.Forms.Label l_W_PP_Multi_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_PP_Multi;
-        private global::System.Windows.Forms.GroupBox gb_W_Durability;
-        private global::System.Windows.Forms.Label l_W_Durability_Dec;
-        private global::System.Windows.Forms.Label l_W_Durability_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Durability_Max;
-        private global::System.Windows.Forms.Label l_W_Durability_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_Durability_min;
-        private global::System.Windows.Forms.CheckBox cb_W_Durability;
-        private global::System.Windows.Forms.GroupBox gb_W_ThrowForce;
-        private global::System.Windows.Forms.Label l_W_ThrowForce_Dec;
-        private global::System.Windows.Forms.Label l_W_ThrowForce_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_W_ThrowForce_Max;
-        private global::System.Windows.Forms.Label l_W_ThrowForce_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_W_ThrowForce_Min;
-        private global::System.Windows.Forms.CheckBox cb_W_ThrowForce;
+        private global::System.Windows.Forms.Button bt_IS_CheckAllActiveTab;
+        private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
+        private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
+        private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
+        private global::System.Windows.Forms.Label l_SafeMode_Text;
+        private global::System.Windows.Forms.TabControl tc_itemStats;
+        private global::System.Windows.Forms.TabPage tp_VehicleStats;
+        private global::System.Windows.Forms.GroupBox gb_V_EjectSpeed;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_EjectSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_EjectSpeed;
+        private global::System.Windows.Forms.GroupBox gb_V_RotateSpeed;
+        private global::System.Windows.Forms.Label l_V_RotateSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_RotateSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_RotateSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_RotateSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_RotateSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_RotateSpeed;
+        private global::System.Windows.Forms.GroupBox gb_V_MaxRotationSpeed;
+        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRotationSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRotationSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_MaxRotationSpeed;
+        private global::System.Windows.Forms.GroupBox gb_V_MaxRideSpeed;
+        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRideSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRideSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_MaxRideSpeed;
+        private global::System.Windows.Forms.GroupBox gb_V_InitialSpeed;
+        private global::System.Windows.Forms.Label l_V_InitialSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_InitialSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_InitialSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_InitialSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_InitialSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_InitialSpeed;
+        private global::System.Windows.Forms.GroupBox gb_V_ExtraTorque;
+        private global::System.Windows.Forms.Label l_V_ExtraTorque_Dec;
+        private global::System.Windows.Forms.Label l_V_ExtraTorque_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ExtraTorque_Max;
+        private global::System.Windows.Forms.Label l_V_ExtraTorque_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ExtraTorque_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_ExtraTorque;
+        private global::System.Windows.Forms.GroupBox gb_V_TopSpeed;
+        private global::System.Windows.Forms.Label l_V_TopSpeed_Dec;
+        private global::System.Windows.Forms.Label l_V_TopSpeed_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_TopSpeed_Max;
+        private global::System.Windows.Forms.Label l_V_TopSpeed_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_TopSpeed_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_TopSpeed;
+        private global::System.Windows.Forms.TabPage tp_NPC;
         private global::System.Windows.Forms.GroupBox gb_NPC_SURV_PerKMH;
         private global::System.Windows.Forms.Label l_NPC_SURV_PerKMH_Dec;
         private global::System.Windows.Forms.Label l_NPC_SURV_PerKMH_Max;
@@ -6190,14 +5984,177 @@
         private global::System.Windows.Forms.Label l_NPC_MinSurvSpeed_Min;
         private global::System.Windows.Forms.NumericUpDown nud_NPC_MinSurvSpeed_Min;
         private global::System.Windows.Forms.CheckBox cb_NPC_MinSurvSpeed;
+        private global::System.Windows.Forms.GroupBox gb_NPC_Max_PP;
+        private global::System.Windows.Forms.Label l_NPC_Max_PP_Dec;
+        private global::System.Windows.Forms.Label l_NPC_Max_PP_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_Max_PP_Max;
+        private global::System.Windows.Forms.Label l_NPC_Max_PP_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_Max_PP_Min;
+        private global::System.Windows.Forms.CheckBox cb_NPC_Max_PP;
+        private global::System.Windows.Forms.GroupBox gb_NPC_HealthAmount;
+        private global::System.Windows.Forms.Label l_NPC_HealthAmount_Dec;
+        private global::System.Windows.Forms.Label l_NPC_HealthAmount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_HealthAmount_Max;
+        private global::System.Windows.Forms.Label l_NPC_HealthAmount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_HealthAmount_Min;
+        private global::System.Windows.Forms.CheckBox cb_NPC_HealthAmount;
+        private global::System.Windows.Forms.GroupBox gb_NPC_DamPerKMH;
+        private global::System.Windows.Forms.Label l_NPC_DamPerKMH_Dec;
+        private global::System.Windows.Forms.Label l_NPC_DamPerKMH_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_DamPerKMH_Max;
+        private global::System.Windows.Forms.Label l_NPC_DamPerKMH_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_DamPerKMH_Min;
+        private global::System.Windows.Forms.CheckBox cb_NPC_DamPerKMH;
+        private global::System.Windows.Forms.GroupBox gb_NPC_MSDBoss;
+        private global::System.Windows.Forms.Label l_NPC_MSDBoss_Dec;
+        private global::System.Windows.Forms.Label l_NPC_MSDBoss_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_MSDBoss_Max;
+        private global::System.Windows.Forms.Label l_NPC_MSDBoss_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_MSDBoss_Min;
+        private global::System.Windows.Forms.CheckBox cb_NPC_MSDBoss;
+        private global::System.Windows.Forms.GroupBox gb_NPC_FlatBossDam;
+        private global::System.Windows.Forms.Label l_NPC_FlatBoss_Dec;
+        private global::System.Windows.Forms.Label l_NPC_FlatBoss_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_FlatBoss_Max;
+        private global::System.Windows.Forms.Label l_NPC_FlatBoss_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_NPC_FlatBoss_Min;
+        private global::System.Windows.Forms.CheckBox cb_NPC_FlatBoss;
+        private global::System.Windows.Forms.TabPage tp_FireArms;
+        private global::System.Windows.Forms.GroupBox gb_FA_MaxBurst;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Dec;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Max;
+        private global::System.Windows.Forms.Label l_FA_MaxBurst_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_MaxBurst_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_MaxBurst;
+        private global::System.Windows.Forms.GroupBox gb_FA_NumBullets;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Dec;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Max;
+        private global::System.Windows.Forms.Label l_FA_NumBullets_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_NumBullets_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_NumBullets;
+        private global::System.Windows.Forms.GroupBox gb_FA_BulletRange;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Dec;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Max;
+        private global::System.Windows.Forms.Label l_FA_BulletRange_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BulletRange_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_BulletRange;
+        private global::System.Windows.Forms.GroupBox gb_FA_BaseBullDam;
+        private global::System.Windows.Forms.Label l_FA_BaseBullDam_Dec;
+        private global::System.Windows.Forms.Label l_FA_BaseBullDam_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BaseBullDam_Max;
+        private global::System.Windows.Forms.Label l_FA_BaseBullDam_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_BaseBullDam_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_BaseBullDam;
+        private global::System.Windows.Forms.GroupBox gb_FA_FireRate;
+        private global::System.Windows.Forms.Label l_FA_FireRate_Dec;
+        private global::System.Windows.Forms.Label l_FA_FireRate_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_FireRate_Max;
+        private global::System.Windows.Forms.Label l_FA_FireRate_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FA_FireRate_Min;
+        private global::System.Windows.Forms.CheckBox cb_FA_FireRate;
+        private global::System.Windows.Forms.TabPage tp_WorldStats;
+        private global::System.Windows.Forms.GroupBox gb_WS_WepPP;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Dec;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Max;
+        private global::System.Windows.Forms.Label l_WS_WepPP_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Min;
+        private global::System.Windows.Forms.CheckBox cb_WS_WepPP;
+        private global::System.Windows.Forms.GroupBox gb_WS_PPAmount;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Dec;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Max;
+        private global::System.Windows.Forms.Label l_WS_PPAmount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Min;
+        private global::System.Windows.Forms.CheckBox cb_WS_PPAmount;
+        private global::System.Windows.Forms.GroupBox gb_W_ThrowForce;
+        private global::System.Windows.Forms.Label l_W_ThrowForce_Dec;
+        private global::System.Windows.Forms.Label l_W_ThrowForce_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_ThrowForce_Max;
+        private global::System.Windows.Forms.Label l_W_ThrowForce_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_ThrowForce_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_ThrowForce;
+        private global::System.Windows.Forms.GroupBox gb_W_Durability;
+        private global::System.Windows.Forms.Label l_W_Durability_Dec;
+        private global::System.Windows.Forms.Label l_W_Durability_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Durability_Max;
+        private global::System.Windows.Forms.Label l_W_Durability_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Durability_min;
+        private global::System.Windows.Forms.CheckBox cb_W_Durability;
+        private global::System.Windows.Forms.GroupBox gb_W_PP_Multi;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Dec;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Max;
+        private global::System.Windows.Forms.Label l_W_PP_Multi_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PP_Multi_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_PP_Multi;
+        private global::System.Windows.Forms.GroupBox gb_W_PayoutCount;
+        private global::System.Windows.Forms.Label l_W_PayoutCount_Dec;
+        private global::System.Windows.Forms.Label l_W_PayoutCount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PayoutCount_Max;
+        private global::System.Windows.Forms.Label l_W_PayoutCount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PayoutCount_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_PayoutCount;
+        private global::System.Windows.Forms.GroupBox gb_W_Payout;
+        private global::System.Windows.Forms.Label l_W_Payout_Dec;
+        private global::System.Windows.Forms.Label l_W_Payout_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Max;
+        private global::System.Windows.Forms.Label l_W_Payout_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Payout_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_Payout;
+        private global::System.Windows.Forms.GroupBox gb_W_Amount;
+        private global::System.Windows.Forms.Label l_W_Amount_Dec;
+        private global::System.Windows.Forms.Label l_W_Amount_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Max;
+        private global::System.Windows.Forms.Label l_W_Amount_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_Amount_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_Amount;
+        private global::System.Windows.Forms.GroupBox gb_W_PPAward;
+        private global::System.Windows.Forms.Label l_W_PPAward_Dec;
+        private global::System.Windows.Forms.Label l_W_PPAward_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Max;
+        private global::System.Windows.Forms.Label l_W_PPAward_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_PPAward_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_PPAward;
+        private global::System.Windows.Forms.GroupBox gb_W_CostHigh;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Dec;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Max;
+        private global::System.Windows.Forms.Label l_W_CostHigh_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostHigh_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostHigh;
+        private global::System.Windows.Forms.GroupBox gb_W_CostMid;
+        private global::System.Windows.Forms.Label l_W_CostMid_Dec;
+        private global::System.Windows.Forms.Label l_W_CostMid_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Max;
+        private global::System.Windows.Forms.Label l_W_CostMid_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostMid_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostMid;
+        private global::System.Windows.Forms.GroupBox gb_W_CostLow;
+        private global::System.Windows.Forms.Label l_W_CostLow_Dec;
+        private global::System.Windows.Forms.Label l_W_CostLow_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Max;
+        private global::System.Windows.Forms.Label l_W_CostLow_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_W_CostLow_Min;
+        private global::System.Windows.Forms.CheckBox cb_W_CostLow;
         private global::System.Windows.Forms.TabPage tp_ExplosivesSpray;
-        private global::System.Windows.Forms.GroupBox gb_ES_SprayAmmo;
-        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Dec;
-        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_SprayAmmo_Max;
-        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_SprayAmmo_Min;
-        private global::System.Windows.Forms.CheckBox cb_ES_SprayAmmo;
+        private global::System.Windows.Forms.GroupBox gb_ES_ThrowablesAmmo;
+        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Dec;
+        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_ThrowablesAmmo_Max;
+        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_ThrowablesAmmo_Min;
+        private global::System.Windows.Forms.CheckBox cb_ES_ThrowablesAmmo;
+        private global::System.Windows.Forms.GroupBox gb_ES_ProjectileSpin;
+        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Dec;
+        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_ProjectileSpin_Max;
+        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_ProjectileSpin_Min;
+        private global::System.Windows.Forms.CheckBox cb_ES_ProjectileSpin;
         private global::System.Windows.Forms.GroupBox gb_ES_ExpolsiveDelay;
         private global::System.Windows.Forms.Label l_ES_ExpolsiveDelay_Dec;
         private global::System.Windows.Forms.Label l_ES_ExpolsiveDelay_Max;
@@ -6219,35 +6176,14 @@
         private global::System.Windows.Forms.Label l_ES_ExplodeRadius_Min;
         private global::System.Windows.Forms.NumericUpDown nud_ES_ExplodeRadius_Min;
         private global::System.Windows.Forms.CheckBox cb_ES_ExplodeRadius;
-        private global::System.Windows.Forms.GroupBox gb_ES_ThrowablesAmmo;
-        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Dec;
-        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_ThrowablesAmmo_Max;
-        private global::System.Windows.Forms.Label l_ES_ThrowablesAmmo_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_ThrowablesAmmo_Min;
-        private global::System.Windows.Forms.CheckBox cb_ES_ThrowablesAmmo;
-        private global::System.Windows.Forms.GroupBox gb_ES_ProjectileSpin;
-        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Dec;
-        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_ProjectileSpin_Max;
-        private global::System.Windows.Forms.Label l_ES_ProjectileSpin_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_ES_ProjectileSpin_Min;
-        private global::System.Windows.Forms.CheckBox cb_ES_ProjectileSpin;
+        private global::System.Windows.Forms.GroupBox gb_ES_SprayAmmo;
+        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Dec;
+        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_SprayAmmo_Max;
+        private global::System.Windows.Forms.Label l_ES_SprayAmmo_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_ES_SprayAmmo_Min;
+        private global::System.Windows.Forms.CheckBox cb_ES_SprayAmmo;
         private global::System.Windows.Forms.TabPage tp_FoodDamage;
-        private global::System.Windows.Forms.GroupBox gb_FD_HealthBoost;
-        private global::System.Windows.Forms.Label l_FD_HealthBoost_Dec;
-        private global::System.Windows.Forms.Label l_FD_HealthBoost_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Max;
-        private global::System.Windows.Forms.Label l_FD_HealthBoost_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Min;
-        private global::System.Windows.Forms.CheckBox cb_FD_HealthBoost;
-        private global::System.Windows.Forms.GroupBox gb_FD_AttackDamage;
-        private global::System.Windows.Forms.Label l_FD_AttackDamage_Dec;
-        private global::System.Windows.Forms.Label l_FD_AttackDamage_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Max;
-        private global::System.Windows.Forms.Label l_FD_AttackDamage_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Dec;
-        private global::System.Windows.Forms.CheckBox cb_FD_AttackDamage;
         private global::System.Windows.Forms.GroupBox gb_FD_MaxDperA;
         private global::System.Windows.Forms.Label l_FD_MaxDperA_Dec;
         private global::System.Windows.Forms.Label l_FD_MaxDperA_Max;
@@ -6262,11 +6198,27 @@
         private global::System.Windows.Forms.Label l_FD_ProjectDamage_Min;
         private global::System.Windows.Forms.NumericUpDown nud_FD_ProjectDamage_Min;
         private global::System.Windows.Forms.CheckBox cb_FD_ProjectDamage;
-        private global::System.Windows.Forms.Button bt_IS_CheckAllActiveTab;
+        private global::System.Windows.Forms.GroupBox gb_FD_HealthBoost;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Dec;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Max;
+        private global::System.Windows.Forms.Label l_FD_HealthBoost_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_HealthBoost_Min;
+        private global::System.Windows.Forms.CheckBox cb_FD_HealthBoost;
+        private global::System.Windows.Forms.GroupBox gb_FD_AttackDamage;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Dec;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Max;
+        private global::System.Windows.Forms.Label l_FD_AttackDamage_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_FD_AttackDamage_Dec;
+        private global::System.Windows.Forms.CheckBox cb_FD_AttackDamage;
         private global::System.Windows.Forms.TabPage tp_UnstableStats;
-        private global::System.Windows.Forms.Label l_US_Warning_Msg;
-        private global::System.Windows.Forms.Label l_US_PropToThrow_Dec;
+        private global::System.Windows.Forms.GroupBox gb_US_NPCItems;
+        private global::System.Windows.Forms.CheckBox cb_US_NPCItems;
+        private global::System.Windows.Forms.Label l_US_NPCItems_Dec;
+        private global::System.Windows.Forms.GroupBox gb_US_PropToThrow;
         private global::System.Windows.Forms.CheckBox cb_US_PropToThrow;
+        private global::System.Windows.Forms.Label l_US_PropToThrow_Dec;
         private global::System.Windows.Forms.TabControl tc_US_Items;
         private global::System.Windows.Forms.TabPage tp_US_BasicCombo;
         private global::System.Windows.Forms.CheckedListBox clb_US_BasicCombo;
@@ -6279,13 +6231,14 @@
         private global::System.Windows.Forms.TabPage tp_US_Bugged;
         private global::System.Windows.Forms.CheckedListBox clb_US_Bugged;
         private global::System.Windows.Forms.TabPage tp_US_CombinedFireArms;
-        private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
+        private global::System.Windows.Forms.CheckedListBox clb_US_CombinedFireArms;
         private global::System.Windows.Forms.TabPage tp_US_CombFood;
         private global::System.Windows.Forms.CheckedListBox clb_US_CombFood;
         private global::System.Windows.Forms.TabPage tp_US_CombMelee;
         private global::System.Windows.Forms.CheckedListBox clb_US_CombMelee;
         private global::System.Windows.Forms.TabPage tp_US_ComboFireArms;
         private global::System.Windows.Forms.CheckedListBox clb_US_ComboFireArms;
+        private global::System.Windows.Forms.TabPage tp_US_Explosive;
         private global::System.Windows.Forms.CheckedListBox clb_US_Explosive;
         private global::System.Windows.Forms.TabPage tp_US_KeyItems;
         private global::System.Windows.Forms.CheckedListBox clb_US_KeyItems;
@@ -6299,34 +6252,69 @@
         private global::System.Windows.Forms.CheckedListBox clb_US_Special;
         private global::System.Windows.Forms.TabPage tp_US_Vehicles;
         private global::System.Windows.Forms.CheckedListBox clb_US_Vehicles;
-        private global::System.Windows.Forms.CheckedListBox clb_US_CombinedFireArms;
-        private global::System.Windows.Forms.TabPage tp_US_Explosive;
-        private global::System.Windows.Forms.GroupBox gb_US_PropToThrow;
-        private global::System.Windows.Forms.GroupBox gb_US_NPCItems;
-        private global::System.Windows.Forms.CheckBox cb_US_NPCItems;
-        private global::System.Windows.Forms.Label l_US_NPCItems_Dec;
-        private global::System.Windows.Forms.GroupBox gb_V_EjectSpeed;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_EjectSpeed;
-        private global::System.Windows.Forms.GroupBox gb_WS_PPAmount;
-        private global::System.Windows.Forms.Label l_WS_PPAmount_Dec;
-        private global::System.Windows.Forms.Label l_WS_PPAmount_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Max;
-        private global::System.Windows.Forms.Label l_WS_PPAmount_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_WS_PPAmount_Min;
-        private global::System.Windows.Forms.CheckBox cb_WS_PPAmount;
-        private global::System.Windows.Forms.GroupBox gb_WS_WepPP;
-        private global::System.Windows.Forms.Label l_WS_WepPP_Dec;
-        private global::System.Windows.Forms.Label l_WS_WepPP_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Max;
-        private global::System.Windows.Forms.Label l_WS_WepPP_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_WS_WepPP_Min;
-        private global::System.Windows.Forms.CheckBox cb_WS_WepPP;
-        private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
-        private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
+        private global::System.Windows.Forms.Label l_US_Warning_Msg;
+        private global::System.Windows.Forms.Label l_V_MVSEP_Dec;
+        private global::System.Windows.Forms.Label l__V_MVSEP_Max;
+        private global::System.Windows.Forms.NumericUpDown nud__V_MVSEP_Max;
+        private global::System.Windows.Forms.Label l_V_MVSEP_Min;
+        private global::System.Windows.Forms.NumericUpDown nud__V_MVSEP_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_MVSEP;
+        private global::System.Windows.Forms.Label l_V_MinVSWE_Dec;
+        private global::System.Windows.Forms.Label l_V_MinVSWE_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MinVSWE_Max;
+        private global::System.Windows.Forms.Label l_V_MinVSWE_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_MinVSWE_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_MinVSWE;
+        private global::System.Windows.Forms.Label l_V_ETMinRPM_Dec;
+        private global::System.Windows.Forms.Label l_V_ETMinRPM_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ETMinRPM_Max;
+        private global::System.Windows.Forms.Label l_V_ETMinRPM_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ETMinRPM_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_ETMinRPM;
+        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Dec;
+        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ETFMaxRPM_Max;
+        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_ETFMaxRPM_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_ETFMaxRPM;
+        private global::System.Windows.Forms.Label l_V_EORPM_Dec;
+        private global::System.Windows.Forms.Label l_V_EORPM_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EORPM_Max;
+        private global::System.Windows.Forms.Label l_V_EORPM_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EORPM_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_EORPM;
+        private global::System.Windows.Forms.Label l_V_EMT_Dec;
+        private global::System.Windows.Forms.Label l_V_EMT_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMT_Max;
+        private global::System.Windows.Forms.Label l_V_EMT_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMT_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_EMT;
+        private global::System.Windows.Forms.Label l_V_EMinRPM_Dec;
+        private global::System.Windows.Forms.Label l_V_EMinRPM_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMinRPM_Max;
+        private global::System.Windows.Forms.Label l_V_EMinRPM_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMinRPM_min;
+        private global::System.Windows.Forms.CheckBox cb_V_EMinRPM;
+        private global::System.Windows.Forms.Label l_V_EMaxRPM_Dec;
+        private global::System.Windows.Forms.Label l_V_EMaxRPM_Max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMaxRPM_Max;
+        private global::System.Windows.Forms.Label l_V_EMaxRPM_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_EMaxRPM_Min;
+        private global::System.Windows.Forms.CheckBox cb_V_EMaxRPM;
+        private global::System.Windows.Forms.Label l_V_AD_Dec;
+        private global::System.Windows.Forms.Label l_V_AD_max;
+        private global::System.Windows.Forms.NumericUpDown nud_V_AD_Max;
+        private global::System.Windows.Forms.Label l_V_AD_Min;
+        private global::System.Windows.Forms.NumericUpDown nud_V_AD_Min;
+        private global::System.Windows.Forms.CheckBox cb_AirDensity;
+        private global::System.Windows.Forms.GroupBox gb_AirDensity;
+        private global::System.Windows.Forms.GroupBox gb_V_EMaxRPM;
+        private global::System.Windows.Forms.GroupBox gb_V_EMinRPM;
+        private global::System.Windows.Forms.GroupBox gb_V_EMT;
+        private global::System.Windows.Forms.GroupBox gb_V_EORPM;
+        private global::System.Windows.Forms.GroupBox gb_V_ETFMaxRPM;
+        private global::System.Windows.Forms.GroupBox gb_V_ETMinRPM;
+        private global::System.Windows.Forms.GroupBox gb_V_MinVSWE;
+        private global::System.Windows.Forms.GroupBox gb_V_MVSEP;
     }
 }
