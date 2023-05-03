@@ -14,10 +14,8 @@ namespace DR2OTR_Randomizer;
 /// TODO:
 /// Need to spell check
 /// 
-/// Try to find a better way for the item stats 
-/// as it is using over 300 controls and is causeing the 
-/// window to move slowly when draged
-/// 
+/// Moving the Item Stats to a Data View Grid need to use a for loop
+/// to get the Enabled Colloum and check of that is enabled else skip it
 /// 
 /// Refactor and optiomze the program 
 /// 
@@ -26,6 +24,7 @@ namespace DR2OTR_Randomizer;
 /// </summary>
 public partial class F_ItemRandomiser : Form
 {
+    public List<ItemStatsData> ItemStats { get; set; }
     bool safeMode = true;
 
     int[] unSafeLines = {
@@ -38,6 +37,7 @@ public partial class F_ItemRandomiser : Form
     string path;
     public F_ItemRandomiser()
     {
+        ItemStats = GetItemData();
         InitializeComponent();
 
         //use this to catch if the Allitems or npcmodels file is missing
@@ -84,8 +84,44 @@ public partial class F_ItemRandomiser : Form
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
     }
+    private List<ItemStatsData> GetItemData()
+    {
+        var list = new List<ItemStatsData>();
+        list.Add(new ItemStatsData()
+        {
+            StatState = true,
+            StatName = "Vehicle Air Density:",
+            StatDescription = "Controls how much air resistance there is for the vehicle. The lower the less air resistance.",
+            StatMin = 0,
+            StatMax = 10,
+            StatInGameName = "\tAirDensity"
+
+        });
+        list.Add(new ItemStatsData()
+        {
+            StatState = false,
+            StatName = "Vehicle Max RPM:",
+            StatDescription = "One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.",
+            StatMin = 3550,
+            StatMax = 10000,
+            StatInGameName = "\tEngine_MaxRPM"
+        });
+        list.Add(new ItemStatsData()
+        {
+            StatState = true,
+            StatName = "Vehicle Min RPM",
+            StatDescription = "Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.",
+            StatMin = 885,
+            StatMax = 5000,
+            StatInGameName = "\tEngine_MinRPM"
+
+        });
+        return list;
+    }
     private void Form1_Load(object sender, EventArgs e)
     {
+        var itemStatData = this.ItemStats;
+        dataGridView1.DataSource = itemStatData;
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
@@ -240,7 +276,8 @@ public partial class F_ItemRandomiser : Form
 
     private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
     {
-        CheckAllItemsinTab();
+        //CheckAllItemsinTab();
+        NewItemSataTesting();
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
@@ -493,4 +530,22 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
+    private void NewItemSataTesting()
+    {
+        //Debug.WriteLine(dataGridView1.Rows[2].Cells[2].Value);
+
+        foreach (DataGridViewRow data in dataGridView1.Rows)
+        {
+            foreach(DataGridViewCell cell in data.Cells)
+            {
+                if(cell.OwningColumn.HeaderText == "Enabled")
+                {
+                    Debug.WriteLine(cell.OwningColumn.HeaderText);
+                    Debug.WriteLine(cell.Value);
+                }
+
+            }
+        }
+    }
+
 }

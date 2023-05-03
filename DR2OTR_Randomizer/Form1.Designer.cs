@@ -31,6 +31,13 @@
         private void InitializeComponent()
         {
             this.components = (new global::System.ComponentModel.Container());
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new global::System.Windows.Forms.DataGridViewCellStyle();
+            global::System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new global::System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = (new global::System.Windows.Forms.MenuStrip());
             this.tsm_File = (new global::System.Windows.Forms.ToolStripMenuItem());
             this.tsm_open = (new global::System.Windows.Forms.ToolStripMenuItem());
@@ -485,10 +492,19 @@
             this.tp_US_Vehicles = (new global::System.Windows.Forms.TabPage());
             this.clb_US_Vehicles = (new global::System.Windows.Forms.CheckedListBox());
             this.l_US_Warning_Msg = (new global::System.Windows.Forms.Label());
+            this.tabPage1 = (new global::System.Windows.Forms.TabPage());
+            this.dataGridView1 = (new global::System.Windows.Forms.DataGridView());
+            this.itemStatsDataBindingSource = (new global::System.Windows.Forms.BindingSource(this.components));
             this.fbd_DataFileFolder = (new global::System.Windows.Forms.FolderBrowserDialog());
             this.tt_VehicleStats = (new global::System.Windows.Forms.ToolTip(this.components));
             this.clb_US_FireArms = (new global::System.Windows.Forms.CheckedListBox());
             this.l_SafeMode_Text = (new global::System.Windows.Forms.Label());
+            this.statStateDataGridViewCheckBoxColumn = (new global::System.Windows.Forms.DataGridViewCheckBoxColumn());
+            this.statNameDataGridViewTextBoxColumn = (new global::System.Windows.Forms.DataGridViewTextBoxColumn());
+            this.statDescriptionDataGridViewTextBoxColumn = (new global::System.Windows.Forms.DataGridViewTextBoxColumn());
+            this.statMinDataGridViewTextBoxColumn = (new global::System.Windows.Forms.DataGridViewTextBoxColumn());
+            this.statMaxDataGridViewTextBoxColumn = (new global::System.Windows.Forms.DataGridViewTextBoxColumn());
+            this.StatInGameName = (new global::System.Windows.Forms.DataGridViewTextBoxColumn());
             this.menuStrip1.SuspendLayout();
             this.tc_Items.SuspendLayout();
             this.tp_BasicCombo.SuspendLayout();
@@ -690,6 +706,9 @@
             this.tp_US_Pushed.SuspendLayout();
             this.tp_US_Special.SuspendLayout();
             this.tp_US_Vehicles.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((global::System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.itemStatsDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1290,6 +1309,7 @@
             this.tc_itemStats.Controls.Add(this.tp_ExplosivesSpray);
             this.tc_itemStats.Controls.Add(this.tp_FoodDamage);
             this.tc_itemStats.Controls.Add(this.tp_UnstableStats);
+            this.tc_itemStats.Controls.Add(this.tabPage1);
             this.tc_itemStats.Location = (new global::System.Drawing.Point(6, 50));
             this.tc_itemStats.Name = ("tc_itemStats");
             this.tc_itemStats.SelectedIndex = (0);
@@ -5557,6 +5577,63 @@
             this.l_US_Warning_Msg.Text = ("These setting will make the game unstable that may cause crashing/softlocking or stop the game from launching. Its recomended to save when ever you have the chance.");
             this.l_US_Warning_Msg.TextAlign = (global::System.Drawing.ContentAlignment.MiddleCenter);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Location = (new global::System.Drawing.Point(4, 24));
+            this.tabPage1.Name = ("tabPage1");
+            this.tabPage1.Padding = (new global::System.Windows.Forms.Padding(3));
+            this.tabPage1.Size = (new global::System.Drawing.Size(698, 387));
+            this.tabPage1.TabIndex = (7);
+            this.tabPage1.Text = ("tabPage1");
+            this.tabPage1.UseVisualStyleBackColor = (true);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = (false);
+            this.dataGridView1.AllowUserToDeleteRows = (false);
+            this.dataGridView1.AllowUserToResizeColumns = (false);
+            this.dataGridView1.AllowUserToResizeRows = (false);
+            this.dataGridView1.AutoGenerateColumns = (false);
+            dataGridViewCellStyle1.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter);
+            dataGridViewCellStyle1.BackColor = (global::System.Drawing.SystemColors.Control);
+            dataGridViewCellStyle1.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            dataGridViewCellStyle1.ForeColor = (global::System.Drawing.SystemColors.WindowText);
+            dataGridViewCellStyle1.SelectionBackColor = (global::System.Drawing.SystemColors.Highlight);
+            dataGridViewCellStyle1.SelectionForeColor = (global::System.Drawing.SystemColors.HighlightText);
+            dataGridViewCellStyle1.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = (dataGridViewCellStyle1);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = (global::System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize);
+            this.dataGridView1.Columns.AddRange(new global::System.Windows.Forms.DataGridViewColumn[] { this.statStateDataGridViewCheckBoxColumn, this.statNameDataGridViewTextBoxColumn, this.statDescriptionDataGridViewTextBoxColumn, this.statMinDataGridViewTextBoxColumn, this.statMaxDataGridViewTextBoxColumn, this.StatInGameName });
+            this.dataGridView1.DataSource = (this.itemStatsDataBindingSource);
+            dataGridViewCellStyle6.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle6.BackColor = (global::System.Drawing.SystemColors.Window);
+            dataGridViewCellStyle6.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            dataGridViewCellStyle6.ForeColor = (global::System.Drawing.SystemColors.ControlText);
+            dataGridViewCellStyle6.SelectionBackColor = (global::System.Drawing.SystemColors.Highlight);
+            dataGridViewCellStyle6.SelectionForeColor = (global::System.Drawing.SystemColors.HighlightText);
+            dataGridViewCellStyle6.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.dataGridView1.DefaultCellStyle = (dataGridViewCellStyle6);
+            this.dataGridView1.Location = (new global::System.Drawing.Point(6, 6));
+            this.dataGridView1.MultiSelect = (false);
+            this.dataGridView1.Name = ("dataGridView1");
+            dataGridViewCellStyle7.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft);
+            dataGridViewCellStyle7.BackColor = (global::System.Drawing.SystemColors.Control);
+            dataGridViewCellStyle7.Font = (new global::System.Drawing.Font("Segoe UI", 9F, global::System.Drawing.FontStyle.Regular, global::System.Drawing.GraphicsUnit.Point));
+            dataGridViewCellStyle7.ForeColor = (global::System.Drawing.SystemColors.WindowText);
+            dataGridViewCellStyle7.SelectionBackColor = (global::System.Drawing.SystemColors.Highlight);
+            dataGridViewCellStyle7.SelectionForeColor = (global::System.Drawing.SystemColors.HighlightText);
+            dataGridViewCellStyle7.WrapMode = (global::System.Windows.Forms.DataGridViewTriState.True);
+            this.dataGridView1.RowHeadersDefaultCellStyle = (dataGridViewCellStyle7);
+            this.dataGridView1.RowHeadersVisible = (false);
+            this.dataGridView1.RowTemplate.Height = (25);
+            this.dataGridView1.Size = (new global::System.Drawing.Size(686, 375));
+            this.dataGridView1.TabIndex = (0);
+            // 
+            // itemStatsDataBindingSource
+            // 
+            this.itemStatsDataBindingSource.DataSource = (typeof(global::DR2OTR_Randomizer.Resources.ItemStatsData));
+            // 
             // fbd_DataFileFolder
             // 
             this.fbd_DataFileFolder.Description = ("Select the upacked datafile folder");
@@ -5583,6 +5660,57 @@
             this.l_SafeMode_Text.Size = (new global::System.Drawing.Size(158, 21));
             this.l_SafeMode_Text.TabIndex = (24);
             this.l_SafeMode_Text.Text = ("Safe mode is enabled");
+            // 
+            // statStateDataGridViewCheckBoxColumn
+            // 
+            this.statStateDataGridViewCheckBoxColumn.DataPropertyName = ("StatState");
+            this.statStateDataGridViewCheckBoxColumn.HeaderText = ("Enabled");
+            this.statStateDataGridViewCheckBoxColumn.Name = ("statStateDataGridViewCheckBoxColumn");
+            this.statStateDataGridViewCheckBoxColumn.Resizable = (global::System.Windows.Forms.DataGridViewTriState.False);
+            this.statStateDataGridViewCheckBoxColumn.Width = (60);
+            // 
+            // statNameDataGridViewTextBoxColumn
+            // 
+            this.statNameDataGridViewTextBoxColumn.DataPropertyName = ("StatName");
+            dataGridViewCellStyle2.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter);
+            this.statNameDataGridViewTextBoxColumn.DefaultCellStyle = (dataGridViewCellStyle2);
+            this.statNameDataGridViewTextBoxColumn.HeaderText = ("StatName");
+            this.statNameDataGridViewTextBoxColumn.Name = ("statNameDataGridViewTextBoxColumn");
+            this.statNameDataGridViewTextBoxColumn.ReadOnly = (true);
+            this.statNameDataGridViewTextBoxColumn.Resizable = (global::System.Windows.Forms.DataGridViewTriState.False);
+            // 
+            // statDescriptionDataGridViewTextBoxColumn
+            // 
+            this.statDescriptionDataGridViewTextBoxColumn.DataPropertyName = ("StatDescription");
+            dataGridViewCellStyle3.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter);
+            this.statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = (dataGridViewCellStyle3);
+            this.statDescriptionDataGridViewTextBoxColumn.HeaderText = ("StatDescription");
+            this.statDescriptionDataGridViewTextBoxColumn.Name = ("statDescriptionDataGridViewTextBoxColumn");
+            this.statDescriptionDataGridViewTextBoxColumn.ReadOnly = (true);
+            this.statDescriptionDataGridViewTextBoxColumn.Resizable = (global::System.Windows.Forms.DataGridViewTriState.False);
+            // 
+            // statMinDataGridViewTextBoxColumn
+            // 
+            this.statMinDataGridViewTextBoxColumn.DataPropertyName = ("StatMin");
+            dataGridViewCellStyle4.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter);
+            this.statMinDataGridViewTextBoxColumn.DefaultCellStyle = (dataGridViewCellStyle4);
+            this.statMinDataGridViewTextBoxColumn.HeaderText = ("StatMin");
+            this.statMinDataGridViewTextBoxColumn.Name = ("statMinDataGridViewTextBoxColumn");
+            // 
+            // statMaxDataGridViewTextBoxColumn
+            // 
+            this.statMaxDataGridViewTextBoxColumn.DataPropertyName = ("StatMax");
+            dataGridViewCellStyle5.Alignment = (global::System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter);
+            this.statMaxDataGridViewTextBoxColumn.DefaultCellStyle = (dataGridViewCellStyle5);
+            this.statMaxDataGridViewTextBoxColumn.HeaderText = ("StatMax");
+            this.statMaxDataGridViewTextBoxColumn.Name = ("statMaxDataGridViewTextBoxColumn");
+            // 
+            // StatInGameName
+            // 
+            this.StatInGameName.DataPropertyName = ("StatInGameName");
+            this.StatInGameName.HeaderText = ("StatInGameName");
+            this.StatInGameName.Name = ("StatInGameName");
+            this.StatInGameName.Visible = (false);
             // 
             // F_ItemRandomiser
             // 
@@ -5853,6 +5981,9 @@
             this.tp_US_Pushed.ResumeLayout(false);
             this.tp_US_Special.ResumeLayout(false);
             this.tp_US_Vehicles.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            ((global::System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((global::System.ComponentModel.ISupportInitialize)(this.itemStatsDataBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -6316,5 +6447,14 @@
         private global::System.Windows.Forms.GroupBox gb_V_ETMinRPM;
         private global::System.Windows.Forms.GroupBox gb_V_MinVSWE;
         private global::System.Windows.Forms.GroupBox gb_V_MVSEP;
+        private global::System.Windows.Forms.TabPage tabPage1;
+        private global::System.Windows.Forms.DataGridView dataGridView1;
+        private global::System.Windows.Forms.BindingSource itemStatsDataBindingSource;
+        private global::System.Windows.Forms.DataGridViewCheckBoxColumn statStateDataGridViewCheckBoxColumn;
+        private global::System.Windows.Forms.DataGridViewTextBoxColumn statNameDataGridViewTextBoxColumn;
+        private global::System.Windows.Forms.DataGridViewTextBoxColumn statDescriptionDataGridViewTextBoxColumn;
+        private global::System.Windows.Forms.DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
+        private global::System.Windows.Forms.DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
+        private global::System.Windows.Forms.DataGridViewTextBoxColumn StatInGameName;
     }
 }
