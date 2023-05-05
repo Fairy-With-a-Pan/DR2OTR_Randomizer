@@ -6,16 +6,20 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Security.AccessControl;
+using System.Windows.Forms;
 using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DR2OTR_Randomizer;
 /// <summary>
 /// TODO:
+/// Need to Redo the Item stat randomizer code for the DGV
 /// Need to spell check
 /// 
-/// Moving the Item Stats to a Data View Grid need to use a for loop
-/// to get the Enabled Colloum and check of that is enabled else skip it
+/// 
+/// Moved over to the DataGridView for the Item stats all
+/// of the stats have been moved over and are proply working
+/// 
 /// 
 /// Refactor and optiomze the program 
 /// 
@@ -24,9 +28,14 @@ namespace DR2OTR_Randomizer;
 /// </summary>
 public partial class F_ItemRandomiser : Form
 {
-    public List<ItemStatsData> ItemStats { get; set; }
+    public List<ItemStatsData> VheicleStatData { get; set; }
+    public List<ItemStatsData> NPCStatData { get; set; }
+    public List<ItemStatsData> WorldStatsData { get; set; }
+    public List<ItemStatsData> FireArmsStatData { get; set; }
+    public List<ItemStatsData> ExplosiveStatData { get; set; }
+    public List<ItemStatsData> FoodAndDamageData { get; set; }
     bool safeMode = true;
-
+    AllItemStatData statData = new AllItemStatData();
     int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
@@ -37,7 +46,13 @@ public partial class F_ItemRandomiser : Form
     string path;
     public F_ItemRandomiser()
     {
-        ItemStats = GetItemData();
+        VheicleStatData = statData.GetVheicleStats();
+        NPCStatData = statData.GetNPCStats();
+        WorldStatsData = statData.GetWorldStats();
+        FireArmsStatData = statData.GetFireArmsStats();
+        ExplosiveStatData = statData.GetExplosivesStats();
+        FoodAndDamageData = statData.GetFoodAndDamageStats();
+
         InitializeComponent();
 
         //use this to catch if the Allitems or npcmodels file is missing
@@ -84,44 +99,11 @@ public partial class F_ItemRandomiser : Form
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
     }
-    private List<ItemStatsData> GetItemData()
-    {
-        var list = new List<ItemStatsData>();
-        list.Add(new ItemStatsData()
-        {
-            StatState = true,
-            StatName = "Vehicle Air Density:",
-            StatDescription = "Controls how much air resistance there is for the vehicle. The lower the less air resistance.",
-            StatMin = 0,
-            StatMax = 10,
-            StatInGameName = "\tAirDensity"
 
-        });
-        list.Add(new ItemStatsData()
-        {
-            StatState = false,
-            StatName = "Vehicle Max RPM:",
-            StatDescription = "One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.",
-            StatMin = 3550,
-            StatMax = 10000,
-            StatInGameName = "\tEngine_MaxRPM"
-        });
-        list.Add(new ItemStatsData()
-        {
-            StatState = true,
-            StatName = "Vehicle Min RPM",
-            StatDescription = "Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.",
-            StatMin = 885,
-            StatMax = 5000,
-            StatInGameName = "\tEngine_MinRPM"
-
-        });
-        return list;
-    }
     private void Form1_Load(object sender, EventArgs e)
     {
-        var itemStatData = this.ItemStats;
-        dataGridView1.DataSource = itemStatData;
+        var itemStatData = this.VheicleStatData;
+        dgv_VehicleStats.DataSource = itemStatData;
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
@@ -144,7 +126,6 @@ public partial class F_ItemRandomiser : Form
         }
 
     }
-
     private void tsm_open_Click(object sender, EventArgs e)
     {
         //gets the path of the datafile folder
@@ -264,13 +245,27 @@ public partial class F_ItemRandomiser : Form
     }
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
-        if (tc_itemStats.SelectedTab.Text == "Unstable Stats")
+
+        switch(tc_itemStats.SelectedTab.Name)
         {
-            bt_IS_CheckAllActiveTab.Text = "Toggle all itmes in Active tab";
-        }
-        else
-        {
-            bt_IS_CheckAllActiveTab.Text = "Toggle all stats in Active tab";
+            case "tp_VehicleStats":
+                dgv_VehicleStats.DataSource = VheicleStatData;
+                break;
+            case "tp_NPC":
+                dgv_VehicleStats.DataSource = NPCStatData; 
+                break;
+            case "tp_FireArms":
+                dgv_VehicleStats.DataSource = FireArmsStatData;
+                break;
+            case "tp_WorldStats":
+                dgv_VehicleStats.DataSource = WorldStatsData;
+                break;
+            case "tp_ExplosivesSpray":
+                dgv_VehicleStats.DataSource = ExplosiveStatData;
+                break;
+            case "tp_FoodDamage":
+                dgv_VehicleStats.DataSource = FoodAndDamageData;
+                break;
         }
     }
 
@@ -530,22 +525,47 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
-    private void NewItemSataTesting()
+    private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
-        //Debug.WriteLine(dataGridView1.Rows[2].Cells[2].Value);
-
-        foreach (DataGridViewRow data in dataGridView1.Rows)
+        e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+        if (dgv_VehicleStats.CurrentCell.ColumnIndex == 3 ||
+            dgv_VehicleStats.CurrentCell.ColumnIndex == 4)
         {
-            foreach(DataGridViewCell cell in data.Cells)
+            TextBox tb = e.Control as TextBox;
+            if (tb != null)
             {
-                if(cell.OwningColumn.HeaderText == "Enabled")
-                {
-                    Debug.WriteLine(cell.OwningColumn.HeaderText);
-                    Debug.WriteLine(cell.Value);
-                }
-
+                tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
             }
         }
     }
+    private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs anError)
+    {
+        if (anError.Context == DataGridViewDataErrorContexts.Commit)
+        {
+            //if the cell is left blank change it back to 0
+            dgv_VehicleStats.CurrentCell.Value = 0;
+        }
+    }
+    private void Column1_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+        {
+            e.Handled = true;
+        }
+    }
 
+    private void NewItemSataTesting()
+    {
+
+
+
+        //Use the list and not the dataGridView
+        //foreach (ItemStatsData data in ItemStats)
+        //{
+        //    if (data.StatState)
+        //    {
+        //        //put the code to randomise inside here
+        //    }
+        //}
+    }
 }
