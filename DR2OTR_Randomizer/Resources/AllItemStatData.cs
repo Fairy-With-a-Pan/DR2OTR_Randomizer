@@ -129,7 +129,7 @@ namespace DR2OTR_Randomizer.Resources
                 StatName = "Skateboard Initial Speed",
                 StatDescription = "The launch speed for the skate board setting this very high will teleport",
                 StatMin = 1,
-                StatMax = 10,
+                StatMax = 100,
                 StatInGameName = "\tInitialSpeed"
 
             });

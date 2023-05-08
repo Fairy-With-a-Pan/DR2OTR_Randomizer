@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Security.AccessControl;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
@@ -103,7 +104,7 @@ public partial class F_ItemRandomiser : Form
     private void Form1_Load(object sender, EventArgs e)
     {
         var itemStatData = this.VheicleStatData;
-        dgv_VehicleStats.DataSource = itemStatData;
+        dgv_ItemStatsTable.DataSource = itemStatData;
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
@@ -243,36 +244,39 @@ public partial class F_ItemRandomiser : Form
             return;
         }
     }
+
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
 
-        switch(tc_itemStats.SelectedTab.Name)
+        switch (tc_itemStats.SelectedTab.Name)
         {
             case "tp_VehicleStats":
-                dgv_VehicleStats.DataSource = VheicleStatData;
+                dgv_ItemStatsTable.DataSource = VheicleStatData;
                 break;
             case "tp_NPC":
-                dgv_VehicleStats.DataSource = NPCStatData; 
+                dgv_ItemStatsTable.DataSource = NPCStatData;
                 break;
             case "tp_FireArms":
-                dgv_VehicleStats.DataSource = FireArmsStatData;
+                dgv_ItemStatsTable.DataSource = FireArmsStatData;
                 break;
             case "tp_WorldStats":
-                dgv_VehicleStats.DataSource = WorldStatsData;
+                dgv_ItemStatsTable.DataSource = WorldStatsData;
                 break;
             case "tp_ExplosivesSpray":
-                dgv_VehicleStats.DataSource = ExplosiveStatData;
+                dgv_ItemStatsTable.DataSource = ExplosiveStatData;
                 break;
             case "tp_FoodDamage":
-                dgv_VehicleStats.DataSource = FoodAndDamageData;
+                dgv_ItemStatsTable.DataSource = FoodAndDamageData;
                 break;
         }
     }
 
     private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
     {
-        //CheckAllItemsinTab();
-        NewItemSataTesting();
+        CheckAllItemsinTab();
+
+
+
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
@@ -312,29 +316,16 @@ public partial class F_ItemRandomiser : Form
     }
     private void CheckAllItemsinTab()
     {
-        TabPage activePage = tc_itemStats.SelectedTab;
-
-        List<CheckBox> allActiveCheckBoxes = new List<CheckBox>();
-        if (activePage.Name == "tp_UnstableStats")
+        foreach (DataGridViewRow row in dgv_ItemStatsTable.Rows)
         {
-            CheckedListBox currentCheckListBox =
-                tc_US_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
-            for (int i = 0; i < currentCheckListBox.Items.Count; i++)
+            if (row.Cells[0].Value.ToString() == "True")
             {
-                var checkToBool = Convert.ToBoolean(currentCheckListBox.GetItemCheckState(i));
-                checkToBool = !checkToBool;
-                currentCheckListBox.SetItemChecked(i, checkToBool);
+                row.Cells[0].Value = false;
+                continue;
             }
-        }
-        else
-        {
-            foreach (GroupBox tab in activePage.Controls)
+            if (row.Cells[0].Value.ToString() == "False")
             {
-                allActiveCheckBoxes.Add(tab.Controls.OfType<CheckBox>().First());
-            }
-            foreach (CheckBox checkBox in allActiveCheckBoxes)
-            {
-                checkBox.Checked = !checkBox.Checked;
+                row.Cells[0].Value = true;
             }
         }
     }
@@ -417,32 +408,32 @@ public partial class F_ItemRandomiser : Form
 
         Random rand = new Random();
 
-        List<GroupBox> allGroupBoxes = new List<GroupBox>();
-
-        foreach (TabPage tabpage in tc_itemStats.TabPages)
+        var itemStatLists = new Dictionary<List<ItemStatsData>, bool>
         {
-            if (tabpage.Name != "tp_UnstableStats")
-            {
-                foreach (GroupBox groupBox in tabpage.Controls)
-                { allGroupBoxes.Add(groupBox); }
-            }
-        }
-        foreach (GroupBox box in allGroupBoxes)
-        {
-            if (box.Controls.OfType<CheckBox>().First().Checked)
-            {
-                decimal dNum1 = box.Controls.OfType<NumericUpDown>().First().Value;
-                decimal dNum2 = box.Controls.OfType<NumericUpDown>().Last().Value;
-                int[] numbs = { Convert.ToInt32(dNum1), Convert.ToInt32(dNum2) }; Array.Sort(numbs);
+            { VheicleStatData, true},
+            { NPCStatData, true },
+            { FireArmsStatData, true},
+            { WorldStatsData, true },
+            { ExplosiveStatData, true },
+            { FoodAndDamageData, true },
+        };
 
-                for (int i = 0; i < itemFile.Length; i++)
+        foreach (List<ItemStatsData> itemStats in itemStatLists.Keys)
+        {
+            for (int i = 0; i < itemStats.Count; i++)
+            {
+                if (itemStats[i].StatState == false) continue;
+                int[] minMax = { itemStats[i].StatMin, itemStats[i].StatMax };
+                Array.Sort(minMax);
+                string currentStat = itemStats[i].StatInGameName;
+                for(int i1 = 0; i1 < itemFile.Length; i1++)
                 {
-                    if (itemFile[i].Contains(box.Tag.ToString()))
+                    if (itemFile[i1].Contains(currentStat))
                     {
-                        if (unSafeLines.Contains(i + 1) && safeMode) { continue; }
-                        int randStatNumb = rand.Next(numbs[0], numbs[1]);
-                        itemFile[i] =
-                            itemFile[i].Split('=')[0] + $"= \"{randStatNumb}\"";
+                        if(unSafeLines.Contains(i1 + 1) && safeMode) { continue; }
+                        int randStatNumb = rand.Next(minMax[0], minMax[1]);
+                        itemFile[i1] =
+                            itemFile[i1].Split('=')[0] + $"= \"{randStatNumb}\"";
                     }
                 }
             }
@@ -528,8 +519,8 @@ public partial class F_ItemRandomiser : Form
     private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
     {
         e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-        if (dgv_VehicleStats.CurrentCell.ColumnIndex == 3 ||
-            dgv_VehicleStats.CurrentCell.ColumnIndex == 4)
+        if (dgv_ItemStatsTable.CurrentCell.ColumnIndex == 3 ||
+            dgv_ItemStatsTable.CurrentCell.ColumnIndex == 4)
         {
             TextBox tb = e.Control as TextBox;
             if (tb != null)
@@ -543,7 +534,7 @@ public partial class F_ItemRandomiser : Form
         if (anError.Context == DataGridViewDataErrorContexts.Commit)
         {
             //if the cell is left blank change it back to 0
-            dgv_VehicleStats.CurrentCell.Value = 0;
+            dgv_ItemStatsTable.CurrentCell.Value = 0;
         }
     }
     private void Column1_KeyPress(object sender, KeyPressEventArgs e)
@@ -552,20 +543,5 @@ public partial class F_ItemRandomiser : Form
         {
             e.Handled = true;
         }
-    }
-
-    private void NewItemSataTesting()
-    {
-
-
-
-        //Use the list and not the dataGridView
-        //foreach (ItemStatsData data in ItemStats)
-        //{
-        //    if (data.StatState)
-        //    {
-        //        //put the code to randomise inside here
-        //    }
-        //}
     }
 }

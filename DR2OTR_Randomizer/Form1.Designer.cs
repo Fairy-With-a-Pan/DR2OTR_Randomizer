@@ -91,7 +91,7 @@
             b_DeselectAll = new Button();
             b_ToggleAll = new Button();
             tp_WitemsStats = new TabPage();
-            dgv_VehicleStats = new DataGridView();
+            dgv_ItemStatsTable = new DataGridView();
             statStateDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             statNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             statDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -154,6 +154,12 @@
             tt_VehicleStats = new ToolTip(components);
             clb_US_FireArms = new CheckedListBox();
             l_SafeMode_Text = new Label();
+            dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             tc_Items.SuspendLayout();
             tp_BasicCombo.SuspendLayout();
@@ -178,7 +184,7 @@
             tc_TabWindows.SuspendLayout();
             tp_WItemRandom.SuspendLayout();
             tp_WitemsStats.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_VehicleStats).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).BeginInit();
             tc_itemStats.SuspendLayout();
             tp_UnstableStats.SuspendLayout();
@@ -750,7 +756,7 @@
             // tp_WitemsStats
             // 
             tp_WitemsStats.AutoScroll = true;
-            tp_WitemsStats.Controls.Add(dgv_VehicleStats);
+            tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
             tp_WitemsStats.Controls.Add(bt_IS_CheckAllActiveTab);
             tp_WitemsStats.Controls.Add(bt_ItenStatsSet);
@@ -763,16 +769,16 @@
             tp_WitemsStats.Text = "Items Stats";
             tp_WitemsStats.UseVisualStyleBackColor = true;
             // 
-            // dgv_VehicleStats
+            // dgv_ItemStatsTable
             // 
-            dgv_VehicleStats.AllowUserToAddRows = false;
-            dgv_VehicleStats.AllowUserToDeleteRows = false;
-            dgv_VehicleStats.AllowUserToResizeColumns = false;
-            dgv_VehicleStats.AllowUserToResizeRows = false;
-            dgv_VehicleStats.AutoGenerateColumns = false;
-            dgv_VehicleStats.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgv_VehicleStats.BackgroundColor = SystemColors.Window;
-            dgv_VehicleStats.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            dgv_ItemStatsTable.AllowUserToAddRows = false;
+            dgv_ItemStatsTable.AllowUserToDeleteRows = false;
+            dgv_ItemStatsTable.AllowUserToResizeColumns = false;
+            dgv_ItemStatsTable.AllowUserToResizeRows = false;
+            dgv_ItemStatsTable.AutoGenerateColumns = false;
+            dgv_ItemStatsTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_ItemStatsTable.BackgroundColor = SystemColors.Window;
+            dgv_ItemStatsTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -780,10 +786,10 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_VehicleStats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgv_VehicleStats.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_VehicleStats.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, StatInGameName });
-            dgv_VehicleStats.DataSource = itemStatsDataBindingSource;
+            dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, StatInGameName });
+            dgv_ItemStatsTable.DataSource = itemStatsDataBindingSource;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = SystemColors.Window;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -791,12 +797,12 @@
             dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgv_VehicleStats.DefaultCellStyle = dataGridViewCellStyle6;
-            dgv_VehicleStats.EditMode = DataGridViewEditMode.EditOnKeystroke;
-            dgv_VehicleStats.GridColor = SystemColors.Window;
-            dgv_VehicleStats.Location = new Point(9, 75);
-            dgv_VehicleStats.MultiSelect = false;
-            dgv_VehicleStats.Name = "dgv_VehicleStats";
+            dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle6;
+            dgv_ItemStatsTable.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            dgv_ItemStatsTable.GridColor = SystemColors.Window;
+            dgv_ItemStatsTable.Location = new Point(9, 75);
+            dgv_ItemStatsTable.MultiSelect = false;
+            dgv_ItemStatsTable.Name = "dgv_ItemStatsTable";
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = SystemColors.Control;
             dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -804,14 +810,14 @@
             dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgv_VehicleStats.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dgv_VehicleStats.RowHeadersVisible = false;
-            dgv_VehicleStats.RowTemplate.Height = 50;
-            dgv_VehicleStats.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgv_VehicleStats.Size = new Size(692, 381);
-            dgv_VehicleStats.TabIndex = 0;
-            dgv_VehicleStats.DataError += dataGridView1_DataError;
-            dgv_VehicleStats.EditingControlShowing += dataGridView1_EditingControlShowing;
+            dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dgv_ItemStatsTable.RowHeadersVisible = false;
+            dgv_ItemStatsTable.RowTemplate.Height = 50;
+            dgv_ItemStatsTable.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgv_ItemStatsTable.Size = new Size(692, 381);
+            dgv_ItemStatsTable.TabIndex = 0;
+            dgv_ItemStatsTable.DataError += dataGridView1_DataError;
+            dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
             // 
             // statStateDataGridViewCheckBoxColumn
             // 
@@ -930,6 +936,7 @@
             tp_VehicleStats.Padding = new Padding(3);
             tp_VehicleStats.Size = new Size(684, 0);
             tp_VehicleStats.TabIndex = 0;
+            tp_VehicleStats.Tag = "";
             tp_VehicleStats.Text = "Vehicle Stats";
             tp_VehicleStats.UseVisualStyleBackColor = true;
             // 
@@ -939,8 +946,9 @@
             tp_NPC.Location = new Point(4, 24);
             tp_NPC.Name = "tp_NPC";
             tp_NPC.Padding = new Padding(3);
-            tp_NPC.Size = new Size(685, 8);
+            tp_NPC.Size = new Size(684, 0);
             tp_NPC.TabIndex = 1;
+            tp_NPC.Tag = "";
             tp_NPC.Text = "NPC Stats";
             tp_NPC.UseVisualStyleBackColor = true;
             // 
@@ -949,8 +957,9 @@
             tp_FireArms.Location = new Point(4, 24);
             tp_FireArms.Name = "tp_FireArms";
             tp_FireArms.Padding = new Padding(3);
-            tp_FireArms.Size = new Size(685, 8);
+            tp_FireArms.Size = new Size(684, 0);
             tp_FireArms.TabIndex = 2;
+            tp_FireArms.Tag = "";
             tp_FireArms.Text = "Fire Arms";
             tp_FireArms.UseVisualStyleBackColor = true;
             // 
@@ -960,8 +969,9 @@
             tp_WorldStats.Location = new Point(4, 24);
             tp_WorldStats.Name = "tp_WorldStats";
             tp_WorldStats.Padding = new Padding(3);
-            tp_WorldStats.Size = new Size(685, 8);
+            tp_WorldStats.Size = new Size(684, 0);
             tp_WorldStats.TabIndex = 3;
+            tp_WorldStats.Tag = "";
             tp_WorldStats.Text = "World Stats";
             tp_WorldStats.UseVisualStyleBackColor = true;
             // 
@@ -971,8 +981,9 @@
             tp_ExplosivesSpray.Location = new Point(4, 24);
             tp_ExplosivesSpray.Name = "tp_ExplosivesSpray";
             tp_ExplosivesSpray.Padding = new Padding(3);
-            tp_ExplosivesSpray.Size = new Size(685, 8);
+            tp_ExplosivesSpray.Size = new Size(684, 0);
             tp_ExplosivesSpray.TabIndex = 4;
+            tp_ExplosivesSpray.Tag = "";
             tp_ExplosivesSpray.Text = "Explosives, Spray & Launch";
             tp_ExplosivesSpray.UseVisualStyleBackColor = true;
             // 
@@ -981,8 +992,9 @@
             tp_FoodDamage.Location = new Point(4, 24);
             tp_FoodDamage.Name = "tp_FoodDamage";
             tp_FoodDamage.Padding = new Padding(3);
-            tp_FoodDamage.Size = new Size(685, 8);
+            tp_FoodDamage.Size = new Size(684, 0);
             tp_FoodDamage.TabIndex = 5;
+            tp_FoodDamage.Tag = "";
             tp_FoodDamage.Text = "Food and Damage";
             tp_FoodDamage.UseVisualStyleBackColor = true;
             // 
@@ -995,7 +1007,7 @@
             tp_UnstableStats.Location = new Point(4, 24);
             tp_UnstableStats.Name = "tp_UnstableStats";
             tp_UnstableStats.Padding = new Padding(3);
-            tp_UnstableStats.Size = new Size(685, 8);
+            tp_UnstableStats.Size = new Size(684, 0);
             tp_UnstableStats.TabIndex = 6;
             tp_UnstableStats.Text = "Unstable Stats";
             tp_UnstableStats.UseVisualStyleBackColor = true;
@@ -1477,6 +1489,42 @@
             l_SafeMode_Text.TabIndex = 24;
             l_SafeMode_Text.Text = "Safe mode is enabled";
             // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            dataGridViewCheckBoxColumn1.DataPropertyName = "StatState";
+            dataGridViewCheckBoxColumn1.HeaderText = "StatState";
+            dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "StatName";
+            dataGridViewTextBoxColumn1.HeaderText = "StatName";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "StatDescription";
+            dataGridViewTextBoxColumn2.HeaderText = "StatDescription";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "StatMin";
+            dataGridViewTextBoxColumn3.HeaderText = "StatMin";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "StatMax";
+            dataGridViewTextBoxColumn4.HeaderText = "StatMax";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // statInGameNameDataGridViewTextBoxColumn
+            // 
+            statInGameNameDataGridViewTextBoxColumn.DataPropertyName = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn.HeaderText = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn.Name = "statInGameNameDataGridViewTextBoxColumn";
+            // 
             // F_ItemRandomiser
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1517,7 +1565,7 @@
             tp_WItemRandom.ResumeLayout(false);
             tp_WItemRandom.PerformLayout();
             tp_WitemsStats.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgv_VehicleStats).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
             tc_itemStats.ResumeLayout(false);
             tp_UnstableStats.ResumeLayout(false);
@@ -1766,7 +1814,7 @@
         private global::System.Windows.Forms.GroupBox gb_V_ETMinRPM;
         private global::System.Windows.Forms.GroupBox gb_V_MinVSWE;
         private global::System.Windows.Forms.GroupBox gb_V_MVSEP;
-        private global::System.Windows.Forms.DataGridView dgv_VehicleStats;
+        private global::System.Windows.Forms.DataGridView dgv_ItemStatsTable;
         private global::System.Windows.Forms.BindingSource itemStatsDataBindingSource;
         private global::System.Windows.Forms.TabPage tp_VehicleStats;
         private global::System.Windows.Forms.DataGridViewCheckBoxColumn statStateDataGridViewCheckBoxColumn;
@@ -1775,5 +1823,11 @@
         private global::System.Windows.Forms.DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
         private global::System.Windows.Forms.DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
         private global::System.Windows.Forms.DataGridViewTextBoxColumn StatInGameName;
+        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn statInGameNameDataGridViewTextBoxColumn;
     }
 }
