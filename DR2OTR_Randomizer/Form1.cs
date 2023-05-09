@@ -106,6 +106,10 @@ public partial class F_ItemRandomiser : Form
         var itemStatData = this.VheicleStatData;
         dgv_ItemStatsTable.DataSource = itemStatData;
     }
+    private void tc_TabWindowsTabSelect(object sender, EventArgs e)
+    {
+        dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
+    }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
         CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
@@ -114,18 +118,21 @@ public partial class F_ItemRandomiser : Form
             currentListBox.SetItemChecked(i, false);
         }
     }
-
+    private void bt_IS_UnstableUncheck_Click(object sender, EventArgs e)
+    {
+        CheckedListBox checkedListBox = tc_US_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
+        for (int i = 0; i < checkedListBox.Items.Count; i++)
+        {
+            checkedListBox.SetItemChecked(i, false);
+        }
+    }
     private void b_ToggleAll_Click(object sender, EventArgs e)
     {
-        CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
-        for (int i = 0; i < currentListBox.Items.Count; i++)
-        {
-            //Gets the check sate and then converts it to a bool for a toggle
-            var checkToBool = Convert.ToBoolean(currentListBox.GetItemCheckState(i));
-            checkToBool = !checkToBool;
-            currentListBox.SetItemChecked(i, checkToBool);
-        }
-
+        ToogleAllItemsCheckState(tc_Items);
+    }
+    private void bt_IS_UnstableToggle_Click(object sender, EventArgs e)
+    {
+        ToogleAllItemsCheckState(tc_US_Items);
     }
     private void tsm_open_Click(object sender, EventArgs e)
     {
@@ -247,36 +254,72 @@ public partial class F_ItemRandomiser : Form
 
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
-
+        //when changing tab the selected cell will move over 1 so there is no issues with tolggle them
         switch (tc_itemStats.SelectedTab.Name)
         {
             case "tp_VehicleStats":
                 dgv_ItemStatsTable.DataSource = VheicleStatData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_NPC":
                 dgv_ItemStatsTable.DataSource = NPCStatData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_FireArms":
                 dgv_ItemStatsTable.DataSource = FireArmsStatData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_WorldStats":
                 dgv_ItemStatsTable.DataSource = WorldStatsData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_ExplosivesSpray":
                 dgv_ItemStatsTable.DataSource = ExplosiveStatData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_FoodDamage":
                 dgv_ItemStatsTable.DataSource = FoodAndDamageData;
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
+        }
+        if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
+        { dgv_ItemStatsTable.Visible = false; }
+        else { dgv_ItemStatsTable.Visible = true; }
+    }
+
+    private void dgv_ItemStatsTable_ColumnHeaderClicked(
+        object sender, DataGridViewCellMouseEventArgs e)
+    {
+        if (dgv_ItemStatsTable.Columns[0].DataPropertyName == "StatState")
+        {
+            foreach (DataGridViewRow row in dgv_ItemStatsTable.Rows)
+            {
+                var objectToBool = Convert.ToBoolean(row.Cells[0].Value);
+                objectToBool = !objectToBool;
+                row.Cells[0].Value = objectToBool;
+                //dgv_ItemStatsTable.RefreshEdit();
+            }
+        }
+    }
+
+    private void dgv_itemStatTabel_CellSelected(object sender, DataGridViewCellMouseEventArgs e)
+    {
+        for (int i = 0; i < dgv_ItemStatsTable.SelectedCells.Count; i++)
+        {
+            if (dgv_ItemStatsTable.SelectedCells[i].OwningColumn.DataPropertyName == "StatState")
+            {
+                var checkTobool = Convert.ToBoolean(dgv_ItemStatsTable.SelectedCells[i].Value);
+                checkTobool = !checkTobool;
+                dgv_ItemStatsTable.SelectedCells[i].Value = checkTobool;
+                //Selects another cell so there is no issues when selecting the header
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
+            }
         }
     }
 
     private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
     {
-        CheckAllItemsinTab();
-
-
-
+        CheckAllItemsStatsInTab();
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
@@ -314,19 +357,24 @@ public partial class F_ItemRandomiser : Form
         }
         File.WriteAllLines($"{path}\\missions.txt", missionFile);
     }
-    private void CheckAllItemsinTab()
+    private void CheckAllItemsStatsInTab()
     {
         foreach (DataGridViewRow row in dgv_ItemStatsTable.Rows)
         {
-            if (row.Cells[0].Value.ToString() == "True")
-            {
-                row.Cells[0].Value = false;
-                continue;
-            }
-            if (row.Cells[0].Value.ToString() == "False")
-            {
-                row.Cells[0].Value = true;
-            }
+            var objectToBool = Convert.ToBoolean(row.Cells[0].Value);
+            objectToBool = !objectToBool;
+            row.Cells[0].Value = objectToBool;
+        }
+    }
+    private void ToogleAllItemsCheckState(TabControl tabControl)
+    {
+        CheckedListBox currentListBox = tabControl.SelectedTab.Controls.OfType<CheckedListBox>().First();
+        for (int i = 0; i < currentListBox.Items.Count; i++)
+        {
+            //Gets the check sate and then converts it to a bool for a toggle
+            var checkToBool = Convert.ToBoolean(currentListBox.GetItemCheckState(i));
+            checkToBool = !checkToBool;
+            currentListBox.SetItemChecked(i, checkToBool);
         }
     }
     private void GetItemsToRandomize(List<string> allItems)
@@ -426,11 +474,11 @@ public partial class F_ItemRandomiser : Form
                 int[] minMax = { itemStats[i].StatMin, itemStats[i].StatMax };
                 Array.Sort(minMax);
                 string currentStat = itemStats[i].StatInGameName;
-                for(int i1 = 0; i1 < itemFile.Length; i1++)
+                for (int i1 = 0; i1 < itemFile.Length; i1++)
                 {
                     if (itemFile[i1].Contains(currentStat))
                     {
-                        if(unSafeLines.Contains(i1 + 1) && safeMode) { continue; }
+                        if (unSafeLines.Contains(i1 + 1) && safeMode) { continue; }
                         int randStatNumb = rand.Next(minMax[0], minMax[1]);
                         itemFile[i1] =
                             itemFile[i1].Split('=')[0] + $"= \"{randStatNumb}\"";

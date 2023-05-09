@@ -31,9 +31,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
@@ -86,6 +88,8 @@
             clb_SearchResults = new CheckedListBox();
             tc_TabWindows = new TabControl();
             tp_WItemRandom = new TabPage();
+            l_MainDec = new Label();
+            pictureBox1 = new PictureBox();
             tb_ItemsSearch = new TextBox();
             b_Randomise = new Button();
             b_DeselectAll = new Button();
@@ -100,7 +104,6 @@
             StatInGameName = new DataGridViewTextBoxColumn();
             itemStatsDataBindingSource = new BindingSource(components);
             bt_NPC_Model_Randomizer = new Button();
-            bt_IS_CheckAllActiveTab = new Button();
             bt_ItenStatsSet = new Button();
             tc_itemStats = new TabControl();
             tp_VehicleStats = new TabPage();
@@ -110,6 +113,8 @@
             tp_ExplosivesSpray = new TabPage();
             tp_FoodDamage = new TabPage();
             tp_UnstableStats = new TabPage();
+            bt_IS_UnstableUncheck = new Button();
+            bt_IS_UnstableToggle = new Button();
             gb_US_NPCItems = new GroupBox();
             cb_US_NPCItems = new CheckBox();
             l_US_NPCItems_Dec = new Label();
@@ -154,11 +159,11 @@
             tt_VehicleStats = new ToolTip(components);
             clb_US_FireArms = new CheckedListBox();
             l_SafeMode_Text = new Label();
-            dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dgvColoum_StatState = new DataGridViewCheckBoxColumn();
+            dgvColoum_StatName = new DataGridViewTextBoxColumn();
+            dgvColoum_StatDesc = new DataGridViewTextBoxColumn();
+            dgvColoum_StatMin = new DataGridViewTextBoxColumn();
+            dgvColoum_StatMax = new DataGridViewTextBoxColumn();
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             tc_Items.SuspendLayout();
@@ -183,6 +188,7 @@
             tp_Search.SuspendLayout();
             tc_TabWindows.SuspendLayout();
             tp_WItemRandom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tp_WitemsStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).BeginInit();
@@ -696,9 +702,12 @@
             tc_TabWindows.SelectedIndex = 0;
             tc_TabWindows.Size = new Size(726, 500);
             tc_TabWindows.TabIndex = 23;
+            tc_TabWindows.Click += tc_TabWindowsTabSelect;
             // 
             // tp_WItemRandom
             // 
+            tp_WItemRandom.Controls.Add(l_MainDec);
+            tp_WItemRandom.Controls.Add(pictureBox1);
             tp_WItemRandom.Controls.Add(tb_ItemsSearch);
             tp_WItemRandom.Controls.Add(b_Randomise);
             tp_WItemRandom.Controls.Add(b_DeselectAll);
@@ -711,6 +720,24 @@
             tp_WItemRandom.TabIndex = 0;
             tp_WItemRandom.Text = "Items Randomiser";
             tp_WItemRandom.UseVisualStyleBackColor = true;
+            // 
+            // l_MainDec
+            // 
+            l_MainDec.AutoSize = true;
+            l_MainDec.Location = new Point(370, 246);
+            l_MainDec.Name = "l_MainDec";
+            l_MainDec.Size = new Size(329, 120);
+            l_MainDec.TabIndex = 29;
+            l_MainDec.Text = resources.GetString("l_MainDec.Text");
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Banner;
+            pictureBox1.Location = new Point(353, 59);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(362, 154);
+            pictureBox1.TabIndex = 28;
+            pictureBox1.TabStop = false;
             // 
             // tb_ItemsSearch
             // 
@@ -758,7 +785,6 @@
             tp_WitemsStats.AutoScroll = true;
             tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
-            tp_WitemsStats.Controls.Add(bt_IS_CheckAllActiveTab);
             tp_WitemsStats.Controls.Add(bt_ItenStatsSet);
             tp_WitemsStats.Controls.Add(tc_itemStats);
             tp_WitemsStats.Location = new Point(4, 24);
@@ -778,6 +804,7 @@
             dgv_ItemStatsTable.AutoGenerateColumns = false;
             dgv_ItemStatsTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgv_ItemStatsTable.BackgroundColor = SystemColors.Window;
+            dgv_ItemStatsTable.BorderStyle = BorderStyle.None;
             dgv_ItemStatsTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -794,12 +821,12 @@
             dataGridViewCellStyle6.BackColor = SystemColors.Window;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
             dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle6;
             dgv_ItemStatsTable.EditMode = DataGridViewEditMode.EditOnKeystroke;
-            dgv_ItemStatsTable.GridColor = SystemColors.Window;
+            dgv_ItemStatsTable.GridColor = SystemColors.ControlLight;
             dgv_ItemStatsTable.Location = new Point(9, 75);
             dgv_ItemStatsTable.MultiSelect = false;
             dgv_ItemStatsTable.Name = "dgv_ItemStatsTable";
@@ -812,10 +839,14 @@
             dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
             dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgv_ItemStatsTable.RowHeadersVisible = false;
-            dgv_ItemStatsTable.RowTemplate.Height = 50;
+            dataGridViewCellStyle8.Padding = new Padding(0, 7, 0, 7);
+            dgv_ItemStatsTable.RowsDefaultCellStyle = dataGridViewCellStyle8;
             dgv_ItemStatsTable.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgv_ItemStatsTable.Size = new Size(692, 381);
+            dgv_ItemStatsTable.ShowEditingIcon = false;
+            dgv_ItemStatsTable.Size = new Size(699, 391);
             dgv_ItemStatsTable.TabIndex = 0;
+            dgv_ItemStatsTable.CellMouseClick += dgv_itemStatTabel_CellSelected;
+            dgv_ItemStatsTable.ColumnHeaderMouseClick += dgv_ItemStatsTable_ColumnHeaderClicked;
             dgv_ItemStatsTable.DataError += dataGridView1_DataError;
             dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
             // 
@@ -850,7 +881,7 @@
             statDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
             statDescriptionDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
             statDescriptionDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statDescriptionDataGridViewTextBoxColumn.Width = 260;
+            statDescriptionDataGridViewTextBoxColumn.Width = 265;
             // 
             // statMinDataGridViewTextBoxColumn
             // 
@@ -892,16 +923,6 @@
             bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
             bt_NPC_Model_Randomizer.Click += bt_NPC_Model_Randomizer_Click;
             // 
-            // bt_IS_CheckAllActiveTab
-            // 
-            bt_IS_CheckAllActiveTab.Location = new Point(532, 6);
-            bt_IS_CheckAllActiveTab.Name = "bt_IS_CheckAllActiveTab";
-            bt_IS_CheckAllActiveTab.Size = new Size(110, 41);
-            bt_IS_CheckAllActiveTab.TabIndex = 3;
-            bt_IS_CheckAllActiveTab.Text = "Toggle all stats in Active tab";
-            bt_IS_CheckAllActiveTab.UseVisualStyleBackColor = true;
-            bt_IS_CheckAllActiveTab.Click += bt_IS_CheckAllActiveTab_Click;
-            // 
             // bt_ItenStatsSet
             // 
             bt_ItenStatsSet.Location = new Point(10, 6);
@@ -924,7 +945,7 @@
             tc_itemStats.Location = new Point(9, 51);
             tc_itemStats.Name = "tc_itemStats";
             tc_itemStats.SelectedIndex = 0;
-            tc_itemStats.Size = new Size(692, 27);
+            tc_itemStats.Size = new Size(703, 415);
             tc_itemStats.TabIndex = 1;
             tc_itemStats.Click += tc_itemStats_SelectedTab;
             // 
@@ -934,7 +955,7 @@
             tp_VehicleStats.Location = new Point(4, 24);
             tp_VehicleStats.Name = "tp_VehicleStats";
             tp_VehicleStats.Padding = new Padding(3);
-            tp_VehicleStats.Size = new Size(684, 0);
+            tp_VehicleStats.Size = new Size(695, 387);
             tp_VehicleStats.TabIndex = 0;
             tp_VehicleStats.Tag = "";
             tp_VehicleStats.Text = "Vehicle Stats";
@@ -946,7 +967,7 @@
             tp_NPC.Location = new Point(4, 24);
             tp_NPC.Name = "tp_NPC";
             tp_NPC.Padding = new Padding(3);
-            tp_NPC.Size = new Size(684, 0);
+            tp_NPC.Size = new Size(695, 387);
             tp_NPC.TabIndex = 1;
             tp_NPC.Tag = "";
             tp_NPC.Text = "NPC Stats";
@@ -957,7 +978,7 @@
             tp_FireArms.Location = new Point(4, 24);
             tp_FireArms.Name = "tp_FireArms";
             tp_FireArms.Padding = new Padding(3);
-            tp_FireArms.Size = new Size(684, 0);
+            tp_FireArms.Size = new Size(695, 387);
             tp_FireArms.TabIndex = 2;
             tp_FireArms.Tag = "";
             tp_FireArms.Text = "Fire Arms";
@@ -969,7 +990,7 @@
             tp_WorldStats.Location = new Point(4, 24);
             tp_WorldStats.Name = "tp_WorldStats";
             tp_WorldStats.Padding = new Padding(3);
-            tp_WorldStats.Size = new Size(684, 0);
+            tp_WorldStats.Size = new Size(695, 387);
             tp_WorldStats.TabIndex = 3;
             tp_WorldStats.Tag = "";
             tp_WorldStats.Text = "World Stats";
@@ -981,7 +1002,7 @@
             tp_ExplosivesSpray.Location = new Point(4, 24);
             tp_ExplosivesSpray.Name = "tp_ExplosivesSpray";
             tp_ExplosivesSpray.Padding = new Padding(3);
-            tp_ExplosivesSpray.Size = new Size(684, 0);
+            tp_ExplosivesSpray.Size = new Size(695, 387);
             tp_ExplosivesSpray.TabIndex = 4;
             tp_ExplosivesSpray.Tag = "";
             tp_ExplosivesSpray.Text = "Explosives, Spray & Launch";
@@ -992,7 +1013,7 @@
             tp_FoodDamage.Location = new Point(4, 24);
             tp_FoodDamage.Name = "tp_FoodDamage";
             tp_FoodDamage.Padding = new Padding(3);
-            tp_FoodDamage.Size = new Size(684, 0);
+            tp_FoodDamage.Size = new Size(695, 387);
             tp_FoodDamage.TabIndex = 5;
             tp_FoodDamage.Tag = "";
             tp_FoodDamage.Text = "Food and Damage";
@@ -1000,6 +1021,8 @@
             // 
             // tp_UnstableStats
             // 
+            tp_UnstableStats.Controls.Add(bt_IS_UnstableUncheck);
+            tp_UnstableStats.Controls.Add(bt_IS_UnstableToggle);
             tp_UnstableStats.Controls.Add(gb_US_NPCItems);
             tp_UnstableStats.Controls.Add(gb_US_PropToThrow);
             tp_UnstableStats.Controls.Add(tc_US_Items);
@@ -1007,10 +1030,30 @@
             tp_UnstableStats.Location = new Point(4, 24);
             tp_UnstableStats.Name = "tp_UnstableStats";
             tp_UnstableStats.Padding = new Padding(3);
-            tp_UnstableStats.Size = new Size(684, 0);
+            tp_UnstableStats.Size = new Size(695, 387);
             tp_UnstableStats.TabIndex = 6;
             tp_UnstableStats.Text = "Unstable Stats";
             tp_UnstableStats.UseVisualStyleBackColor = true;
+            // 
+            // bt_IS_UnstableUncheck
+            // 
+            bt_IS_UnstableUncheck.Location = new Point(525, 335);
+            bt_IS_UnstableUncheck.Name = "bt_IS_UnstableUncheck";
+            bt_IS_UnstableUncheck.Size = new Size(150, 40);
+            bt_IS_UnstableUncheck.TabIndex = 24;
+            bt_IS_UnstableUncheck.Text = "Uncheck all items";
+            bt_IS_UnstableUncheck.UseVisualStyleBackColor = true;
+            bt_IS_UnstableUncheck.Click += bt_IS_UnstableUncheck_Click;
+            // 
+            // bt_IS_UnstableToggle
+            // 
+            bt_IS_UnstableToggle.Location = new Point(357, 335);
+            bt_IS_UnstableToggle.Name = "bt_IS_UnstableToggle";
+            bt_IS_UnstableToggle.Size = new Size(150, 40);
+            bt_IS_UnstableToggle.TabIndex = 23;
+            bt_IS_UnstableToggle.Text = "Toggle all items";
+            bt_IS_UnstableToggle.UseVisualStyleBackColor = true;
+            bt_IS_UnstableToggle.Click += bt_IS_UnstableToggle_Click;
             // 
             // gb_US_NPCItems
             // 
@@ -1489,35 +1532,35 @@
             l_SafeMode_Text.TabIndex = 24;
             l_SafeMode_Text.Text = "Safe mode is enabled";
             // 
-            // dataGridViewCheckBoxColumn1
+            // dgvColoum_StatState
             // 
-            dataGridViewCheckBoxColumn1.DataPropertyName = "StatState";
-            dataGridViewCheckBoxColumn1.HeaderText = "StatState";
-            dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            dgvColoum_StatState.DataPropertyName = "StatState";
+            dgvColoum_StatState.HeaderText = "StatState";
+            dgvColoum_StatState.Name = "dgvColoum_StatState";
             // 
-            // dataGridViewTextBoxColumn1
+            // dgvColoum_StatName
             // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "StatName";
-            dataGridViewTextBoxColumn1.HeaderText = "StatName";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dgvColoum_StatName.DataPropertyName = "StatName";
+            dgvColoum_StatName.HeaderText = "StatName";
+            dgvColoum_StatName.Name = "dgvColoum_StatName";
             // 
-            // dataGridViewTextBoxColumn2
+            // dgvColoum_StatDesc
             // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "StatDescription";
-            dataGridViewTextBoxColumn2.HeaderText = "StatDescription";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dgvColoum_StatDesc.DataPropertyName = "StatDescription";
+            dgvColoum_StatDesc.HeaderText = "StatDescription";
+            dgvColoum_StatDesc.Name = "dgvColoum_StatDesc";
             // 
-            // dataGridViewTextBoxColumn3
+            // dgvColoum_StatMin
             // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "StatMin";
-            dataGridViewTextBoxColumn3.HeaderText = "StatMin";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dgvColoum_StatMin.DataPropertyName = "StatMin";
+            dgvColoum_StatMin.HeaderText = "StatMin";
+            dgvColoum_StatMin.Name = "dgvColoum_StatMin";
             // 
-            // dataGridViewTextBoxColumn4
+            // dgvColoum_StatMax
             // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "StatMax";
-            dataGridViewTextBoxColumn4.HeaderText = "StatMax";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dgvColoum_StatMax.DataPropertyName = "StatMax";
+            dgvColoum_StatMax.HeaderText = "StatMax";
+            dgvColoum_StatMax.Name = "dgvColoum_StatMax";
             // 
             // statInGameNameDataGridViewTextBoxColumn
             // 
@@ -1534,6 +1577,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             Name = "F_ItemRandomiser";
@@ -1564,6 +1608,7 @@
             tc_TabWindows.ResumeLayout(false);
             tp_WItemRandom.ResumeLayout(false);
             tp_WItemRandom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tp_WitemsStats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
@@ -1592,6 +1637,11 @@
             tp_US_Vehicles.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void Dgv_ItemStatsTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -1650,61 +1700,11 @@
         private CheckedListBox clb_SearchResults;
         private ToolTip tt_VehicleStats;
         private Button bt_ItenStatsSet;
-        private global::System.Windows.Forms.Button bt_IS_CheckAllActiveTab;
         private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
         private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
         private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
         private global::System.Windows.Forms.Label l_SafeMode_Text;
         private global::System.Windows.Forms.TabControl tc_itemStats;
-        private global::System.Windows.Forms.GroupBox gb_V_EjectSpeed;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_EjectSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EjectSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_EjectSpeed;
-        private global::System.Windows.Forms.GroupBox gb_V_RotateSpeed;
-        private global::System.Windows.Forms.Label l_V_RotateSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_RotateSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_RotateSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_RotateSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_RotateSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_RotateSpeed;
-        private global::System.Windows.Forms.GroupBox gb_V_MaxRotationSpeed;
-        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRotationSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_MaxRotationSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRotationSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_MaxRotationSpeed;
-        private global::System.Windows.Forms.GroupBox gb_V_MaxRideSpeed;
-        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRideSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_MaxRideSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MaxRideSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_MaxRideSpeed;
-        private global::System.Windows.Forms.GroupBox gb_V_InitialSpeed;
-        private global::System.Windows.Forms.Label l_V_InitialSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_InitialSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_InitialSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_InitialSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_InitialSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_InitialSpeed;
-        private global::System.Windows.Forms.GroupBox gb_V_ExtraTorque;
-        private global::System.Windows.Forms.Label l_V_ExtraTorque_Dec;
-        private global::System.Windows.Forms.Label l_V_ExtraTorque_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ExtraTorque_Max;
-        private global::System.Windows.Forms.Label l_V_ExtraTorque_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ExtraTorque_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_ExtraTorque;
-        private global::System.Windows.Forms.GroupBox gb_V_TopSpeed;
-        private global::System.Windows.Forms.Label l_V_TopSpeed_Dec;
-        private global::System.Windows.Forms.Label l_V_TopSpeed_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_TopSpeed_Max;
-        private global::System.Windows.Forms.Label l_V_TopSpeed_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_TopSpeed_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_TopSpeed;
         private global::System.Windows.Forms.TabPage tp_NPC;
         private global::System.Windows.Forms.TabPage tp_FireArms;
         private global::System.Windows.Forms.TabPage tp_WorldStats;
@@ -1751,83 +1751,24 @@
         private global::System.Windows.Forms.TabPage tp_US_Vehicles;
         private global::System.Windows.Forms.CheckedListBox clb_US_Vehicles;
         private global::System.Windows.Forms.Label l_US_Warning_Msg;
-        private global::System.Windows.Forms.Label l_V_MVSEP_Dec;
-        private global::System.Windows.Forms.Label l__V_MVSEP_Max;
-        private global::System.Windows.Forms.NumericUpDown nud__V_MVSEP_Max;
-        private global::System.Windows.Forms.Label l_V_MVSEP_Min;
-        private global::System.Windows.Forms.NumericUpDown nud__V_MVSEP_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_MVSEP;
-        private global::System.Windows.Forms.Label l_V_MinVSWE_Dec;
-        private global::System.Windows.Forms.Label l_V_MinVSWE_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MinVSWE_Max;
-        private global::System.Windows.Forms.Label l_V_MinVSWE_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_MinVSWE_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_MinVSWE;
-        private global::System.Windows.Forms.Label l_V_ETMinRPM_Dec;
-        private global::System.Windows.Forms.Label l_V_ETMinRPM_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ETMinRPM_Max;
-        private global::System.Windows.Forms.Label l_V_ETMinRPM_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ETMinRPM_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_ETMinRPM;
-        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Dec;
-        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ETFMaxRPM_Max;
-        private global::System.Windows.Forms.Label l_V_ETFMaxRPM_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_ETFMaxRPM_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_ETFMaxRPM;
-        private global::System.Windows.Forms.Label l_V_EORPM_Dec;
-        private global::System.Windows.Forms.Label l_V_EORPM_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EORPM_Max;
-        private global::System.Windows.Forms.Label l_V_EORPM_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EORPM_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_EORPM;
-        private global::System.Windows.Forms.Label l_V_EMT_Dec;
-        private global::System.Windows.Forms.Label l_V_EMT_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMT_Max;
-        private global::System.Windows.Forms.Label l_V_EMT_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMT_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_EMT;
-        private global::System.Windows.Forms.Label l_V_EMinRPM_Dec;
-        private global::System.Windows.Forms.Label l_V_EMinRPM_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMinRPM_Max;
-        private global::System.Windows.Forms.Label l_V_EMinRPM_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMinRPM_min;
-        private global::System.Windows.Forms.CheckBox cb_V_EMinRPM;
-        private global::System.Windows.Forms.Label l_V_EMaxRPM_Dec;
-        private global::System.Windows.Forms.Label l_V_EMaxRPM_Max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMaxRPM_Max;
-        private global::System.Windows.Forms.Label l_V_EMaxRPM_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_EMaxRPM_Min;
-        private global::System.Windows.Forms.CheckBox cb_V_EMaxRPM;
-        private global::System.Windows.Forms.Label l_V_AD_Dec;
-        private global::System.Windows.Forms.Label l_V_AD_max;
-        private global::System.Windows.Forms.NumericUpDown nud_V_AD_Max;
-        private global::System.Windows.Forms.Label l_V_AD_Min;
-        private global::System.Windows.Forms.NumericUpDown nud_V_AD_Min;
-        private global::System.Windows.Forms.CheckBox cb_AirDensity;
-        private global::System.Windows.Forms.GroupBox gb_AirDensity;
-        private global::System.Windows.Forms.GroupBox gb_V_EMaxRPM;
-        private global::System.Windows.Forms.GroupBox gb_V_EMinRPM;
-        private global::System.Windows.Forms.GroupBox gb_V_EMT;
-        private global::System.Windows.Forms.GroupBox gb_V_EORPM;
-        private global::System.Windows.Forms.GroupBox gb_V_ETFMaxRPM;
-        private global::System.Windows.Forms.GroupBox gb_V_ETMinRPM;
-        private global::System.Windows.Forms.GroupBox gb_V_MinVSWE;
-        private global::System.Windows.Forms.GroupBox gb_V_MVSEP;
         private global::System.Windows.Forms.DataGridView dgv_ItemStatsTable;
         private global::System.Windows.Forms.BindingSource itemStatsDataBindingSource;
         private global::System.Windows.Forms.TabPage tp_VehicleStats;
-        private global::System.Windows.Forms.DataGridViewCheckBoxColumn statStateDataGridViewCheckBoxColumn;
-        private global::System.Windows.Forms.DataGridViewTextBoxColumn statNameDataGridViewTextBoxColumn;
-        private global::System.Windows.Forms.DataGridViewTextBoxColumn statDescriptionDataGridViewTextBoxColumn;
-        private global::System.Windows.Forms.DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
-        private global::System.Windows.Forms.DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
-        private global::System.Windows.Forms.DataGridViewTextBoxColumn StatInGameName;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewCheckBoxColumn dgvColoum_StatState;
+        private DataGridViewTextBoxColumn dgvColoum_StatName;
+        private DataGridViewTextBoxColumn dgvColoum_StatDesc;
+        private DataGridViewTextBoxColumn dgvColoum_StatMin;
+        private DataGridViewTextBoxColumn dgvColoum_StatMax;
         private DataGridViewTextBoxColumn statInGameNameDataGridViewTextBoxColumn;
+        private Button bt_IS_UnstableUncheck;
+        private Button bt_IS_UnstableToggle;
+        private DataGridViewCheckBoxColumn statStateDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn statNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn StatInGameName;
+        private PictureBox pictureBox1;
+        private Label l_MainDec;
     }
 }
