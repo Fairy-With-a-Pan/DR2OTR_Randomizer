@@ -14,14 +14,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 namespace DR2OTR_Randomizer;
 /// <summary>
 /// TODO:
-/// Need to Redo the Item stat randomizer code for the DGV
+/// Move the item randomizer over to a data grid view
+/// Like the item stat randomizer.
+/// 
+/// 
 /// Need to spell check
-/// 
-/// 
-/// Moved over to the DataGridView for the Item stats all
-/// of the stats have been moved over and are proply working
-/// 
-/// 
 /// Refactor and optiomze the program 
 /// 
 /// 
@@ -42,8 +39,9 @@ public partial class F_ItemRandomiser : Form
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
         20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625, 78689, 78761, };
 
-    LevelsLines levelLines = new LevelsLines();
 
+
+    LevelsLines levelLines = new LevelsLines();
     string path;
     public F_ItemRandomiser()
     {
@@ -79,7 +77,10 @@ public partial class F_ItemRandomiser : Form
 
         //adds the string for the item name coloum and theck check box to the data table
         dt.Columns.Add("Item", typeof(string));
+        //Use this for the Tag that is inside the xml file
+        //dt.Columns.Add("Tag", typeof(string));
         dt.Columns.Add("Checked", typeof(bool));
+
 
         //NEEDS TO SHIP WITH THE "Allitems.txt"
         //User will be able to add and remove items from the file
@@ -92,6 +93,7 @@ public partial class F_ItemRandomiser : Form
         //Adds the data from the data table to the check list box for filtering
         clb_SearchResults.DataSource = dt.DefaultView;
 
+        
         //Gets the string name of the Item in the datatable columns and dislpays that name
         //and sets the Value for each Item in the Check list box the same as the dispaly name
         clb_SearchResults.DisplayMember = "Item";
@@ -99,12 +101,14 @@ public partial class F_ItemRandomiser : Form
 
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
+        dataGridView1.DataSource = dt; 
     }
 
     private void Form1_Load(object sender, EventArgs e)
     {
         var itemStatData = this.VheicleStatData;
         dgv_ItemStatsTable.DataSource = itemStatData;
+
     }
     private void tc_TabWindowsTabSelect(object sender, EventArgs e)
     {

@@ -522,5 +522,6 @@ namespace DR2OTR_Randomizer.Resources
 
             return list;
         }
+        
     }
 }

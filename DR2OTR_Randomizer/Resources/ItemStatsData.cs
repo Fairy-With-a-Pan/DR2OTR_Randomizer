@@ -15,4 +15,6 @@ namespace DR2OTR_Randomizer.Resources
         public int StatMax { get; set;}
         public string StatInGameName { get; set; }
     }
+
+
 }
