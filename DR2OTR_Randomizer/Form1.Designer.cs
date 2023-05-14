@@ -31,6 +31,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
@@ -40,9 +43,6 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             tsm_File = new ToolStripMenuItem();
             tsm_open = new ToolStripMenuItem();
@@ -51,6 +51,7 @@
             safeModeToolStripMenuItem = new ToolStripMenuItem();
             tsm_Options = new ToolStripMenuItem();
             tc_Items = new TabControl();
+            tp_AllItems = new TabPage();
             tp_BasicCombo = new TabPage();
             clb_BasicCombo = new CheckedListBox();
             tp_BasicFood = new TabPage();
@@ -89,10 +90,14 @@
             clb_Vehicles = new CheckedListBox();
             tp_Search = new TabPage();
             clb_SearchResults = new CheckedListBox();
-            tabPage1 = new TabPage();
             itemsDataTableBindingSource = new BindingSource(components);
             tc_TabWindows = new TabControl();
             tp_WItemRandom = new TabPage();
+            dgv_AllItems = new DataGridView();
+            dgv_AllItem_CheckBox = new DataGridViewCheckBoxColumn();
+            dgv_AllItem_ItemName = new DataGridViewTextBoxColumn();
+            dgv_AllItem_ItemTag = new DataGridViewTextBoxColumn();
+            allItemDataTableBindingSource = new BindingSource(components);
             l_MainDec = new Label();
             pictureBox1 = new PictureBox();
             tb_ItemsSearch = new TextBox();
@@ -170,7 +175,6 @@
             dgvColoum_StatMin = new DataGridViewTextBoxColumn();
             dgvColoum_StatMax = new DataGridViewTextBoxColumn();
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
             tc_Items.SuspendLayout();
             tp_BasicCombo.SuspendLayout();
@@ -195,6 +199,8 @@
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).BeginInit();
             tc_TabWindows.SuspendLayout();
             tp_WItemRandom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_AllItems).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)allItemDataTableBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tp_WitemsStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
@@ -220,7 +226,6 @@
             tp_US_Pushed.SuspendLayout();
             tp_US_Special.SuspendLayout();
             tp_US_Vehicles.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -276,6 +281,7 @@
             // 
             // tc_Items
             // 
+            tc_Items.Controls.Add(tp_AllItems);
             tc_Items.Controls.Add(tp_BasicCombo);
             tc_Items.Controls.Add(tp_BasicFood);
             tc_Items.Controls.Add(tp_BasicLarge);
@@ -295,12 +301,22 @@
             tc_Items.Controls.Add(tp_Special);
             tc_Items.Controls.Add(tp_Vehicles);
             tc_Items.Controls.Add(tp_Search);
-            tc_Items.Controls.Add(tabPage1);
             tc_Items.Location = new Point(6, 6);
             tc_Items.Name = "tc_Items";
             tc_Items.SelectedIndex = 0;
-            tc_Items.Size = new Size(345, 430);
+            tc_Items.Size = new Size(709, 88);
             tc_Items.TabIndex = 19;
+            tc_Items.Click += tc_Items_SelectedTab;
+            // 
+            // tp_AllItems
+            // 
+            tp_AllItems.Location = new Point(4, 24);
+            tp_AllItems.Name = "tp_AllItems";
+            tp_AllItems.Padding = new Padding(3);
+            tp_AllItems.Size = new Size(701, 60);
+            tp_AllItems.TabIndex = 19;
+            tp_AllItems.Text = "All Items";
+            tp_AllItems.UseVisualStyleBackColor = true;
             // 
             // tp_BasicCombo
             // 
@@ -308,7 +324,7 @@
             tp_BasicCombo.Location = new Point(4, 24);
             tp_BasicCombo.Name = "tp_BasicCombo";
             tp_BasicCombo.Padding = new Padding(3);
-            tp_BasicCombo.Size = new Size(337, 402);
+            tp_BasicCombo.Size = new Size(701, 60);
             tp_BasicCombo.TabIndex = 0;
             tp_BasicCombo.Text = "Basic Combo";
             tp_BasicCombo.UseVisualStyleBackColor = true;
@@ -329,7 +345,7 @@
             tp_BasicFood.Location = new Point(4, 24);
             tp_BasicFood.Name = "tp_BasicFood";
             tp_BasicFood.Padding = new Padding(3);
-            tp_BasicFood.Size = new Size(337, 402);
+            tp_BasicFood.Size = new Size(701, 60);
             tp_BasicFood.TabIndex = 1;
             tp_BasicFood.Text = "Basic Food";
             tp_BasicFood.UseVisualStyleBackColor = true;
@@ -350,7 +366,7 @@
             tp_BasicLarge.Location = new Point(4, 24);
             tp_BasicLarge.Name = "tp_BasicLarge";
             tp_BasicLarge.Padding = new Padding(3);
-            tp_BasicLarge.Size = new Size(337, 402);
+            tp_BasicLarge.Size = new Size(701, 60);
             tp_BasicLarge.TabIndex = 2;
             tp_BasicLarge.Text = "Basic Large";
             tp_BasicLarge.UseVisualStyleBackColor = true;
@@ -371,7 +387,7 @@
             tp_BasicSmall.Location = new Point(4, 24);
             tp_BasicSmall.Name = "tp_BasicSmall";
             tp_BasicSmall.Padding = new Padding(3);
-            tp_BasicSmall.Size = new Size(337, 402);
+            tp_BasicSmall.Size = new Size(701, 60);
             tp_BasicSmall.TabIndex = 3;
             tp_BasicSmall.Text = "Basic Small";
             tp_BasicSmall.UseVisualStyleBackColor = true;
@@ -392,7 +408,7 @@
             tp_Bugged.Location = new Point(4, 24);
             tp_Bugged.Name = "tp_Bugged";
             tp_Bugged.Padding = new Padding(3);
-            tp_Bugged.Size = new Size(337, 402);
+            tp_Bugged.Size = new Size(701, 60);
             tp_Bugged.TabIndex = 4;
             tp_Bugged.Text = "Bugged";
             tp_Bugged.UseVisualStyleBackColor = true;
@@ -413,7 +429,7 @@
             tp_Clothing.Location = new Point(4, 24);
             tp_Clothing.Name = "tp_Clothing";
             tp_Clothing.Padding = new Padding(3);
-            tp_Clothing.Size = new Size(337, 402);
+            tp_Clothing.Size = new Size(701, 60);
             tp_Clothing.TabIndex = 5;
             tp_Clothing.Text = "Clothing";
             tp_Clothing.UseVisualStyleBackColor = true;
@@ -434,7 +450,7 @@
             tp_CombinedFireArmsSpray.Location = new Point(4, 24);
             tp_CombinedFireArmsSpray.Name = "tp_CombinedFireArmsSpray";
             tp_CombinedFireArmsSpray.Padding = new Padding(3);
-            tp_CombinedFireArmsSpray.Size = new Size(337, 402);
+            tp_CombinedFireArmsSpray.Size = new Size(701, 60);
             tp_CombinedFireArmsSpray.TabIndex = 6;
             tp_CombinedFireArmsSpray.Text = "Combined Fire Arms & Spray";
             tp_CombinedFireArmsSpray.UseVisualStyleBackColor = true;
@@ -455,7 +471,7 @@
             tp_CombinedFoodSpoiled.Location = new Point(4, 24);
             tp_CombinedFoodSpoiled.Name = "tp_CombinedFoodSpoiled";
             tp_CombinedFoodSpoiled.Padding = new Padding(3);
-            tp_CombinedFoodSpoiled.Size = new Size(337, 402);
+            tp_CombinedFoodSpoiled.Size = new Size(701, 60);
             tp_CombinedFoodSpoiled.TabIndex = 7;
             tp_CombinedFoodSpoiled.Text = "Combined Food & Spoiled";
             tp_CombinedFoodSpoiled.UseVisualStyleBackColor = true;
@@ -476,7 +492,7 @@
             tp_CombinedThowingMelee.Location = new Point(4, 24);
             tp_CombinedThowingMelee.Name = "tp_CombinedThowingMelee";
             tp_CombinedThowingMelee.Padding = new Padding(3);
-            tp_CombinedThowingMelee.Size = new Size(337, 402);
+            tp_CombinedThowingMelee.Size = new Size(701, 60);
             tp_CombinedThowingMelee.TabIndex = 8;
             tp_CombinedThowingMelee.Text = "Combined Thowing & Melee";
             tp_CombinedThowingMelee.UseVisualStyleBackColor = true;
@@ -497,7 +513,7 @@
             tp_ComboFireArmSpray.Location = new Point(4, 24);
             tp_ComboFireArmSpray.Name = "tp_ComboFireArmSpray";
             tp_ComboFireArmSpray.Padding = new Padding(3);
-            tp_ComboFireArmSpray.Size = new Size(337, 402);
+            tp_ComboFireArmSpray.Size = new Size(701, 60);
             tp_ComboFireArmSpray.TabIndex = 9;
             tp_ComboFireArmSpray.Text = "Combo Fire Arm & Spray";
             tp_ComboFireArmSpray.UseVisualStyleBackColor = true;
@@ -518,7 +534,7 @@
             tp_DLC.Location = new Point(4, 24);
             tp_DLC.Name = "tp_DLC";
             tp_DLC.Padding = new Padding(3);
-            tp_DLC.Size = new Size(337, 402);
+            tp_DLC.Size = new Size(701, 60);
             tp_DLC.TabIndex = 10;
             tp_DLC.Text = "DLC";
             tp_DLC.UseVisualStyleBackColor = true;
@@ -539,7 +555,7 @@
             tp_Explosive.Location = new Point(4, 24);
             tp_Explosive.Name = "tp_Explosive";
             tp_Explosive.Padding = new Padding(3);
-            tp_Explosive.Size = new Size(337, 402);
+            tp_Explosive.Size = new Size(701, 60);
             tp_Explosive.TabIndex = 11;
             tp_Explosive.Text = "Explosive";
             tp_Explosive.UseVisualStyleBackColor = true;
@@ -560,7 +576,7 @@
             tp_KeyItems.Location = new Point(4, 24);
             tp_KeyItems.Name = "tp_KeyItems";
             tp_KeyItems.Padding = new Padding(3);
-            tp_KeyItems.Size = new Size(337, 402);
+            tp_KeyItems.Size = new Size(701, 60);
             tp_KeyItems.TabIndex = 17;
             tp_KeyItems.Text = "Key Items";
             tp_KeyItems.UseVisualStyleBackColor = true;
@@ -581,7 +597,7 @@
             tp_Magazines.Location = new Point(4, 24);
             tp_Magazines.Name = "tp_Magazines";
             tp_Magazines.Padding = new Padding(3);
-            tp_Magazines.Size = new Size(337, 402);
+            tp_Magazines.Size = new Size(701, 60);
             tp_Magazines.TabIndex = 12;
             tp_Magazines.Text = "Magazines";
             tp_Magazines.UseVisualStyleBackColor = true;
@@ -602,7 +618,7 @@
             tp_Mannequin.Location = new Point(4, 24);
             tp_Mannequin.Name = "tp_Mannequin";
             tp_Mannequin.Padding = new Padding(3);
-            tp_Mannequin.Size = new Size(337, 402);
+            tp_Mannequin.Size = new Size(701, 60);
             tp_Mannequin.TabIndex = 13;
             tp_Mannequin.Text = "Mannequin";
             tp_Mannequin.UseVisualStyleBackColor = true;
@@ -623,7 +639,7 @@
             tp_PushPlaced.Location = new Point(4, 24);
             tp_PushPlaced.Name = "tp_PushPlaced";
             tp_PushPlaced.Padding = new Padding(3);
-            tp_PushPlaced.Size = new Size(337, 402);
+            tp_PushPlaced.Size = new Size(701, 60);
             tp_PushPlaced.TabIndex = 14;
             tp_PushPlaced.Text = "Push & Placed";
             tp_PushPlaced.UseVisualStyleBackColor = true;
@@ -644,7 +660,7 @@
             tp_Special.Location = new Point(4, 24);
             tp_Special.Name = "tp_Special";
             tp_Special.Padding = new Padding(3);
-            tp_Special.Size = new Size(337, 402);
+            tp_Special.Size = new Size(701, 60);
             tp_Special.TabIndex = 15;
             tp_Special.Text = "Special";
             tp_Special.UseVisualStyleBackColor = true;
@@ -665,7 +681,7 @@
             tp_Vehicles.Location = new Point(4, 24);
             tp_Vehicles.Name = "tp_Vehicles";
             tp_Vehicles.Padding = new Padding(3);
-            tp_Vehicles.Size = new Size(337, 402);
+            tp_Vehicles.Size = new Size(701, 60);
             tp_Vehicles.TabIndex = 16;
             tp_Vehicles.Text = "Vehicles";
             tp_Vehicles.UseVisualStyleBackColor = true;
@@ -686,7 +702,7 @@
             tp_Search.Location = new Point(4, 24);
             tp_Search.Name = "tp_Search";
             tp_Search.Padding = new Padding(3);
-            tp_Search.Size = new Size(337, 402);
+            tp_Search.Size = new Size(701, 60);
             tp_Search.TabIndex = 18;
             tp_Search.Text = "Search";
             tp_Search.UseVisualStyleBackColor = true;
@@ -702,16 +718,6 @@
             clb_SearchResults.Size = new Size(325, 396);
             clb_SearchResults.TabIndex = 17;
             // 
-            // tabPage1
-            // 
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(337, 402);
-            tabPage1.TabIndex = 19;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
             // tc_TabWindows
             // 
             tc_TabWindows.Controls.Add(tp_WItemRandom);
@@ -725,7 +731,7 @@
             // 
             // tp_WItemRandom
             // 
-            tp_WItemRandom.Controls.Add(dataGridView1);
+            tp_WItemRandom.Controls.Add(dgv_AllItems);
             tp_WItemRandom.Controls.Add(l_MainDec);
             tp_WItemRandom.Controls.Add(pictureBox1);
             tp_WItemRandom.Controls.Add(tb_ItemsSearch);
@@ -741,6 +747,81 @@
             tp_WItemRandom.Text = "Items Randomiser";
             tp_WItemRandom.UseVisualStyleBackColor = true;
             // 
+            // dgv_AllItems
+            // 
+            dgv_AllItems.AllowUserToAddRows = false;
+            dgv_AllItems.AllowUserToDeleteRows = false;
+            dgv_AllItems.AllowUserToResizeColumns = false;
+            dgv_AllItems.AllowUserToResizeRows = false;
+            dgv_AllItems.AutoGenerateColumns = false;
+            dgv_AllItems.BackgroundColor = SystemColors.Window;
+            dgv_AllItems.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_AllItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_AllItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_AllItems.Columns.AddRange(new DataGridViewColumn[] { dgv_AllItem_CheckBox, dgv_AllItem_ItemName, dgv_AllItem_ItemTag });
+            dgv_AllItems.DataSource = allItemDataTableBindingSource;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dgv_AllItems.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            dgv_AllItems.GridColor = SystemColors.Window;
+            dgv_AllItems.ImeMode = ImeMode.On;
+            dgv_AllItems.Location = new Point(6, 33);
+            dgv_AllItems.Name = "dgv_AllItems";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_AllItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgv_AllItems.RowHeadersVisible = false;
+            dgv_AllItems.RowTemplate.Height = 25;
+            dgv_AllItems.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgv_AllItems.ShowEditingIcon = false;
+            dgv_AllItems.Size = new Size(345, 404);
+            dgv_AllItems.TabIndex = 30;
+            // 
+            // dgv_AllItem_CheckBox
+            // 
+            dgv_AllItem_CheckBox.DataPropertyName = "ItemCheckState";
+            dgv_AllItem_CheckBox.HeaderText = "Enabled";
+            dgv_AllItem_CheckBox.Name = "dgv_AllItem_CheckBox";
+            dgv_AllItem_CheckBox.Width = 50;
+            // 
+            // dgv_AllItem_ItemName
+            // 
+            dgv_AllItem_ItemName.DataPropertyName = "ItemName";
+            dgv_AllItem_ItemName.HeaderText = "Item Name";
+            dgv_AllItem_ItemName.Name = "dgv_AllItem_ItemName";
+            dgv_AllItem_ItemName.ReadOnly = true;
+            dgv_AllItem_ItemName.Width = 275;
+            // 
+            // dgv_AllItem_ItemTag
+            // 
+            dgv_AllItem_ItemTag.DataPropertyName = "ItemTag";
+            dgv_AllItem_ItemTag.HeaderText = "ItemTag";
+            dgv_AllItem_ItemTag.Name = "dgv_AllItem_ItemTag";
+            dgv_AllItem_ItemTag.ReadOnly = true;
+            dgv_AllItem_ItemTag.Visible = false;
+            // 
+            // allItemDataTableBindingSource
+            // 
+            allItemDataTableBindingSource.DataSource = typeof(Resources.AllItemDataTable);
+            // 
             // l_MainDec
             // 
             l_MainDec.AutoSize = true;
@@ -753,7 +834,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Banner;
-            pictureBox1.Location = new Point(353, 59);
+            pictureBox1.Location = new Point(354, 59);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(362, 154);
             pictureBox1.TabIndex = 28;
@@ -1588,39 +1669,6 @@
             statInGameNameDataGridViewTextBoxColumn.HeaderText = "StatInGameName";
             statInGameNameDataGridViewTextBoxColumn.Name = "statInGameNameDataGridViewTextBoxColumn";
             // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(395, 246);
-            dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 30;
-            // 
             // F_ItemRandomiser
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1662,6 +1710,8 @@
             tc_TabWindows.ResumeLayout(false);
             tp_WItemRandom.ResumeLayout(false);
             tp_WItemRandom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_AllItems).EndInit();
+            ((System.ComponentModel.ISupportInitialize)allItemDataTableBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tp_WitemsStats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
@@ -1689,7 +1739,6 @@
             tp_US_Pushed.ResumeLayout(false);
             tp_US_Special.ResumeLayout(false);
             tp_US_Vehicles.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1825,8 +1874,12 @@
         private DataGridViewTextBoxColumn statMinDGVText;
         private DataGridViewTextBoxColumn statMaxDGVText;
         private DataGridViewTextBoxColumn StatInGameNameDGVText;
-        private TabPage tabPage1;
+        private TabPage tp_AllItems;
         private BindingSource itemsDataTableBindingSource;
-        private DataGridView dataGridView1;
+        private DataGridView dgv_AllItems;
+        private BindingSource allItemDataTableBindingSource;
+        private DataGridViewCheckBoxColumn dgv_AllItem_CheckBox;
+        private DataGridViewTextBoxColumn dgv_AllItem_ItemName;
+        private DataGridViewTextBoxColumn dgv_AllItem_ItemTag;
     }
 }

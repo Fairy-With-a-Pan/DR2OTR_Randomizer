@@ -32,8 +32,14 @@ public partial class F_ItemRandomiser : Form
     public List<ItemStatsData> FireArmsStatData { get; set; }
     public List<ItemStatsData> ExplosiveStatData { get; set; }
     public List<ItemStatsData> FoodAndDamageData { get; set; }
+
+
     bool safeMode = true;
+
     AllItemStatData statData = new AllItemStatData();
+    AllItemDataTable itemDataTable = new AllItemDataTable();
+
+
     int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
@@ -52,6 +58,8 @@ public partial class F_ItemRandomiser : Form
         ExplosiveStatData = statData.GetExplosivesStats();
         FoodAndDamageData = statData.GetFoodAndDamageStats();
 
+        DataTable allitemsTable = new DataTable();
+        allitemsTable = itemDataTable.SetAllItemData();
         InitializeComponent();
 
         //use this to catch if the Allitems or npcmodels file is missing
@@ -68,7 +76,7 @@ public partial class F_ItemRandomiser : Form
             Process.GetCurrentProcess().Kill();
         }
         var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Resources\\Allitems.txt");
-        //string[] npcModels = File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
+
 
         //hides the search tab till the user clicks the searchbox
         tc_Items.TabPages.Remove(tp_Search);
@@ -76,24 +84,24 @@ public partial class F_ItemRandomiser : Form
         var dt = new DataTable();
 
         //adds the string for the item name coloum and theck check box to the data table
-        dt.Columns.Add("Item", typeof(string));
-        //Use this for the Tag that is inside the xml file
-        //dt.Columns.Add("Tag", typeof(string));
         dt.Columns.Add("Checked", typeof(bool));
+        dt.Columns.Add("Item", typeof(string));
 
 
-        //NEEDS TO SHIP WITH THE "Allitems.txt"
+
+
+
         //User will be able to add and remove items from the file
         //goese though each of the item in the array for the allitems.txt and
         //adds it to the datatable and defaults its check to false
-        foreach (var item in dataArray) dt.Rows.Add(item, false);
+        //foreach (var item in dataArray) dt.Rows.Add(item, false);
         //Commits the items added with the foreach loop
         dt.AcceptChanges();
 
         //Adds the data from the data table to the check list box for filtering
         clb_SearchResults.DataSource = dt.DefaultView;
 
-        
+
         //Gets the string name of the Item in the datatable columns and dislpays that name
         //and sets the Value for each Item in the Check list box the same as the dispaly name
         clb_SearchResults.DisplayMember = "Item";
@@ -101,7 +109,7 @@ public partial class F_ItemRandomiser : Form
 
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
-        dataGridView1.DataSource = dt; 
+        dgv_AllItems.DataSource = allitemsTable;
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -255,7 +263,72 @@ public partial class F_ItemRandomiser : Form
             return;
         }
     }
+    private void tc_Items_SelectedTab(object sender, EventArgs e)
+    {
 
+
+        switch (tc_Items.SelectedTab.Name)
+        {
+            case "tp_AllItems":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = null;
+                break;
+            case "tp_BasicCombo":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Combo'";
+                break;
+            case "tp_BasicFood":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Food'";
+                break;
+            case "tp_BasicLarge":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Large'";
+                break;
+            case "tp_BasicSmall":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Small'";
+                break;
+            case "tp_Bugged":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Bugged'";
+                break;
+            case "tp_Clothing":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Clothing'";
+                break;
+            case "tp_CombinedFireArmsSpray":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedFireArmsSpray'";
+                break;
+            case "tp_CombinedFoodSpoiled":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedFoodSpoiled'";
+                break;
+            case "tp_CombinedThowingMelee":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedThowingMelee'";
+                break;
+            case "tp_ComboFireArmSpray":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'ComboFireArmSpray'";
+                break;
+            case "tp_DLC":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'DLC'";
+                break;
+            case "tp_Explosive":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Explosive'";
+                break;
+            case "tp_KeyItems":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'KeyItems'";
+                break;
+            case "tp_Magazines":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Magazines'";
+                break;
+            case "tp_Mannequin":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Mannequin'";
+                break;
+            case "tp_PushPlaced":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'PushPlaced'";
+                break;
+            case "tp_Special":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Special'";
+                break;
+            case "tp_Vehicles":
+                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Vehicles'";
+                break;
+
+        }
+    }
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
         //when changing tab the selected cell will move over 1 so there is no issues with tolggle them
