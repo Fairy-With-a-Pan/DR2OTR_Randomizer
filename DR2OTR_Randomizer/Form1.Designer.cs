@@ -94,9 +94,6 @@
             tc_TabWindows = new TabControl();
             tp_WItemRandom = new TabPage();
             dgv_AllItems = new DataGridView();
-            dgv_AllItem_CheckBox = new DataGridViewCheckBoxColumn();
-            dgv_AllItem_ItemName = new DataGridViewTextBoxColumn();
-            dgv_AllItem_ItemTag = new DataGridViewTextBoxColumn();
             allItemDataTableBindingSource = new BindingSource(components);
             l_MainDec = new Label();
             pictureBox1 = new PictureBox();
@@ -753,7 +750,6 @@
             dgv_AllItems.AllowUserToDeleteRows = false;
             dgv_AllItems.AllowUserToResizeColumns = false;
             dgv_AllItems.AllowUserToResizeRows = false;
-            dgv_AllItems.AutoGenerateColumns = false;
             dgv_AllItems.BackgroundColor = SystemColors.Window;
             dgv_AllItems.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -765,8 +761,6 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgv_AllItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_AllItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_AllItems.Columns.AddRange(new DataGridViewColumn[] { dgv_AllItem_CheckBox, dgv_AllItem_ItemName, dgv_AllItem_ItemTag });
-            dgv_AllItems.DataSource = allItemDataTableBindingSource;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -775,7 +769,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle2;
-            dgv_AllItems.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            dgv_AllItems.EditMode = DataGridViewEditMode.EditOnEnter;
             dgv_AllItems.GridColor = SystemColors.Window;
             dgv_AllItems.ImeMode = ImeMode.On;
             dgv_AllItems.Location = new Point(6, 33);
@@ -794,29 +788,6 @@
             dgv_AllItems.ShowEditingIcon = false;
             dgv_AllItems.Size = new Size(345, 404);
             dgv_AllItems.TabIndex = 30;
-            // 
-            // dgv_AllItem_CheckBox
-            // 
-            dgv_AllItem_CheckBox.DataPropertyName = "ItemCheckState";
-            dgv_AllItem_CheckBox.HeaderText = "Enabled";
-            dgv_AllItem_CheckBox.Name = "dgv_AllItem_CheckBox";
-            dgv_AllItem_CheckBox.Width = 50;
-            // 
-            // dgv_AllItem_ItemName
-            // 
-            dgv_AllItem_ItemName.DataPropertyName = "ItemName";
-            dgv_AllItem_ItemName.HeaderText = "Item Name";
-            dgv_AllItem_ItemName.Name = "dgv_AllItem_ItemName";
-            dgv_AllItem_ItemName.ReadOnly = true;
-            dgv_AllItem_ItemName.Width = 275;
-            // 
-            // dgv_AllItem_ItemTag
-            // 
-            dgv_AllItem_ItemTag.DataPropertyName = "ItemTag";
-            dgv_AllItem_ItemTag.HeaderText = "ItemTag";
-            dgv_AllItem_ItemTag.Name = "dgv_AllItem_ItemTag";
-            dgv_AllItem_ItemTag.ReadOnly = true;
-            dgv_AllItem_ItemTag.Visible = false;
             // 
             // allItemDataTableBindingSource
             // 
@@ -1743,6 +1714,11 @@
             PerformLayout();
         }
 
+        private void Dgv_AllItems_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Dgv_ItemStatsTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             throw new NotImplementedException();
@@ -1878,7 +1854,7 @@
         private BindingSource itemsDataTableBindingSource;
         private DataGridView dgv_AllItems;
         private BindingSource allItemDataTableBindingSource;
-        private DataGridViewCheckBoxColumn dgv_AllItem_CheckBox;
+        private DataGridViewTextBoxColumn dgv_AllItem_CheckBox;
         private DataGridViewTextBoxColumn dgv_AllItem_ItemName;
         private DataGridViewTextBoxColumn dgv_AllItem_ItemTag;
     }

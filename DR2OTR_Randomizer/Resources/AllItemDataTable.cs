@@ -10,9 +10,7 @@ namespace DR2OTR_Randomizer.Resources
 {
     public class AllItemDataTable
     {
-        public bool ItemCheckState {  get; set; }
-        public string ItemName { get; set; }
-        public string ItemTag { get; set; }
+
         
         public DataTable SetAllItemData()
         {

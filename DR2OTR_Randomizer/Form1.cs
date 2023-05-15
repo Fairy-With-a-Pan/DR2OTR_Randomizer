@@ -49,6 +49,8 @@ public partial class F_ItemRandomiser : Form
 
     LevelsLines levelLines = new LevelsLines();
     string path;
+    DataTable allitemsTable = new DataTable();
+    BindingSource source1 = new BindingSource();
     public F_ItemRandomiser()
     {
         VheicleStatData = statData.GetVheicleStats();
@@ -58,7 +60,6 @@ public partial class F_ItemRandomiser : Form
         ExplosiveStatData = statData.GetExplosivesStats();
         FoodAndDamageData = statData.GetFoodAndDamageStats();
 
-        DataTable allitemsTable = new DataTable();
         allitemsTable = itemDataTable.SetAllItemData();
         InitializeComponent();
 
@@ -88,9 +89,6 @@ public partial class F_ItemRandomiser : Form
         dt.Columns.Add("Item", typeof(string));
 
 
-
-
-
         //User will be able to add and remove items from the file
         //goese though each of the item in the array for the allitems.txt and
         //adds it to the datatable and defaults its check to false
@@ -110,6 +108,8 @@ public partial class F_ItemRandomiser : Form
         //Binds the item beeing checked with the ItemCheck method below
         clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
         dgv_AllItems.DataSource = allitemsTable;
+        source1.DataSource = allitemsTable;
+        Set_dgv_AllItems_Format();
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -184,6 +184,7 @@ public partial class F_ItemRandomiser : Form
         SoftLockAndCrashPrevent(bt_ItenStatsSet.Text, null);
         MessageBox.Show("Item stats have successfully been randomized", "Success");
     }
+
     private void clb_SearchResults_ItemCheck(object sender, ItemCheckEventArgs e)
     {
         //this method will be called each time an item is check
@@ -265,66 +266,64 @@ public partial class F_ItemRandomiser : Form
     }
     private void tc_Items_SelectedTab(object sender, EventArgs e)
     {
-
-
         switch (tc_Items.SelectedTab.Name)
         {
             case "tp_AllItems":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = null;
+                source1.Filter = null;
                 break;
             case "tp_BasicCombo":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Combo'";
+                source1.Filter = "ItemTag = 'Basic Combo'";
                 break;
             case "tp_BasicFood":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Food'";
+                source1.Filter = "ItemTag = 'Basic Food'";
                 break;
             case "tp_BasicLarge":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Large'";
+                source1.Filter = "ItemTag = 'Basic Large'";
                 break;
             case "tp_BasicSmall":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Basic Small'";
+                source1.Filter = "ItemTag = 'Basic Small'";
                 break;
             case "tp_Bugged":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Bugged'";
+                source1.Filter = "ItemTag = 'Bugged'";
                 break;
             case "tp_Clothing":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Clothing'";
+                source1.Filter = "ItemTag = 'Clothing'";
                 break;
             case "tp_CombinedFireArmsSpray":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedFireArmsSpray'";
+                source1.Filter = "ItemTag = 'CombinedFireArmsSpray'";
                 break;
             case "tp_CombinedFoodSpoiled":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedFoodSpoiled'";
+                source1.Filter = "ItemTag = 'CombinedFoodSpoiled'";
                 break;
             case "tp_CombinedThowingMelee":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'CombinedThowingMelee'";
+                source1.Filter = "ItemTag = 'CombinedThowingMelee'";
                 break;
             case "tp_ComboFireArmSpray":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'ComboFireArmSpray'";
+                source1.Filter = "ItemTag = 'ComboFireArmSpray'";
                 break;
             case "tp_DLC":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'DLC'";
+                source1.Filter = "ItemTag = 'DLC'";
                 break;
             case "tp_Explosive":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Explosive'";
+                source1.Filter = "ItemTag = 'Explosive'";
                 break;
             case "tp_KeyItems":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'KeyItems'";
+                source1.Filter = "ItemTag = 'KeyItems'";
                 break;
             case "tp_Magazines":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Magazines'";
+                source1.Filter = "ItemTag = 'Magazines'";
                 break;
             case "tp_Mannequin":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Mannequin'";
+                source1.Filter = "ItemTag = 'Mannequin'";
                 break;
             case "tp_PushPlaced":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'PushPlaced'";
+                source1.Filter = "ItemTag = 'PushPlaced'";
                 break;
             case "tp_Special":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Special'";
+                source1.Filter = "ItemTag = 'Special'";
                 break;
             case "tp_Vehicles":
-                (dgv_AllItems.DataSource as DataTable).DefaultView.RowFilter = "ItemTag = 'Vehicles'";
+                source1.Filter = "ItemTag = 'Vehicles'";
                 break;
 
         }
@@ -401,6 +400,15 @@ public partial class F_ItemRandomiser : Form
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
+    }
+    private void Set_dgv_AllItems_Format()
+    {
+        dgv_AllItems.Columns[0].Width = 50;
+        dgv_AllItems.Columns[0].HeaderText = "Enabled";
+        dgv_AllItems.Columns[1].ReadOnly = true;
+        dgv_AllItems.Columns[1].HeaderText = "Item Name";
+        dgv_AllItems.Columns[1].Width = 275;
+        dgv_AllItems.Columns[2].Visible = false;
     }
     private void SoftLockAndCrashPrevent(string buttonClicked, List<string> Allitems)
     {
@@ -669,4 +677,5 @@ public partial class F_ItemRandomiser : Form
             e.Handled = true;
         }
     }
+
 }
