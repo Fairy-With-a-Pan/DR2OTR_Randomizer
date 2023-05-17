@@ -17,6 +17,8 @@ namespace DR2OTR_Randomizer;
 /// Move the item randomizer over to a data grid view
 /// Like the item stat randomizer.
 /// 
+/// move the code for the item stat randomizer and 
+/// the item randomizer to sperate classes to clean up this area
 /// 
 /// Need to spell check
 /// Refactor and optiomze the program 
@@ -39,18 +41,20 @@ public partial class F_ItemRandomiser : Form
     AllItemStatData statData = new AllItemStatData();
     AllItemDataTable itemDataTable = new AllItemDataTable();
 
-
+    //storeing these to skip stats
+    //that cause items to crash the or break the item
     int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
         20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625, 78689, 78761, };
 
 
-
     LevelsLines levelLines = new LevelsLines();
     string path;
     DataTable allitemsTable = new DataTable();
-    BindingSource source1 = new BindingSource();
+    BindingSource allItemDataSource = new BindingSource();
+    DataTable allUnStableitemsTable = new DataTable();
+    BindingSource allUnstableItemSource = new BindingSource();
     public F_ItemRandomiser()
     {
         VheicleStatData = statData.GetVheicleStats();
@@ -61,6 +65,7 @@ public partial class F_ItemRandomiser : Form
         FoodAndDamageData = statData.GetFoodAndDamageStats();
 
         allitemsTable = itemDataTable.SetAllItemData();
+        allUnStableitemsTable = itemDataTable.SetAllItemData();
         InitializeComponent();
 
         //use this to catch if the Allitems or npcmodels file is missing
@@ -76,75 +81,59 @@ public partial class F_ItemRandomiser : Form
             , "WARNING");
             Process.GetCurrentProcess().Kill();
         }
-        var dataArray = File.ReadAllLines($"{Application.StartupPath}\\Resources\\Allitems.txt");
 
 
-        //hides the search tab till the user clicks the searchbox
-        tc_Items.TabPages.Remove(tp_Search);
-        //Create a new data table to put inside the check list box
-        var dt = new DataTable();
-
-        //adds the string for the item name coloum and theck check box to the data table
-        dt.Columns.Add("Checked", typeof(bool));
-        dt.Columns.Add("Item", typeof(string));
-
-
-        //User will be able to add and remove items from the file
-        //goese though each of the item in the array for the allitems.txt and
-        //adds it to the datatable and defaults its check to false
-        //foreach (var item in dataArray) dt.Rows.Add(item, false);
-        //Commits the items added with the foreach loop
-        dt.AcceptChanges();
-
-        //Adds the data from the data table to the check list box for filtering
-        clb_SearchResults.DataSource = dt.DefaultView;
-
-
-        //Gets the string name of the Item in the datatable columns and dislpays that name
-        //and sets the Value for each Item in the Check list box the same as the dispaly name
-        clb_SearchResults.DisplayMember = "Item";
-        clb_SearchResults.ValueMember = "Item";
-
-        //Binds the item beeing checked with the ItemCheck method below
-        clb_SearchResults.ItemCheck += clb_SearchResults_ItemCheck;
         dgv_AllItems.DataSource = allitemsTable;
-        source1.DataSource = allitemsTable;
-        Set_dgv_AllItems_Format();
+        Set_dgv_AllItems_Format(dgv_AllItems);
+        allItemDataSource.DataSource = allitemsTable;
+
+        dgv_US_Items.DataSource = allUnStableitemsTable;
+        Set_dgv_AllItems_Format(dgv_US_Items);
+        allUnstableItemSource.DataSource = allUnStableitemsTable;
     }
 
     private void Form1_Load(object sender, EventArgs e)
     {
         var itemStatData = this.VheicleStatData;
         dgv_ItemStatsTable.DataSource = itemStatData;
-
     }
     private void tc_TabWindowsTabSelect(object sender, EventArgs e)
     {
+        //changes the current selected cell to not cause issues with toggle and it not updating
         dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
-        CheckedListBox currentListBox = tc_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
-        for (int i = 0; i < currentListBox.Items.Count; i++)
+        ///Get the current filter and store it to later reapply it
+        ///Remove any filters form the table
+        ///Then gose through the allitems datatable rows
+        ///And sets each cell[0] that are bools to false
+        ///Then reapplys the filter storted from the start
+        string storedFilter = allItemDataSource.Filter;
+        allItemDataSource.RemoveFilter();
+        for (int i = 0; i < allitemsTable.Rows.Count; i++)
         {
-            currentListBox.SetItemChecked(i, false);
+            dgv_AllItems.Rows[i].Cells[0].Value = false;
         }
+        allItemDataSource.Filter = storedFilter;
     }
     private void bt_IS_UnstableUncheck_Click(object sender, EventArgs e)
     {
-        CheckedListBox checkedListBox = tc_US_Items.SelectedTab.Controls.OfType<CheckedListBox>().First();
-        for (int i = 0; i < checkedListBox.Items.Count; i++)
+        string storedFillter = allUnstableItemSource.Filter;
+        allUnstableItemSource.RemoveFilter();
+        for (int i = 0; i < allUnstableItemSource.Count; i++)
         {
-            checkedListBox.SetItemChecked(i, false);
+            dgv_US_Items.Rows[i].Cells[0].Value = false;
         }
+        allUnstableItemSource.Filter = storedFillter;
     }
     private void b_ToggleAll_Click(object sender, EventArgs e)
     {
-        ToogleAllItemsCheckState(tc_Items);
+        ToogleAllItemsCheckState(dgv_AllItems);
     }
     private void bt_IS_UnstableToggle_Click(object sender, EventArgs e)
     {
-        ToogleAllItemsCheckState(tc_US_Items);
+        ToogleAllItemsCheckState(dgv_US_Items);
     }
     private void tsm_open_Click(object sender, EventArgs e)
     {
@@ -160,9 +149,10 @@ public partial class F_ItemRandomiser : Form
         List<string> allItems = new List<string>();
 
         GetItemsToRandomize(allItems);
-
         //Stop here if no items have been checked and added to the list
         if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
+        //Changes the needed lines inside the item txt file
+        //to prevent crashing and soft locking
         SoftLockAndCrashPrevent(b_Randomise.Text, allItems);
         RandomizeGameItems(allItems);
     }
@@ -185,50 +175,14 @@ public partial class F_ItemRandomiser : Form
         MessageBox.Show("Item stats have successfully been randomized", "Success");
     }
 
-    private void clb_SearchResults_ItemCheck(object sender, ItemCheckEventArgs e)
-    {
-        //this method will be called each time an item is check
-
-        //sets as DataView so it can be filtered
-        var dv = clb_SearchResults.DataSource as DataView;
-        //gets the item that was just check or unchecked location
-        var drv = dv[e.Index];
-        //Gets its current checked state before being clicked then
-        //will set its new state after being checked/uncheck
-        drv["Checked"] = e.NewValue == CheckState.Checked ? true : false;
-    }
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
-        var dv = clb_SearchResults.DataSource as DataView;
-
-        //Makes the filter using a check text box by getting the text in the check box
-        //then using the Like Wildcard by compareing the items
-        //in the Data Source to the text typed in to the text box
-        var filter = tb_ItemsSearch.Text.Trim().Length > 0
-        ? $"Item LIKE '*{tb_ItemsSearch.Text}*'"
-        : null;
-
-        //applys the filter to the data source
-        dv.RowFilter = filter;
-        for (var i = 0; i < clb_SearchResults.Items.Count; i++)
-        {
-            //gets theitems check state and restores it first it gets the item
-            //then it Converts the DataRow Called "Checked" to a bool while
-            //storeing its state and apllying it back
-            var drv = clb_SearchResults.Items[i] as DataRowView;
-            var chk = Convert.ToBoolean(drv["Checked"]);
-            clb_SearchResults.SetItemChecked(i, chk);
-        }
-
+        //Searches all items in the item data source
+        allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*'";
     }
-    private void tb_ItemsSearch_Click(object sender, EventArgs e)
+    private void tb_US_ItemSearch_TextChanged(object sender, EventArgs e)
     {
-        //displays the search tab if its not already displayed and selects it
-        if (!tp_Search.Created)
-        {
-            tc_Items.TabPages.Insert(0, tp_Search);
-            tc_Items.SelectTab(tp_Search);
-        }
+        allUnstableItemSource.Filter = $"ItemName LIKE '*{tb_US_SearchBox.Text}*'";
     }
     private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
     {
@@ -269,61 +223,61 @@ public partial class F_ItemRandomiser : Form
         switch (tc_Items.SelectedTab.Name)
         {
             case "tp_AllItems":
-                source1.Filter = null;
+                allItemDataSource.Filter = null;
                 break;
             case "tp_BasicCombo":
-                source1.Filter = "ItemTag = 'Basic Combo'";
+                allItemDataSource.Filter = "ItemTag = 'Basic Combo'";
                 break;
             case "tp_BasicFood":
-                source1.Filter = "ItemTag = 'Basic Food'";
+                allItemDataSource.Filter = "ItemTag = 'Basic Food'";
                 break;
             case "tp_BasicLarge":
-                source1.Filter = "ItemTag = 'Basic Large'";
+                allItemDataSource.Filter = "ItemTag = 'Basic Large'";
                 break;
             case "tp_BasicSmall":
-                source1.Filter = "ItemTag = 'Basic Small'";
+                allItemDataSource.Filter = "ItemTag = 'Basic Small'";
                 break;
             case "tp_Bugged":
-                source1.Filter = "ItemTag = 'Bugged'";
+                allItemDataSource.Filter = "ItemTag = 'Bugged'";
                 break;
             case "tp_Clothing":
-                source1.Filter = "ItemTag = 'Clothing'";
+                allItemDataSource.Filter = "ItemTag = 'Clothing'";
                 break;
             case "tp_CombinedFireArmsSpray":
-                source1.Filter = "ItemTag = 'CombinedFireArmsSpray'";
+                allItemDataSource.Filter = "ItemTag = 'CombinedFireArmsSpray'";
                 break;
             case "tp_CombinedFoodSpoiled":
-                source1.Filter = "ItemTag = 'CombinedFoodSpoiled'";
+                allItemDataSource.Filter = "ItemTag = 'CombinedFoodSpoiled'";
                 break;
             case "tp_CombinedThowingMelee":
-                source1.Filter = "ItemTag = 'CombinedThowingMelee'";
+                allItemDataSource.Filter = "ItemTag = 'CombinedThowingMelee'";
                 break;
             case "tp_ComboFireArmSpray":
-                source1.Filter = "ItemTag = 'ComboFireArmSpray'";
+                allItemDataSource.Filter = "ItemTag = 'ComboFireArmSpray'";
                 break;
             case "tp_DLC":
-                source1.Filter = "ItemTag = 'DLC'";
+                allItemDataSource.Filter = "ItemTag = 'DLC'";
                 break;
             case "tp_Explosive":
-                source1.Filter = "ItemTag = 'Explosive'";
+                allItemDataSource.Filter = "ItemTag = 'Explosive'";
                 break;
             case "tp_KeyItems":
-                source1.Filter = "ItemTag = 'KeyItems'";
+                allItemDataSource.Filter = "ItemTag = 'KeyItems'";
                 break;
             case "tp_Magazines":
-                source1.Filter = "ItemTag = 'Magazines'";
+                allItemDataSource.Filter = "ItemTag = 'Magazines'";
                 break;
             case "tp_Mannequin":
-                source1.Filter = "ItemTag = 'Mannequin'";
+                allItemDataSource.Filter = "ItemTag = 'Mannequin'";
                 break;
             case "tp_PushPlaced":
-                source1.Filter = "ItemTag = 'PushPlaced'";
+                allItemDataSource.Filter = "ItemTag = 'PushPlaced'";
                 break;
             case "tp_Special":
-                source1.Filter = "ItemTag = 'Special'";
+                allItemDataSource.Filter = "ItemTag = 'Special'";
                 break;
             case "tp_Vehicles":
-                source1.Filter = "ItemTag = 'Vehicles'";
+                allItemDataSource.Filter = "ItemTag = 'Vehicles'";
                 break;
 
         }
@@ -401,36 +355,40 @@ public partial class F_ItemRandomiser : Form
     {
         Application.Exit();
     }
-    private void Set_dgv_AllItems_Format()
+    private void Set_dgv_AllItems_Format(DataGridView dataGrid)
     {
-        dgv_AllItems.Columns[0].Width = 50;
-        dgv_AllItems.Columns[0].HeaderText = "Enabled";
-        dgv_AllItems.Columns[1].ReadOnly = true;
-        dgv_AllItems.Columns[1].HeaderText = "Item Name";
-        dgv_AllItems.Columns[1].Width = 275;
-        dgv_AllItems.Columns[2].Visible = false;
+        dataGrid.Columns[0].Width = 75;
+        dataGrid.Columns[0].HeaderText = "Enabled";
+        dataGrid.Columns[1].ReadOnly = true;
+        dataGrid.Columns[1].HeaderText = "Item Name";
+        dataGrid.Columns[1].Width = 250;
+        dataGrid.Columns[2].Visible = false;
     }
     private void SoftLockAndCrashPrevent(string buttonClicked, List<string> Allitems)
     {
         List<string> missionFile = new List<string>();
-        bool showonce = false;
+        //checks to see if the mission txt is inside the path folder
+        if (!File.Exists($"{path}\\missions.txt")) { MessageBox.Show("No mission.txt file found", "Warning"); return; }
         missionFile.AddRange(File.ReadAllLines($"{path}\\missions.txt"));
+        bool showOnce = false;
         //This will stop overtime softlocking if the player reloads while in overtime
         if (buttonClicked == b_Randomise.Text)
         {
-            foreach (string item in clb_KeyItems.Items)
+            for (int i = 0; i < allitemsTable.Rows.Count; i++)
             {
-                if (Allitems.Contains(item) && missionFile[50046] != "")
+                bool checkState = Convert.ToBoolean(allitemsTable.Rows[i].ItemArray[0]);
+                //Checks if any Key items have been selected and will
+                //clear the line that requirse the player to collect
+                //all the items for TK in overtime.
+                if (checkState && allitemsTable.Rows[i].ItemArray[2].ToString() == "KeyItems")
                 {
                     missionFile[50046] = "";
                 }
-            }
-            foreach (string item in clb_Vehicles.Items)
-            {
-                if (Allitems.Contains(item) && !showonce)
+                if (checkState && allitemsTable.Rows[i].ItemArray[2].ToString() == "Vehicles" && !showOnce)
                 {
                     MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
-                    showonce = true;
+                    //Stops the mesagebox from showing more then once
+                    showOnce = true;
                 }
             }
         }
@@ -451,49 +409,28 @@ public partial class F_ItemRandomiser : Form
             row.Cells[0].Value = objectToBool;
         }
     }
-    private void ToogleAllItemsCheckState(TabControl tabControl)
+    private void ToogleAllItemsCheckState(DataGridView dataGrid)
     {
-        CheckedListBox currentListBox = tabControl.SelectedTab.Controls.OfType<CheckedListBox>().First();
-        for (int i = 0; i < currentListBox.Items.Count; i++)
+        for (int i = 0; i < dataGrid.Rows.Count; i++)
         {
             //Gets the check sate and then converts it to a bool for a toggle
-            var checkToBool = Convert.ToBoolean(currentListBox.GetItemCheckState(i));
+            bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
             checkToBool = !checkToBool;
-            currentListBox.SetItemChecked(i, checkToBool);
+            dataGrid.Rows[i].Cells[0].Value = checkToBool;
         }
     }
     private void GetItemsToRandomize(List<string> allItems)
     {
-        //make a list of type check list box to store the check boxes inside of the tab control
-        List<CheckedListBox> allCheckboxes = new List<CheckedListBox>();
-        //go though each tab page in the tab control
-        foreach (TabPage tabPage in tc_Items.TabPages)
+        //use the allitemtable BindingSource to go through
+        //each row and ignore any applied fittlers
+        for (int i = 0; i < allitemsTable.Rows.Count; i++)
         {
-            if (tabPage.Controls.OfType<CheckedListBox>() != null)
+            //Gets the check box from the current row 
+            //And store it as a bool to check its value
+            bool checkState = Convert.ToBoolean(allitemsTable.Rows[i].ItemArray[0]);
+            if (checkState == true)
             {
-                //looks for a check list box inside of the tab page and then adds it to the check list box list
-                allCheckboxes.Add(tabPage.Controls.OfType<CheckedListBox>().First());
-            }
-        }
-        foreach (CheckedListBox item in allCheckboxes)
-        {
-            if (item.Name != "clb_SearchResults")
-            {
-                //once it has checked all of the tab pages and added all the list check boxes to the list
-                foreach (string itemName in item.CheckedItems)
-                {
-                    //look though each of the checklistbox in the list adds all items that are checked
-                    allItems.Add(itemName);
-                }
-            }
-            if (item.Name == "clb_SearchResults")
-            {
-                foreach (DataRowView itemName in clb_SearchResults.CheckedItems)
-                {
-                    //Because im using a data table for the search clb i have to 
-                    //get the item name from the DataRow with the row name "Item"
-                    allItems.Add(itemName.Row["Item"].ToString());
-                }
+                allItems.Add(allitemsTable.Rows[i].ItemArray[1].ToString());
             }
         }
     }
@@ -511,7 +448,7 @@ public partial class F_ItemRandomiser : Form
             {
                 //returns if it cant find any
                 MessageBox.Show($"Could not find {level.Value} please check your datafile folder", "Warning");
-                return;
+                continue;
             }
             //gets the current level file in the dictionary with the level.Value is the same as the files name
             string[] levelFile = File.ReadAllLines($"{path}\\{level.Value}");
@@ -605,21 +542,16 @@ public partial class F_ItemRandomiser : Form
             ("Enableing any of the unstable stats can cause soft locking and crashing" +
             "Are sure you want to continue?", "Warning", MessageBoxButtons.YesNo);
         if (confirmResult == DialogResult.No) { return; }
-        Debug.WriteLine("It has passed the message box");
         Random rand = new Random();
 
-        List<CheckedListBox> allCheckedListBoxes = new List<CheckedListBox>();
         List<string> allItems = new List<string>();
 
-        foreach (TabPage tabpage in tc_US_Items.Controls)
+        for (int i = 0; i < allUnStableitemsTable.Rows.Count; i++)
         {
-            allCheckedListBoxes.Add(tabpage.Controls.OfType<CheckedListBox>().First());
-        }
-        foreach (CheckedListBox checkedListBox in allCheckedListBoxes)
-        {
-            foreach (string item in checkedListBox.CheckedItems)
+            bool checkState = Convert.ToBoolean(allUnStableitemsTable.Rows[i].ItemArray[0]);
+            if (checkState == true)
             {
-                allItems.Add(item);
+                allItems.Add(allUnStableitemsTable.Rows[i].ItemArray[1].ToString());
             }
         }
         if (cb_US_PropToThrow.Checked)
