@@ -14,16 +14,16 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 namespace DR2OTR_Randomizer;
 /// <summary>
 /// TODO:
-/// Move the item randomizer over to a data grid view
-/// Like the item stat randomizer.
+///
+/// Need to test to see how well having tags being enabled in the 
+/// all item randomizer when searching and need to see if there is
+/// a better way to toggle all of the items when doing a #enabled search
 /// 
 /// move the code for the item stat randomizer and 
 /// the item randomizer to sperate classes to clean up this area
 /// 
 /// Need to spell check
 /// Refactor and optiomze the program 
-/// 
-/// 
 /// 
 /// </summary>
 public partial class F_ItemRandomiser : Form
@@ -130,10 +130,12 @@ public partial class F_ItemRandomiser : Form
     private void b_ToggleAll_Click(object sender, EventArgs e)
     {
         ToogleAllItemsCheckState(dgv_AllItems);
+
     }
     private void bt_IS_UnstableToggle_Click(object sender, EventArgs e)
     {
         ToogleAllItemsCheckState(dgv_US_Items);
+
     }
     private void tsm_open_Click(object sender, EventArgs e)
     {
@@ -178,18 +180,47 @@ public partial class F_ItemRandomiser : Form
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
         //Searches all items in the item data source
-        allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*'";
+        if (tb_ItemsSearch.Text.StartsWith("#"))
+        {
+            if (tb_ItemsSearch.Text.ToLower() == "#enabled")
+            {
+                allItemDataSource.Filter = "ItemState";
+            }
+        }
+        else
+        {
+            allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*'";
+        }
     }
     private void tb_US_ItemSearch_TextChanged(object sender, EventArgs e)
     {
-        allUnstableItemSource.Filter = $"ItemName LIKE '*{tb_US_SearchBox.Text}*'";
+        //Adding a search character for the unstable items to search though the 
+        //tags due to there being no tags button/tabs
+        if (tb_US_SearchBox.Text.Trim().StartsWith('#'))
+        {
+            dgv_US_Items.Columns[2].Visible = true;
+            dgv_US_Items.Columns[2].ReadOnly = true;
+            dgv_US_Items.Columns[1].Width = 150;
+            allUnstableItemSource.Filter = $"ItemTag LIKE '*{tb_US_SearchBox.Text.Split('#')[1]}*'";
+            if (tb_US_SearchBox.Text.ToLower() == "#enabled")
+            {
+                allUnstableItemSource.Filter = $"ItemState = true";
+            }
+        }
+        //search the item name and hides the item tag collum
+        else
+        {
+            dgv_US_Items.Columns[1].Width = 250;
+            dgv_US_Items.Columns[2].Visible = false;
+            allUnstableItemSource.Filter = $"ItemName LIKE '*{tb_US_SearchBox.Text}*'";
+        }
     }
     private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
     {
         safeMode = !safeMode;
         if (safeMode)
         {
-            l_SafeMode_Text.Text = "Safe Mode Is Enabled";
+            l_SafeMode_Text.Text = "Safe Mode Enabled";
             l_SafeMode_Text.ForeColor = Color.Green;
             safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
         }
@@ -197,7 +228,7 @@ public partial class F_ItemRandomiser : Form
         {
             MessageBox.Show("Disabling safe mode will randomize more areas but with a much high chance of crashing", "WARNING");
             safeModeToolStripMenuItem.Text = "Safe Mode Disabled";
-            l_SafeMode_Text.Text = "Safe Mode Is Disabled";
+            l_SafeMode_Text.Text = "Safe Mode Disabled";
             l_SafeMode_Text.ForeColor = Color.Red;
         }
     }
@@ -220,64 +251,70 @@ public partial class F_ItemRandomiser : Form
     }
     private void tc_Items_SelectedTab(object sender, EventArgs e)
     {
+        string tabPageTag = "";
+        if (tc_Items.SelectedTab.Name != "tp_AllItems")
+        {
+            tabPageTag = tc_Items.SelectedTab.Tag.ToString();
+
+        }
         switch (tc_Items.SelectedTab.Name)
         {
             case "tp_AllItems":
-                allItemDataSource.Filter = null;
+                allItemDataSource.Filter = "";
                 break;
             case "tp_BasicCombo":
-                allItemDataSource.Filter = "ItemTag = 'Basic Combo'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_BasicFood":
-                allItemDataSource.Filter = "ItemTag = 'Basic Food'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_BasicLarge":
-                allItemDataSource.Filter = "ItemTag = 'Basic Large'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_BasicSmall":
-                allItemDataSource.Filter = "ItemTag = 'Basic Small'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Bugged":
-                allItemDataSource.Filter = "ItemTag = 'Bugged'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Clothing":
-                allItemDataSource.Filter = "ItemTag = 'Clothing'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_CombinedFireArmsSpray":
-                allItemDataSource.Filter = "ItemTag = 'CombinedFireArmsSpray'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_CombinedFoodSpoiled":
-                allItemDataSource.Filter = "ItemTag = 'CombinedFoodSpoiled'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_CombinedThowingMelee":
-                allItemDataSource.Filter = "ItemTag = 'CombinedThowingMelee'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_ComboFireArmSpray":
-                allItemDataSource.Filter = "ItemTag = 'ComboFireArmSpray'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_DLC":
-                allItemDataSource.Filter = "ItemTag = 'DLC'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Explosive":
-                allItemDataSource.Filter = "ItemTag = 'Explosive'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_KeyItems":
-                allItemDataSource.Filter = "ItemTag = 'KeyItems'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Magazines":
-                allItemDataSource.Filter = "ItemTag = 'Magazines'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Mannequin":
-                allItemDataSource.Filter = "ItemTag = 'Mannequin'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_PushPlaced":
-                allItemDataSource.Filter = "ItemTag = 'PushPlaced'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Special":
-                allItemDataSource.Filter = "ItemTag = 'Special'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
             case "tp_Vehicles":
-                allItemDataSource.Filter = "ItemTag = 'Vehicles'";
+                allItemDataSource.Filter = $"ItemTag = '{tabPageTag}'";
                 break;
 
         }
@@ -287,32 +324,32 @@ public partial class F_ItemRandomiser : Form
         //when changing tab the selected cell will move over 1 so there is no issues with tolggle them
         switch (tc_itemStats.SelectedTab.Name)
         {
-            case "tp_VehicleStats":
+            case "tp_IS_VehicleStats":
                 dgv_ItemStatsTable.DataSource = VheicleStatData;
                 dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
-            case "tp_NPC":
+            case "tp_IS_NPC":
                 dgv_ItemStatsTable.DataSource = NPCStatData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.CurrentRow.Cells[1];
                 break;
-            case "tp_FireArms":
+            case "tp_IS_FireArms":
                 dgv_ItemStatsTable.DataSource = FireArmsStatData;
                 dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
-            case "tp_WorldStats":
+            case "tp_IS_WorldStats":
                 dgv_ItemStatsTable.DataSource = WorldStatsData;
                 dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
-            case "tp_ExplosivesSpray":
+            case "tp_IS_ExplosivesSpray":
                 dgv_ItemStatsTable.DataSource = ExplosiveStatData;
                 dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
-            case "tp_FoodDamage":
+            case "tp_IS_FoodDamage":
                 dgv_ItemStatsTable.DataSource = FoodAndDamageData;
                 dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
         }
-        if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
+        if (tc_itemStats.SelectedTab.Name == "tp_IS_UnstableStats")
         { dgv_ItemStatsTable.Visible = false; }
         else { dgv_ItemStatsTable.Visible = true; }
     }
@@ -342,15 +379,11 @@ public partial class F_ItemRandomiser : Form
                 checkTobool = !checkTobool;
                 dgv_ItemStatsTable.SelectedCells[i].Value = checkTobool;
                 //Selects another cell so there is no issues when selecting the header
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
+                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.CurrentRow.Cells[1];
             }
         }
     }
 
-    private void bt_IS_CheckAllActiveTab_Click(object sender, EventArgs e)
-    {
-        CheckAllItemsStatsInTab();
-    }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
@@ -400,23 +433,21 @@ public partial class F_ItemRandomiser : Form
         }
         File.WriteAllLines($"{path}\\missions.txt", missionFile);
     }
-    private void CheckAllItemsStatsInTab()
-    {
-        foreach (DataGridViewRow row in dgv_ItemStatsTable.Rows)
-        {
-            var objectToBool = Convert.ToBoolean(row.Cells[0].Value);
-            objectToBool = !objectToBool;
-            row.Cells[0].Value = objectToBool;
-        }
-    }
     private void ToogleAllItemsCheckState(DataGridView dataGrid)
     {
+        //goese thorugh each of the rows in the current datagrid
         for (int i = 0; i < dataGrid.Rows.Count; i++)
         {
-            //Gets the check sate and then converts it to a bool for a toggle
-            bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
-            checkToBool = !checkToBool;
-            dataGrid.Rows[i].Cells[0].Value = checkToBool;
+            if (dataGrid.Rows.Count >= 0)
+            {
+                //Changes the current selected cell to force it
+                //update if any filter is apllyied
+                dataGrid.CurrentCell = dataGrid.Rows[0].Cells[1];
+                bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
+                checkToBool = !checkToBool;
+                dataGrid.Rows[i].Cells[0].Value = checkToBool;
+                dataGrid.CurrentCell = null;
+            }
         }
     }
     private void GetItemsToRandomize(List<string> allItems)

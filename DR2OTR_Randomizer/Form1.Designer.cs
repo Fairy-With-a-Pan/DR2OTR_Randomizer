@@ -84,24 +84,24 @@
             tp_Special = new TabPage();
             tp_Vehicles = new TabPage();
             tp_WitemsStats = new TabPage();
+            dgv_ItemStatsTable = new DataGridView();
+            statStateDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+            statNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statMinDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statMaxDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statInGameNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            itemStatsDataBindingSource = new BindingSource(components);
             bt_NPC_Model_Randomizer = new Button();
             bt_ItenStatsSet = new Button();
-            dgv_ItemStatsTable = new DataGridView();
-            statStateDGVCheckBox = new DataGridViewCheckBoxColumn();
-            statNameDGVText = new DataGridViewTextBoxColumn();
-            statDescriptionDGVText = new DataGridViewTextBoxColumn();
-            statMinDGVText = new DataGridViewTextBoxColumn();
-            statMaxDGVText = new DataGridViewTextBoxColumn();
-            StatInGameNameDGVText = new DataGridViewTextBoxColumn();
-            itemStatsDataBindingSource = new BindingSource(components);
             tc_itemStats = new TabControl();
-            tp_NPC = new TabPage();
-            tp_FireArms = new TabPage();
-            tp_WorldStats = new TabPage();
-            tp_ExplosivesSpray = new TabPage();
-            tp_FoodDamage = new TabPage();
-            tp_VehicleStats = new TabPage();
-            tp_UnstableStats = new TabPage();
+            tp_IS_VehicleStats = new TabPage();
+            tp_IS_NPC = new TabPage();
+            tp_IS_FireArms = new TabPage();
+            tp_IS_WorldStats = new TabPage();
+            tp_IS_ExplosivesSpray = new TabPage();
+            tp_IS_FoodDamage = new TabPage();
+            tp_IS_UnstableStats = new TabPage();
             tb_US_SearchBox = new TextBox();
             dgv_US_Items = new DataGridView();
             bt_IS_UnstableUncheck = new Button();
@@ -135,7 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).BeginInit();
             tc_itemStats.SuspendLayout();
-            tp_UnstableStats.SuspendLayout();
+            tp_IS_UnstableStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_US_Items).BeginInit();
             gb_US_NPCItems.SuspendLayout();
             gb_US_PropToThrow.SuspendLayout();
@@ -229,6 +229,7 @@
             dgv_AllItems.AllowUserToResizeColumns = false;
             dgv_AllItems.AllowUserToResizeRows = false;
             dgv_AllItems.BackgroundColor = SystemColors.Window;
+            dgv_AllItems.BorderStyle = BorderStyle.None;
             dgv_AllItems.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -243,13 +244,12 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlLightLight;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle2;
             dgv_AllItems.EditMode = DataGridViewEditMode.EditOnEnter;
             dgv_AllItems.GridColor = SystemColors.Window;
-            dgv_AllItems.ImeMode = ImeMode.On;
             dgv_AllItems.Location = new Point(6, 33);
             dgv_AllItems.Name = "dgv_AllItems";
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -288,7 +288,6 @@
             // 
             // tb_ItemsSearch
             // 
-            tb_ItemsSearch.CausesValidation = false;
             tb_ItemsSearch.Location = new Point(353, 30);
             tb_ItemsSearch.Name = "tb_ItemsSearch";
             tb_ItemsSearch.PlaceholderText = "Search All";
@@ -350,7 +349,7 @@
             tc_Items.Location = new Point(6, 6);
             tc_Items.Name = "tc_Items";
             tc_Items.SelectedIndex = 0;
-            tc_Items.Size = new Size(709, 31);
+            tc_Items.Size = new Size(709, 47);
             tc_Items.TabIndex = 19;
             tc_Items.Click += tc_Items_SelectedTab;
             // 
@@ -359,7 +358,7 @@
             tp_AllItems.Location = new Point(4, 24);
             tp_AllItems.Name = "tp_AllItems";
             tp_AllItems.Padding = new Padding(3);
-            tp_AllItems.Size = new Size(701, 3);
+            tp_AllItems.Size = new Size(701, 19);
             tp_AllItems.TabIndex = 19;
             tp_AllItems.Text = "All Items";
             tp_AllItems.UseVisualStyleBackColor = true;
@@ -369,8 +368,9 @@
             tp_BasicCombo.Location = new Point(4, 24);
             tp_BasicCombo.Name = "tp_BasicCombo";
             tp_BasicCombo.Padding = new Padding(3);
-            tp_BasicCombo.Size = new Size(701, 3);
+            tp_BasicCombo.Size = new Size(701, 19);
             tp_BasicCombo.TabIndex = 0;
+            tp_BasicCombo.Tag = "Basic Combo";
             tp_BasicCombo.Text = "Basic Combo";
             tp_BasicCombo.UseVisualStyleBackColor = true;
             // 
@@ -379,8 +379,9 @@
             tp_BasicFood.Location = new Point(4, 24);
             tp_BasicFood.Name = "tp_BasicFood";
             tp_BasicFood.Padding = new Padding(3);
-            tp_BasicFood.Size = new Size(701, 3);
+            tp_BasicFood.Size = new Size(701, 19);
             tp_BasicFood.TabIndex = 1;
+            tp_BasicFood.Tag = "Basic Food";
             tp_BasicFood.Text = "Basic Food";
             tp_BasicFood.UseVisualStyleBackColor = true;
             // 
@@ -389,8 +390,9 @@
             tp_BasicLarge.Location = new Point(4, 24);
             tp_BasicLarge.Name = "tp_BasicLarge";
             tp_BasicLarge.Padding = new Padding(3);
-            tp_BasicLarge.Size = new Size(701, 3);
+            tp_BasicLarge.Size = new Size(701, 19);
             tp_BasicLarge.TabIndex = 2;
+            tp_BasicLarge.Tag = "Basic Large";
             tp_BasicLarge.Text = "Basic Large";
             tp_BasicLarge.UseVisualStyleBackColor = true;
             // 
@@ -399,8 +401,9 @@
             tp_BasicSmall.Location = new Point(4, 24);
             tp_BasicSmall.Name = "tp_BasicSmall";
             tp_BasicSmall.Padding = new Padding(3);
-            tp_BasicSmall.Size = new Size(701, 3);
+            tp_BasicSmall.Size = new Size(701, 19);
             tp_BasicSmall.TabIndex = 3;
+            tp_BasicSmall.Tag = "Basic Small";
             tp_BasicSmall.Text = "Basic Small";
             tp_BasicSmall.UseVisualStyleBackColor = true;
             // 
@@ -409,8 +412,9 @@
             tp_Bugged.Location = new Point(4, 24);
             tp_Bugged.Name = "tp_Bugged";
             tp_Bugged.Padding = new Padding(3);
-            tp_Bugged.Size = new Size(701, 3);
+            tp_Bugged.Size = new Size(701, 19);
             tp_Bugged.TabIndex = 4;
+            tp_Bugged.Tag = "Bugged";
             tp_Bugged.Text = "Bugged";
             tp_Bugged.UseVisualStyleBackColor = true;
             // 
@@ -419,8 +423,9 @@
             tp_Clothing.Location = new Point(4, 24);
             tp_Clothing.Name = "tp_Clothing";
             tp_Clothing.Padding = new Padding(3);
-            tp_Clothing.Size = new Size(701, 3);
+            tp_Clothing.Size = new Size(701, 19);
             tp_Clothing.TabIndex = 5;
+            tp_Clothing.Tag = "Clothing";
             tp_Clothing.Text = "Clothing";
             tp_Clothing.UseVisualStyleBackColor = true;
             // 
@@ -429,8 +434,9 @@
             tp_CombinedFireArmsSpray.Location = new Point(4, 24);
             tp_CombinedFireArmsSpray.Name = "tp_CombinedFireArmsSpray";
             tp_CombinedFireArmsSpray.Padding = new Padding(3);
-            tp_CombinedFireArmsSpray.Size = new Size(701, 3);
+            tp_CombinedFireArmsSpray.Size = new Size(701, 19);
             tp_CombinedFireArmsSpray.TabIndex = 6;
+            tp_CombinedFireArmsSpray.Tag = "CombinedFireArmsSpray";
             tp_CombinedFireArmsSpray.Text = "Combined Fire Arms & Spray";
             tp_CombinedFireArmsSpray.UseVisualStyleBackColor = true;
             // 
@@ -439,8 +445,9 @@
             tp_CombinedFoodSpoiled.Location = new Point(4, 24);
             tp_CombinedFoodSpoiled.Name = "tp_CombinedFoodSpoiled";
             tp_CombinedFoodSpoiled.Padding = new Padding(3);
-            tp_CombinedFoodSpoiled.Size = new Size(701, 3);
+            tp_CombinedFoodSpoiled.Size = new Size(701, 19);
             tp_CombinedFoodSpoiled.TabIndex = 7;
+            tp_CombinedFoodSpoiled.Tag = "CombinedFoodSpoiled";
             tp_CombinedFoodSpoiled.Text = "Combined Food & Spoiled";
             tp_CombinedFoodSpoiled.UseVisualStyleBackColor = true;
             // 
@@ -449,8 +456,9 @@
             tp_CombinedThowingMelee.Location = new Point(4, 24);
             tp_CombinedThowingMelee.Name = "tp_CombinedThowingMelee";
             tp_CombinedThowingMelee.Padding = new Padding(3);
-            tp_CombinedThowingMelee.Size = new Size(701, 3);
+            tp_CombinedThowingMelee.Size = new Size(701, 19);
             tp_CombinedThowingMelee.TabIndex = 8;
+            tp_CombinedThowingMelee.Tag = "CombinedThowingMelee";
             tp_CombinedThowingMelee.Text = "Combined Thowing & Melee";
             tp_CombinedThowingMelee.UseVisualStyleBackColor = true;
             // 
@@ -459,8 +467,9 @@
             tp_ComboFireArmSpray.Location = new Point(4, 24);
             tp_ComboFireArmSpray.Name = "tp_ComboFireArmSpray";
             tp_ComboFireArmSpray.Padding = new Padding(3);
-            tp_ComboFireArmSpray.Size = new Size(701, 3);
+            tp_ComboFireArmSpray.Size = new Size(701, 19);
             tp_ComboFireArmSpray.TabIndex = 9;
+            tp_ComboFireArmSpray.Tag = "ComboFireArmSpray";
             tp_ComboFireArmSpray.Text = "Combo Fire Arm & Spray";
             tp_ComboFireArmSpray.UseVisualStyleBackColor = true;
             // 
@@ -469,8 +478,9 @@
             tp_DLC.Location = new Point(4, 24);
             tp_DLC.Name = "tp_DLC";
             tp_DLC.Padding = new Padding(3);
-            tp_DLC.Size = new Size(701, 3);
+            tp_DLC.Size = new Size(701, 19);
             tp_DLC.TabIndex = 10;
+            tp_DLC.Tag = "DLC";
             tp_DLC.Text = "DLC";
             tp_DLC.UseVisualStyleBackColor = true;
             // 
@@ -479,8 +489,9 @@
             tp_Explosive.Location = new Point(4, 24);
             tp_Explosive.Name = "tp_Explosive";
             tp_Explosive.Padding = new Padding(3);
-            tp_Explosive.Size = new Size(701, 3);
+            tp_Explosive.Size = new Size(701, 19);
             tp_Explosive.TabIndex = 11;
+            tp_Explosive.Tag = "Explosive";
             tp_Explosive.Text = "Explosive";
             tp_Explosive.UseVisualStyleBackColor = true;
             // 
@@ -489,8 +500,9 @@
             tp_KeyItems.Location = new Point(4, 24);
             tp_KeyItems.Name = "tp_KeyItems";
             tp_KeyItems.Padding = new Padding(3);
-            tp_KeyItems.Size = new Size(701, 3);
+            tp_KeyItems.Size = new Size(701, 19);
             tp_KeyItems.TabIndex = 17;
+            tp_KeyItems.Tag = "KeyItems";
             tp_KeyItems.Text = "Key Items";
             tp_KeyItems.UseVisualStyleBackColor = true;
             // 
@@ -499,8 +511,9 @@
             tp_Magazines.Location = new Point(4, 24);
             tp_Magazines.Name = "tp_Magazines";
             tp_Magazines.Padding = new Padding(3);
-            tp_Magazines.Size = new Size(701, 3);
+            tp_Magazines.Size = new Size(701, 19);
             tp_Magazines.TabIndex = 12;
+            tp_Magazines.Tag = "Magazines";
             tp_Magazines.Text = "Magazines";
             tp_Magazines.UseVisualStyleBackColor = true;
             // 
@@ -509,8 +522,9 @@
             tp_Mannequin.Location = new Point(4, 24);
             tp_Mannequin.Name = "tp_Mannequin";
             tp_Mannequin.Padding = new Padding(3);
-            tp_Mannequin.Size = new Size(701, 3);
+            tp_Mannequin.Size = new Size(701, 19);
             tp_Mannequin.TabIndex = 13;
+            tp_Mannequin.Tag = "Mannequin";
             tp_Mannequin.Text = "Mannequin";
             tp_Mannequin.UseVisualStyleBackColor = true;
             // 
@@ -519,8 +533,9 @@
             tp_PushPlaced.Location = new Point(4, 24);
             tp_PushPlaced.Name = "tp_PushPlaced";
             tp_PushPlaced.Padding = new Padding(3);
-            tp_PushPlaced.Size = new Size(701, 3);
+            tp_PushPlaced.Size = new Size(701, 19);
             tp_PushPlaced.TabIndex = 14;
+            tp_PushPlaced.Tag = "PushPlaced";
             tp_PushPlaced.Text = "Push & Placed";
             tp_PushPlaced.UseVisualStyleBackColor = true;
             // 
@@ -529,8 +544,9 @@
             tp_Special.Location = new Point(4, 24);
             tp_Special.Name = "tp_Special";
             tp_Special.Padding = new Padding(3);
-            tp_Special.Size = new Size(701, 3);
+            tp_Special.Size = new Size(701, 19);
             tp_Special.TabIndex = 15;
+            tp_Special.Tag = "Special";
             tp_Special.Text = "Special";
             tp_Special.UseVisualStyleBackColor = true;
             // 
@@ -539,17 +555,18 @@
             tp_Vehicles.Location = new Point(4, 24);
             tp_Vehicles.Name = "tp_Vehicles";
             tp_Vehicles.Padding = new Padding(3);
-            tp_Vehicles.Size = new Size(701, 3);
+            tp_Vehicles.Size = new Size(701, 19);
             tp_Vehicles.TabIndex = 16;
+            tp_Vehicles.Tag = "Vehicles";
             tp_Vehicles.Text = "Vehicles";
             tp_Vehicles.UseVisualStyleBackColor = true;
             // 
             // tp_WitemsStats
             // 
             tp_WitemsStats.AutoScroll = true;
+            tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
             tp_WitemsStats.Controls.Add(bt_ItenStatsSet);
-            tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(tc_itemStats);
             tp_WitemsStats.Location = new Point(4, 24);
             tp_WitemsStats.Name = "tp_WitemsStats";
@@ -558,26 +575,6 @@
             tp_WitemsStats.TabIndex = 1;
             tp_WitemsStats.Text = "Items Stats";
             tp_WitemsStats.UseVisualStyleBackColor = true;
-            // 
-            // bt_NPC_Model_Randomizer
-            // 
-            bt_NPC_Model_Randomizer.Location = new Point(180, 6);
-            bt_NPC_Model_Randomizer.Name = "bt_NPC_Model_Randomizer";
-            bt_NPC_Model_Randomizer.Size = new Size(150, 41);
-            bt_NPC_Model_Randomizer.TabIndex = 4;
-            bt_NPC_Model_Randomizer.Text = "Randomize NPC Models";
-            bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
-            bt_NPC_Model_Randomizer.Click += bt_NPC_Model_Randomizer_Click;
-            // 
-            // bt_ItenStatsSet
-            // 
-            bt_ItenStatsSet.Location = new Point(10, 6);
-            bt_ItenStatsSet.Name = "bt_ItenStatsSet";
-            bt_ItenStatsSet.Size = new Size(160, 41);
-            bt_ItenStatsSet.TabIndex = 2;
-            bt_ItenStatsSet.Text = "Randomize Selected Stats";
-            bt_ItenStatsSet.UseVisualStyleBackColor = true;
-            bt_ItenStatsSet.Click += bt_ItenStatsSet_Click;
             // 
             // dgv_ItemStatsTable
             // 
@@ -599,7 +596,7 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDGVCheckBox, statNameDGVText, statDescriptionDGVText, statMinDGVText, statMaxDGVText, StatInGameNameDGVText });
+            dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, statInGameNameDataGridViewTextBoxColumn1 });
             dgv_ItemStatsTable.DataSource = itemStatsDataBindingSource;
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = SystemColors.Window;
@@ -634,78 +631,101 @@
             dgv_ItemStatsTable.DataError += dataGridView1_DataError;
             dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
             // 
-            // statStateDGVCheckBox
+            // statStateDataGridViewCheckBoxColumn
             // 
-            statStateDGVCheckBox.DataPropertyName = "StatState";
-            statStateDGVCheckBox.HeaderText = "Enabled";
-            statStateDGVCheckBox.Name = "statStateDGVCheckBox";
-            statStateDGVCheckBox.Resizable = DataGridViewTriState.False;
-            statStateDGVCheckBox.Width = 60;
+            statStateDataGridViewCheckBoxColumn.DataPropertyName = "StatState";
+            statStateDataGridViewCheckBoxColumn.HeaderText = "Enabled";
+            statStateDataGridViewCheckBoxColumn.Name = "statStateDataGridViewCheckBoxColumn";
+            statStateDataGridViewCheckBoxColumn.Resizable = DataGridViewTriState.False;
+            statStateDataGridViewCheckBoxColumn.Width = 75;
             // 
-            // statNameDGVText
+            // statNameDataGridViewTextBoxColumn
             // 
-            statNameDGVText.DataPropertyName = "StatName";
+            statNameDataGridViewTextBoxColumn.DataPropertyName = "StatName";
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statNameDGVText.DefaultCellStyle = dataGridViewCellStyle5;
-            statNameDGVText.HeaderText = "Stat Name";
-            statNameDGVText.Name = "statNameDGVText";
-            statNameDGVText.ReadOnly = true;
-            statNameDGVText.Resizable = DataGridViewTriState.False;
-            statNameDGVText.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statNameDGVText.Width = 150;
+            statNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            statNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            statNameDataGridViewTextBoxColumn.Name = "statNameDataGridViewTextBoxColumn";
+            statNameDataGridViewTextBoxColumn.ReadOnly = true;
+            statNameDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statNameDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statNameDataGridViewTextBoxColumn.Width = 200;
             // 
-            // statDescriptionDGVText
+            // statDescriptionDataGridViewTextBoxColumn
             // 
-            statDescriptionDGVText.DataPropertyName = "StatDescription";
+            statDescriptionDataGridViewTextBoxColumn.DataPropertyName = "StatDescription";
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            statDescriptionDGVText.DefaultCellStyle = dataGridViewCellStyle6;
-            statDescriptionDGVText.HeaderText = "Stat Description";
-            statDescriptionDGVText.Name = "statDescriptionDGVText";
-            statDescriptionDGVText.ReadOnly = true;
-            statDescriptionDGVText.Resizable = DataGridViewTriState.False;
-            statDescriptionDGVText.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statDescriptionDGVText.Width = 265;
+            statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            statDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            statDescriptionDataGridViewTextBoxColumn.Name = "statDescriptionDataGridViewTextBoxColumn";
+            statDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            statDescriptionDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statDescriptionDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statDescriptionDataGridViewTextBoxColumn.Width = 250;
             // 
-            // statMinDGVText
+            // statMinDataGridViewTextBoxColumn
             // 
-            statMinDGVText.DataPropertyName = "StatMin";
+            statMinDataGridViewTextBoxColumn.DataPropertyName = "StatMin";
             dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMinDGVText.DefaultCellStyle = dataGridViewCellStyle7;
-            statMinDGVText.HeaderText = "Stat Min";
-            statMinDGVText.Name = "statMinDGVText";
-            statMinDGVText.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            statMinDataGridViewTextBoxColumn.HeaderText = "Min";
+            statMinDataGridViewTextBoxColumn.Name = "statMinDataGridViewTextBoxColumn";
+            statMinDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statMinDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMinDataGridViewTextBoxColumn.Width = 78;
             // 
-            // statMaxDGVText
+            // statMaxDataGridViewTextBoxColumn
             // 
-            statMaxDGVText.DataPropertyName = "StatMax";
+            statMaxDataGridViewTextBoxColumn.DataPropertyName = "StatMax";
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMaxDGVText.DefaultCellStyle = dataGridViewCellStyle8;
-            statMaxDGVText.HeaderText = "Stat Max";
-            statMaxDGVText.Name = "statMaxDGVText";
-            statMaxDGVText.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMaxDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            statMaxDataGridViewTextBoxColumn.HeaderText = "Max";
+            statMaxDataGridViewTextBoxColumn.Name = "statMaxDataGridViewTextBoxColumn";
+            statMaxDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statMaxDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMaxDataGridViewTextBoxColumn.Width = 78;
             // 
-            // StatInGameNameDGVText
+            // statInGameNameDataGridViewTextBoxColumn1
             // 
-            StatInGameNameDGVText.DataPropertyName = "StatInGameName";
-            StatInGameNameDGVText.HeaderText = "StatInGameName";
-            StatInGameNameDGVText.Name = "StatInGameNameDGVText";
-            StatInGameNameDGVText.SortMode = DataGridViewColumnSortMode.NotSortable;
-            StatInGameNameDGVText.Visible = false;
+            statInGameNameDataGridViewTextBoxColumn1.DataPropertyName = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn1.HeaderText = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn1.Name = "statInGameNameDataGridViewTextBoxColumn1";
+            statInGameNameDataGridViewTextBoxColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statInGameNameDataGridViewTextBoxColumn1.Visible = false;
             // 
             // itemStatsDataBindingSource
             // 
             itemStatsDataBindingSource.DataSource = typeof(Resources.ItemStatsData);
             // 
+            // bt_NPC_Model_Randomizer
+            // 
+            bt_NPC_Model_Randomizer.Location = new Point(180, 6);
+            bt_NPC_Model_Randomizer.Name = "bt_NPC_Model_Randomizer";
+            bt_NPC_Model_Randomizer.Size = new Size(150, 41);
+            bt_NPC_Model_Randomizer.TabIndex = 4;
+            bt_NPC_Model_Randomizer.Text = "Randomize NPC Models";
+            bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
+            bt_NPC_Model_Randomizer.Click += bt_NPC_Model_Randomizer_Click;
+            // 
+            // bt_ItenStatsSet
+            // 
+            bt_ItenStatsSet.Location = new Point(10, 6);
+            bt_ItenStatsSet.Name = "bt_ItenStatsSet";
+            bt_ItenStatsSet.Size = new Size(160, 41);
+            bt_ItenStatsSet.TabIndex = 2;
+            bt_ItenStatsSet.Text = "Randomize Selected Stats";
+            bt_ItenStatsSet.UseVisualStyleBackColor = true;
+            bt_ItenStatsSet.Click += bt_ItenStatsSet_Click;
+            // 
             // tc_itemStats
             // 
-            tc_itemStats.Controls.Add(tp_NPC);
-            tc_itemStats.Controls.Add(tp_FireArms);
-            tc_itemStats.Controls.Add(tp_WorldStats);
-            tc_itemStats.Controls.Add(tp_ExplosivesSpray);
-            tc_itemStats.Controls.Add(tp_FoodDamage);
-            tc_itemStats.Controls.Add(tp_VehicleStats);
-            tc_itemStats.Controls.Add(tp_UnstableStats);
+            tc_itemStats.Controls.Add(tp_IS_VehicleStats);
+            tc_itemStats.Controls.Add(tp_IS_NPC);
+            tc_itemStats.Controls.Add(tp_IS_FireArms);
+            tc_itemStats.Controls.Add(tp_IS_WorldStats);
+            tc_itemStats.Controls.Add(tp_IS_ExplosivesSpray);
+            tc_itemStats.Controls.Add(tp_IS_FoodDamage);
+            tc_itemStats.Controls.Add(tp_IS_UnstableStats);
             tc_itemStats.Location = new Point(9, 51);
             tc_itemStats.Name = "tc_itemStats";
             tc_itemStats.SelectedIndex = 0;
@@ -713,92 +733,92 @@
             tc_itemStats.TabIndex = 1;
             tc_itemStats.Click += tc_itemStats_SelectedTab;
             // 
-            // tp_NPC
+            // tp_IS_VehicleStats
             // 
-            tp_NPC.AutoScroll = true;
-            tp_NPC.Location = new Point(4, 24);
-            tp_NPC.Name = "tp_NPC";
-            tp_NPC.Padding = new Padding(3);
-            tp_NPC.Size = new Size(695, 387);
-            tp_NPC.TabIndex = 1;
-            tp_NPC.Tag = "";
-            tp_NPC.Text = "NPC Stats";
-            tp_NPC.UseVisualStyleBackColor = true;
+            tp_IS_VehicleStats.AutoScroll = true;
+            tp_IS_VehicleStats.Location = new Point(4, 24);
+            tp_IS_VehicleStats.Name = "tp_IS_VehicleStats";
+            tp_IS_VehicleStats.Padding = new Padding(3);
+            tp_IS_VehicleStats.Size = new Size(695, 387);
+            tp_IS_VehicleStats.TabIndex = 0;
+            tp_IS_VehicleStats.Tag = "";
+            tp_IS_VehicleStats.Text = "Vehicle Stats";
+            tp_IS_VehicleStats.UseVisualStyleBackColor = true;
             // 
-            // tp_FireArms
+            // tp_IS_NPC
             // 
-            tp_FireArms.Location = new Point(4, 24);
-            tp_FireArms.Name = "tp_FireArms";
-            tp_FireArms.Padding = new Padding(3);
-            tp_FireArms.Size = new Size(695, 387);
-            tp_FireArms.TabIndex = 2;
-            tp_FireArms.Tag = "";
-            tp_FireArms.Text = "Fire Arms";
-            tp_FireArms.UseVisualStyleBackColor = true;
+            tp_IS_NPC.AutoScroll = true;
+            tp_IS_NPC.Location = new Point(4, 24);
+            tp_IS_NPC.Name = "tp_IS_NPC";
+            tp_IS_NPC.Padding = new Padding(3);
+            tp_IS_NPC.Size = new Size(695, 387);
+            tp_IS_NPC.TabIndex = 1;
+            tp_IS_NPC.Tag = "";
+            tp_IS_NPC.Text = "NPC Stats";
+            tp_IS_NPC.UseVisualStyleBackColor = true;
             // 
-            // tp_WorldStats
+            // tp_IS_FireArms
             // 
-            tp_WorldStats.AutoScroll = true;
-            tp_WorldStats.Location = new Point(4, 24);
-            tp_WorldStats.Name = "tp_WorldStats";
-            tp_WorldStats.Padding = new Padding(3);
-            tp_WorldStats.Size = new Size(695, 387);
-            tp_WorldStats.TabIndex = 3;
-            tp_WorldStats.Tag = "";
-            tp_WorldStats.Text = "World Stats";
-            tp_WorldStats.UseVisualStyleBackColor = true;
+            tp_IS_FireArms.Location = new Point(4, 24);
+            tp_IS_FireArms.Name = "tp_IS_FireArms";
+            tp_IS_FireArms.Padding = new Padding(3);
+            tp_IS_FireArms.Size = new Size(695, 387);
+            tp_IS_FireArms.TabIndex = 2;
+            tp_IS_FireArms.Tag = "";
+            tp_IS_FireArms.Text = "Fire Arms";
+            tp_IS_FireArms.UseVisualStyleBackColor = true;
             // 
-            // tp_ExplosivesSpray
+            // tp_IS_WorldStats
             // 
-            tp_ExplosivesSpray.AutoScroll = true;
-            tp_ExplosivesSpray.Location = new Point(4, 24);
-            tp_ExplosivesSpray.Name = "tp_ExplosivesSpray";
-            tp_ExplosivesSpray.Padding = new Padding(3);
-            tp_ExplosivesSpray.Size = new Size(695, 387);
-            tp_ExplosivesSpray.TabIndex = 4;
-            tp_ExplosivesSpray.Tag = "";
-            tp_ExplosivesSpray.Text = "Explosives, Spray & Launch";
-            tp_ExplosivesSpray.UseVisualStyleBackColor = true;
+            tp_IS_WorldStats.AutoScroll = true;
+            tp_IS_WorldStats.Location = new Point(4, 24);
+            tp_IS_WorldStats.Name = "tp_IS_WorldStats";
+            tp_IS_WorldStats.Padding = new Padding(3);
+            tp_IS_WorldStats.Size = new Size(695, 387);
+            tp_IS_WorldStats.TabIndex = 3;
+            tp_IS_WorldStats.Tag = "";
+            tp_IS_WorldStats.Text = "World Stats";
+            tp_IS_WorldStats.UseVisualStyleBackColor = true;
             // 
-            // tp_FoodDamage
+            // tp_IS_ExplosivesSpray
             // 
-            tp_FoodDamage.Location = new Point(4, 24);
-            tp_FoodDamage.Name = "tp_FoodDamage";
-            tp_FoodDamage.Padding = new Padding(3);
-            tp_FoodDamage.Size = new Size(695, 387);
-            tp_FoodDamage.TabIndex = 5;
-            tp_FoodDamage.Tag = "";
-            tp_FoodDamage.Text = "Food and Damage";
-            tp_FoodDamage.UseVisualStyleBackColor = true;
+            tp_IS_ExplosivesSpray.AutoScroll = true;
+            tp_IS_ExplosivesSpray.Location = new Point(4, 24);
+            tp_IS_ExplosivesSpray.Name = "tp_IS_ExplosivesSpray";
+            tp_IS_ExplosivesSpray.Padding = new Padding(3);
+            tp_IS_ExplosivesSpray.Size = new Size(695, 387);
+            tp_IS_ExplosivesSpray.TabIndex = 4;
+            tp_IS_ExplosivesSpray.Tag = "";
+            tp_IS_ExplosivesSpray.Text = "Explosives, Spray & Launch";
+            tp_IS_ExplosivesSpray.UseVisualStyleBackColor = true;
             // 
-            // tp_VehicleStats
+            // tp_IS_FoodDamage
             // 
-            tp_VehicleStats.AutoScroll = true;
-            tp_VehicleStats.Location = new Point(4, 24);
-            tp_VehicleStats.Name = "tp_VehicleStats";
-            tp_VehicleStats.Padding = new Padding(3);
-            tp_VehicleStats.Size = new Size(695, 387);
-            tp_VehicleStats.TabIndex = 0;
-            tp_VehicleStats.Tag = "";
-            tp_VehicleStats.Text = "Vehicle Stats";
-            tp_VehicleStats.UseVisualStyleBackColor = true;
+            tp_IS_FoodDamage.Location = new Point(4, 24);
+            tp_IS_FoodDamage.Name = "tp_IS_FoodDamage";
+            tp_IS_FoodDamage.Padding = new Padding(3);
+            tp_IS_FoodDamage.Size = new Size(695, 387);
+            tp_IS_FoodDamage.TabIndex = 5;
+            tp_IS_FoodDamage.Tag = "";
+            tp_IS_FoodDamage.Text = "Food and Damage";
+            tp_IS_FoodDamage.UseVisualStyleBackColor = true;
             // 
-            // tp_UnstableStats
+            // tp_IS_UnstableStats
             // 
-            tp_UnstableStats.Controls.Add(tb_US_SearchBox);
-            tp_UnstableStats.Controls.Add(dgv_US_Items);
-            tp_UnstableStats.Controls.Add(bt_IS_UnstableUncheck);
-            tp_UnstableStats.Controls.Add(bt_IS_UnstableToggle);
-            tp_UnstableStats.Controls.Add(gb_US_NPCItems);
-            tp_UnstableStats.Controls.Add(gb_US_PropToThrow);
-            tp_UnstableStats.Controls.Add(l_US_Warning_Msg);
-            tp_UnstableStats.Location = new Point(4, 24);
-            tp_UnstableStats.Name = "tp_UnstableStats";
-            tp_UnstableStats.Padding = new Padding(3);
-            tp_UnstableStats.Size = new Size(695, 387);
-            tp_UnstableStats.TabIndex = 6;
-            tp_UnstableStats.Text = "Unstable Stats";
-            tp_UnstableStats.UseVisualStyleBackColor = true;
+            tp_IS_UnstableStats.Controls.Add(tb_US_SearchBox);
+            tp_IS_UnstableStats.Controls.Add(dgv_US_Items);
+            tp_IS_UnstableStats.Controls.Add(bt_IS_UnstableUncheck);
+            tp_IS_UnstableStats.Controls.Add(bt_IS_UnstableToggle);
+            tp_IS_UnstableStats.Controls.Add(gb_US_NPCItems);
+            tp_IS_UnstableStats.Controls.Add(gb_US_PropToThrow);
+            tp_IS_UnstableStats.Controls.Add(l_US_Warning_Msg);
+            tp_IS_UnstableStats.Location = new Point(4, 24);
+            tp_IS_UnstableStats.Name = "tp_IS_UnstableStats";
+            tp_IS_UnstableStats.Padding = new Padding(3);
+            tp_IS_UnstableStats.Size = new Size(695, 387);
+            tp_IS_UnstableStats.TabIndex = 6;
+            tp_IS_UnstableStats.Text = "Unstable Stats";
+            tp_IS_UnstableStats.UseVisualStyleBackColor = true;
             // 
             // tb_US_SearchBox
             // 
@@ -817,6 +837,7 @@
             dgv_US_Items.AllowUserToResizeRows = false;
             dgv_US_Items.BackgroundColor = SystemColors.Window;
             dgv_US_Items.BorderStyle = BorderStyle.None;
+            dgv_US_Items.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = SystemColors.Control;
             dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -975,9 +996,9 @@
             l_SafeMode_Text.ForeColor = Color.Green;
             l_SafeMode_Text.Location = new Point(573, 30);
             l_SafeMode_Text.Name = "l_SafeMode_Text";
-            l_SafeMode_Text.Size = new Size(158, 21);
+            l_SafeMode_Text.Size = new Size(143, 21);
             l_SafeMode_Text.TabIndex = 24;
-            l_SafeMode_Text.Text = "Safe mode is enabled";
+            l_SafeMode_Text.Text = "Safe mode enabled";
             // 
             // dgvColoum_StatState
             // 
@@ -1043,8 +1064,8 @@
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
             tc_itemStats.ResumeLayout(false);
-            tp_UnstableStats.ResumeLayout(false);
-            tp_UnstableStats.PerformLayout();
+            tp_IS_UnstableStats.ResumeLayout(false);
+            tp_IS_UnstableStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_US_Items).EndInit();
             gb_US_NPCItems.ResumeLayout(false);
             gb_US_NPCItems.PerformLayout();
@@ -1087,12 +1108,12 @@
         private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
         private global::System.Windows.Forms.Label l_SafeMode_Text;
         private global::System.Windows.Forms.TabControl tc_itemStats;
-        private global::System.Windows.Forms.TabPage tp_NPC;
-        private global::System.Windows.Forms.TabPage tp_FireArms;
-        private global::System.Windows.Forms.TabPage tp_WorldStats;
-        private global::System.Windows.Forms.TabPage tp_ExplosivesSpray;
-        private global::System.Windows.Forms.TabPage tp_FoodDamage;
-        private global::System.Windows.Forms.TabPage tp_UnstableStats;
+        private global::System.Windows.Forms.TabPage tp_IS_NPC;
+        private global::System.Windows.Forms.TabPage tp_IS_FireArms;
+        private global::System.Windows.Forms.TabPage tp_IS_WorldStats;
+        private global::System.Windows.Forms.TabPage tp_IS_ExplosivesSpray;
+        private global::System.Windows.Forms.TabPage tp_IS_FoodDamage;
+        private global::System.Windows.Forms.TabPage tp_IS_UnstableStats;
         private global::System.Windows.Forms.GroupBox gb_US_NPCItems;
         private global::System.Windows.Forms.CheckBox cb_US_NPCItems;
         private global::System.Windows.Forms.Label l_US_NPCItems_Dec;
@@ -1102,7 +1123,7 @@
         private global::System.Windows.Forms.Label l_US_Warning_Msg;
         private global::System.Windows.Forms.DataGridView dgv_ItemStatsTable;
         private global::System.Windows.Forms.BindingSource itemStatsDataBindingSource;
-        private global::System.Windows.Forms.TabPage tp_VehicleStats;
+        private global::System.Windows.Forms.TabPage tp_IS_VehicleStats;
         private DataGridViewCheckBoxColumn dgvColoum_StatState;
         private DataGridViewTextBoxColumn dgvColoum_StatName;
         private DataGridViewTextBoxColumn dgvColoum_StatDesc;
@@ -1113,12 +1134,6 @@
         private Button bt_IS_UnstableToggle;
         private PictureBox pictureBox1;
         private Label l_MainDec;
-        private DataGridViewCheckBoxColumn statStateDGVCheckBox;
-        private DataGridViewTextBoxColumn statNameDGVText;
-        private DataGridViewTextBoxColumn statDescriptionDGVText;
-        private DataGridViewTextBoxColumn statMinDGVText;
-        private DataGridViewTextBoxColumn statMaxDGVText;
-        private DataGridViewTextBoxColumn StatInGameNameDGVText;
         private BindingSource itemsDataTableBindingSource;
         private DataGridView dgv_AllItems;
         private BindingSource allItemDataTableBindingSource;
@@ -1147,5 +1162,11 @@
         private TabPage tp_Vehicles;
         private DataGridView dgv_US_Items;
         private TextBox tb_US_SearchBox;
+        private DataGridViewCheckBoxColumn statStateDataGridViewCheckBoxColumn;
+        private DataGridViewTextBoxColumn statNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statDescriptionDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn statInGameNameDataGridViewTextBoxColumn1;
     }
 }
