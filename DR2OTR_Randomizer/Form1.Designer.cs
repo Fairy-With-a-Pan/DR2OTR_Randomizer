@@ -244,8 +244,8 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.HotTrack;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.InfoText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle2;
             dgv_AllItems.EditMode = DataGridViewEditMode.EditOnEnter;
@@ -256,8 +256,8 @@
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dgv_AllItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_AllItems.RowHeadersVisible = false;
@@ -851,8 +851,8 @@
             dataGridViewCellStyle13.BackColor = SystemColors.Window;
             dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.ControlText;
             dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
             dgv_US_Items.DefaultCellStyle = dataGridViewCellStyle13;
             dgv_US_Items.EditMode = DataGridViewEditMode.EditOnEnter;
@@ -966,7 +966,7 @@
             l_US_Warning_Msg.Name = "l_US_Warning_Msg";
             l_US_Warning_Msg.Size = new Size(300, 70);
             l_US_Warning_Msg.TabIndex = 0;
-            l_US_Warning_Msg.Text = "These setting will make the game unstable that may cause crashing/softlocking or stop the game from launching. Its recomended to save when ever you have the chance.";
+            l_US_Warning_Msg.Text = "These setting will make the game unstable and have a high chance to cause crashing/softlocking or stop the game from launching. Its strongly recomended to save when ever you have the chance.";
             l_US_Warning_Msg.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // allItemDataTableBindingSource

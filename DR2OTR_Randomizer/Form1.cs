@@ -15,15 +15,8 @@ namespace DR2OTR_Randomizer;
 /// <summary>
 /// TODO:
 ///
-/// Need to test to see how well having tags being enabled in the 
-/// all item randomizer when searching and need to see if there is
-/// a better way to toggle all of the items when doing a #enabled search
 /// 
-/// move the code for the item stat randomizer and 
-/// the item randomizer to sperate classes to clean up this area
-/// 
-/// Need to spell check
-/// Refactor and optiomze the program 
+/// Need to spell check and Refactor
 /// 
 /// </summary>
 public partial class F_ItemRandomiser : Form
@@ -57,32 +50,36 @@ public partial class F_ItemRandomiser : Form
     BindingSource allUnstableItemSource = new BindingSource();
     public F_ItemRandomiser()
     {
+        //gets all of the statdata stored inside the AllItemStatData
+        //Most likely move over to a xml file for storing this
         VheicleStatData = statData.GetVheicleStats();
         NPCStatData = statData.GetNPCStats();
         WorldStatsData = statData.GetWorldStats();
         FireArmsStatData = statData.GetFireArmsStats();
         ExplosiveStatData = statData.GetExplosivesStats();
         FoodAndDamageData = statData.GetFoodAndDamageStats();
+        InitializeComponent();
 
         allitemsTable = itemDataTable.SetAllItemData();
         allUnStableitemsTable = itemDataTable.SetAllItemData();
-        InitializeComponent();
 
         //use this to catch if the Allitems or npcmodels file is missing
         try
         {
-            File.OpenRead($"{Application.StartupPath}\\Resources\\Allitems.txt");
+            File.OpenRead($"{Application.StartupPath}\\Resources\\AllItemData.xml");
             File.OpenRead($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
         }
         catch (FileNotFoundException e)
         {
             MessageBox.Show
-            ($"{e.FileName} \nIs missing or as been renamed."
-            , "WARNING");
+            ($"{e.FileName} \nIs missing or as been renamed. The program can not run with out these"
+            , "Warning");
             Process.GetCurrentProcess().Kill();
         }
-
-
+        //Set the datatable for the item stats data grid
+        dgv_ItemStatsTable.DataSource = VheicleStatData;
+        //sets the binding source and data table for both of the 
+        //all item data grid views
         dgv_AllItems.DataSource = allitemsTable;
         Set_dgv_AllItems_Format(dgv_AllItems);
         allItemDataSource.DataSource = allitemsTable;
@@ -94,12 +91,21 @@ public partial class F_ItemRandomiser : Form
 
     private void Form1_Load(object sender, EventArgs e)
     {
-        var itemStatData = this.VheicleStatData;
-        dgv_ItemStatsTable.DataSource = itemStatData;
+    }
+    private void Set_dgv_AllItems_Format(DataGridView dataGrid)
+    {
+        dataGrid.Columns[0].Width = 75;
+        dataGrid.Columns[0].HeaderText = "Enabled";
+        dataGrid.Columns[1].ReadOnly = true;
+        dataGrid.Columns[1].HeaderText = "Item Name";
+        dataGrid.Columns[1].Width = 250;
+        dataGrid.Columns[2].Visible = false;
+        dataGrid.Columns[2].ReadOnly = true;
     }
     private void tc_TabWindowsTabSelect(object sender, EventArgs e)
     {
-        //changes the current selected cell to not cause issues with toggle and it not updating
+        //changes the current selected cell to not cause
+        //issues with toggle and it not updating
         dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
@@ -130,12 +136,10 @@ public partial class F_ItemRandomiser : Form
     private void b_ToggleAll_Click(object sender, EventArgs e)
     {
         ToogleAllItemsCheckState(dgv_AllItems);
-
     }
     private void bt_IS_UnstableToggle_Click(object sender, EventArgs e)
     {
         ToogleAllItemsCheckState(dgv_US_Items);
-
     }
     private void tsm_open_Click(object sender, EventArgs e)
     {
@@ -143,45 +147,13 @@ public partial class F_ItemRandomiser : Form
         fbd_DataFileFolder.ShowDialog(this);
         path = fbd_DataFileFolder.SelectedPath;
     }
-
-    private void b_Randomise_Click(object sender, EventArgs e)
-    {
-
-        //make a string list to store all the items in each of the check list boxes
-        List<string> allItems = new List<string>();
-
-        GetItemsToRandomize(allItems);
-        //Stop here if no items have been checked and added to the list
-        if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
-        //Changes the needed lines inside the item txt file
-        //to prevent crashing and soft locking
-        SoftLockAndCrashPrevent(b_Randomise.Text, allItems);
-        RandomizeGameItems(allItems);
-    }
-    private void bt_ItenStatsSet_Click(object sender, EventArgs e)
-    {
-        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt"))
-        { MessageBox.Show("Could not find items.txt", "Warning"); return; }
-        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
-        string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
-        if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
-        {
-            RandomizeUnstableStats(itemFile, missionFile);
-        }
-        else
-        {
-            RandomizeItemStats(itemFile);
-        }
-        File.WriteAllLines($"{path}\\missions.txt", missionFile);
-        SoftLockAndCrashPrevent(bt_ItenStatsSet.Text, null);
-        MessageBox.Show("Item stats have successfully been randomized", "Success");
-    }
-
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
         //Searches all items in the item data source
         if (tb_ItemsSearch.Text.StartsWith("#"))
         {
+            dgv_AllItems.Columns[2].Visible = true;
+            dgv_AllItems.Columns[1].Width = 150;
             if (tb_ItemsSearch.Text.ToLower() == "#enabled")
             {
                 allItemDataSource.Filter = "ItemState";
@@ -189,6 +161,8 @@ public partial class F_ItemRandomiser : Form
         }
         else
         {
+            dgv_AllItems.Columns[1].Width = 250;
+            dgv_AllItems.Columns[2].Visible = false;
             allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*'";
         }
     }
@@ -198,7 +172,6 @@ public partial class F_ItemRandomiser : Form
         //tags due to there being no tags button/tabs
         if (tb_US_SearchBox.Text.Trim().StartsWith('#'))
         {
-            dgv_US_Items.Columns[2].Visible = true;
             dgv_US_Items.Columns[2].ReadOnly = true;
             dgv_US_Items.Columns[1].Width = 150;
             allUnstableItemSource.Filter = $"ItemTag LIKE '*{tb_US_SearchBox.Text.Split('#')[1]}*'";
@@ -255,7 +228,6 @@ public partial class F_ItemRandomiser : Form
         if (tc_Items.SelectedTab.Name != "tp_AllItems")
         {
             tabPageTag = tc_Items.SelectedTab.Tag.ToString();
-
         }
         switch (tc_Items.SelectedTab.Name)
         {
@@ -350,8 +322,8 @@ public partial class F_ItemRandomiser : Form
                 break;
         }
         if (tc_itemStats.SelectedTab.Name == "tp_IS_UnstableStats")
-        { dgv_ItemStatsTable.Visible = false; }
-        else { dgv_ItemStatsTable.Visible = true; }
+        { dgv_ItemStatsTable.SendToBack(); }
+        else { dgv_ItemStatsTable.BringToFront(); }
     }
 
     private void dgv_ItemStatsTable_ColumnHeaderClicked(
@@ -368,7 +340,69 @@ public partial class F_ItemRandomiser : Form
             }
         }
     }
+    private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+    {
+        //Detects if a non numeic number as been pressed then stops
+        //it from beeing added to the field
+        e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+        if (dgv_ItemStatsTable.CurrentCell.ColumnIndex == 3 ||
+            dgv_ItemStatsTable.CurrentCell.ColumnIndex == 4)
+        {
+            TextBox tb = e.Control as TextBox;
+            if (tb != null)
+            {
+                tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
+            }
+        }
+    }
+    private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs anError)
+    {
+        if (anError.Context == DataGridViewDataErrorContexts.Commit)
+        {
+            //if the cell is left blank change it back to 0
+            dgv_ItemStatsTable.CurrentCell.Value = 0;
+        }
+    }
+    private void Column1_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+        {
+            e.Handled = true;
+        }
+    }
+    private void b_Randomise_Click(object sender, EventArgs e)
+    {
 
+        //make a string list to store all the items in each of the check list boxes
+        List<string> allItems = new List<string>();
+
+        GetItemsToRandomize(allItems);
+        //Stop here if no items have been checked and added to the list
+        if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
+        //Changes the needed lines inside the item txt file
+        //to prevent crashing and soft locking
+        SoftLockAndCrashPrevent(b_Randomise.Text, allItems);
+        RandomizeGameItems(allItems);
+    }
+    private void bt_ItenStatsSet_Click(object sender, EventArgs e)
+    {
+        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt"))
+        { MessageBox.Show("Issues finding item.txt and mission.txt", "Warning"); return; }
+        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
+        if (tc_itemStats.SelectedTab.Name == "tp_UnstableStats")
+        {
+            RandomizeUnstableStats(itemFile, missionFile);
+        }
+        else
+        {
+            RandomizeItemStats(itemFile);
+        }
+        File.WriteAllLines($"{path}\\missions.txt", missionFile);
+        //passesing a null overide for this button as a list is not needed
+        SoftLockAndCrashPrevent(bt_ItenStatsSet.Text, null);
+        MessageBox.Show("Item stats have successfully been randomized", "Success");
+    }
     private void dgv_itemStatTabel_CellSelected(object sender, DataGridViewCellMouseEventArgs e)
     {
         for (int i = 0; i < dgv_ItemStatsTable.SelectedCells.Count; i++)
@@ -383,19 +417,9 @@ public partial class F_ItemRandomiser : Form
             }
         }
     }
-
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
-    }
-    private void Set_dgv_AllItems_Format(DataGridView dataGrid)
-    {
-        dataGrid.Columns[0].Width = 75;
-        dataGrid.Columns[0].HeaderText = "Enabled";
-        dataGrid.Columns[1].ReadOnly = true;
-        dataGrid.Columns[1].HeaderText = "Item Name";
-        dataGrid.Columns[1].Width = 250;
-        dataGrid.Columns[2].Visible = false;
     }
     private void SoftLockAndCrashPrevent(string buttonClicked, List<string> Allitems)
     {
@@ -435,20 +459,36 @@ public partial class F_ItemRandomiser : Form
     }
     private void ToogleAllItemsCheckState(DataGridView dataGrid)
     {
-        //goese thorugh each of the rows in the current datagrid
+        //stores the applied filter
+        string storeFilter = allItemDataSource.Filter;
         for (int i = 0; i < dataGrid.Rows.Count; i++)
         {
-            if (dataGrid.Rows.Count >= 0)
+            //Gets the each rows ItemState and converts them from check
+            //to a bool for easier use
+            //the data grid cells are changed to force the table to
+            //update changes to the enabled(ItemState) colloum
+            bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
+            dataGrid.CurrentCell = dataGrid.Rows[0].Cells[1];
+            if (tb_ItemsSearch.Text.ToLower() == "#enabled")
             {
-                //Changes the current selected cell to force it
-                //update if any filter is apllyied
-                dataGrid.CurrentCell = dataGrid.Rows[0].Cells[1];
-                bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
+                //Checks if filtering only for enabled items only
+                //then will do the same as the uncheck all button
+                allItemDataSource.Filter = "";
+                if (checkToBool)
+                {
+                    dataGrid.Rows[i].Cells[0].Value = false;
+                }
+            }
+            else
+            {
                 checkToBool = !checkToBool;
                 dataGrid.Rows[i].Cells[0].Value = checkToBool;
-                dataGrid.CurrentCell = null;
             }
+            dataGrid.CurrentCell = null;
+
         }
+        //reaplly any filters if removed
+        allItemDataSource.Filter = storeFilter;
     }
     private void GetItemsToRandomize(List<string> allItems)
     {
@@ -505,21 +545,20 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeItemStats(string[] itemFile)
     {
-
-
         Random rand = new Random();
-
-        var itemStatLists = new Dictionary<List<ItemStatsData>, bool>
-        {
-            { VheicleStatData, true},
-            { NPCStatData, true },
-            { FireArmsStatData, true},
-            { WorldStatsData, true },
-            { ExplosiveStatData, true },
-            { FoodAndDamageData, true },
+        //adds all of the item stat list to an array for
+        //the foreach loop to go though each stat and get there
+        //valuse and set them to the item.txt file
+        object[] itemStatLists = 
+        { 
+            VheicleStatData, 
+            NPCStatData,
+            FireArmsStatData,
+            WorldStatsData,
+            ExplosiveStatData,
+            FoodAndDamageData,
         };
-
-        foreach (List<ItemStatsData> itemStats in itemStatLists.Keys)
+        foreach (List<ItemStatsData> itemStats in itemStatLists)
         {
             for (int i = 0; i < itemStats.Count; i++)
             {
@@ -543,6 +582,8 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeNPCModels(string[] itemFile)
     {
+        //store these lines to skip them so it dose not randomize 
+        //the models as these can crash or do not work proply
         int[] ignoreNPC = { 28562, 28579, 28888, 28919, 28943, 28966, 28989, 29013,
             29135, 29165, 30401, 94601, 94647, 96381, 96439, 96492 };
         List<string> npcModels = new List<string>();
@@ -564,7 +605,6 @@ public partial class F_ItemRandomiser : Form
                     npcModels.AddRange(File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt"));
                 }
             }
-
         }
     }
     private void RandomizeUnstableStats(string[] itemFile, string[] missionFile)
@@ -612,33 +652,4 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
-    private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-    {
-        e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-        if (dgv_ItemStatsTable.CurrentCell.ColumnIndex == 3 ||
-            dgv_ItemStatsTable.CurrentCell.ColumnIndex == 4)
-        {
-            TextBox tb = e.Control as TextBox;
-            if (tb != null)
-            {
-                tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
-            }
-        }
-    }
-    private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs anError)
-    {
-        if (anError.Context == DataGridViewDataErrorContexts.Commit)
-        {
-            //if the cell is left blank change it back to 0
-            dgv_ItemStatsTable.CurrentCell.Value = 0;
-        }
-    }
-    private void Column1_KeyPress(object sender, KeyPressEventArgs e)
-    {
-        if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-        {
-            e.Handled = true;
-        }
-    }
-
 }

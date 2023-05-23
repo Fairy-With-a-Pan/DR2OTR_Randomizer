@@ -9,20 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\Allitems.txt" />
+    <None Remove="Resources\AllItemData.xml" />
     <None Remove="Resources\AllNPCModels.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Resources\Allitems.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Remove="Resources\Banner.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Resources\AllNPCModels.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AllItemData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
