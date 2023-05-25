@@ -12,6 +12,7 @@
     <None Remove="Resources\AllItemData.xml" />
     <None Remove="Resources\AllNPCModels.txt" />
     <None Remove="Resources\Banner.png" />
+    <None Remove="Resources\ItemStatData.xml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ItemStatData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

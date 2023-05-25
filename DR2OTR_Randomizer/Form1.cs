@@ -52,17 +52,17 @@ public partial class F_ItemRandomiser : Form
     {
         //gets all of the statdata stored inside the AllItemStatData
         //Most likely move over to a xml file for storing this
-        VheicleStatData = statData.GetVheicleStats();
-        NPCStatData = statData.GetNPCStats();
-        WorldStatsData = statData.GetWorldStats();
-        FireArmsStatData = statData.GetFireArmsStats();
-        ExplosiveStatData = statData.GetExplosivesStats();
-        FoodAndDamageData = statData.GetFoodAndDamageStats();
-        InitializeComponent();
+        VheicleStatData = statData.GetAllItemStatData()[0]as List<ItemStatsData>;
+        NPCStatData = statData.GetAllItemStatData()[1] as List<ItemStatsData>;
+        FireArmsStatData = statData.GetAllItemStatData()[2] as List<ItemStatsData>;
+        WorldStatsData = statData.GetAllItemStatData()[3] as List<ItemStatsData>;
+        ExplosiveStatData = statData.GetAllItemStatData()[4] as List<ItemStatsData>;
+        FoodAndDamageData = statData.GetAllItemStatData()[5] as List<ItemStatsData>;
 
         allitemsTable = itemDataTable.SetAllItemData();
         allUnStableitemsTable = itemDataTable.SetAllItemData();
 
+        InitializeComponent();
         //use this to catch if the Allitems or npcmodels file is missing
         try
         {
