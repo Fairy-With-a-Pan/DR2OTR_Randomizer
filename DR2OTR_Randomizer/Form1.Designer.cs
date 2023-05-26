@@ -115,7 +115,6 @@
             l_US_Warning_Msg = new Label();
             allItemDataTableBindingSource = new BindingSource(components);
             fbd_DataFileFolder = new FolderBrowserDialog();
-            tt_VehicleStats = new ToolTip(components);
             clb_US_FireArms = new CheckedListBox();
             l_SafeMode_Text = new Label();
             dgvColoum_StatState = new DataGridViewCheckBoxColumn();
@@ -124,6 +123,7 @@
             dgvColoum_StatMin = new DataGridViewTextBoxColumn();
             dgvColoum_StatMax = new DataGridViewTextBoxColumn();
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            l_ItemStat_Dec = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).BeginInit();
             tc_TabWindows.SuspendLayout();
@@ -271,9 +271,9 @@
             // l_MainDec
             // 
             l_MainDec.AutoSize = true;
-            l_MainDec.Location = new Point(370, 246);
+            l_MainDec.Location = new Point(356, 246);
             l_MainDec.Name = "l_MainDec";
-            l_MainDec.Size = new Size(329, 120);
+            l_MainDec.Size = new Size(357, 120);
             l_MainDec.TabIndex = 29;
             l_MainDec.Text = resources.GetString("l_MainDec.Text");
             // 
@@ -290,7 +290,7 @@
             // 
             tb_ItemsSearch.Location = new Point(353, 30);
             tb_ItemsSearch.Name = "tb_ItemsSearch";
-            tb_ItemsSearch.PlaceholderText = "Search All";
+            tb_ItemsSearch.PlaceholderText = "Search All (Use #Enabled to show all enabled and there tags)";
             tb_ItemsSearch.Size = new Size(359, 23);
             tb_ItemsSearch.TabIndex = 27;
             tb_ItemsSearch.TextChanged += tb_ItemsSearch_TextChanged;
@@ -564,6 +564,7 @@
             // tp_WitemsStats
             // 
             tp_WitemsStats.AutoScroll = true;
+            tp_WitemsStats.Controls.Add(l_ItemStat_Dec);
             tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
             tp_WitemsStats.Controls.Add(bt_ItenStatsSet);
@@ -699,9 +700,9 @@
             // 
             // bt_NPC_Model_Randomizer
             // 
-            bt_NPC_Model_Randomizer.Location = new Point(180, 6);
+            bt_NPC_Model_Randomizer.Location = new Point(176, 6);
             bt_NPC_Model_Randomizer.Name = "bt_NPC_Model_Randomizer";
-            bt_NPC_Model_Randomizer.Size = new Size(150, 41);
+            bt_NPC_Model_Randomizer.Size = new Size(160, 41);
             bt_NPC_Model_Randomizer.TabIndex = 4;
             bt_NPC_Model_Randomizer.Text = "Randomize NPC Models";
             bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
@@ -742,7 +743,7 @@
             tp_IS_VehicleStats.Size = new Size(695, 387);
             tp_IS_VehicleStats.TabIndex = 0;
             tp_IS_VehicleStats.Tag = "";
-            tp_IS_VehicleStats.Text = "Vehicle Stats";
+            tp_IS_VehicleStats.Text = "Vehicle Stat's";
             tp_IS_VehicleStats.UseVisualStyleBackColor = true;
             // 
             // tp_IS_NPC
@@ -754,7 +755,7 @@
             tp_IS_NPC.Size = new Size(695, 387);
             tp_IS_NPC.TabIndex = 1;
             tp_IS_NPC.Tag = "";
-            tp_IS_NPC.Text = "NPC Stats";
+            tp_IS_NPC.Text = "NPC Stat's";
             tp_IS_NPC.UseVisualStyleBackColor = true;
             // 
             // tp_IS_FireArms
@@ -777,7 +778,7 @@
             tp_IS_WorldStats.Size = new Size(695, 387);
             tp_IS_WorldStats.TabIndex = 3;
             tp_IS_WorldStats.Tag = "";
-            tp_IS_WorldStats.Text = "World Stats";
+            tp_IS_WorldStats.Text = "World Stat's";
             tp_IS_WorldStats.UseVisualStyleBackColor = true;
             // 
             // tp_IS_ExplosivesSpray
@@ -817,14 +818,14 @@
             tp_IS_UnstableStats.Padding = new Padding(3);
             tp_IS_UnstableStats.Size = new Size(695, 387);
             tp_IS_UnstableStats.TabIndex = 6;
-            tp_IS_UnstableStats.Text = "Unstable Stats";
+            tp_IS_UnstableStats.Text = "Unstable Stat's";
             tp_IS_UnstableStats.UseVisualStyleBackColor = true;
             // 
             // tb_US_SearchBox
             // 
             tb_US_SearchBox.Location = new Point(353, 9);
             tb_US_SearchBox.Name = "tb_US_SearchBox";
-            tb_US_SearchBox.PlaceholderText = "Search All";
+            tb_US_SearchBox.PlaceholderText = "Search All (Use # to search tags and #Enabled for all enabled)";
             tb_US_SearchBox.Size = new Size(339, 23);
             tb_US_SearchBox.TabIndex = 25;
             tb_US_SearchBox.TextChanged += tb_US_ItemSearch_TextChanged;
@@ -915,7 +916,6 @@
             cb_US_NPCItems.TabIndex = 0;
             cb_US_NPCItems.Text = "NPC's Spawn Items";
             cb_US_NPCItems.TextAlign = ContentAlignment.BottomLeft;
-            tt_VehicleStats.SetToolTip(cb_US_NPCItems, "The average defualt is: 63");
             cb_US_NPCItems.UseVisualStyleBackColor = true;
             // 
             // l_US_NPCItems_Dec
@@ -947,7 +947,6 @@
             cb_US_PropToThrow.TabIndex = 0;
             cb_US_PropToThrow.Text = "Prop To Throw";
             cb_US_PropToThrow.TextAlign = ContentAlignment.BottomLeft;
-            tt_VehicleStats.SetToolTip(cb_US_PropToThrow, "The average defualt is: 63");
             cb_US_PropToThrow.UseVisualStyleBackColor = true;
             // 
             // l_US_PropToThrow_Dec
@@ -998,7 +997,7 @@
             l_SafeMode_Text.Name = "l_SafeMode_Text";
             l_SafeMode_Text.Size = new Size(143, 21);
             l_SafeMode_Text.TabIndex = 24;
-            l_SafeMode_Text.Text = "Safe mode enabled";
+            l_SafeMode_Text.Text = "Safe Mode Enabled";
             // 
             // dgvColoum_StatState
             // 
@@ -1036,6 +1035,15 @@
             statInGameNameDataGridViewTextBoxColumn.HeaderText = "StatInGameName";
             statInGameNameDataGridViewTextBoxColumn.Name = "statInGameNameDataGridViewTextBoxColumn";
             // 
+            // l_ItemStat_Dec
+            // 
+            l_ItemStat_Dec.AutoSize = true;
+            l_ItemStat_Dec.Location = new Point(342, 19);
+            l_ItemStat_Dec.Name = "l_ItemStat_Dec";
+            l_ItemStat_Dec.Size = new Size(327, 15);
+            l_ItemStat_Dec.TabIndex = 5;
+            l_ItemStat_Dec.Text = "You can toggle all the active stats by clicking the header row.";
+            // 
             // F_ItemRandomiser
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1061,6 +1069,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tc_Items.ResumeLayout(false);
             tp_WitemsStats.ResumeLayout(false);
+            tp_WitemsStats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
             ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
             tc_itemStats.ResumeLayout(false);
@@ -1101,7 +1110,6 @@
         private Button b_Randomise;
         private FolderBrowserDialog fbd_DataFileFolder;
         private TextBox tb_ItemsSearch;
-        private ToolTip tt_VehicleStats;
         private Button bt_ItenStatsSet;
         private global::System.Windows.Forms.CheckedListBox clb_US_FireArms;
         private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
@@ -1168,5 +1176,6 @@
         private DataGridViewTextBoxColumn statMinDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn statMaxDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn statInGameNameDataGridViewTextBoxColumn1;
+        private Label l_ItemStat_Dec;
     }
 }

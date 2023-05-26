@@ -61,26 +61,23 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="itemsDataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>20, 63</value>
   </metadata>
   <data name="l_MainDec.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-sed do eiusmod tempor incididunt ut labore et dolore
- magna aliqua. Ut enim ad minim veniam, quis nostrud 
-exercitation ullamco laboris nisi ut aliquip ex ea commodo
- consequat. Duis aute irure dolor in reprehenderit in
- voluptate velit esse cillum dolore eu fugiat nulla pariatur
-. Excepteur sint occaecat cupidatat non proident,
- sunt in culpa qui officia deserunt mollit anim id est laborum.</value>
+    <value>This list of items contains all of the items from the game apart 
+from the ones that will crash, soft lock or overload the game. 
+Overloading can still happen with too many vehicles in one area.
+The Palisades mall is disabled by default and is not Randomized. 
+This is due to crashing a when items are Randomized in this area.
+You can randomize it by disabling safe mode in the settings menu 
+at the top. Doing this, there will be an extremely high chance of 
+crashing when entering the Palisades mall.</value>
   </data>
   <metadata name="itemStatsDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>604, 17</value>
-  </metadata>
-  <metadata name="tt_VehicleStats.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 17</value>
+    <value>224, 62</value>
   </metadata>
   <metadata name="allItemDataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 56</value>
+    <value>283, 26</value>
   </metadata>
   <metadata name="fbd_DataFileFolder.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
