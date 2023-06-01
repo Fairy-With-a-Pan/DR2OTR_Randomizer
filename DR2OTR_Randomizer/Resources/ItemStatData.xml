@@ -3,7 +3,7 @@
 		<AirDensity>
 			<StatState>False</StatState>
 			<StatName>Vehicle Air Density:</StatName>
-			<StatDescription>Controls how much air resistance there is for the vehicle. The lower the less air resistance.</StatDescription>
+			<StatDescription>Controls how big of a jump a vehicle will get after a jump. Higher the smaller the jump and lower higher the jump.</StatDescription>
 			<StatMin>0</StatMin>
 			<StatMax>10</StatMax>
 			<StatInGameName>	AirDensity</StatInGameName>
@@ -11,7 +11,7 @@
 		<VehicleMaxRPM>
 			<StatState>False</StatState>
 			<StatName>Vehicle Max RPM:</StatName>
-			<StatDescription>One of the stats that controls the vehicles speed. May start to auto acelerate at higher values.</StatDescription>
+			<StatDescription>Controls the vehicle's acceleration. Setting this too high will cause the vehicle to auto drive.</StatDescription>
 			<StatMin>3550</StatMin>
 			<StatMax>10000</StatMax>
 			<StatInGameName>	Engine_MaxRPM</StatInGameName>
@@ -19,7 +19,7 @@
 		<VehicleMinRPM>
 			<StatState>False</StatState>
 			<StatName>Vehicle Min RPM:</StatName>
-			<StatDescription>Gives a burst of speed when first acelerating. Setting higher can cause it to auto acelerate.</StatDescription>
+			<StatDescription>Setting this stat to close to min/opt rpm will cause the vehicle to go very fast in reverse and slowly gain speed after taping the accelerator.</StatDescription>
 			<StatMin>885</StatMin>
 			<StatMax>5000</StatMax>
 			<StatInGameName>	Engine_MinRPM</StatInGameName>
@@ -27,7 +27,7 @@
 		<VehicleMaxTorque>
 			<StatState>False</StatState>
 			<StatName>Vehicle Max Torque:</StatName>
-			<StatDescription>Similar to max rpm but with a little less control and bit more kick.</StatDescription>
+			<StatDescription>The boost speed when first accelerating if set too high can cause the vehicle to go extremely fast with no control over it.</StatDescription>
 			<StatMin>100</StatMin>
 			<StatMax>1000</StatMax>
 			<StatInGameName>	Engine_MaxTorque</StatInGameName>
@@ -35,7 +35,7 @@
 		<VehicleOptRPM>
 			<StatState>False</StatState>
 			<StatName>Vehicle Opt RPM:</StatName>
-			<StatDescription>Give increased speed while keeping some control when set high.</StatDescription>
+			<StatDescription>The higher this value is the faster the vehicle will go over time the accelerator is held down.</StatDescription>
 			<StatMin>3473</StatMin>
 			<StatMax>10000</StatMax>
 			<StatInGameName>	Engine_OptRPM</StatInGameName>
@@ -43,23 +43,15 @@
 		<TorqueFactorAtMax>
 			<StatState>False</StatState>
 			<StatName>Torque Factor At Max:</StatName>
-			<StatDescription>Will greatly increase the vehicles speed the higher you set.</StatDescription>
-			<StatMin>1</StatMin>
-			<StatMax>1000</StatMax>
-			<StatInGameName>	Engine_TorqueFactorAtMaxRPM</StatInGameName>
-		</TorqueFactorAtMax>	
-		<TorqueFactorAtMin>
-			<StatState>False</StatState>
-			<StatName>Torque Factor At Min:</StatName>
-			<StatDescription>If this gets set to high the vehicle will become very slow and hard to steer.</StatDescription>
+			<StatDescription>Gives a boost of speed when first pressing the accelerator the higher the value the bigger the boost.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
-			<StatInGameName>	Engine_TorqueFactorAtMinRPM</StatInGameName>
-		</TorqueFactorAtMin>		
+			<StatInGameName>	Engine_TorqueFactorAtMaxRPM</StatInGameName>
+		</TorqueFactorAtMax>
 		<MinSpeedForWheelies>
 			<StatState>False</StatState>
 			<StatName>Min Speed For Wheelies:</StatName>
-			<StatDescription>Recomended to give this a higher value having it to low makes controling bike very hard.</StatDescription>
+			<StatDescription>Recommended to give this a higher value to stop motorbikes from constantly doing wheelies.</StatDescription>
 			<StatMin>10000</StatMin>
 			<StatMax>100000</StatMax>
 			<StatInGameName>	MinVehicleSpeedForWheeliesAndEndos</StatInGameName>
@@ -67,23 +59,15 @@
 		<MinSpeedToEjectPlayer>
 			<StatState>False</StatState>
 			<StatName>Min Speed To Eject Player:</StatName>
-			<StatDescription>Recomended to set fairly high unless you like getting thrown off bikes.</StatDescription>
+			<StatDescription>Recommended to set this value high to stop constantly being leached off motorbikes.</StatDescription>
 			<StatMin>10000</StatMin>
 			<StatMax>100000</StatMax>
 			<StatInGameName>	MinVehicleSpeedToEjectPlayer</StatInGameName>
 		</MinSpeedToEjectPlayer>
-		<VehicleTopSpeed>
-			<StatState>False</StatState>
-			<StatName>Vehicle Top Speed:</StatName>
-			<StatDescription>Setting high will make the vehicle go very slow but gradually get faster. Setting very low makes it freak out.</StatDescription>
-			<StatMin>1</StatMin>
-			<StatMax>1000</StatMax>
-			<StatInGameName>	VehicleTopSpeed</StatInGameName>
-		</VehicleTopSpeed>
 		<ExtraTorqueFactor>
 			<StatState>False</StatState>
 			<StatName>Extra Torque Factor:</StatName>
-			<StatDescription>Setting this very high will cause the vehicle to spin the higher the faster it spins.</StatDescription>
+			<StatDescription>This value doesn't do much, but when it is to a very high value it cause the vehicle to spin uncontrollably when using it.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10</StatMax>
 			<StatInGameName>	ExtraTorqueFactor</StatInGameName>
@@ -91,7 +75,7 @@
 		<SkateboardInitialSpeed>
 			<StatState>False</StatState>
 			<StatName>Skateboard Initial Speed:</StatName>
-			<StatDescription>The launch speed for the skate board setting this very high will teleport.</StatDescription>
+			<StatDescription>The launch speed for the skate board setting this very high will teleport to the object you will collide with.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	InitialSpeed</StatInGameName>
@@ -99,7 +83,7 @@
 		<SkateboardRideSpeed>
 			<StatState>False</StatState>
 			<StatName>Skateboard Ride Speed:</StatName>
-			<StatDescription>The maximum speed the skateboard can go you will keep going faster as kick of the floor.</StatDescription>
+			<StatDescription>The maximum speed the skateboard can go you will keep gaining speed each time you kick off the floor.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	MaxRideSpeed</StatInGameName>
@@ -115,7 +99,7 @@
 		<SkateboardRotateSpeed>
 			<StatState>False</StatState>
 			<StatName>Skateboard Rotate Speed:</StatName>
-			<StatDescription>The speed the Skateboard will rotate (will not rotate faster then what max rotate speed is set to).</StatDescription>
+			<StatDescription>TThe speed the Skateboard will rotate at (will not rotate faster than what the max rotate speed is set to).</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	RotationSpeed</StatInGameName>
@@ -123,17 +107,17 @@
 		<SkateboardEjectSpeed>
 			<StatState>False</StatState>
 			<StatName>Skateboard Eject Speed:</StatName>
-			<StatDescription>The requied speed to be knocked off when hitting a wall or object.</StatDescription>
-			<StatMin>1</StatMin>
-			<StatMax>1000</StatMax>
+			<StatDescription>Recommend to set the value high to stop you from being knocked off the skateboard.</StatDescription>
+			<StatMin>10000</StatMin>
+			<StatMax>100000</StatMax>
 			<StatInGameName>	EjectSpeed</StatInGameName>
 		</SkateboardEjectSpeed>
 	</VheicleStats>
 	<NPCStats>
 		<DamagetoEnemys>
 			<StatState>False</StatState>
-			<StatName>Damage to enemies(vehicle):</StatName>
-			<StatDescription>The base damage done when hitting an enemy npc with a vehicle.</StatDescription>
+			<StatName>Damage to enemies (vehicle):</StatName>
+			<StatDescription>The base damage done when hitting an enemy NPC's with a vehicle.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	DamageBOSS_Flat</StatInGameName>
@@ -141,15 +125,15 @@
 		<SpeedtoDamageBoss>
 			<StatState>False</StatState>
 			<StatName>Speed need to damage (enemies):</StatName>
-			<StatDescription>The minimum speed needed to deal damage to a enemy.</StatDescription>
+			<StatDescription>The minimum speed needed to deal damage to enemy NPC's.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	DamageBOSS_MinSpeed</StatInGameName>
 		</SpeedtoDamageBoss>
 		<DamagePerKMHBoss>
 			<StatState>False</StatState>
-			<StatName>Damage done per KMH(enemies):</StatName>
-			<StatDescription>The faster you go the more damage you do to an enemy.</StatDescription>
+			<StatName>Damage done per KMH (enemies):</StatName>
+			<StatDescription>The faster you go the more damage you do to enemy NPC's.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	DamageBOSS_PerKMH</StatInGameName>
@@ -157,15 +141,15 @@
 		<SpeedDamageSurv>
 			<StatState>False</StatState>
 			<StatName>Speed need to damage (Survivors):</StatName>
-			<StatDescription>The minimum speed needed to deal damage to a survivors.</StatDescription>
+			<StatDescription>The minimum speed needed to deal damage to a survivor.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	DamageSURV_MinSpeed</StatInGameName>
 		</SpeedDamageSurv>
 		<DamagePerKMHSurv>
 			<StatState>False</StatState>
-			<StatName>Damage done per KMH(Survivors):</StatName>
-			<StatDescription>The faster you go in a vheicle the damage is done to survivor.</StatDescription>
+			<StatName>Damage done per KMH (Survivors):</StatName>
+			<StatDescription>The faster you go in a vehicle the more damage is done to survivors.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	DamageSURV_PerKMH</StatInGameName>
@@ -173,7 +157,7 @@
 		<NPCHealthAmount>
 			<StatState>False</StatState>
 			<StatName>NPC Health Amount:</StatName>
-			<StatDescription>This will efect all NPCs apart from looters and zombies.</StatDescription>
+			<StatDescription>This will effect all NPCs apart from looters, mercenary's and zombies.</StatDescription>
 			<StatMin>1000</StatMin>
 			<StatMax>9000</StatMax>
 			<StatInGameName>	HealthAmount</StatInGameName>
@@ -181,7 +165,7 @@
 		<NPCPhotoPP>
 			<StatState>False</StatState>
 			<StatName>NPC Photo PP amount:</StatName>
-			<StatDescription>The max amount of PP you get from photos of NPCs.</StatDescription>
+			<StatDescription>The max amount of PP you can get from photos of NPCs.</StatDescription>
 			<StatMin>100</StatMin>
 			<StatMax>1000</StatMax>
 			<StatInGameName>	Max_pp</StatInGameName>
@@ -191,7 +175,7 @@
 		<FireRate>
 			<StatState>False</StatState>
 			<StatName>Fire Rate:</StatName>
-			<StatDescription>The Speed a full auto weapon will fire at.</StatDescription>
+			<StatDescription>The firing speed for all full auto firearms.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10000</StatMax>
 			<StatInGameName>	FiringRate</StatInGameName>
@@ -215,7 +199,7 @@
 		<BulletsPerShot>
 			<StatState>False</StatState>
 			<StatName>Number of Bullets Per Shot:</StatName>
-			<StatDescription>This can cause some weapons to constantly shoot just drop and pick them back up to fix it.</StatDescription>
+			<StatDescription>The number of bullets per shot, this might cause some firearms to glitch and constantly shoot if this happens just drop and pick it back up again.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>50</StatMax>
 			<StatInGameName>	NumPelletsPerShot</StatInGameName>
@@ -233,7 +217,7 @@
 		<Durability>
 			<StatState>False</StatState>
 			<StatName>Durability:</StatName>
-			<StatDescription>The health for items, vehicles and the amount of ammo fire arms have.</StatDescription>
+			<StatDescription>The health for items, vehicles and the amount of ammo firearms have.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10000</StatMax>
 			<StatInGameName>	Durability</StatInGameName>
@@ -241,7 +225,7 @@
 		<ThrowForce>
 			<StatState>False</StatState>
 			<StatName>Throw Force:</StatName>
-			<StatDescription>How far you can throw an item you have picked up. This is diffrent for each item.</StatDescription>
+			<StatDescription>How far you can throw items you have picked up. This is different for each item in the game.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>1000</StatMax>
 			<StatInGameName>	ThrowForce</StatInGameName>
@@ -249,7 +233,7 @@
 		<MoneyPickUp>
 			<StatState>False</StatState>
 			<StatName>Money PickUp Amount:</StatName>
-			<StatDescription>The amount of money the player is given when picking up cash.(There is 9 types of pick ups).</StatDescription>
+			<StatDescription>The amount of money the player is given when picking up cash. (There are 9 different types of money pick ups).</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>50000</StatMax>
 			<StatInGameName>	Amount</StatInGameName>
@@ -265,7 +249,7 @@
 		<PayoutCount>
 			<StatState>False</StatState>
 			<StatName>Payout Count:</StatName>
-			<StatDescription>How many times you can win on a slot machine.</StatDescription>
+			<StatDescription>How many times you can win on a slot machine before you start losing.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	PayoutCount</StatInGameName>
@@ -273,7 +257,7 @@
 		<PPAwarded>
 			<StatState>False</StatState>
 			<StatName>PP Awarded:</StatName>
-			<StatDescription>The amount of PP awarded for completeing a minigame.</StatDescription>
+			<StatDescription>The amount of PP awarded for completing a minigame.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>2500</StatMax>
 			<StatInGameName>	PPAward</StatInGameName>
@@ -297,7 +281,7 @@
 		<PPMultiplier>
 			<StatState>False</StatState>
 			<StatName>PP Multiplier:</StatName>
-			<StatDescription>How much PP is mulitiplied when you own that weapns combo card.</StatDescription>
+			<StatDescription>How much PP is multiplied when you own that weapon's combo card.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10</StatMax>
 			<StatInGameName>	PP_Multiplier</StatInGameName>
@@ -305,7 +289,7 @@
 		<PriceLow>
 			<StatState>False</StatState>
 			<StatName>Price (low):</StatName>
-			<StatDescription>The low price for interactables.</StatDescription>
+			<StatDescription>The low price for intractable's.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>5000</StatMax>
 			<StatInGameName>	Cost </StatInGameName>
@@ -313,7 +297,7 @@
 		<PriceMid>
 			<StatState>False</StatState>
 			<StatName>Price (medium):</StatName>
-			<StatDescription>The medium price for interactables.</StatDescription>
+			<StatDescription>The medium price for intractable's.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>7500</StatMax>
 			<StatInGameName>	Cost2</StatInGameName>
@@ -321,7 +305,7 @@
 		<PriceHigh>
 			<StatState>False</StatState>
 			<StatName>Price (high):</StatName>
-			<StatDescription>The high price for interactables.</StatDescription>
+			<StatDescription>The high price for intractable's.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10000</StatMax>
 			<StatInGameName>	Cost3</StatInGameName>
@@ -331,7 +315,7 @@
 		<SprayItemAmmo>
 			<StatState>False</StatState>
 			<StatName>Spray Item Ammo:</StatName>
-			<StatDescription>The ammount of ammo spray items have. This shows up in came as a precentage.</StatDescription>
+			<StatDescription>The amount of ammo spray items have. This shows up in the game as a percentage.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>500</StatMax>
 			<StatInGameName>	SpraySupply</StatInGameName>
@@ -347,7 +331,7 @@
 		<ExplosiveDamage>
 			<StatState>False</StatState>
 			<StatName>Explosive Damage:</StatName>
-			<StatDescription>As long as you have more than 1 bar of HP you will not die instantly to explosions. (Most of the time).</StatDescription>
+			<StatDescription>As long as you have more than 1 bar of HP, you will not die instantly to explosions. (Most of the time).</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>250</StatMax>
 			<StatInGameName>	MaxDamage</StatInGameName>
@@ -355,7 +339,7 @@
 		<DetonationDelay>
 			<StatState>False</StatState>
 			<StatName>Detonation Delay:</StatName>
-			<StatDescription>Time till explosives detonate this includes projectile explosives.</StatDescription>
+			<StatDescription>Time till explosives detonate this includes projectile explosives as well.</StatDescription>
 			<StatMin>0</StatMin>
 			<StatMax>5</StatMax>
 			<StatInGameName>	DetonationDelay</StatInGameName>
@@ -363,7 +347,7 @@
 		<ProjectileSpin>
 			<StatState>False</StatState>
 			<StatName>Projectile Spin:</StatName>
-			<StatDescription>How much spin a projectile as once its been shot.</StatDescription>
+			<StatDescription>How much a projectile will start to drift from the center crosshair once it's been shot.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>10</StatMax>
 			<StatInGameName>	PropelledSpinImpulse</StatInGameName>
@@ -381,7 +365,7 @@
 		<MeleeDamage>
 			<StatState>False</StatState>
 			<StatName>All Melee Damage:</StatName>
-			<StatDescription>The damage amount for all melee attacks including zombies and NPCs.</StatDescription>
+			<StatDescription>The amount of damage melee attacks do. This also includes zombie melee damage.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>500</StatMax>
 			<StatInGameName>	AttackDamage</StatInGameName>
@@ -405,7 +389,7 @@
 		<MaxDamageAttack>
 			<StatState>False</StatState>
 			<StatName>Max Damage Attack:</StatName>
-			<StatDescription>The maximum damage for each hit this affects everything apart from firearms and explosives..</StatDescription>
+			<StatDescription>The maximum damage for each hit this affects everything apart from firearms and explosives.</StatDescription>
 			<StatMin>1</StatMin>
 			<StatMax>100</StatMax>
 			<StatInGameName>	MaxDamageDealtPerAttack</StatInGameName>
