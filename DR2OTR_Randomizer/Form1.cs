@@ -3,13 +3,13 @@
 using DR2OTR_Randomizer.Resources;
 using System.Data;
 using System.Diagnostics;
+using System.Net.WebSockets;
 
 namespace DR2OTR_Randomizer;
 /// <summary>
 /// TODO:
 ///
-/// 
-/// Need to spell check and Refactor
+/// Add a way to export changed stats to a xml file.
 /// 
 /// </summary>
 public partial class F_ItemRandomiser : Form
@@ -65,7 +65,7 @@ public partial class F_ItemRandomiser : Form
         catch (FileNotFoundException e)
         {
             MessageBox.Show
-            ($"{e.FileName} \nIs missing or as been renamed. The program can not run with out this file"
+            ($"{e.FileName} \nIs missing or as been renamed. The program cannot run without this file"
             , "Warning");
             Process.GetCurrentProcess().Kill();
         }
@@ -420,6 +420,27 @@ public partial class F_ItemRandomiser : Form
             }
         }
     }
+    private void tsm_Unpacker_Click(object sender, EventArgs e)
+    {
+        var result = MessageBox.Show("This will open a webpage for downloading the Gibbed dead rising 2 .big unpack/repack tool. \n\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo);
+
+        if (result == DialogResult.Yes)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://www.mediafire.com/file/dfy5825qhufmpr6/Gibbed.DeadRising2.Tools_%2528rev11%2529.rar/file",
+                UseShellExecute = true,
+            });
+        }
+        else
+        {
+            return;
+        }
+    }
+    private void tsm_Credits_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Devleped by Fairy with a Pan", "Credits");
+    }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
@@ -616,7 +637,7 @@ public partial class F_ItemRandomiser : Form
         //returns if both the unstable check boxes are unchecked
         if (!cb_US_NPCItems.Checked && !cb_US_PropToThrow.Checked) { return; }
         var confirmResult = MessageBox.Show
-            ("Using any of the unstable stats as a high chances of soft locking and crashing the game." +
+            ("Using any of the unstable stats as a higher chance of soft locking and crashing the game." +
             "\n\n\t\t Are sure you want to continue?", "Warning", MessageBoxButtons.YesNo);
         if (confirmResult == DialogResult.No) { return; }
         Random rand = new Random();
@@ -661,4 +682,5 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
+
 }
