@@ -11,6 +11,8 @@ namespace DR2OTR_Randomizer.Resources
 {
     public class AllItemStatData
     {
+        public string path = $"{Application.StartupPath}\\Resources\\ItemStatData.xml";
+
         /// <summary>
         /// Use this to add all the data for the item stats
         /// </summary>
@@ -18,7 +20,7 @@ namespace DR2OTR_Randomizer.Resources
         {
             //Gets the xml file and loads it
             XmlDocument xmlDocument = new XmlDocument();
-            xmlDocument.Load($"{Application.StartupPath}\\Resources\\ItemStatData.xml");
+            xmlDocument.Load($"{path}");
             List<object> listOffStatLists = new List<object>();
 
             foreach (XmlElement element in xmlDocument.DocumentElement)

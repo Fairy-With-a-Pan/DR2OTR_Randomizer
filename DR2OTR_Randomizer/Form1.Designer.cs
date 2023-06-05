@@ -36,19 +36,22 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             tsm_File = new ToolStripMenuItem();
             tsm_open = new ToolStripMenuItem();
+            tsm_ItemDataFile = new ToolStripMenuItem();
+            tsm_SaveItemStats = new ToolStripMenuItem();
+            tsm_OpenItemStats = new ToolStripMenuItem();
             tsm_Quit = new ToolStripMenuItem();
             tsm_PH = new ToolStripMenuItem();
             safeModeToolStripMenuItem = new ToolStripMenuItem();
@@ -86,6 +89,14 @@
             tp_Special = new TabPage();
             tp_Vehicles = new TabPage();
             tp_WitemsStats = new TabPage();
+            dgv_ItemStatsTable = new DataGridView();
+            statStateDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
+            statNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statMinDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statMaxDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            statInGameNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            itemStatsDataBindingSource = new BindingSource(components);
             l_ItemStat_Dec = new Label();
             bt_NPC_Model_Randomizer = new Button();
             bt_ItenStatsSet = new Button();
@@ -108,14 +119,6 @@
             cb_US_PropToThrow = new CheckBox();
             l_US_PropToThrow_Dec = new Label();
             l_US_Warning_Msg = new Label();
-            dgv_ItemStatsTable = new DataGridView();
-            statStateDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
-            statNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            statDescriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            statMinDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            statMaxDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            statInGameNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            itemStatsDataBindingSource = new BindingSource(components);
             allItemDataTableBindingSource = new BindingSource(components);
             fbd_DataFileFolder = new FolderBrowserDialog();
             clb_US_FireArms = new CheckedListBox();
@@ -126,6 +129,7 @@
             dgvColoum_StatMin = new DataGridViewTextBoxColumn();
             dgvColoum_StatMax = new DataGridViewTextBoxColumn();
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            fbd_StatSaveFolder = new FolderBrowserDialog();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).BeginInit();
             tc_TabWindows.SuspendLayout();
@@ -134,13 +138,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tc_Items.SuspendLayout();
             tp_WitemsStats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).BeginInit();
             tc_itemStats.SuspendLayout();
             tp_IS_UnstableStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_US_Items).BeginInit();
             gb_US_NPCItems.SuspendLayout();
             gb_US_PropToThrow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)allItemDataTableBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -156,7 +160,7 @@
             // 
             // tsm_File
             // 
-            tsm_File.DropDownItems.AddRange(new ToolStripItem[] { tsm_open, tsm_Quit });
+            tsm_File.DropDownItems.AddRange(new ToolStripItem[] { tsm_open, tsm_ItemDataFile, tsm_Quit });
             tsm_File.Name = "tsm_File";
             tsm_File.Size = new Size(37, 20);
             tsm_File.Text = "File";
@@ -167,6 +171,27 @@
             tsm_open.Size = new Size(181, 22);
             tsm_open.Text = "Open datafile Folder";
             tsm_open.Click += tsm_open_Click;
+            // 
+            // tsm_ItemDataFile
+            // 
+            tsm_ItemDataFile.DropDownItems.AddRange(new ToolStripItem[] { tsm_SaveItemStats, tsm_OpenItemStats });
+            tsm_ItemDataFile.Name = "tsm_ItemDataFile";
+            tsm_ItemDataFile.Size = new Size(181, 22);
+            tsm_ItemDataFile.Text = "Items Data Files";
+            // 
+            // tsm_SaveItemStats
+            // 
+            tsm_SaveItemStats.Name = "tsm_SaveItemStats";
+            tsm_SaveItemStats.Size = new Size(178, 22);
+            tsm_SaveItemStats.Text = "Save ItemsStats.xml";
+            tsm_SaveItemStats.Click += tsm_SaveItemStats_Click;
+            // 
+            // tsm_OpenItemStats
+            // 
+            tsm_OpenItemStats.Name = "tsm_OpenItemStats";
+            tsm_OpenItemStats.Size = new Size(178, 22);
+            tsm_OpenItemStats.Text = "Open ItemStats.xml";
+            tsm_OpenItemStats.Click += tsm_OpenItemStats_Click;
             // 
             // tsm_Quit
             // 
@@ -580,11 +605,11 @@
             // tp_WitemsStats
             // 
             tp_WitemsStats.AutoScroll = true;
+            tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(l_ItemStat_Dec);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
             tp_WitemsStats.Controls.Add(bt_ItenStatsSet);
             tp_WitemsStats.Controls.Add(tc_itemStats);
-            tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Location = new Point(4, 24);
             tp_WitemsStats.Name = "tp_WitemsStats";
             tp_WitemsStats.Padding = new Padding(3);
@@ -592,6 +617,127 @@
             tp_WitemsStats.TabIndex = 1;
             tp_WitemsStats.Text = "Items Stats";
             tp_WitemsStats.UseVisualStyleBackColor = true;
+            // 
+            // dgv_ItemStatsTable
+            // 
+            dgv_ItemStatsTable.AllowUserToAddRows = false;
+            dgv_ItemStatsTable.AllowUserToDeleteRows = false;
+            dgv_ItemStatsTable.AllowUserToResizeColumns = false;
+            dgv_ItemStatsTable.AllowUserToResizeRows = false;
+            dgv_ItemStatsTable.AutoGenerateColumns = false;
+            dgv_ItemStatsTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv_ItemStatsTable.BackgroundColor = SystemColors.Window;
+            dgv_ItemStatsTable.BorderStyle = BorderStyle.None;
+            dgv_ItemStatsTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, statInGameNameDataGridViewTextBoxColumn1 });
+            dgv_ItemStatsTable.DataSource = itemStatsDataBindingSource;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Window;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle9;
+            dgv_ItemStatsTable.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            dgv_ItemStatsTable.GridColor = SystemColors.ControlLight;
+            dgv_ItemStatsTable.Location = new Point(9, 75);
+            dgv_ItemStatsTable.MultiSelect = false;
+            dgv_ItemStatsTable.Name = "dgv_ItemStatsTable";
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = SystemColors.Control;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dgv_ItemStatsTable.RowHeadersVisible = false;
+            dataGridViewCellStyle11.Padding = new Padding(0, 7, 0, 7);
+            dgv_ItemStatsTable.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dgv_ItemStatsTable.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgv_ItemStatsTable.ShowEditingIcon = false;
+            dgv_ItemStatsTable.Size = new Size(699, 391);
+            dgv_ItemStatsTable.TabIndex = 0;
+            dgv_ItemStatsTable.CellMouseClick += dgv_itemStatTabel_CellSelected;
+            dgv_ItemStatsTable.ColumnHeaderMouseClick += dgv_ItemStatsTable_ColumnHeaderClicked;
+            dgv_ItemStatsTable.DataError += dataGridView1_DataError;
+            dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
+            // 
+            // statStateDataGridViewCheckBoxColumn
+            // 
+            statStateDataGridViewCheckBoxColumn.DataPropertyName = "StatState";
+            statStateDataGridViewCheckBoxColumn.HeaderText = "Enabled";
+            statStateDataGridViewCheckBoxColumn.Name = "statStateDataGridViewCheckBoxColumn";
+            statStateDataGridViewCheckBoxColumn.Resizable = DataGridViewTriState.False;
+            statStateDataGridViewCheckBoxColumn.Width = 75;
+            // 
+            // statNameDataGridViewTextBoxColumn
+            // 
+            statNameDataGridViewTextBoxColumn.DataPropertyName = "StatName";
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            statNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            statNameDataGridViewTextBoxColumn.Name = "statNameDataGridViewTextBoxColumn";
+            statNameDataGridViewTextBoxColumn.ReadOnly = true;
+            statNameDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statNameDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statNameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // statDescriptionDataGridViewTextBoxColumn
+            // 
+            statDescriptionDataGridViewTextBoxColumn.DataPropertyName = "StatDescription";
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            statDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            statDescriptionDataGridViewTextBoxColumn.Name = "statDescriptionDataGridViewTextBoxColumn";
+            statDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            statDescriptionDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statDescriptionDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statDescriptionDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // statMinDataGridViewTextBoxColumn
+            // 
+            statMinDataGridViewTextBoxColumn.DataPropertyName = "StatMin";
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statMinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            statMinDataGridViewTextBoxColumn.HeaderText = "Min";
+            statMinDataGridViewTextBoxColumn.Name = "statMinDataGridViewTextBoxColumn";
+            statMinDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statMinDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMinDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // statMaxDataGridViewTextBoxColumn
+            // 
+            statMaxDataGridViewTextBoxColumn.DataPropertyName = "StatMax";
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statMaxDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            statMaxDataGridViewTextBoxColumn.HeaderText = "Max";
+            statMaxDataGridViewTextBoxColumn.Name = "statMaxDataGridViewTextBoxColumn";
+            statMaxDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
+            statMaxDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statMaxDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // statInGameNameDataGridViewTextBoxColumn1
+            // 
+            statInGameNameDataGridViewTextBoxColumn1.DataPropertyName = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn1.HeaderText = "StatInGameName";
+            statInGameNameDataGridViewTextBoxColumn1.Name = "statInGameNameDataGridViewTextBoxColumn1";
+            statInGameNameDataGridViewTextBoxColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
+            statInGameNameDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // itemStatsDataBindingSource
+            // 
+            itemStatsDataBindingSource.DataSource = typeof(Resources.ItemStatsData);
             // 
             // l_ItemStat_Dec
             // 
@@ -743,35 +889,35 @@
             dgv_US_Items.BackgroundColor = SystemColors.Window;
             dgv_US_Items.BorderStyle = BorderStyle.None;
             dgv_US_Items.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgv_US_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.Control;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            dgv_US_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             dgv_US_Items.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgv_US_Items.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = SystemColors.Window;
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
+            dgv_US_Items.DefaultCellStyle = dataGridViewCellStyle13;
             dgv_US_Items.EditMode = DataGridViewEditMode.EditOnEnter;
             dgv_US_Items.GridColor = SystemColors.ButtonHighlight;
             dgv_US_Items.Location = new Point(6, 9);
             dgv_US_Items.Name = "dgv_US_Items";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgv_US_Items.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = SystemColors.Control;
+            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle14.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
+            dgv_US_Items.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             dgv_US_Items.RowHeadersVisible = false;
             dgv_US_Items.RowTemplate.Height = 25;
             dgv_US_Items.SelectionMode = DataGridViewSelectionMode.CellSelect;
@@ -872,127 +1018,6 @@
             l_US_Warning_Msg.Text = "These settings will make the game unstable and have a high chance to cause crashes/soft-locking or stopping the game from launching. It's strongly recommended to save whenever you have the chance.";
             l_US_Warning_Msg.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // dgv_ItemStatsTable
-            // 
-            dgv_ItemStatsTable.AllowUserToAddRows = false;
-            dgv_ItemStatsTable.AllowUserToDeleteRows = false;
-            dgv_ItemStatsTable.AllowUserToResizeColumns = false;
-            dgv_ItemStatsTable.AllowUserToResizeRows = false;
-            dgv_ItemStatsTable.AutoGenerateColumns = false;
-            dgv_ItemStatsTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgv_ItemStatsTable.BackgroundColor = SystemColors.Window;
-            dgv_ItemStatsTable.BorderStyle = BorderStyle.None;
-            dgv_ItemStatsTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, statInGameNameDataGridViewTextBoxColumn1 });
-            dgv_ItemStatsTable.DataSource = itemStatsDataBindingSource;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Window;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle12;
-            dgv_ItemStatsTable.EditMode = DataGridViewEditMode.EditOnKeystroke;
-            dgv_ItemStatsTable.GridColor = SystemColors.ControlLight;
-            dgv_ItemStatsTable.Location = new Point(9, 75);
-            dgv_ItemStatsTable.MultiSelect = false;
-            dgv_ItemStatsTable.Name = "dgv_ItemStatsTable";
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Control;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            dgv_ItemStatsTable.RowHeadersVisible = false;
-            dataGridViewCellStyle14.Padding = new Padding(0, 7, 0, 7);
-            dgv_ItemStatsTable.RowsDefaultCellStyle = dataGridViewCellStyle14;
-            dgv_ItemStatsTable.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgv_ItemStatsTable.ShowEditingIcon = false;
-            dgv_ItemStatsTable.Size = new Size(699, 391);
-            dgv_ItemStatsTable.TabIndex = 0;
-            dgv_ItemStatsTable.CellMouseClick += dgv_itemStatTabel_CellSelected;
-            dgv_ItemStatsTable.ColumnHeaderMouseClick += dgv_ItemStatsTable_ColumnHeaderClicked;
-            dgv_ItemStatsTable.DataError += dataGridView1_DataError;
-            dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
-            // 
-            // statStateDataGridViewCheckBoxColumn
-            // 
-            statStateDataGridViewCheckBoxColumn.DataPropertyName = "StatState";
-            statStateDataGridViewCheckBoxColumn.HeaderText = "Enabled";
-            statStateDataGridViewCheckBoxColumn.Name = "statStateDataGridViewCheckBoxColumn";
-            statStateDataGridViewCheckBoxColumn.Resizable = DataGridViewTriState.False;
-            statStateDataGridViewCheckBoxColumn.Width = 75;
-            // 
-            // statNameDataGridViewTextBoxColumn
-            // 
-            statNameDataGridViewTextBoxColumn.DataPropertyName = "StatName";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
-            statNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            statNameDataGridViewTextBoxColumn.Name = "statNameDataGridViewTextBoxColumn";
-            statNameDataGridViewTextBoxColumn.ReadOnly = true;
-            statNameDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
-            statNameDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statNameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // statDescriptionDataGridViewTextBoxColumn
-            // 
-            statDescriptionDataGridViewTextBoxColumn.DataPropertyName = "StatDescription";
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
-            statDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            statDescriptionDataGridViewTextBoxColumn.Name = "statDescriptionDataGridViewTextBoxColumn";
-            statDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            statDescriptionDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
-            statDescriptionDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statDescriptionDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // statMinDataGridViewTextBoxColumn
-            // 
-            statMinDataGridViewTextBoxColumn.DataPropertyName = "StatMin";
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
-            statMinDataGridViewTextBoxColumn.HeaderText = "Min";
-            statMinDataGridViewTextBoxColumn.Name = "statMinDataGridViewTextBoxColumn";
-            statMinDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
-            statMinDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statMinDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // statMaxDataGridViewTextBoxColumn
-            // 
-            statMaxDataGridViewTextBoxColumn.DataPropertyName = "StatMax";
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMaxDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
-            statMaxDataGridViewTextBoxColumn.HeaderText = "Max";
-            statMaxDataGridViewTextBoxColumn.Name = "statMaxDataGridViewTextBoxColumn";
-            statMaxDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
-            statMaxDataGridViewTextBoxColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statMaxDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // statInGameNameDataGridViewTextBoxColumn1
-            // 
-            statInGameNameDataGridViewTextBoxColumn1.DataPropertyName = "StatInGameName";
-            statInGameNameDataGridViewTextBoxColumn1.HeaderText = "StatInGameName";
-            statInGameNameDataGridViewTextBoxColumn1.Name = "statInGameNameDataGridViewTextBoxColumn1";
-            statInGameNameDataGridViewTextBoxColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
-            statInGameNameDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // itemStatsDataBindingSource
-            // 
-            itemStatsDataBindingSource.DataSource = typeof(Resources.ItemStatsData);
-            // 
             // allItemDataTableBindingSource
             // 
             allItemDataTableBindingSource.DataSource = typeof(Resources.AllItemDataTable);
@@ -1060,6 +1085,11 @@
             statInGameNameDataGridViewTextBoxColumn.HeaderText = "StatInGameName";
             statInGameNameDataGridViewTextBoxColumn.Name = "statInGameNameDataGridViewTextBoxColumn";
             // 
+            // fbd_StatSaveFolder
+            // 
+            fbd_StatSaveFolder.Description = "Select where you would like to save";
+            fbd_StatSaveFolder.UseDescriptionForTitle = true;
+            // 
             // F_ItemRandomiser
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -1086,6 +1116,8 @@
             tc_Items.ResumeLayout(false);
             tp_WitemsStats.ResumeLayout(false);
             tp_WitemsStats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
             tc_itemStats.ResumeLayout(false);
             tp_IS_UnstableStats.ResumeLayout(false);
             tp_IS_UnstableStats.PerformLayout();
@@ -1094,8 +1126,6 @@
             gb_US_NPCItems.PerformLayout();
             gb_US_PropToThrow.ResumeLayout(false);
             gb_US_PropToThrow.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_ItemStatsTable).EndInit();
-            ((System.ComponentModel.ISupportInitialize)itemStatsDataBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)allItemDataTableBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -1195,5 +1225,9 @@
         private Label l_ItemStat_Dec;
         private ToolStripMenuItem tsm_Credits;
         private ToolStripMenuItem tsm_Unpacker;
+        private ToolStripMenuItem tsm_ItemDataFile;
+        private ToolStripMenuItem tsm_SaveItemStats;
+        private ToolStripMenuItem tsm_OpenItemStats;
+        private FolderBrowserDialog fbd_StatSaveFolder;
     }
 }

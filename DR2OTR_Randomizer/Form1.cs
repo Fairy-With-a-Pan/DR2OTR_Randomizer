@@ -4,14 +4,10 @@ using DR2OTR_Randomizer.Resources;
 using System.Data;
 using System.Diagnostics;
 using System.Net.WebSockets;
+using System.Xml;
 
 namespace DR2OTR_Randomizer;
-/// <summary>
-/// TODO:
-///
-/// Add a way to export changed stats to a xml file.
-/// 
-/// </summary>
+
 public partial class F_ItemRandomiser : Form
 {
     public List<ItemStatsData> VheicleStatData { get; set; }
@@ -45,12 +41,7 @@ public partial class F_ItemRandomiser : Form
     {
         //gets all of the statdata stored inside the AllItemStatData
         //Most likely move over to a xml file for storing this
-        VheicleStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[0];
-        NPCStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[1];
-        FireArmsStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[2];
-        WorldStatsData = (List<ItemStatsData>)statData.GetAllItemStatData()[3];
-        ExplosiveStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[4];
-        FoodAndDamageData = (List<ItemStatsData>)statData.GetAllItemStatData()[5];
+        GetAllItemStatData();
 
         allitemsTable = itemDataTable.SetAllItemData();
         allUnStableitemsTable = itemDataTable.SetAllItemData();
@@ -420,15 +411,75 @@ public partial class F_ItemRandomiser : Form
             }
         }
     }
+    private void tsm_SaveItemStats_Click(object sender, EventArgs e)
+    {
+        //This is for people to share there settings with other people
+        fbd_StatSaveFolder.ShowDialog();
+        XmlWriterSettings settings = new XmlWriterSettings();
+        settings.Indent = true;
+        XmlWriter writer = XmlWriter.Create($"{Application.StartupPath}\\Resources\\ItemStatData.xml", settings);
+        //get and store all of the items stats categorys for to create the xml file
+        object[] statsList =
+        {
+            VheicleStatData,
+            NPCStatData,
+            WorldStatsData,
+            FireArmsStatData,
+            ExplosiveStatData,
+            FoodAndDamageData,
+        };
+        //Makes a comment at the top of the file to say when it was
+        //created then it gets each stat in side of the array and 
+        //there current state and saves them to a new xml file
+        writer.WriteComment($"This file was crated on {DateTime.Now}");
+        writer.WriteStartElement("AllItemStatsData");
+        foreach (List<ItemStatsData> item in statsList)
+        {
+            writer.WriteStartElement($"StatsCategory");
+            for (int i = 0; i < item.Count; i++)
+            {
+                writer.WriteStartElement($"Stats");
+                writer.WriteElementString($"StatState", $"{item[i].StatState}");
+                writer.WriteElementString($"StatName", $"{item[i].StatName}");
+                writer.WriteElementString($"StatDescription", $"{item[i].StatDescription}");
+                writer.WriteElementString($"StatMin", $"{item[i].StatMin}");
+                writer.WriteElementString($"StatMax", $"{item[i].StatMax}");
+                writer.WriteElementString($"StatInGameName", $"{item[i].StatInGameName}");
+                writer.WriteEndElement();
+            }
+            writer.WriteEndElement();
+        }
+        writer.Close();
+    }
+    private void tsm_OpenItemStats_Click(object sender, EventArgs e)
+    {
+        ///Opens a file browser dialog box for the user to open a 
+        ///saved ItemStatData.xml file then overrights the current
+        ///path inside of AllItemStatData
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        openFileDialog.Title = "Open ItemStatData.xml";
+        openFileDialog.InitialDirectory = statData.path;
+        openFileDialog.Filter = "xml files (*.xml)|*.xml";
+        if(openFileDialog.ShowDialog() == DialogResult.OK)
+        {
+            statData.path = openFileDialog.FileName;
+        }
+        //get the item stat data from the new source
+        GetAllItemStatData();
+        //updates the data grid view by setting the data source and
+        //changeing the tab to the same tab
+        tc_itemStats.SelectedTab = tc_itemStats.TabPages[0];
+        dgv_ItemStatsTable.DataSource = VheicleStatData;
+    }
     private void tsm_Unpacker_Click(object sender, EventArgs e)
     {
-        var result = MessageBox.Show("This will open a webpage for downloading the Gibbed dead rising 2 .big unpack/repack tool. \n\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo);
+        var result = MessageBox.Show("This will open a webpage for downloading the Gibbed Dead Rising 2 .big unpack/repack tool. \n\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo);
 
         if (result == DialogResult.Yes)
         {
             Process.Start(new ProcessStartInfo
             {
-                FileName = "https://www.mediafire.com/file/dfy5825qhufmpr6/Gibbed.DeadRising2.Tools_%2528rev11%2529.rar/file",
+                FileName = "https://deadrising2mods.proboards.com/thread/3045/rising-unpacker-repacker",
                 UseShellExecute = true,
             });
         }
@@ -439,11 +490,20 @@ public partial class F_ItemRandomiser : Form
     }
     private void tsm_Credits_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Devleped by Fairy with a Pan", "Credits");
+        MessageBox.Show("Created by Fairy with a Pan", "Credits");
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         Application.Exit();
+    }
+    private void GetAllItemStatData()
+    {
+        VheicleStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[0];
+        NPCStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[1];
+        FireArmsStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[2];
+        WorldStatsData = (List<ItemStatsData>)statData.GetAllItemStatData()[3];
+        ExplosiveStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[4];
+        FoodAndDamageData = (List<ItemStatsData>)statData.GetAllItemStatData()[5];
     }
     private void SoftLockAndCrashPrevent(string buttonClicked, List<string>? Allitems)
     {
