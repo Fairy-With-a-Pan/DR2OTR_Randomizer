@@ -312,7 +312,7 @@
             // 
             // l_MainDec
             // 
-            l_MainDec.Location = new Point(353, 250);
+            l_MainDec.Location = new Point(357, 250);
             l_MainDec.Name = "l_MainDec";
             l_MainDec.Size = new Size(359, 123);
             l_MainDec.TabIndex = 29;
@@ -321,7 +321,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Banner;
-            pictureBox1.Location = new Point(354, 59);
+            pictureBox1.Location = new Point(355, 59);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(362, 154);
             pictureBox1.TabIndex = 28;

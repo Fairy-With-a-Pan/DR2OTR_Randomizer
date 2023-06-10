@@ -138,6 +138,11 @@ public partial class F_ItemRandomiser : Form
     }
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
+        //do this to prevent a crash related to the ' charcter in filtering
+        if (tb_ItemsSearch.Text.Contains("'"))
+        {
+            tb_ItemsSearch.Text = "";
+        }
         //Searches all items in the item data source
         if (tb_ItemsSearch.Text.StartsWith("#"))
         {
@@ -157,15 +162,21 @@ public partial class F_ItemRandomiser : Form
             //only search for item name
             dgv_AllItems.Columns[1].Width = 250;
             dgv_AllItems.Columns[2].Visible = false;
-            allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*'";
+            allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*' AND ItemTag LIKE '*{tc_Items.SelectedTab.Tag}*'";
         }
     }
     private void tb_US_ItemSearch_TextChanged(object sender, EventArgs e)
     {
+        //do this to prevent a crash related to the ' charcter in filtering
+        if (tb_US_SearchBox.Text.Contains("'"))
+        {
+            tb_US_SearchBox.Text = "";
+        }
         //Adding a search character for the unstable items to search though the 
         //tags due to there being no tags button/tabs
         if (tb_US_SearchBox.Text.Trim().StartsWith('#'))
         {
+            dgv_US_Items.Columns[2].Visible = true;
             dgv_US_Items.Columns[2].ReadOnly = true;
             dgv_US_Items.Columns[1].Width = 150;
             allUnstableItemSource.Filter = $"ItemTag LIKE '*{tb_US_SearchBox.Text.Split('#')[1]}*'";
@@ -185,7 +196,7 @@ public partial class F_ItemRandomiser : Form
     private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
     {
         //Used to eanble/disable safe mode and change the text to show if it is enabled
-        var result = MessageBox.Show("Disabling safe mode will randomize more areas but with a much higher chance of crashing", "Warning", MessageBoxButtons.YesNo);
+        var result = MessageBox.Show("Disabling safe mode will randomize more areas but with a much higher chance of crashing \n\n\n\t\t\tDo you wish continune?", "Warning", MessageBoxButtons.YesNo);
         if (result == DialogResult.No)
         {
             safeMode = true;
@@ -232,6 +243,7 @@ public partial class F_ItemRandomiser : Form
         switch (tc_Items.SelectedTab.Name)
         {
             case "tp_AllItems":
+                //Dont filter all items so this is left blank
                 allItemDataSource.Filter = "";
                 break;
             case "tp_BasicCombo":
@@ -460,7 +472,7 @@ public partial class F_ItemRandomiser : Form
         openFileDialog.Title = "Open ItemStatData.xml";
         openFileDialog.InitialDirectory = statData.path;
         openFileDialog.Filter = "xml files (*.xml)|*.xml";
-        if(openFileDialog.ShowDialog() == DialogResult.OK)
+        if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
             statData.path = openFileDialog.FileName;
         }
@@ -742,5 +754,4 @@ public partial class F_ItemRandomiser : Form
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
     }
-
 }
