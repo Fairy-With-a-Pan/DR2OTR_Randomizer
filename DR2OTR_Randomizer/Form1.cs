@@ -1,6 +1,7 @@
 
 
 using DR2OTR_Randomizer.Resources;
+using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Net.WebSockets;
@@ -84,6 +85,7 @@ public partial class F_ItemRandomiser : Form
         dataGrid.Columns[0].HeaderText = "Enabled";
         dataGrid.Columns[1].ReadOnly = true;
         dataGrid.Columns[1].HeaderText = "Item Name";
+        dataGrid.Sort(dataGrid.Columns[1], ListSortDirection.Ascending);
         dataGrid.Columns[1].Width = 250;
         dataGrid.Columns[2].Visible = false;
         dataGrid.Columns[2].ReadOnly = true;
@@ -429,17 +431,15 @@ public partial class F_ItemRandomiser : Form
         fbd_StatSaveFolder.ShowDialog();
         XmlWriterSettings settings = new XmlWriterSettings();
         settings.Indent = true;
-        XmlWriter writer = XmlWriter.Create($"{Application.StartupPath}\\Resources\\ItemStatData.xml", settings);
+        XmlWriter writer = XmlWriter.Create($"{fbd_StatSaveFolder.SelectedPath}\\ItemStatData.xml", settings);
         //get and store all of the items stats categorys for to create the xml file
-        object[] statsList =
-        {
-            VheicleStatData,
-            NPCStatData,
-            WorldStatsData,
-            FireArmsStatData,
-            ExplosiveStatData,
-            FoodAndDamageData,
-        };
+        object[] statsList = { VheicleStatData, NPCStatData, FireArmsStatData,
+            WorldStatsData, ExplosiveStatData, FoodAndDamageData, };
+        //Store all of the catorgy names to name them and
+        //set a int to count through the string array
+        int catagoryNameIndex = 0;
+        string[] statsCatagory = { "VheicleStats", "NPCStats", "FireArmStats",
+            "WorldStats", "ExplosiveStats", "FoodAndDamageStats", };
         //Makes a comment at the top of the file to say when it was
         //created then it gets each stat in side of the array and 
         //there current state and saves them to a new xml file
@@ -447,7 +447,8 @@ public partial class F_ItemRandomiser : Form
         writer.WriteStartElement("AllItemStatsData");
         foreach (List<ItemStatsData> item in statsList)
         {
-            writer.WriteStartElement($"StatsCategory");
+            Debug.WriteLine(item);
+            writer.WriteStartElement($"{statsCatagory[catagoryNameIndex]}");
             for (int i = 0; i < item.Count; i++)
             {
                 writer.WriteStartElement($"Stats");
@@ -460,6 +461,7 @@ public partial class F_ItemRandomiser : Form
                 writer.WriteEndElement();
             }
             writer.WriteEndElement();
+            catagoryNameIndex++;
         }
         writer.Close();
     }
@@ -624,6 +626,8 @@ public partial class F_ItemRandomiser : Form
             foreach (int line in level.Key)
             {
 
+                //skips the missions.txt file if the user intends to play sandbox mode
+                if (cb_SandBoxSafe.Checked && level.Value == "missions.txt") { continue; }
                 //skips palisades if in safemode due to crashing
                 if (safeMode && level.Value == "palisades.txt") { continue; }
                 int item = rand.Next(allItems.Count);

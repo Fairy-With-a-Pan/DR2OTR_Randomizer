@@ -1,3 +1,18 @@
+<!-- 
+If you want to add items to this list use this format.
+
+	<Item>
+		<ItemName>-"The item name"-</ItemName>
+		<ItemTag>-catatorgory-</ItemTag>
+		<ItemBool>-if its enabled by defult-</ItemBool>
+	</Item>
+	
+	The item name must be the same as it is in the items.txt and most have the quotation marks in it.
+	The category has to be the same as one of the item tags inside of this file.
+	The Itembool has to be true or false if its true it will be enabled by default.
+	
+The items will automatically be sorted so it does not matter where they are placed.
+-->
 <AllItemsData>
 	<Item>
 		<ItemName>"AlienHead"</ItemName>
@@ -3460,6 +3475,11 @@
 		<ItemBool>False</ItemBool>
 	</Item>
 	<Item>
+		<ItemName>"Skateboard"</ItemName>
+		<ItemTag>Special</ItemTag>
+		<ItemBool>False</ItemBool>
+	</Item>
+	<Item>
 		<ItemName>"TenThousandDollars"</ItemName>
 		<ItemTag>Special</ItemTag>
 		<ItemBool>False</ItemBool>
@@ -3556,11 +3576,6 @@
 	</Item>
 	<Item>
 		<ItemName>"SecurityCart"</ItemName>
-		<ItemTag>Vehicles</ItemTag>
-		<ItemBool>False</ItemBool>
-	</Item>
-	<Item>
-		<ItemName>"Skateboard"</ItemName>
 		<ItemTag>Vehicles</ItemTag>
 		<ItemBool>False</ItemBool>
 	</Item>

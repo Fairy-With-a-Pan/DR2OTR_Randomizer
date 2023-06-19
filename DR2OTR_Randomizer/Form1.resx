@@ -63,6 +63,9 @@
   <metadata name="itemsDataTableBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>20, 63</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>418, 11</value>
+  </metadata>
   <data name="l_MainDec.Text" xml:space="preserve">
     <value>This list of items contains all of the items from the game apart from the ones that will crash, soft lock or overload the game. Overloading can still happen with too many vehicles in one area. The Palisades mall is disabled by default and is not Randomized. This is due to crashing a when items are Randomized in this area. You can randomize it by disabling safe mode in the settings menu at the top. Doing this, there will be an extremely high chance of crashing when entering the Palisades mall.</value>
   </data>

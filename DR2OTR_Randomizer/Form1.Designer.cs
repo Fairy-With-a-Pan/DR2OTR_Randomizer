@@ -61,6 +61,7 @@
             itemsDataTableBindingSource = new BindingSource(components);
             tc_TabWindows = new TabControl();
             tp_WItemRandom = new TabPage();
+            cb_SandBoxSafe = new CheckBox();
             dgv_AllItems = new DataGridView();
             l_MainDec = new Label();
             pictureBox1 = new PictureBox();
@@ -130,6 +131,7 @@
             dgvColoum_StatMax = new DataGridViewTextBoxColumn();
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             fbd_StatSaveFolder = new FolderBrowserDialog();
+            toolTip1 = new ToolTip(components);
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).BeginInit();
             tc_TabWindows.SuspendLayout();
@@ -248,6 +250,7 @@
             // 
             // tp_WItemRandom
             // 
+            tp_WItemRandom.Controls.Add(cb_SandBoxSafe);
             tp_WItemRandom.Controls.Add(dgv_AllItems);
             tp_WItemRandom.Controls.Add(l_MainDec);
             tp_WItemRandom.Controls.Add(pictureBox1);
@@ -263,6 +266,17 @@
             tp_WItemRandom.TabIndex = 0;
             tp_WItemRandom.Text = "Items Randomiser";
             tp_WItemRandom.UseVisualStyleBackColor = true;
+            // 
+            // cb_SandBoxSafe
+            // 
+            cb_SandBoxSafe.AutoSize = true;
+            cb_SandBoxSafe.Location = new Point(468, 367);
+            cb_SandBoxSafe.Name = "cb_SandBoxSafe";
+            cb_SandBoxSafe.Size = new Size(130, 19);
+            cb_SandBoxSafe.TabIndex = 31;
+            cb_SandBoxSafe.Text = "Sandbox safe mode";
+            toolTip1.SetToolTip(cb_SandBoxSafe, "Enable this if you are plan on playing Sandbox mode");
+            cb_SandBoxSafe.UseVisualStyleBackColor = true;
             // 
             // dgv_AllItems
             // 
@@ -312,7 +326,7 @@
             // 
             // l_MainDec
             // 
-            l_MainDec.Location = new Point(357, 250);
+            l_MainDec.Location = new Point(357, 230);
             l_MainDec.Name = "l_MainDec";
             l_MainDec.Size = new Size(359, 123);
             l_MainDec.TabIndex = 29;
@@ -348,11 +362,11 @@
             // 
             // b_DeselectAll
             // 
-            b_DeselectAll.Location = new Point(184, 443);
+            b_DeselectAll.Location = new Point(183, 443);
             b_DeselectAll.Name = "b_DeselectAll";
             b_DeselectAll.Size = new Size(157, 23);
             b_DeselectAll.TabIndex = 24;
-            b_DeselectAll.Text = "Uncheck All";
+            b_DeselectAll.Text = "Uncheck All Items";
             b_DeselectAll.UseVisualStyleBackColor = true;
             b_DeselectAll.Click += b_DeselectAll_Click;
             // 
@@ -362,7 +376,7 @@
             b_ToggleAll.Name = "b_ToggleAll";
             b_ToggleAll.Size = new Size(162, 23);
             b_ToggleAll.TabIndex = 23;
-            b_ToggleAll.Text = "Toggle All";
+            b_ToggleAll.Text = "Toggle All Visable";
             b_ToggleAll.UseVisualStyleBackColor = true;
             b_ToggleAll.Click += b_ToggleAll_Click;
             // 
@@ -1229,5 +1243,7 @@
         private ToolStripMenuItem tsm_SaveItemStats;
         private ToolStripMenuItem tsm_OpenItemStats;
         private FolderBrowserDialog fbd_StatSaveFolder;
+        private CheckBox cb_SandBoxSafe;
+        private ToolTip toolTip1;
     }
 }
