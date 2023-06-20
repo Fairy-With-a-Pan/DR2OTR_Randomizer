@@ -432,36 +432,36 @@ public partial class F_ItemRandomiser : Form
         XmlWriterSettings settings = new XmlWriterSettings();
         settings.Indent = true;
         XmlWriter writer = XmlWriter.Create($"{fbd_StatSaveFolder.SelectedPath}\\ItemStatData.xml", settings);
-        //get and store all of the items stats categorys for to create the xml file
-        object[] statsList = { VheicleStatData, NPCStatData, FireArmsStatData,
-            WorldStatsData, ExplosiveStatData, FoodAndDamageData, };
-        //Store all of the catorgy names to name them and
-        //set a int to count through the string array
-        int catagoryNameIndex = 0;
-        string[] statsCatagory = { "VheicleStats", "NPCStats", "FireArmStats",
-            "WorldStats", "ExplosiveStats", "FoodAndDamageStats", };
-        //Makes a comment at the top of the file to say when it was
-        //created then it gets each stat in side of the array and 
-        //there current state and saves them to a new xml file
+        //Create a dictionary and store the ItemStatsData with its Corsponding catagory
+        Dictionary<object, string> xmlFileContet = new Dictionary<object, string>();
+        xmlFileContet.Add(VheicleStatData, "VheicleStats");
+        xmlFileContet.Add(NPCStatData, "NPCStats");
+        xmlFileContet.Add(FireArmsStatData, "FireArmStats");
+        xmlFileContet.Add(WorldStatsData, "WorldStats");
+        xmlFileContet.Add(ExplosiveStatData, "ExplosiveStats");
+        xmlFileContet.Add(FoodAndDamageData, "FoodAndDamageStats");
+        //Makes a comment at the top of the file to say when it was created 
         writer.WriteComment($"This file was crated on {DateTime.Now}");
         writer.WriteStartElement("AllItemStatsData");
-        foreach (List<ItemStatsData> item in statsList)
+        foreach (var xmlCataorgys in xmlFileContet)
         {
-            Debug.WriteLine(item);
-            writer.WriteStartElement($"{statsCatagory[catagoryNameIndex]}");
-            for (int i = 0; i < item.Count; i++)
+            //Sets the current dictionary item key and sets as a
+            //ItemStatsData List to get each of its currently set
+            //values to save to the xml file
+            List<ItemStatsData> currentStatCatagory = xmlCataorgys.Key as List<ItemStatsData>;
+            writer.WriteStartElement($"{xmlCataorgys.Value}");
+            for (int i = 0; i < currentStatCatagory.Count; i++)
             {
                 writer.WriteStartElement($"Stats");
-                writer.WriteElementString($"StatState", $"{item[i].StatState}");
-                writer.WriteElementString($"StatName", $"{item[i].StatName}");
-                writer.WriteElementString($"StatDescription", $"{item[i].StatDescription}");
-                writer.WriteElementString($"StatMin", $"{item[i].StatMin}");
-                writer.WriteElementString($"StatMax", $"{item[i].StatMax}");
-                writer.WriteElementString($"StatInGameName", $"{item[i].StatInGameName}");
+                writer.WriteElementString($"StatState", $"{currentStatCatagory[i].StatState}");
+                writer.WriteElementString($"StatName", $"{currentStatCatagory[i].StatName}");
+                writer.WriteElementString($"StatDescription", $"{currentStatCatagory[i].StatDescription}");
+                writer.WriteElementString($"StatMin", $"{currentStatCatagory[i].StatMin}");
+                writer.WriteElementString($"StatMax", $"{currentStatCatagory[i].StatMax}");
+                writer.WriteElementString($"StatInGameName", $"{currentStatCatagory[i].StatInGameName}");
                 writer.WriteEndElement();
             }
             writer.WriteEndElement();
-            catagoryNameIndex++;
         }
         writer.Close();
     }
