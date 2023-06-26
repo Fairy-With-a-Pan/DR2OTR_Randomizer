@@ -21,6 +21,7 @@ public partial class F_ItemRandomiser : Form
 
     bool safeMode = true;
 
+    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
     AllItemStatData statData = new AllItemStatData();
     AllItemDataTable itemDataTable = new AllItemDataTable();
 
@@ -134,9 +135,9 @@ public partial class F_ItemRandomiser : Form
     }
     private void tsm_open_Click(object sender, EventArgs e)
     {
-        //gets the path of the datafile folder
-        fbd_DataFileFolder.ShowDialog(this);
-        path = fbd_DataFileFolder.SelectedPath;
+        //sets the path of the datafile folder that as been unpacked
+        fbd_DataFileFolder.ShowDialog();
+        path = gibbedTools.Unpack($"{fbd_DataFileFolder.SelectedPath}");
     }
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
@@ -757,5 +758,9 @@ public partial class F_ItemRandomiser : Form
             }
             File.WriteAllLines($"{path}\\missions.txt", missionFile);
         }
+    }
+    private void button2_Click(object sender, EventArgs e)
+    {
+        gibbedTools.Pack();
     }
 }

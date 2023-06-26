@@ -15,6 +15,12 @@
     <None Remove="Resources\AllNPCModels.txt" />
     <None Remove="Resources\Banner.png" />
     <None Remove="Resources\ItemStatData.xml" />
+    <None Remove="Resources\Unpacker\Gibbed.DeadRising2.FileFormats.dll" />
+    <None Remove="Resources\Unpacker\Gibbed.DeadRising2.Pack.exe" />
+    <None Remove="Resources\Unpacker\Gibbed.DeadRising2.Unpack.exe" />
+    <None Remove="Resources\Unpacker\Gibbed.IO.dll" />
+    <None Remove="Resources\Unpacker\ICSharpCode.SharpZipLib.dll" />
+    <None Remove="Resources\Unpacker\NDesk.Options.dll" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +38,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\ItemStatData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\Gibbed.DeadRising2.FileFormats.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\Gibbed.DeadRising2.Pack.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\Gibbed.DeadRising2.Unpack.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\Gibbed.IO.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\ICSharpCode.SharpZipLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Unpacker\NDesk.Options.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
