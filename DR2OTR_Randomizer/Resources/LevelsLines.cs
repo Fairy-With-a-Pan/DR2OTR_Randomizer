@@ -8,8 +8,10 @@ namespace DR2OTR_Randomizer.Resources
 {
     public class LevelsLines
     {
-        //Makes a new dicionary called levels that can be used in other classe
-        public static Dictionary<Array, string> levels = new Dictionary<Array, string>();
+        public string LevelName { get; set; }
+        public string LevelFile { get; set; }
+        public int[] LevelLines { get; set; }
+        
         public static int[] americanaCasinoLines =
         {
             18, 25, 32, 39, 46, 53, 60, 67, 74, 81, 88, 95, 102, 109, 116, 123, 130, 137, 144, 151, 158, 165, 172, 179, 186,
@@ -671,31 +673,144 @@ namespace DR2OTR_Randomizer.Resources
              13434, 13441, 13448, 13465,
         };
 
-        //Call this when the progam is launched to add the dictionaty items for use
-        public LevelsLines()
+        //Adds each int array to a list with its file name and the level name
+        //for compareing in the randomzier with a check list box
+        public List<LevelsLines> GetLevelLines()
         {
-            levels.Add(americanaCasinoLines, "americana_casino.txt");
-            levels.Add(atlanticaCasinoLines, "atlantica_casino.txt");
-            levels.Add(backStageLines, "arena_backstage.txt");
-            levels.Add(foodBranLines, "food_barn.txt");
-            levels.Add(fortuneExteriorLines, "fortune_exterior.txt");
-            levels.Add(laboratorylines, "laboratory.txt");
-            levels.Add(missionLines, "missions.txt");
-            levels.Add(palisadesLines, "palisades.txt");
-            levels.Add(rooftopAtlanticalines, "rooftop_atlantica.txt");
-            levels.Add(rooftopHotelLines, "rooftop_hotel.txt");
-            levels.Add(rooftopRoyalLines, "rooftop_royal.txt");
-            levels.Add(rooftopSafehouseLines, "rooftop_safehouse.txt");
-            levels.Add(rooftopTheaterlines, "rooftop_theater.txt");
-            levels.Add(rooftopYucatanLines, "rooftop_yucatan.txt");
-            levels.Add(royalFlushLines, "royal_flush.txt");
-            levels.Add(safeHouseLines, "safehouse.txt");
-            levels.Add(southPlazaLines, "south_plaza.txt");
-            levels.Add(tapeDieLines, "tape_die.txt");
-            levels.Add(themeParkLines, "theme_park.txt");
-            levels.Add(tKBosslines, "tkot_battle.txt");
-            levels.Add(undergroundLines, "underground.txt");
-            levels.Add(yucatanCasinoLines, "yucatan_casino.txt");
-        }        
+            List<LevelsLines> list = new List<LevelsLines>();
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Americana Casino",
+                LevelFile = "americana_casino.txt",
+                LevelLines = americanaCasinoLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Atlantica Casino",
+                LevelFile = "atlantica_casino.txt",
+                LevelLines = atlanticaCasinoLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Arena Backstage",
+                LevelFile = "arena_backstage.txt",
+                LevelLines = backStageLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Food Barn",
+                LevelFile = "food_barn.txt",
+                LevelLines = foodBranLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Fortune Exterior",
+                LevelFile = "fortune_exterior.txt",
+                LevelLines = fortuneExteriorLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Missions Items",
+                LevelFile = "missions.txt",
+                LevelLines = missionLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Palisades",
+                LevelFile = "palisades.txt",
+                LevelLines = palisadesLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_atlantica.txt",
+                LevelLines = rooftopAtlanticalines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_hotel.txt",
+                LevelLines = rooftopHotelLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_royal.txt",
+                LevelLines = rooftopRoyalLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_safehouse.txt",
+                LevelLines = rooftopSafehouseLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_theater.txt",
+                LevelLines = rooftopTheaterlines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Rooftops",
+                LevelFile = "rooftop_yucatan.txt",
+                LevelLines = rooftopYucatanLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Royal Flush",
+                LevelFile = "royal_flush.txt",
+                LevelLines = royalFlushLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Safehouse",
+                LevelFile = "safehouse.txt",
+                LevelLines = safeHouseLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "South plaza",
+                LevelFile = "south_plaza.txt",
+                LevelLines = southPlazaLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Boss Fights",
+                LevelFile = "tape_die.txt",
+                LevelLines = tapeDieLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Boss Fights",
+                LevelFile = "tkot_battle.txt",
+                LevelLines = tKBosslines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Boss Fights",
+                LevelFile = "laboratory.txt",
+                LevelLines = laboratorylines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Uranus Zone",
+                LevelFile = "theme_park.txt",
+                LevelLines = themeParkLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Underground",
+                LevelFile = "underground.txt",
+                LevelLines = undergroundLines
+            });
+            list.Add(new LevelsLines()
+            {
+                LevelName = "Yucatan Casino",
+                LevelFile = "yucatan_casino.txt",
+                LevelLines = yucatanCasinoLines
+            });
+            return list;
+        }
     }
 }

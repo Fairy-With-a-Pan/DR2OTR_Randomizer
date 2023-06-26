@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Net.WebSockets;
+using System.Windows.Forms.VisualStyles;
 using System.Xml;
 
 namespace DR2OTR_Randomizer;
@@ -34,6 +35,7 @@ public partial class F_ItemRandomiser : Form
 
 
     LevelsLines levelLines = new LevelsLines();
+
     string path;
     DataTable allitemsTable = new DataTable();
     BindingSource allItemDataSource = new BindingSource();
@@ -609,34 +611,40 @@ public partial class F_ItemRandomiser : Form
     {
 
         //gets the dictionary stored in the LevelLines class
-        var levels = LevelsLines.levels;
+        List<LevelsLines> levels = levelLines.GetLevelLines();
+
         Random rand = new Random();
         //goese though each of the levels in side of the dictionary
-        foreach (var level in levels)
+        foreach (LevelsLines level in levels)
         {
             //checks to see that the selected path has all the requied files
-            if (!File.Exists($"{path}\\{level.Value}"))
+            if (!File.Exists($"{path}\\{level.LevelFile}"))
             {
                 //returns if it cant find any
-                MessageBox.Show($"Could not find {level.Value} please check your datafile folder", "Warning");
-                continue;
+                MessageBox.Show($"Could not find {level.LevelFile} please check your datafile folder", "Warning");
+                return;
             }
             //gets the current level file in the dictionary with the level.Value is the same as the files name
-            string[] levelFile = File.ReadAllLines($"{path}\\{level.Value}");
-            //adds all the lines inside of the current selected level to an array
-            foreach (int line in level.Key)
+            string[] levelFile = File.ReadAllLines($"{path}\\{level.LevelFile}");
+            foreach (int line in level.LevelLines)
             {
+                foreach (string levelName in clb_levels.Items)
+                {
+                    //gets the current item check state then compare
+                    //these clb item name with the current level name
+                    CheckState levelState = clb_levels.GetItemCheckState(clb_levels.Items.IndexOf(levelName));
+                    if (levelState == CheckState.Checked && levelName == level.LevelName)
+                    {
+                        int item = rand.Next(allItems.Count);
 
-                //skips the missions.txt file if the user intends to play sandbox mode
-                if (cb_SandBoxSafe.Checked && level.Value == "missions.txt") { continue; }
-                //skips palisades if in safemode due to crashing
-                if (safeMode && level.Value == "palisades.txt") { continue; }
-                int item = rand.Next(allItems.Count);
-
-                levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
+                        levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
+                    }
+                }
             }
+
+            //adds all the lines inside of the current selected level to an array
             //Writes all the lines inside of the levelfile array to the levels txt file
-            File.WriteAllLines($"{path}\\{level.Value}", levelFile);
+            File.WriteAllLines($"{path}\\{level.LevelFile}", levelFile);
 
         }
         MessageBox.Show
