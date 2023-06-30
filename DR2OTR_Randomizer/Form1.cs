@@ -626,22 +626,21 @@ public partial class F_ItemRandomiser : Form
             }
             //gets the current level file in the dictionary with the level.Value is the same as the files name
             string[] levelFile = File.ReadAllLines($"{path}\\{level.LevelFile}");
-            foreach (int line in level.LevelLines)
+            foreach (ListViewItem listOfLevels in lv_LevelsList.Items)
             {
-                foreach (string levelName in clb_levels.Items)
+                //checks of the level is checked inside the listview
+                //and compares it to the current level inside of the
+                //levellines list if booth are true then it will randomize that level
+                if (listOfLevels.Checked == true &&
+                    listOfLevels.Text == level.LevelName)
                 {
-                    //gets the current item check state then compare
-                    //these clb item name with the current level name
-                    CheckState levelState = clb_levels.GetItemCheckState(clb_levels.Items.IndexOf(levelName));
-                    if (levelState == CheckState.Checked && levelName == level.LevelName)
+                    foreach (int line in level.LevelLines)
                     {
                         int item = rand.Next(allItems.Count);
-
                         levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
                     }
                 }
             }
-
             //adds all the lines inside of the current selected level to an array
             //Writes all the lines inside of the levelfile array to the levels txt file
             File.WriteAllLines($"{path}\\{level.LevelFile}", levelFile);

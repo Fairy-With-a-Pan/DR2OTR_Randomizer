@@ -31,10 +31,24 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            ListViewItem listViewItem1 = new ListViewItem("Americana Casino");
+            ListViewItem listViewItem2 = new ListViewItem("Atlantica Casino");
+            ListViewItem listViewItem3 = new ListViewItem("Arena Backstage");
+            ListViewItem listViewItem4 = new ListViewItem("Food Barn");
+            ListViewItem listViewItem5 = new ListViewItem("Fortune Exterior");
+            ListViewItem listViewItem6 = new ListViewItem("Missions Items*");
+            ListViewItem listViewItem7 = new ListViewItem("Palisades*");
+            ListViewItem listViewItem8 = new ListViewItem("Rooftops");
+            ListViewItem listViewItem9 = new ListViewItem("Royal Flush");
+            ListViewItem listViewItem10 = new ListViewItem("Safehouse");
+            ListViewItem listViewItem11 = new ListViewItem("South plaza");
+            ListViewItem listViewItem12 = new ListViewItem("Boss Fights");
+            ListViewItem listViewItem13 = new ListViewItem("Uranus Zone");
+            ListViewItem listViewItem14 = new ListViewItem("Underground");
+            ListViewItem listViewItem15 = new ListViewItem("Yucatan Casino");
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
@@ -46,6 +60,7 @@
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             menuStrip1 = new MenuStrip();
             tsm_File = new ToolStripMenuItem();
             tsm_open = new ToolStripMenuItem();
@@ -61,10 +76,11 @@
             itemsDataTableBindingSource = new BindingSource(components);
             tc_TabWindows = new TabControl();
             tp_WItemRandom = new TabPage();
-            clb_levels = new CheckedListBox();
             bt_Pack = new Button();
-            dgv_AllItems = new DataGridView();
             l_MainDec = new Label();
+            l_LevelsHeader = new Label();
+            lv_LevelsList = new ListView();
+            dgv_AllItems = new DataGridView();
             pictureBox1 = new PictureBox();
             tb_ItemsSearch = new TextBox();
             b_Randomise = new Button();
@@ -251,10 +267,11 @@
             // 
             // tp_WItemRandom
             // 
-            tp_WItemRandom.Controls.Add(clb_levels);
             tp_WItemRandom.Controls.Add(bt_Pack);
-            tp_WItemRandom.Controls.Add(dgv_AllItems);
             tp_WItemRandom.Controls.Add(l_MainDec);
+            tp_WItemRandom.Controls.Add(l_LevelsHeader);
+            tp_WItemRandom.Controls.Add(lv_LevelsList);
+            tp_WItemRandom.Controls.Add(dgv_AllItems);
             tp_WItemRandom.Controls.Add(pictureBox1);
             tp_WItemRandom.Controls.Add(tb_ItemsSearch);
             tp_WItemRandom.Controls.Add(b_Randomise);
@@ -269,28 +286,65 @@
             tp_WItemRandom.Text = "Items Randomiser";
             tp_WItemRandom.UseVisualStyleBackColor = true;
             // 
-            // clb_levels
-            // 
-            clb_levels.BorderStyle = BorderStyle.None;
-            clb_levels.CheckOnClick = true;
-            clb_levels.ColumnWidth = 115;
-            clb_levels.FormattingEnabled = true;
-            clb_levels.Items.AddRange(new object[] { "Americana Casino", "Atlantica Casino", "Arena Backstage", "Food Barn", "Fortune Exterior", "Missions Items", "Palisades", "Rooftops", "Royal Flush", "Safehouse", "South plaza", "Boss Fights", "Uranus Zone", "Underground", "Yucatan Casino" });
-            clb_levels.Location = new Point(353, 238);
-            clb_levels.MultiColumn = true;
-            clb_levels.Name = "clb_levels";
-            clb_levels.Size = new Size(360, 108);
-            clb_levels.TabIndex = 34;
-            // 
             // bt_Pack
             // 
-            bt_Pack.Location = new Point(492, 356);
+            bt_Pack.Location = new Point(352, 332);
             bt_Pack.Name = "bt_Pack";
-            bt_Pack.Size = new Size(95, 35);
+            bt_Pack.Size = new Size(95, 59);
             bt_Pack.TabIndex = 33;
             bt_Pack.Text = "Pack Datafile";
+            toolTip1.SetToolTip(bt_Pack, "tessst");
             bt_Pack.UseVisualStyleBackColor = true;
             bt_Pack.Click += button2_Click;
+            // 
+            // l_MainDec
+            // 
+            l_MainDec.Location = new Point(453, 324);
+            l_MainDec.Name = "l_MainDec";
+            l_MainDec.Size = new Size(253, 70);
+            l_MainDec.TabIndex = 29;
+            l_MainDec.Text = "Levels marked with a '*' can cause issues you can read what they do by mousing over it. Once you have randomized click the Pack Datafile button to repack and add it back to the game.";
+            // 
+            // l_LevelsHeader
+            // 
+            l_LevelsHeader.AutoSize = true;
+            l_LevelsHeader.Location = new Point(352, 216);
+            l_LevelsHeader.Name = "l_LevelsHeader";
+            l_LevelsHeader.Size = new Size(88, 15);
+            l_LevelsHeader.TabIndex = 36;
+            l_LevelsHeader.Text = "Level Selection:";
+            // 
+            // lv_LevelsList
+            // 
+            lv_LevelsList.BorderStyle = BorderStyle.None;
+            lv_LevelsList.CheckBoxes = true;
+            lv_LevelsList.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem6.ToolTipText = "If you plan on playing in sandbox mode, leave this unchecked. This will cause sandbox mode to crash if randomized.";
+            listViewItem7.StateImageIndex = 0;
+            listViewItem7.ToolTipText = "There is a very high chance of crashing when this level is randomized. It's recommend to use small items or to use this area as little as possible.";
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            listViewItem11.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
+            listViewItem13.StateImageIndex = 0;
+            listViewItem14.StateImageIndex = 0;
+            listViewItem15.StateImageIndex = 0;
+            lv_LevelsList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15 });
+            lv_LevelsList.Location = new Point(357, 232);
+            lv_LevelsList.Name = "lv_LevelsList";
+            lv_LevelsList.Scrollable = false;
+            lv_LevelsList.ShowItemToolTips = true;
+            lv_LevelsList.Size = new Size(358, 98);
+            lv_LevelsList.TabIndex = 35;
+            lv_LevelsList.UseCompatibleStateImageBehavior = false;
+            lv_LevelsList.View = View.List;
             // 
             // dgv_AllItems
             // 
@@ -337,14 +391,6 @@
             dgv_AllItems.ShowEditingIcon = false;
             dgv_AllItems.Size = new Size(345, 404);
             dgv_AllItems.TabIndex = 30;
-            // 
-            // l_MainDec
-            // 
-            l_MainDec.Location = new Point(351, 216);
-            l_MainDec.Name = "l_MainDec";
-            l_MainDec.Size = new Size(359, 19);
-            l_MainDec.TabIndex = 29;
-            l_MainDec.Text = resources.GetString("l_MainDec.Text");
             // 
             // pictureBox1
             // 
@@ -1259,6 +1305,7 @@
         private FolderBrowserDialog fbd_StatSaveFolder;
         private ToolTip toolTip1;
         private Button bt_Pack;
-        private CheckedListBox clb_levels;
+        private ListView lv_LevelsList;
+        private Label l_LevelsHeader;
     }
 }
