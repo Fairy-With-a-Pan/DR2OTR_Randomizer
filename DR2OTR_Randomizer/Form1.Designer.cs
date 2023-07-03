@@ -70,6 +70,7 @@
             tsm_Quit = new ToolStripMenuItem();
             tsm_PH = new ToolStripMenuItem();
             safeModeToolStripMenuItem = new ToolStripMenuItem();
+            spawnedItemsToolStripMenuItem = new ToolStripMenuItem();
             tsm_Options = new ToolStripMenuItem();
             tsm_Credits = new ToolStripMenuItem();
             tsm_Unpacker = new ToolStripMenuItem();
@@ -221,7 +222,7 @@
             // 
             // tsm_PH
             // 
-            tsm_PH.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem });
+            tsm_PH.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, spawnedItemsToolStripMenuItem });
             tsm_PH.Name = "tsm_PH";
             tsm_PH.Size = new Size(61, 20);
             tsm_PH.Text = "Settings";
@@ -232,6 +233,13 @@
             safeModeToolStripMenuItem.Size = new Size(175, 22);
             safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
             safeModeToolStripMenuItem.Click += safeModeToolStripMenuItem_Click;
+            // 
+            // spawnedItemsToolStripMenuItem
+            // 
+            spawnedItemsToolStripMenuItem.Name = "spawnedItemsToolStripMenuItem";
+            spawnedItemsToolStripMenuItem.Size = new Size(175, 22);
+            spawnedItemsToolStripMenuItem.Text = "Spawned Items";
+            spawnedItemsToolStripMenuItem.Click += spawnedItemsToolStripMenuItem_Click;
             // 
             // tsm_Options
             // 
@@ -1307,5 +1315,6 @@
         private Button bt_Pack;
         private ListView lv_LevelsList;
         private Label l_LevelsHeader;
+        private ToolStripMenuItem spawnedItemsToolStripMenuItem;
     }
 }

@@ -201,20 +201,23 @@ public partial class F_ItemRandomiser : Form
     private void safeModeToolStripMenuItem_Click(object sender, EventArgs e)
     {
         //Used to eanble/disable safe mode and change the text to show if it is enabled
-        var result = MessageBox.Show("Disabling safe mode will randomize more areas but with a much higher chance of crashing \n\n\n\t\t\tDo you wish continune?", "Warning", MessageBoxButtons.YesNo);
-        if (result == DialogResult.No)
+        if (safeMode)
+        {
+            var result = MessageBox.Show("Disabling safe mode will randomize item stats that can cause that item to bug or crash the game. \n\t\t\tDo you wish continune?", "Warning", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                safeMode = false;
+                safeModeToolStripMenuItem.Text = "Safe Mode Disabled";
+                l_SafeMode_Text.Text = "Safe Mode Disabled";
+                l_SafeMode_Text.ForeColor = Color.Red;
+            }
+        }
+        else
         {
             safeMode = true;
             l_SafeMode_Text.Text = "Safe Mode Enabled";
             l_SafeMode_Text.ForeColor = Color.Green;
             safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
-        }
-        if (result == DialogResult.Yes)
-        {
-            safeMode = false;
-            safeModeToolStripMenuItem.Text = "Safe Mode Disabled";
-            l_SafeMode_Text.Text = "Safe Mode Disabled";
-            l_SafeMode_Text.ForeColor = Color.Red;
         }
     }
     private void bt_NPC_Model_Randomizer_Click(object sender, EventArgs e)
@@ -769,5 +772,51 @@ public partial class F_ItemRandomiser : Form
     private void button2_Click(object sender, EventArgs e)
     {
         gibbedTools.Pack();
+    }
+
+    private void spawnedItemsToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        Form radomDialog = new Form();
+        radomDialog.Width = 400;
+        radomDialog.Height = 240;
+        radomDialog.ShowIcon = false;
+        radomDialog.StartPosition = FormStartPosition.WindowsDefaultLocation;
+        radomDialog.FormBorderStyle = FormBorderStyle.FixedDialog;
+        radomDialog.MaximizeBox = false;
+        radomDialog.MinimizeBox = false;
+        radomDialog.Text = "Random Spawns";
+        Label decText = new Label();
+        decText.Location = new Point(12, 9);
+        decText.AutoSize = false;
+        decText.Size = new Size(360, 75);
+        decText.Text = "Enabling this will randomize the items that are spawned from the pawn shops and vending machine. " +
+            "Most of the items will not show up in the pawn shop. This can also cause crashes and soft locking when purchasing.";
+        CheckBox chk_RandomSpawns = new CheckBox();
+        chk_RandomSpawns.AutoSize = true;
+        chk_RandomSpawns.Text = "Allow Random Spawns";
+        chk_RandomSpawns.Location = new Point(12, 87);
+        CheckBox chk_KeySpawns = new CheckBox();
+        chk_KeySpawns.AutoSize = true;
+        chk_KeySpawns.Text = "Random Keys (Vehicle keys)";
+        chk_KeySpawns.Location = new Point(23, 112);
+        CheckBox chk_KeepVhicles = new CheckBox();
+        chk_KeepVhicles.AutoSize = true;
+        chk_KeepVhicles.Text = "Keep Vehicles";
+        chk_KeepVhicles.Location = new Point(275, 85);
+        Button btn_Ok = new Button();
+        btn_Ok.Location = new Point(12, 137);
+        btn_Ok.Size = new Size(100, 50);
+        btn_Ok.Text = "Ok";
+        Button btn_Cancel = new Button();
+        btn_Cancel.Location = new Point(272, 137);
+        btn_Cancel.Size = new Size(100, 50);
+        btn_Cancel.Text = "Cancel";
+        radomDialog.Controls.Add(decText);
+        radomDialog.Controls.Add(chk_RandomSpawns);
+        radomDialog.Controls.Add(chk_KeySpawns);
+        radomDialog.Controls.Add(chk_KeepVhicles);
+        radomDialog.Controls.Add(btn_Ok);
+        radomDialog.Controls.Add(btn_Cancel);
+        radomDialog.ShowDialog();
     }
 }
