@@ -70,7 +70,10 @@
             tsm_Quit = new ToolStripMenuItem();
             tsm_PH = new ToolStripMenuItem();
             safeModeToolStripMenuItem = new ToolStripMenuItem();
-            spawnedItemsToolStripMenuItem = new ToolStripMenuItem();
+            tls_Settings = new ToolStripMenuItem();
+            tls_RandomSpawns = new ToolStripMenuItem();
+            tls_RandomKeys = new ToolStripMenuItem();
+            tls_KeepVhicles = new ToolStripMenuItem();
             tsm_Options = new ToolStripMenuItem();
             tsm_Credits = new ToolStripMenuItem();
             tsm_Unpacker = new ToolStripMenuItem();
@@ -222,7 +225,7 @@
             // 
             // tsm_PH
             // 
-            tsm_PH.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, spawnedItemsToolStripMenuItem });
+            tsm_PH.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, tls_Settings });
             tsm_PH.Name = "tsm_PH";
             tsm_PH.Size = new Size(61, 20);
             tsm_PH.Text = "Settings";
@@ -230,16 +233,42 @@
             // safeModeToolStripMenuItem
             // 
             safeModeToolStripMenuItem.Name = "safeModeToolStripMenuItem";
-            safeModeToolStripMenuItem.Size = new Size(175, 22);
+            safeModeToolStripMenuItem.Size = new Size(218, 22);
             safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
             safeModeToolStripMenuItem.Click += safeModeToolStripMenuItem_Click;
             // 
-            // spawnedItemsToolStripMenuItem
+            // tls_Settings
             // 
-            spawnedItemsToolStripMenuItem.Name = "spawnedItemsToolStripMenuItem";
-            spawnedItemsToolStripMenuItem.Size = new Size(175, 22);
-            spawnedItemsToolStripMenuItem.Text = "Spawned Items";
-            spawnedItemsToolStripMenuItem.Click += spawnedItemsToolStripMenuItem_Click;
+            tls_Settings.DropDownItems.AddRange(new ToolStripItem[] { tls_RandomSpawns, tls_RandomKeys, tls_KeepVhicles });
+            tls_Settings.Name = "tls_Settings";
+            tls_Settings.Size = new Size(218, 22);
+            tls_Settings.Text = "Vending, Shop and Vehicles";
+            // 
+            // tls_RandomSpawns
+            // 
+            tls_RandomSpawns.CheckOnClick = true;
+            tls_RandomSpawns.Name = "tls_RandomSpawns";
+            tls_RandomSpawns.Size = new Size(202, 22);
+            tls_RandomSpawns.Text = "Random Spawned Items";
+            tls_RandomSpawns.ToolTipText = "Randomizes vending machine and pawnshop purchase can cause soft locking and crashing. (Most items do spawn in the pawn shop)";
+            // 
+            // tls_RandomKeys
+            // 
+            tls_RandomKeys.CheckOnClick = true;
+            tls_RandomKeys.Name = "tls_RandomKeys";
+            tls_RandomKeys.Size = new Size(202, 22);
+            tls_RandomKeys.Text = "Random Keys\\Zombrex";
+            tls_RandomKeys.ToolTipText = "Randomizes the vehicle keys and the Zombrex inside the pawn shops.";
+            // 
+            // tls_KeepVhicles
+            // 
+            tls_KeepVhicles.Checked = true;
+            tls_KeepVhicles.CheckOnClick = true;
+            tls_KeepVhicles.CheckState = CheckState.Checked;
+            tls_KeepVhicles.Name = "tls_KeepVhicles";
+            tls_KeepVhicles.Size = new Size(202, 22);
+            tls_KeepVhicles.Text = "Keep VehIcles";
+            tls_KeepVhicles.ToolTipText = "If disabled, this will randomize all driveable vehicles that are in the game.";
             // 
             // tsm_Options
             // 
@@ -1186,7 +1215,6 @@
             MaximizeBox = false;
             Name = "F_ItemRandomiser";
             Text = "DR2OTR Randomizer";
-            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).EndInit();
@@ -1315,6 +1343,9 @@
         private Button bt_Pack;
         private ListView lv_LevelsList;
         private Label l_LevelsHeader;
-        private ToolStripMenuItem spawnedItemsToolStripMenuItem;
+        private ToolStripMenuItem tls_Settings;
+        private ToolStripMenuItem tls_RandomSpawns;
+        private ToolStripMenuItem tls_RandomKeys;
+        private ToolStripMenuItem tls_KeepVhicles;
     }
 }

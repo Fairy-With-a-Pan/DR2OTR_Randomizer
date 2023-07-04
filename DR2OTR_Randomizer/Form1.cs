@@ -32,6 +32,12 @@ public partial class F_ItemRandomiser : Form
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
         20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625, 78689, 78761, };
+    int[] spawnedItems = {
+        33241, 33266, 33290, 33314, 33338, 33362, 33387, 33412, 33502, 33526, 33550, 33574, 33598, 33623, 33648, 33672, 33697,
+        33722, 33747, 33772, 33796, 33820, 33878, 33902, 33926, 33950, 33974, 33999, 34024, 34048, 34072, 34096, 34120, 34144,
+        34168, 34192, 34216, 34240, 34264, 34289, 34313, 34337, 34361, 34385, 34409, 34433, 34466, 34491, 34516, 34541, 34566,
+        34590, 34614, 34638, 34663, 34688, 34713, 34737, 34762, 34820, 34845, 34871, 34897, 34922, 34947, 34971,  33438, 33471,
+        111133, 111184 ,111236 ,111287 ,111336 ,111363 ,111391 ,111423 ,111451 ,111479 ,111509, 33847, };
 
 
     LevelsLines levelLines = new LevelsLines();
@@ -41,6 +47,7 @@ public partial class F_ItemRandomiser : Form
     BindingSource allItemDataSource = new BindingSource();
     DataTable allUnStableitemsTable = new DataTable();
     BindingSource allUnstableItemSource = new BindingSource();
+    
     public F_ItemRandomiser()
     {
         //gets all of the statdata stored inside the AllItemStatData
@@ -75,11 +82,6 @@ public partial class F_ItemRandomiser : Form
         dgv_US_Items.DataSource = allUnStableitemsTable;
         Set_dgv_AllItems_Format(dgv_US_Items);
         allUnstableItemSource.DataSource = allUnStableitemsTable;
-    }
-
-    private void Form1_Load(object sender, EventArgs e)
-    {
-
     }
     private void Set_dgv_AllItems_Format(DataGridView dataGrid)
     {
@@ -510,7 +512,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void tsm_Credits_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Created by Fairy with a Pan", "Credits");
+        MessageBox.Show("Randomizer created by Fairy With a Pan \n .big file Unpacker\\Packer Made by Rick Gibbed", "Credits");
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
@@ -616,7 +618,18 @@ public partial class F_ItemRandomiser : Form
         //gets the dictionary stored in the LevelLines class
         List<LevelsLines> levels = levelLines.GetLevelLines();
 
+        //Store the levels with more then one Vehicles in them
+        int[] missionVehicles = { 11055, 11077, 52639, 72557, 98433, };
+        int[] underGroundVehicles = { 11055, 11077, 52639, 72557, 98433, };
+        int[] fortunExteriorVehicles = { 2816, 5626, 8037 };
+
         Random rand = new Random();
+        //Randomize the items that are spawned from vending machines
+        //and the spawn shops
+        if (tls_RandomSpawns.Checked == true)
+        {
+            RandomizeSpawnedItems(allItems);
+        }
         //goese though each of the levels in side of the dictionary
         foreach (LevelsLines level in levels)
         {
@@ -639,6 +652,17 @@ public partial class F_ItemRandomiser : Form
                 {
                     foreach (int line in level.LevelLines)
                     {
+                        if (tls_KeepVhicles.Checked)
+                        {
+                            //Skips over the lines that are Vehicles foreach file
+                            if (level.LevelName == "Fortune Exterior" && fortunExteriorVehicles.Contains(line)) { continue; }
+                            if (level.LevelName == "Missions Items*" && missionVehicles.Contains(line)) { continue; }
+                            if (level.LevelName == "Royal Flush" && line == 2022) { continue; }
+                            if (level.LevelName == "South plaza" && line == 2400) { continue; }
+                            if (level.LevelName == "Underground" && underGroundVehicles.Contains(line)) { continue; }
+                            if (level.LevelName == "Uranus Zone" && line == 2464) { continue; }
+                            if (level.LevelName == "Yucatan Casino" && line == 7629) { continue; }
+                        }
                         int item = rand.Next(allItems.Count);
                         levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
                     }
@@ -647,13 +671,31 @@ public partial class F_ItemRandomiser : Form
             //adds all the lines inside of the current selected level to an array
             //Writes all the lines inside of the levelfile array to the levels txt file
             File.WriteAllLines($"{path}\\{level.LevelFile}", levelFile);
-
         }
         MessageBox.Show
         ("After case 7-1 once the gas as released the platinum and silver strip becomes unstable and can crash." +
         " Its recommend to save before going to these places (the fortune park save point is safe and recommend).",
         "Warning");
         MessageBox.Show("All levels successfully randomised with selected items", "Success");
+    }
+    private void RandomizeSpawnedItems(List<string> allItems)
+    {
+        Random rand = new Random();
+        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        //Stores the lines that have zombrex or vheicle keys in them
+        int[] keysAndZombrexs = { 33438, 33471, 33847, 33412, 33648, 33772, 34024, 34897 };
+        foreach (int itemLine in spawnedItems)
+        {
+            //skips the lines that have vehicles or zombrex
+            if (!tls_RandomKeys.Checked)
+            {
+                if (keysAndZombrexs.Contains(itemLine)) { continue; }
+            }
+
+            int item = rand.Next(allItems.Count);
+            itemFile[itemLine - 1] = itemFile[itemLine - 1].Split("=")[0] + $"= {allItems[item]}";
+        }
+        File.WriteAllLines($"{path}\\items.txt", itemFile);
     }
     private void RandomizeItemStats(string[] itemFile)
     {
@@ -772,51 +814,5 @@ public partial class F_ItemRandomiser : Form
     private void button2_Click(object sender, EventArgs e)
     {
         gibbedTools.Pack();
-    }
-
-    private void spawnedItemsToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        Form radomDialog = new Form();
-        radomDialog.Width = 400;
-        radomDialog.Height = 240;
-        radomDialog.ShowIcon = false;
-        radomDialog.StartPosition = FormStartPosition.WindowsDefaultLocation;
-        radomDialog.FormBorderStyle = FormBorderStyle.FixedDialog;
-        radomDialog.MaximizeBox = false;
-        radomDialog.MinimizeBox = false;
-        radomDialog.Text = "Random Spawns";
-        Label decText = new Label();
-        decText.Location = new Point(12, 9);
-        decText.AutoSize = false;
-        decText.Size = new Size(360, 75);
-        decText.Text = "Enabling this will randomize the items that are spawned from the pawn shops and vending machine. " +
-            "Most of the items will not show up in the pawn shop. This can also cause crashes and soft locking when purchasing.";
-        CheckBox chk_RandomSpawns = new CheckBox();
-        chk_RandomSpawns.AutoSize = true;
-        chk_RandomSpawns.Text = "Allow Random Spawns";
-        chk_RandomSpawns.Location = new Point(12, 87);
-        CheckBox chk_KeySpawns = new CheckBox();
-        chk_KeySpawns.AutoSize = true;
-        chk_KeySpawns.Text = "Random Keys (Vehicle keys)";
-        chk_KeySpawns.Location = new Point(23, 112);
-        CheckBox chk_KeepVhicles = new CheckBox();
-        chk_KeepVhicles.AutoSize = true;
-        chk_KeepVhicles.Text = "Keep Vehicles";
-        chk_KeepVhicles.Location = new Point(275, 85);
-        Button btn_Ok = new Button();
-        btn_Ok.Location = new Point(12, 137);
-        btn_Ok.Size = new Size(100, 50);
-        btn_Ok.Text = "Ok";
-        Button btn_Cancel = new Button();
-        btn_Cancel.Location = new Point(272, 137);
-        btn_Cancel.Size = new Size(100, 50);
-        btn_Cancel.Text = "Cancel";
-        radomDialog.Controls.Add(decText);
-        radomDialog.Controls.Add(chk_RandomSpawns);
-        radomDialog.Controls.Add(chk_KeySpawns);
-        radomDialog.Controls.Add(chk_KeepVhicles);
-        radomDialog.Controls.Add(btn_Ok);
-        radomDialog.Controls.Add(btn_Cancel);
-        radomDialog.ShowDialog();
     }
 }
