@@ -626,10 +626,6 @@ public partial class F_ItemRandomiser : Form
         Random rand = new Random();
         //Randomize the items that are spawned from vending machines
         //and the spawn shops
-        if (tls_RandomSpawns.Checked == true)
-        {
-            RandomizeSpawnedItems(allItems);
-        }
         //goese though each of the levels in side of the dictionary
         foreach (LevelsLines level in levels)
         {
@@ -671,6 +667,10 @@ public partial class F_ItemRandomiser : Form
             //adds all the lines inside of the current selected level to an array
             //Writes all the lines inside of the levelfile array to the levels txt file
             File.WriteAllLines($"{path}\\{level.LevelFile}", levelFile);
+        }
+        if (tls_RandomSpawns.Checked == true)
+        {
+            RandomizeSpawnedItems(allItems);
         }
         MessageBox.Show
         ("After case 7-1 once the gas as released the platinum and silver strip becomes unstable and can crash." +
