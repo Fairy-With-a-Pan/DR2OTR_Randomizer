@@ -31,35 +31,35 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            ListViewItem listViewItem1 = new ListViewItem("Americana Casino");
-            ListViewItem listViewItem2 = new ListViewItem("Atlantica Casino");
-            ListViewItem listViewItem3 = new ListViewItem("Arena Backstage");
-            ListViewItem listViewItem4 = new ListViewItem("Food Barn");
-            ListViewItem listViewItem5 = new ListViewItem("Fortune Exterior");
-            ListViewItem listViewItem6 = new ListViewItem("Missions Items*");
-            ListViewItem listViewItem7 = new ListViewItem("Palisades*");
-            ListViewItem listViewItem8 = new ListViewItem("Rooftops");
-            ListViewItem listViewItem9 = new ListViewItem("Royal Flush");
-            ListViewItem listViewItem10 = new ListViewItem("Safehouse");
-            ListViewItem listViewItem11 = new ListViewItem("South plaza");
-            ListViewItem listViewItem12 = new ListViewItem("Boss Fights");
-            ListViewItem listViewItem13 = new ListViewItem("Uranus Zone");
-            ListViewItem listViewItem14 = new ListViewItem("Underground");
-            ListViewItem listViewItem15 = new ListViewItem("Yucatan Casino");
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            ListViewItem listViewItem16 = new ListViewItem("Americana Casino");
+            ListViewItem listViewItem17 = new ListViewItem("Atlantica Casino");
+            ListViewItem listViewItem18 = new ListViewItem("Arena Backstage");
+            ListViewItem listViewItem19 = new ListViewItem("Food Barn");
+            ListViewItem listViewItem20 = new ListViewItem("Fortune Exterior");
+            ListViewItem listViewItem21 = new ListViewItem("Missions Items*");
+            ListViewItem listViewItem22 = new ListViewItem("Palisades*");
+            ListViewItem listViewItem23 = new ListViewItem("Rooftops");
+            ListViewItem listViewItem24 = new ListViewItem("Royal Flush");
+            ListViewItem listViewItem25 = new ListViewItem("Safehouse");
+            ListViewItem listViewItem26 = new ListViewItem("South plaza");
+            ListViewItem listViewItem27 = new ListViewItem("Boss Fights");
+            ListViewItem listViewItem28 = new ListViewItem("Uranus Zone");
+            ListViewItem listViewItem29 = new ListViewItem("Underground");
+            ListViewItem listViewItem30 = new ListViewItem("Yucatan Casino");
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             menuStrip1 = new MenuStrip();
             tsm_File = new ToolStripMenuItem();
@@ -68,13 +68,13 @@
             tsm_SaveItemStats = new ToolStripMenuItem();
             tsm_OpenItemStats = new ToolStripMenuItem();
             tsm_Quit = new ToolStripMenuItem();
-            tsm_PH = new ToolStripMenuItem();
+            tsm_Settings = new ToolStripMenuItem();
             safeModeToolStripMenuItem = new ToolStripMenuItem();
-            tls_Settings = new ToolStripMenuItem();
+            tls_VendingAndShops = new ToolStripMenuItem();
             tls_RandomSpawns = new ToolStripMenuItem();
             tls_RandomKeys = new ToolStripMenuItem();
             tls_KeepVhicles = new ToolStripMenuItem();
-            tsm_Options = new ToolStripMenuItem();
+            tsm_About = new ToolStripMenuItem();
             tsm_Credits = new ToolStripMenuItem();
             tsm_Unpacker = new ToolStripMenuItem();
             itemsDataTableBindingSource = new BindingSource(components);
@@ -174,7 +174,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { tsm_File, tsm_PH, tsm_Options });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { tsm_File, tsm_Settings, tsm_About });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(750, 24);
@@ -223,12 +223,12 @@
             tsm_Quit.Text = "Quit";
             tsm_Quit.Click += tsm_Quit_Click;
             // 
-            // tsm_PH
+            // tsm_Settings
             // 
-            tsm_PH.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, tls_Settings });
-            tsm_PH.Name = "tsm_PH";
-            tsm_PH.Size = new Size(61, 20);
-            tsm_PH.Text = "Settings";
+            tsm_Settings.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, tls_VendingAndShops });
+            tsm_Settings.Name = "tsm_Settings";
+            tsm_Settings.Size = new Size(61, 20);
+            tsm_Settings.Text = "Settings";
             // 
             // safeModeToolStripMenuItem
             // 
@@ -237,12 +237,12 @@
             safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
             safeModeToolStripMenuItem.Click += safeModeToolStripMenuItem_Click;
             // 
-            // tls_Settings
+            // tls_VendingAndShops
             // 
-            tls_Settings.DropDownItems.AddRange(new ToolStripItem[] { tls_RandomSpawns, tls_RandomKeys, tls_KeepVhicles });
-            tls_Settings.Name = "tls_Settings";
-            tls_Settings.Size = new Size(218, 22);
-            tls_Settings.Text = "Vending, Shop and Vehicles";
+            tls_VendingAndShops.DropDownItems.AddRange(new ToolStripItem[] { tls_RandomSpawns, tls_RandomKeys, tls_KeepVhicles });
+            tls_VendingAndShops.Name = "tls_VendingAndShops";
+            tls_VendingAndShops.Size = new Size(218, 22);
+            tls_VendingAndShops.Text = "Vending, Shop and Vehicles";
             // 
             // tls_RandomSpawns
             // 
@@ -270,12 +270,12 @@
             tls_KeepVhicles.Text = "Keep VehIcles";
             tls_KeepVhicles.ToolTipText = "If disabled, this will randomize all driveable vehicles that are in the game.";
             // 
-            // tsm_Options
+            // tsm_About
             // 
-            tsm_Options.DropDownItems.AddRange(new ToolStripItem[] { tsm_Credits, tsm_Unpacker });
-            tsm_Options.Name = "tsm_Options";
-            tsm_Options.Size = new Size(52, 20);
-            tsm_Options.Text = "About";
+            tsm_About.DropDownItems.AddRange(new ToolStripItem[] { tsm_Credits, tsm_Unpacker });
+            tsm_About.Name = "tsm_About";
+            tsm_About.Size = new Size(52, 20);
+            tsm_About.Text = "About";
             // 
             // tsm_Credits
             // 
@@ -356,24 +356,24 @@
             lv_LevelsList.BorderStyle = BorderStyle.None;
             lv_LevelsList.CheckBoxes = true;
             lv_LevelsList.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem6.ToolTipText = "If you plan on playing in sandbox mode, leave this unchecked. This will cause sandbox mode to crash if randomized.";
-            listViewItem7.StateImageIndex = 0;
-            listViewItem7.ToolTipText = "There is a very high chance of crashing when this level is randomized. It's recommend to use small items or to use this area as little as possible.";
-            listViewItem8.StateImageIndex = 0;
-            listViewItem9.StateImageIndex = 0;
-            listViewItem10.StateImageIndex = 0;
-            listViewItem11.StateImageIndex = 0;
-            listViewItem12.StateImageIndex = 0;
-            listViewItem13.StateImageIndex = 0;
-            listViewItem14.StateImageIndex = 0;
-            listViewItem15.StateImageIndex = 0;
-            lv_LevelsList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6, listViewItem7, listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15 });
+            listViewItem16.StateImageIndex = 0;
+            listViewItem17.StateImageIndex = 0;
+            listViewItem18.StateImageIndex = 0;
+            listViewItem19.StateImageIndex = 0;
+            listViewItem20.StateImageIndex = 0;
+            listViewItem21.StateImageIndex = 0;
+            listViewItem21.ToolTipText = "If you plan on playing in sandbox mode, leave this unchecked. This will cause sandbox mode to crash if randomized.";
+            listViewItem22.StateImageIndex = 0;
+            listViewItem22.ToolTipText = "There is a very high chance of crashing when this level is randomized. It's recommend to use small items or to use this area as little as possible.";
+            listViewItem23.StateImageIndex = 0;
+            listViewItem24.StateImageIndex = 0;
+            listViewItem25.StateImageIndex = 0;
+            listViewItem26.StateImageIndex = 0;
+            listViewItem27.StateImageIndex = 0;
+            listViewItem28.StateImageIndex = 0;
+            listViewItem29.StateImageIndex = 0;
+            listViewItem30.StateImageIndex = 0;
+            lv_LevelsList.Items.AddRange(new ListViewItem[] { listViewItem16, listViewItem17, listViewItem18, listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24, listViewItem25, listViewItem26, listViewItem27, listViewItem28, listViewItem29, listViewItem30 });
             lv_LevelsList.Location = new Point(357, 232);
             lv_LevelsList.Name = "lv_LevelsList";
             lv_LevelsList.Scrollable = false;
@@ -392,35 +392,35 @@
             dgv_AllItems.BackgroundColor = SystemColors.Window;
             dgv_AllItems.BorderStyle = BorderStyle.None;
             dgv_AllItems.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_AllItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = SystemColors.Control;
+            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle15.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
+            dgv_AllItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             dgv_AllItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = SystemColors.Window;
+            dataGridViewCellStyle16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle16.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle16.SelectionForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.False;
+            dgv_AllItems.DefaultCellStyle = dataGridViewCellStyle16;
             dgv_AllItems.EditMode = DataGridViewEditMode.EditOnEnter;
             dgv_AllItems.GridColor = SystemColors.Window;
             dgv_AllItems.Location = new Point(6, 33);
             dgv_AllItems.Name = "dgv_AllItems";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_AllItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = SystemColors.Control;
+            dataGridViewCellStyle17.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle17.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            dgv_AllItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             dgv_AllItems.RowHeadersVisible = false;
             dgv_AllItems.RowTemplate.Height = 25;
             dgv_AllItems.SelectionMode = DataGridViewSelectionMode.CellSelect;
@@ -740,41 +740,41 @@
             dgv_ItemStatsTable.BackgroundColor = SystemColors.Window;
             dgv_ItemStatsTable.BorderStyle = BorderStyle.None;
             dgv_ItemStatsTable.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = SystemColors.Control;
+            dataGridViewCellStyle18.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle18.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
             dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_ItemStatsTable.Columns.AddRange(new DataGridViewColumn[] { statStateDataGridViewCheckBoxColumn, statNameDataGridViewTextBoxColumn, statDescriptionDataGridViewTextBoxColumn, statMinDataGridViewTextBoxColumn, statMaxDataGridViewTextBoxColumn, statInGameNameDataGridViewTextBoxColumn1 });
             dgv_ItemStatsTable.DataSource = itemStatsDataBindingSource;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Window;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = SystemColors.Window;
+            dataGridViewCellStyle23.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle23.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle23.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.DefaultCellStyle = dataGridViewCellStyle23;
             dgv_ItemStatsTable.EditMode = DataGridViewEditMode.EditOnKeystroke;
             dgv_ItemStatsTable.GridColor = SystemColors.ControlLight;
             dgv_ItemStatsTable.Location = new Point(9, 75);
             dgv_ItemStatsTable.MultiSelect = false;
             dgv_ItemStatsTable.Name = "dgv_ItemStatsTable";
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = SystemColors.Control;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = SystemColors.Control;
+            dataGridViewCellStyle24.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle24.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
+            dgv_ItemStatsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             dgv_ItemStatsTable.RowHeadersVisible = false;
-            dataGridViewCellStyle11.Padding = new Padding(0, 7, 0, 7);
-            dgv_ItemStatsTable.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle25.Padding = new Padding(0, 7, 0, 7);
+            dgv_ItemStatsTable.RowsDefaultCellStyle = dataGridViewCellStyle25;
             dgv_ItemStatsTable.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgv_ItemStatsTable.ShowEditingIcon = false;
             dgv_ItemStatsTable.Size = new Size(699, 391);
@@ -795,8 +795,8 @@
             // statNameDataGridViewTextBoxColumn
             // 
             statNameDataGridViewTextBoxColumn.DataPropertyName = "StatName";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statNameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle19;
             statNameDataGridViewTextBoxColumn.HeaderText = "Name";
             statNameDataGridViewTextBoxColumn.Name = "statNameDataGridViewTextBoxColumn";
             statNameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -807,8 +807,8 @@
             // statDescriptionDataGridViewTextBoxColumn
             // 
             statDescriptionDataGridViewTextBoxColumn.DataPropertyName = "StatDescription";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statDescriptionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle20;
             statDescriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             statDescriptionDataGridViewTextBoxColumn.Name = "statDescriptionDataGridViewTextBoxColumn";
             statDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
@@ -819,8 +819,8 @@
             // statMinDataGridViewTextBoxColumn
             // 
             statMinDataGridViewTextBoxColumn.DataPropertyName = "StatMin";
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statMinDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle21;
             statMinDataGridViewTextBoxColumn.HeaderText = "Min";
             statMinDataGridViewTextBoxColumn.Name = "statMinDataGridViewTextBoxColumn";
             statMinDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
@@ -830,8 +830,8 @@
             // statMaxDataGridViewTextBoxColumn
             // 
             statMaxDataGridViewTextBoxColumn.DataPropertyName = "StatMax";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            statMaxDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            statMaxDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
             statMaxDataGridViewTextBoxColumn.HeaderText = "Max";
             statMaxDataGridViewTextBoxColumn.Name = "statMaxDataGridViewTextBoxColumn";
             statMaxDataGridViewTextBoxColumn.Resizable = DataGridViewTriState.False;
@@ -1000,35 +1000,35 @@
             dgv_US_Items.BackgroundColor = SystemColors.Window;
             dgv_US_Items.BorderStyle = BorderStyle.None;
             dgv_US_Items.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.Control;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dgv_US_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = SystemColors.Control;
+            dataGridViewCellStyle26.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle26.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.True;
+            dgv_US_Items.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             dgv_US_Items.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Window;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle13.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Window;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
-            dgv_US_Items.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = SystemColors.Window;
+            dataGridViewCellStyle27.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle27.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = SystemColors.Window;
+            dataGridViewCellStyle27.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.False;
+            dgv_US_Items.DefaultCellStyle = dataGridViewCellStyle27;
             dgv_US_Items.EditMode = DataGridViewEditMode.EditOnEnter;
             dgv_US_Items.GridColor = SystemColors.ButtonHighlight;
             dgv_US_Items.Location = new Point(6, 9);
             dgv_US_Items.Name = "dgv_US_Items";
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.Control;
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle14.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.True;
-            dgv_US_Items.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = SystemColors.Control;
+            dataGridViewCellStyle28.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle28.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = DataGridViewTriState.True;
+            dgv_US_Items.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             dgv_US_Items.RowHeadersVisible = false;
             dgv_US_Items.RowTemplate.Height = 25;
             dgv_US_Items.SelectionMode = DataGridViewSelectionMode.CellSelect;
@@ -1255,8 +1255,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem tsm_File;
         private ToolStripMenuItem tsm_open;
-        private ToolStripMenuItem tsm_PH;
-        private ToolStripMenuItem tsm_Options;
+        private ToolStripMenuItem tsm_Settings;
+        private ToolStripMenuItem tsm_About;
         private ToolStripMenuItem tsm_Quit;
         private TabControl tc_TabWindows;
         private TabPage tp_WItemRandom;
@@ -1343,7 +1343,7 @@
         private Button bt_Pack;
         private ListView lv_LevelsList;
         private Label l_LevelsHeader;
-        private ToolStripMenuItem tls_Settings;
+        private ToolStripMenuItem tls_VendingAndShops;
         private ToolStripMenuItem tls_RandomSpawns;
         private ToolStripMenuItem tls_RandomKeys;
         private ToolStripMenuItem tls_KeepVhicles;

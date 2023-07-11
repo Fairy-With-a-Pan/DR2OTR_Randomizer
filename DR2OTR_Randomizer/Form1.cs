@@ -20,12 +20,6 @@ public partial class F_ItemRandomiser : Form
     public List<ItemStatsData> FoodAndDamageData { get; set; }
 
 
-    bool safeMode = true;
-
-    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
-    AllItemStatData statData = new AllItemStatData();
-    AllItemDataTable itemDataTable = new AllItemDataTable();
-
     //storeing these to skip stats
     //that cause items to crash the or break the item
     int[] unSafeLines = {
@@ -38,16 +32,19 @@ public partial class F_ItemRandomiser : Form
         34168, 34192, 34216, 34240, 34264, 34289, 34313, 34337, 34361, 34385, 34409, 34433, 34466, 34491, 34516, 34541, 34566,
         34590, 34614, 34638, 34663, 34688, 34713, 34737, 34762, 34820, 34845, 34871, 34897, 34922, 34947, 34971,  33438, 33471,
         111133, 111184 ,111236 ,111287 ,111336 ,111363 ,111391 ,111423 ,111451 ,111479 ,111509, 33847, };
+    bool safeMode = true;
+    string path;
 
-
+    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
+    AllItemStatData statData = new AllItemStatData();
+    AllItemDataTable itemDataTable = new AllItemDataTable();
     LevelsLines levelLines = new LevelsLines();
 
-    string path;
     DataTable allitemsTable = new DataTable();
     BindingSource allItemDataSource = new BindingSource();
     DataTable allUnStableitemsTable = new DataTable();
     BindingSource allUnstableItemSource = new BindingSource();
-    
+
     public F_ItemRandomiser()
     {
         //gets all of the statdata stored inside the AllItemStatData
@@ -95,6 +92,14 @@ public partial class F_ItemRandomiser : Form
         dataGrid.Columns[2].Visible = false;
         dataGrid.Columns[2].ReadOnly = true;
     }
+    private void Mouse_OverEnter_tsm_Settings(object sender, EventArgs e)
+    {
+        tsm_Settings.DropDown.AutoClose = false;
+        tls_RandomSpawns.DropDown.AutoClose = false;
+        tls_RandomKeys.DropDown.AutoClose = false;
+        tls_KeepVhicles.DropDown.AutoClose = false;
+        Debug.WriteLine("Enterted");
+    }
     private void tc_TabWindowsTabSelect(object sender, EventArgs e)
     {
         //changes the current selected cell to not cause issues
@@ -103,11 +108,11 @@ public partial class F_ItemRandomiser : Form
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
-        ///Get the current filter and store it to later reapply it
-        ///Remove any filters form the table
-        ///Then gose through the allitems datatable rows
-        ///And sets each cell[0] that are bools to false
-        ///Then reapplys the filter storted from the start
+        //Get the current filter and store it to later reapply it
+        //Remove any filters form the table
+        //Then gose through the allitems datatable rows
+        //And sets each cell[0] that are bools to false
+        //Then reapplys the filter storted from the start
         string storedFilter = allItemDataSource.Filter;
         allItemDataSource.RemoveFilter();
         for (int i = 0; i < allitemsTable.Rows.Count; i++)
