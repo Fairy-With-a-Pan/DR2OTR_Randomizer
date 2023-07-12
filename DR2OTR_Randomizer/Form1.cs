@@ -4,8 +4,6 @@ using DR2OTR_Randomizer.Resources;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
-using System.Net.WebSockets;
-using System.Windows.Forms.VisualStyles;
 using System.Xml;
 
 namespace DR2OTR_Randomizer;
@@ -24,8 +22,9 @@ public partial class F_ItemRandomiser : Form
     //that cause items to crash the or break the item
     int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
-        19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20064, 20152, 20259,
-        20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625, 78689, 78761, };
+        19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20048, 20064, 20136,
+        20152, 20243, 20259, 20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625,
+        78689, 78761, };
     int[] spawnedItems = {
         33241, 33266, 33290, 33314, 33338, 33362, 33387, 33412, 33502, 33526, 33550, 33574, 33598, 33623, 33648, 33672, 33697,
         33722, 33747, 33772, 33796, 33820, 33878, 33902, 33926, 33950, 33974, 33999, 34024, 34048, 34072, 34096, 34120, 34144,
@@ -35,7 +34,7 @@ public partial class F_ItemRandomiser : Form
     bool safeMode = true;
     string path;
 
-    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
+    readonly UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
     AllItemStatData statData = new AllItemStatData();
     AllItemDataTable itemDataTable = new AllItemDataTable();
     LevelsLines levelLines = new LevelsLines();
@@ -92,19 +91,18 @@ public partial class F_ItemRandomiser : Form
         dataGrid.Columns[2].Visible = false;
         dataGrid.Columns[2].ReadOnly = true;
     }
-    private void Mouse_OverEnter_tsm_Settings(object sender, EventArgs e)
-    {
-        tsm_Settings.DropDown.AutoClose = false;
-        tls_RandomSpawns.DropDown.AutoClose = false;
-        tls_RandomKeys.DropDown.AutoClose = false;
-        tls_KeepVhicles.DropDown.AutoClose = false;
-        Debug.WriteLine("Enterted");
-    }
     private void tc_TabWindowsTabSelect(object sender, EventArgs e)
     {
         //changes the current selected cell to not cause issues
         //with check state and it not updating the check state
         dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
+    }
+    private void On_tsm_Settings_Close(object sender, ToolStripDropDownClosingEventArgs e)
+    {
+        if (e.CloseReason == ToolStripDropDownCloseReason.ItemClicked)
+        {
+            e.Cancel = true;
+        }
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
@@ -210,7 +208,7 @@ public partial class F_ItemRandomiser : Form
         //Used to eanble/disable safe mode and change the text to show if it is enabled
         if (safeMode)
         {
-            var result = MessageBox.Show("Disabling safe mode will randomize item stats that can cause that item to bug or crash the game. \n\t\t\tDo you wish continune?", "Warning", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Disabling safe mode will randomize item stats that can cause that item to bug or crash the game. \n\t\t\tDo you wish to continue?", "Warning", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 safeMode = false;
@@ -251,7 +249,7 @@ public partial class F_ItemRandomiser : Form
         string tabPageTag = "";
         if (tc_Items.SelectedTab.Name != "tp_AllItems")
         {
-            tabPageTag = tc_Items.SelectedTab.Tag.ToString();
+            tabPageTag = (string)tc_Items.SelectedTab.Tag;
         }
         //Uses a tab control to fillter items tag with each tab page
         //having there respective item tag stored inside of tab page tag
@@ -413,7 +411,7 @@ public partial class F_ItemRandomiser : Form
     {
         //Checks to see if the item.txt\mission file can be found if not it will return with a warning message
         if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt"))
-        { MessageBox.Show("Issues finding item.txt and mission.txt", "Warning"); return; }
+        { MessageBox.Show("Could not find item.txt and mission.txt", "Warning"); return; }
         string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
         string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
 
@@ -461,7 +459,7 @@ public partial class F_ItemRandomiser : Form
             //Sets the current dictionary item key and sets as a
             //ItemStatsData List to get each of its currently set
             //values to save to the xml file
-            List<ItemStatsData> currentStatCatagory = xmlCataorgys.Key as List<ItemStatsData>;
+            List<ItemStatsData> currentStatCatagory = (List<ItemStatsData>)xmlCataorgys.Key;
             writer.WriteStartElement($"{xmlCataorgys.Value}");
             for (int i = 0; i < currentStatCatagory.Count; i++)
             {
@@ -500,7 +498,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void tsm_Unpacker_Click(object sender, EventArgs e)
     {
-        var result = MessageBox.Show("This will open a webpage for downloading the Gibbed Dead Rising 2 .big unpack/repack tool. \n\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo);
+        var result = MessageBox.Show("This will open a web page for downloading the Gibbed Dead Rising 2 .big unpack/repack tool. \n\nDo you want to continue?", "Warning", MessageBoxButtons.YesNo);
 
         if (result == DialogResult.Yes)
         {
@@ -517,11 +515,12 @@ public partial class F_ItemRandomiser : Form
     }
     private void tsm_Credits_Click(object sender, EventArgs e)
     {
-        MessageBox.Show("Randomizer created by Fairy With a Pan \n .big file Unpacker\\Packer Made by Rick Gibbed", "Credits");
+        MessageBox.Show("Randomizer created by Fairy With a Pan \n.big file Unpacker\\Packer Made by Rick Gibbed", "Credits");
     }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
-        Application.Exit();
+        var messageReult = MessageBox.Show("Exit program?", "Exit", MessageBoxButtons.YesNo);
+        if (messageReult == DialogResult.Yes) { Application.Exit(); }
     }
     private void GetAllItemStatData()
     {
