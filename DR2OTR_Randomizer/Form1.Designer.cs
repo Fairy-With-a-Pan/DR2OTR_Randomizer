@@ -63,13 +63,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_ItemRandomiser));
             menuStrip1 = new MenuStrip();
             tsm_File = new ToolStripMenuItem();
-            tsm_open = new ToolStripMenuItem();
+            tsm_openRoot = new ToolStripMenuItem();
+            tsm_OpenUnpacked = new ToolStripMenuItem();
             tsm_ItemDataFile = new ToolStripMenuItem();
             tsm_SaveItemStats = new ToolStripMenuItem();
             tsm_OpenItemStats = new ToolStripMenuItem();
             tsm_Quit = new ToolStripMenuItem();
             tsm_Settings = new ToolStripMenuItem();
-            safeModeToolStripMenuItem = new ToolStripMenuItem();
+            tsm_SafeMode = new ToolStripMenuItem();
             tls_VendingAndShops = new ToolStripMenuItem();
             tls_RandomSpawns = new ToolStripMenuItem();
             tls_RandomKeys = new ToolStripMenuItem();
@@ -153,6 +154,7 @@
             statInGameNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             fbd_StatSaveFolder = new FolderBrowserDialog();
             toolTip1 = new ToolTip(components);
+            fbd_UnpackedFolder = new FolderBrowserDialog();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)itemsDataTableBindingSource).BeginInit();
             tc_TabWindows.SuspendLayout();
@@ -183,17 +185,24 @@
             // 
             // tsm_File
             // 
-            tsm_File.DropDownItems.AddRange(new ToolStripItem[] { tsm_open, tsm_ItemDataFile, tsm_Quit });
+            tsm_File.DropDownItems.AddRange(new ToolStripItem[] { tsm_openRoot, tsm_OpenUnpacked, tsm_ItemDataFile, tsm_Quit });
             tsm_File.Name = "tsm_File";
             tsm_File.Size = new Size(37, 20);
             tsm_File.Text = "File";
             // 
-            // tsm_open
+            // tsm_openRoot
             // 
-            tsm_open.Name = "tsm_open";
-            tsm_open.Size = new Size(207, 22);
-            tsm_open.Text = "Open DR2OTR root folder";
-            tsm_open.Click += tsm_open_Click;
+            tsm_openRoot.Name = "tsm_openRoot";
+            tsm_openRoot.Size = new Size(207, 22);
+            tsm_openRoot.Text = "Open DR2OTR root folder";
+            tsm_openRoot.Click += Tsm_open_Click;
+            // 
+            // tsm_OpenUnpacked
+            // 
+            tsm_OpenUnpacked.Name = "tsm_OpenUnpacked";
+            tsm_OpenUnpacked.Size = new Size(207, 22);
+            tsm_OpenUnpacked.Text = "Open Unpacked datafile";
+            tsm_OpenUnpacked.Click += Tsm_Open_Unpacked_Click;
             // 
             // tsm_ItemDataFile
             // 
@@ -207,35 +216,35 @@
             tsm_SaveItemStats.Name = "tsm_SaveItemStats";
             tsm_SaveItemStats.Size = new Size(178, 22);
             tsm_SaveItemStats.Text = "Save ItemsStats.xml";
-            tsm_SaveItemStats.Click += tsm_SaveItemStats_Click;
+            tsm_SaveItemStats.Click += Tsm_SaveItemStats_Click;
             // 
             // tsm_OpenItemStats
             // 
             tsm_OpenItemStats.Name = "tsm_OpenItemStats";
             tsm_OpenItemStats.Size = new Size(178, 22);
             tsm_OpenItemStats.Text = "Open ItemStats.xml";
-            tsm_OpenItemStats.Click += tsm_OpenItemStats_Click;
+            tsm_OpenItemStats.Click += Tsm_OpenItemStats_Click;
             // 
             // tsm_Quit
             // 
             tsm_Quit.Name = "tsm_Quit";
             tsm_Quit.Size = new Size(207, 22);
             tsm_Quit.Text = "Quit";
-            tsm_Quit.Click += tsm_Quit_Click;
+            tsm_Quit.Click += Tsm_Quit_Click;
             // 
             // tsm_Settings
             // 
-            tsm_Settings.DropDownItems.AddRange(new ToolStripItem[] { safeModeToolStripMenuItem, tls_VendingAndShops });
+            tsm_Settings.DropDownItems.AddRange(new ToolStripItem[] { tsm_SafeMode, tls_VendingAndShops });
             tsm_Settings.Name = "tsm_Settings";
             tsm_Settings.Size = new Size(61, 20);
             tsm_Settings.Text = "Settings";
             // 
-            // safeModeToolStripMenuItem
+            // tsm_SafeMode
             // 
-            safeModeToolStripMenuItem.Name = "safeModeToolStripMenuItem";
-            safeModeToolStripMenuItem.Size = new Size(218, 22);
-            safeModeToolStripMenuItem.Text = "Safe Mode Enabled";
-            safeModeToolStripMenuItem.Click += safeModeToolStripMenuItem_Click;
+            tsm_SafeMode.Name = "tsm_SafeMode";
+            tsm_SafeMode.Size = new Size(218, 22);
+            tsm_SafeMode.Text = "Safe Mode Enabled";
+            tsm_SafeMode.Click += Tsm_Safemode_Click;
             // 
             // tls_VendingAndShops
             // 
@@ -243,6 +252,7 @@
             tls_VendingAndShops.Name = "tls_VendingAndShops";
             tls_VendingAndShops.Size = new Size(218, 22);
             tls_VendingAndShops.Text = "Vending, Shop and Vehicles";
+            tls_VendingAndShops.DropDown.Closing += On_tsm_Settings_Close;
             // 
             // tls_RandomSpawns
             // 
@@ -282,14 +292,14 @@
             tsm_Credits.Name = "tsm_Credits";
             tsm_Credits.Size = new Size(189, 22);
             tsm_Credits.Text = "Credits";
-            tsm_Credits.Click += tsm_Credits_Click;
+            tsm_Credits.Click += Tsm_Credits_Click;
             // 
             // tsm_Unpacker
             // 
             tsm_Unpacker.Name = "tsm_Unpacker";
             tsm_Unpacker.Size = new Size(189, 22);
             tsm_Unpacker.Text = "Gibbed DR2 Unpacker";
-            tsm_Unpacker.Click += tsm_Unpacker_Click;
+            tsm_Unpacker.Click += Tsm_Unpacker_Click;
             // 
             // tc_TabWindows
             // 
@@ -331,7 +341,7 @@
             bt_Pack.Text = "Pack Datafile";
             toolTip1.SetToolTip(bt_Pack, "tessst");
             bt_Pack.UseVisualStyleBackColor = true;
-            bt_Pack.Click += bt_Pack_PackDatafile;
+            bt_Pack.Click += Bt_Pack_PackDatafile;
             // 
             // l_MainDec
             // 
@@ -427,7 +437,7 @@
             dgv_AllItems.ShowEditingIcon = false;
             dgv_AllItems.Size = new Size(345, 404);
             dgv_AllItems.TabIndex = 30;
-            dgv_AllItems.CellContentClick += dgv_VhicleCheck_Click;
+            dgv_AllItems.CellContentClick += Dgv_VhicleCheck_Click;
             // 
             // pictureBox1
             // 
@@ -445,7 +455,7 @@
             tb_ItemsSearch.PlaceholderText = "Search All (Use #Enabled to show all enabled and there tags)";
             tb_ItemsSearch.Size = new Size(359, 23);
             tb_ItemsSearch.TabIndex = 27;
-            tb_ItemsSearch.TextChanged += tb_ItemsSearch_TextChanged;
+            tb_ItemsSearch.TextChanged += Tb_ItemsSearch_TextChanged;
             tb_ItemsSearch.KeyPress += ItemSearchBoxValidate;
             // 
             // b_Randomise
@@ -456,7 +466,7 @@
             b_Randomise.TabIndex = 25;
             b_Randomise.Text = "Randomise With Selected Items";
             b_Randomise.UseVisualStyleBackColor = true;
-            b_Randomise.Click += b_Randomise_Click;
+            b_Randomise.Click += B_Randomise_Click;
             // 
             // b_DeselectAll
             // 
@@ -466,7 +476,7 @@
             b_DeselectAll.TabIndex = 24;
             b_DeselectAll.Text = "Uncheck All Items";
             b_DeselectAll.UseVisualStyleBackColor = true;
-            b_DeselectAll.Click += b_DeselectAll_Click;
+            b_DeselectAll.Click += B_DeselectAll_Click;
             // 
             // b_ToggleAll
             // 
@@ -476,7 +486,7 @@
             b_ToggleAll.TabIndex = 23;
             b_ToggleAll.Text = "Toggle All Visable";
             b_ToggleAll.UseVisualStyleBackColor = true;
-            b_ToggleAll.Click += b_ToggleAll_Click;
+            b_ToggleAll.Click += B_ToggleAll_Click;
             // 
             // tc_Items
             // 
@@ -504,7 +514,7 @@
             tc_Items.SelectedIndex = 0;
             tc_Items.Size = new Size(709, 47);
             tc_Items.TabIndex = 19;
-            tc_Items.Click += tc_Items_SelectedTab;
+            tc_Items.Click += Tc_Items_SelectedTab;
             // 
             // tp_AllItems
             // 
@@ -739,7 +749,7 @@
             bt_itemStatsToggleAll.TabIndex = 6;
             bt_itemStatsToggleAll.Text = "Toggle All Visable Stats";
             bt_itemStatsToggleAll.UseVisualStyleBackColor = true;
-            bt_itemStatsToggleAll.Click += bt_itemStatsToggleAll_Click;
+            bt_itemStatsToggleAll.Click += Bt_itemStatsToggleAll_Click;
             // 
             // dgv_ItemStatsTable
             // 
@@ -791,9 +801,9 @@
             dgv_ItemStatsTable.ShowEditingIcon = false;
             dgv_ItemStatsTable.Size = new Size(699, 391);
             dgv_ItemStatsTable.TabIndex = 0;
-            dgv_ItemStatsTable.CellMouseClick += dgv_itemStatTabel_CellSelected;
-            dgv_ItemStatsTable.DataError += dataGridView1_DataError;
-            dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
+            dgv_ItemStatsTable.CellMouseClick += Dgv_itemStatTabel_CellSelected;
+            dgv_ItemStatsTable.DataError += Dgv_ItemStatsTable_DataError;
+            dgv_ItemStatsTable.EditingControlShowing += Dgv_ItemStatsTable_EditingControlShowing;
             // 
             // statStateDataGridViewCheckBoxColumn
             // 
@@ -878,7 +888,7 @@
             bt_NPC_Model_Randomizer.TabIndex = 4;
             bt_NPC_Model_Randomizer.Text = "Randomize NPC Models";
             bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
-            bt_NPC_Model_Randomizer.Click += bt_NPC_Model_Randomizer_Click;
+            bt_NPC_Model_Randomizer.Click += Bt_NPC_Model_Randomizer_Click;
             // 
             // bt_ItenStatsSet
             // 
@@ -888,7 +898,7 @@
             bt_ItenStatsSet.TabIndex = 2;
             bt_ItenStatsSet.Text = "Randomize Selected Stats";
             bt_ItenStatsSet.UseVisualStyleBackColor = true;
-            bt_ItenStatsSet.Click += bt_ItenStatsSet_Click;
+            bt_ItenStatsSet.Click += Bt_ItenStatsSet_Click;
             // 
             // tc_itemStats
             // 
@@ -904,7 +914,7 @@
             tc_itemStats.SelectedIndex = 0;
             tc_itemStats.Size = new Size(703, 415);
             tc_itemStats.TabIndex = 1;
-            tc_itemStats.Click += tc_itemStats_SelectedTab;
+            tc_itemStats.Click += Tc_itemStats_SelectedTab;
             // 
             // tp_IS_VehicleStats
             // 
@@ -1000,7 +1010,7 @@
             tb_US_SearchBox.PlaceholderText = "Search All (Use # to search tags and #Enabled for all enabled)";
             tb_US_SearchBox.Size = new Size(339, 23);
             tb_US_SearchBox.TabIndex = 25;
-            tb_US_SearchBox.TextChanged += tb_US_ItemSearch_TextChanged;
+            tb_US_SearchBox.TextChanged += Tb_US_ItemSearch_TextChanged;
             tb_US_SearchBox.KeyPress += ItemSearchBoxValidate;
             // 
             // dgv_US_Items
@@ -1057,7 +1067,7 @@
             bt_IS_UnstableUncheck.TabIndex = 24;
             bt_IS_UnstableUncheck.Text = "Uncheck all items";
             bt_IS_UnstableUncheck.UseVisualStyleBackColor = true;
-            bt_IS_UnstableUncheck.Click += b_DeselectAll_Click;
+            bt_IS_UnstableUncheck.Click += B_DeselectAll_Click;
             // 
             // bt_IS_UnstableToggle
             // 
@@ -1067,7 +1077,7 @@
             bt_IS_UnstableToggle.TabIndex = 23;
             bt_IS_UnstableToggle.Text = "Toggle all items";
             bt_IS_UnstableToggle.UseVisualStyleBackColor = true;
-            bt_IS_UnstableToggle.Click += bt_IS_UnstableToggle_Click;
+            bt_IS_UnstableToggle.Click += Bt_IS_UnstableToggle_Click;
             // 
             // gb_US_NPCItems
             // 
@@ -1256,7 +1266,7 @@
         #endregion
         private MenuStrip menuStrip1;
         private ToolStripMenuItem tsm_File;
-        private ToolStripMenuItem tsm_open;
+        private ToolStripMenuItem tsm_openRoot;
         private ToolStripMenuItem tsm_Settings;
         private ToolStripMenuItem tsm_About;
         private ToolStripMenuItem tsm_Quit;
@@ -1269,7 +1279,7 @@
         private FolderBrowserDialog fbd_DataFileFolder;
         private TextBox tb_ItemsSearch;
         private Button bt_ItenStatsSet;
-        private global::System.Windows.Forms.ToolStripMenuItem safeModeToolStripMenuItem;
+        private global::System.Windows.Forms.ToolStripMenuItem tsm_SafeMode;
         private global::System.Windows.Forms.Button bt_NPC_Model_Randomizer;
         private global::System.Windows.Forms.Label l_SafeMode_Text;
         private global::System.Windows.Forms.TabControl tc_itemStats;
@@ -1348,5 +1358,7 @@
         private ToolStripMenuItem tls_RandomKeys;
         private ToolStripMenuItem tls_KeepVhicles;
         private Button bt_itemStatsToggleAll;
+        private ToolStripMenuItem tsm_OpenUnpacked;
+        private FolderBrowserDialog fbd_UnpackedFolder;
     }
 }
