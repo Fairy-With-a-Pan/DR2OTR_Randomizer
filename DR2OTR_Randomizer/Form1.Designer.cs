@@ -111,6 +111,7 @@
             tp_Special = new TabPage();
             tp_Vehicles = new TabPage();
             tp_WitemsStats = new TabPage();
+            bt_itemStatsToggleAll = new Button();
             dgv_ItemStatsTable = new DataGridView();
             statStateDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             statNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -249,7 +250,7 @@
             tls_RandomSpawns.Name = "tls_RandomSpawns";
             tls_RandomSpawns.Size = new Size(202, 22);
             tls_RandomSpawns.Text = "Random Spawned Items";
-            tls_RandomSpawns.ToolTipText = "Randomizes vending machine and pawnshop purchase can cause soft locking and crashing. (Most items do spawn in the pawn shop)";
+            tls_RandomSpawns.ToolTipText = "Randomizes vending machines and pawn shops can cause soft locking and crashing\r\n(Most items do not spawn in the pawn shop).";
             // 
             // tls_RandomKeys
             // 
@@ -299,7 +300,6 @@
             tc_TabWindows.SelectedIndex = 0;
             tc_TabWindows.Size = new Size(726, 500);
             tc_TabWindows.TabIndex = 23;
-            tc_TabWindows.Click += tc_TabWindowsTabSelect;
             // 
             // tp_WItemRandom
             // 
@@ -324,14 +324,14 @@
             // 
             // bt_Pack
             // 
-            bt_Pack.Location = new Point(352, 332);
+            bt_Pack.Location = new Point(353, 324);
             bt_Pack.Name = "bt_Pack";
             bt_Pack.Size = new Size(95, 59);
             bt_Pack.TabIndex = 33;
             bt_Pack.Text = "Pack Datafile";
             toolTip1.SetToolTip(bt_Pack, "tessst");
             bt_Pack.UseVisualStyleBackColor = true;
-            bt_Pack.Click += button2_Click;
+            bt_Pack.Click += bt_Pack_PackDatafile;
             // 
             // l_MainDec
             // 
@@ -427,6 +427,7 @@
             dgv_AllItems.ShowEditingIcon = false;
             dgv_AllItems.Size = new Size(345, 404);
             dgv_AllItems.TabIndex = 30;
+            dgv_AllItems.CellContentClick += dgv_VhicleCheck_Click;
             // 
             // pictureBox1
             // 
@@ -445,6 +446,7 @@
             tb_ItemsSearch.Size = new Size(359, 23);
             tb_ItemsSearch.TabIndex = 27;
             tb_ItemsSearch.TextChanged += tb_ItemsSearch_TextChanged;
+            tb_ItemsSearch.KeyPress += ItemSearchBoxValidate;
             // 
             // b_Randomise
             // 
@@ -715,6 +717,7 @@
             // tp_WitemsStats
             // 
             tp_WitemsStats.AutoScroll = true;
+            tp_WitemsStats.Controls.Add(bt_itemStatsToggleAll);
             tp_WitemsStats.Controls.Add(dgv_ItemStatsTable);
             tp_WitemsStats.Controls.Add(l_ItemStat_Dec);
             tp_WitemsStats.Controls.Add(bt_NPC_Model_Randomizer);
@@ -727,6 +730,16 @@
             tp_WitemsStats.TabIndex = 1;
             tp_WitemsStats.Text = "Items Stats";
             tp_WitemsStats.UseVisualStyleBackColor = true;
+            // 
+            // bt_itemStatsToggleAll
+            // 
+            bt_itemStatsToggleAll.Location = new Point(10, 6);
+            bt_itemStatsToggleAll.Name = "bt_itemStatsToggleAll";
+            bt_itemStatsToggleAll.Size = new Size(110, 41);
+            bt_itemStatsToggleAll.TabIndex = 6;
+            bt_itemStatsToggleAll.Text = "Toggle All Visable Stats";
+            bt_itemStatsToggleAll.UseVisualStyleBackColor = true;
+            bt_itemStatsToggleAll.Click += bt_itemStatsToggleAll_Click;
             // 
             // dgv_ItemStatsTable
             // 
@@ -743,8 +756,8 @@
             dataGridViewCellStyle4.BackColor = SystemColors.Control;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dgv_ItemStatsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgv_ItemStatsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -779,7 +792,6 @@
             dgv_ItemStatsTable.Size = new Size(699, 391);
             dgv_ItemStatsTable.TabIndex = 0;
             dgv_ItemStatsTable.CellMouseClick += dgv_itemStatTabel_CellSelected;
-            dgv_ItemStatsTable.ColumnHeaderMouseClick += dgv_ItemStatsTable_ColumnHeaderClicked;
             dgv_ItemStatsTable.DataError += dataGridView1_DataError;
             dgv_ItemStatsTable.EditingControlShowing += dataGridView1_EditingControlShowing;
             // 
@@ -860,9 +872,9 @@
             // 
             // bt_NPC_Model_Randomizer
             // 
-            bt_NPC_Model_Randomizer.Location = new Point(176, 6);
+            bt_NPC_Model_Randomizer.Location = new Point(230, 6);
             bt_NPC_Model_Randomizer.Name = "bt_NPC_Model_Randomizer";
-            bt_NPC_Model_Randomizer.Size = new Size(160, 41);
+            bt_NPC_Model_Randomizer.Size = new Size(110, 41);
             bt_NPC_Model_Randomizer.TabIndex = 4;
             bt_NPC_Model_Randomizer.Text = "Randomize NPC Models";
             bt_NPC_Model_Randomizer.UseVisualStyleBackColor = true;
@@ -870,9 +882,9 @@
             // 
             // bt_ItenStatsSet
             // 
-            bt_ItenStatsSet.Location = new Point(10, 6);
+            bt_ItenStatsSet.Location = new Point(120, 6);
             bt_ItenStatsSet.Name = "bt_ItenStatsSet";
-            bt_ItenStatsSet.Size = new Size(160, 41);
+            bt_ItenStatsSet.Size = new Size(110, 41);
             bt_ItenStatsSet.TabIndex = 2;
             bt_ItenStatsSet.Text = "Randomize Selected Stats";
             bt_ItenStatsSet.UseVisualStyleBackColor = true;
@@ -989,6 +1001,7 @@
             tb_US_SearchBox.Size = new Size(339, 23);
             tb_US_SearchBox.TabIndex = 25;
             tb_US_SearchBox.TextChanged += tb_US_ItemSearch_TextChanged;
+            tb_US_SearchBox.KeyPress += ItemSearchBoxValidate;
             // 
             // dgv_US_Items
             // 
@@ -1044,7 +1057,7 @@
             bt_IS_UnstableUncheck.TabIndex = 24;
             bt_IS_UnstableUncheck.Text = "Uncheck all items";
             bt_IS_UnstableUncheck.UseVisualStyleBackColor = true;
-            bt_IS_UnstableUncheck.Click += bt_IS_UnstableUncheck_Click;
+            bt_IS_UnstableUncheck.Click += b_DeselectAll_Click;
             // 
             // bt_IS_UnstableToggle
             // 
@@ -1334,5 +1347,6 @@
         private ToolStripMenuItem tls_RandomSpawns;
         private ToolStripMenuItem tls_RandomKeys;
         private ToolStripMenuItem tls_KeepVhicles;
+        private Button bt_itemStatsToggleAll;
     }
 }

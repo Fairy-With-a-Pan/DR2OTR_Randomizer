@@ -4,12 +4,14 @@ using DR2OTR_Randomizer.Resources;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace DR2OTR_Randomizer;
 
 public partial class F_ItemRandomiser : Form
 {
+    //Makes a list for each of the stat category for the xml file
     public List<ItemStatsData> VheicleStatData { get; set; }
     public List<ItemStatsData> NPCStatData { get; set; }
     public List<ItemStatsData> WorldStatsData { get; set; }
@@ -18,13 +20,13 @@ public partial class F_ItemRandomiser : Form
     public List<ItemStatsData> FoodAndDamageData { get; set; }
 
 
-    //storeing these to skip stats
-    //that cause items to crash the or break the item
+    //Lines that cause crashing and will be skipped if safe mode is on
     int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20048, 20064, 20136,
         20152, 20243, 20259, 20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625,
         78689, 78761, };
+    //The lines for the vending machine and pawn shops
     int[] spawnedItems = {
         33241, 33266, 33290, 33314, 33338, 33362, 33387, 33412, 33502, 33526, 33550, 33574, 33598, 33623, 33648, 33672, 33697,
         33722, 33747, 33772, 33796, 33820, 33878, 33902, 33926, 33950, 33974, 33999, 34024, 34048, 34072, 34096, 34120, 34144,
@@ -32,9 +34,10 @@ public partial class F_ItemRandomiser : Form
         34590, 34614, 34638, 34663, 34688, 34713, 34737, 34762, 34820, 34845, 34871, 34897, 34922, 34947, 34971,  33438, 33471,
         111133, 111184 ,111236 ,111287 ,111336 ,111363 ,111391 ,111423 ,111451 ,111479 ,111509, 33847, };
     bool safeMode = true;
-    string path;
+    bool warningMsgShow = true;
+    string datafilePath;
 
-    readonly UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
+    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
     AllItemStatData statData = new AllItemStatData();
     AllItemDataTable itemDataTable = new AllItemDataTable();
     LevelsLines levelLines = new LevelsLines();
@@ -46,18 +49,18 @@ public partial class F_ItemRandomiser : Form
 
     public F_ItemRandomiser()
     {
-        //gets all of the statdata stored inside the AllItemStatData
-        //Most likely move over to a xml file for storing this
+        //Gets and sets all the data from the ItemStatData.xml to the stats lists
         GetAllItemStatData();
 
         allitemsTable = itemDataTable.SetAllItemData();
         allUnStableitemsTable = itemDataTable.SetAllItemData();
 
         InitializeComponent();
-        //use this to catch if the Allitems or npcmodels file is missing
+        //use this to catch if any files are missing
         try
         {
             File.Exists($"{Application.StartupPath}\\Resources\\AllItemData.xml");
+            File.Exists($"{Application.StartupPath}\\Resources\\ItemStatData.xml");
             File.Exists($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
         }
         catch (FileNotFoundException e)
@@ -91,14 +94,9 @@ public partial class F_ItemRandomiser : Form
         dataGrid.Columns[2].Visible = false;
         dataGrid.Columns[2].ReadOnly = true;
     }
-    private void tc_TabWindowsTabSelect(object sender, EventArgs e)
-    {
-        //changes the current selected cell to not cause issues
-        //with check state and it not updating the check state
-        dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
-    }
     private void On_tsm_Settings_Close(object sender, ToolStripDropDownClosingEventArgs e)
     {
+        //stops the settings menu from closing when check one of the items
         if (e.CloseReason == ToolStripDropDownCloseReason.ItemClicked)
         {
             e.Cancel = true;
@@ -106,28 +104,32 @@ public partial class F_ItemRandomiser : Form
     }
     private void b_DeselectAll_Click(object sender, EventArgs e)
     {
+
         //Get the current filter and store it to later reapply it
         //Remove any filters form the table
         //Then gose through the allitems datatable rows
         //And sets each cell[0] that are bools to false
         //Then reapplys the filter storted from the start
-        string storedFilter = allItemDataSource.Filter;
-        allItemDataSource.RemoveFilter();
-        for (int i = 0; i < allitemsTable.Rows.Count; i++)
+        if (sender == b_DeselectAll)
         {
-            dgv_AllItems.Rows[i].Cells[0].Value = false;
+            string storedFilter = allItemDataSource.Filter;
+            allItemDataSource.RemoveFilter();
+            for (int i = 0; i < dgv_AllItems.Rows.Count; i++)
+            {
+                dgv_AllItems.Rows[i].Cells[0].Value = false;
+            }
+            allItemDataSource.Filter = storedFilter;
         }
-        allItemDataSource.Filter = storedFilter;
-    }
-    private void bt_IS_UnstableUncheck_Click(object sender, EventArgs e)
-    {
-        string storedFillter = allUnstableItemSource.Filter;
-        allUnstableItemSource.RemoveFilter();
-        for (int i = 0; i < allUnstableItemSource.Count; i++)
+        if (sender == bt_IS_UnstableUncheck)
         {
-            dgv_US_Items.Rows[i].Cells[0].Value = false;
+            string storedFillter = allUnstableItemSource.Filter;
+            allUnstableItemSource.RemoveFilter();
+            for (int i = 0; i < allUnstableItemSource.Count; i++)
+            {
+                dgv_US_Items.Rows[i].Cells[0].Value = false;
+            }
+            allUnstableItemSource.Filter = storedFillter;
         }
-        allUnstableItemSource.Filter = storedFillter;
     }
     private void b_ToggleAll_Click(object sender, EventArgs e)
     {
@@ -144,15 +146,11 @@ public partial class F_ItemRandomiser : Form
     {
         //sets the path of the datafile folder that as been unpacked
         fbd_DataFileFolder.ShowDialog();
-        path = gibbedTools.Unpack($"{fbd_DataFileFolder.SelectedPath}");
+        datafilePath = gibbedTools.Unpack($"{fbd_DataFileFolder.SelectedPath}");
     }
     private void tb_ItemsSearch_TextChanged(object sender, EventArgs e)
     {
-        //do this to prevent a crash related to the ' charcter in filtering
-        if (tb_ItemsSearch.Text.Contains("'"))
-        {
-            tb_ItemsSearch.Text = "";
-        }
+
         //Searches all items in the item data source
         if (tb_ItemsSearch.Text.StartsWith("#"))
         {
@@ -169,19 +167,15 @@ public partial class F_ItemRandomiser : Form
         else
         {
             //hides the tag column when the # is removed and will
-            //only search for item name
             dgv_AllItems.Columns[1].Width = 250;
             dgv_AllItems.Columns[2].Visible = false;
+            //only search for item name and keeps the current
+            //ItemTag from the current tab tag
             allItemDataSource.Filter = $"ItemName LIKE '*{tb_ItemsSearch.Text}*' AND ItemTag LIKE '*{tc_Items.SelectedTab.Tag}*'";
         }
     }
     private void tb_US_ItemSearch_TextChanged(object sender, EventArgs e)
     {
-        //do this to prevent a crash related to the ' charcter in filtering
-        if (tb_US_SearchBox.Text.Contains("'"))
-        {
-            tb_US_SearchBox.Text = "";
-        }
         //Adding a search character for the unstable items to search though the 
         //tags due to there being no tags button/tabs
         if (tb_US_SearchBox.Text.Trim().StartsWith('#'))
@@ -208,7 +202,7 @@ public partial class F_ItemRandomiser : Form
         //Used to eanble/disable safe mode and change the text to show if it is enabled
         if (safeMode)
         {
-            var result = MessageBox.Show("Disabling safe mode will randomize item stats that can cause that item to bug or crash the game. \n\t\t\tDo you wish to continue?", "Warning", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Disabling safe mode will randomize item's stats that can cause the game to crash or cause some items to be unusable. \n\t\t\tDo you wish to continue?", "Warning", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 safeMode = false;
@@ -228,16 +222,16 @@ public partial class F_ItemRandomiser : Form
     private void bt_NPC_Model_Randomizer_Click(object sender, EventArgs e)
     {
         //dose a check to see if items.txt can be found if cant it will return
-        if (!File.Exists($"{path}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
+        if (!File.Exists($"{datafilePath}\\items.txt")) { MessageBox.Show("Could not find items.txt", "Warning"); return; }
         //Adds each line from the items.txt file to an array
-        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        string[] itemFile = File.ReadAllLines($"{datafilePath}\\items.txt");
         var confirmResults = MessageBox.Show
             ("This will change all NPC models apart from TK and Snow Flake." +
             "\n\n\tAre you sure you want to change NPC models?", "Warning", MessageBoxButtons.YesNo);
         if (confirmResults == DialogResult.Yes)
         {
             RandomizeNPCModels(itemFile);
-            File.WriteAllLines($"{path}\\items.txt", itemFile);
+            File.WriteAllLines($"{datafilePath}\\items.txt", itemFile);
         }
         else
         {
@@ -247,6 +241,8 @@ public partial class F_ItemRandomiser : Form
     private void tc_Items_SelectedTab(object sender, EventArgs e)
     {
         string tabPageTag = "";
+        //gets the current tab page tag and sets it to the string
+        //the tabpages tags are the same as the ItemTags for filtering
         if (tc_Items.SelectedTab.Name != "tp_AllItems")
         {
             tabPageTag = (string)tc_Items.SelectedTab.Tag;
@@ -318,32 +314,27 @@ public partial class F_ItemRandomiser : Form
     }
     private void tc_itemStats_SelectedTab(object sender, EventArgs e)
     {
-        //when changing tab the selected cell will move over 1 so there is no issues with tolggle them
+        //when changing tab the selected cell will move over 1
+        //so there is no issues with tolggle the first item
         switch (tc_itemStats.SelectedTab.Name)
         {
             case "tp_IS_VehicleStats":
                 dgv_ItemStatsTable.DataSource = VheicleStatData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_IS_NPC":
                 dgv_ItemStatsTable.DataSource = NPCStatData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.CurrentRow.Cells[1];
                 break;
             case "tp_IS_FireArms":
                 dgv_ItemStatsTable.DataSource = FireArmsStatData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_IS_WorldStats":
                 dgv_ItemStatsTable.DataSource = WorldStatsData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_IS_ExplosivesSpray":
                 dgv_ItemStatsTable.DataSource = ExplosiveStatData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
             case "tp_IS_FoodDamage":
                 dgv_ItemStatsTable.DataSource = FoodAndDamageData;
-                dgv_ItemStatsTable.CurrentCell = dgv_ItemStatsTable.Rows[0].Cells[1];
                 break;
         }
         //If the unstable tab is selected send the item stats data
@@ -352,10 +343,9 @@ public partial class F_ItemRandomiser : Form
         { dgv_ItemStatsTable.SendToBack(); }
         else { dgv_ItemStatsTable.BringToFront(); }
     }
-    private void dgv_ItemStatsTable_ColumnHeaderClicked(object sender, DataGridViewCellMouseEventArgs e)
+    private void bt_itemStatsToggleAll_Click(object sender, EventArgs e)
     {
-        //If the header is clicked on the item stat data grid this
-        //will toggle the check state on the current item stats
+        //toggles currently visable item stats
         foreach (DataGridViewRow row in dgv_ItemStatsTable.Rows)
         {
             var objectToBool = Convert.ToBoolean(row.Cells[0].Value);
@@ -400,26 +390,26 @@ public partial class F_ItemRandomiser : Form
         List<string> allItems = new List<string>();
 
         GetItemsToRandomize(allItems);
-        //Stop here if no items have been checked and added to the list
+        //Returns if no items have been checked and added to the list
         if (allItems.Count <= 0) { MessageBox.Show("No items have been selected", "Warning"); return; }
         //Changes the needed lines inside the item txt file
         //to prevent crashing and soft locking
-        SoftLockAndCrashPrevent(b_Randomise.Text, allItems);
+        SoftLockAndCrashPrevent(b_Randomise.Text);
         RandomizeGameItems(allItems);
     }
     private void bt_ItenStatsSet_Click(object sender, EventArgs e)
     {
         //Checks to see if the item.txt\mission file can be found if not it will return with a warning message
-        if (!File.Exists($"{path}\\items.txt") || !File.Exists($"{path}\\missions.txt"))
+        if (!File.Exists($"{datafilePath}\\items.txt") || !File.Exists($"{datafilePath}\\missions.txt"))
         { MessageBox.Show("Could not find item.txt and mission.txt", "Warning"); return; }
-        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
-        string[] missionFile = File.ReadAllLines($"{path}\\missions.txt");
+        //Reads the 2 files that will be randomized and stores each line in an aray
+        string[] itemFile = File.ReadAllLines($"{datafilePath}\\items.txt");
+        string[] missionFile = File.ReadAllLines($"{datafilePath}\\missions.txt");
 
         RandomizeUnstableStats(itemFile, missionFile);
         RandomizeItemStats(itemFile);
 
-        //passesing a null overide for this button as a list is not needed
-        SoftLockAndCrashPrevent(bt_ItenStatsSet.Text, null);
+        SoftLockAndCrashPrevent(bt_ItenStatsSet.Text);
         MessageBox.Show("Item stats have successfully been randomized", "Success");
     }
     private void dgv_itemStatTabel_CellSelected(object sender, DataGridViewCellMouseEventArgs e)
@@ -517,10 +507,23 @@ public partial class F_ItemRandomiser : Form
     {
         MessageBox.Show("Randomizer created by Fairy With a Pan \n.big file Unpacker\\Packer Made by Rick Gibbed", "Credits");
     }
+    private void bt_Pack_PackDatafile(object sender, EventArgs e)
+    {
+        gibbedTools.Pack();
+    }
     private void tsm_Quit_Click(object sender, EventArgs e)
     {
         var messageReult = MessageBox.Show("Exit program?", "Exit", MessageBoxButtons.YesNo);
         if (messageReult == DialogResult.Yes) { Application.Exit(); }
+    }
+    private void ItemSearchBoxValidate(object sender, KeyPressEventArgs e)
+    {
+        //Stop any unwanted characters getting entered in to the textboxes to stop crashes
+        var regex = new Regex(@"[^a-zA-Z0-9_#\b\s]");
+        if (regex.IsMatch(e.KeyChar.ToString()))
+        {
+            e.Handled = true;
+        }
     }
     private void GetAllItemStatData()
     {
@@ -531,32 +534,26 @@ public partial class F_ItemRandomiser : Form
         ExplosiveStatData = (List<ItemStatsData>)statData.GetAllItemStatData()[4];
         FoodAndDamageData = (List<ItemStatsData>)statData.GetAllItemStatData()[5];
     }
-    private void SoftLockAndCrashPrevent(string buttonClicked, List<string>? Allitems)
+    private void SoftLockAndCrashPrevent(string buttonClicked)
     {
         List<string> missionFile = new List<string>();
         //checks to see if the mission txt is inside the path folder
-        if (!File.Exists($"{path}\\missions.txt")) { MessageBox.Show("No mission.txt file found", "Warning"); return; }
-        missionFile.AddRange(File.ReadAllLines($"{path}\\missions.txt"));
-        bool showOnce = false;
+        if (!File.Exists($"{datafilePath}\\missions.txt")) { MessageBox.Show("No mission.txt file found", "Warning"); return; }
+        missionFile.AddRange(File.ReadAllLines($"{datafilePath}\\missions.txt"));
         //This will stop overtime softlocking if the player reloads while in overtime
         if (buttonClicked == b_Randomise.Text)
         {
             for (int i = 0; i < allitemsTable.Rows.Count; i++)
             {
+                //Converts the check state in the Table to a bool for easier use
                 bool checkState = Convert.ToBoolean(allitemsTable.Rows[i].ItemArray[0]);
-                //Checks if any Key items have been selected and will
-                //clear the line that requirse the player to collect
-                //all the items for TK in overtime. this will mean the
-                //user can go straight to the arnea once starting overtime
+                //Checks if any Key items have been selected
                 if (checkState && allitemsTable.Rows[i].ItemArray[2].ToString() == "KeyItems")
                 {
-                    missionFile[50046] = "";
-                }
-                if (checkState && allitemsTable.Rows[i].ItemArray[2].ToString() == "Vehicles" && !showOnce)
-                {
-                    MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
-                    //Stops the mesagebox from showing more then once
-                    showOnce = true;
+                    //if keyitems have been selected then it will change the line 
+                    //that handels overtime to this to stop softlocking from not been
+                    //able to open the backstage arena doors
+                    missionFile[50046] = "\tPrerequisiteMission = \"Zombrex5\"";
                 }
             }
         }
@@ -566,20 +563,31 @@ public partial class F_ItemRandomiser : Form
             missionFile[30323] = "\t\t\t\t\tWithProp = \"BobsToy\"";
             missionFile[30332] = "\t\t\t\t\tWithProp = \"BobsToy\"";
         }
-        File.WriteAllLines($"{path}\\missions.txt", missionFile);
+        File.WriteAllLines($"{datafilePath}\\missions.txt", missionFile);
+    }
+    private void dgv_VhicleCheck_Click(object sender, DataGridViewCellEventArgs e)
+    {
+        //checks if the waring message as been showen once then if not
+        //will show it then will stop it from be showen again
+        if (!warningMsgShow) { return; }
+        dgv_AllItems.CommitEdit(DataGridViewDataErrorContexts.Commit);
+        if (dgv_AllItems.CurrentRow.Cells[0].Value.ToString() == "True" &&
+            dgv_AllItems.CurrentRow.Cells[2].Value.ToString() == "Vehicles")
+        {
+            MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
+            warningMsgShow = false;
+        }
     }
     private void ToogleAllItemsCheckState(DataGridView dataGrid)
     {
         //stores the applied filter
+
         string storeFilter = allItemDataSource.Filter;
         for (int i = 0; i < dataGrid.Rows.Count; i++)
         {
-            //Gets the each rows ItemState and converts them from check
-            //to a bool for easier use
-            //the data grid cells are changed to force the table to
-            //update changes to the enabled(ItemState) colloum
+            //Gets the each rows ItemState and converts them from
+            //check to a bool for easier use
             bool checkToBool = Convert.ToBoolean(dataGrid.Rows[i].Cells[0].Value);
-            dataGrid.CurrentCell = dataGrid.Rows[0].Cells[1];
             if (tb_ItemsSearch.Text.ToLower() == "#enabled")
             {
                 //Checks if filtering only for enabled items only
@@ -594,9 +602,13 @@ public partial class F_ItemRandomiser : Form
             {
                 checkToBool = !checkToBool;
                 dataGrid.Rows[i].Cells[0].Value = checkToBool;
+                if (dataGrid.Rows[i].Cells[2].Value.ToString() == "Vehicles"
+                    && warningMsgShow)
+                {
+                    MessageBox.Show("Having too many vehicles in one area can cause the game to be unstable or crash", "Warning");
+                    warningMsgShow = false;
+                }
             }
-            dataGrid.CurrentCell = null;
-
         }
         //reaplly any filters if removed
         allItemDataSource.Filter = storeFilter;
@@ -628,25 +640,25 @@ public partial class F_ItemRandomiser : Form
         int[] fortunExteriorVehicles = { 2816, 5626, 8037 };
 
         Random rand = new Random();
-        //Randomize the items that are spawned from vending machines
-        //and the spawn shops
-        //goese though each of the levels in side of the dictionary
+        //Randomize the items that are spawned from vending
+        //machines and the spawn shops goese though each of the
+        //levels in side of the dictionary
         foreach (LevelsLines level in levels)
         {
             //checks to see that the selected path has all the requied files
-            if (!File.Exists($"{path}\\{level.LevelFile}"))
+            if (!File.Exists($"{datafilePath}\\{level.LevelFile}"))
             {
                 //returns if it cant find any
                 MessageBox.Show($"Could not find {level.LevelFile} please check your datafile folder", "Warning");
                 return;
             }
             //gets the current level file in the dictionary with the level.Value is the same as the files name
-            string[] levelFile = File.ReadAllLines($"{path}\\{level.LevelFile}");
+            string[] levelFile = File.ReadAllLines($"{datafilePath}\\{level.LevelFile}");
             foreach (ListViewItem listOfLevels in lv_LevelsList.Items)
             {
-                //checks of the level is checked inside the listview
-                //and compares it to the current level inside of the
-                //levellines list if booth are true then it will randomize that level
+                //checks if the level is checked inside the listview and
+                //compares it to the current level inside of the levellines
+                //list if booth return true then it will randomize that level
                 if (listOfLevels.Checked == true &&
                     listOfLevels.Text == level.LevelName)
                 {
@@ -663,6 +675,8 @@ public partial class F_ItemRandomiser : Form
                             if (level.LevelName == "Uranus Zone" && line == 2464) { continue; }
                             if (level.LevelName == "Yucatan Casino" && line == 7629) { continue; }
                         }
+                        //selects a random item and splits the current line
+                        //to delet everything from the = to add the new item
                         int item = rand.Next(allItems.Count);
                         levelFile[line - 1] = levelFile[line - 1].Split('=')[0] + $"= {allItems[item]}";
                     }
@@ -670,7 +684,7 @@ public partial class F_ItemRandomiser : Form
             }
             //adds all the lines inside of the current selected level to an array
             //Writes all the lines inside of the levelfile array to the levels txt file
-            File.WriteAllLines($"{path}\\{level.LevelFile}", levelFile);
+            File.WriteAllLines($"{datafilePath}\\{level.LevelFile}", levelFile);
         }
         if (tls_RandomSpawns.Checked == true)
         {
@@ -685,7 +699,7 @@ public partial class F_ItemRandomiser : Form
     private void RandomizeSpawnedItems(List<string> allItems)
     {
         Random rand = new Random();
-        string[] itemFile = File.ReadAllLines($"{path}\\items.txt");
+        string[] itemFile = File.ReadAllLines($"{datafilePath}\\items.txt");
         //Stores the lines that have zombrex or vheicle keys in them
         int[] keysAndZombrexs = { 33438, 33471, 33847, 33412, 33648, 33772, 34024, 34897 };
         foreach (int itemLine in spawnedItems)
@@ -699,7 +713,7 @@ public partial class F_ItemRandomiser : Form
             int item = rand.Next(allItems.Count);
             itemFile[itemLine - 1] = itemFile[itemLine - 1].Split("=")[0] + $"= {allItems[item]}";
         }
-        File.WriteAllLines($"{path}\\items.txt", itemFile);
+        File.WriteAllLines($"{datafilePath}\\items.txt", itemFile);
     }
     private void RandomizeItemStats(string[] itemFile)
     {
@@ -736,7 +750,7 @@ public partial class F_ItemRandomiser : Form
                 }
             }
         }
-        File.WriteAllLines($"{path}\\items.txt", itemFile);
+        File.WriteAllLines($"{datafilePath}\\items.txt", itemFile);
     }
     private void RandomizeNPCModels(string[] itemFile)
     {
@@ -756,7 +770,6 @@ public partial class F_ItemRandomiser : Form
                 int randModel = rand.Next(npcModels.Count);
                 if (ignoreNPC.Contains(i)) { continue; }
                 itemFile[i] = $"\tAssetFilename = \"data/models/npcs/{npcModels[randModel]}\"";
-                Debug.WriteLine(itemFile[i]);
                 npcModels.Remove(npcModels[randModel]);
                 if (randModel <= 0)
                 {
@@ -799,7 +812,7 @@ public partial class F_ItemRandomiser : Form
                         itemFile[i].Split('=')[0] + $"= {allItems[randItem]}";
                 }
             }
-            File.WriteAllLines($"{path}\\items.txt", itemFile);
+            File.WriteAllLines($"{datafilePath}\\items.txt", itemFile);
         }
         if (cb_US_NPCItems.Checked)
         {
@@ -812,11 +825,8 @@ public partial class F_ItemRandomiser : Form
                         missionFile[i].Split('=')[0] + $"= {allItems[randItem]}";
                 }
             }
-            File.WriteAllLines($"{path}\\missions.txt", missionFile);
+            File.WriteAllLines($"{datafilePath}\\missions.txt", missionFile);
         }
     }
-    private void button2_Click(object sender, EventArgs e)
-    {
-        gibbedTools.Pack();
-    }
+
 }

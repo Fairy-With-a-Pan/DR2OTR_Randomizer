@@ -46,11 +46,11 @@ namespace DR2OTR_Randomizer.Resources
                 MessageBox.Show("Could not find datafile", "Warning");
                 return;
             }
-            var result = MessageBox.Show("This will overwrite the datafile inside of the games folder. Continue?", "Warning", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Would you like to overwrite the datafile in your games dicorty?", "Warning", MessageBoxButtons.YesNo);
             if (result == DialogResult.No) 
             {
-                MessageBox.Show("The datafile as has been packed and is located in the unpacked folder inside the resources folder." +
-                    "You will need to rename it to \"datafile.big\" before adding it to your games directory");
+                File.Move($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big", $"{Application.StartupPath}\\datafile.big");
+                MessageBox.Show("The datafile as has been packed and placed with this program exe.", "Packed");
                 return;
             }
             File.Copy($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big",$"{gamePath}\\data\\datafile.big", true);
