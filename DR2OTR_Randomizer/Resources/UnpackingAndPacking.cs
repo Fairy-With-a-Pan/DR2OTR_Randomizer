@@ -39,17 +39,21 @@ namespace DR2OTR_Randomizer.Resources
         }
         public void Pack()
         {
+            //run the packer with the datafile folder location as an argument
             var process = Process.Start($"{Application.StartupPath}\\Resources\\Unpacker\\Gibbed.DeadRising2.Pack.exe", $"\"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big\"");
             process.WaitForExit();
+            //waits till the packer as done and checks if the datafile as been made
             if (!File.Exists($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big"))
             {
                 MessageBox.Show("Could not find datafile", "Warning");
                 return;
             }
-            var result = MessageBox.Show("Would you like to overwrite the datafile in your games dicorty?", "Warning", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No) 
+            //if the gamePath is null or the user picks to not overwright the datafile
+            //it will copy and rename the datafile and put it with the exe root
+            if(gamePath == null ||
+                MessageBox.Show("Would you like to overwrite the datafile in your games dicorty?", "Warning", MessageBoxButtons.YesNo) == DialogResult.No)
             {
-                File.Move($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big", $"{Application.StartupPath}\\datafile.big");
+                File.Move($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big", $"{Application.StartupPath}\\datafile.big", true);
                 MessageBox.Show("The datafile as has been packed and placed with this program exe.", "Packed");
                 return;
             }
