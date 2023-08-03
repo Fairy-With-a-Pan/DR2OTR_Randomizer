@@ -32,7 +32,7 @@ namespace DR2OTR_Randomizer.Resources
             if (result == DialogResult.Yes)
             {
                 File.Copy($"{workingPath}\\datafile.big", $"{Application.StartupPath}\\datafile(Backup).big", true);
-                MessageBox.Show("The backup is located in the unpacked folder inside the Resources folder");
+                MessageBox.Show("The backup is located in the unpacked folder inside the Resources folder", "Backup");
             }
             workingPath = $"{workingPath}\\datafile_big";
             return workingPath;
@@ -51,7 +51,7 @@ namespace DR2OTR_Randomizer.Resources
             //if the gamePath is null or the user picks to not overwright the datafile
             //it will copy and rename the datafile and put it with the exe root
             if(gamePath == null ||
-                MessageBox.Show("Would you like to overwrite the datafile in your games dicorty?", "Warning", MessageBoxButtons.YesNo) == DialogResult.No)
+                MessageBox.Show("Would you like to overwrite the datafile in your games directory?", "Warning", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 File.Move($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big", $"{Application.StartupPath}\\datafile.big", true);
                 MessageBox.Show("The datafile as has been packed and placed with this program exe.", "Packed");
