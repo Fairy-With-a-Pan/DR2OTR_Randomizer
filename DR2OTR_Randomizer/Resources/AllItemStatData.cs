@@ -20,9 +20,9 @@ namespace DR2OTR_Randomizer.Resources
         public List<object> GetAllItemStatData()
         {
             //Gets the xml file and loads it
-            XmlDocument xmlDocument = new XmlDocument();
+            XmlDocument xmlDocument = new();
             xmlDocument.Load($"{path}");
-            List<object> listOffStatLists = new List<object>();
+            List<object> listOffStatLists = new();
 
             foreach (XmlElement element in xmlDocument.DocumentElement)
             {
@@ -30,7 +30,7 @@ namespace DR2OTR_Randomizer.Resources
                 ///element witch is the StatsCategory and pass each
                 ///of the child elements and there nodes in to a list
                 ///and adding that to the 
-                List<ItemStatsData> list = new List<ItemStatsData>();
+                List<ItemStatsData> list = new();
                 foreach (XmlNode node in element.ChildNodes)
                 {
                     list.Add(new ItemStatsData()

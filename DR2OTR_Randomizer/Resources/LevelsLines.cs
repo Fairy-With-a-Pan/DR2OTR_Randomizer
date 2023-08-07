@@ -12,7 +12,7 @@ namespace DR2OTR_Randomizer.Resources
         public string LevelFile { get; set; }
         public int[] LevelLines { get; set; }
         
-        static int[] americanaCasinoLines =
+        readonly static int[] americanaCasinoLines =
         {
             18, 25, 32, 39, 46, 53, 60, 67, 74, 81, 88, 95, 102, 109, 116, 123, 130, 137, 144, 151, 158, 165, 172, 179, 186,
             193, 200, 207, 214, 221, 228, 235, 242, 249, 256, 263, 270, 277, 284, 291, 298, 305, 312, 319, 326, 333, 340, 348,
@@ -51,7 +51,7 @@ namespace DR2OTR_Randomizer.Resources
             10800, 10808, 10816, 10823, 10830, 10838, 10848, 10858, 10868, 10878, 10887, 10895, 10903, 10912, 10922, 10932, 10942, 10952,
             10962, 10972, 10982, 10991, 10998, 11006, 11014, 11024, 11032, 11039,
         };
-        static int[] atlanticaCasinoLines =
+        readonly static int[] atlanticaCasinoLines =
         {
              4174, 4181, 4188, 4195, 4202, 4209, 4216, 4223, 4230, 4237, 4244, 4251, 4258, 4266, 4273, 4280, 4287, 4294, 4301,
              4308, 4315, 4322, 4329, 4336, 4343, 4473, 4480, 4487, 4494, 4501, 4508, 4515, 4522, 4529, 4537, 4545, 4552, 4559,
@@ -90,7 +90,7 @@ namespace DR2OTR_Randomizer.Resources
              9627, 9634, 9659, 9667, 9678, 9689, 9697, 9704, 9711, 9719, 9727, 9734, 9741, 9748, 9756, 9764, 9771, 9778, 9785,
              9792, 9799, 9806, 9814, 9821, 9828, 9835, 9843, 9850, 9857,
         };
-        static int[] backStageLines =
+        readonly static int[] backStageLines =
         {
 
             3, 11, 19, 28, 36, 44, 52, 60, 69, 78, 87, 103, 111, 119, 126, 133, 149, 158, 165, 172, 179, 187,
@@ -106,7 +106,7 @@ namespace DR2OTR_Randomizer.Resources
             2804, 2813, 2822, 2832, 2842, 2851, 2860
 
         };
-        static int[] foodBranLines =
+        readonly static int[] foodBranLines =
         {
              4, 12, 20, 28, 35, 43, 50, 57, 64, 71, 78, 85, 92, 99, 106, 113, 120, 127, 147, 167, 175, 182, 189, 197, 216,
              257, 267, 300, 309, 318, 326, 334, 342, 351, 359, 367, 374, 381, 388, 395, 402, 409, 417, 434, 442, 450, 458,
@@ -168,7 +168,7 @@ namespace DR2OTR_Randomizer.Resources
              12230, 12237, 12244, 12252, 12260, 12268, 12276, 12284, 12292, 12300, 12307, 12315, 12322, 12330, 12339, 12347,
              12355, 12363, 12370, 12377, 12384, 12392, 12401, 12409,
         };
-        static int[] fortuneExteriorLines =
+        readonly static int[] fortuneExteriorLines =
         {
              3, 11, 19, 27, 34, 41, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 214, 222, 230, 238, 248, 256, 264, 272, 281,
              290, 299, 307, 316, 324, 331, 339, 347, 357, 366, 374, 383, 391, 399, 407, 415, 423, 430, 437, 444, 451, 458, 465, 474,
@@ -240,7 +240,7 @@ namespace DR2OTR_Randomizer.Resources
              12218, 12226, 12234, 12241, 12248, 12255, 12262, 12269, 12276, 12284, 12292, 12300, 12308, 12315, 12324, 12333, 12342,
              12350, 12358, 12365, 12372, 12380, 17299, 17307, 17315, 17323, 2816, 5626, 8037
         };
-        static int[] laboratorylines =
+        readonly static int[] laboratorylines =
         {
              3, 10, 17, 24, 31, 38, 46, 54, 62, 71, 79, 88, 97, 106, 115, 124, 133, 142, 151, 160, 169, 178, 186, 194, 202, 210, 218,
              227, 235, 243, 250, 257, 264, 273, 281, 288, 295, 302, 310, 319, 327, 334, 342, 350, 357, 364, 372, 381, 390, 398, 405,
@@ -250,7 +250,7 @@ namespace DR2OTR_Randomizer.Resources
              950, 957, 964, 971, 978, 985, 992, 1000, 1009, 1018, 1027, 1036, 1044, 1052, 1060, 1068, 1076, 1084, 1091, 1098, 1106,
              1114, 1121, 1128, 1135, 1142, 1149, 1156, 1163, 1170, 1177, 1184, 1213, 1222, 1230, 1237, 1245, 1253,
         };
-        static int[] missionLines =
+        readonly static int[] missionLines =
         {
             2871, 2879, 2888, 2896, 2904, 2911, 2920, 2928, 2936, 2944, 2952, 2977, 2986, 2994, 3001, 3009, 3018, 3027,
             3036, 3045, 3054, 3063, 3072, 3081, 3090, 3099, 3108, 3117, 3143, 3151, 3159, 3167, 3176, 3185, 3194, 3203,
@@ -317,7 +317,7 @@ namespace DR2OTR_Randomizer.Resources
             109093, 109624, 110487, 110496, 110505, 111019, 111026, 111033, 144760, 144768, 144776, 144784, 144792, 
             144800, 145753, 146240, 146943, 146991, 147040, 11055, 11077, 52639, 72557, 98433,
         };
-        static int[] palisadesLines =
+        readonly static int[] palisadesLines =
         {
              111, 119, 127, 135, 144, 153, 161, 169, 180, 191, 202, 213,
              224, 232, 242, 252, 261, 270, 279, 288, 297, 306, 315, 324, 331, 339, 347, 355, 364, 373, 382, 390, 398, 405, 412, 421,
@@ -372,32 +372,32 @@ namespace DR2OTR_Randomizer.Resources
              11261, 11268, 11275, 11282, 11289, 11296, 11303, 11311, 11319, 11327, 11334, 11341, 11349, 11356, 11363, 11370, 11377,
              11384, 11391, 11398,
         };
-        static int[] rooftopAtlanticalines =
+        readonly static int[] rooftopAtlanticalines =
         {
             119, 126, 133, 141, 149, 156, 163, 170, 177, 184, 191, 198, 205, 212, 219, 226, 233, 240, 247,
             255, 263, 270, 277, 284, 291, 298, 305, 312, 319, 327, 334, 341, 348, 355, 362, 369, 376,
         };
-        static int[] rooftopHotelLines =
+        readonly static int[] rooftopHotelLines =
         {
             3, 10, 49, 58, 66, 75, 84, 94, 102, 110, 118, 142, 150, 158, 166, 174, 182, 190,
             198, 206, 214, 222, 230, 238, 247, 255, 262, 269, 276, 284, 292, 300, 308, 316, 325, 334,
             343, 352, 360, 367, 374, 381, 389, 396, 404, 411, 418, 425, 432, 439, 447, 454, 462, 470,
             478, 486, 494, 502, 510, 517, 525, 533, 540, 548, 556, 564, 572, 580, 589, 597,
         };
-        static int[] rooftopRoyalLines =
+        readonly static int[] rooftopRoyalLines =
         {
             3, 10, 17, 25, 32, 40, 48, 56, 63, 71, 78, 85, 92, 99, 106, 114, 121, 128, 135, 142, 149,
         };
-        static int[] rooftopSafehouseLines =
+        readonly static int[] rooftopSafehouseLines =
         {
             32, 39, 47, 55, 62, 69, 76, 84, 92, 100, 108, 115, 123, 131, 139, 147, 155, 163, 171, 179, 187, 195, 203, 211,
             219, 227, 235, 243, 251, 259, 267, 276, 283, 290, 297, 304, 311, 318, 325, 332, 340, 347, 355, 362, 369, 376,
         };
-        static int[] rooftopTheaterlines =
+        readonly static int[] rooftopTheaterlines =
         {
             3, 10, 18, 26, 34, 41, 48, 56, 63, 70, 77, 84, 91, 98,
         };
-        static int[] rooftopYucatanLines =
+        readonly static int[] rooftopYucatanLines =
         {
             3, 10, 17, 24, 31, 38, 46, 54, 61, 68, 75, 82, 90, 99, 106, 113, 120, 127, 134, 141, 148,
             155, 162, 169, 176, 183, 191, 199, 206, 213, 221, 228, 235, 242, 250, 257, 264, 271, 279,
@@ -405,7 +405,7 @@ namespace DR2OTR_Randomizer.Resources
             477, 485, 492, 499, 506, 514, 522, 531, 540, 549, 556, 564, 573, 582, 653, 660, 667, 674,
             681, 688, 695, 702,
         };
-        static int[] royalFlushLines =
+        readonly static int[] royalFlushLines =
         {
             3, 10, 17, 25, 33, 41, 49, 57, 66, 74, 82, 90, 98, 106, 114, 122, 130, 138, 146, 154, 162, 172, 182, 
             192, 201, 211, 221, 231, 240, 250, 259, 268, 278, 288, 298, 308, 318, 328, 338, 346, 353, 360, 367, 
@@ -477,13 +477,13 @@ namespace DR2OTR_Randomizer.Resources
             11861, 11871, 11881, 11891, 11900, 11908, 11916, 11923, 11930, 11938, 11946, 11954, 11963, 11971, 11978, 
             11986, 11994, 12002, 12043, 12052, 12069, 12077, 12086, 12135, 12143, 12152, 12160, 2022
         };
-        static int[] safeHouseLines =
+        readonly static int[] safeHouseLines =
         {
             3, 10, 17, 25, 33, 40, 47, 54, 61, 69, 77, 85, 94, 103, 110, 117, 133, 140, 147, 154, 161, 169, 177, 220, 227, 235, 242, 249,
             257, 265, 274, 281, 288, 295, 303, 311, 318, 325, 332, 340, 348, 372, 459, 466, 473, 480, 487, 494, 501, 508, 515, 522, 529,
             536, 544, 551, 559, 567, 575, 583, 590, 598, 606, 614, 621, 628, 635, 643, 650, 727, 734,
         };
-        static int[] southPlazaLines =
+        readonly static int[] southPlazaLines =
         {
              3, 10, 17, 24, 31, 39, 47, 56, 64, 73, 81, 90, 98, 105, 114, 122, 131, 139, 147, 155, 163, 171, 179,
              187, 196, 203, 210, 217, 225, 233, 241, 249, 257, 265, 273, 282, 290, 297, 305, 313, 321, 329, 337,
@@ -512,12 +512,12 @@ namespace DR2OTR_Randomizer.Resources
              4599, 4607, 4614, 4622, 4640, 4648, 4656, 4664, 4671, 4678, 4685, 4701, 4709, 4717, 4725, 4733, 4741,
              2400
         };
-        static int[] tapeDieLines =
+        readonly static int[] tapeDieLines =
         {
              3, 12, 20, 28, 36, 44, 52, 61, 69, 78, 86, 93, 100, 108, 115, 123, 131, 138, 145, 152, 159, 166, 173, 180,
              187, 194, 201, 208, 215, 222, 229, 236, 243, 250, 258, 265, 272, 279, 286, 293, 300,
         };
-        static int[] themeParkLines =
+        readonly static int[] themeParkLines =
         {
              124, 133, 142, 151, 158, 166, 173, 180, 187, 195, 203, 211, 219, 227, 235, 243, 251, 259, 267, 276, 285, 293,
              302, 311, 320, 329, 337, 345, 355, 363, 371, 380, 388, 396, 404, 412, 420, 428, 437, 446, 454, 463, 472, 480,
@@ -581,20 +581,20 @@ namespace DR2OTR_Randomizer.Resources
              12647, 12654, 12662, 12669, 12676, 12683, 12691, 12699, 12707, 12715, 12723, 12732, 12740, 12747, 12754, 12761,
              12768, 12775, 12782, 2464
         };
-        static int[] tKBosslines =
+        readonly static int[] tKBosslines =
         {
              385, 393, 401, 409, 416, 423, 430, 437, 444, 451, 458, 465, 472, 479, 486, 493, 500, 507,
              514, 521, 528, 535, 543, 551, 559, 566, 573, 580, 587, 595, 603, 611, 619, 627, 635, 643,
              652, 661, 670, 678, 685, 692, 699, 706, 713, 720, 727, 734, 741, 748, 755,
         };
-        static int[] trainBattleLines =
+        readonly static int[] trainBattleLines =
         {
             11, 18, 25, 32, 39, 47, 56, 64, 72, 79, 86, 93, 100, 107, 114, 121, 128, 144, 151, 159, 191,
             198, 205, 213, 221, 229, 236, 243, 251, 258, 279, 286, 293, 300, 307, 314, 321, 329, 337, 345,
             352, 359, 366, 373, 380, 387, 394, 402, 410, 418, 425, 433, 441, 448, 455, 462, 470, 478, 485,
             492, 499, 506, 513, 520, 527, 535, 543
         };
-        static int[] undergroundLines =
+        readonly static int[] undergroundLines =
         {
              32, 39, 46, 53, 60, 67, 74, 81, 95, 102,  1768, 1777, 1785, 1792, 1801, 1809, 1816, 1823, 1832, 1840, 1848, 1856, 1864,
              1872, 1880, 1888, 1896, 1904, 1912, 1919, 1928, 1936, 1943, 1950, 1957, 1964, 1971, 1978, 1985, 1992, 1999, 2006, 2013,
@@ -631,7 +631,7 @@ namespace DR2OTR_Randomizer.Resources
              7811, 7819, 7827, 7835, 7843, 7851, 7859, 7868, 7877, 7886, 7895, 7903, 7911, 7919, 7927, 7935, 7943, 7951, 7959, 7967,
              32, 39, 46, 53, 60, 67, 74, 81, 88, 95, 102, 1809, 1816, 1823, 4381, 4388,  4395, 4402, 4409, 4416, 4423
         };
-        static int[] yucatanCasinoLines =
+        readonly static int[] yucatanCasinoLines =
         {
              4, 11, 18, 25, 33, 40, 47, 54, 61, 68, 75, 82, 89, 96, 103, 110, 117, 124, 131, 138, 146, 153, 160, 167, 174, 181, 188, 195,
              203, 210, 217, 224, 231, 238, 245, 252, 259, 266, 273, 280, 287, 294, 302, 309, 316, 323, 330, 337, 344, 351, 358, 365, 372,
@@ -686,147 +686,149 @@ namespace DR2OTR_Randomizer.Resources
 
         //Adds each int array to a list with its file name and the level name
         //for compareing in the randomzier with a check list box
-        public List<LevelsLines> GetLevelLines()
+        public static List<LevelsLines> GetLevelLines()
         {
-            List<LevelsLines> list = new List<LevelsLines>();
-            list.Add(new LevelsLines()
+            List<LevelsLines> list = new()
             {
-                LevelName = "Americana Casino", //Line Check Done
-                LevelFile = "americana_casino.txt",
-                LevelLines = americanaCasinoLines
-            });;
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Atlantica Casino",
-                LevelFile = "atlantica_casino.txt", //Lione check done
-                LevelLines = atlanticaCasinoLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Arena Backstage",
-                LevelFile = "arena_backstage.txt", //Done
-                LevelLines = backStageLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Food Barn",
-                LevelFile = "food_barn.txt", //dOMNe
-                LevelLines = foodBranLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Fortune Exterior",
-                LevelFile = "fortune_exterior.txt", //doine
-                LevelLines = fortuneExteriorLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Missions Items*",
-                LevelFile = "missions.txt", //done
-                LevelLines = missionLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Palisades*",
-                LevelFile = "palisades.txt", //done
-                LevelLines = palisadesLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_atlantica.txt", //done
-                LevelLines = rooftopAtlanticalines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_hotel.txt", //done
-                LevelLines = rooftopHotelLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_royal.txt", //done
-                LevelLines = rooftopRoyalLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_safehouse.txt", //done
-                LevelLines = rooftopSafehouseLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_theater.txt", //done
-                LevelLines = rooftopTheaterlines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Rooftops",
-                LevelFile = "rooftop_yucatan.txt", //done
-                LevelLines = rooftopYucatanLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Royal Flush",
-                LevelFile = "royal_flush.txt", //done
-                LevelLines = royalFlushLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Safehouse",
-                LevelFile = "safehouse.txt", //done
-                LevelLines = safeHouseLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "South plaza",
-                LevelFile = "south_plaza.txt", //done
-                LevelLines = southPlazaLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Boss Fights",
-                LevelFile = "tape_die.txt", //done
-                LevelLines = tapeDieLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Boss Fights",
-                LevelFile = "tkot_battle.txt",//done
-                LevelLines = tKBosslines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Boss Fights",
-                LevelFile = "boss_battle_train.txt", //done
-                LevelLines = trainBattleLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Boss Fights",
-                LevelFile = "laboratory.txt", //done
-                LevelLines = laboratorylines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Uranus Zone",
-                LevelFile = "theme_park.txt", //done
-                LevelLines = themeParkLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Underground",
-                LevelFile = "underground.txt", // done
-                LevelLines = undergroundLines
-            });
-            list.Add(new LevelsLines()
-            {
-                LevelName = "Yucatan Casino",
-                LevelFile = "yucatan_casino.txt", //done
-                LevelLines = yucatanCasinoLines
-            });
+                new LevelsLines()
+                {
+                    LevelName = "Americana Casino",
+                    LevelFile = "americana_casino.txt",
+                    LevelLines = americanaCasinoLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Atlantica Casino",
+                    LevelFile = "atlantica_casino.txt",
+                    LevelLines = atlanticaCasinoLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Arena Backstage",
+                    LevelFile = "arena_backstage.txt",
+                    LevelLines = backStageLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Food Barn",
+                    LevelFile = "food_barn.txt",
+                    LevelLines = foodBranLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Fortune Exterior",
+                    LevelFile = "fortune_exterior.txt",
+                    LevelLines = fortuneExteriorLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Missions Items*",
+                    LevelFile = "missions.txt",
+                    LevelLines = missionLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Palisades*",
+                    LevelFile = "palisades.txt",
+                    LevelLines = palisadesLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_atlantica.txt",
+                    LevelLines = rooftopAtlanticalines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_hotel.txt",
+                    LevelLines = rooftopHotelLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_royal.txt",
+                    LevelLines = rooftopRoyalLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_safehouse.txt",
+                    LevelLines = rooftopSafehouseLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_theater.txt",
+                    LevelLines = rooftopTheaterlines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Rooftops",
+                    LevelFile = "rooftop_yucatan.txt",
+                    LevelLines = rooftopYucatanLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Royal Flush",
+                    LevelFile = "royal_flush.txt",
+                    LevelLines = royalFlushLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Safehouse",
+                    LevelFile = "safehouse.txt",
+                    LevelLines = safeHouseLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "South plaza",
+                    LevelFile = "south_plaza.txt",
+                    LevelLines = southPlazaLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Boss Fights",
+                    LevelFile = "tape_die.txt",
+                    LevelLines = tapeDieLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Boss Fights",
+                    LevelFile = "tkot_battle.txt",
+                    LevelLines = tKBosslines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Boss Fights",
+                    LevelFile = "boss_battle_train.txt",
+                    LevelLines = trainBattleLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Boss Fights",
+                    LevelFile = "laboratory.txt",
+                    LevelLines = laboratorylines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Uranus Zone",
+                    LevelFile = "theme_park.txt",
+                    LevelLines = themeParkLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Underground",
+                    LevelFile = "underground.txt",
+                    LevelLines = undergroundLines
+                },
+                new LevelsLines()
+                {
+                    LevelName = "Yucatan Casino",
+                    LevelFile = "yucatan_casino.txt",
+                    LevelLines = yucatanCasinoLines
+                }
+            };
             return list;
         }
     }

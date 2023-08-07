@@ -22,13 +22,13 @@ public partial class F_ItemRandomiser : Form
 
 
     //Lines that cause crashing and will be skipped if safe mode is on
-    int[] unSafeLines = {
+    readonly int[] unSafeLines = {
         17063, 17173, 17833, 17936, 18035, 18131, 18230, 18300, 18390, 18813, 18930, 19011,
         19092, 19152, 19260, 19355, 19436, 19524, 19722, 19872, 19971, 20048, 20064, 20136,
         20152, 20243, 20259, 20372, 20457, 20522, 20617, 20727, 20826, 77883, 77953, 78625,
         78689, 78761, };
     //The lines for the vending machine and pawn shops
-    int[] spawnedItems = {
+    readonly int[] spawnedItems = {
         33241, 33266, 33290, 33314, 33338, 33362, 33387, 33412, 33502, 33526, 33550, 33574, 33598, 33623, 33648, 33672, 33697,
         33722, 33747, 33772, 33796, 33820, 33878, 33902, 33926, 33950, 33974, 33999, 34024, 34048, 34072, 34096, 34120, 34144,
         34168, 34192, 34216, 34240, 34264, 34289, 34313, 34337, 34361, 34385, 34409, 34433, 34466, 34491, 34516, 34541, 34566,
@@ -39,42 +39,39 @@ public partial class F_ItemRandomiser : Form
     string datafilePath;
 
 
-    UnpackingAndPacking gibbedTools = new UnpackingAndPacking();
-    AllItemStatData statData = new AllItemStatData();
-    List<object> allStatslists = new List<object>();
-    AllItemDataTable itemDataTable = new AllItemDataTable();
-    LevelsLines levelLines = new LevelsLines();
+    readonly UnpackingAndPacking gibbedTools = new();
+    readonly AllItemStatData statData = new();
+    List<object> allStatslists = new();
+    readonly AllItemDataTable itemDataTable = new();
 
-    DataTable allitemsTable = new DataTable();
-    BindingSource allItemDataSource = new BindingSource();
-    DataTable allUnStableitemsTable = new DataTable();
-    BindingSource allUnstableItemSource = new BindingSource();
+    readonly DataTable allitemsTable = new();
+    readonly BindingSource allItemDataSource = new();
+    readonly DataTable allUnStableitemsTable = new();
+    readonly BindingSource allUnstableItemSource = new();
 
     public F_ItemRandomiser()
     {
-        //Gets and sets all the data from the ItemStatData.xml to the stats lists
-        allStatslists = statData.GetAllItemStatData();
-        SetAllItemStatData();
+        try
+        {
+            //Gets and sets all the data from the ItemStatData.xml to the stats lists
+            allStatslists = statData.GetAllItemStatData();
+            SetAllItemStatData();
+        }
+        catch(Exception)
+        {
+            //use this to catch if any files that are missing and cut of all the unneed text
+            //string fileName = ex.FileName.Substring(ex.FileName.LastIndexOf("\\") +1);
+            MessageBox.Show
+            ($"There was an issue reading one of the resource files. This program cannot run without these files and will now close"
+            , "Warning");
+            Process.GetCurrentProcess().Kill();
+        }
 
         allitemsTable = itemDataTable.SetAllItemData();
         allUnStableitemsTable = itemDataTable.SetAllItemData();
 
         InitializeComponent();
-        //use this to catch if any files are missing
-        try
-        {
-            File.Exists($"{Application.StartupPath}\\Resources\\AllItemData.xml");
-            File.Exists($"{Application.StartupPath}\\Resources\\ItemStatData.xml");
-            File.Exists($"{Application.StartupPath}\\Resources\\AllNPCModels.txt");
-        }
-        catch (FileNotFoundException e)
-        {
-            MessageBox.Show
-            ($"{e.FileName} \nIs missing or as been renamed. The program cannot run without this file"
-            , "Warning");
-            Process.GetCurrentProcess().Kill();
-        }
-        
+
         //Set the datatable for the item stats data grid
         dgv_ItemStatsTable.DataSource = VheicleStatData;
         //sets the binding source and data table for both of the 
@@ -87,7 +84,7 @@ public partial class F_ItemRandomiser : Form
         Set_dgv_AllItems_Format(dgv_US_Items);
         allUnstableItemSource.DataSource = allUnStableitemsTable;
     }
-    private void Set_dgv_AllItems_Format(DataGridView dataGrid)
+    private static void Set_dgv_AllItems_Format(DataGridView dataGrid)
     {
         //Sets the formating for the all item data grid
         dataGrid.Columns[0].Width = 75;
@@ -402,8 +399,10 @@ public partial class F_ItemRandomiser : Form
     private void B_Randomise_Click(object sender, EventArgs e)
     {
 
+        //returns if no levels have been checked
+        if(lv_LevelsList.CheckedItems.Count <= 0){MessageBox.Show("No levels have been selected", "Warning");return;}
         //make a string list to store all the items in each of the check list boxes
-        List<string> allItems = new List<string>();
+        List<string> allItems = new();
 
         GetItemsToRandomize(allItems);
         //Returns if no items have been checked and added to the list
@@ -447,18 +446,19 @@ public partial class F_ItemRandomiser : Form
     {
         //This is for people to share there settings with other people
         //Shows the ItemStatSave box and retuns if cancel is clicked
-        if(fbd_StatSaveFolder.ShowDialog() == DialogResult.Cancel) { return; }
-        XmlWriterSettings settings = new XmlWriterSettings();
-        settings.Indent = true;
+        if (fbd_StatSaveFolder.ShowDialog() == DialogResult.Cancel) { return; }
+        XmlWriterSettings settings = new() { Indent = true };        
         XmlWriter writer = XmlWriter.Create($"{fbd_StatSaveFolder.SelectedPath}\\ItemStatData.xml", settings);
         //Create a dictionary and store the ItemStatsData with its Corsponding catagory
-        Dictionary<object, string> xmlFileContet = new Dictionary<object, string>();
-        xmlFileContet.Add(VheicleStatData, "VheicleStats");
-        xmlFileContet.Add(NPCStatData, "NPCStats");
-        xmlFileContet.Add(FireArmsStatData, "FireArmStats");
-        xmlFileContet.Add(WorldStatsData, "WorldStats");
-        xmlFileContet.Add(ExplosiveStatData, "ExplosiveStats");
-        xmlFileContet.Add(FoodAndDamageData, "FoodAndDamageStats");
+        Dictionary<object, string> xmlFileContet = new()
+        {
+            { VheicleStatData, "VheicleStats" },
+            { NPCStatData, "NPCStats"},
+            { FireArmsStatData, "FireArmStats"},
+            { WorldStatsData, "WorldStats" },
+            { ExplosiveStatData, "ExplosiveStats"},
+            { FoodAndDamageData, "FoodAndDamageStats"}
+        };
         //Makes a comment at the top of the file to say when it was created 
         writer.WriteComment($"This file was crated on {DateTime.Now}");
         writer.WriteStartElement("AllItemStatsData");
@@ -489,19 +489,21 @@ public partial class F_ItemRandomiser : Form
         ///Opens a file browser dialog box for the user to open a saved 
         ///ItemStatData.xml file then overrights the current path inside 
         ///of AllItemStatData and only allows for xml to be picked
-        OpenFileDialog openFileDialog = new OpenFileDialog();
-        openFileDialog.Title = "Open ItemStatData.xml";
-        openFileDialog.InitialDirectory = statData.path;
-        openFileDialog.Filter = "xml files (*.xml)|*.xml";
+        OpenFileDialog openFileDialog = new()
+        {
+            Title = "Open ItemStatData.xml",
+            InitialDirectory = statData.path,
+            Filter = "xml files (*.xml)|*.xml"
+        };
         if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
             statData.path = openFileDialog.FileName;
         }
 
         //get the item stat data from the new source
-        
+
         SetAllItemStatData();
-        
+
         //updates the data grid view by setting the data source and
         //changeing the tab to the same tab
         tc_itemStats.SelectedTab = tc_itemStats.TabPages[0];
@@ -563,11 +565,11 @@ public partial class F_ItemRandomiser : Form
     {
         //Checks if it can read the xml file if it cant warns the user and resest the path
         try
-        { 
-            allStatslists = statData.GetAllItemStatData(); 
+        {
+            allStatslists = statData.GetAllItemStatData();
         }
-        catch 
-        { 
+        catch
+        {
             MessageBox.Show("Failed to load the \"ItemStatData.xml\" file.", "Warning");
             statData.path = $"{Application.StartupPath}\\Resources\\ItemStatData.xml";
         }
@@ -582,7 +584,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void SoftLockAndCrashPrevent(string buttonClicked)
     {
-        List<string> missionFile = new List<string>();
+        List<string> missionFile = new();
         //checks to see if the mission txt is inside the path folder
         if (!File.Exists($"{datafilePath}\\missions.txt")) { MessageBox.Show("No mission.txt file found", "Warning"); return; }
         missionFile.AddRange(File.ReadAllLines($"{datafilePath}\\missions.txt"));
@@ -664,14 +666,14 @@ public partial class F_ItemRandomiser : Form
     {
 
         //gets the dictionary stored in the LevelLines class
-        List<LevelsLines> levels = levelLines.GetLevelLines();
+        List<LevelsLines> levels = LevelsLines.GetLevelLines();
 
         //Store the levels with more then one Vehicles in them
         int[] missionVehicles = { 11055, 11077, 52639, 72557, 98433, };
         int[] underGroundVehicles = { 11055, 11077, 52639, 72557, 98433, };
         int[] fortunExteriorVehicles = { 2816, 5626, 8037 };
 
-        Random rand = new Random();
+        Random rand = new();
         //Randomize the items that are spawned from vending
         //machines and the spawn shops goese though each of the
         //levels in side of the dictionary
@@ -730,7 +732,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeSpawnedItems(List<string> allItems)
     {
-        Random rand = new Random();
+        Random rand = new();
         string[] itemFile = File.ReadAllLines($"{datafilePath}\\items.txt");
         //Stores the lines that have zombrex or vheicle keys in them
         int[] keysAndZombrexs = { 33438, 33471, 33847, 33412, 33648, 33772, 34024, 34897 };
@@ -749,7 +751,7 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeItemStats(string[] itemFile)
     {
-        Random rand = new Random();
+        Random rand = new();
         //adds all of the item stat list to an array for
         //the foreach loop to go though each stat and get there
         //valuse and set them to the item.txt file
@@ -762,7 +764,7 @@ public partial class F_ItemRandomiser : Form
             ExplosiveStatData,
             FoodAndDamageData,
         };
-        foreach (List<ItemStatsData> itemStats in itemStatLists)
+        foreach (List<ItemStatsData> itemStats in itemStatLists.Cast<List<ItemStatsData>>())
         {
             for (int i = 0; i < itemStats.Count; i++)
             {
@@ -788,14 +790,14 @@ public partial class F_ItemRandomiser : Form
         }
         File.WriteAllLines($"{datafilePath}\\items.txt", itemFile);
     }
-    private void RandomizeNPCModels(string[] itemFile)
+    private static void RandomizeNPCModels(string[] itemFile)
     {
         //store these lines to skip them so it dose not randomize 
         //the models as these can crash or do not work proply
         int[] ignoreNPC = { 28562, 28579, 28888, 28919, 28943, 28966, 28989, 29013,
             29135, 29165, 30401, 94601, 94647, 96381, 96439, 96492 };
-        List<string> npcModels = new List<string>();
-        Random rand = new Random();
+        List<string> npcModels = new();
+        Random rand = new();
 
         npcModels.AddRange(File.ReadAllLines($"{Application.StartupPath}\\Resources\\AllNPCModels.txt"));
 
@@ -826,9 +828,9 @@ public partial class F_ItemRandomiser : Form
             ("Using any of the unstable stats as a higher chance of soft locking and crashing the game." +
             "\n\n\t\t Are sure you want to continue?", "Warning", MessageBoxButtons.YesNo);
         if (confirmResult == DialogResult.No) { return; }
-        Random rand = new Random();
+        Random rand = new();
 
-        List<string> allItems = new List<string>();
+        List<string> allItems = new();
 
         for (int i = 0; i < allUnStableitemsTable.Rows.Count; i++)
         {

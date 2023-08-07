@@ -252,7 +252,6 @@
             tls_VendingAndShops.Name = "tls_VendingAndShops";
             tls_VendingAndShops.Size = new Size(218, 22);
             tls_VendingAndShops.Text = "Vending, Shop and Vehicles";
-            tls_VendingAndShops.DropDown.Closing += On_tsm_Settings_Close;
             // 
             // tls_RandomSpawns
             // 
@@ -874,11 +873,11 @@
             // l_ItemStat_Dec
             // 
             l_ItemStat_Dec.AutoSize = true;
-            l_ItemStat_Dec.Location = new Point(342, 4);
+            l_ItemStat_Dec.Location = new Point(346, 12);
             l_ItemStat_Dec.Name = "l_ItemStat_Dec";
-            l_ItemStat_Dec.Size = new Size(346, 45);
+            l_ItemStat_Dec.Size = new Size(342, 30);
             l_ItemStat_Dec.TabIndex = 5;
-            l_ItemStat_Dec.Text = "You can toggle all the active stat's by clicking the header row.\r\nIf you are going to play co-op, it's recommended to not change \r\nthe explosive stats as this can cause connection issues.";
+            l_ItemStat_Dec.Text = "If you are going to play co-op, it's recommended to not enable \r\nthe explosive stats as this can cause your partner to disconnect.";
             // 
             // bt_NPC_Model_Randomizer
             // 
