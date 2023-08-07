@@ -2820,11 +2820,6 @@ The items will automatically be sorted so it does not matter where they are plac
 		<ItemBool>False</ItemBool>
 	</Item>
 	<Item>
-		<ItemName>"Zombrex"</ItemName>
-		<ItemTag>KeyItems</ItemTag>
-		<ItemBool>False</ItemBool>
-	</Item>
-	<Item>
 		<ItemName>"Key_undergroundkey"</ItemName>
 		<ItemTag>KeyItems</ItemTag>
 		<ItemBool>False</ItemBool>
