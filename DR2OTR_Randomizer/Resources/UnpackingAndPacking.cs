@@ -58,6 +58,7 @@ namespace DR2OTR_Randomizer.Resources
                 return;
             }
             File.Copy($"{Application.StartupPath}\\Resources\\Unpacked\\datafile_big.big",$"{gamePath}\\data\\datafile.big", true);
+            MessageBox.Show("datafile successfully repacked and copied to the games data folder you can play with randomized items now.", "success");
         }
     }
 }

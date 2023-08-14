@@ -57,7 +57,7 @@ public partial class F_ItemRandomiser : Form
             allStatslists = statData.GetAllItemStatData();
             SetAllItemStatData();
         }
-        catch(Exception)
+        catch (Exception)
         {
             //use this to catch if any files that are missing and cut of all the unneed text
             //string fileName = ex.FileName.Substring(ex.FileName.LastIndexOf("\\") +1);
@@ -398,9 +398,11 @@ public partial class F_ItemRandomiser : Form
     }
     private void B_Randomise_Click(object sender, EventArgs e)
     {
-
+        //Stop if the datafile folder path as not been set
+        if (datafilePath == null)
+        { MessageBox.Show("datafile path as not be chosen please pick it from inside of 'File'", "No datafile found"); return; }
         //returns if no levels have been checked
-        if(lv_LevelsList.CheckedItems.Count <= 0){MessageBox.Show("No levels have been selected", "Warning");return;}
+        if (lv_LevelsList.CheckedItems.Count <= 0) { MessageBox.Show("No levels have been selected", "Warning"); return; }
         //make a string list to store all the items in each of the check list boxes
         List<string> allItems = new();
 
@@ -447,7 +449,7 @@ public partial class F_ItemRandomiser : Form
         //This is for people to share there settings with other people
         //Shows the ItemStatSave box and retuns if cancel is clicked
         if (fbd_StatSaveFolder.ShowDialog() == DialogResult.Cancel) { return; }
-        XmlWriterSettings settings = new() { Indent = true };        
+        XmlWriterSettings settings = new() { Indent = true };
         XmlWriter writer = XmlWriter.Create($"{fbd_StatSaveFolder.SelectedPath}\\ItemStatData.xml", settings);
         //Create a dictionary and store the ItemStatsData with its Corsponding catagory
         Dictionary<object, string> xmlFileContet = new()
@@ -664,7 +666,6 @@ public partial class F_ItemRandomiser : Form
     }
     private void RandomizeGameItems(List<string> allItems)
     {
-
         //gets the dictionary stored in the LevelLines class
         List<LevelsLines> levels = LevelsLines.GetLevelLines();
 

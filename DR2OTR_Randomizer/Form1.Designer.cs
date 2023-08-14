@@ -252,6 +252,7 @@
             tls_VendingAndShops.Name = "tls_VendingAndShops";
             tls_VendingAndShops.Size = new Size(218, 22);
             tls_VendingAndShops.Text = "Vending, Shop and Vehicles";
+            tls_VendingAndShops.DropDown.Closing += On_tsm_Settings_Close;
             // 
             // tls_RandomSpawns
             // 
@@ -344,9 +345,9 @@
             // 
             // l_MainDec
             // 
-            l_MainDec.Location = new Point(453, 324);
+            l_MainDec.Location = new Point(453, 317);
             l_MainDec.Name = "l_MainDec";
-            l_MainDec.Size = new Size(253, 70);
+            l_MainDec.Size = new Size(253, 77);
             l_MainDec.TabIndex = 29;
             l_MainDec.Text = "Levels marked with a '*' can cause issues you can read what they do by mousing over it. Once you have randomized click the Pack Datafile button to repack and add it back to the game.";
             // 
