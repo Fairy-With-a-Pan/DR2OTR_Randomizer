@@ -329,7 +329,7 @@
             tp_WItemRandom.Padding = new Padding(3);
             tp_WItemRandom.Size = new Size(718, 472);
             tp_WItemRandom.TabIndex = 0;
-            tp_WItemRandom.Text = "Items Randomiser";
+            tp_WItemRandom.Text = "Items Randomizer";
             tp_WItemRandom.UseVisualStyleBackColor = true;
             // 
             // bt_Pack
@@ -464,7 +464,7 @@
             b_Randomise.Name = "b_Randomise";
             b_Randomise.Size = new Size(360, 50);
             b_Randomise.TabIndex = 25;
-            b_Randomise.Text = "Randomise With Selected Items";
+            b_Randomise.Text = "Randomize With Selected Items";
             b_Randomise.UseVisualStyleBackColor = true;
             b_Randomise.Click += B_Randomise_Click;
             // 

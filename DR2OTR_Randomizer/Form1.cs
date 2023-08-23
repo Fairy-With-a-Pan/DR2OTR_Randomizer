@@ -461,8 +461,17 @@ public partial class F_ItemRandomiser : Form
             { ExplosiveStatData, "ExplosiveStats"},
             { FoodAndDamageData, "FoodAndDamageStats"}
         };
-        //Makes a comment at the top of the file to say when it was created 
-        writer.WriteComment($"This file was crated on {DateTime.Now}");
+        //Makes a comment at the top of the file to say how to add extra stats to the list
+        writer.WriteComment($"\n\tIf you want to add an item stat to this list using this format, add it inside of one of the six categories below.\n" +
+            $"\n\t<Stats>" +
+            $"\n\t\t<StatState>True/False</StatState> - If they are enabled by default." +
+            $"\n\t\t<StatName>Name in randomizer</StatName> - The stat name that will be inside the randomizer." +
+            $"\n\t\t<StatDescription>Description</StatDescription> - The description shown inside of the randomizer." +
+            $"\n\t\t<StatMin>0</StatMin> - The minimum value that in the randomizer." +
+            $"\n\t\t<StatMax>1</StatMax> - The maximum value that in the randomizer." +
+            $"\n\t\t<StatInGameName>\tItem.txt stat name</StatInGameName> - The stat name that is inside the items.txt (MUST include a tab space)." +
+            $"\n\t</Stats>\n");
+
         writer.WriteStartElement("AllItemStatsData");
         foreach (var xmlCataorgys in xmlFileContet)
         {
